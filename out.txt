@@ -86,7 +86,7 @@ Issue Title: 'Admin: Edit Proxy Connector': parameters are not correctly restitu
 Issue Id: 5b62dc5cdddc135844b56857
 Linked Commit Revision Hashes: []
 Linked Commit Ids: []
-Issue Title: Rewrite of archiva site
+Issue Title: Rewrite of archiva site 
 Issue Id: 5b62dcb5dddc135844b56db5
 Linked Commit Revision Hashes: []
 Linked Commit Ids: []
@@ -634,11 +634,11 @@ Issue Title: My Prefs : Editor choice not saved when closing the navigator.
 Issue Id: 5c5011f561aad04c588eb434
 Linked Commit Revision Hashes: ['0569740070c591e7fc59dd3f347f17db41b9f756']
 Linked Commit Ids: [ObjectId('5c38b498ca4aae332c22839b')]
-Issue Title: User Editorsetting is not persistent
+Issue Title: User Editorsetting is not persistent 
 Issue Id: 5c5011f561aad04c588eb435
 Linked Commit Revision Hashes: []
 Linked Commit Ids: []
-Issue Title: Ounce Labs Security Finding: Input Validation - Reflected XSS editors
+Issue Title: Ounce Labs Security Finding: Input Validation - Reflected XSS editors 
 Issue Id: 5c5011fa61aad04c588eb46a
 Linked Commit Revision Hashes: []
 Linked Commit Ids: []
@@ -722,7 +722,7 @@ Issue Title: Error in CSS for "editsection"
 Issue Id: 5c5012f261aad04c588ebcab
 Linked Commit Revision Hashes: ['a0ecccad4da8459b53f49f4443ad838d7489d152', '51d5995448b96321f440489e49f7e9e5c739c4f5']
 Linked Commit Ids: [ObjectId('5c38b368ca4aae332c21d68c'), ObjectId('5c38b711ca4aae332c242087')]
-Issue Title: add support for nicedit.com javascript-based editor
+Issue Title: add support for nicedit.com javascript-based editor 
 Issue Id: 5c50130661aad04c588ebd42
 Linked Commit Revision Hashes: ['681e6c4e58a660478fc05ec6fb8d1c58a412c0ea']
 Linked Commit Ids: [ObjectId('5c38b342ca4aae332c21b375')]
@@ -730,7 +730,7 @@ Issue Title: When in edit mode and the pagefilters are called, the modified Stri
 Issue Id: 5c50130c61aad04c588ebd46
 Linked Commit Revision Hashes: []
 Linked Commit Ids: []
-Issue Title: Edit => Preview => Edit shows the pagelocked warning message
+Issue Title: Edit => Preview => Edit shows the pagelocked warning message 
 Issue Id: 5c50131261aad04c588ebd68
 Linked Commit Revision Hashes: ['a652d8183797b0c3a3d281ea5441a18ecc4f9235']
 Linked Commit Ids: [ObjectId('5c38b357ca4aae332c21c4cd')]
@@ -794,7 +794,7 @@ Issue Title: Edits and comments are being lost if Section Editing is not selecte
 Issue Id: 5c5013cb61aad04c588ec1b0
 Linked Commit Revision Hashes: ['7882f53823020faf91102381033adfd92ca86570']
 Linked Commit Ids: [ObjectId('5c38b457ca4aae332c2252cc')]
-Issue Title: Login on edit fails with container managed security, ShortURLConstructor and write enabled only for logged in users
+Issue Title: Login on edit fails with container managed security, ShortURLConstructor and write enabled only for logged in users 
 Issue Id: 5c5013f061aad04c588ec30c
 Linked Commit Revision Hashes: ['2a4d28c499f78579ceed2185aa764d8df42e3ad6']
 Linked Commit Ids: [ObjectId('5c38b44eca4aae332c224c78')]
@@ -946,7 +946,7 @@ Issue Title: Haddock: "page modified" markup differs to the original edits
 Issue Id: 5c50170b61aad04c588edbbc
 Linked Commit Revision Hashes: ['8b0144049126a1256f1daecbf5f2b2a7260b9214']
 Linked Commit Ids: [ObjectId('5c38b140ca4aae332c20c641')]
-Issue Title: HADDOCK: remove hover-to-reveal behaviour for editor toolbar icons
+Issue Title: HADDOCK: remove hover-to-reveal behaviour for editor toolbar icons 
 Issue Id: 5c50171061aad04c588edbe1
 Linked Commit Revision Hashes: []
 Linked Commit Ids: []
@@ -1194,7 +1194,7 @@ Issue Title: Several url rewrite bugs in yarn ui and job history ui
 Issue Id: 5bdc06e916772b0aa5322a82
 Linked Commit Revision Hashes: []
 Linked Commit Ids: []
-Issue Title: Rewrite rules for handling of trailing slash '/'
+Issue Title: Rewrite rules for handling of trailing slash '/' 
 Issue Id: 5bdc06eb16772b0aa5322a91
 Linked Commit Revision Hashes: []
 Linked Commit Ids: []
@@ -1230,7 +1230,7 @@ Issue Title: tab at step Dimensions show unnormal when edit cube
 Issue Id: 5b45f50f56677a15366cb18a
 Linked Commit Revision Hashes: []
 Linked Commit Ids: []
-Issue Title: Using popup window for Dimension and Measure create and Edit
+Issue Title: Using popup window for Dimension and Measure create and Edit 
 Issue Id: 5b45f54156677a15366cb360
 Linked Commit Revision Hashes: []
 Linked Commit Ids: []
@@ -1362,7 +1362,7 @@ Issue Title: When the model has a ready cube, should not allow user to edit mode
 Issue Id: 5b45fc2056677a15366cfbdc
 Linked Commit Revision Hashes: ['a8627e8a9f264cc138124f3825d490463fa58480']
 Linked Commit Ids: [ObjectId('5b43737a6d2aba305049f468')]
-Issue Title: Add model JSON edit in web
+Issue Title: Add model JSON edit in web 
 Issue Id: 5b45fc3b56677a15366cfd1a
 Linked Commit Revision Hashes: ['c912949b037d590b2c3084ef0ad993d1bd8f0a30']
 Linked Commit Ids: [ObjectId('5b43738d6d2aba305049f557')]
@@ -1406,11 +1406,11 @@ VCS System: https://github.com/apache/lens.git
 Number of commits: 2418
 Issue Tracker: https://issues.apache.org/jira/rest/api/2/search?jql=project=LENS
 Number of issues: 1469
-Issue Title: Keeping join order same in rewritten and input query
+Issue Title: Keeping join order same in rewritten and input query 
 Issue Id: 5bb1f561627fea0e689c8c76
 Linked Commit Revision Hashes: ['b747c24455576ce1d687f252412dab831252d2f2']
 Linked Commit Ids: [ObjectId('5b8910faa1f4f33b6267f344')]
-Issue Title: jdbc: queries with alias names for tables are not rewritten correctly
+Issue Title: jdbc: queries with alias names for tables are not rewritten correctly 
 Issue Id: 5bb1f56d627fea0e689c8cf0
 Linked Commit Revision Hashes: ['358f3244fdef946dfb9c369ca5968964f276237d', '55ccc89d954903df0d94d04f6989e97b4ee81e5c', 'f5e5eccc7b9964abc97fde3abd7b22500f7c3833']
 Linked Commit Ids: [ObjectId('5b8910d9a1f4f33b6567f379'), ObjectId('5b8910e0a1f4f33b6167f376'), ObjectId('5b8910faa1f4f33b6067f81f')]
@@ -1422,7 +1422,7 @@ Issue Title: negative constants are getting rewritten incorrectly
 Issue Id: 5bb1f57a627fea0e689c8de8
 Linked Commit Revision Hashes: ['ecb791119353ee09ac1093cbb9cfed18394b2c1c']
 Linked Commit Ids: [ObjectId('5b891105a1f4f33b6267f40a')]
-Issue Title: Minor refactoring changes in Query Rewriter interface
+Issue Title: Minor refactoring changes in Query Rewriter interface 
 Issue Id: 5bb1f5d7627fea0e689c9334
 Linked Commit Revision Hashes: ['b58979215a45460fb91c270cbc81005c09533880']
 Linked Commit Ids: [ObjectId('5b8910cca1f4f33b6767f1f3')]
@@ -1486,3 +1486,507 @@ Issue Title: Replace dimension tables with subquery in Columnar Rewriter
 Issue Id: 5bb1f768627fea0e689ca92f
 Linked Commit Revision Hashes: ['7610abaf951ca2c61e51b8941643c57f4bdc2f70']
 Linked Commit Ids: [ObjectId('5b8910a7a1f4f33b6067efbc')]
+Issue Title: Adding a Rewriter at HiveDriver Level
+Issue Id: 5bb1f775627fea0e689ca9f0
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Add support for User Query Rewriter chain  before Cube Rewrites  
+Issue Id: 5bb1f775627fea0e689ca9f1
+Linked Commit Revision Hashes: ['689c9a99b112b21e9ecba9a8461cf9672b88ba2f']
+Linked Commit Ids: [ObjectId('5b8910c1a1f4f33b5767efcc')]
+Issue Title: Change rewrite to use format string around measures
+Issue Id: 5bb1f7bb627fea0e689cac9d
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Columnar JDBC Rewriter in incorrectly pushing filter against wrong alias when fact columns map to a single dimension
+Issue Id: 5bb1f7db627fea0e689caef6
+Linked Commit Revision Hashes: ['ccf71332f90f7dd36eac0a84c3b32f9ff76d2812']
+Linked Commit Ids: [ObjectId('5b891078a1f4f33b6967e9dd')]
+Issue Title: Expressions in multi fact query is not rewritten properly
+Issue Id: 5bb1f851627fea0e689cb717
+Linked Commit Revision Hashes: ['09baa12880ba27c00323bbf881e9c69acb580117']
+Linked Commit Ids: [ObjectId('5b891089a1f4f33b5a67ebd7')]
+Issue Title: Druid rewriter in lens
+Issue Id: 5bb1f8ce627fea0e689cbc86
+Linked Commit Revision Hashes: ['241603cf07fd64607c34629d149f6c1dc627eecd']
+Linked Commit Ids: [ObjectId('5b891081a1f4f33b6767ea73')]
+Issue Title: Support adding Driver Completion Listener after rewrite and estimate operation(and before submit)
+Issue Id: 5bb1f8d3627fea0e689cbcac
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Druid query rewriter issues
+Issue Id: 5bb1f9ba627fea0e689ccd8a
+Linked Commit Revision Hashes: ['08d79631bbe801a768369ab45f662b2785927110']
+Linked Commit Ids: [ObjectId('5b891072a1f4f33b6467e9a7')]
+Issue Title: Rewritten union query is wrong when group by and order by columns are promoted
+Issue Id: 5bb1f9d4627fea0e689ccec3
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Full outer join queries join conditions not rewritten correctly when more than two table involved
+Issue Id: 5bb1fa06627fea0e689cd146
+Linked Commit Revision Hashes: ['f1a959bdd78e4161b7883734776e4dc4c464bb49']
+Linked Commit Ids: [ObjectId('5b89108aa1f4f33b5f67ec5b')]
+Issue Title: Queries not rewritten correctly when aggregate expression used inside "case when..."
+Issue Id: 5bb1fa09627fea0e689cd16e
+Linked Commit Revision Hashes: ['7f3731ef49e7cc309620dd75bd679d7e8e29776e']
+Linked Commit Ids: [ObjectId('5b891074a1f4f33b6067e9ca')]
+Issue Title: Bug fixes in cube segmentation final rewritten query 
+Issue Id: 5bb1fa13627fea0e689cd251
+Linked Commit Revision Hashes: ['7c1171c8dae842233d0db85bc15c00fcd37aa3de']
+Linked Commit Ids: [ObjectId('5b891070a1f4f33b6867e975')]
+Issue Title: Support query rewrite for separate table per update period in a storage
+Issue Id: 5bb1fa21627fea0e689cd33d
+Linked Commit Revision Hashes: ['363f132d140b5107bc2afbc3c75cb9b54bf64a65']
+Linked Commit Ids: [ObjectId('5b8911dea1f4f33b59680126')]
+Issue Title: Union Query rewrite incorrect in case of select expressions containing dimensions
+Issue Id: 5bb1fa22627fea0e689cd34b
+Linked Commit Revision Hashes: ['de464faa810f31ae7b2733566ee4d9ff1286a0df']
+Linked Commit Ids: [ObjectId('5b8911dea1f4f33b57680b29')]
+Issue Title: Order By clause is not rewritten correctly when column is wrapped with function
+Issue Id: 5bb1fa28627fea0e689cd3bb
+Linked Commit Revision Hashes: ['9a40b6455b50fe0e0930d1542a1ec9745025ccc7']
+Linked Commit Ids: [ObjectId('5b89106ba1f4f33b5767e946')]
+Issue Title: Method metrics names duplicate for segmentation inner rewrite
+Issue Id: 5bb1fa79627fea0e689cd9c9
+Linked Commit Revision Hashes: ['65ca04b598bd29201a6670b7a51679f9ccb9ccc6', '0b265c81b312f410d4b4c6cde7f3a4596fb3fb79']
+Linked Commit Ids: [ObjectId('5b89106da1f4f33b5c67e962'), ObjectId('5b89106da1f4f33b6b67e959')]
+Issue Title: Rewritten queries not resolving time_range_in clause
+Issue Id: 5bb1fa7e627fea0e689cda27
+Linked Commit Revision Hashes: ['8baae4133d8f8306d9a49ff4512c091a997b1234', 'ff4f3726a25db684ff7623fea68e954712dd925f']
+Linked Commit Ids: [ObjectId('5b891066a1f4f33b5867e90c'), ObjectId('5b89106da1f4f33b5f67e9cb')]
+Issue Title: Expressions in having clauses are not getting rewritten properly for join queries
+Issue Id: 5bb1fa86627fea0e689cdab7
+Linked Commit Revision Hashes: ['b4cc2ed8af533fc9d7310452b6c7e12d7ac7afac', '2772efb275742eb4c03da5e7635bdbcfab63cebc']
+Linked Commit Ids: [ObjectId('5b89106ba1f4f33b6d67e928'), ObjectId('5b89106ea1f4f33b6167e977')]
+Number of comments in discussions: 7703
+Number of issues referenced by commits: 858
+Number of issues labeled as bugs by developers: 587
+Number of issues labeled validated as bug by researchers: 230
+VCS System: https://github.com/apache/mahout
+Number of commits: 4167
+Issue Tracker: https://issues.apache.org/jira/rest/api/2/search?jql=project=MAHOUT
+Number of issues: 2062
+Issue Title: Nuke Colt math functions that remain untested - The Matrix edition
+Issue Id: 5b29fbc0e7b4076bb2c03f1f
+Linked Commit Revision Hashes: ['f514c8294e6a61d8b1a345738d3870919f888e78', '9c7a9e7488555d27bd7f6a0bebb4021671b1842f', '2fd2aed8702c9bd4490978f9c0eee2f27ba66958']
+Linked Commit Ids: [ObjectId('5b1fa07b1837be5c9825cd83'), ObjectId('5b1fa0821837be5c9625dbf8'), ObjectId('5b1fa0961837be5c9b25d893')]
+Issue Title: Rewrite Benchmarks using Caliper
+Issue Id: 5b2a03d202ab470be52f60c9
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Number of comments in discussions: 15682
+Number of issues referenced by commits: 1257
+Number of issues labeled as bugs by developers: 801
+Number of issues labeled validated as bug by researchers: 247
+VCS System: https://github.com/apache/manifoldcf.git
+Number of commits: 5936
+Issue Tracker: https://issues.apache.org/jira/rest/api/2/search?jql=project=CONNECTORS
+Number of issues: 1607
+Issue Title: Multiprocess-file example: Hang when editing job after job has been running
+Issue Id: 5c57f219cf244d7545c819ea
+Linked Commit Revision Hashes: ['9032bb29f3bc54db6a2292f974d163aec4b50185']
+Linked Commit Ids: [ObjectId('5c3f10a266ca241a784d4451')]
+Issue Title: Error While Editing a job involving a pipeline
+Issue Id: 5c57f2b8cf244d7545c82049
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Can't edit user mapping connections if there are more than one
+Issue Id: 5c57f3fbcf244d7545c82da8
+Linked Commit Revision Hashes: ['3e4e372acb4e4c9e04a7cc051c485697ace5b31b', '7d20233402131f8603a09db5d01453d69075ab2d']
+Linked Commit Ids: [ObjectId('5c3f0add66ca241a784c2640'), ObjectId('5c3f1fb366ca241a784ff010')]
+Issue Title: ElasticSearch tab is not displayed in Edit job page anymore in MCF 2.x; documentation out of date
+Issue Id: 5c57f3fecf244d7545c82db6
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Confluence job settings forget spaces upon every edit
+Issue Id: 5c57f428cf244d7545c83068
+Linked Commit Revision Hashes: ['e440aee5cc8e179efef980476ca68e788f854df0']
+Linked Commit Ids: [ObjectId('5c3f22cb66ca241a785086ac')]
+Issue Title: Documentum Connector uses different "unconstrained" a_content_type filters depending on whether the Content Types tab has been edited
+Issue Id: 5c57f563cf244d7545c83ea6
+Linked Commit Revision Hashes: ['67e34cd96c20cfc4ec47ec1e9d3e478dfe9cd62a', 'a3688389e4dc729be92a7dd579efaa891bc95191', '7eae7227ea096f130d045d027985d756dd16313b']
+Linked Commit Ids: [ObjectId('5c3f291866ca241a78519278'), ObjectId('5c3f291866ca241a7851927f'), ObjectId('5c3f291866ca241a78519285')]
+Issue Title: Parentheses in editConfiguration tab labels not supported
+Issue Id: 5c57f58ecf244d7545c840da
+Linked Commit Revision Hashes: ['398f793fe7e59e61881400860eb1553edda5a41b']
+Linked Commit Ids: [ObjectId('5c3f28e666ca241a78518a58')]
+Number of comments in discussions: 9165
+Number of issues referenced by commits: 1183
+Number of issues labeled as bugs by developers: 809
+Number of issues labeled validated as bug by researchers: 310
+VCS System: https://github.com/apache/mina-sshd.git
+Number of commits: 1865
+Issue Tracker: https://issues.apache.org/jira/rest/api/2/search?jql=project=SSHD
+Number of issues: 962
+Number of comments in discussions: 2873
+Number of issues referenced by commits: 733
+Number of issues labeled as bugs by developers: 403
+Number of issues labeled validated as bug by researchers: 0
+VCS System: https://github.com/apache/nutch.git
+Number of commits: 3532
+Issue Tracker: https://issues.apache.org/jira/rest/api/2/search?jql=project=NUTCH
+Number of issues: 2657
+Issue Title: Edit comment in org.apache.nutch.crawl.Crawl to reflect removal of legacy
+Issue Id: 5b475ba2c298bd5a8f822127
+Linked Commit Revision Hashes: ['e25742de04548cea10385a8c06adbc621affb624']
+Linked Commit Ids: [ObjectId('5b45f72f2123a77a2e258517')]
+Issue Title: Rewrite protocol-httpclient
+Issue Id: 5b475fa6c298bd5a8f825c97
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Number of comments in discussions: 15988
+Number of issues referenced by commits: 1450
+Number of issues labeled as bugs by developers: 1186
+Number of issues labeled validated as bug by researchers: 358
+VCS System: https://github.com/apache/oozie.git
+Number of commits: 3112
+Issue Tracker: https://issues.apache.org/jira/rest/api/2/search?jql=project=OOZIE
+Number of issues: 3709
+Issue Title: Completely rewrite GraphGenerator code
+Issue Id: 5f0c41a991206327e532adf2
+Linked Commit Revision Hashes: ['883c7556d2f302261eae5aec6e323a5b1de04f74']
+Linked Commit Ids: [ObjectId('5e6f7fd1a546a6741d0d68fb')]
+Issue Title: Fix race conditon in check() methods and rewrite check() logic
+Issue Id: 5f0c435991206327e532d456
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: LauncherAM: rewrite UGI calls
+Issue Id: 5f0c43f691206327e532e2dd
+Linked Commit Revision Hashes: ['ceefa2f6eba5ddc1fe68af427f504f863b249b6d', '9cb4bd05aa4a86d2193efe5f7bb9ef53f8fc33d2']
+Linked Commit Ids: [ObjectId('5e6f7fd3a546a6741d0d6a44'), ObjectId('5e6f7fd3a546a6741d0d6a95')]
+Issue Title: Rewrite the Oozie Web UI
+Issue Id: 5f0c44a591206327e532f530
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Number of comments in discussions: 24068
+Number of issues referenced by commits: 1878
+Number of issues labeled as bugs by developers: 2220
+Number of issues labeled validated as bug by researchers: 0
+VCS System: https://github.com/apache/opennlp.git
+Number of commits: 2685
+Issue Tracker: https://issues.apache.org/jira/rest/api/2/search?jql=project=OPENNLP
+Number of issues: 1214
+Issue Title: Cas Editor plugin jars do not include the OSGi manifest
+Issue Id: 5b3b1ecd428fc37a4b3c8652
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Create an OpenNLP Plugin for the UIMA Cas Editor
+Issue Id: 5b3b1ed2428fc37a4b3c8663
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Create a plugin for the cas editor which gives access to the corpus server
+Issue Id: 5b3b1ed8428fc37a4b3c8689
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: OpenNLP views need to register cas editor input change listener
+Issue Id: 5b3b1f1d428fc37a4b3c880b
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Name Finder view should not set selection when annotation in editor was added
+Issue Id: 5b3b1f2b428fc37a4b3c884a
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Sentence Detector view should not set selection when something in the editor is changed
+Issue Id: 5b3b1f30428fc37a4b3c885c
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Update Cas Editor Plugins to be based on 2.4.0
+Issue Id: 5b3b1f5c428fc37a4b3c8960
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Restructure the maxent package and rename it to opennlp machine learning
+Issue Id: 5b3b203e428fc37a4b3c8e47
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Name Finder view needs to indicate inside the Annotation Editor which type the entity will have
+Issue Id: 5b3b222f428fc37a4b3c9a7f
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Rewrite the CONLL06 documentation based on the tutorial
+Issue Id: 5b3b2433428fc37a4b3ca82d
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Number of comments in discussions: 3300
+Number of issues referenced by commits: 767
+Number of issues labeled as bugs by developers: 334
+Number of issues labeled validated as bug by researchers: 106
+VCS System: https://github.com/apache/parquet-mr.git
+Number of commits: 2249
+Issue Tracker: https://issues.apache.org/jira/rest/api/2/search?jql=project=PARQUET
+Number of issues: 1413
+Issue Title: Introduce editorconfig
+Issue Id: 5b4856002123a750e061781f
+Linked Commit Revision Hashes: ['06768d91b5fe9eb98f5872efcbe87c3ea447f61e']
+Linked Commit Ids: [ObjectId('5b4769fa0f9db94b72270f26')]
+Number of comments in discussions: 3744
+Number of issues referenced by commits: 336
+Number of issues labeled as bugs by developers: 640
+Number of issues labeled validated as bug by researchers: 87
+VCS System: https://github.com/apache/santuario-java.git
+Number of commits: 3376
+Issue Tracker: https://issues.apache.org/jira/rest/api/2/search?jql=project=SANTUARIO
+Number of issues: 505
+Number of comments in discussions: 1583
+Number of issues referenced by commits: 156
+Number of issues labeled as bugs by developers: 379
+Number of issues labeled validated as bug by researchers: 53
+VCS System: https://github.com/apache/systemml.git
+Number of commits: 6196
+Issue Tracker: https://issues.apache.org/jira/rest/api/2/search?jql=project=SYSTEMML
+Number of issues: 2364
+Issue Title: Rewrite systemML readme file
+Issue Id: 5b9bccdbf16c8726d2830ee7
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Rewrite-aware matrix mult chain opt
+Issue Id: 5b9bcd38f16c8726d283156d
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Additional simplification rewrites
+Issue Id: 5b9bcd39f16c8726d2831571
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Dynamic rewrites for additional matrix stats
+Issue Id: 5b9bcd3af16c8726d2831579
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Extended static/dynamic rewrites
+Issue Id: 5b9bcd3bf16c8726d283157d
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Transform-append rewrite issues w/ multiple consumers
+Issue Id: 5b9bcda3f16c8726d2831b07
+Linked Commit Revision Hashes: ['1fe10a29516ab7a91514b87c17bdf9ca0d720c3e']
+Linked Commit Ids: [ObjectId('5b7ade56df629e0ad9f1d1aa')]
+Issue Title: Transform apply support for unseen recode tokens
+Issue Id: 5b9bcda5f16c8726d2831b2a
+Linked Commit Revision Hashes: ['6ffbf95184ca2b0716c557caa56d21d6000549fc']
+Linked Commit Ids: [ObjectId('5b7ade55df629e0ad9f1d18f')]
+Issue Title: Compile error on rewrite 'pushdown sum on binary' w/ multiple consumers
+Issue Id: 5b9bce26f16c8726d2832136
+Linked Commit Revision Hashes: ['6d95c9f5e9df281b6903aaffcde451b25f4bce98']
+Linked Commit Ids: [ObjectId('5b7ade49df629e0ad7f1d15d')]
+Issue Title: Adding a rewrite for aggregating the product of a binary and a scalar
+Issue Id: 5b9bce45f16c8726d28321b1
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Adding a rewrite for Axpy (matrix-scalar product and adds the result to a matrix)
+Issue Id: 5b9bce4bf16c8726d28321f3
+Linked Commit Revision Hashes: ['8a05574c8f2c5f63ef39db1ff76ed5d1cb6557b2', '2b7fdb2b36df0aedc6b92bf138e7f0074eed7762', 'ce84288f0b981a1c1b7e4264b27d124eff126ae6', '97b136601d1fdd4d19cfccdf53b66131b2b03513', '973b863579d7bf82505933d3d67fef4517c53eb3', '81ebfe004c932739d57b57f9cd064ca7f06fbd44', 'b584aecf6b3a1eb96ff83b78cc3ad7c7c6d15baa', 'b0d3c6c85135c51177dbe67c4f944b1bf7dcc498', 'da3187392cb67e8a5bd3a494fae68b8dfbc0d883']
+Linked Commit Ids: [ObjectId('5b7ade90df629e0ae4f1dd47'), ObjectId('5b7ade92df629e0ae6f1e006'), ObjectId('5b7adeffdf629e0ae5f1f9cd'), ObjectId('5b7adf20df629e0ae1f1fd15'), ObjectId('5b7adf20df629e0ae2f1fbb8'), ObjectId('5b7adf28df629e0adaf1f3db'), ObjectId('5b7adf3cdf629e0adaf1f97d'), ObjectId('5b7adf3cdf629e0adff20edf'), ObjectId('5b7adf51df629e0ae6f20a15')]
+Issue Title: Additional cleanup rewrites
+Issue Id: 5b9bce90f16c8726d28324e2
+Linked Commit Revision Hashes: ['11a85775f11e4490d957fe4f9fab4bfd8ea7a138']
+Linked Commit Ids: [ObjectId('5b7adf50df629e0ad9f21284')]
+Issue Title: Restructure DML Language Reference
+Issue Id: 5b9bce92f16c8726d28324f1
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: RewriteFusedRandTest.testRewriteFusedRandNormal failure
+Issue Id: 5b9bcf0bf16c8726d2832a04
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Indexing vectorization rewrite creates intermediates w/ wrong data type 
+Issue Id: 5b9bcf15f16c8726d2832a58
+Linked Commit Revision Hashes: ['48a3bf72a9e734be40c2c242e6fd40a50f166e7d']
+Linked Commit Ids: [ObjectId('5b7adf49df629e0ae2f20bd2')]
+Issue Title: Update-in-place rewrites creates false positives
+Issue Id: 5b9bcfc7f16c8726d2833182
+Linked Commit Revision Hashes: ['0ae01230d617cf5ae322d00f44b5fb520b3ee850']
+Linked Commit Ids: [ObjectId('5b7adf57df629e0ae1f21684')]
+Issue Title: New simplification rewrites for stratstats
+Issue Id: 5b9bcfd7f16c8726d283322c
+Linked Commit Revision Hashes: ['0e6411dada77870ae29049288b1789313a35a9f6', 'b3ba991604cf79c5e3e2c0992fe2439ae47ce023']
+Linked Commit Ids: [ObjectId('5b7adee8df629e0ae3f1e980'), ObjectId('5b7adee9df629e0ae7f1ec9d')]
+Issue Title: Program rewrite for mini batching
+Issue Id: 5b9bcff2f16c8726d2833352
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Incorrect hop parent references after row/col aggregate rewrites
+Issue Id: 5b9bd02af16c8726d2833611
+Linked Commit Revision Hashes: ['483cf44e31fb487faf3e9ec58cee933fbe12a9b2']
+Linked Commit Ids: [ObjectId('5b7adf32df629e0adaf1f62c')]
+Issue Title: Parfor result partitioning rewrite not applied on spark
+Issue Id: 5b9bd068f16c8726d28337ff
+Linked Commit Revision Hashes: ['4c74a34349bd4eeb0f4e102db7bca1f09b2ced97']
+Linked Commit Ids: [ObjectId('5b7adf3bdf629e0ae8f20eab')]
+Issue Title: Remove redundancy in rewrites (consolidate in HopRewriteUtils)
+Issue Id: 5b9bd089f16c8726d28339d4
+Linked Commit Revision Hashes: ['1fe1a02d210356207d75cc3ffc2f246cd4a8d11b']
+Linked Commit Ids: [ObjectId('5b7adf00df629e0aeaf1ee79')]
+Issue Title: Loop vectorization rewrite for indexed copies
+Issue Id: 5b9bd08df16c8726d28339f8
+Linked Commit Revision Hashes: ['ed3a1588287e22ab3e8a3e9e971b505a9157ba59']
+Linked Commit Ids: [ObjectId('5b7adee6df629e0ae1f1e93c')]
+Issue Title: Remove parfor rewrite update-in-place for intermediates
+Issue Id: 5b9bd161f16c8726d283432d
+Linked Commit Revision Hashes: ['8dbc93022a01aae309354c7b2b2f0eee9ec11aad', '1cbfdef3fad5235b692c372ec94bcade7f1b9ff9']
+Linked Commit Ids: [ObjectId('5b7adf13df629e0ad7f1fd52'), ObjectId('5b7adf55df629e0ae6f20b0b')]
+Issue Title: New rewrite eliminate unnecessary aggregates
+Issue Id: 5b9bd1abf16c8726d2834664
+Linked Commit Revision Hashes: ['7ed36a98fedb54403bfb6349417782d9b88361f8', '50d211baa91e6a74b32cd8c1780758608d33c7c8']
+Linked Commit Ids: [ObjectId('5b7adf04df629e0adcf1f923'), ObjectId('5b7adf25df629e0aeaf1f9eb')]
+Issue Title: New IPA pass for rewrites such as branch removal 
+Issue Id: 5b9bd1b7f16c8726d28346ee
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Transformapply w/ empty recode maps fails w/ NPE
+Issue Id: 5b9bd1f0f16c8726d28349a8
+Linked Commit Revision Hashes: ['129710a01458a9e6bae8806b8d982e580ebb225e']
+Linked Commit Ids: [ObjectId('5b7adf57df629e0adef2039c')]
+Issue Title: Improved dynamic recompilation (size update after rewrites)
+Issue Id: 5b9bd1f6f16c8726d28349f4
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: New simplification rewrite for binary multiplication chains
+Issue Id: 5b9bd226f16c8726d2834d25
+Linked Commit Revision Hashes: ['eca9dbbb85971af688e81c9254538c53fc429b30', 'a5c834b27da9cfeffe0ad6e606c43fe3246831d2', '7fec7fa571c1722b2c56c0498bdfe6bada10624e', '257bf3ed006022b133bf7a2359d3b0cb2a68950b', '87cc5ee67d055ed0628f3128b10dbdeb3ec149d5']
+Linked Commit Ids: [ObjectId('5b7adeb0df629e0ae4f1e4bf'), ObjectId('5b7adf0fdf629e0ae7f1f883'), ObjectId('5b7adf26df629e0aeaf1fa72'), ObjectId('5b7adf39df629e0ae0f20b5f'), ObjectId('5b7adf41df629e0ae2f20925')]
+Issue Title: Generalized rewrite for merging sequence of statement blocks
+Issue Id: 5b9bd27cf16c8726d283519b
+Linked Commit Revision Hashes: ['6b4eaa6bd8ba77a18de1c9aebcb9ef3047ada89e', '4ae6beee527569886770fa8cfa7b9d3f185fde6f']
+Linked Commit Ids: [ObjectId('5b7adf3edf629e0aeaf202f5'), ObjectId('5b7adf65df629e0ae1f21b90')]
+Issue Title: New simplification rewrite for merging sequences blocks
+Issue Id: 5b9bd27cf16c8726d283519c
+Linked Commit Revision Hashes: ['4b81d0dda6583f0ae96eaa7aa5832005ae5fa8a9', '16f72cffb8d2a776bcde78d90df43622ee19d2eb']
+Linked Commit Ids: [ObjectId('5b7adee0df629e0ad9f1e99e'), ObjectId('5b7adf44df629e0ae6f20562')]
+Issue Title: New rewrite framework for code generation plans
+Issue Id: 5b9bd288f16c8726d2835210
+Linked Commit Revision Hashes: ['e1f5866a5c2e2100d68124b74a33a9022e89dd09']
+Linked Commit Ids: [ObjectId('5b7adf65df629e0ae6f20fd5')]
+Issue Title: Missing transpose-matrixmult rewrites for special case mixed exec types
+Issue Id: 5b9bd289f16c8726d2835226
+Linked Commit Revision Hashes: ['fbec47952122fb3ffd1193568035daa052618102', '54cf8f0b8d84df878e014eed3e99878b8c45bf13']
+Linked Commit Ids: [ObjectId('5b7adf0ddf629e0ae2f1f63f'), ObjectId('5b7adf27df629e0adaf1f342')]
+Issue Title: New rewrites for pushdown of trace/diag over binary ops
+Issue Id: 5b9bd29ef16c8726d28352c9
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Improve rewrite for merging statement blocks
+Issue Id: 5b9bd2a1f16c8726d28352d9
+Linked Commit Revision Hashes: ['0b04cb16c5b7ee6f2508fc575330b671b31e2de1', '682fc4458fdefa727daa010bdc753cb5b22bb3b0']
+Linked Commit Ids: [ObjectId('5b7adf4ddf629e0ae7f20d7f'), ObjectId('5b7adf51df629e0ae4f20556')]
+Issue Title: Auto CLA configuration and rewrite
+Issue Id: 5b9bd2a7f16c8726d2835312
+Linked Commit Revision Hashes: ['f991e4b48a578f5bc716a564e701a110d44c2cda']
+Linked Commit Ids: [ObjectId('5b7adf62df629e0ae1f21a77')]
+Issue Title: Rewrite RewriteMergeBlockSequence creates twrites w/o inputs
+Issue Id: 5b9bd2a9f16c8726d283531c
+Linked Commit Revision Hashes: ['945ca7b4b937b2e6a391f94bf9d45d34637022ac']
+Linked Commit Ids: [ObjectId('5b7adf33df629e0adcf20b0b')]
+Issue Title: Transformencode failing for mix of recode/dummycode features
+Issue Id: 5b9bd2aaf16c8726d2835329
+Linked Commit Revision Hashes: ['816a900b5be4979a2cc11a326feddc709a4177ef']
+Linked Commit Ids: [ObjectId('5b7adf69df629e0ad7f21e13')]
+Issue Title: New rewrite and performance binary outer operations
+Issue Id: 5b9bd2b0f16c8726d2835350
+Linked Commit Revision Hashes: ['988366de0300c43ec5b01e129576278c59fa49be', 'aed46e3b55a1b8a5611d5478fccd29284ce45dcf']
+Linked Commit Ids: [ObjectId('5b7adeb2df629e0ad8f1e59b'), ObjectId('5b7adf56df629e0aeaf20bab')]
+Issue Title: IPA fails w/ issue of simplification rewrite
+Issue Id: 5b9bd2b2f16c8726d2835363
+Linked Commit Revision Hashes: ['8c87d2a2f3472d5516113a65817defe5ce6989a6']
+Linked Commit Ids: [ObjectId('5b7adf37df629e0ad7f20c20')]
+Issue Title: New algebraic simplification rewrites
+Issue Id: 5b9bd2b3f16c8726d283536e
+Linked Commit Revision Hashes: ['a9c14b02b333721a507b224110f8cf4a09e91e95', 'c96143248349b6c68253ef9b3777afd5e5ed62f2', 'f366c46960aac412a862c20e07e5f844b58b05a7', 'bd139a575de8a57af40b5f0e8ae10403cd3c060e', 'd90073d804322f6b601b0f06d03979dae6322c25', '578a98697e6219947b748337f9a121acf54afe53']
+Linked Commit Ids: [ObjectId('5b7adf48df629e0ae7f20bf2'), ObjectId('5b7adf4fdf629e0aeaf208cb'), ObjectId('5b7adf51df629e0ae2f20f76'), ObjectId('5b7adf59df629e0adaf20471'), ObjectId('5b7adf5cdf629e0adef205a7'), ObjectId('5b7adf62df629e0adef207f3')]
+Issue Title: Rewrite integration frames
+Issue Id: 5b9bd2def16c8726d283552e
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: New rewrite for value replacements
+Issue Id: 5b9bd338f16c8726d2835896
+Linked Commit Revision Hashes: ['62e590ced04900364bdc294538e78de6af3f4988']
+Linked Commit Ids: [ObjectId('5b7adf5adf629e0ae4f20822')]
+Issue Title: New rewrite for removal of unnecessary right indexing
+Issue Id: 5b9bd34af16c8726d283594b
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Fuse all heuristic failing for kmeans tests w/o rewrites
+Issue Id: 5b9bd35ef16c8726d2835a0e
+Linked Commit Revision Hashes: ['bc4acdfabdca9ccf89d64078182dd27b63dc1e5e']
+Linked Commit Ids: [ObjectId('5b7adf1ddf629e0ae2f1fa88')]
+Issue Title: Additional rewrites for new builtin functions
+Issue Id: 5b9bd382f16c8726d2835b37
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: Improve parfor optimizer rewrite in-place-update
+Issue Id: 5b9bd391f16c8726d2835bb0
+Linked Commit Revision Hashes: ['2838cefd9a361992a41173e713ef659738d0aed6']
+Linked Commit Ids: [ObjectId('5b7adf15df629e0aeaf1f4d5')]
+Issue Title: Distributed cholesky dml functions fails due to indexing rewrite issue
+Issue Id: 5b9bd39df16c8726d2835c23
+Linked Commit Revision Hashes: ['f8dc5c18bd2cc63d9980467e67686ec85d5729e4']
+Linked Commit Ids: [ObjectId('5b7adf59df629e0ae0f21935')]
+Issue Title: Optional rewrite for hoisting loop-invariant operations
+Issue Id: 5b9bd3a0f16c8726d2835c2c
+Linked Commit Revision Hashes: ['1e1210b9ebdb68e76ad20ee08f132ef32483f829']
+Linked Commit Ids: [ObjectId('5b7adf22df629e0ad9f1fe81')]
+Issue Title: New rewrite for table w/ constant basic weights
+Issue Id: 5b9bd3c3f16c8726d2835d30
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: New rewrites from binary to nary min/max
+Issue Id: 5b9bd3daf16c8726d2835dcc
+Linked Commit Revision Hashes: ['8d320791265321de38050e741308e3243ce89a7b']
+Linked Commit Ids: [ObjectId('5b7adf58df629e0adef203f4')]
+Issue Title: Rewrite fuse order operation chain unaware of overlapping by attributes
+Issue Id: 5b9bd3dcf16c8726d2835dd6
+Linked Commit Revision Hashes: ['0177a13108cd6fca80609dab029572b40b02d13c']
+Linked Commit Ids: [ObjectId('5b7adf61df629e0adaf207f4')]
+Issue Title: Remove unnecessary function calls after rewrites
+Issue Id: 5b9bd3dff16c8726d2835dec
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: New rewrites for chains of comparisons
+Issue Id: 5b9bd3e6f16c8726d2835e1d
+Linked Commit Revision Hashes: ['1e5984cca10132603af7c638f8bd4ec6139b7061']
+Linked Commit Ids: [ObjectId('5b7adf1adf629e0ad7f1ff43')]
+Issue Title: Rewrite the ps using BlockingQueue
+Issue Id: 5b9bd3fbf16c8726d2835f0d
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Issue Title: ParFor Data Partitioning Rewrite on Hops instead of Statements
+Issue Id: 5b9bd40bf16c8726d2835f89
+Linked Commit Revision Hashes: ['ae9eadc85597d239043732be83db04a06a17abbc', '3e54f1a2d3599ba38776f5371c01f65476c86f54']
+Linked Commit Ids: [ObjectId('5b7adf3fdf629e0ae1f20851'), ObjectId('5b7adf42df629e0ae8f210a7')]
+Issue Title: Parfor optimizer fails in spark exec mode on block partitioning rewrite
+Issue Id: 5b9bd40ff16c8726d2835fb6
+Linked Commit Revision Hashes: ['d100013813f15d0e3bcc43b0905aa2a863677073']
+Linked Commit Ids: [ObjectId('5b7adf29df629e0adaf1f3ff')]
+Issue Title: Extended rewrite framework for codegen plans
+Issue Id: 5b9bd422f16c8726d2836058
+Linked Commit Revision Hashes: ['5069f978174640903740cd3daf3430dd7b4ad7b8']
+Linked Commit Ids: [ObjectId('5b7adf0fdf629e0ad7f1fc6c')]
+Issue Title: Side effect between IPA inlining/dead code and rewrites
+Issue Id: 5b9bd44bf16c8726d28361ad
+Linked Commit Revision Hashes: ['827d73bd58087f2c774697bb6114ccf23d768bb1']
+Linked Commit Ids: [ObjectId('5b7adf40df629e0adaf1fb16')]
+Issue Title: AutoEncoder codegen failing w/ enabled rewrites
+Issue Id: 5b9bd458f16c8726d283622c
+Linked Commit Revision Hashes: ['5d675151e38b161abfeccfdcd042e655e5ed1a4f']
+Linked Commit Ids: [ObjectId('5b7adf55df629e0ae0f2182f')]
+Number of comments in discussions: 2589
+Number of issues referenced by commits: 1365
+Number of issues labeled as bugs by developers: 590
+Number of issues labeled validated as bug by researchers: 283
+VCS System: https://github.com/apache/tika.git
+Number of commits: 4933
+Issue Tracker: https://issues.apache.org/jira/rest/api/2/search?jql=project=TIKA
+Number of issues: 2829
+Issue Title: OfficeParser fails on embedded images associated with Microsoft Photo Editor 
+Issue Id: 5b6409ec96444971f1cc6d2c
+Linked Commit Revision Hashes: []
+Linked Commit Ids: []
+Number of comments in discussions: 14473
+Number of issues referenced by commits: 1630
+Number of issues labeled as bugs by developers: 1327
+Number of issues labeled validated as bug by researchers: 380
+VCS System: https://github.com/apache/wss4j.git
+Number of commits: 3734
+Issue Tracker: https://issues.apache.org/jira/rest/api/2/search?jql=project=WSS4J
+Number of issues: 659
+Number of comments in discussions: 1510
+Number of issues referenced by commits: 467
+Number of issues labeled as bugs by developers: 334
+Number of issues labeled validated as bug by researchers: 156
