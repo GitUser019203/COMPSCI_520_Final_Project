@@ -27,6 +27,7 @@
   <ItemGroup>
     <Content Include="out.txt" />
     <Content Include="issue_tracked_projects.txt" />
+    <Content Include="regexp.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
