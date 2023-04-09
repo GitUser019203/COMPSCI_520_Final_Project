@@ -1,0 +1,27 @@
+VCS System: https://github.com/apache/giraph.git
+Number of commits: 1121
+Issue Tracker: https://issues.apache.org/jira/rest/api/2/search?jql=project=GIRAPH
+Number of issues: 1232
+Refactor prepareSuperstep() to make setMessages(Iterable<M> messages) package-private
+Refactor I/O to be independent of Map/Reduce
+Mutable static global state in Vertex.java should be refactored
+Refactor prepareSuperstep() to make setMessages(Iterable<M> messages) package-private
+A little refactoring
+Refactor BspServiceWorker::loadVertices()
+Refactor code to run independently of Map/Reduce
+Refactoring broke TestTextDoubleDoubleAdjacencyListVertexInputFormat
+Refactor / cleanup Hadoop Counters
+Refactor / cleanups
+Refactor worker logic from GraphMapper
+Refactor MapFunctions enum to be more general
+Refactor job launch code out of graph package and into job package
+Refactor platform-independent CLI argument parsing in GiraphRunner into a separate class
+Refactor configuration options
+Refactor GIRAPH-873 & 874 to minimize code duplication & succinctly support all primitives in one go
+refactor giraph code to support multiple implementations of vertexId data
+Number of comments in discussions: 6759
+Number of issues referenced by commits: 787
+Number of issues labeled as bugs by developers: 534
+Number of issues labeled validated as bug by researchers: 140
+The thread 'MainThread' (0x1) has exited with code 0 (0x0).
+The program 'python.exe' has exited with code 0 (0x0).
