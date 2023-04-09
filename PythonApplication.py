@@ -7,6 +7,9 @@ with open("issue_tracked_projects.txt",'r') as file:
     for line in file:
         project_data = line.strip().split(',')
     
+with open("regexp.txt",'r') as file:
+    for line in file:
+        reg_exp = line.strip()
 
 # You may have to update this dict to match your DB credentials
 credentials = {'db_user': '',
@@ -51,7 +54,7 @@ for projects in projectCollection:
         count_referenced_by_commits = 0
         count_bugs_dev_label = 0
         count_bugs_validated = 0
-        refactor_pattern = re.compile("[ \.;'\"\?!]restructure|^restructure|[ \.;'\"\?!]recode|^recode|[ \.;'\"\?!]reengineer|^reengineer|[ \.;'\"\?!]rewrite|[ \.;'\"\?!]rewrote|[ \.;'\"\?!]rewritten|[ \.;'\"\?!]rewrites|^rewrite|^rewrote|^rewrites|^rewritten|[ \.;'\"\?!]edit|^edit", re.I | re.M)
+        refactor_pattern = re.compile(reg_exp, re.I | re.M)
 
         for issue in Issue.objects(issue_system_id=issue_tracker.id):
             count_comments += IssueComment.objects(issue_id=issue.id).count()
