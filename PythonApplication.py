@@ -49,21 +49,10 @@ for projects in projectCollection:
         num_issues = Issue.objects(issue_system_id=issue_tracker.id).count()
 
         print('Number of issues:', num_issues)
-
-        count_comments = 0
-        count_referenced_by_commits = 0
-        count_bugs_dev_label = 0
-        count_bugs_validated = 0
+        
         refactor_pattern = re.compile(reg_exp, re.I | re.M)
 
         for issue in Issue.objects(issue_system_id=issue_tracker.id):
-            count_comments += IssueComment.objects(issue_id=issue.id).count()
-            if issue.issue_type is not None and issue.issue_type.lower()=='bug':
-                count_bugs_dev_label += 1
-            if issue.issue_type_verified is not None and issue.issue_type_verified.lower()=='bug':
-                count_bugs_validated += 1
-            if Commit.objects(linked_issue_ids=issue.id).count()>0:
-                count_referenced_by_commits += 1
             if issue.title is not None and re.search(refactor_pattern, issue.title):
                 print("Issue Title: " + issue.title + "\nIssue Id: " + str(issue.id))
                 linked_commits = Commit.objects(linked_issue_ids=issue.id)
@@ -73,9 +62,4 @@ for projects in projectCollection:
                 for revision_hash in revision_hashes:
                     print("Linked Commit Revision Hash: " + str(revision_hashes))
                     print("Linked Commit Github URL: " + vcs_system.url.replace(".git", "") + "/commit/" + revision_hash)
-                print("Linked Commit Ids: " + str(commit_ids))
-        
-        print('Number of comments in discussions:', count_comments)
-        print('Number of issues referenced by commits:', count_referenced_by_commits)
-        print('Number of issues labeled as bugs by developers:', count_bugs_dev_label)
-        print('Number of issues labeled validated as bug by researchers:', count_bugs_validated)
+ 
