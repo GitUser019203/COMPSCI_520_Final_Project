@@ -12,6 +12,7 @@
     <OutputPath>.</OutputPath>
     <Name>SmartSHARK</Name>
     <RootNamespace>PythonApplication</RootNamespace>
+    <IsWindowsApplication>True</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
