@@ -69,7 +69,10 @@ for projects in projectCollection:
                 linked_commits = Commit.objects(linked_issue_ids=issue.id)
                 revision_hashes = [commit.revision_hash for commit in linked_commits]
                 commit_ids = [commit.id for commit in linked_commits]
-                print("Linked Commit Revision Hashes: " + str(revision_hashes))
+                
+                for revision_hash in revision_hashes:
+                    print("Linked Commit Revision Hash: " + str(revision_hashes))
+                    print("Linked Commit Github URL: " + vcs_system.url.replace(".git", "") + "/commit/" + revision_hash)
                 print("Linked Commit Ids: " + str(commit_ids))
         
         print('Number of comments in discussions:', count_comments)
