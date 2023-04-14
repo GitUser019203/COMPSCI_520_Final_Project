@@ -26,14 +26,15 @@
     <Compile Include="PythonApplication.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="C++RegExp\regexp_gen1.cpp" />
-    <Content Include="C++RegExp\regexp_gen2.cpp" />
+    <Content Include="C++\projects.cpp" />
+    <Content Include="C++\regexp_gen1.cpp" />
+    <Content Include="C++\regexp_gen2.cpp" />
     <Content Include="out.txt" />
     <Content Include="issue_tracked_projects.txt" />
     <Content Include="regexp.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="C++RegExp\" />
+    <Folder Include="C++\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
