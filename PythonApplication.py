@@ -50,7 +50,7 @@ for projects in projectCollection:
 
         print('Number of issues:', num_issues)
         
-        refactor_pattern = re.compile(reg_exp, re.I | re.M)
+        refactor_pattern = re.compile(reg_exp, re.I | re.M | re.DOTALL)
 
         for issue in Issue.objects(issue_system_id=issue_tracker.id):
             if issue.title is not None and re.search(refactor_pattern, issue.title):
