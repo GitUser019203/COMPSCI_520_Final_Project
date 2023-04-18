@@ -3,11 +3,11 @@ from mongoengine import connect
 from pycoshark.mongomodels import Project, VCSSystem, Commit, FileAction, Hunk, Refactoring, IssueSystem, Issue, IssueComment, MailingList, Message
 from pycoshark.utils import create_mongodb_uri_string
 
-with open("issue_tracked_projects.txt",'r') as file:
+with open("Python\\issue_tracked_projects.txt",'r') as file:
     for line in file:
         project_data = line.strip().split(',')
     
-with open("regexp.txt",'r') as file:
+with open("Python\\regexp.txt",'r') as file:
     for line in file:
         reg_exp = line.strip()
 
@@ -24,6 +24,8 @@ uri = create_mongodb_uri_string(**credentials)
 mongoClient = connect('smartshark_small_2_0', host=uri, alias='default')
 
 projectCollection = [Project.objects(name=project_name) for project_name in project_data]
+
+total_num_issues = 0
 
 for projects in projectCollection:
     for project in projects:
@@ -47,6 +49,7 @@ for projects in projectCollection:
 
         # we can now work with the issues
         num_issues = Issue.objects(issue_system_id=issue_tracker.id).count()
+        total_num_issues += num_issues
 
         print('Number of issues:', num_issues)
         
@@ -62,4 +65,6 @@ for projects in projectCollection:
                 for revision_hash in revision_hashes:
                     print("Linked Commit Revision Hash: " + str(revision_hashes))
                     print("Linked Commit Github URL: " + vcs_system.url.replace(".git", "") + "/commit/" + revision_hash)
+
+print("The total number of issues is " + str(total_num_issues))
  
