@@ -29,6 +29,7 @@
     <Content Include="C++\projects.cpp" />
     <Content Include="C++\regexp_gen1.cpp" />
     <Content Include="C++\regexp_gen2.cpp" />
+    <Content Include="Java\currState" />
     <Content Include="Java\input" />
     <Content Include="Java\refminer.java" />
     <Content Include="Python\out.txt" />
