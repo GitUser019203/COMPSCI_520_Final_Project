@@ -26,6 +26,7 @@ mongoClient = connect('smartshark_small_2_0', host=uri, alias='default')
 projectCollection = [Project.objects(name=project_name) for project_name in project_data]
 
 total_num_issues = 0
+num_issue_titles_with_refactoring = 0;
 
 for projects in projectCollection:
     for project in projects:
@@ -62,9 +63,12 @@ for projects in projectCollection:
                 revision_hashes = [commit.revision_hash for commit in linked_commits]
                 commit_ids = [commit.id for commit in linked_commits]
                 
+                num_issue_titles_with_refactoring += 1 # There could be False positives!
+                
                 for revision_hash in revision_hashes:
                     print("Linked Commit Revision Hash: " + str(revision_hashes))
                     print("Linked Commit Github URL: " + vcs_system.url.replace(".git", "") + "/commit/" + revision_hash)
 
 print("The total number of issues is " + str(total_num_issues))
+print("The total number of issues with refactoring documentation in their titles is " + str(num_issue_titles_with_refactoring))
  
