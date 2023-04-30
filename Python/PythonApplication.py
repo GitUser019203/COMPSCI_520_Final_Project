@@ -28,7 +28,7 @@ projectCollection = [Project.objects(name=project_name) for project_name in proj
 total_num_issues = 0
 num_issue_titles_with_refactoring = 0;
 
-with open("Python\\out.txt", 'w', encoding="utf-8") as out_file:
+with open("Python\\out_issue_tracked_projects.txt", 'w', encoding="utf-8") as out_file:
 
     for projects in projectCollection:
         for project in projects:
@@ -36,40 +36,42 @@ with open("Python\\out.txt", 'w', encoding="utf-8") as out_file:
             # We now select the version control system of the project
             vcs_system = VCSSystem.objects(project_id=project.id).get()
 
-            print('VCS System:', vcs_system.url, file=out_file)
-
             # We can now fetch the commits and analyze them
             num_commits = Commit.objects(vcs_system_id=vcs_system.id).count()
-
-            print('Number of commits:', num_commits, file=out_file)
 
             # We now select the issue tracking system of the project
             # Please note that some projects have multiple issue trackers
             # In this case get() would fail and you would need to loop over them
-            issue_tracker = IssueSystem.objects(project_id=project.id).get()
+            issue_trackers = IssueSystem.objects(project_id=project.id)
 
-            print('Issue Tracker:', issue_tracker.url, file=out_file)
+            if issue_trackers.count() > 0:
+                print('VCS System:', vcs_system.url, file=out_file)
+                print('Number of commits:', num_commits, file=out_file)
 
-            # we can now work with the issues
-            num_issues = Issue.objects(issue_system_id=issue_tracker.id).count()
-            total_num_issues += num_issues
+                for issue_tracker in issue_trackers:
 
-            print('Number of issues:', num_issues, file=out_file)
+                    print('Issue Tracker:', issue_tracker.url, file=out_file)
+
+                    # we can now work with the issues
+                    num_issues = Issue.objects(issue_system_id=issue_tracker.id).count()
+                    total_num_issues += num_issues
+
+                    print('Number of issues:', num_issues, file=out_file)
         
-            refactor_pattern = re.compile(reg_exp, re.I | re.M | re.DOTALL)
+                    refactor_pattern = re.compile(reg_exp, re.I | re.M | re.DOTALL)
 
-            for issue in Issue.objects(issue_system_id=issue_tracker.id):
-                if issue.title is not None and re.search(refactor_pattern, issue.title):
-                    print("Issue Title: " + issue.title + "\nIssue Id: " + str(issue.id), file=out_file)
-                    linked_commits = Commit.objects(linked_issue_ids=issue.id)
-                    revision_hashes = [commit.revision_hash for commit in linked_commits]
-                    commit_ids = [commit.id for commit in linked_commits]
+                    for issue in Issue.objects(issue_system_id=issue_tracker.id):
+                        if issue.title is not None and re.search(refactor_pattern, issue.title):
+                            print("Issue Title: " + issue.title + "\nIssue Id: " + str(issue.id), file=out_file)
+                            linked_commits = Commit.objects(linked_issue_ids=issue.id)
+                            revision_hashes = [commit.revision_hash for commit in linked_commits]
+                            commit_ids = [commit.id for commit in linked_commits]
                 
-                    num_issue_titles_with_refactoring += 1 # There could be False positives!
+                            num_issue_titles_with_refactoring += 1 # There could be False positives!
                 
-                    for revision_hash in revision_hashes:
-                        print("Linked Commit Revision Hash: " + str(revision_hashes), file=out_file)
-                        print("Linked Commit Github URL: " + vcs_system.url.replace(".git", "") + "/commit/" + revision_hash, file=out_file)
+                            for revision_hash in revision_hashes:
+                                print("Linked Commit Revision Hash: " + str(revision_hashes), file=out_file)
+                                print("Linked Commit Github URL: " + vcs_system.url.replace(".git", "") + "/commit/" + revision_hash, file=out_file)
 
     print("The total number of issues is " + str(total_num_issues), file=out_file)
     print("The total number of issues with refactoring documentation in their titles is " + str(num_issue_titles_with_refactoring), file=out_file)
