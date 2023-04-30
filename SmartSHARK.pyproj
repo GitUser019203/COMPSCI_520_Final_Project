@@ -31,7 +31,7 @@
     <Content Include="C++\regexp_gen2.cpp" />
     <Content Include="Java\currState" />
     <Content Include="Java\input" />
-    <Content Include="Java\refminer.java" />
+    <Content Include="Java\Refminer.java" />
     <Content Include="Python\out.txt" />
     <Content Include="Python\issue_tracked_projects.txt" />
     <Content Include="Python\regexp.txt" />
