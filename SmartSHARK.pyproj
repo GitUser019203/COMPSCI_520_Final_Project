@@ -32,8 +32,8 @@
     <Content Include="Java\currState" />
     <Content Include="Java\input" />
     <Content Include="Java\refminer.java" />
-    <Content Include="Python\out.txt" />
     <Content Include="Python\issue_tracked_projects.txt" />
+    <Content Include="Python\out_issue_tracked_projects.txt" />
     <Content Include="Python\regexp.txt" />
   </ItemGroup>
   <ItemGroup>
