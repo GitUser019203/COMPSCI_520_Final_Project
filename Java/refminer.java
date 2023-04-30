@@ -1,153 +1,81 @@
-package uma.mavenproject1;
+package uma.javasmartshark;
 
 import java.util.List;
-import java.util.ArrayList;
 import org.refactoringminer.api.GitHistoryRefactoringMiner;
 import org.refactoringminer.api.Refactoring;
+import org.refactoringminer.api.GitService;
 import org.refactoringminer.api.RefactoringHandler;
 import org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl;
+import org.refactoringminer.util.GitServiceImpl;
 import java.io.BufferedReader;
-import java.io.LineNumberReader;
 import java.io.BufferedWriter;
-import java.io.RandomAccessFile;
-import java.io.File;
-import java.io.FileWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.text.DateFormat;  
-import java.text.SimpleDateFormat;  
-import java.util.Date;  
-import java.util.Calendar;  
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.eclipse.jgit.lib.Repository;
 
-public class refMiner {
-                
-    static String vcsSystemUrl = new String();
-    static String issueTitle = new String();
-    static int numRefactoringCommmits = 0;
-    static int numRequestsMade = 0;
-    static int currLineNo = 0;
-    static String out = new String();
-    static List<String> listIssues = new ArrayList<String>();
+public class Refminer {
+    private static String vcsSystemUrl = new String();
+    private static BufferedReader reader;
+    private static BufferedWriter writer;
+    private static final String[] SMART_SHARK_2_0_ISSUE_TRACKED_VCS_SYSTEM_URLS = {"https://github.com/apache/ant-ivy","https://github.com/apache/archiva.git","https://github.com/apache/calcite.git","https://github.com/apache/cayenne.git","https://github.com/apache/commons-bcel.git","https://github.com/apache/commons-beanutils.git","https://github.com/apache/commons-codec.git","https://github.com/apache/commons-collections.git","https://github.com/apache/commons-compress.git","https://github.com/apache/commons-configuration.git","https://github.com/apache/commons-dbcp.git","https://github.com/apache/commons-digester.git","https://github.com/apache/commons-io.git","https://github.com/apache/commons-jcs.git","https://github.com/apache/commons-jexl.git","https://github.com/apache/commons-lang.git","https://github.com/apache/commons-math","https://github.com/apache/commons-net.git","https://github.com/apache/commons-scxml.git","https://github.com/apache/commons-validator.git","https://github.com/apache/commons-vfs.git","https://github.com/apache/deltaspike.git","https://github.com/apache/eagle.git","https://github.com/apache/giraph.git","https://github.com/apache/gora.git","https://github.com/apache/jspwiki.git","https://github.com/apache/knox.git","https://github.com/apache/kylin.git","https://github.com/apache/lens.git","https://github.com/apache/mahout","https://github.com/apache/manifoldcf.git","https://github.com/apache/nutch.git","https://github.com/apache/opennlp.git","https://github.com/apache/parquet-mr.git","https://github.com/apache/santuario-java.git","https://github.com/apache/systemml.git","https://github.com/apache/tika.git","https://github.com/apache/wss4j.git"};
+    private static final String CMD = "cmd";
+    private static final String BASH = "bash";
+    private static final String SH = "sh";
+    // Add ProcessBuilder for Bash to run script for directory removal 
+    // Add Process Builder for Shell
+    private static final ProcessBuilder workingDirWin = new ProcessBuilder(CMD, "/c", "cd");
     public static void main(String[] args) {
         System.out.println("Working Directory = " + System.getProperty("user.dir"));
-        LineNumberReader reader;
-        LineNumberReader stateReader;
-        BufferedWriter writer;
         GitHistoryRefactoringMiner miner = new GitHistoryRefactoringMinerImpl();
-        try {
-            stateReader = new LineNumberReader(new FileReader("currState"));
-            currLineNo = Integer.parseInt(stateReader.readLine().trim());
-            vcsSystemUrl = stateReader.readLine().trim();
-            issueTitle = stateReader.readLine().trim();
-            numRefactoringCommmits = Integer.parseInt(stateReader.readLine().trim());
-            
-            String issues = stateReader.readLine();
-            issues = issues.substring(1);
-            issues = issues.substring(0, issues.length() - 1);
-            String[] issuesArray = issues.split(",");
-            for(int i = 0; i < issuesArray.length; i++) {
-                listIssues.add(issuesArray[i]);
-            }
-            
-            reader = new LineNumberReader(new FileReader("input"));
-            
-            String line = new String();
-            
-            for(int i = 0; i < currLineNo; i++) {
-                line = reader.readLine();
-            }
-
-            Date date = Calendar.getInstance().getTime();  
-            DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");  
-            String strDate = dateFormat.format(date);    
-            out += "Current date is: " + strDate + "\n";
-            while (line != null && numRequestsMade <= 5000) {                    
-                    if(line.contains("VCS System:")) {
-                        int index = line.indexOf("https://");
-                        
-                        vcsSystemUrl = line.substring(index);
-                        
-                    }
-                    
-                    if(line.contains("Issue Title:")) {
-                        int index = line.indexOf(": ");
-                        issueTitle = line.substring(index);
-                        
-                    }
-                    
-                    
-                    if(line.contains("Linked Commit Github URL:")) {
-                        int index = line.indexOf("https://");
-                        String url = line.substring(index);
-                        String revHash = url.substring(url.lastIndexOf("/") + 1);
-                        try {
-                            //Ref: https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/rate-limits-for-oauth-apps
-                            Thread.sleep(1000);
-                            miner.detectAtCommit(vcsSystemUrl,
-                            revHash, new RefactoringHandler() {
-                              @Override
-                              public void handle(String commitId, List<Refactoring> refactorings) {
-                                numRequestsMade += 1;
-                                if(refactorings.size() > 0) {
-                                    out += "VCS System: " + vcsSystemUrl + "\n";
-                                    System.out.println("VCS System: " + vcsSystemUrl);
-                                    
-                                    out += "Issue Title: " + issueTitle + "\n";
-                                    System.out.println("Issue Title: " + issueTitle);
-                                  
-                                    if(!listIssues.contains(issueTitle)) {
-                                        listIssues.add(issueTitle);
-                                    }
-                                    out += "Refactorings at " + commitId + "\n";
-                                    System.out.println("Refactorings at " + commitId);
-                                    
-                                    for (Refactoring ref : refactorings) {
-                                        out += ref.toString() + "\n";
-                                        System.out.println(ref.toString());
-                                        numRefactoringCommmits += 1;
-
-                                    }
+        GitService gitService = new GitServiceImpl();
+        Repository repo;
+        for(int i = 0; i < SMART_SHARK_2_0_ISSUE_TRACKED_VCS_SYSTEM_URLS.length; i++) {
+            try {
+                ProcessBuilder removeDirWin = new ProcessBuilder(CMD, "/c", "rmdir C:\\SmartSHARK\\Refactorings\\temp /q /s");
+                removeDirWin.inheritIO();
+                Process removeProcess = removeDirWin.start();
+                try {
+                    removeProcess.waitFor();
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(Refminer.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                
+                String vcsSystemURL = SMART_SHARK_2_0_ISSUE_TRACKED_VCS_SYSTEM_URLS[i];
+                String vcsSystemName =  vcsSystemURL.substring(vcsSystemURL.lastIndexOf('/') + 1);
+                
+                writer = new BufferedWriter(new FileWriter(vcsSystemName + " refactorings"));
+                //https://stackoverflow.com/questions/8646517/how-can-i-see-the-size-of-a-github-repository-before-cloning-it
+                //https://api.github.com/repos/apache/ant-ivy
+                repo = gitService.cloneIfNotExists(
+                        "C:/SmartSHARK/Refactorings/temp",
+                        vcsSystemURL);
+                try {
+                    miner.detectAll(repo, "master", new RefactoringHandler() {
+                        @Override
+                        public void handle(String commitId, List<Refactoring> refactorings) {
+                            System.out.println("Refactorings at " + commitId);
+                            try {
+                                writer.write("Refactorings at " + commitId + "\n");
+                                for (Refactoring ref : refactorings) {
+                                    System.out.println(ref.toString());
+                                    writer.write(ref.toString() + "\n");
                                 }
-                              }
-                            }, 10);
-                        } catch (InterruptedException ex) {
-                            Logger.getLogger(refMiner.class.getName()).log(Level.SEVERE, null, ex);
+                            } catch (IOException ex) {
+                                Logger.getLogger(Refminer.class.getName()).log(Level.SEVERE, null, ex);
+                            }
                         }
-                        
-                    }
-                    // read next line
-                    line = reader.readLine();
-            }
-            
-            currLineNo = reader.getLineNumber();
-            reader.close();
-            System.out.println("There are " + numRefactoringCommmits + " refactoring commits linked to issues documenting the refactoring.");
-            System.out.println("There are " + listIssues.size() + " refactoring related issues.");
-            
-            try {       
-                    writer = new BufferedWriter(new FileWriter("currState"), 'w');
-                    writer.write(String.valueOf(currLineNo) + "\n");
-                    writer.write(vcsSystemUrl + "\n");
-                    writer.write(issueTitle + "\n");
-                    writer.write(numRefactoringCommmits + "\n");
-                    writer.write(listIssues.toString() + "\n");
+                    });
+                    
                     writer.close();
-            } catch (IOException e) {       
-                    e.printStackTrace();
+                } catch (Exception ex) {
+                    Logger.getLogger(Refminer.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            } catch (Exception ex) {
+                Logger.getLogger(Refminer.class.getName()).log(Level.SEVERE, null, ex);
             }
-            
-            try {       
-                    writer = new BufferedWriter(new FileWriter("output", true));
-                    writer.write(out);
-                    writer.close();
-            } catch (IOException e) {       
-                    e.printStackTrace();
-            }
-            
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 }
