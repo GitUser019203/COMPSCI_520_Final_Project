@@ -26,7 +26,9 @@ mongoClient = connect('smartshark_small_2_0', host=uri, alias='default')
 projectCollection = [Project.objects(name=project_name) for project_name in project_data]
 
 total_num_issues = 0
-num_issue_titles_with_refactoring = 0;
+total_num_issues_documenting_refactoring = 0;
+total_num_linked_commits = 0
+total_num_linked_commits_with_refactoring_reported = 0;
 
 with open("Python\\out_issue_tracked_projects.txt", 'w', encoding="utf-8") as out_file:
 
@@ -46,7 +48,6 @@ with open("Python\\out_issue_tracked_projects.txt", 'w', encoding="utf-8") as ou
 
             if issue_trackers.count() > 0:
                 print('VCS System:', vcs_system.url, file=out_file)
-                print('Number of commits:', num_commits, file=out_file)
 
                 for issue_tracker in issue_trackers:
 
@@ -61,18 +62,22 @@ with open("Python\\out_issue_tracked_projects.txt", 'w', encoding="utf-8") as ou
                     refactor_pattern = re.compile(reg_exp, re.I | re.M | re.DOTALL)
 
                     for issue in Issue.objects(issue_system_id=issue_tracker.id):
-                        if issue.title is not None and re.search(refactor_pattern, issue.title):
-                            print("Issue Title: " + issue.title + "\nIssue Id: " + str(issue.id), file=out_file)
+                        if issue.title is not None and re.search(refactor_pattern, issue.title):                            
+                            total_num_issues_documenting_refactoring += 1 # There could be False positives!
                             linked_commits = Commit.objects(linked_issue_ids=issue.id)
-                            revision_hashes = [commit.revision_hash for commit in linked_commits]
-                            commit_ids = [commit.id for commit in linked_commits]
-                
-                            num_issue_titles_with_refactoring += 1 # There could be False positives!
-                
-                            for revision_hash in revision_hashes:
-                                print("Linked Commit Revision Hash: " + str(revision_hashes), file=out_file)
-                                print("Linked Commit Github URL: " + vcs_system.url.replace(".git", "") + "/commit/" + revision_hash, file=out_file)
+
+                            if linked_commits.count() > 0:
+                                total_num_linked_commits += linked_commits.count()
+                                print("Issue Title: " + issue.title + "\nIssue Id: " + str(issue.id), file=out_file)
+                                for commit in linked_commits:
+                                    if commit.message is not None and re.search(refactor_pattern, commit.message):
+                                        revision_hash = commit.revision_hash
+                                        total_num_linked_commits_with_refactoring_reported += 1
+                                        print("Linked Commit Revision Hash: " + str(revision_hash), file=out_file)
+                                        print("Linked Commit Github URL: " + vcs_system.url.replace(".git", "") + "/commit/" + revision_hash, file=out_file)
 
     print("The total number of issues is " + str(total_num_issues), file=out_file)
-    print("The total number of issues with refactoring documentation in their titles is " + str(num_issue_titles_with_refactoring), file=out_file)
+    print("The total number of issues with refactoring documentation in their titles is " + str(total_num_issues_documenting_refactoring), file=out_file)
+    print("The total number of linked commits is " + str(total_num_linked_commits), file=out_file)
+    print("The total number of linked commits reported to involve refactoring is " + str(total_num_linked_commits_with_refactoring_reported), file=out_file)
  
