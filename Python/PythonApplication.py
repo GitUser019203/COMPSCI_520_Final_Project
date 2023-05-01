@@ -27,6 +27,7 @@ projectCollection = [Project.objects(name=project_name) for project_name in proj
 
 total_num_issues = 0
 total_num_issues_documenting_refactoring = 0;
+total_num_issues_documenting_refactoring_with_linked_commits_reporting_refactoring = 0
 total_num_linked_commits = 0
 total_num_linked_commits_with_refactoring_reported = 0;
 
@@ -65,17 +66,18 @@ with open("Python\\mongo_db_extract_refactoring_doc.txt", 'w', encoding="utf-8")
                                 linked_commit_msgs = [commit.message for commit in linked_commits]
                                 refactorings_reported = [(msg is not None and re.search(refactor_pattern, msg)) for msg in linked_commit_msgs]
                                 if any(refactorings_reported):
+                                    total_num_issues_documenting_refactoring_with_linked_commits_reporting_refactoring += 1
                                     if vcs_system_reported_refactoring:
                                         if issue_tracker_reported_refactoring:
                                             print("Issue Title: " + issue.title + "\nIssue Id: " \
-                                            + str(issue.id) + "\n", file=out_file)
+                                            + str(issue.id), file=out_file)
                                         else:
                                             print('Issue Tracker:', issue_tracker.url + "Issue Title: " + issue.title + "\nIssue Id: " \
-                                            + str(issue.id) + "\n", file=out_file)
+                                            + str(issue.id), file=out_file)
                                             issue_tracker_reported_refactoring = True
                                     else:
                                         print('VCS System:' + vcs_system.url + "\n" + 'Issue Tracker:', issue_tracker.url \
-                                        + "Issue Title: " + issue.title + "\nIssue Id: " + str(issue.id) + "\n", file=out_file)
+                                        + "Issue Title: " + issue.title + "\nIssue Id: " + str(issue.id), file=out_file)
                                         vcs_system_reported_refactoring = True
                                         issue_tracker_reported_refactoring = True
                                         
@@ -88,9 +90,6 @@ with open("Python\\mongo_db_extract_refactoring_doc.txt", 'w', encoding="utf-8")
 
     print("The total number of issues is " + str(total_num_issues), file=out_file)
     print("The total number of issues with refactoring documentation in their titles is " + str(total_num_issues_documenting_refactoring), file=out_file)
+    print("The total number of issues with refactoring documentation in their titles and that have linked commits reported to involve refactoring is " + str(total_num_issues_documenting_refactoring_with_linked_commits_reporting_refactoring), file=out_file)
     print("The total number of linked commits is " + str(total_num_linked_commits), file=out_file)
     print("The total number of linked commits reported to involve refactoring is " + str(total_num_linked_commits_with_refactoring_reported), file=out_file)
- 
-
-    #ISsue ids could be used in the java code to prevent duplicate issue titles
-    #Find isssues that really have the refactoring they document in their title and commit messages.
