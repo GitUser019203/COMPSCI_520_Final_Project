@@ -28,8 +28,10 @@ projectCollection = [Project.objects(name=project_name) for project_name in proj
 total_num_issues = 0
 total_num_issues_documenting_refactoring = 0;
 total_num_issues_documenting_refactoring_with_linked_commits_reporting_refactoring = 0
-total_num_linked_commits = 0
-total_num_linked_commits_with_refactoring_reported = 0;
+total_num_commits_linked_to_issues_documenting_refactoring = 0;
+total_num_commits_reporting_refactoring_linked_to_issues_documenting_refactoring = 0
+unique_commit_hashes = set()
+unique_commit_hashes_with_refactoring_reported = set()
 
 with open("Python\\mongo_db_extract_refactoring_doc.txt", 'w', encoding="utf-8") as out_file:
     for projects in projectCollection:
@@ -48,6 +50,10 @@ with open("Python\\mongo_db_extract_refactoring_doc.txt", 'w', encoding="utf-8")
             issue_trackers = IssueSystem.objects(project_id=project.id)
 
             if issue_trackers.count() > 0:
+                if issue_trackers.count() > 1:
+                    print(f"The VCS system {vcs_system} has more than one issue tracker.", file=out_file)
+                    [print(f"Issue Tracker URL: {issue_tracker.url}", file=out_file) for issue_tracker in issue_trackers]
+
                 for issue_tracker in issue_trackers:
                     issue_tracker_reported_refactoring = False
                     # we can now work with the issues
@@ -60,9 +66,11 @@ with open("Python\\mongo_db_extract_refactoring_doc.txt", 'w', encoding="utf-8")
                         if issue.title is not None and re.search(refactor_pattern, issue.title):                            
                             total_num_issues_documenting_refactoring += 1 # There could be False positives!
                             linked_commits = Commit.objects(linked_issue_ids=issue.id)
-
+                            for commit in linked_commits:
+                                # Although distinct commits can have identical commit hashes it is rare
+                                unique_commit_hashes.add(commit.revision_hash)
+                            total_num_commits_linked_to_issues_documenting_refactoring += linked_commits.count()
                             if linked_commits.count() > 0:
-                                total_num_linked_commits += linked_commits.count()
                                 linked_commit_msgs = [commit.message for commit in linked_commits]
                                 refactorings_reported = [(msg is not None and re.search(refactor_pattern, msg)) for msg in linked_commit_msgs]
                                 if any(refactorings_reported):
@@ -84,12 +92,19 @@ with open("Python\\mongo_db_extract_refactoring_doc.txt", 'w', encoding="utf-8")
                                 for commit in linked_commits:
                                     if commit.message is not None and re.search(refactor_pattern, commit.message):
                                         revision_hash = commit.revision_hash
-                                        total_num_linked_commits_with_refactoring_reported += 1
+                                        total_num_commits_reporting_refactoring_linked_to_issues_documenting_refactoring += 1
+                                        # Although distinct commits can have identical commit hashes it is rare
+                                        unique_commit_hashes_with_refactoring_reported.add(revision_hash)
                                         print("Linked Commit Revision Hash: " + str(revision_hash), file=out_file)
                                         print("Linked Commit Github URL: " + vcs_system.url.replace(".git", "") + "/commit/" + revision_hash, file=out_file)
 
+    print("\n", file=out_file)
+    print("RESULTS", file=out_file)
+    print("=" * 100, file=out_file)
     print("The total number of issues is " + str(total_num_issues) + ".", file=out_file)
     print("The total number of issues with refactoring documentation in their titles is " + str(total_num_issues_documenting_refactoring) + ".", file=out_file)
     print("However, only " + str(total_num_issues_documenting_refactoring_with_linked_commits_reporting_refactoring) + " of the issues have linked commits that developers have labelled as involving refactoring.", file=out_file)
-    print("The total number of commits linked to issues documenting refactoring is " + str(total_num_linked_commits) + ".", file=out_file)
-    print("However, developers have reported that only " + str(total_num_linked_commits_with_refactoring_reported) + " of them involve refactoring.", file=out_file)
+    print("The total number of unique commits linked to issues documenting refactoring is " + str(len(unique_commit_hashes)) + ".", file=out_file)    
+    print("However, developers have reported that only " + str(len(unique_commit_hashes_with_refactoring_reported)) + " of them involve refactoring.", file=out_file)
+    print(f"There are {total_num_commits_linked_to_issues_documenting_refactoring - len(unique_commit_hashes)} duplicate commits linked to issues documenting refactoring.", file=out_file)
+    print(f"Developers have affirmed that {total_num_commits_reporting_refactoring_linked_to_issues_documenting_refactoring - len(unique_commit_hashes_with_refactoring_reported)} of the duplicate linked commits do refactoring.", file=out_file)
