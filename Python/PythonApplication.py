@@ -72,12 +72,12 @@ with open("Python\\mongo_db_extract_refactoring_doc.txt", 'w', encoding="utf-8")
                                             print("Issue Title: " + issue.title + "\nIssue Id: " \
                                             + str(issue.id), file=out_file)
                                         else:
-                                            print('Issue Tracker:', issue_tracker.url + "Issue Title: " + issue.title + "\nIssue Id: " \
+                                            print('Issue Tracker:', issue_tracker.url + "\nIssue Title: " + issue.title + "\nIssue Id: " \
                                             + str(issue.id), file=out_file)
                                             issue_tracker_reported_refactoring = True
                                     else:
                                         print('VCS System:' + vcs_system.url + "\n" + 'Issue Tracker:', issue_tracker.url \
-                                        + "Issue Title: " + issue.title + "\nIssue Id: " + str(issue.id), file=out_file)
+                                        + "\nIssue Title: " + issue.title + "\nIssue Id: " + str(issue.id), file=out_file)
                                         vcs_system_reported_refactoring = True
                                         issue_tracker_reported_refactoring = True
                                         
