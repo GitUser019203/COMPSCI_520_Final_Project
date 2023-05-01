@@ -29,9 +29,9 @@
     <Content Include="C++\projects.cpp" />
     <Content Include="C++\regexp_gen1.cpp" />
     <Content Include="C++\regexp_gen2.cpp" />
-    <Content Include="Java\currState" />
-    <Content Include="Java\input" />
-    <Content Include="Java\refminer.java" />
+    <Content Include="Java\currMiningState" />
+    <Content Include="Java\defaultMiningState" />
+    <Content Include="Java\RefactoringMiner.java" />
     <Content Include="Python\issue_tracked_projects.txt" />
     <Content Include="Python\mongo_db_extract_refactoring_doc.txt" />
     <Content Include="Python\regexp.txt" />
