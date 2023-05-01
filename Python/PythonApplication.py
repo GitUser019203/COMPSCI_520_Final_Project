@@ -30,10 +30,10 @@ total_num_issues_documenting_refactoring = 0;
 total_num_linked_commits = 0
 total_num_linked_commits_with_refactoring_reported = 0;
 
-with open("Python\\out_issue_tracked_projects.txt", 'w', encoding="utf-8") as out_file:
-
+with open("Python\\mongo_db_extract_refactoring_doc.txt", 'w', encoding="utf-8") as out_file:
     for projects in projectCollection:
         for project in projects:
+            vcs_system_reported_refactoring = False
 
             # We now select the version control system of the project
             vcs_system = VCSSystem.objects(project_id=project.id).get()
@@ -47,18 +47,12 @@ with open("Python\\out_issue_tracked_projects.txt", 'w', encoding="utf-8") as ou
             issue_trackers = IssueSystem.objects(project_id=project.id)
 
             if issue_trackers.count() > 0:
-                print('VCS System:', vcs_system.url, file=out_file)
-
                 for issue_tracker in issue_trackers:
-
-                    print('Issue Tracker:', issue_tracker.url, file=out_file)
-
+                    issue_tracker_reported_refactoring = False
                     # we can now work with the issues
                     num_issues = Issue.objects(issue_system_id=issue_tracker.id).count()
-                    total_num_issues += num_issues
+                    total_num_issues += num_issues        
 
-                    print('Number of issues:', num_issues, file=out_file)
-        
                     refactor_pattern = re.compile(reg_exp, re.I | re.M | re.DOTALL)
 
                     for issue in Issue.objects(issue_system_id=issue_tracker.id):
@@ -68,7 +62,23 @@ with open("Python\\out_issue_tracked_projects.txt", 'w', encoding="utf-8") as ou
 
                             if linked_commits.count() > 0:
                                 total_num_linked_commits += linked_commits.count()
-                                print("Issue Title: " + issue.title + "\nIssue Id: " + str(issue.id), file=out_file)
+                                linked_commit_msgs = [commit.message for commit in linked_commits]
+                                refactorings_reported = [(msg is not None and re.search(refactor_pattern, msg)) for msg in linked_commit_msgs]
+                                if any(refactorings_reported):
+                                    if vcs_system_reported_refactoring:
+                                        if issue_tracker_reported_refactoring:
+                                            print("Issue Title: " + issue.title + "\nIssue Id: " \
+                                            + str(issue.id) + "\n", file=out_file)
+                                        else:
+                                            print('Issue Tracker:', issue_tracker.url + "Issue Title: " + issue.title + "\nIssue Id: " \
+                                            + str(issue.id) + "\n", file=out_file)
+                                            issue_tracker_reported_refactoring = True
+                                    else:
+                                        print('VCS System:' + vcs_system.url + "\n" + 'Issue Tracker:', issue_tracker.url \
+                                        + "Issue Title: " + issue.title + "\nIssue Id: " + str(issue.id) + "\n", file=out_file)
+                                        vcs_system_reported_refactoring = True
+                                        issue_tracker_reported_refactoring = True
+                                        
                                 for commit in linked_commits:
                                     if commit.message is not None and re.search(refactor_pattern, commit.message):
                                         revision_hash = commit.revision_hash
@@ -81,3 +91,6 @@ with open("Python\\out_issue_tracked_projects.txt", 'w', encoding="utf-8") as ou
     print("The total number of linked commits is " + str(total_num_linked_commits), file=out_file)
     print("The total number of linked commits reported to involve refactoring is " + str(total_num_linked_commits_with_refactoring_reported), file=out_file)
  
+
+    #ISsue ids could be used in the java code to prevent duplicate issue titles
+    #Find isssues that really have the refactoring they document in their title and commit messages.
