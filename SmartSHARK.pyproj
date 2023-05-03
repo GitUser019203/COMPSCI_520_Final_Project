@@ -29,6 +29,8 @@
     <Content Include="C++\projects.cpp" />
     <Content Include="C++\regexp_gen1.cpp" />
     <Content Include="C++\regexp_gen2.cpp" />
+    <Content Include="Java\consoleOutput" />
+    <Content Include="Java\Main.java" />
     <Content Include="Python\issue_tracked_projects.txt" />
     <Content Include="Python\mongo_db_extract_refactoring_doc.txt" />
     <Content Include="Python\regexp.txt" />
