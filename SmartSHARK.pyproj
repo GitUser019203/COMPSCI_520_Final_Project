@@ -5,7 +5,7 @@
     <ProjectGuid>4c889f48-76b6-4c25-8f84-ada9d29d7352</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>Python\PythonApplication.py</StartupFile>
+    <StartupFile>Python\JavaConsoleOutputParser\parser.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +23,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Python\JavaConsoleOutputParser\parser.py" />
     <Compile Include="Python\PythonApplication.py" />
   </ItemGroup>
   <ItemGroup>
@@ -32,6 +33,7 @@
     <Content Include="Java\consoleOutput" />
     <Content Include="Java\Main.java" />
     <Content Include="Python\issue_tracked_projects.txt" />
+    <Content Include="Python\JavaConsoleOutputParser\extracted_errors" />
     <Content Include="Python\mongo_db_extract_refactoring_doc.txt" />
     <Content Include="Python\regexp.txt" />
   </ItemGroup>
@@ -39,6 +41,7 @@
     <Folder Include="C++\" />
     <Folder Include="Java\" />
     <Folder Include="Python\" />
+    <Folder Include="Python\JavaConsoleOutputParser\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
