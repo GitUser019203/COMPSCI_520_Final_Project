@@ -1,0 +1,636 @@
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed8b3ef4275a032d3e40ed
+Issue Title: : Adding an integer and getting it as a long causes an exception
+Refactorings at 7d582ef08f84f2ef7caf8fc18a1831d5de0eb91f
+Extract Variable	n : Number in method public toByte(value Object) : Byte from class org.apache.commons.configuration.PropertyConverter
+Extract Variable	n : Number in method public toShort(value Object) : Short from class org.apache.commons.configuration.PropertyConverter
+Extract Variable	n : Number in method public toInteger(value Object) : Integer from class org.apache.commons.configuration.PropertyConverter
+Extract Variable	n : Number in method public toLong(value Object) : Long from class org.apache.commons.configuration.PropertyConverter
+Extract Variable	n : Number in method public toFloat(value Object) : Float from class org.apache.commons.configuration.PropertyConverter
+Extract Variable	n : Number in method public toDouble(value Object) : Double from class org.apache.commons.configuration.PropertyConverter
+Extract Variable	n : Number in method public toBigInteger(value Object) : BigInteger from class org.apache.commons.configuration.PropertyConverter
+Extract Variable	n : Number in method public toBigDecimal(value Object) : BigDecimal from class org.apache.commons.configuration.PropertyConverter
+Developers have reported that 10708 commits involve refactoring but only 1028 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1028 commits.
+
+No refactorings detected at c671dfd5fe57d837fd966dbe0637198bc5cdbee0
+
+No refactorings detected at 7091bf722e0adbaf059ad262b33f548960ad6df9
+
+No refactorings detected at 7890b7a6b1fce045520c88542c6df016ae0f372a
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed8b5bf4275a032d3e41d6
+Issue Title: : Inconsistent way to locate filename when creating configuration
+Refactorings at e635cd103e1d4659aebd31e6f9ff804339676108
+Extract Variable	resourceName : String in method public locate(base String, name String) : URL from class org.apache.commons.configuration.ConfigurationUtils
+Developers have reported that 10708 commits involve refactoring but only 1029 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1029 commits.
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed8b5bf4275a032d3e41d6
+Issue Title: : Inconsistent way to locate filename when creating configuration
+Refactorings at 397e97d2b347f4fe326e95f4e90a0dbb0e446a42
+Extract Variable	file : File in method public getPath() : String from class org.apache.commons.configuration.AbstractFileConfiguration
+Extract Method	package locateFromClasspath(resourceName String) : URL extracted from public locate(base String, name String) : URL in class org.apache.commons.configuration.ConfigurationUtils
+Developers have reported that 10708 commits involve refactoring but only 1030 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1030 commits.
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed8bbff4275a032d3e4266
+Issue Title: : Improve handling of optional configurations in DefaultConfigurationBuilder
+Refactorings at 1336752ec477d9c6e89d4913993a207265ad0ac5
+Change Class Access Modifier	protected to public in class org.apache.commons.configuration.DefaultConfigurationBuilder.ConfigurationDeclaration
+Extract Method	public getEmptyConfiguration(decl ConfigurationDeclaration) : AbstractConfiguration extracted from public getConfiguration(decl ConfigurationDeclaration) : AbstractConfiguration in class org.apache.commons.configuration.DefaultConfigurationBuilder.FileConfigurationProvider
+Extract Method	private prepareOptionalTest(tag String, force boolean) : CombinedConfiguration extracted from public testLoadOptionalNonFileBased() : void in class org.apache.commons.configuration.TestDefaultConfigurationBuilder
+Extract Attribute	private OPTIONAL_NAME : String in class org.apache.commons.configuration.TestDefaultConfigurationBuilder
+Developers have reported that 10708 commits involve refactoring but only 1031 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1031 commits.
+
+No refactorings detected at a7e955d5e69507b99e0d73a6751e6dee407fe2d2
+
+No refactorings detected at a07e216cffcd85bf5bc5ce254b69c1eaa7e0e592
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed8bd3f4275a032d3e430f
+Issue Title: : XMLConfiguration with setAutoSave(true) doesn't save if SubnodeConfiguration is changed
+Refactorings at aaf311cd404e8458d995afbd9552defc1bdf4985
+Extract Method	public nextEvent(expectedType int) : ConfigurationEvent extracted from public checkEvent(type int, propName String, propValue Object, before boolean) : void in class org.apache.commons.configuration.event.AbstractTestConfigurationEvents.TestConfigurationListener
+Rename Parameter	type : int to expectedType : int in method public nextEvent(expectedType int) : ConfigurationEvent from class org.apache.commons.configuration.event.AbstractTestConfigurationEvents.TestConfigurationListener
+Developers have reported that 10708 commits involve refactoring but only 1032 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1032 commits.
+
+No refactorings detected at 15b093448cebcaf28bf7384257bd9208cc18bb34
+
+No refactorings detected at bd0593e136edca76a28757ad1be3d9f90099bfac
+
+No refactorings detected at 559e62cf4513bab20c08ec8129bf60b23e423b73
+
+No refactorings detected at c6b7241fc57ac41db358ee5990e1908ac41f4b58
+
+No refactorings detected at 204ede6adb0c08f84ec2d1743c92b20af1001a99
+
+No refactorings detected at cfd2560843033325d5ed7001f363e93fd5294000
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed8c07f4275a032d3e4435
+Issue Title: : Can not create a PropertiesConfiguration if the filename contains a '#'
+Refactorings at 672dd563c176a418d69b9cff2abfaeb62f1fa3e3
+Extract Method	package toURL(file File) : URL extracted from public getURL(basePath String, file String) : URL in class org.apache.commons.configuration.ConfigurationUtils
+Extract Method	package toURL(file File) : URL extracted from public getURL(basePath String, file String) : URL in class org.apache.commons.configuration.ConfigurationUtils
+Developers have reported that 10708 commits involve refactoring but only 1033 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1033 commits.
+
+No refactorings detected at 892d79fd86b7b62004f29535858ef53fb7706370
+
+No refactorings detected at b3f082cdd7587dac8b5f75beea1e48fd42e38f84
+
+No refactorings detected at 752e6507e65146542c443f6fff986a344ae6a41d
+
+No refactorings detected at bb0381738eeab6e82fc3f20677f74194e4a2bff9
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed8c20f4275a032d3e44e7
+Issue Title: : PropertiesConfiguration.save() doesn't persist properties added through a DataConfiguration
+Refactorings at 9a63b1116f452135a938e3aed9fe96646816fdb3
+Add Method Annotation	@Override in method protected addPropertyDirect(key String, obj Object) : void from class org.apache.commons.configuration2.DataConfiguration
+Add Method Annotation	@Override in method public clearProperty(key String) : void from class org.apache.commons.configuration2.DataConfiguration
+Add Method Annotation	@Override in method protected setUp() : void from class org.apache.commons.configuration2.TestDataConfiguration
+Add Method Annotation	@Override in method public load(in Reader) : void from class org.apache.commons.configuration2.TestPropertiesConfiguration.DummyLayout
+Add Method Annotation	@Override in method public disconnect() : void from class org.apache.commons.configuration2.TestPropertiesConfiguration.MockHttpURLConnection
+Add Method Annotation	@Override in method public usingProxy() : boolean from class org.apache.commons.configuration2.TestPropertiesConfiguration.MockHttpURLConnection
+Add Method Annotation	@Override in method public connect() : void from class org.apache.commons.configuration2.TestPropertiesConfiguration.MockHttpURLConnection
+Add Method Annotation	@Override in method public getResponseCode() : int from class org.apache.commons.configuration2.TestPropertiesConfiguration.MockHttpURLConnection
+Add Method Annotation	@Override in method public getOutputStream() : OutputStream from class org.apache.commons.configuration2.TestPropertiesConfiguration.MockHttpURLConnection
+Add Method Annotation	@Override in method protected openConnection(u URL) : URLConnection from class org.apache.commons.configuration2.TestPropertiesConfiguration.MockHttpURLStreamHandler
+Add Method Annotation	@Override in method protected setUp() : void from class org.apache.commons.configuration2.TestPropertiesConfiguration
+Add Method Annotation	@Override in method public reloadingRequired() : boolean from class org.apache.commons.configuration2.TestPropertiesConfiguration.testReentrantReload.setReloadingStrategy.new FileChangedReloadingStrategy
+Developers have reported that 10708 commits involve refactoring but only 1034 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1034 commits.
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed8c23f4275a032d3e44ff
+Issue Title: : XMLConfigurationProvider cannot create a class that extends XMLConfiguration
+Refactorings at 9fb296cd8998d69593947bbbeabfa2dd3faa4511
+Change Class Access Modifier	package to public in class org.apache.commons.configuration.DefaultConfigurationBuilder.XMLConfigurationProvider
+Developers have reported that 10708 commits involve refactoring but only 1035 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1035 commits.
+
+No refactorings detected at d4221eee46da2e521345333fc2acf745f36861de
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed8c9ef4275a032d3e4638
+Issue Title: : Allow configurations to be "merged" in addition to the existing override and union semantics.
+Refactorings at f3f17c2ac2f4d0c67624995817d9e28586df5249
+Extract Variable	obj : Object in method public visit(visitor NodeVisitor, key ConfigurationKey) : void from class org.apache.commons.configuration.HierarchicalConfiguration.Node
+Extract Variable	obj : Object in method public visit(visitor NodeVisitor, key ConfigurationKey) : void from class org.apache.commons.configuration.HierarchicalConfiguration.Node
+Extract Variable	obj : Object in method public visitBeforeChildren(node Node, key ConfigurationKey) : void from class org.apache.commons.configuration.HierarchicalConfiguration.BuilderVisitor
+Extract Variable	obj : Object in method public visitBeforeChildren(node Node, key ConfigurationKey) : void from class org.apache.commons.configuration.HierarchicalConfiguration.BuilderVisitor
+Developers have reported that 10708 commits involve refactoring but only 1036 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1036 commits.
+
+No refactorings detected at f5640a302f1bc4a8d9debf03db77c7492e654ca7
+
+No refactorings detected at d4a29234bdef67e7c31c819226044b7f3648d3f8
+
+No refactorings detected at 942a1dded5ce454d05214789032d3f1f6e93386a
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed8ca7f4275a032d3e4668
+Issue Title: : Add option to PropertiesConfiguration.PropertiesWriter to enable/disable using whitespace around = separator
+Refactorings at 72a30b25665e4e86b2d5b335b3d21866e29bd612
+Extract Method	private writeComment(writer PropertiesConfiguration.PropertiesWriter, comment String) : void extracted from public save(out Writer) : void in class org.apache.commons.configuration2.PropertiesConfigurationLayout
+Remove Parameter	writer : Writer in method public PropertiesWriterTestImpl(writer Writer, delimiter char) from class org.apache.commons.configuration2.TestPropertiesConfiguration.PropertiesWriterTestImpl
+Add Thrown Exception Type	IOException in method public testSetIOFactoryWriter() : void from class org.apache.commons.configuration2.TestPropertiesConfiguration
+Add Method Annotation	@Override in method public toString() : String from class org.apache.commons.configuration2.TestPropertiesConfigurationLayout.PropertiesBuilder
+Add Method Annotation	@Override in method package propertyLoaded(key String, value String) : boolean from class org.apache.commons.configuration2.TestPropertiesConfigurationLayout.LayoutTestConfiguration
+Change Attribute Access Modifier	package to private in attribute private CR : String from class org.apache.commons.configuration2.TestPropertiesConfigurationLayout
+Developers have reported that 10708 commits involve refactoring but only 1037 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1037 commits.
+
+No refactorings detected at ba2628e69e24791f9c8687ecfe8a65686179d40a
+
+No refactorings detected at 8dbdbc8d6ec2f14da050a54e8fbd3515ed26ae0a
+
+No refactorings detected at 4e1531cd799ef944250827b3f4950f0d3c84eba0
+
+No refactorings detected at 6a3b85ea4eb60c748a0f6632822b027f2864a849
+
+No refactorings detected at 7533cfdf6fb6c4d930cb70ebfa936f769c4a6aeb
+
+No refactorings detected at 15c4fb525d464e4f0341209e75c69471283c9e28
+
+No refactorings detected at 6867d5200a26cea80b7494bd71000bf297919e30
+
+No refactorings detected at 3648846d06ac798567feedf46c64a4433e7883a2
+
+No refactorings detected at 04025520074159caa5377ef305837231c171fc06
+
+No refactorings detected at 0c883a3f6e449ba18b255b9560b7a2be1cb9a6a2
+
+No refactorings detected at d2274baf423727ab95cfd07e6d8c8a20a73b49ad
+
+No refactorings detected at d68bef420a6d4043f9c63983541e93cd6de2d644
+
+No refactorings detected at 723f592ec1958c241b346c15ff26ad2e81654c4f
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed8ff2f4275a032d3e4d41
+Issue Title: : Add a size() method to the Configuration interface
+Refactorings at b7a88c79524a840d8733c6cbcd91e22a7f2f7d1b
+Extract Method	private visitDefinedKeys() : DefinedKeysVisitor extracted from protected getKeysInternal() : Iterator<String> in class org.apache.commons.configuration2.AbstractHierarchicalConfiguration
+Developers have reported that 10708 commits involve refactoring but only 1038 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1038 commits.
+
+No refactorings detected at 280347f1370951855f46ea58efc936836ea82e7a
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed8ffdf4275a032d3e4d86
+Issue Title: : Merge some adaptations of version 1.10 to 2.0
+Refactorings at 9712293bdafda3927b73e832d04ba8641946745e
+Change Parameter Type	map : Map<String,Object> to map : Map<String,?> in method public MapConfiguration(map Map<String,?>) from class org.apache.commons.configuration2.MapConfiguration
+Developers have reported that 10708 commits involve refactoring but only 1039 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1039 commits.
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed8ffdf4275a032d3e4d86
+Issue Title: : Merge some adaptations of version 1.10 to 2.0
+Refactorings at 20aa1be7d78ef0d3bd0b42b1b596b2815b1560ac
+Change Parameter Type	defaultValue : List<Object> to defaultValue : List<?> in method public getList(key String, defaultValue List<?>) : List<Object> from class org.apache.commons.configuration2.AbstractConfiguration
+Change Parameter Type	defaultValue : List<Object> to defaultValue : List<?> in method public getList(key String, defaultValue List<?>) : List<Object> from class org.apache.commons.configuration2.CompositeConfiguration
+Change Parameter Type	defaultValue : List<Object> to defaultValue : List<?> in method public getList(key String, defaultValue List<?>) : List<Object> from class org.apache.commons.configuration2.DynamicCombinedConfiguration
+Change Parameter Type	defaultValue : List<Object> to defaultValue : List<?> in method public getList(key String, defaultValue List<?>) : List<Object> from class org.apache.commons.configuration2.PatternSubtreeConfigurationWrapper
+Change Parameter Type	defaultValue : List<Object> to defaultValue : List<?> in method public getList(key String, defaultValue List<?>) : List<Object> from class org.apache.commons.configuration2.ImmutableConfiguration
+Developers have reported that 10708 commits involve refactoring but only 1040 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1040 commits.
+
+No refactorings detected at 27fc044f7205c1f725080c4ea2d1ab73c3fa2314
+
+No refactorings detected at f0bc5b8fc20384c92b0800f76d8c417cdeaf3751
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed91b2f4275a032d3e4dec
+Issue Title: : Remove cyclic package dependencies
+Refactorings at 60e0cbe87ad7038de3e47a954b301a00154b4ada
+Move Class	org.apache.commons.configuration2.ConfigurationLogger moved to org.apache.commons.configuration2.io.ConfigurationLogger
+Move Class	org.apache.commons.configuration2.TestConfigurationLogger moved to org.apache.commons.configuration2.io.TestConfigurationLogger
+Move And Rename Method	public testDefaultLogger() : void from class org.apache.commons.configuration2.TestAbstractConfigurationBasicFeatures to public testAbstractConfigurationDefaultLogger() : void from class org.apache.commons.configuration2.io.TestConfigurationLogger
+Move And Rename Method	public testSetLogger() : void from class org.apache.commons.configuration2.TestAbstractConfigurationBasicFeatures to public testAbstractConfigurationSetLogger() : void from class org.apache.commons.configuration2.io.TestConfigurationLogger
+Move And Rename Method	public testSetLoggerNull() : void from class org.apache.commons.configuration2.TestAbstractConfigurationBasicFeatures to public testAbstractConfigurationSetLoggerNull() : void from class org.apache.commons.configuration2.io.TestConfigurationLogger
+Developers have reported that 10708 commits involve refactoring but only 1041 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1041 commits.
+
+No refactorings detected at 9e781ddd12b861f973bd70a5c40e36e3526308c3
+
+No refactorings detected at 5a75d98ed9befcdda6e0bdd5cf760a48eb5a8c86
+
+No refactorings detected at 25490ca95eed4454827abdb972b9083353645cd3
+
+No refactorings detected at b6b621dd4369eea7b0295edc9157de8ee4e3cbe1
+
+No refactorings detected at bf2db4e387e490b7a6bdf8e23ce14300c4565ad7
+
+No refactorings detected at 45ed315416acf549a1d0caac1ee14ee0b99f62ac
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed91c8f4275a032d3e4f2c
+Issue Title: : Remove obsolete HierarchicalConfiguration.Node class and related classes
+Refactorings at b43a1cdfceefec0e27290a25b58051d88355465a
+Change Return Type	HierarchicalConfiguration.Node to ConfigurationNode in method private createRootNode(cdata AdditionalConfigurationData) : ConfigurationNode from class org.apache.commons.configuration.ConfigurationFactory.ConfigurationBuilder
+Change Variable Type	sibling1 : Node to sibling1 : ConfigurationNode in method public visitBeforeChildren(node ConfigurationNode) : void from class org.apache.commons.configuration.HierarchicalConfiguration.BuilderVisitor
+Change Variable Type	nd : Node to nd : ConfigurationNode in method public visitBeforeChildren(node ConfigurationNode) : void from class org.apache.commons.configuration.HierarchicalConfiguration.BuilderVisitor
+Change Variable Type	newNodes : List<Node> to newNodes : List<ConfigurationNode> in method public visitBeforeChildren(node ConfigurationNode) : void from class org.apache.commons.configuration.HierarchicalConfiguration.BuilderVisitor
+Change Variable Type	sibling2 : Node to sibling2 : ConfigurationNode in method public visitBeforeChildren(node ConfigurationNode) : void from class org.apache.commons.configuration.HierarchicalConfiguration.BuilderVisitor
+Change Variable Type	insertNode : Node to insertNode : ConfigurationNode in method public visitBeforeChildren(node ConfigurationNode) : void from class org.apache.commons.configuration.HierarchicalConfiguration.BuilderVisitor
+Change Parameter Type	node : Node to node : ConfigurationNode in method public visitBeforeChildren(node ConfigurationNode) : void from class org.apache.commons.configuration.HierarchicalConfiguration.BuilderVisitor
+Remove Parameter	key : ConfigurationKey in method public visitBeforeChildren(node Node, key ConfigurationKey) : void from class org.apache.commons.configuration.HierarchicalConfiguration.BuilderVisitor
+Change Return Type	Node to ConfigurationNode in method protected createNode(name String) : ConfigurationNode from class org.apache.commons.configuration.HierarchicalConfiguration
+Change Parameter Type	node : Node to node : ConfigurationNode in method public visitAfterChildren(node ConfigurationNode) : void from class org.apache.commons.configuration.HierarchicalConfigurationXMLReader.SAXVisitor
+Remove Parameter	key : ConfigurationKey in method public visitAfterChildren(node Node, key ConfigurationKey) : void from class org.apache.commons.configuration.HierarchicalConfigurationXMLReader.SAXVisitor
+Change Parameter Type	node : Node to node : ConfigurationNode in method public visitBeforeChildren(node ConfigurationNode) : void from class org.apache.commons.configuration.HierarchicalConfigurationXMLReader.SAXVisitor
+Remove Parameter	key : ConfigurationKey in method public visitBeforeChildren(node Node, key ConfigurationKey) : void from class org.apache.commons.configuration.HierarchicalConfigurationXMLReader.SAXVisitor
+Change Parameter Type	node : Node to node : ConfigurationNode in method protected fetchAttributes(node ConfigurationNode) : Attributes from class org.apache.commons.configuration.HierarchicalConfigurationXMLReader.SAXVisitor
+Change Parameter Type	node : Node to node : ConfigurationNode in method private nodeName(node ConfigurationNode) : String from class org.apache.commons.configuration.HierarchicalConfigurationXMLReader.SAXVisitor
+Change Parameter Type	node : Node to node : ConfigurationNode in method private isAttributeNode(node ConfigurationNode) : boolean from class org.apache.commons.configuration.HierarchicalConfigurationXMLReader.SAXVisitor
+Change Return Type	Node to ConfigurationNode in method protected createNode(name String) : ConfigurationNode from class org.apache.commons.configuration.SubnodeConfiguration
+Change Parameter Type	rootNode : Node to rootNode : ConfigurationNode in method public processDocument(rootNode ConfigurationNode) : void from class org.apache.commons.configuration.XMLConfiguration.XMLBuilderVisitor
+Change Parameter Type	newNode : Node to newNode : ConfigurationNode in method protected insert(newNode ConfigurationNode, parent ConfigurationNode, sibling1 ConfigurationNode, sibling2 ConfigurationNode) : Object from class org.apache.commons.configuration.XMLConfiguration.XMLBuilderVisitor
+Change Parameter Type	parent : Node to parent : ConfigurationNode in method protected insert(newNode ConfigurationNode, parent ConfigurationNode, sibling1 ConfigurationNode, sibling2 ConfigurationNode) : Object from class org.apache.commons.configuration.XMLConfiguration.XMLBuilderVisitor
+Change Parameter Type	sibling1 : Node to sibling1 : ConfigurationNode in method protected insert(newNode ConfigurationNode, parent ConfigurationNode, sibling1 ConfigurationNode, sibling2 ConfigurationNode) : Object from class org.apache.commons.configuration.XMLConfiguration.XMLBuilderVisitor
+Change Parameter Type	sibling2 : Node to sibling2 : ConfigurationNode in method protected insert(newNode ConfigurationNode, parent ConfigurationNode, sibling1 ConfigurationNode, sibling2 ConfigurationNode) : Object from class org.apache.commons.configuration.XMLConfiguration.XMLBuilderVisitor
+Change Parameter Type	node : Node to node : ConfigurationNode in method private updateAttribute(node ConfigurationNode, elem Element, name String) : void from class org.apache.commons.configuration.XMLConfiguration.XMLBuilderVisitor
+Change Parameter Type	node : Node to node : ConfigurationNode in method package updateAttribute(node ConfigurationNode, name String) : void from class org.apache.commons.configuration.XMLConfiguration.XMLBuilderVisitor
+Change Parameter Type	node : Node to node : ConfigurationNode in method private getElement(node ConfigurationNode) : Element from class org.apache.commons.configuration.XMLConfiguration.XMLBuilderVisitor
+Change Return Type	Node to ConfigurationNode in method protected createNode(name String) : ConfigurationNode from class org.apache.commons.configuration.XMLConfiguration
+Change Variable Type	childNode : Node to childNode : ConfigurationNode in method private constructHierarchy(node ConfigurationNode, element Element, elemRefs boolean, trim boolean) : Map<String,String> from class org.apache.commons.configuration.XMLConfiguration
+Change Parameter Type	node : Node to node : ConfigurationNode in method private constructHierarchy(node ConfigurationNode, element Element, elemRefs boolean, trim boolean) : Map<String,String> from class org.apache.commons.configuration.XMLConfiguration
+Change Parameter Type	node : Node to node : ConfigurationNode in method private processAttributes(node ConfigurationNode, element Element, elemRefs boolean) : Map<String,String> from class org.apache.commons.configuration.XMLConfiguration
+Change Variable Type	child : Node to child : ConfigurationNode in method private appendAttribute(node ConfigurationNode, element Element, elemRefs boolean, attr String, value String) : void from class org.apache.commons.configuration.XMLConfiguration
+Change Parameter Type	node : Node to node : ConfigurationNode in method private appendAttribute(node ConfigurationNode, element Element, elemRefs boolean, attr String, value String) : void from class org.apache.commons.configuration.XMLConfiguration
+Change Variable Type	c : Node to c : ConfigurationNode in method private handleDelimiters(parent ConfigurationNode, child ConfigurationNode, trim boolean, attrmap Map<String,String>) : void from class org.apache.commons.configuration.XMLConfiguration
+Change Parameter Type	parent : Node to parent : ConfigurationNode in method private handleDelimiters(parent ConfigurationNode, child ConfigurationNode, trim boolean, attrmap Map<String,String>) : void from class org.apache.commons.configuration.XMLConfiguration
+Change Parameter Type	child : Node to child : ConfigurationNode in method private handleDelimiters(parent ConfigurationNode, child ConfigurationNode, trim boolean, attrmap Map<String,String>) : void from class org.apache.commons.configuration.XMLConfiguration
+Change Variable Type	node : Node to node : ConfigurationNode in method private printValue(out PrintWriter, indentLevel int, value Object) : void from class org.apache.commons.configuration.plist.PropertyListConfiguration
+Change Attribute Type	stack : List<Node> to stack : List<ConfigurationNode> in class org.apache.commons.configuration.plist.XMLPropertyListConfiguration.XMLPropertyListHandler
+Change Return Type	Node to ConfigurationNode in method private peek() : ConfigurationNode from class org.apache.commons.configuration.plist.XMLPropertyListConfiguration.XMLPropertyListHandler
+Change Return Type	Node to ConfigurationNode in method private pop() : ConfigurationNode from class org.apache.commons.configuration.plist.XMLPropertyListConfiguration.XMLPropertyListHandler
+Change Parameter Type	root : Node to root : ConfigurationNode in method public XMLPropertyListHandler(root ConfigurationNode) from class org.apache.commons.configuration.plist.XMLPropertyListConfiguration.XMLPropertyListHandler
+Change Parameter Type	node : Node to node : ConfigurationNode in method private push(node ConfigurationNode) : void from class org.apache.commons.configuration.plist.XMLPropertyListConfiguration.XMLPropertyListHandler
+Change Variable Type	node : Node to node : ConfigurationNode in method private printValue(out PrintWriter, indentLevel int, value Object) : void from class org.apache.commons.configuration.plist.XMLPropertyListConfiguration
+Change Variable Type	nodeTables : HierarchicalConfiguration.Node to nodeTables : ConfigurationNode in method public setUp() : void from class org.apache.commons.configuration.TestHierarchicalConfiguration
+Change Variable Type	nodeTable : HierarchicalConfiguration.Node to nodeTable : ConfigurationNode in method public setUp() : void from class org.apache.commons.configuration.TestHierarchicalConfiguration
+Change Variable Type	nodeName : HierarchicalConfiguration.Node to nodeName : ConfigurationNode in method public setUp() : void from class org.apache.commons.configuration.TestHierarchicalConfiguration
+Change Variable Type	nodeFields : HierarchicalConfiguration.Node to nodeFields : ConfigurationNode in method public setUp() : void from class org.apache.commons.configuration.TestHierarchicalConfiguration
+Extract Variable	root : ConfigurationNode in method public testSetRootNode() : void from class org.apache.commons.configuration.TestHierarchicalConfiguration
+Change Variable Type	child1 : HierarchicalConfiguration.Node to child1 : ConfigurationNode in method public testIsEmpty() : void from class org.apache.commons.configuration.TestHierarchicalConfiguration
+Change Variable Type	child2 : HierarchicalConfiguration.Node to child2 : ConfigurationNode in method public testIsEmpty() : void from class org.apache.commons.configuration.TestHierarchicalConfiguration
+Change Variable Type	nd : Node to nd : ConfigurationNode in method public testAddNodesForNonExistingKey() : void from class org.apache.commons.configuration.TestHierarchicalConfiguration
+Change Variable Type	fld : HierarchicalConfiguration.Node to fld : ConfigurationNode in method private createFieldNode(name String) : ConfigurationNode from class org.apache.commons.configuration.TestHierarchicalConfiguration
+Change Return Type	HierarchicalConfiguration.Node to ConfigurationNode in method private createFieldNode(name String) : ConfigurationNode from class org.apache.commons.configuration.TestHierarchicalConfiguration
+Change Variable Type	node : HierarchicalConfiguration.Node to node : ConfigurationNode in method private createNode(name String, value Object) : ConfigurationNode from class org.apache.commons.configuration.TestHierarchicalConfiguration
+Change Return Type	HierarchicalConfiguration.Node to ConfigurationNode in method private createNode(name String, value Object) : ConfigurationNode from class org.apache.commons.configuration.TestHierarchicalConfiguration
+Change Attribute Access Modifier	package to private in attribute private parent : HierarchicalConfiguration from class org.apache.commons.configuration.TestSubnodeConfiguration
+Change Attribute Access Modifier	package to private in attribute private config : SubnodeConfiguration from class org.apache.commons.configuration.TestSubnodeConfiguration
+Change Attribute Access Modifier	package to private in attribute private nodeCounter : int from class org.apache.commons.configuration.TestSubnodeConfiguration
+Change Return Type	Node to ConfigurationNode in method protected createNode(name String) : ConfigurationNode from class org.apache.commons.configuration.TestSubnodeConfiguration.setUpParentConfig.conf.new HierarchicalConfiguration
+Change Variable Type	node : HierarchicalConfiguration.Node to node : ConfigurationNode in method public testAutoSaveAddNodes() : void from class org.apache.commons.configuration.TestXMLConfiguration
+Change Parameter Type	newNode : Node to newNode : ConfigurationNode in method protected abstract insert(newNode ConfigurationNode, parent ConfigurationNode, sibling1 ConfigurationNode, sibling2 ConfigurationNode) : Object from class org.apache.commons.configuration.HierarchicalConfiguration.BuilderVisitor
+Change Parameter Type	parent : Node to parent : ConfigurationNode in method protected abstract insert(newNode ConfigurationNode, parent ConfigurationNode, sibling1 ConfigurationNode, sibling2 ConfigurationNode) : Object from class org.apache.commons.configuration.HierarchicalConfiguration.BuilderVisitor
+Change Parameter Type	sibling1 : Node to sibling1 : ConfigurationNode in method protected abstract insert(newNode ConfigurationNode, parent ConfigurationNode, sibling1 ConfigurationNode, sibling2 ConfigurationNode) : Object from class org.apache.commons.configuration.HierarchicalConfiguration.BuilderVisitor
+Change Parameter Type	sibling2 : Node to sibling2 : ConfigurationNode in method protected abstract insert(newNode ConfigurationNode, parent ConfigurationNode, sibling1 ConfigurationNode, sibling2 ConfigurationNode) : Object from class org.apache.commons.configuration.HierarchicalConfiguration.BuilderVisitor
+Developers have reported that 10708 commits involve refactoring but only 1042 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1042 commits.
+
+No refactorings detected at a2a1d57bdeb3761c9a2914c99f2d876c30e368fe
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed91c9f4275a032d3e4f32
+Issue Title: : Add methods to HierarchicalConfiguration to obtain sub configurations for child elements
+Refactorings at 7a7ca0e48a6b99c373276b5743ef04f4088ea3a4
+Extract Method	private toImmutable(subs List<? extends HierarchicalConfiguration>) : List<ImmutableHierarchicalConfiguration> extracted from public immutableConfigurationsAt(key String) : List<ImmutableHierarchicalConfiguration> in class org.apache.commons.configuration.BaseHierarchicalConfiguration
+Change Variable Type	sub : SubnodeConfiguration to sub : HierarchicalConfiguration in method private toImmutable(subs List<? extends HierarchicalConfiguration>) : List<ImmutableHierarchicalConfiguration> from class org.apache.commons.configuration.BaseHierarchicalConfiguration
+Developers have reported that 10708 commits involve refactoring but only 1043 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1043 commits.
+
+No refactorings detected at d96d8be57a20af9bdb57526d948d688695f68be5
+
+No refactorings detected at 42dc3a878edd8af97eebc060a46a5990e4eebb4b
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed923ff4275a032d3e4f60
+Issue Title: : Remove deprecated ConfigurationFactory class
+Refactorings at 8a1cb8f6e6ff4620251dde1da756b300df136b79
+Change Variable Type	configurationFactory : ConfigurationFactory to builder : CombinedConfigurationBuilder in method private setupCompositeConfiguration() : Configuration from class org.apache.commons.configuration.TestEqualBehaviour
+Rename Variable	configurationFactory : ConfigurationFactory to builder : CombinedConfigurationBuilder in method private setupCompositeConfiguration() : Configuration from class org.apache.commons.configuration.TestEqualBehaviour
+Remove Method Annotation	@SuppressWarnings("deprecation") in method private setupCompositeConfiguration() : Configuration from class org.apache.commons.configuration.TestEqualBehaviour
+Change Thrown Exception Type	Exception to ConfigurationException in method private setupCompositeConfiguration() : Configuration from class org.apache.commons.configuration.TestEqualBehaviour
+Developers have reported that 10708 commits involve refactoring but only 1044 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1044 commits.
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed923ff4275a032d3e4f60
+Issue Title: : Remove deprecated ConfigurationFactory class
+Refactorings at f557adfe1a4ca5602814bac62971eb10f05fed58
+Change Variable Type	factory : ConfigurationFactory to builder : CombinedConfigurationBuilder in method public testNested() : void from class org.apache.commons.configuration.TestSubsetConfiguration
+Rename Variable	factory : ConfigurationFactory to builder : CombinedConfigurationBuilder in method public testNested() : void from class org.apache.commons.configuration.TestSubsetConfiguration
+Remove Method Annotation	@SuppressWarnings("deprecation") in method public testNested() : void from class org.apache.commons.configuration.TestSubsetConfiguration
+Developers have reported that 10708 commits involve refactoring but only 1045 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1045 commits.
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed9240f4275a032d3e4f70
+Issue Title: : Remove support for attribute splitting in XMLConfiguration
+Refactorings at 4664198b9430083507380e9e6b1161e89fe0193f
+Extract Method	private fetchDefinedAttributes(attrs List<ConfigurationNode>) : List<ConfigurationNode> extracted from private updateAttribute(node Node, elem Element, name String, listDelimiter char, isAttributeSplittingDisabled boolean) : void in class org.apache.commons.configuration.XMLConfiguration.XMLBuilderVisitor
+Remove Parameter	isAttributeSplittingDisabled : boolean in method public XMLBuilderVisitor(doc Document, listDelimiter char, isAttributeSplittingDisabled boolean) from class org.apache.commons.configuration.XMLConfiguration.XMLBuilderVisitor
+Rename Variable	attrs : List<ConfigurationNode> to definedAttrs : List<ConfigurationNode> in method private updateAttribute(node Node, elem Element, name String) : void from class org.apache.commons.configuration.XMLConfiguration.XMLBuilderVisitor
+Remove Parameter	listDelimiter : char in method private updateAttribute(node Node, elem Element, name String, listDelimiter char, isAttributeSplittingDisabled boolean) : void from class org.apache.commons.configuration.XMLConfiguration.XMLBuilderVisitor
+Remove Parameter	isAttributeSplittingDisabled : boolean in method private updateAttribute(node Node, elem Element, name String, listDelimiter char, isAttributeSplittingDisabled boolean) : void from class org.apache.commons.configuration.XMLConfiguration.XMLBuilderVisitor
+Remove Parameter	listDelimiter : char in method package updateAttribute(node Node, name String, listDelimiter char, isAttributeSplittingDisabled boolean) : void from class org.apache.commons.configuration.XMLConfiguration.XMLBuilderVisitor
+Remove Parameter	isAttributeSplittingDisabled : boolean in method package updateAttribute(node Node, name String, listDelimiter char, isAttributeSplittingDisabled boolean) : void from class org.apache.commons.configuration.XMLConfiguration.XMLBuilderVisitor
+Rename Method	private appendAttributes(node Node, element Element, elemRefs boolean, attr String, values Collection<String>) : void renamed to private appendAttribute(node Node, element Element, elemRefs boolean, attr String, value String) : void in class org.apache.commons.configuration.XMLConfiguration
+Change Variable Type	attributes : Map<String,Collection<String>> to attributes : Map<String,String> in method private constructHierarchy(node Node, element Element, elemRefs boolean, trim boolean) : Map<String,String> from class org.apache.commons.configuration.XMLConfiguration
+Change Variable Type	attrmap : Map<String,Collection<String>> to attrmap : Map<String,String> in method private constructHierarchy(node Node, element Element, elemRefs boolean, trim boolean) : Map<String,String> from class org.apache.commons.configuration.XMLConfiguration
+Change Return Type	Map<String,Collection<String>> to Map<String,String> in method private constructHierarchy(node Node, element Element, elemRefs boolean, trim boolean) : Map<String,String> from class org.apache.commons.configuration.XMLConfiguration
+Change Variable Type	attrmap : Map<String,Collection<String>> to attrmap : Map<String,String> in method private processAttributes(node Node, element Element, elemRefs boolean) : Map<String,String> from class org.apache.commons.configuration.XMLConfiguration
+Change Return Type	Map<String,Collection<String>> to Map<String,String> in method private processAttributes(node Node, element Element, elemRefs boolean) : Map<String,String> from class org.apache.commons.configuration.XMLConfiguration
+Parameterize Variable	value : String to value : String in method private appendAttribute(node Node, element Element, elemRefs boolean, attr String, value String) : void from class org.apache.commons.configuration.XMLConfiguration
+Remove Parameter	values : Collection<String> in method private appendAttributes(node Node, element Element, elemRefs boolean, attr String, values Collection<String>) : void from class org.apache.commons.configuration.XMLConfiguration
+Change Variable Type	e : Map.Entry<String,Collection<String>> to e : Map.Entry<String,String> in method private handleDelimiters(parent Node, child Node, trim boolean, attrmap Map<String,String>) : void from class org.apache.commons.configuration.XMLConfiguration
+Change Parameter Type	attrmap : Map<String,Collection<String>> to attrmap : Map<String,String> in method private handleDelimiters(parent Node, child Node, trim boolean, attrmap Map<String,String>) : void from class org.apache.commons.configuration.XMLConfiguration
+Rename Method	public testDelimiterParsingDisabledMultiAttrValues() : void renamed to public testNoDelimiterParsingInAttrValues() : void in class org.apache.commons.configuration.TestXMLConfiguration
+Developers have reported that 10708 commits involve refactoring but only 1046 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1046 commits.
+
+No refactorings detected at 303f0e2eafbffd14f3389af8b40fbde56ef38488
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed9241f4275a032d3e4f77
+Issue Title: : Improve API of ExprLookup class
+Refactorings at 1357b273b7e690ba9f9f5ab508b6e4b7b65fab5f
+Rename Method	public setConfiguration(config AbstractConfiguration) : void renamed to private installSubstitutor(ip ConfigurationInterpolator) : void in class org.apache.commons.configuration.interpol.ExprLookup
+Inline Method	private installSubstitutor(config AbstractConfiguration) : void inlined to private installSubstitutor(ip ConfigurationInterpolator) : void in class org.apache.commons.configuration.interpol.ExprLookup
+Parameterize Variable	interpolator : ConfigurationInterpolator to ip : ConfigurationInterpolator in method private installSubstitutor(ip ConfigurationInterpolator) : void from class org.apache.commons.configuration.interpol.ExprLookup
+Rename Parameter	config : AbstractConfiguration to ip : ConfigurationInterpolator in method private installSubstitutor(ip ConfigurationInterpolator) : void from class org.apache.commons.configuration.interpol.ExprLookup
+Change Parameter Type	config : AbstractConfiguration to ip : ConfigurationInterpolator in method private installSubstitutor(ip ConfigurationInterpolator) : void from class org.apache.commons.configuration.interpol.ExprLookup
+Add Parameter Modifier	final in parameter ip : ConfigurationInterpolator in method private installSubstitutor(ip ConfigurationInterpolator) : void from class org.apache.commons.configuration.interpol.ExprLookup
+Change Method Access Modifier	public to private in method private installSubstitutor(ip ConfigurationInterpolator) : void from class org.apache.commons.configuration.interpol.ExprLookup
+Rename Method	public testLookupNoConfiguration() : void renamed to public testLookupNoConfigurationInterpolator() : void in class org.apache.commons.configuration.interpol.TestExprLookup
+Developers have reported that 10708 commits involve refactoring but only 1047 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1047 commits.
+
+No refactorings detected at b3981b7c73843e91394eb8e60dc00bf68c98cdc1
+
+No refactorings detected at 7faf03d28d12568afe44eb8a2ab981758a0a2897
+
+No refactorings detected at af228dff05d74103cd1667f30d892a9d0d0a93e0
+
+No refactorings detected at ac0f393e4e9686a46e9b5adc8402ccff1b6b2420
+
+No refactorings detected at 4ad5e031f9ad13f034745a04946c8a69f812da0c
+
+No refactorings detected at 2f493979071b0700490ff2e2637600f0fe079280
+
+No refactorings detected at 24213a7bb21672824d76a733775f8e1059568282
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed9252f4275a032d3e5057
+Issue Title: : Add support for constructor invocation in bean declarations
+Refactorings at 485fc4610e4f791e610594c2ae13d971096ac7a6
+Change Attribute Access Modifier	package to private in attribute private factory : DefaultBeanFactory from class org.apache.commons.configuration.beanutils.TestDefaultBeanFactory
+Developers have reported that 10708 commits involve refactoring but only 1048 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1048 commits.
+
+No refactorings detected at 674ba6513e0aa9a00dfc4888ba63658127dd4cad
+
+No refactorings detected at dcb70962e164cb57d3eeabad6973395e3d7415cc
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed9252f4275a032d3e5057
+Issue Title: : Add support for constructor invocation in bean declarations
+Refactorings at 18e68fbff6cf00a5062275398ec3a365acb9454f
+Extract Attribute	private TEST_STRING : String in class org.apache.commons.configuration.beanutils.TestBeanHelper
+Extract Attribute	private TEST_INT : int in class org.apache.commons.configuration.beanutils.TestBeanHelper
+Developers have reported that 10708 commits involve refactoring but only 1049 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1049 commits.
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed9252f4275a032d3e5057
+Issue Title: : Add support for constructor invocation in bean declarations
+Refactorings at 19cbbe23ba5ca2b01b99ffa8abde33a189dfa85a
+Change Attribute Access Modifier	package to private in attribute private TEST_PROPS : String[] from class org.apache.commons.configuration.beanutils.TestXMLBeanDeclaration
+Change Attribute Access Modifier	package to private in attribute private TEST_VALUES : String[] from class org.apache.commons.configuration.beanutils.TestXMLBeanDeclaration
+Change Attribute Access Modifier	package to private in attribute private COMPLEX_PROPS : String[] from class org.apache.commons.configuration.beanutils.TestXMLBeanDeclaration
+Change Attribute Access Modifier	package to private in attribute private COMPLEX_CLASSES : String[] from class org.apache.commons.configuration.beanutils.TestXMLBeanDeclaration
+Change Attribute Access Modifier	package to private in attribute private COMPLEX_ATTRIBUTES : String[][] from class org.apache.commons.configuration.beanutils.TestXMLBeanDeclaration
+Change Attribute Access Modifier	package to private in attribute private COMPLEX_VALUES : String[][] from class org.apache.commons.configuration.beanutils.TestXMLBeanDeclaration
+Change Attribute Access Modifier	package to private in attribute private KEY : String from class org.apache.commons.configuration.beanutils.TestXMLBeanDeclaration
+Change Attribute Access Modifier	package to private in attribute private VARS : String from class org.apache.commons.configuration.beanutils.TestXMLBeanDeclaration
+Change Parameter Type	config : BaseHierarchicalConfiguration to config : HierarchicalConfiguration in method private setupBeanDeclaration(config HierarchicalConfiguration, key String, names String[], values String[]) : void from class org.apache.commons.configuration.beanutils.TestXMLBeanDeclaration
+Developers have reported that 10708 commits involve refactoring but only 1050 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1050 commits.
+
+No refactorings detected at ca4eddad7a86f46ddb8a8102c182c55a6c490bf7
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed9255f4275a032d3e5084
+Issue Title: : HierarchicalConfiguration clear() method doesn't remove the node from its parent anymore in XML source
+Refactorings at bfbc68c3988bfd8e097fa229a29621ff93087cfb
+Change Variable Type	nodes : List<HierarchicalConfiguration> to nodes : List<SubnodeConfiguration> in method protected registerConfiguredProviders() : void from class org.apache.commons.configuration.DefaultConfigurationBuilder
+Change Variable Type	config : HierarchicalConfiguration to config : SubnodeConfiguration in method protected registerConfiguredProviders() : void from class org.apache.commons.configuration.DefaultConfigurationBuilder
+Change Variable Type	nodes : List<HierarchicalConfiguration> to nodes : List<SubnodeConfiguration> in method protected registerConfiguredLookups() : void from class org.apache.commons.configuration.DefaultConfigurationBuilder
+Change Variable Type	config : HierarchicalConfiguration to config : SubnodeConfiguration in method protected registerConfiguredLookups() : void from class org.apache.commons.configuration.DefaultConfigurationBuilder
+Change Return Type	List<HierarchicalConfiguration> to List<SubnodeConfiguration> in method public configurationsAt(key String) : List<SubnodeConfiguration> from class org.apache.commons.configuration.DynamicCombinedConfiguration
+Change Variable Type	configs : List<HierarchicalConfiguration> to configs : List<SubnodeConfiguration> in method public configurationsAt(key String) : List<SubnodeConfiguration> from class org.apache.commons.configuration.HierarchicalConfiguration
+Change Return Type	List<HierarchicalConfiguration> to List<SubnodeConfiguration> in method public configurationsAt(key String) : List<SubnodeConfiguration> from class org.apache.commons.configuration.HierarchicalConfiguration
+Change Return Type	List<HierarchicalConfiguration> to List<SubnodeConfiguration> in method public configurationsAt(key String) : List<SubnodeConfiguration> from class org.apache.commons.configuration.MultiFileHierarchicalConfiguration
+Change Return Type	List<HierarchicalConfiguration> to List<SubnodeConfiguration> in method public configurationsAt(key String) : List<SubnodeConfiguration> from class org.apache.commons.configuration.PatternSubtreeConfigurationWrapper
+Change Variable Type	list : List<HierarchicalConfiguration> to list : List<SubnodeConfiguration> in method protected createBeanDeclaration(node ConfigurationNode) : BeanDeclaration from class org.apache.commons.configuration.beanutils.XMLBeanDeclaration
+Change Variable Type	iter : Iterator<HierarchicalConfiguration> to iter : Iterator<SubnodeConfiguration> in method protected createBeanDeclaration(node ConfigurationNode) : BeanDeclaration from class org.apache.commons.configuration.beanutils.XMLBeanDeclaration
+Change Variable Type	list : List<HierarchicalConfiguration> to list : List<SubnodeConfiguration> in method public testMerge() : void from class org.apache.commons.configuration.TestDefaultConfigurationBuilder
+Change Variable Type	iter : Iterator<HierarchicalConfiguration> to iter : Iterator<SubnodeConfiguration> in method public testMerge() : void from class org.apache.commons.configuration.TestDefaultConfigurationBuilder
+Change Variable Type	lstFlds : List<HierarchicalConfiguration> to lstFlds : List<SubnodeConfiguration> in method public testConfigurationsAt() : void from class org.apache.commons.configuration.TestHierarchicalConfiguration
+Change Variable Type	configs : List<HierarchicalConfiguration> to configs : List<SubnodeConfiguration> in method public testConfigurationsAtWithReload() : void from class org.apache.commons.configuration.TestXMLConfiguration
+Developers have reported that 10708 commits involve refactoring but only 1051 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1051 commits.
+
+No refactorings detected at d9ba52121b7d666c34b35f8a643521947806294f
+
+No refactorings detected at 0632edb1519fe52f8ec9a2243a195878deda2317
+
+No refactorings detected at a4a203837a8335046e5b52bcd0bd86979b70e129
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed925ef4275a032d3e50de
+Issue Title: : Remove deprecated HierarchicalINIConfiguration class
+Refactorings at e24be4ba359b88639024804af8aed3e97a9f5fd3
+Rename Class	org.apache.commons.configuration.HierarchicalINIConfiguration renamed to org.apache.commons.configuration.INIConfiguration
+Rename Class	org.apache.commons.configuration.TestHierarchicalINIConfiguration renamed to org.apache.commons.configuration.TestINIConfiguration
+Change Attribute Type	config : HierarchicalINIConfiguration to config : INIConfiguration in class org.apache.commons.configuration.TestINIConfiguration.GlobalSectionTestThread
+Change Parameter Type	conf : HierarchicalINIConfiguration to conf : INIConfiguration in method public GlobalSectionTestThread(conf INIConfiguration) from class org.apache.commons.configuration.TestINIConfiguration.GlobalSectionTestThread
+Change Variable Type	instance : HierarchicalINIConfiguration to instance : INIConfiguration in method private setUpConfig(data String) : INIConfiguration from class org.apache.commons.configuration.TestINIConfiguration
+Change Return Type	HierarchicalINIConfiguration to INIConfiguration in method private setUpConfig(data String) : INIConfiguration from class org.apache.commons.configuration.TestINIConfiguration
+Change Parameter Type	instance : HierarchicalINIConfiguration to instance : INIConfiguration in method private load(instance INIConfiguration, data String) : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	instance : HierarchicalINIConfiguration to instance : INIConfiguration in method public testSave() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method private checkSave(content String) : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	builder : FileBasedConfigurationBuilder<HierarchicalINIConfiguration> to builder : FileBasedConfigurationBuilder<INIConfiguration> in method public testLoadFromBuilder() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testLoadFromBuilder() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Parameter Type	instance : HierarchicalINIConfiguration to instance : INIConfiguration in method private checkContent(instance INIConfiguration) : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	instance : HierarchicalINIConfiguration to instance : INIConfiguration in method private checkLoad(data String) : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	instance : HierarchicalINIConfiguration to instance : INIConfiguration in method public testIsCommentLine() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	instance : HierarchicalINIConfiguration to instance : INIConfiguration in method public testIsSectionLine() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	instance : HierarchicalINIConfiguration to instance : INIConfiguration in method public testGetSections() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testQuotedValue() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testQuotedValueWithQuotes() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testValueWithComment() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testQuotedValueWithComment() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testQuotedValueWithSingleQuotes() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testWriteValueWithCommentChar() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config2 : HierarchicalINIConfiguration to config2 : INIConfiguration in method public testWriteValueWithCommentChar() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testQuotedValueWithWhitespace() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testQuotedValueWithWhitespaceAndComment() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testQuotedValueEmpty() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testGetPropertyNoValue() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testGetPropertyNoKey() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testGlobalProperty() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Parameter Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method private checkSectionNames(config INIConfiguration, expected String[]) : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method private checkSectionNames(data String, expected String[]) : INIConfiguration from class org.apache.commons.configuration.TestINIConfiguration
+Change Return Type	HierarchicalINIConfiguration to INIConfiguration in method private checkSectionNames(data String, expected String[]) : INIConfiguration from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testGetSectionsDottedVar() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testGetSectionsAdded() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testGetSectionExisting() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testGetSectionMerged() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testGetSectionGlobal() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testGetSectionGloabalMultiThreaded() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testGetSectionGlobalNonExisting() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testGetSectionNonExisting() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testLineContinuation() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testLineContinuationNone() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testLineContinuationQuoted() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testLineContinuationComment() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testLineContinuationQuotedComment() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testLineContinuationEmptyLine() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testLineContinuationAtEnd() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	conf : HierarchicalINIConfiguration to conf : INIConfiguration in method public testSaveKeysWithDelimiters() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testValueWithSemicolon() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testSeparators() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testMultipleSeparators() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testMultipleSeparatorsQuoted() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testSaveClearedSection() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testMergeDuplicateSection() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testGetSectionNonExistingManipulate() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config2 : HierarchicalINIConfiguration to config2 : INIConfiguration in method public testGetSectionNonExistingManipulate() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testGetSectionDuplicate() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testValueWithDelimiters() : void from class org.apache.commons.configuration.TestINIConfiguration
+Change Variable Type	config : HierarchicalINIConfiguration to config : INIConfiguration in method public testListParsingDisabled() : void from class org.apache.commons.configuration.TestINIConfiguration
+Developers have reported that 10708 commits involve refactoring but only 1052 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1052 commits.
+
+No refactorings detected at c9e638094e23adb3fa0c2e62fb41a56fb1d0f80a
+
+No refactorings detected at 6c8654a071cceab767bc7d9c2dba589209c75dbd
+
+No refactorings detected at 96594ccd8805f150ea29596db8b5993f0e491f78
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed9277f4275a032d3e5201
+Issue Title: : XMLConfiguration changes list format on saving
+Refactorings at 8c3a9eacc52d8908130a29ea7675514decdecb2c
+Extract Method	private updateElement(node ImmutableNode, refHandler ReferenceNodeHandler, value Object) : void extracted from protected update(node ImmutableNode, reference Object, refHandler ReferenceNodeHandler) : void in class org.apache.commons.configuration2.XMLConfiguration.XMLBuilderVisitor
+Extract Variable	newChild : ImmutableNode in method private createChildNodeWithValue(parent ImmutableNode.Builder, child ImmutableNode.Builder, elem Element, value String, trim boolean, attrmap Map<String,String>, elemRefs Map<ImmutableNode,Object>) : ImmutableNode from class org.apache.commons.configuration2.XMLConfiguration
+Add Parameter	elem : Element in method private createChildNodeWithValue(parent ImmutableNode.Builder, child ImmutableNode.Builder, elem Element, value String, trim boolean, attrmap Map<String,String>, elemRefs Map<ImmutableNode,Object>) : ImmutableNode from class org.apache.commons.configuration2.XMLConfiguration
+Add Parameter	elemRefs : Map<ImmutableNode,Object> in method private createChildNodeWithValue(parent ImmutableNode.Builder, child ImmutableNode.Builder, elem Element, value String, trim boolean, attrmap Map<String,String>, elemRefs Map<ImmutableNode,Object>) : ImmutableNode from class org.apache.commons.configuration2.XMLConfiguration
+Developers have reported that 10708 commits involve refactoring but only 1053 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1053 commits.
+
+No refactorings detected at 6344ce7cc648c06a7f170aa1bbb17a1a790a54dc
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed9278f4275a032d3e5207
+Issue Title: : After a few unit tests, a few newly created directories not cleaned completely.
+Refactorings at 2e9734b128f1bee856bc73a5dea7e106c04442d3
+Remove Attribute Modifier	final in attribute private testSaveConf : File from class org.apache.commons.configuration2.TestXMLConfiguration
+Remove Attribute Modifier	final in attribute private testSaveFile : File from class org.apache.commons.configuration2.TestXMLConfiguration
+Developers have reported that 10708 commits involve refactoring but only 1054 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1054 commits.
+
+No refactorings detected at ef8eb3d269274d2e6e4915875d027ada1efa0470
+
+No refactorings detected at 6215969d2a1f8d95667c208af868758c8636c234
+
+No refactorings detected at a04afd1f20290d0097b1ed9ef2a4f476e0b79ac0
+
+No refactorings detected at 002e4de0d68ffab9af339283f02659472a1febe7
+
+No refactorings detected at d366597e5a9b5f43f24ae064c756efd60a82464d
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed9280f4275a032d3e5257
+Issue Title: : Add API org.apache.commons.configuration2.DataConfiguration.getURI(String) methods
+Refactorings at 4dc0eb63d1e8d5e0c34dc1e81bb7e7df40424584
+Remove Method Annotation	@Override in method public getURL(key String) : URL from class org.apache.commons.configuration2.DataConfiguration
+Remove Method Annotation	@Override in method public getURL(key String, defaultValue URL) : URL from class org.apache.commons.configuration2.DataConfiguration
+Developers have reported that 10708 commits involve refactoring but only 1055 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1055 commits.
+
+No refactorings detected at 055cbd0d42dfec901c7b2532f7a71f937b1d4756
+
+No refactorings detected at 71897982cb6df5b8217ec1526341ebd41cd44f9d
+
+No refactorings detected at 39f6f7fd6333da2b983f7d9001a7a51f31fa9434
+
+No refactorings detected at 771841e493ddd9839a4c029db6b217fe19968148
+
+No refactorings detected at 4824774675ec1a2c9e7b1469dd93a6bd09854210
+
+No refactorings detected at 6bb1b9a7bcf9d4d1aa0f4c12bb0cbb4cf4e2cc71
+
+No refactorings detected at fe183744bf259b2a70fe601a19f572b39f408060
+
+No refactorings detected at 19de643c8839c174e19851de1e4a64dd86b8d266
+
+No refactorings detected at 0c8683fd1dc970db3ebc3f4c412f1f8367d45507
+
+No refactorings detected at bc69f94466efb770e78d1bd89a8a1bd460fc437a
+
+No refactorings detected at c8230b04b204f90cbf916a02212f246700814ef4
+
+No refactorings detected at 3bc576a7e41c5482dbfddefeaa99e696f34de50f
+
+No refactorings detected at 11b374b0779e6ff3e67f0e03c940b4bac4eaab5f
+
+No refactorings detected at 3df316bdb511cff31518b0f30143a033bac5e8c0
+
+No refactorings detected at 69e28b6ec8115f189e894066b822537169512964
+
+No refactorings detected at a56ce4f20db01c3de9faabc5ee10db19113e83cd
+
+No refactorings detected at b8a90ee0b92dc55fd6d70952c741b36283e95d5d
+
+No refactorings detected at 20fed44715fcac00a168f92a475e1408e6a93d60
+
+No refactorings detected at 6a85ac15cc0e4ef99834e68bf479c0dec545db45
+
+No refactorings detected at cb6b1a406c6c8fa7118841a578b4c36caf7dd2ee
+
+VCS System: https://github.com/apache/commons-configuration.git
+Issue ID: : 5bed92b9f4275a032d3e54cd
+Issue Title: : Replace use of deprecated Commons Lang string substitution code for Commons Text
+Refactorings at 80e4a06124a712fde81bbee093ba2ddd71851c93
+Change Attribute Type	substitutor : StrSubstitutor to substitutor : StringSubstitutor in class org.apache.commons.configuration2.interpol.ConfigurationInterpolator
+Change Return Type	StrSubstitutor to StringSubstitutor in method private initSubstitutor() : StringSubstitutor from class org.apache.commons.configuration2.interpol.ConfigurationInterpolator
+Change Attribute Type	substitutor : StrSubstitutor to substitutor : StringSubstitutor in class org.apache.commons.configuration2.interpol.ExprLookup
+Change Variable Type	variableResolver : StrLookup<String> to variableResolver : StringLookup in method private installSubstitutor(ip ConfigurationInterpolator) : void from class org.apache.commons.configuration2.interpol.ExprLookup
+Developers have reported that 10708 commits involve refactoring but only 1056 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1056 commits.
+
+No refactorings detected at 0b7369cbb67e46586e9e031c693564ce7ca583c7
+
+No refactorings detected at f48cd4cd0668dd31f92e5fa5dcc10f7531d08249
+
+No refactorings detected at fa6686b6faee872672dfa21d5e26de227a475069
+
+No refactorings detected at 2fdea0d5f462d48a97aaca3b987a716ca2934f24
+
+No refactorings detected at ad56c3889328fed27f021bba3f071f676fc4ffe0
+
