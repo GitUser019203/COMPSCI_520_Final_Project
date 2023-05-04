@@ -1,0 +1,2 @@
+Continue mining from line 303 of detected_errors.
+There's a todo in the idea project with the last few lines of console output.

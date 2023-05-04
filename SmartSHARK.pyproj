@@ -76,6 +76,7 @@
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-03 212942.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-03 213421.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-03 213617.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\todo.txt" />
     <Content Include="Python\issue_tracked_projects.txt" />
     <Content Include="Python\JavaConsoleOutputParser\detected_errors" />
     <Content Include="Python\mongo_db_extract_refactoring_doc.txt" />
