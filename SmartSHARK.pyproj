@@ -71,7 +71,7 @@
     <Content Include="Java\detectedRefactorings\wss4j.git.refactorings" />
     <Content Include="Java\Main.java" />
     <Content Include="Python\issue_tracked_projects.txt" />
-    <Content Include="Python\JavaConsoleOutputParser\extracted_errors" />
+    <Content Include="Python\JavaConsoleOutputParser\detected_errors" />
     <Content Include="Python\mongo_db_extract_refactoring_doc.txt" />
     <Content Include="Python\regexp.txt" />
   </ItemGroup>

@@ -1,0 +1,765 @@
+There were at least 33 exceptions that occurred.
+
+
+130540: at gr.uom.java.xmi.decomposition.UMLOperationBodyMapper.findReplacementsWithExactMatching(UMLOperationBodyMapper.java:5640)
+130541: at gr.uom.java.xmi.decomposition.UMLOperationBodyMapper.processLeaves(UMLOperationBodyMapper.java:3646)
+130542: at gr.uom.java.xmi.decomposition.UMLOperationBodyMapper.<init>(UMLOperationBodyMapper.java:406)
+130543: at gr.uom.java.xmi.diff.UMLClassBaseDiff.updateMapperSet(UMLClassBaseDiff.java:1007)
+130544: at gr.uom.java.xmi.diff.UMLClassBaseDiff.checkForOperationSignatureChanges(UMLClassBaseDiff.java:627)
+130545: at gr.uom.java.xmi.diff.UMLClassBaseDiff.process(UMLClassBaseDiff.java:99)
+130546: at gr.uom.java.xmi.UMLModel.diff(UMLModel.java:164)
+130547: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:158)
+130548: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:684)
+130549: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+130550: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+130551: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+130552: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+130553: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+130554: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+130555: at java.base/java.lang.Thread.run(Thread.java:1623)
+Line about exception that occurred: org.refactoringminer.api.RefactoringMinerTimedOutException
+Line about revision hash that wasn't mined': [pool-7515-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 0f9f233b055e6790459889e90a05f8e063e6e385 due to timeout
+Line that was being parsed: Was parsing line 23189
+
+
+
+
+131168: at gr.uom.java.xmi.diff.UMLAbstractClassDiff.inferAttributeMergesAndSplits(UMLAbstractClassDiff.java:936)
+131169: at gr.uom.java.xmi.diff.UMLAbstractClassDiff.getRefactorings(UMLAbstractClassDiff.java:627)
+131170: at gr.uom.java.xmi.diff.UMLModelDiff.getRefactorings(UMLModelDiff.java:2007)
+131171: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:159)
+131172: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:684)
+131173: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+131174: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+131175: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+131176: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+131177: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+131178: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+131179: at java.base/java.lang.Thread.run(Thread.java:1623)
+Line about exception that occurred: java.lang.NullPointerException: Cannot invoke "gr.uom.java.xmi.decomposition.UMLOperationBodyMapper.getNonMappedLeavesT1()" because "candidateMapper" is null
+Line about revision hash that wasn't mined': [pool-7565-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 47544a120937015a92c61013254543ab5c45326e due to error
+Line about revision hash that wasn't mined': [pool-7565-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\manifoldcf.git 47544a120937015a92c61013254543ab5c45326e ...
+Line about revision hash that wasn't mined': [pool-7565-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\manifoldcf.git 322863fd7e7ea96df17b8dba49025297c2b36c09 ...
+Line that was being parsed: Was parsing line 23341
+
+
+
+
+131181: at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+131182: at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:205)
+131183: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:708)
+131184: at org.refactoringissuesminer.Main.mineCommit(Main.java:103)
+131185: at org.refactoringissuesminer.Main.main(Main.java:71)
+131186: Caused by: java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke "gr.uom.java.xmi.decomposition.UMLOperationBodyMapper.getNonMappedLeavesT1()" because "candidateMapper" is null
+131187: at org.refactoringminer.api.RefactoringHandler.handleException(RefactoringHandler.java:39)
+131188: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:695)
+131189: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+131190: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+131191: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+131192: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+131193: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+131194: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+131195: at java.base/java.lang.Thread.run(Thread.java:1623)
+131196: Caused by: java.lang.NullPointerException: Cannot invoke "gr.uom.java.xmi.decomposition.UMLOperationBodyMapper.getNonMappedLeavesT1()" because "candidateMapper" is null
+131197: at gr.uom.java.xmi.diff.UMLAbstractClassDiff.inferAttributeMergesAndSplits(UMLAbstractClassDiff.java:936)
+131198: at gr.uom.java.xmi.diff.UMLAbstractClassDiff.getRefactorings(UMLAbstractClassDiff.java:627)
+131199: at gr.uom.java.xmi.diff.UMLModelDiff.getRefactorings(UMLModelDiff.java:2007)
+131200: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:159)
+131201: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:684)
+Line about exception that occurred: java.util.concurrent.ExecutionException: java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke "gr.uom.java.xmi.decomposition.UMLOperationBodyMapper.getNonMappedLeavesT1()" because "candidateMapper" is null
+Line about exception that occurred: java.lang.NullPointerException: Cannot invoke "gr.uom.java.xmi.decomposition.UMLOperationBodyMapper.getNonMappedLeavesT1()" because "candidateMapper" is null
+Line about revision hash that wasn't mined': [pool-7565-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 47544a120937015a92c61013254543ab5c45326e due to error
+Line about revision hash that wasn't mined': [pool-7565-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\manifoldcf.git 47544a120937015a92c61013254543ab5c45326e ...
+Line about revision hash that wasn't mined': [pool-7565-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\manifoldcf.git 322863fd7e7ea96df17b8dba49025297c2b36c09 ...
+Line that was being parsed: Was parsing line 23341
+
+
+
+
+131217: at gr.uom.java.xmi.diff.UMLAbstractClassDiff.inferAttributeMergesAndSplits(UMLAbstractClassDiff.java:936)
+131218: at gr.uom.java.xmi.diff.UMLAbstractClassDiff.getRefactorings(UMLAbstractClassDiff.java:627)
+131219: at gr.uom.java.xmi.diff.UMLModelDiff.getRefactorings(UMLModelDiff.java:2007)
+131220: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:159)
+131221: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:684)
+131222: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+131223: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+131224: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+131225: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+131226: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+131227: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+131228: at java.base/java.lang.Thread.run(Thread.java:1623)
+Line about exception that occurred: java.lang.NullPointerException: Cannot invoke "gr.uom.java.xmi.decomposition.UMLOperationBodyMapper.getNonMappedLeavesT1()" because "candidateMapper" is null
+Line about revision hash that wasn't mined': [pool-7567-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 7a6c06b5be08b8a6c3d5905ee6dba719ef2bb739 due to error
+Line about revision hash that wasn't mined': [pool-7567-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\manifoldcf.git 7a6c06b5be08b8a6c3d5905ee6dba719ef2bb739 ...
+Line about revision hash that wasn't mined': [pool-7567-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\manifoldcf.git e9634bbd9a5272284386b51b199fbe90b83b51de ...
+Line that was being parsed: Was parsing line 23345
+
+
+
+
+131230: at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+131231: at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:205)
+131232: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:708)
+131233: at org.refactoringissuesminer.Main.mineCommit(Main.java:103)
+131234: at org.refactoringissuesminer.Main.main(Main.java:71)
+131235: Caused by: java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke "gr.uom.java.xmi.decomposition.UMLOperationBodyMapper.getNonMappedLeavesT1()" because "candidateMapper" is null
+131236: at org.refactoringminer.api.RefactoringHandler.handleException(RefactoringHandler.java:39)
+131237: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:695)
+131238: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+131239: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+131240: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+131241: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+131242: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+131243: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+131244: at java.base/java.lang.Thread.run(Thread.java:1623)
+131245: Caused by: java.lang.NullPointerException: Cannot invoke "gr.uom.java.xmi.decomposition.UMLOperationBodyMapper.getNonMappedLeavesT1()" because "candidateMapper" is null
+131246: at gr.uom.java.xmi.diff.UMLAbstractClassDiff.inferAttributeMergesAndSplits(UMLAbstractClassDiff.java:936)
+131247: at gr.uom.java.xmi.diff.UMLAbstractClassDiff.getRefactorings(UMLAbstractClassDiff.java:627)
+131248: at gr.uom.java.xmi.diff.UMLModelDiff.getRefactorings(UMLModelDiff.java:2007)
+131249: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:159)
+131250: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:684)
+Line about exception that occurred: java.util.concurrent.ExecutionException: java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke "gr.uom.java.xmi.decomposition.UMLOperationBodyMapper.getNonMappedLeavesT1()" because "candidateMapper" is null
+Line about exception that occurred: java.lang.NullPointerException: Cannot invoke "gr.uom.java.xmi.decomposition.UMLOperationBodyMapper.getNonMappedLeavesT1()" because "candidateMapper" is null
+Line about revision hash that wasn't mined': [pool-7567-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 7a6c06b5be08b8a6c3d5905ee6dba719ef2bb739 due to error
+Line about revision hash that wasn't mined': [pool-7567-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\manifoldcf.git 7a6c06b5be08b8a6c3d5905ee6dba719ef2bb739 ...
+Line about revision hash that wasn't mined': [pool-7567-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\manifoldcf.git e9634bbd9a5272284386b51b199fbe90b83b51de ...
+Line that was being parsed: Was parsing line 23345
+
+
+
+
+159628: at java.base/java.io.FileOutputStream.open0(Native Method)
+159629: at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+159630: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+159631: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+159632: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.downloadAndExtractZipFile(GitHistoryRefactoringMinerImpl.java:397)
+159633: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:334)
+159634: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:690)
+159635: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+159636: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+159637: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+159638: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+159639: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+159640: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+159641: at java.base/java.lang.Thread.run(Thread.java:1623)
+Line about exception that occurred: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-539d593d5e991e0e6a820ac32d77dd089658c2b7\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about revision hash that wasn't mined': [pool-9275-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 539d593d5e991e0e6a820ac32d77dd089658c2b7 due to error
+Line about revision hash that wasn't mined': [pool-9275-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing https://github.com/apache/santuario-java.git 539d593d5e991e0e6a820ac32d77dd089658c2b7 ...
+Line that was being parsed: Was parsing line 28323
+
+
+
+
+159643: at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+159644: at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:205)
+159645: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:708)
+159646: at org.refactoringissuesminer.Main.mineCommit(Main.java:103)
+159647: at org.refactoringissuesminer.Main.main(Main.java:71)
+159648: Caused by: java.lang.RuntimeException: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-539d593d5e991e0e6a820ac32d77dd089658c2b7\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+159649: at org.refactoringminer.api.RefactoringHandler.handleException(RefactoringHandler.java:39)
+159650: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:359)
+159651: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:690)
+159652: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+159653: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+159654: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+159655: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+159656: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+159657: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+159658: at java.base/java.lang.Thread.run(Thread.java:1623)
+159659: Caused by: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-539d593d5e991e0e6a820ac32d77dd089658c2b7\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+159660: at java.base/java.io.FileOutputStream.open0(Native Method)
+159661: at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+159662: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+159663: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+Line about exception that occurred: java.util.concurrent.ExecutionException: java.lang.RuntimeException: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-539d593d5e991e0e6a820ac32d77dd089658c2b7\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about exception that occurred: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-539d593d5e991e0e6a820ac32d77dd089658c2b7\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about revision hash that wasn't mined': [pool-9275-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 539d593d5e991e0e6a820ac32d77dd089658c2b7 due to error
+Line about revision hash that wasn't mined': [pool-9275-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing https://github.com/apache/santuario-java.git 539d593d5e991e0e6a820ac32d77dd089658c2b7 ...
+Line that was being parsed: Was parsing line 28323
+
+
+
+
+159667: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.downloadAndExtractZipFile(GitHistoryRefactoringMinerImpl.java:397)
+159668: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:334)
+Line that was being parsed: Was parsing line 28326
+
+
+
+
+159676: at java.base/java.io.FileOutputStream.open0(Native Method)
+159677: at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+159678: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+159679: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+159680: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.downloadAndExtractZipFile(GitHistoryRefactoringMinerImpl.java:397)
+159681: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:334)
+159682: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:690)
+159683: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+159684: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+159685: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+159686: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+159687: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+159688: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+159689: at java.base/java.lang.Thread.run(Thread.java:1623)
+Line about exception that occurred: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-87af08aaff52d228a48cc8970f06a595640a64d2\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about revision hash that wasn't mined': [pool-9276-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 87af08aaff52d228a48cc8970f06a595640a64d2 due to error
+Line about revision hash that wasn't mined': [pool-9276-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing https://github.com/apache/santuario-java.git 87af08aaff52d228a48cc8970f06a595640a64d2 ...
+Line that was being parsed: Was parsing line 28327
+
+
+
+
+159691: at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+159692: at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:205)
+159693: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:708)
+159694: at org.refactoringissuesminer.Main.mineCommit(Main.java:103)
+159695: at org.refactoringissuesminer.Main.main(Main.java:71)
+159696: Caused by: java.lang.RuntimeException: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-87af08aaff52d228a48cc8970f06a595640a64d2\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+159697: at org.refactoringminer.api.RefactoringHandler.handleException(RefactoringHandler.java:39)
+159698: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:359)
+159699: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:690)
+159700: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+159701: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+159702: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+159703: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+159704: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+159705: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+159706: at java.base/java.lang.Thread.run(Thread.java:1623)
+159707: Caused by: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-87af08aaff52d228a48cc8970f06a595640a64d2\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+159708: at java.base/java.io.FileOutputStream.open0(Native Method)
+159709: at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+159710: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+159711: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+159712: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.downloadAndExtractZipFile(GitHistoryRefactoringMinerImpl.java:397)
+Line about exception that occurred: java.util.concurrent.ExecutionException: java.lang.RuntimeException: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-87af08aaff52d228a48cc8970f06a595640a64d2\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about exception that occurred: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-87af08aaff52d228a48cc8970f06a595640a64d2\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about revision hash that wasn't mined': [pool-9276-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 87af08aaff52d228a48cc8970f06a595640a64d2 due to error
+Line about revision hash that wasn't mined': [pool-9276-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing https://github.com/apache/santuario-java.git 87af08aaff52d228a48cc8970f06a595640a64d2 ...
+Line that was being parsed: Was parsing line 28327
+
+
+
+
+159714: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:334)
+Line that was being parsed: Was parsing line 28328
+
+
+
+
+159736: at java.base/java.io.FileOutputStream.open0(Native Method)
+159737: at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+159738: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+159739: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+159740: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.downloadAndExtractZipFile(GitHistoryRefactoringMinerImpl.java:397)
+159741: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:334)
+159742: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:690)
+159743: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+159744: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+159745: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+159746: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+159747: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+159748: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+159749: at java.base/java.lang.Thread.run(Thread.java:1623)
+Line about exception that occurred: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-4cbaadbf9aee9052b23acab397334bfcc17c1cfe\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about revision hash that wasn't mined': [pool-9278-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 4cbaadbf9aee9052b23acab397334bfcc17c1cfe due to error
+Line about revision hash that wasn't mined': [pool-9278-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing https://github.com/apache/santuario-java.git 4cbaadbf9aee9052b23acab397334bfcc17c1cfe ...
+Line that was being parsed: Was parsing line 28333
+
+
+
+
+159751: at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+159752: at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:205)
+159753: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:708)
+159754: at org.refactoringissuesminer.Main.mineCommit(Main.java:103)
+159755: at org.refactoringissuesminer.Main.main(Main.java:71)
+159756: Caused by: java.lang.RuntimeException: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-4cbaadbf9aee9052b23acab397334bfcc17c1cfe\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+159757: at org.refactoringminer.api.RefactoringHandler.handleException(RefactoringHandler.java:39)
+159758: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:359)
+159759: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:690)
+159760: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+159761: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+159762: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+159763: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+159764: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+159765: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+159766: at java.base/java.lang.Thread.run(Thread.java:1623)
+159767: Caused by: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-4cbaadbf9aee9052b23acab397334bfcc17c1cfe\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+159768: at java.base/java.io.FileOutputStream.open0(Native Method)
+159769: at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+159770: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+159771: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+159772: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.downloadAndExtractZipFile(GitHistoryRefactoringMinerImpl.java:397)
+159773: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:334)
+Line about exception that occurred: java.util.concurrent.ExecutionException: java.lang.RuntimeException: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-4cbaadbf9aee9052b23acab397334bfcc17c1cfe\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about exception that occurred: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-4cbaadbf9aee9052b23acab397334bfcc17c1cfe\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about revision hash that wasn't mined': [pool-9278-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 4cbaadbf9aee9052b23acab397334bfcc17c1cfe due to error
+Line about revision hash that wasn't mined': [pool-9278-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing https://github.com/apache/santuario-java.git 4cbaadbf9aee9052b23acab397334bfcc17c1cfe ...
+Line that was being parsed: Was parsing line 28333
+
+
+
+
+159782: at java.base/java.io.FileOutputStream.open0(Native Method)
+159783: at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+159784: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+159785: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+159786: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.downloadAndExtractZipFile(GitHistoryRefactoringMinerImpl.java:397)
+159787: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:334)
+159788: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:690)
+159789: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+159790: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+159791: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+159792: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+159793: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+159794: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+159795: at java.base/java.lang.Thread.run(Thread.java:1623)
+Line about exception that occurred: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-74e9c46f20384727915ee30b40f74b0c1def7399\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about revision hash that wasn't mined': [pool-9279-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 74e9c46f20384727915ee30b40f74b0c1def7399 due to error
+Line about revision hash that wasn't mined': [pool-9279-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing https://github.com/apache/santuario-java.git 74e9c46f20384727915ee30b40f74b0c1def7399 ...
+Line that was being parsed: Was parsing line 28335
+
+
+
+
+159797: at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+159798: at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:205)
+159799: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:708)
+159800: at org.refactoringissuesminer.Main.mineCommit(Main.java:103)
+159801: at org.refactoringissuesminer.Main.main(Main.java:71)
+159802: Caused by: java.lang.RuntimeException: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-74e9c46f20384727915ee30b40f74b0c1def7399\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+159803: at org.refactoringminer.api.RefactoringHandler.handleException(RefactoringHandler.java:39)
+159804: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:359)
+159805: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:690)
+159806: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+159807: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+159808: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+159809: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+159810: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+159811: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+159812: at java.base/java.lang.Thread.run(Thread.java:1623)
+159813: Caused by: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-74e9c46f20384727915ee30b40f74b0c1def7399\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+159814: at java.base/java.io.FileOutputStream.open0(Native Method)
+159815: at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+159816: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+159817: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+159818: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.downloadAndExtractZipFile(GitHistoryRefactoringMinerImpl.java:397)
+159819: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:334)
+Line about exception that occurred: java.util.concurrent.ExecutionException: java.lang.RuntimeException: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-74e9c46f20384727915ee30b40f74b0c1def7399\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about exception that occurred: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-74e9c46f20384727915ee30b40f74b0c1def7399\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about revision hash that wasn't mined': [pool-9279-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 74e9c46f20384727915ee30b40f74b0c1def7399 due to error
+Line about revision hash that wasn't mined': [pool-9279-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing https://github.com/apache/santuario-java.git 74e9c46f20384727915ee30b40f74b0c1def7399 ...
+Line that was being parsed: Was parsing line 28335
+
+
+
+
+159830: at java.base/java.io.FileOutputStream.open0(Native Method)
+159831: at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+159832: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+159833: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+159834: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.downloadAndExtractZipFile(GitHistoryRefactoringMinerImpl.java:397)
+159835: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:334)
+159836: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:690)
+159837: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+159838: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+159839: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+159840: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+159841: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+159842: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+159843: at java.base/java.lang.Thread.run(Thread.java:1623)
+Line about exception that occurred: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-75dfaef4458367ce995d0893dc95b4566cda2e64\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about revision hash that wasn't mined': [pool-9280-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 75dfaef4458367ce995d0893dc95b4566cda2e64 due to error
+Line about revision hash that wasn't mined': [pool-9280-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing https://github.com/apache/santuario-java.git 75dfaef4458367ce995d0893dc95b4566cda2e64 ...
+Line that was being parsed: Was parsing line 28339
+
+
+
+
+159845: at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+159846: at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:205)
+159847: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:708)
+159848: at org.refactoringissuesminer.Main.mineCommit(Main.java:103)
+159849: at org.refactoringissuesminer.Main.main(Main.java:71)
+159850: Caused by: java.lang.RuntimeException: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-75dfaef4458367ce995d0893dc95b4566cda2e64\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+159851: at org.refactoringminer.api.RefactoringHandler.handleException(RefactoringHandler.java:39)
+159852: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:359)
+159853: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:690)
+159854: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+159855: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+159856: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+159857: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+159858: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+159859: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+159860: at java.base/java.lang.Thread.run(Thread.java:1623)
+159861: Caused by: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-75dfaef4458367ce995d0893dc95b4566cda2e64\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+159862: at java.base/java.io.FileOutputStream.open0(Native Method)
+159863: at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+Line about exception that occurred: java.util.concurrent.ExecutionException: java.lang.RuntimeException: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-75dfaef4458367ce995d0893dc95b4566cda2e64\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about exception that occurred: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-75dfaef4458367ce995d0893dc95b4566cda2e64\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about revision hash that wasn't mined': [pool-9280-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 75dfaef4458367ce995d0893dc95b4566cda2e64 due to error
+Line about revision hash that wasn't mined': [pool-9280-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing https://github.com/apache/santuario-java.git 75dfaef4458367ce995d0893dc95b4566cda2e64 ...
+Line that was being parsed: Was parsing line 28339
+
+
+
+
+159866: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+159867: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+159868: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.downloadAndExtractZipFile(GitHistoryRefactoringMinerImpl.java:397)
+159869: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:334)
+Line that was being parsed: Was parsing line 28341
+
+
+
+
+159876: at java.base/java.io.FileOutputStream.open0(Native Method)
+159877: at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+159878: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+159879: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+159880: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.downloadAndExtractZipFile(GitHistoryRefactoringMinerImpl.java:397)
+159881: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:334)
+159882: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:690)
+159883: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+159884: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+159885: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+159886: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+159887: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+159888: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+159889: at java.base/java.lang.Thread.run(Thread.java:1623)
+Line about exception that occurred: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-c80785c7881a9c0794a1d7c88ffa64d16b1a1238\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about revision hash that wasn't mined': [pool-9281-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision c80785c7881a9c0794a1d7c88ffa64d16b1a1238 due to error
+Line about revision hash that wasn't mined': [pool-9281-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing https://github.com/apache/santuario-java.git c80785c7881a9c0794a1d7c88ffa64d16b1a1238 ...
+Line that was being parsed: Was parsing line 28341
+
+
+
+
+159891: at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+159892: at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:205)
+159893: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:708)
+159894: at org.refactoringissuesminer.Main.mineCommit(Main.java:103)
+159895: at org.refactoringissuesminer.Main.main(Main.java:71)
+159896: Caused by: java.lang.RuntimeException: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-c80785c7881a9c0794a1d7c88ffa64d16b1a1238\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+159897: at org.refactoringminer.api.RefactoringHandler.handleException(RefactoringHandler.java:39)
+159898: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:359)
+159899: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:690)
+159900: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+159901: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+159902: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+159903: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+159904: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+159905: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+159906: at java.base/java.lang.Thread.run(Thread.java:1623)
+159907: Caused by: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-c80785c7881a9c0794a1d7c88ffa64d16b1a1238\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+159908: at java.base/java.io.FileOutputStream.open0(Native Method)
+159909: at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+159910: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+159911: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+159912: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.downloadAndExtractZipFile(GitHistoryRefactoringMinerImpl.java:397)
+159913: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:334)
+Line about exception that occurred: java.util.concurrent.ExecutionException: java.lang.RuntimeException: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-c80785c7881a9c0794a1d7c88ffa64d16b1a1238\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about exception that occurred: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-c80785c7881a9c0794a1d7c88ffa64d16b1a1238\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about revision hash that wasn't mined': [pool-9281-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision c80785c7881a9c0794a1d7c88ffa64d16b1a1238 due to error
+Line about revision hash that wasn't mined': [pool-9281-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing https://github.com/apache/santuario-java.git c80785c7881a9c0794a1d7c88ffa64d16b1a1238 ...
+Line that was being parsed: Was parsing line 28341
+
+
+
+
+159922: at java.base/java.io.FileOutputStream.open0(Native Method)
+159923: at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+159924: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+159925: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+159926: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.downloadAndExtractZipFile(GitHistoryRefactoringMinerImpl.java:397)
+159927: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:334)
+159928: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:690)
+159929: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+159930: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+159931: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+159932: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+159933: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+159934: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+159935: at java.base/java.lang.Thread.run(Thread.java:1623)
+Line about exception that occurred: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-efc4835d5abcf639c8ad53f62bfbc1c8e792dbf8\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about revision hash that wasn't mined': [pool-9282-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision efc4835d5abcf639c8ad53f62bfbc1c8e792dbf8 due to error
+Line about revision hash that wasn't mined': [pool-9282-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing https://github.com/apache/santuario-java.git efc4835d5abcf639c8ad53f62bfbc1c8e792dbf8 ...
+Line that was being parsed: Was parsing line 28343
+
+
+
+
+159937: at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+159938: at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:205)
+159939: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:708)
+159940: at org.refactoringissuesminer.Main.mineCommit(Main.java:103)
+159941: at org.refactoringissuesminer.Main.main(Main.java:71)
+159942: Caused by: java.lang.RuntimeException: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-efc4835d5abcf639c8ad53f62bfbc1c8e792dbf8\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+159943: at org.refactoringminer.api.RefactoringHandler.handleException(RefactoringHandler.java:39)
+159944: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:359)
+159945: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:690)
+159946: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+159947: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+159948: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+159949: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+159950: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+159951: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+159952: at java.base/java.lang.Thread.run(Thread.java:1623)
+159953: Caused by: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-efc4835d5abcf639c8ad53f62bfbc1c8e792dbf8\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+159954: at java.base/java.io.FileOutputStream.open0(Native Method)
+159955: at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+159956: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+159957: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+159958: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.downloadAndExtractZipFile(GitHistoryRefactoringMinerImpl.java:397)
+159959: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:334)
+Line about exception that occurred: java.util.concurrent.ExecutionException: java.lang.RuntimeException: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-efc4835d5abcf639c8ad53f62bfbc1c8e792dbf8\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about exception that occurred: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-efc4835d5abcf639c8ad53f62bfbc1c8e792dbf8\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about revision hash that wasn't mined': [pool-9282-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision efc4835d5abcf639c8ad53f62bfbc1c8e792dbf8 due to error
+Line about revision hash that wasn't mined': [pool-9282-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing https://github.com/apache/santuario-java.git efc4835d5abcf639c8ad53f62bfbc1c8e792dbf8 ...
+Line that was being parsed: Was parsing line 28343
+
+
+
+
+159968: at java.base/java.io.FileOutputStream.open0(Native Method)
+159969: at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+159970: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+159971: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+159972: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.downloadAndExtractZipFile(GitHistoryRefactoringMinerImpl.java:397)
+159973: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:334)
+159974: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:690)
+159975: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+159976: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+159977: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+159978: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+159979: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+159980: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+159981: at java.base/java.lang.Thread.run(Thread.java:1623)
+Line about exception that occurred: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-0435af87b8e1c65439ccb8dc83dd6feff182700f\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about revision hash that wasn't mined': [pool-9283-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 0435af87b8e1c65439ccb8dc83dd6feff182700f due to error
+Line about revision hash that wasn't mined': [pool-9283-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing https://github.com/apache/santuario-java.git 0435af87b8e1c65439ccb8dc83dd6feff182700f ...
+Line that was being parsed: Was parsing line 28345
+
+
+
+
+159983: at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+159984: at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:205)
+159985: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:708)
+159986: at org.refactoringissuesminer.Main.mineCommit(Main.java:103)
+159987: at org.refactoringissuesminer.Main.main(Main.java:71)
+159988: Caused by: java.lang.RuntimeException: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-0435af87b8e1c65439ccb8dc83dd6feff182700f\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+159989: at org.refactoringminer.api.RefactoringHandler.handleException(RefactoringHandler.java:39)
+159990: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:359)
+159991: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:690)
+159992: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+159993: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+159994: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+159995: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+159996: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+159997: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+159998: at java.base/java.lang.Thread.run(Thread.java:1623)
+159999: Caused by: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-0435af87b8e1c65439ccb8dc83dd6feff182700f\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+160000: at java.base/java.io.FileOutputStream.open0(Native Method)
+160001: at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+160002: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+160003: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+160004: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.downloadAndExtractZipFile(GitHistoryRefactoringMinerImpl.java:397)
+160005: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:334)
+Line about exception that occurred: java.util.concurrent.ExecutionException: java.lang.RuntimeException: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-0435af87b8e1c65439ccb8dc83dd6feff182700f\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about exception that occurred: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-0435af87b8e1c65439ccb8dc83dd6feff182700f\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about revision hash that wasn't mined': [pool-9283-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 0435af87b8e1c65439ccb8dc83dd6feff182700f due to error
+Line about revision hash that wasn't mined': [pool-9283-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing https://github.com/apache/santuario-java.git 0435af87b8e1c65439ccb8dc83dd6feff182700f ...
+Line that was being parsed: Was parsing line 28345
+
+
+
+
+160016: at java.base/java.io.FileOutputStream.open0(Native Method)
+160017: at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+160018: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+160019: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+160020: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.downloadAndExtractZipFile(GitHistoryRefactoringMinerImpl.java:397)
+160021: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:334)
+160022: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:690)
+160023: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+160024: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+160025: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+160026: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+160027: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+160028: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+160029: at java.base/java.lang.Thread.run(Thread.java:1623)
+Line about exception that occurred: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-235a2389dd7a3be0f69fd5f0797ee2a6d2c53a4e\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about revision hash that wasn't mined': [pool-9284-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 235a2389dd7a3be0f69fd5f0797ee2a6d2c53a4e due to error
+Line about revision hash that wasn't mined': [pool-9284-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing https://github.com/apache/santuario-java.git 235a2389dd7a3be0f69fd5f0797ee2a6d2c53a4e ...
+Line that was being parsed: Was parsing line 28349
+
+
+
+
+160031: at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+160032: at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:205)
+160033: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:708)
+160034: at org.refactoringissuesminer.Main.mineCommit(Main.java:103)
+160035: at org.refactoringissuesminer.Main.main(Main.java:71)
+160036: Caused by: java.lang.RuntimeException: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-235a2389dd7a3be0f69fd5f0797ee2a6d2c53a4e\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+160037: at org.refactoringminer.api.RefactoringHandler.handleException(RefactoringHandler.java:39)
+160038: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:359)
+160039: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:690)
+160040: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+160041: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+160042: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+160043: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+160044: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+160045: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+160046: at java.base/java.lang.Thread.run(Thread.java:1623)
+160047: Caused by: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-235a2389dd7a3be0f69fd5f0797ee2a6d2c53a4e\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+160048: at java.base/java.io.FileOutputStream.open0(Native Method)
+160049: at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+160050: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+160051: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+160052: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.downloadAndExtractZipFile(GitHistoryRefactoringMinerImpl.java:397)
+160053: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:334)
+Line about exception that occurred: java.util.concurrent.ExecutionException: java.lang.RuntimeException: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-235a2389dd7a3be0f69fd5f0797ee2a6d2c53a4e\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about exception that occurred: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-235a2389dd7a3be0f69fd5f0797ee2a6d2c53a4e\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about revision hash that wasn't mined': [pool-9284-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 235a2389dd7a3be0f69fd5f0797ee2a6d2c53a4e due to error
+Line about revision hash that wasn't mined': [pool-9284-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing https://github.com/apache/santuario-java.git 235a2389dd7a3be0f69fd5f0797ee2a6d2c53a4e ...
+Line that was being parsed: Was parsing line 28349
+
+
+
+
+160090: at java.base/java.io.FileOutputStream.open0(Native Method)
+160091: at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+160092: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+160093: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+160094: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.downloadAndExtractZipFile(GitHistoryRefactoringMinerImpl.java:397)
+160095: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:334)
+160096: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:690)
+160097: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+160098: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+160099: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+160100: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+160101: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+160102: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+160103: at java.base/java.lang.Thread.run(Thread.java:1623)
+Line about exception that occurred: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-5005c6b13fdb909576b1fda65c24bcb13381f65c\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about revision hash that wasn't mined': [pool-9287-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 5005c6b13fdb909576b1fda65c24bcb13381f65c due to error
+Line about revision hash that wasn't mined': [pool-9287-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing https://github.com/apache/santuario-java.git 5005c6b13fdb909576b1fda65c24bcb13381f65c ...
+Line that was being parsed: Was parsing line 28359
+
+
+
+
+160105: at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+160106: at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:205)
+160107: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:708)
+160108: at org.refactoringissuesminer.Main.mineCommit(Main.java:103)
+160109: at org.refactoringissuesminer.Main.main(Main.java:71)
+160110: Caused by: java.lang.RuntimeException: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-5005c6b13fdb909576b1fda65c24bcb13381f65c\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+160111: at org.refactoringminer.api.RefactoringHandler.handleException(RefactoringHandler.java:39)
+160112: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:359)
+160113: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:690)
+160114: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+160115: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+160116: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+160117: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+160118: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+160119: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+160120: at java.base/java.lang.Thread.run(Thread.java:1623)
+160121: Caused by: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-5005c6b13fdb909576b1fda65c24bcb13381f65c\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+160122: at java.base/java.io.FileOutputStream.open0(Native Method)
+160123: at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+160124: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+160125: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+160126: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.downloadAndExtractZipFile(GitHistoryRefactoringMinerImpl.java:397)
+160127: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:334)
+Line about exception that occurred: java.util.concurrent.ExecutionException: java.lang.RuntimeException: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-5005c6b13fdb909576b1fda65c24bcb13381f65c\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about exception that occurred: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-5005c6b13fdb909576b1fda65c24bcb13381f65c\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about revision hash that wasn't mined': [pool-9287-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 5005c6b13fdb909576b1fda65c24bcb13381f65c due to error
+Line about revision hash that wasn't mined': [pool-9287-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing https://github.com/apache/santuario-java.git 5005c6b13fdb909576b1fda65c24bcb13381f65c ...
+Line that was being parsed: Was parsing line 28359
+
+
+
+
+160178: at java.base/java.io.FileOutputStream.open0(Native Method)
+160179: at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+160180: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+160181: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+160182: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.downloadAndExtractZipFile(GitHistoryRefactoringMinerImpl.java:397)
+160183: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:334)
+160184: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:690)
+160185: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+160186: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+160187: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+160188: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+160189: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+160190: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+160191: at java.base/java.lang.Thread.run(Thread.java:1623)
+Line about exception that occurred: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-747ca8f60a653451e7ff81841c2216880ec27d50\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about revision hash that wasn't mined': [pool-9291-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 747ca8f60a653451e7ff81841c2216880ec27d50 due to error
+Line about revision hash that wasn't mined': [pool-9291-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing https://github.com/apache/santuario-java.git 747ca8f60a653451e7ff81841c2216880ec27d50 ...
+Line that was being parsed: Was parsing line 28373
+
+
+
+
+160193: at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+160194: at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:205)
+160195: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:708)
+160196: at org.refactoringissuesminer.Main.mineCommit(Main.java:103)
+160197: at org.refactoringissuesminer.Main.main(Main.java:71)
+160198: Caused by: java.lang.RuntimeException: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-747ca8f60a653451e7ff81841c2216880ec27d50\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+160199: at org.refactoringminer.api.RefactoringHandler.handleException(RefactoringHandler.java:39)
+160200: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:359)
+160201: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAtCommit(GitHistoryRefactoringMinerImpl.java:690)
+160202: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.lambda$detectAtCommit$3(GitHistoryRefactoringMinerImpl.java:706)
+160203: at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+160204: at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+160205: at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+160206: at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+160207: at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+160208: at java.base/java.lang.Thread.run(Thread.java:1623)
+160209: Caused by: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-747ca8f60a653451e7ff81841c2216880ec27d50\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about exception that occurred: java.util.concurrent.ExecutionException: java.lang.RuntimeException: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-747ca8f60a653451e7ff81841c2216880ec27d50\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about exception that occurred: java.io.FileNotFoundException: C:\SmartSHARK\RefactoringMiner\repos\santuario-java-747ca8f60a653451e7ff81841c2216880ec27d50\samples\data\org\w3c\www\interop\xmldsig11\sun\index.html?C=D;O=A (The filename, directory name, or volume label syntax is incorrect)
+Line about revision hash that wasn't mined': [pool-9291-thread-1] WARN org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Ignored revision 747ca8f60a653451e7ff81841c2216880ec27d50 due to error
+Line about revision hash that wasn't mined': [pool-9291-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing https://github.com/apache/santuario-java.git 747ca8f60a653451e7ff81841c2216880ec27d50 ...
+Line that was being parsed: Was parsing line 28373
+
+
+
+
+160212: at java.base/java.io.FileOutputStream.open0(Native Method)
+160213: at java.base/java.io.FileOutputStream.open(FileOutputStream.java:295)
+Line that was being parsed: Was parsing line 28375
+
+
+
+
+160216: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:236)
+160217: at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+160218: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.downloadAndExtractZipFile(GitHistoryRefactoringMinerImpl.java:397)
+160219: at org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectRefactorings(GitHistoryRefactoringMinerImpl.java:334)
+Line that was being parsed: Was parsing line 28377
+
+
+
+
+184350: at org.eclipse.jgit.api.FetchCommand.call(FetchCommand.java:249)
+184351: at org.eclipse.jgit.api.CloneCommand.fetch(CloneCommand.java:325)
+184352: at org.eclipse.jgit.api.CloneCommand.call(CloneCommand.java:191)
+184353: at org.refactoringminer.util.GitServiceImpl.cloneIfNotExists(GitServiceImpl.java:76)
+184354: at org.refactoringissuesminer.Main.main(Main.java:51)
+184355: Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/apache/wss4j.git: Authentication is required but no CredentialsProvider has been registered
+184356: at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:678)
+184357: at org.eclipse.jgit.transport.TransportHttp.openFetch(TransportHttp.java:465)
+184358: at org.eclipse.jgit.transport.FetchProcess.executeImp(FetchProcess.java:153)
+184359: at org.eclipse.jgit.transport.FetchProcess.execute(FetchProcess.java:105)
+184360: at org.eclipse.jgit.transport.Transport.fetch(Transport.java:1462)
+184361: at org.eclipse.jgit.api.FetchCommand.call(FetchCommand.java:238)
+Line about exception that occurred: org.eclipse.jgit.api.errors.TransportException: https://github.com/apache/wss4j.git: Authentication is required but no CredentialsProvider has been registered
+Line that was being parsed: Was parsing line 32814
+
+
