@@ -1230,3 +1230,1235 @@ No refactorings detected at af3253d7ffe1c4d9ccbffbd22d951277b0b98b31
 
 No refactorings detected at 29d274675157ed1e915366508bb7c83c322d67bb
 
+No refactorings detected at c56463f082b07dcdd61f30632605e03b37b10c62
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50121361aad04c588eb55a
+Issue Title: : PageRenamer leaves ReferenceManager in incorrect state + package move PageRenamerTest
+Refactorings at 346be1c4b85d1367f5dc8666fc5968e021f1fa78
+Move Class	com.ecyrd.jspwiki.PageRenamerTest moved to com.ecyrd.jspwiki.content.PageRenamerTest
+Developers have reported that 10708 commits involve refactoring but only 1975 involve refactoring operations
+There are 49 duplicate commits with refactoring out of the 1975 commits.
+
+No refactorings detected at 5afe29c6969a2f1cd769aa0e40a20a6da51067f0
+
+No refactorings detected at fe106ba10c23d349307f39adf16fa5f7cda077de
+
+No refactorings detected at 5c406e0c0156c89f0ac130d1063b92f67abdc489
+
+No refactorings detected at 116ebf2b1bf0d50d40220a838e32bbaa39fcb2b2
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50127b61aad04c588eb8b5
+Issue Title: : Replace ORO regexp library with Java 5 regexps
+Refactorings at 523249b3c27fa4fa7712e0d3d0ba9503e46db4b5
+Change Variable Type	e : MalformedPatternException to e : PatternSyntaxException in method public initialize(engine WikiEngine, properties Properties) : void from class com.ecyrd.jspwiki.filters.SpamFilter
+Change Variable Type	e : MalformedPatternException to e : PatternSyntaxException in method private parseWordList(source WikiPage, list String) : Collection<Pattern> from class com.ecyrd.jspwiki.filters.SpamFilter
+Change Variable Type	e : MalformedPatternException to e : PatternSyntaxException in method private parseBlacklist(list String) : Collection<Pattern> from class com.ecyrd.jspwiki.filters.SpamFilter
+Replace Attribute With Variable	m_matcher : PatternMatcher to matcher : Matcher in method private checkSinglePageChange(context WikiContext, content String, change String) : void from class com.ecyrd.jspwiki.filters.SpamFilter
+Change Variable Type	e : MalformedPatternException to e : PatternSyntaxException in method private initialize() : void from class com.ecyrd.jspwiki.parser.JSPWikiMarkupParser
+Change Variable Type	e : MalformedPatternException to e : PatternSyntaxException in method private initialize() : void from class com.ecyrd.jspwiki.parser.JSPWikiMarkupParser
+Replace Attribute With Variable	m_camelCaseMatcher : PatternMatcher to camelCaseMatcher : Matcher in method private flushPlainText() : int from class com.ecyrd.jspwiki.parser.JSPWikiMarkupParser
+Change Variable Type	e : MalformedPatternException to e : PatternSyntaxException in method public initialize(context WikiContext, params Map) : void from class com.ecyrd.jspwiki.plugin.AbstractReferralPlugin
+Change Variable Type	e : MalformedPatternException to e : PatternSyntaxException in method public initialize(context WikiContext, params Map) : void from class com.ecyrd.jspwiki.plugin.AbstractReferralPlugin
+Change Variable Type	e : MalformedPatternException to e : PatternSyntaxException in method private doMatch(content String, pattern String) : boolean from class com.ecyrd.jspwiki.plugin.IfPlugin
+Change Variable Type	e : MalformedPatternException to e : PatternSyntaxException in method public PluginManager(engine WikiEngine, props Properties) from class com.ecyrd.jspwiki.plugin.PluginManager
+Change Variable Type	matcher : PatternMatcher to matcher : Matcher in method public execute(context WikiContext, commandline String) : String from class com.ecyrd.jspwiki.plugin.PluginManager
+Change Variable Type	matcher : PatternMatcher to matcher : Matcher in method public parsePluginLine(context WikiContext, commandline String, pos int) : PluginContent from class com.ecyrd.jspwiki.plugin.PluginManager
+Change Variable Type	e : MalformedPatternException to e : PatternSyntaxException in method public execute(context WikiContext, params Map) : String from class com.ecyrd.jspwiki.plugin.ReferredPagesPlugin
+Change Variable Type	matcher : PatternMatcher to matcher : Matcher in method public getPageInfo(page String, version int) : WikiPage from class com.ecyrd.jspwiki.providers.RCSFileProvider
+Change Variable Type	e : MalformedPatternException to e : PatternSyntaxException in method public getPageText(page String, version int) : String from class com.ecyrd.jspwiki.providers.RCSFileProvider
+Change Variable Type	matcher : PatternMatcher to matcher : Matcher in method public getPageText(page String, version int) : String from class com.ecyrd.jspwiki.providers.RCSFileProvider
+Change Variable Type	matcher : PatternMatcher to matcher : Matcher in method public getVersionHistory(page String) : List from class com.ecyrd.jspwiki.providers.RCSFileProvider
+Developers have reported that 10708 commits involve refactoring but only 1976 involve refactoring operations
+There are 49 duplicate commits with refactoring out of the 1976 commits.
+
+No refactorings detected at 5a5fe1f9943595beab4af45ea0a30c457b67e1c7
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50127b61aad04c588eb8b5
+Issue Title: : Replace ORO regexp library with Java 5 regexps
+Refactorings at ade5a0a764a22d84ea68ed5d755f5224c3a45bd5
+Change Variable Type	ex : MalformedPatternException to ex : PatternSyntaxException in initializer Denounce from class com.ecyrd.jspwiki.plugin.Denounce
+Extract Variable	pattern : Pattern in method private matchPattern(list List, path String) : boolean from class com.ecyrd.jspwiki.plugin.Denounce
+Developers have reported that 10708 commits involve refactoring but only 1977 involve refactoring operations
+There are 49 duplicate commits with refactoring out of the 1977 commits.
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50128961aad04c588eb95e
+Issue Title: : Rename packages to "org.apache.jspwiki"
+Refactorings at b2dcf317099fd233247f6f01b77cf97ab42510d4
+Move Class	com.ecyrd.jspwiki.InternalWikiException moved to org.apache.wiki.InternalWikiException
+Move Class	com.ecyrd.jspwiki.JCRWikiPage moved to org.apache.wiki.JCRWikiPage
+Move Class	com.ecyrd.jspwiki.LinkCollector moved to org.apache.wiki.LinkCollector
+Move Class	com.ecyrd.jspwiki.NoRequiredPropertyException moved to org.apache.wiki.NoRequiredPropertyException
+Move Class	com.ecyrd.jspwiki.NoSuchVariableException moved to org.apache.wiki.NoSuchVariableException
+Move Class	com.ecyrd.jspwiki.PageLock moved to org.apache.wiki.PageLock
+Move Class	com.ecyrd.jspwiki.PageManager moved to org.apache.wiki.PageManager
+Move Class	com.ecyrd.jspwiki.PageTimeComparator moved to org.apache.wiki.PageTimeComparator
+Move Class	com.ecyrd.jspwiki.PropertyReader moved to org.apache.wiki.PropertyReader
+Move Class	com.ecyrd.jspwiki.ReferenceManager moved to org.apache.wiki.ReferenceManager
+Move Class	com.ecyrd.jspwiki.Release moved to org.apache.wiki.Release
+Move Class	com.ecyrd.jspwiki.StringTransmutator moved to org.apache.wiki.StringTransmutator
+Move Class	com.ecyrd.jspwiki.VariableManager moved to org.apache.wiki.VariableManager
+Move Class	com.ecyrd.jspwiki.WikiContext moved to org.apache.wiki.WikiContext
+Move Class	com.ecyrd.jspwiki.WikiProvider moved to org.apache.wiki.WikiProvider
+Move Class	com.ecyrd.jspwiki.WikiServlet moved to org.apache.wiki.WikiServlet
+Move Class	com.ecyrd.jspwiki.WikiSession moved to org.apache.wiki.WikiSession
+Move Class	com.ecyrd.jspwiki.action.AbstractActionBean moved to org.apache.wiki.action.AbstractActionBean
+Move Class	com.ecyrd.jspwiki.action.AbstractPageActionBean moved to org.apache.wiki.action.AbstractPageActionBean
+Move Class	com.ecyrd.jspwiki.action.AdministerProfilesActionBean moved to org.apache.wiki.action.AdministerProfilesActionBean
+Move Class	com.ecyrd.jspwiki.action.AttachActionBean moved to org.apache.wiki.action.AttachActionBean
+Move Class	com.ecyrd.jspwiki.action.CommentActionBean moved to org.apache.wiki.action.CommentActionBean
+Move Class	com.ecyrd.jspwiki.action.DeleteActionBean moved to org.apache.wiki.action.DeleteActionBean
+Move Class	com.ecyrd.jspwiki.action.EditActionBean moved to org.apache.wiki.action.EditActionBean
+Move Class	com.ecyrd.jspwiki.action.ErrorActionBean moved to org.apache.wiki.action.ErrorActionBean
+Move Class	com.ecyrd.jspwiki.action.GroupActionBean moved to org.apache.wiki.action.GroupActionBean
+Move Class	com.ecyrd.jspwiki.action.InstallActionBean moved to org.apache.wiki.action.InstallActionBean
+Move Class	com.ecyrd.jspwiki.action.LoginActionBean moved to org.apache.wiki.action.LoginActionBean
+Move Class	com.ecyrd.jspwiki.action.MessageActionBean moved to org.apache.wiki.action.MessageActionBean
+Move Class	com.ecyrd.jspwiki.action.NewBlogEntryActionBean moved to org.apache.wiki.action.NewBlogEntryActionBean
+Move Class	com.ecyrd.jspwiki.action.NewPageActionBean moved to org.apache.wiki.action.NewPageActionBean
+Move Class	com.ecyrd.jspwiki.action.NoneActionBean moved to org.apache.wiki.action.NoneActionBean
+Move Class	com.ecyrd.jspwiki.action.PageModifiedActionBean moved to org.apache.wiki.action.PageModifiedActionBean
+Move Class	com.ecyrd.jspwiki.action.RSSActionBean moved to org.apache.wiki.action.RSSActionBean
+Move Class	com.ecyrd.jspwiki.action.RenameActionBean moved to org.apache.wiki.action.RenameActionBean
+Move Class	com.ecyrd.jspwiki.action.SearchActionBean moved to org.apache.wiki.action.SearchActionBean
+Move Class	com.ecyrd.jspwiki.action.UploadActionBean moved to org.apache.wiki.action.UploadActionBean
+Move Class	com.ecyrd.jspwiki.action.UserPreferencesActionBean moved to org.apache.wiki.action.UserPreferencesActionBean
+Move Class	com.ecyrd.jspwiki.action.UserProfileActionBean moved to org.apache.wiki.action.UserProfileActionBean
+Move Class	com.ecyrd.jspwiki.action.ViewActionBean moved to org.apache.wiki.action.ViewActionBean
+Move Class	com.ecyrd.jspwiki.action.WikiActionBean moved to org.apache.wiki.action.WikiActionBean
+Move Class	com.ecyrd.jspwiki.action.WikiContextFactory moved to org.apache.wiki.action.WikiContextFactory
+Move Class	com.ecyrd.jspwiki.action.WorkflowActionBean moved to org.apache.wiki.action.WorkflowActionBean
+Move Class	com.ecyrd.jspwiki.attachment.Attachment moved to org.apache.wiki.attachment.Attachment
+Move Class	com.ecyrd.jspwiki.attachment.AttachmentManager moved to org.apache.wiki.attachment.AttachmentManager
+Move Class	com.ecyrd.jspwiki.attachment.AttachmentServlet moved to org.apache.wiki.attachment.AttachmentServlet
+Move Class	com.ecyrd.jspwiki.attachment.DynamicAttachment moved to org.apache.wiki.attachment.DynamicAttachment
+Move Class	com.ecyrd.jspwiki.attachment.DynamicAttachmentProvider moved to org.apache.wiki.attachment.DynamicAttachmentProvider
+Move Class	com.ecyrd.jspwiki.auth.AuthenticationManager moved to org.apache.wiki.auth.AuthenticationManager
+Move Class	com.ecyrd.jspwiki.auth.AuthorizationManager moved to org.apache.wiki.auth.AuthorizationManager
+Move Class	com.ecyrd.jspwiki.auth.Authorizer moved to org.apache.wiki.auth.Authorizer
+Move Class	com.ecyrd.jspwiki.auth.GroupPrincipal moved to org.apache.wiki.auth.GroupPrincipal
+Move Class	com.ecyrd.jspwiki.auth.NoSuchPrincipalException moved to org.apache.wiki.auth.NoSuchPrincipalException
+Move Class	com.ecyrd.jspwiki.auth.PrincipalComparator moved to org.apache.wiki.auth.PrincipalComparator
+Move Class	com.ecyrd.jspwiki.auth.SecurityVerifier moved to org.apache.wiki.auth.SecurityVerifier
+Move Class	com.ecyrd.jspwiki.auth.SessionMonitor moved to org.apache.wiki.auth.SessionMonitor
+Move Class	com.ecyrd.jspwiki.auth.UserManager moved to org.apache.wiki.auth.UserManager
+Move Class	com.ecyrd.jspwiki.auth.WikiPrincipal moved to org.apache.wiki.auth.WikiPrincipal
+Move Class	com.ecyrd.jspwiki.auth.WikiSecurityException moved to org.apache.wiki.auth.WikiSecurityException
+Move Class	com.ecyrd.jspwiki.auth.acl.Acl moved to org.apache.wiki.auth.acl.Acl
+Move Class	com.ecyrd.jspwiki.auth.acl.AclEntry moved to org.apache.wiki.auth.acl.AclEntry
+Move Class	com.ecyrd.jspwiki.auth.acl.AclEntryImpl moved to org.apache.wiki.auth.acl.AclEntryImpl
+Move Class	com.ecyrd.jspwiki.auth.acl.AclImpl moved to org.apache.wiki.auth.acl.AclImpl
+Move Class	com.ecyrd.jspwiki.auth.acl.AclManager moved to org.apache.wiki.auth.acl.AclManager
+Move Class	com.ecyrd.jspwiki.auth.acl.DefaultAclManager moved to org.apache.wiki.auth.acl.DefaultAclManager
+Move Class	com.ecyrd.jspwiki.auth.acl.UnresolvedPrincipal moved to org.apache.wiki.auth.acl.UnresolvedPrincipal
+Move Class	com.ecyrd.jspwiki.auth.authorize.Group moved to org.apache.wiki.auth.authorize.Group
+Move Class	com.ecyrd.jspwiki.auth.authorize.GroupDatabase moved to org.apache.wiki.auth.authorize.GroupDatabase
+Move Class	com.ecyrd.jspwiki.auth.authorize.GroupManager moved to org.apache.wiki.auth.authorize.GroupManager
+Move Class	com.ecyrd.jspwiki.auth.authorize.JDBCGroupDatabase moved to org.apache.wiki.auth.authorize.JDBCGroupDatabase
+Move Class	com.ecyrd.jspwiki.auth.authorize.Role moved to org.apache.wiki.auth.authorize.Role
+Move Class	com.ecyrd.jspwiki.auth.authorize.WebAuthorizer moved to org.apache.wiki.auth.authorize.WebAuthorizer
+Move Class	com.ecyrd.jspwiki.auth.authorize.WebContainerAuthorizer moved to org.apache.wiki.auth.authorize.WebContainerAuthorizer
+Move Class	com.ecyrd.jspwiki.auth.authorize.XMLGroupDatabase moved to org.apache.wiki.auth.authorize.XMLGroupDatabase
+Move Class	com.ecyrd.jspwiki.auth.login.AbstractLoginModule moved to org.apache.wiki.auth.login.AbstractLoginModule
+Move Class	com.ecyrd.jspwiki.auth.login.AnonymousLoginModule moved to org.apache.wiki.auth.login.AnonymousLoginModule
+Move Class	com.ecyrd.jspwiki.auth.login.AuthorizerCallback moved to org.apache.wiki.auth.login.AuthorizerCallback
+Move Class	com.ecyrd.jspwiki.auth.login.CookieAssertionLoginModule moved to org.apache.wiki.auth.login.CookieAssertionLoginModule
+Move Class	com.ecyrd.jspwiki.auth.login.CookieAuthenticationLoginModule moved to org.apache.wiki.auth.login.CookieAuthenticationLoginModule
+Move Class	com.ecyrd.jspwiki.auth.login.HttpRequestCallback moved to org.apache.wiki.auth.login.HttpRequestCallback
+Move Class	com.ecyrd.jspwiki.auth.login.LocaleCallback moved to org.apache.wiki.auth.login.LocaleCallback
+Move Class	com.ecyrd.jspwiki.auth.login.PrincipalWrapper moved to org.apache.wiki.auth.login.PrincipalWrapper
+Move Class	com.ecyrd.jspwiki.auth.login.UserDatabaseCallback moved to org.apache.wiki.auth.login.UserDatabaseCallback
+Move Class	com.ecyrd.jspwiki.auth.login.UserDatabaseLoginModule moved to org.apache.wiki.auth.login.UserDatabaseLoginModule
+Move Class	com.ecyrd.jspwiki.auth.login.WebContainerCallbackHandler moved to org.apache.wiki.auth.login.WebContainerCallbackHandler
+Move Class	com.ecyrd.jspwiki.auth.login.WebContainerLoginModule moved to org.apache.wiki.auth.login.WebContainerLoginModule
+Move Class	com.ecyrd.jspwiki.auth.login.WikiCallbackHandler moved to org.apache.wiki.auth.login.WikiCallbackHandler
+Move Class	com.ecyrd.jspwiki.auth.login.WikiEngineCallback moved to org.apache.wiki.auth.login.WikiEngineCallback
+Move Class	com.ecyrd.jspwiki.auth.permissions.AllPermission moved to org.apache.wiki.auth.permissions.AllPermission
+Move Class	com.ecyrd.jspwiki.auth.permissions.AllPermissionCollection moved to org.apache.wiki.auth.permissions.AllPermissionCollection
+Move Class	com.ecyrd.jspwiki.auth.permissions.GroupPermission moved to org.apache.wiki.auth.permissions.GroupPermission
+Move Class	com.ecyrd.jspwiki.auth.permissions.PagePermission moved to org.apache.wiki.auth.permissions.PagePermission
+Move Class	com.ecyrd.jspwiki.auth.permissions.WikiPermission moved to org.apache.wiki.auth.permissions.WikiPermission
+Move Class	com.ecyrd.jspwiki.auth.user.AbstractUserDatabase moved to org.apache.wiki.auth.user.AbstractUserDatabase
+Move Class	com.ecyrd.jspwiki.auth.user.DefaultUserProfile moved to org.apache.wiki.auth.user.DefaultUserProfile
+Move Class	com.ecyrd.jspwiki.auth.user.DuplicateUserException moved to org.apache.wiki.auth.user.DuplicateUserException
+Move Class	com.ecyrd.jspwiki.auth.user.JDBCUserDatabase moved to org.apache.wiki.auth.user.JDBCUserDatabase
+Move Class	com.ecyrd.jspwiki.auth.user.UserDatabase moved to org.apache.wiki.auth.user.UserDatabase
+Move Class	com.ecyrd.jspwiki.auth.user.UserProfile moved to org.apache.wiki.auth.user.UserProfile
+Move Class	com.ecyrd.jspwiki.auth.user.XMLUserDatabase moved to org.apache.wiki.auth.user.XMLUserDatabase
+Move Class	com.ecyrd.jspwiki.content.ContentManager moved to org.apache.wiki.content.ContentManager
+Move Class	com.ecyrd.jspwiki.content.PageRenamer moved to org.apache.wiki.content.PageRenamer
+Move Class	com.ecyrd.jspwiki.content.WikiName moved to org.apache.wiki.content.WikiName
+Move Class	com.ecyrd.jspwiki.dav.AttachmentDavProvider moved to org.apache.wiki.dav.AttachmentDavProvider
+Move Class	com.ecyrd.jspwiki.dav.DavContext moved to org.apache.wiki.dav.DavContext
+Move Class	com.ecyrd.jspwiki.dav.DavPath moved to org.apache.wiki.dav.DavPath
+Move Class	com.ecyrd.jspwiki.dav.DavProvider moved to org.apache.wiki.dav.DavProvider
+Move Class	com.ecyrd.jspwiki.dav.DavUtil moved to org.apache.wiki.dav.DavUtil
+Move Class	com.ecyrd.jspwiki.dav.HTMLPagesDavProvider moved to org.apache.wiki.dav.HTMLPagesDavProvider
+Move Class	com.ecyrd.jspwiki.dav.RawPagesDavProvider moved to org.apache.wiki.dav.RawPagesDavProvider
+Move Class	com.ecyrd.jspwiki.dav.WebdavServlet moved to org.apache.wiki.dav.WebdavServlet
+Move Class	com.ecyrd.jspwiki.dav.WikiDavProvider moved to org.apache.wiki.dav.WikiDavProvider
+Move Class	com.ecyrd.jspwiki.dav.WikiDavServlet moved to org.apache.wiki.dav.WikiDavServlet
+Move Class	com.ecyrd.jspwiki.dav.WikiRootProvider moved to org.apache.wiki.dav.WikiRootProvider
+Move Class	com.ecyrd.jspwiki.dav.items.AttachmentDirectoryItem moved to org.apache.wiki.dav.items.AttachmentDirectoryItem
+Move Class	com.ecyrd.jspwiki.dav.items.AttachmentItem moved to org.apache.wiki.dav.items.AttachmentItem
+Move Class	com.ecyrd.jspwiki.dav.items.DavItem moved to org.apache.wiki.dav.items.DavItem
+Move Class	com.ecyrd.jspwiki.dav.items.DirectoryItem moved to org.apache.wiki.dav.items.DirectoryItem
+Move Class	com.ecyrd.jspwiki.dav.items.HTMLPageDavItem moved to org.apache.wiki.dav.items.HTMLPageDavItem
+Move Class	com.ecyrd.jspwiki.dav.items.PageDavItem moved to org.apache.wiki.dav.items.PageDavItem
+Move Class	com.ecyrd.jspwiki.dav.items.TopLevelDavItem moved to org.apache.wiki.dav.items.TopLevelDavItem
+Move Class	com.ecyrd.jspwiki.dav.methods.DavMethod moved to org.apache.wiki.dav.methods.DavMethod
+Move Class	com.ecyrd.jspwiki.dav.methods.GetMethod moved to org.apache.wiki.dav.methods.GetMethod
+Move Class	com.ecyrd.jspwiki.dav.methods.PropFindMethod moved to org.apache.wiki.dav.methods.PropFindMethod
+Move Class	com.ecyrd.jspwiki.dav.methods.PropPatchMethod moved to org.apache.wiki.dav.methods.PropPatchMethod
+Move Class	com.ecyrd.jspwiki.diff.ContextualDiffProvider moved to org.apache.wiki.diff.ContextualDiffProvider
+Move Class	com.ecyrd.jspwiki.diff.DiffProvider moved to org.apache.wiki.diff.DiffProvider
+Move Class	com.ecyrd.jspwiki.diff.DifferenceManager moved to org.apache.wiki.diff.DifferenceManager
+Move Class	com.ecyrd.jspwiki.diff.ExternalDiffProvider moved to org.apache.wiki.diff.ExternalDiffProvider
+Move Class	com.ecyrd.jspwiki.diff.TraditionalDiffProvider moved to org.apache.wiki.diff.TraditionalDiffProvider
+Move Class	com.ecyrd.jspwiki.event.PageEventFilter moved to org.apache.wiki.event.PageEventFilter
+Move Class	com.ecyrd.jspwiki.event.WikiEngineEvent moved to org.apache.wiki.event.WikiEngineEvent
+Move Class	com.ecyrd.jspwiki.event.WikiEvent moved to org.apache.wiki.event.WikiEvent
+Move Class	com.ecyrd.jspwiki.event.WikiEventListener moved to org.apache.wiki.event.WikiEventListener
+Move Class	com.ecyrd.jspwiki.event.WikiEventManager moved to org.apache.wiki.event.WikiEventManager
+Move Class	com.ecyrd.jspwiki.event.WikiEventUtils moved to org.apache.wiki.event.WikiEventUtils
+Move Class	com.ecyrd.jspwiki.event.WikiPageEvent moved to org.apache.wiki.event.WikiPageEvent
+Move Class	com.ecyrd.jspwiki.event.WikiPageRenameEvent moved to org.apache.wiki.event.WikiPageRenameEvent
+Move Class	com.ecyrd.jspwiki.event.WikiSecurityEvent moved to org.apache.wiki.event.WikiSecurityEvent
+Move Class	com.ecyrd.jspwiki.event.WorkflowEvent moved to org.apache.wiki.event.WorkflowEvent
+Move Class	com.ecyrd.jspwiki.filters.BasicPageFilter moved to org.apache.wiki.filters.BasicPageFilter
+Move Class	com.ecyrd.jspwiki.filters.CreoleFilter moved to org.apache.wiki.filters.CreoleFilter
+Move Class	com.ecyrd.jspwiki.filters.FilterManager moved to org.apache.wiki.filters.FilterManager
+Move Class	com.ecyrd.jspwiki.filters.PageFilter moved to org.apache.wiki.filters.PageFilter
+Move Class	com.ecyrd.jspwiki.filters.PingWeblogsComFilter moved to org.apache.wiki.filters.PingWeblogsComFilter
+Move Class	com.ecyrd.jspwiki.filters.ProfanityFilter moved to org.apache.wiki.filters.ProfanityFilter
+Move Class	com.ecyrd.jspwiki.filters.RedirectException moved to org.apache.wiki.filters.RedirectException
+Move Class	com.ecyrd.jspwiki.filters.SpamFilter moved to org.apache.wiki.filters.SpamFilter
+Move Class	com.ecyrd.jspwiki.forms.FormClose moved to org.apache.wiki.forms.FormClose
+Move Class	com.ecyrd.jspwiki.forms.FormElement moved to org.apache.wiki.forms.FormElement
+Move Class	com.ecyrd.jspwiki.forms.FormHandler moved to org.apache.wiki.forms.FormHandler
+Move Class	com.ecyrd.jspwiki.forms.FormInfo moved to org.apache.wiki.forms.FormInfo
+Move Class	com.ecyrd.jspwiki.forms.FormInput moved to org.apache.wiki.forms.FormInput
+Move Class	com.ecyrd.jspwiki.forms.FormOutput moved to org.apache.wiki.forms.FormOutput
+Move Class	com.ecyrd.jspwiki.forms.FormSelect moved to org.apache.wiki.forms.FormSelect
+Move Class	com.ecyrd.jspwiki.forms.FormSet moved to org.apache.wiki.forms.FormSet
+Move Class	com.ecyrd.jspwiki.forms.FormTextarea moved to org.apache.wiki.forms.FormTextarea
+Move Class	com.ecyrd.jspwiki.htmltowiki.ForgetNullValuesLinkedHashMap moved to org.apache.wiki.htmltowiki.ForgetNullValuesLinkedHashMap
+Move Class	com.ecyrd.jspwiki.htmltowiki.HtmlStringToWikiTranslator moved to org.apache.wiki.htmltowiki.HtmlStringToWikiTranslator
+Move Class	com.ecyrd.jspwiki.htmltowiki.PersistentMapDecorator moved to org.apache.wiki.htmltowiki.PersistentMapDecorator
+Move Class	com.ecyrd.jspwiki.htmltowiki.PropertiesUtils moved to org.apache.wiki.htmltowiki.PropertiesUtils
+Move Class	com.ecyrd.jspwiki.htmltowiki.WhitespaceTrimWriter moved to org.apache.wiki.htmltowiki.WhitespaceTrimWriter
+Move Class	com.ecyrd.jspwiki.htmltowiki.XHtmlElementToWikiTranslator moved to org.apache.wiki.htmltowiki.XHtmlElementToWikiTranslator
+Move Class	com.ecyrd.jspwiki.htmltowiki.XHtmlToWikiConfig moved to org.apache.wiki.htmltowiki.XHtmlToWikiConfig
+Move Class	com.ecyrd.jspwiki.i18n.InternationalizationManager moved to org.apache.wiki.i18n.InternationalizationManager
+Move Class	com.ecyrd.jspwiki.log.Logger moved to org.apache.wiki.log.Logger
+Move Class	com.ecyrd.jspwiki.log.LoggerFactory moved to org.apache.wiki.log.LoggerFactory
+Move Class	com.ecyrd.jspwiki.log.LoggerImpl moved to org.apache.wiki.log.LoggerImpl
+Move Class	com.ecyrd.jspwiki.modules.InternalModule moved to org.apache.wiki.modules.InternalModule
+Move Class	com.ecyrd.jspwiki.modules.ModuleManager moved to org.apache.wiki.modules.ModuleManager
+Move Class	com.ecyrd.jspwiki.modules.WikiModuleInfo moved to org.apache.wiki.modules.WikiModuleInfo
+Move Class	com.ecyrd.jspwiki.parser.CreoleToJSPWikiTranslator moved to org.apache.wiki.parser.CreoleToJSPWikiTranslator
+Move Class	com.ecyrd.jspwiki.parser.Heading moved to org.apache.wiki.parser.Heading
+Move Class	com.ecyrd.jspwiki.parser.HeadingListener moved to org.apache.wiki.parser.HeadingListener
+Move Class	com.ecyrd.jspwiki.parser.JSPWikiMarkupParser moved to org.apache.wiki.parser.JSPWikiMarkupParser
+Move Class	com.ecyrd.jspwiki.parser.LinkParser moved to org.apache.wiki.parser.LinkParser
+Move Class	com.ecyrd.jspwiki.parser.MarkupParser moved to org.apache.wiki.parser.MarkupParser
+Move Class	com.ecyrd.jspwiki.parser.ParseException moved to org.apache.wiki.parser.ParseException
+Move Class	com.ecyrd.jspwiki.parser.PluginContent moved to org.apache.wiki.parser.PluginContent
+Move Class	com.ecyrd.jspwiki.parser.VariableContent moved to org.apache.wiki.parser.VariableContent
+Move Class	com.ecyrd.jspwiki.parser.WikiDocument moved to org.apache.wiki.parser.WikiDocument
+Move Class	com.ecyrd.jspwiki.plugin.AbstractReferralPlugin moved to org.apache.wiki.plugin.AbstractReferralPlugin
+Move Class	com.ecyrd.jspwiki.plugin.BugReportHandler moved to org.apache.wiki.plugin.BugReportHandler
+Move Class	com.ecyrd.jspwiki.plugin.Counter moved to org.apache.wiki.plugin.Counter
+Move Class	com.ecyrd.jspwiki.plugin.CurrentTimePlugin moved to org.apache.wiki.plugin.CurrentTimePlugin
+Move Class	com.ecyrd.jspwiki.plugin.Denounce moved to org.apache.wiki.plugin.Denounce
+Move Class	com.ecyrd.jspwiki.plugin.Groups moved to org.apache.wiki.plugin.Groups
+Move Class	com.ecyrd.jspwiki.plugin.IfPlugin moved to org.apache.wiki.plugin.IfPlugin
+Move Class	com.ecyrd.jspwiki.plugin.Image moved to org.apache.wiki.plugin.Image
+Move Class	com.ecyrd.jspwiki.plugin.IndexPlugin moved to org.apache.wiki.plugin.IndexPlugin
+Move Class	com.ecyrd.jspwiki.plugin.InitializablePlugin moved to org.apache.wiki.plugin.InitializablePlugin
+Move Class	com.ecyrd.jspwiki.plugin.InsertPage moved to org.apache.wiki.plugin.InsertPage
+Move Class	com.ecyrd.jspwiki.plugin.ListLocksPlugin moved to org.apache.wiki.plugin.ListLocksPlugin
+Move Class	com.ecyrd.jspwiki.plugin.Note moved to org.apache.wiki.plugin.Note
+Move Class	com.ecyrd.jspwiki.plugin.ParserStagePlugin moved to org.apache.wiki.plugin.ParserStagePlugin
+Move Class	com.ecyrd.jspwiki.plugin.PluginIndexPlugin moved to org.apache.wiki.plugin.PluginIndexPlugin
+Move Class	com.ecyrd.jspwiki.plugin.PluginManager moved to org.apache.wiki.plugin.PluginManager
+Move Class	com.ecyrd.jspwiki.plugin.RPCSamplePlugin moved to org.apache.wiki.plugin.RPCSamplePlugin
+Move Class	com.ecyrd.jspwiki.plugin.RecentChangesPlugin moved to org.apache.wiki.plugin.RecentChangesPlugin
+Move Class	com.ecyrd.jspwiki.plugin.ReferredPagesPlugin moved to org.apache.wiki.plugin.ReferredPagesPlugin
+Move Class	com.ecyrd.jspwiki.plugin.ReferringPagesPlugin moved to org.apache.wiki.plugin.ReferringPagesPlugin
+Move Class	com.ecyrd.jspwiki.plugin.Search moved to org.apache.wiki.plugin.Search
+Move Class	com.ecyrd.jspwiki.plugin.SessionsPlugin moved to org.apache.wiki.plugin.SessionsPlugin
+Move Class	com.ecyrd.jspwiki.plugin.TableOfContents moved to org.apache.wiki.plugin.TableOfContents
+Move Class	com.ecyrd.jspwiki.plugin.UndefinedPagesPlugin moved to org.apache.wiki.plugin.UndefinedPagesPlugin
+Move Class	com.ecyrd.jspwiki.plugin.UnusedPagesPlugin moved to org.apache.wiki.plugin.UnusedPagesPlugin
+Move Class	com.ecyrd.jspwiki.plugin.WeblogArchivePlugin moved to org.apache.wiki.plugin.WeblogArchivePlugin
+Move Class	com.ecyrd.jspwiki.plugin.WeblogEntryPlugin moved to org.apache.wiki.plugin.WeblogEntryPlugin
+Move Class	com.ecyrd.jspwiki.plugin.WeblogPlugin moved to org.apache.wiki.plugin.WeblogPlugin
+Move Class	com.ecyrd.jspwiki.plugin.WikiPlugin moved to org.apache.wiki.plugin.WikiPlugin
+Move Class	com.ecyrd.jspwiki.preferences.Preferences moved to org.apache.wiki.preferences.Preferences
+Move Class	com.ecyrd.jspwiki.providers.AbstractFileProvider moved to org.apache.wiki.providers.AbstractFileProvider
+Move Class	com.ecyrd.jspwiki.providers.BasicAttachmentProvider moved to org.apache.wiki.providers.BasicAttachmentProvider
+Move Class	com.ecyrd.jspwiki.providers.CachingAttachmentProvider moved to org.apache.wiki.providers.CachingAttachmentProvider
+Move Class	com.ecyrd.jspwiki.providers.CachingProvider moved to org.apache.wiki.providers.CachingProvider
+Move Class	com.ecyrd.jspwiki.providers.FastSearch moved to org.apache.wiki.providers.FastSearch
+Move Class	com.ecyrd.jspwiki.providers.FileSystemProvider moved to org.apache.wiki.providers.FileSystemProvider
+Move Class	com.ecyrd.jspwiki.providers.NoSuchVersionException moved to org.apache.wiki.providers.NoSuchVersionException
+Move Class	com.ecyrd.jspwiki.providers.ProviderException moved to org.apache.wiki.providers.ProviderException
+Move Class	com.ecyrd.jspwiki.providers.RCSFileProvider moved to org.apache.wiki.providers.RCSFileProvider
+Move Class	com.ecyrd.jspwiki.providers.RepositoryModifiedException moved to org.apache.wiki.providers.RepositoryModifiedException
+Move Class	com.ecyrd.jspwiki.providers.VersioningFileProvider moved to org.apache.wiki.providers.VersioningFileProvider
+Move Class	com.ecyrd.jspwiki.providers.VersioningProvider moved to org.apache.wiki.providers.VersioningProvider
+Move Class	com.ecyrd.jspwiki.providers.WikiAttachmentProvider moved to org.apache.wiki.providers.WikiAttachmentProvider
+Move Class	com.ecyrd.jspwiki.providers.WikiPageProvider moved to org.apache.wiki.providers.WikiPageProvider
+Move Class	com.ecyrd.jspwiki.render.CleanTextRenderer moved to org.apache.wiki.render.CleanTextRenderer
+Move Class	com.ecyrd.jspwiki.render.CreoleRenderer moved to org.apache.wiki.render.CreoleRenderer
+Move Class	com.ecyrd.jspwiki.render.RenderingManager moved to org.apache.wiki.render.RenderingManager
+Move Class	com.ecyrd.jspwiki.render.WikiRenderer moved to org.apache.wiki.render.WikiRenderer
+Move Class	com.ecyrd.jspwiki.render.WysiwygEditingRenderer moved to org.apache.wiki.render.WysiwygEditingRenderer
+Move Class	com.ecyrd.jspwiki.render.XHTMLRenderer moved to org.apache.wiki.render.XHTMLRenderer
+Move Class	com.ecyrd.jspwiki.rpc.RPCCallable moved to org.apache.wiki.rpc.RPCCallable
+Move Class	com.ecyrd.jspwiki.rpc.RPCManager moved to org.apache.wiki.rpc.RPCManager
+Move Class	com.ecyrd.jspwiki.rpc.atom.AtomAPIServlet moved to org.apache.wiki.rpc.atom.AtomAPIServlet
+Move Class	com.ecyrd.jspwiki.rpc.json.JSONRPCManager moved to org.apache.wiki.rpc.json.JSONRPCManager
+Move Class	com.ecyrd.jspwiki.rss.AtomFeed moved to org.apache.wiki.rss.AtomFeed
+Move Class	com.ecyrd.jspwiki.rss.Entry moved to org.apache.wiki.rss.Entry
+Move Class	com.ecyrd.jspwiki.rss.Feed moved to org.apache.wiki.rss.Feed
+Move Class	com.ecyrd.jspwiki.rss.RSS10Feed moved to org.apache.wiki.rss.RSS10Feed
+Move Class	com.ecyrd.jspwiki.rss.RSS20Feed moved to org.apache.wiki.rss.RSS20Feed
+Move Class	com.ecyrd.jspwiki.rss.RSSGenerator moved to org.apache.wiki.rss.RSSGenerator
+Move Class	com.ecyrd.jspwiki.rss.RSSThread moved to org.apache.wiki.rss.RSSThread
+Move Class	com.ecyrd.jspwiki.search.LuceneSearchProvider moved to org.apache.wiki.search.LuceneSearchProvider
+Move Class	com.ecyrd.jspwiki.search.QueryItem moved to org.apache.wiki.search.QueryItem
+Move Class	com.ecyrd.jspwiki.search.SearchManager moved to org.apache.wiki.search.SearchManager
+Move Class	com.ecyrd.jspwiki.search.SearchMatcher moved to org.apache.wiki.search.SearchMatcher
+Move Class	com.ecyrd.jspwiki.search.SearchProvider moved to org.apache.wiki.search.SearchProvider
+Move Class	com.ecyrd.jspwiki.search.SearchResult moved to org.apache.wiki.search.SearchResult
+Move Class	com.ecyrd.jspwiki.search.SearchResultComparator moved to org.apache.wiki.search.SearchResultComparator
+Move Class	com.ecyrd.jspwiki.tags.AdminBeanIteratorInfo moved to org.apache.wiki.tags.AdminBeanIteratorInfo
+Move Class	com.ecyrd.jspwiki.tags.AdminBeanIteratorTag moved to org.apache.wiki.tags.AdminBeanIteratorTag
+Move Class	com.ecyrd.jspwiki.tags.AttachmentsIteratorInfo moved to org.apache.wiki.tags.AttachmentsIteratorInfo
+Move Class	com.ecyrd.jspwiki.tags.AttachmentsIteratorTag moved to org.apache.wiki.tags.AttachmentsIteratorTag
+Move Class	com.ecyrd.jspwiki.tags.AuthorTag moved to org.apache.wiki.tags.AuthorTag
+Move Class	com.ecyrd.jspwiki.tags.BaseURLTag moved to org.apache.wiki.tags.BaseURLTag
+Move Class	com.ecyrd.jspwiki.tags.BreadcrumbsTag moved to org.apache.wiki.tags.BreadcrumbsTag
+Move Class	com.ecyrd.jspwiki.tags.CalendarTag moved to org.apache.wiki.tags.CalendarTag
+Move Class	com.ecyrd.jspwiki.tags.CheckLockInfo moved to org.apache.wiki.tags.CheckLockInfo
+Move Class	com.ecyrd.jspwiki.tags.CheckLockTag moved to org.apache.wiki.tags.CheckLockTag
+Move Class	com.ecyrd.jspwiki.tags.CheckRequestContextTag moved to org.apache.wiki.tags.CheckRequestContextTag
+Move Class	com.ecyrd.jspwiki.tags.CheckVersionTag moved to org.apache.wiki.tags.CheckVersionTag
+Move Class	com.ecyrd.jspwiki.tags.CommentLinkTag moved to org.apache.wiki.tags.CommentLinkTag
+Move Class	com.ecyrd.jspwiki.tags.ContentEncodingTag moved to org.apache.wiki.tags.ContentEncodingTag
+Move Class	com.ecyrd.jspwiki.tags.ContentTag moved to org.apache.wiki.tags.ContentTag
+Move Class	com.ecyrd.jspwiki.tags.CookieTag moved to org.apache.wiki.tags.CookieTag
+Move Class	com.ecyrd.jspwiki.tags.DiffLinkTag moved to org.apache.wiki.tags.DiffLinkTag
+Move Class	com.ecyrd.jspwiki.tags.EditLinkTag moved to org.apache.wiki.tags.EditLinkTag
+Move Class	com.ecyrd.jspwiki.tags.EditorIteratorInfo moved to org.apache.wiki.tags.EditorIteratorInfo
+Move Class	com.ecyrd.jspwiki.tags.EditorIteratorTag moved to org.apache.wiki.tags.EditorIteratorTag
+Move Class	com.ecyrd.jspwiki.tags.EditorTag moved to org.apache.wiki.tags.EditorTag
+Move Class	com.ecyrd.jspwiki.tags.FeedDiscoveryTag moved to org.apache.wiki.tags.FeedDiscoveryTag
+Move Class	com.ecyrd.jspwiki.tags.HasAttachmentsTag moved to org.apache.wiki.tags.HasAttachmentsTag
+Move Class	com.ecyrd.jspwiki.tags.HistoryIteratorInfo moved to org.apache.wiki.tags.HistoryIteratorInfo
+Move Class	com.ecyrd.jspwiki.tags.HistoryIteratorTag moved to org.apache.wiki.tags.HistoryIteratorTag
+Move Class	com.ecyrd.jspwiki.tags.IfNoSearchResultsTag moved to org.apache.wiki.tags.IfNoSearchResultsTag
+Move Class	com.ecyrd.jspwiki.tags.IncludeResourcesTag moved to org.apache.wiki.tags.IncludeResourcesTag
+Move Class	com.ecyrd.jspwiki.tags.IncludeTag moved to org.apache.wiki.tags.IncludeTag
+Move Class	com.ecyrd.jspwiki.tags.InsertDiffTag moved to org.apache.wiki.tags.InsertDiffTag
+Move Class	com.ecyrd.jspwiki.tags.InsertPageTag moved to org.apache.wiki.tags.InsertPageTag
+Move Class	com.ecyrd.jspwiki.tags.LinkTag moved to org.apache.wiki.tags.LinkTag
+Move Class	com.ecyrd.jspwiki.tags.LinkToParentTag moved to org.apache.wiki.tags.LinkToParentTag
+Move Class	com.ecyrd.jspwiki.tags.LinkToTag moved to org.apache.wiki.tags.LinkToTag
+Move Class	com.ecyrd.jspwiki.tags.MessagesTag moved to org.apache.wiki.tags.MessagesTag
+Move Class	com.ecyrd.jspwiki.tags.NextVersionTag moved to org.apache.wiki.tags.NextVersionTag
+Move Class	com.ecyrd.jspwiki.tags.NoSuchPageTag moved to org.apache.wiki.tags.NoSuchPageTag
+Move Class	com.ecyrd.jspwiki.tags.PageDateTag moved to org.apache.wiki.tags.PageDateTag
+Move Class	com.ecyrd.jspwiki.tags.PageExistsTag moved to org.apache.wiki.tags.PageExistsTag
+Move Class	com.ecyrd.jspwiki.tags.PageInfoLinkTag moved to org.apache.wiki.tags.PageInfoLinkTag
+Move Class	com.ecyrd.jspwiki.tags.PageNameTag moved to org.apache.wiki.tags.PageNameTag
+Move Class	com.ecyrd.jspwiki.tags.PageSizeTag moved to org.apache.wiki.tags.PageSizeTag
+Move Class	com.ecyrd.jspwiki.tags.PageTypeTag moved to org.apache.wiki.tags.PageTypeTag
+Move Class	com.ecyrd.jspwiki.tags.PageVersionTag moved to org.apache.wiki.tags.PageVersionTag
+Move Class	com.ecyrd.jspwiki.tags.ParamHandler moved to org.apache.wiki.tags.ParamHandler
+Move Class	com.ecyrd.jspwiki.tags.ParamTag moved to org.apache.wiki.tags.ParamTag
+Move Class	com.ecyrd.jspwiki.tags.ParentPageNameTag moved to org.apache.wiki.tags.ParentPageNameTag
+Move Class	com.ecyrd.jspwiki.tags.PermissionTag moved to org.apache.wiki.tags.PermissionTag
+Move Class	com.ecyrd.jspwiki.tags.PluginTag moved to org.apache.wiki.tags.PluginTag
+Move Class	com.ecyrd.jspwiki.tags.PreviousVersionTag moved to org.apache.wiki.tags.PreviousVersionTag
+Move Class	com.ecyrd.jspwiki.tags.RSSImageLinkTag moved to org.apache.wiki.tags.RSSImageLinkTag
+Move Class	com.ecyrd.jspwiki.tags.RSSLinkTag moved to org.apache.wiki.tags.RSSLinkTag
+Move Class	com.ecyrd.jspwiki.tags.RequestResourceTag moved to org.apache.wiki.tags.RequestResourceTag
+Move Class	com.ecyrd.jspwiki.tags.SearchResultIteratorInfo moved to org.apache.wiki.tags.SearchResultIteratorInfo
+Move Class	com.ecyrd.jspwiki.tags.SearchResultIteratorTag moved to org.apache.wiki.tags.SearchResultIteratorTag
+Move Class	com.ecyrd.jspwiki.tags.SearchResultsSizeTag moved to org.apache.wiki.tags.SearchResultsSizeTag
+Move Class	com.ecyrd.jspwiki.tags.SearchResultsTag moved to org.apache.wiki.tags.SearchResultsTag
+Move Class	com.ecyrd.jspwiki.tags.SetPaginationTag moved to org.apache.wiki.tags.SetPaginationTag
+Move Class	com.ecyrd.jspwiki.tags.TabTag moved to org.apache.wiki.tags.TabTag
+Move Class	com.ecyrd.jspwiki.tags.TabbedSectionTag moved to org.apache.wiki.tags.TabbedSectionTag
+Move Class	com.ecyrd.jspwiki.tags.TemplateDirTag moved to org.apache.wiki.tags.TemplateDirTag
+Move Class	com.ecyrd.jspwiki.tags.TranslateTag moved to org.apache.wiki.tags.TranslateTag
+Move Class	com.ecyrd.jspwiki.tags.UploadLinkTag moved to org.apache.wiki.tags.UploadLinkTag
+Move Class	com.ecyrd.jspwiki.tags.UserCheckTag moved to org.apache.wiki.tags.UserCheckTag
+Move Class	com.ecyrd.jspwiki.tags.UserNameTag moved to org.apache.wiki.tags.UserNameTag
+Move Class	com.ecyrd.jspwiki.tags.UserProfileTag moved to org.apache.wiki.tags.UserProfileTag
+Move Class	com.ecyrd.jspwiki.tags.VariableTag moved to org.apache.wiki.tags.VariableTag
+Move Class	com.ecyrd.jspwiki.tags.WikiBodyTag moved to org.apache.wiki.tags.WikiBodyTag
+Move Class	com.ecyrd.jspwiki.tags.WikiLinkTag moved to org.apache.wiki.tags.WikiLinkTag
+Move Class	com.ecyrd.jspwiki.tags.WikiTagBase moved to org.apache.wiki.tags.WikiTagBase
+Move Class	com.ecyrd.jspwiki.ui.Editor moved to org.apache.wiki.ui.Editor
+Move Class	com.ecyrd.jspwiki.ui.EditorManager moved to org.apache.wiki.ui.EditorManager
+Move Class	com.ecyrd.jspwiki.ui.GenericHTTPHandler moved to org.apache.wiki.ui.GenericHTTPHandler
+Move Class	com.ecyrd.jspwiki.ui.InputValidator moved to org.apache.wiki.ui.InputValidator
+Move Class	com.ecyrd.jspwiki.ui.Installer moved to org.apache.wiki.ui.Installer
+Move Class	com.ecyrd.jspwiki.ui.TemplateManager moved to org.apache.wiki.ui.TemplateManager
+Move Class	com.ecyrd.jspwiki.ui.WikiJSPFilter moved to org.apache.wiki.ui.WikiJSPFilter
+Move Class	com.ecyrd.jspwiki.ui.WikiRequestWrapper moved to org.apache.wiki.ui.WikiRequestWrapper
+Move Class	com.ecyrd.jspwiki.ui.WikiServletFilter moved to org.apache.wiki.ui.WikiServletFilter
+Move Class	com.ecyrd.jspwiki.ui.admin.AdminBean moved to org.apache.wiki.ui.admin.AdminBean
+Move Class	com.ecyrd.jspwiki.ui.admin.AdminBeanManager moved to org.apache.wiki.ui.admin.AdminBeanManager
+Move Class	com.ecyrd.jspwiki.ui.admin.SimpleAdminBean moved to org.apache.wiki.ui.admin.SimpleAdminBean
+Move Class	com.ecyrd.jspwiki.ui.admin.WikiFormAdminBean moved to org.apache.wiki.ui.admin.WikiFormAdminBean
+Move Class	com.ecyrd.jspwiki.ui.admin.beans.CoreBean moved to org.apache.wiki.ui.admin.beans.CoreBean
+Move Class	com.ecyrd.jspwiki.ui.admin.beans.PlainEditorAdminBean moved to org.apache.wiki.ui.admin.beans.PlainEditorAdminBean
+Move Class	com.ecyrd.jspwiki.ui.admin.beans.PluginBean moved to org.apache.wiki.ui.admin.beans.PluginBean
+Move Class	com.ecyrd.jspwiki.ui.admin.beans.SearchManagerBean moved to org.apache.wiki.ui.admin.beans.SearchManagerBean
+Move Class	com.ecyrd.jspwiki.ui.admin.beans.UserBean moved to org.apache.wiki.ui.admin.beans.UserBean
+Move Class	com.ecyrd.jspwiki.ui.migrator.AbstractJspTransformer moved to org.apache.wiki.ui.migrator.AbstractJspTransformer
+Move Class	com.ecyrd.jspwiki.ui.migrator.AbstractNode moved to org.apache.wiki.ui.migrator.AbstractNode
+Move Class	com.ecyrd.jspwiki.ui.migrator.Attribute moved to org.apache.wiki.ui.migrator.Attribute
+Move Class	com.ecyrd.jspwiki.ui.migrator.BundleMigrator moved to org.apache.wiki.ui.migrator.BundleMigrator
+Move Class	com.ecyrd.jspwiki.ui.migrator.JSPWikiJspTransformer moved to org.apache.wiki.ui.migrator.JSPWikiJspTransformer
+Move Class	com.ecyrd.jspwiki.ui.migrator.JspDocument moved to org.apache.wiki.ui.migrator.JspDocument
+Move Class	com.ecyrd.jspwiki.ui.migrator.JspMigrator moved to org.apache.wiki.ui.migrator.JspMigrator
+Move Class	com.ecyrd.jspwiki.ui.migrator.JspParser moved to org.apache.wiki.ui.migrator.JspParser
+Move Class	com.ecyrd.jspwiki.ui.migrator.JspTransformer moved to org.apache.wiki.ui.migrator.JspTransformer
+Move Class	com.ecyrd.jspwiki.ui.migrator.Node moved to org.apache.wiki.ui.migrator.Node
+Move Class	com.ecyrd.jspwiki.ui.migrator.NodeType moved to org.apache.wiki.ui.migrator.NodeType
+Move Class	com.ecyrd.jspwiki.ui.migrator.StripesJspTransformer moved to org.apache.wiki.ui.migrator.StripesJspTransformer
+Move Class	com.ecyrd.jspwiki.ui.migrator.Tag moved to org.apache.wiki.ui.migrator.Tag
+Move Class	com.ecyrd.jspwiki.ui.migrator.Text moved to org.apache.wiki.ui.migrator.Text
+Move Class	com.ecyrd.jspwiki.ui.progress.ProgressItem moved to org.apache.wiki.ui.progress.ProgressItem
+Move Class	com.ecyrd.jspwiki.ui.progress.ProgressManager moved to org.apache.wiki.ui.progress.ProgressManager
+Move Class	com.ecyrd.jspwiki.ui.stripes.DefaultWikiContext moved to org.apache.wiki.ui.stripes.DefaultWikiContext
+Move Class	com.ecyrd.jspwiki.ui.stripes.GroupTypeConverter moved to org.apache.wiki.ui.stripes.GroupTypeConverter
+Move Class	com.ecyrd.jspwiki.ui.stripes.HandlerInfo moved to org.apache.wiki.ui.stripes.HandlerInfo
+Move Class	com.ecyrd.jspwiki.ui.stripes.LineDelimitedTypeConverter moved to org.apache.wiki.ui.stripes.LineDelimitedTypeConverter
+Move Class	com.ecyrd.jspwiki.ui.stripes.LocaleConverter moved to org.apache.wiki.ui.stripes.LocaleConverter
+Move Class	com.ecyrd.jspwiki.ui.stripes.PrincipalTypeConverter moved to org.apache.wiki.ui.stripes.PrincipalTypeConverter
+Move Class	com.ecyrd.jspwiki.ui.stripes.TimeZoneConverter moved to org.apache.wiki.ui.stripes.TimeZoneConverter
+Move Class	com.ecyrd.jspwiki.ui.stripes.WikiActionBeanContext moved to org.apache.wiki.ui.stripes.WikiActionBeanContext
+Move Class	com.ecyrd.jspwiki.ui.stripes.WikiExceptionHandler moved to org.apache.wiki.ui.stripes.WikiExceptionHandler
+Move Class	com.ecyrd.jspwiki.ui.stripes.WikiInterceptor moved to org.apache.wiki.ui.stripes.WikiInterceptor
+Move Class	com.ecyrd.jspwiki.ui.stripes.WikiPageTypeConverter moved to org.apache.wiki.ui.stripes.WikiPageTypeConverter
+Move Class	com.ecyrd.jspwiki.ui.stripes.WikiRuntimeConfiguration moved to org.apache.wiki.ui.stripes.WikiRuntimeConfiguration
+Move Class	com.ecyrd.jspwiki.url.DefaultURLConstructor moved to org.apache.wiki.url.DefaultURLConstructor
+Move Class	com.ecyrd.jspwiki.url.ShortURLConstructor moved to org.apache.wiki.url.ShortURLConstructor
+Move Class	com.ecyrd.jspwiki.url.ShortViewURLConstructor moved to org.apache.wiki.url.ShortViewURLConstructor
+Move Class	com.ecyrd.jspwiki.url.StripesURLConstructor moved to org.apache.wiki.url.StripesURLConstructor
+Move Class	com.ecyrd.jspwiki.url.URLConstructor moved to org.apache.wiki.url.URLConstructor
+Move Class	com.ecyrd.jspwiki.util.BlogUtil moved to org.apache.wiki.util.BlogUtil
+Move Class	com.ecyrd.jspwiki.util.ClassUtil moved to org.apache.wiki.util.ClassUtil
+Move Class	com.ecyrd.jspwiki.util.CommentedProperties moved to org.apache.wiki.util.CommentedProperties
+Move Class	com.ecyrd.jspwiki.util.CryptoUtil moved to org.apache.wiki.util.CryptoUtil
+Move Class	com.ecyrd.jspwiki.util.FormUtil moved to org.apache.wiki.util.FormUtil
+Move Class	com.ecyrd.jspwiki.util.HttpUtil moved to org.apache.wiki.util.HttpUtil
+Move Class	com.ecyrd.jspwiki.util.MailUtil moved to org.apache.wiki.util.MailUtil
+Move Class	com.ecyrd.jspwiki.util.PriorityList moved to org.apache.wiki.util.PriorityList
+Move Class	com.ecyrd.jspwiki.util.ProviderConverter moved to org.apache.wiki.util.ProviderConverter
+Move Class	com.ecyrd.jspwiki.util.RegExpUtil moved to org.apache.wiki.util.RegExpUtil
+Move Class	com.ecyrd.jspwiki.util.Serializer moved to org.apache.wiki.util.Serializer
+Move Class	com.ecyrd.jspwiki.util.TextUtil moved to org.apache.wiki.util.TextUtil
+Move Class	com.ecyrd.jspwiki.util.TimedCounterList moved to org.apache.wiki.util.TimedCounterList
+Move Class	com.ecyrd.jspwiki.util.UtilJ2eeCompat moved to org.apache.wiki.util.UtilJ2eeCompat
+Move Class	com.ecyrd.jspwiki.util.WatchDog moved to org.apache.wiki.util.WatchDog
+Move Class	com.ecyrd.jspwiki.util.Watchable moved to org.apache.wiki.util.Watchable
+Move Class	com.ecyrd.jspwiki.util.WikiBackgroundThread moved to org.apache.wiki.util.WikiBackgroundThread
+Move Class	com.ecyrd.jspwiki.workflow.AbstractStep moved to org.apache.wiki.workflow.AbstractStep
+Move Class	com.ecyrd.jspwiki.workflow.Decision moved to org.apache.wiki.workflow.Decision
+Move Class	com.ecyrd.jspwiki.workflow.DecisionQueue moved to org.apache.wiki.workflow.DecisionQueue
+Move Class	com.ecyrd.jspwiki.workflow.DecisionRequiredException moved to org.apache.wiki.workflow.DecisionRequiredException
+Move Class	com.ecyrd.jspwiki.workflow.Fact moved to org.apache.wiki.workflow.Fact
+Move Class	com.ecyrd.jspwiki.workflow.NoSuchOutcomeException moved to org.apache.wiki.workflow.NoSuchOutcomeException
+Move Class	com.ecyrd.jspwiki.workflow.Outcome moved to org.apache.wiki.workflow.Outcome
+Move Class	com.ecyrd.jspwiki.workflow.SimpleDecision moved to org.apache.wiki.workflow.SimpleDecision
+Move Class	com.ecyrd.jspwiki.workflow.SimpleNotification moved to org.apache.wiki.workflow.SimpleNotification
+Move Class	com.ecyrd.jspwiki.workflow.Step moved to org.apache.wiki.workflow.Step
+Move Class	com.ecyrd.jspwiki.workflow.SystemPrincipal moved to org.apache.wiki.workflow.SystemPrincipal
+Move Class	com.ecyrd.jspwiki.workflow.Task moved to org.apache.wiki.workflow.Task
+Move Class	com.ecyrd.jspwiki.workflow.Workflow moved to org.apache.wiki.workflow.Workflow
+Move Class	com.ecyrd.jspwiki.workflow.WorkflowBuilder moved to org.apache.wiki.workflow.WorkflowBuilder
+Move Class	com.ecyrd.jspwiki.workflow.WorkflowManager moved to org.apache.wiki.workflow.WorkflowManager
+Move Class	com.ecyrd.jspwiki.xmlrpc.AbstractRPCHandler moved to org.apache.wiki.xmlrpc.AbstractRPCHandler
+Move Class	com.ecyrd.jspwiki.xmlrpc.MetaWeblogHandler moved to org.apache.wiki.xmlrpc.MetaWeblogHandler
+Move Class	com.ecyrd.jspwiki.xmlrpc.RPCHandler moved to org.apache.wiki.xmlrpc.RPCHandler
+Move Class	com.ecyrd.jspwiki.xmlrpc.RPCHandlerUTF8 moved to org.apache.wiki.xmlrpc.RPCHandlerUTF8
+Move Class	com.ecyrd.jspwiki.xmlrpc.RPCServlet moved to org.apache.wiki.xmlrpc.RPCServlet
+Move Class	com.ecyrd.jspwiki.xmlrpc.WikiRPCHandler moved to org.apache.wiki.xmlrpc.WikiRPCHandler
+Move Class	com.ecyrd.jspwiki.AllTests moved to org.apache.wiki.AllTests
+Move Class	com.ecyrd.jspwiki.FileUtilTest moved to org.apache.wiki.FileUtilTest
+Move Class	com.ecyrd.jspwiki.PageManagerTest moved to org.apache.wiki.PageManagerTest
+Move Class	com.ecyrd.jspwiki.PropertyReaderTest moved to org.apache.wiki.PropertyReaderTest
+Move Class	com.ecyrd.jspwiki.ReferenceManagerTest moved to org.apache.wiki.ReferenceManagerTest
+Move Class	com.ecyrd.jspwiki.ReleaseTest moved to org.apache.wiki.ReleaseTest
+Move Class	com.ecyrd.jspwiki.TestAuthorizer moved to org.apache.wiki.TestAuthorizer
+Move Class	com.ecyrd.jspwiki.TestEngine moved to org.apache.wiki.TestEngine
+Move Class	com.ecyrd.jspwiki.TestJDBCDataSource moved to org.apache.wiki.TestJDBCDataSource
+Move Class	com.ecyrd.jspwiki.TextUtilTest moved to org.apache.wiki.TextUtilTest
+Move Class	com.ecyrd.jspwiki.Util moved to org.apache.wiki.Util
+Move Class	com.ecyrd.jspwiki.VariableManagerTest moved to org.apache.wiki.VariableManagerTest
+Move Class	com.ecyrd.jspwiki.WikiEngineTest moved to org.apache.wiki.WikiEngineTest
+Move Class	com.ecyrd.jspwiki.WikiSessionTest moved to org.apache.wiki.WikiSessionTest
+Move Class	com.ecyrd.jspwiki.action.AllTests moved to org.apache.wiki.action.AllTests
+Move Class	com.ecyrd.jspwiki.action.GroupActionBeanTest moved to org.apache.wiki.action.GroupActionBeanTest
+Move Class	com.ecyrd.jspwiki.action.LoginActionBeanTest moved to org.apache.wiki.action.LoginActionBeanTest
+Move Class	com.ecyrd.jspwiki.action.RenameActionBeanTest moved to org.apache.wiki.action.RenameActionBeanTest
+Move Class	com.ecyrd.jspwiki.action.UserPreferencesActionBeanTest moved to org.apache.wiki.action.UserPreferencesActionBeanTest
+Move Class	com.ecyrd.jspwiki.action.UserProfileActionBeanTest moved to org.apache.wiki.action.UserProfileActionBeanTest
+Move Class	com.ecyrd.jspwiki.action.ViewActionBeanTest moved to org.apache.wiki.action.ViewActionBeanTest
+Move Class	com.ecyrd.jspwiki.action.WikiContextFactoryTest moved to org.apache.wiki.action.WikiContextFactoryTest
+Move Class	com.ecyrd.jspwiki.attachment.AllTests moved to org.apache.wiki.attachment.AllTests
+Move Class	com.ecyrd.jspwiki.attachment.AttachmentManagerTest moved to org.apache.wiki.attachment.AttachmentManagerTest
+Move Class	com.ecyrd.jspwiki.auth.AllTests moved to org.apache.wiki.auth.AllTests
+Move Class	com.ecyrd.jspwiki.auth.AuthenticationManagerTest moved to org.apache.wiki.auth.AuthenticationManagerTest
+Move Class	com.ecyrd.jspwiki.auth.AuthorizationManagerTest moved to org.apache.wiki.auth.AuthorizationManagerTest
+Move Class	com.ecyrd.jspwiki.auth.GroupManagerTest moved to org.apache.wiki.auth.GroupManagerTest
+Move Class	com.ecyrd.jspwiki.auth.SecurityEventTrap moved to org.apache.wiki.auth.SecurityEventTrap
+Move Class	com.ecyrd.jspwiki.auth.UserManagerTest moved to org.apache.wiki.auth.UserManagerTest
+Move Class	com.ecyrd.jspwiki.auth.Users moved to org.apache.wiki.auth.Users
+Move Class	com.ecyrd.jspwiki.auth.acl.AclEntryImplTest moved to org.apache.wiki.auth.acl.AclEntryImplTest
+Move Class	com.ecyrd.jspwiki.auth.acl.AclImplTest moved to org.apache.wiki.auth.acl.AclImplTest
+Move Class	com.ecyrd.jspwiki.auth.acl.AllTests moved to org.apache.wiki.auth.acl.AllTests
+Move Class	com.ecyrd.jspwiki.auth.acl.DefaultAclManagerTest moved to org.apache.wiki.auth.acl.DefaultAclManagerTest
+Move Class	com.ecyrd.jspwiki.auth.authorize.AllTests moved to org.apache.wiki.auth.authorize.AllTests
+Move Class	com.ecyrd.jspwiki.auth.authorize.GroupTest moved to org.apache.wiki.auth.authorize.GroupTest
+Move Class	com.ecyrd.jspwiki.auth.authorize.JDBCGroupDatabaseTest moved to org.apache.wiki.auth.authorize.JDBCGroupDatabaseTest
+Move Class	com.ecyrd.jspwiki.auth.authorize.WebContainerAuthorizerTest moved to org.apache.wiki.auth.authorize.WebContainerAuthorizerTest
+Move Class	com.ecyrd.jspwiki.auth.authorize.XMLGroupDatabaseTest moved to org.apache.wiki.auth.authorize.XMLGroupDatabaseTest
+Move Class	com.ecyrd.jspwiki.auth.login.AllTests moved to org.apache.wiki.auth.login.AllTests
+Move Class	com.ecyrd.jspwiki.auth.login.AnonymousLoginModuleTest moved to org.apache.wiki.auth.login.AnonymousLoginModuleTest
+Move Class	com.ecyrd.jspwiki.auth.login.CookieAssertionLoginModuleTest moved to org.apache.wiki.auth.login.CookieAssertionLoginModuleTest
+Move Class	com.ecyrd.jspwiki.auth.login.UserDatabaseLoginModuleTest moved to org.apache.wiki.auth.login.UserDatabaseLoginModuleTest
+Move Class	com.ecyrd.jspwiki.auth.login.WebContainerLoginModuleTest moved to org.apache.wiki.auth.login.WebContainerLoginModuleTest
+Move Class	com.ecyrd.jspwiki.auth.permissions.AllPermissionCollectionTest moved to org.apache.wiki.auth.permissions.AllPermissionCollectionTest
+Move Class	com.ecyrd.jspwiki.auth.permissions.AllPermissionTest moved to org.apache.wiki.auth.permissions.AllPermissionTest
+Move Class	com.ecyrd.jspwiki.auth.permissions.AllTests moved to org.apache.wiki.auth.permissions.AllTests
+Move Class	com.ecyrd.jspwiki.auth.permissions.GroupPermissionTest moved to org.apache.wiki.auth.permissions.GroupPermissionTest
+Move Class	com.ecyrd.jspwiki.auth.permissions.PagePermissionTest moved to org.apache.wiki.auth.permissions.PagePermissionTest
+Move Class	com.ecyrd.jspwiki.auth.permissions.WikiPermissionTest moved to org.apache.wiki.auth.permissions.WikiPermissionTest
+Move Class	com.ecyrd.jspwiki.auth.user.AllTests moved to org.apache.wiki.auth.user.AllTests
+Move Class	com.ecyrd.jspwiki.auth.user.JDBCUserDatabaseTest moved to org.apache.wiki.auth.user.JDBCUserDatabaseTest
+Move Class	com.ecyrd.jspwiki.auth.user.UserProfileTest moved to org.apache.wiki.auth.user.UserProfileTest
+Move Class	com.ecyrd.jspwiki.auth.user.XMLUserDatabaseTest moved to org.apache.wiki.auth.user.XMLUserDatabaseTest
+Move Class	com.ecyrd.jspwiki.content.AllTests moved to org.apache.wiki.content.AllTests
+Move Class	com.ecyrd.jspwiki.content.ContentManagerTest moved to org.apache.wiki.content.ContentManagerTest
+Move Class	com.ecyrd.jspwiki.content.PageRenamerTest moved to org.apache.wiki.content.PageRenamerTest
+Move Class	com.ecyrd.jspwiki.content.WikiNameTest moved to org.apache.wiki.content.WikiNameTest
+Move Class	com.ecyrd.jspwiki.dav.AllTests moved to org.apache.wiki.dav.AllTests
+Move Class	com.ecyrd.jspwiki.dav.AttachmentDavProviderTest moved to org.apache.wiki.dav.AttachmentDavProviderTest
+Move Class	com.ecyrd.jspwiki.dav.DavPathTest moved to org.apache.wiki.dav.DavPathTest
+Move Class	com.ecyrd.jspwiki.dav.HTMLPagesDavProviderTest moved to org.apache.wiki.dav.HTMLPagesDavProviderTest
+Move Class	com.ecyrd.jspwiki.dav.RawPagesDavProviderTest moved to org.apache.wiki.dav.RawPagesDavProviderTest
+Move Class	com.ecyrd.jspwiki.diff.AllTests moved to org.apache.wiki.diff.AllTests
+Move Class	com.ecyrd.jspwiki.diff.ContextualDiffProviderTest moved to org.apache.wiki.diff.ContextualDiffProviderTest
+Move Class	com.ecyrd.jspwiki.filters.AllTests moved to org.apache.wiki.filters.AllTests
+Move Class	com.ecyrd.jspwiki.filters.FilterManagerTest moved to org.apache.wiki.filters.FilterManagerTest
+Move Class	com.ecyrd.jspwiki.filters.TestFilter moved to org.apache.wiki.filters.TestFilter
+Move Class	com.ecyrd.jspwiki.htmltowiki.AllTests moved to org.apache.wiki.htmltowiki.AllTests
+Move Class	com.ecyrd.jspwiki.htmltowiki.HtmlStringToWikiTranslatorTest moved to org.apache.wiki.htmltowiki.HtmlStringToWikiTranslatorTest
+Move Class	com.ecyrd.jspwiki.parser.AllTests moved to org.apache.wiki.parser.AllTests
+Move Class	com.ecyrd.jspwiki.parser.CreoleToJSPWikiTranslatorTest moved to org.apache.wiki.parser.CreoleToJSPWikiTranslatorTest
+Move Class	com.ecyrd.jspwiki.parser.JSPWikiMarkupParserTest moved to org.apache.wiki.parser.JSPWikiMarkupParserTest
+Move Class	com.ecyrd.jspwiki.parser.MarkupParserTest moved to org.apache.wiki.parser.MarkupParserTest
+Move Class	com.ecyrd.jspwiki.plugin.AllTests moved to org.apache.wiki.plugin.AllTests
+Move Class	com.ecyrd.jspwiki.plugin.CounterPluginTest moved to org.apache.wiki.plugin.CounterPluginTest
+Move Class	com.ecyrd.jspwiki.plugin.DenouncePluginTest moved to org.apache.wiki.plugin.DenouncePluginTest
+Move Class	com.ecyrd.jspwiki.plugin.GroupsTest moved to org.apache.wiki.plugin.GroupsTest
+Move Class	com.ecyrd.jspwiki.plugin.IndexPluginTest moved to org.apache.wiki.plugin.IndexPluginTest
+Move Class	com.ecyrd.jspwiki.plugin.InsertPageTest moved to org.apache.wiki.plugin.InsertPageTest
+Move Class	com.ecyrd.jspwiki.plugin.JavaScriptPlugin moved to org.apache.wiki.plugin.JavaScriptPlugin
+Move Class	com.ecyrd.jspwiki.plugin.PluginIndexPluginTest moved to org.apache.wiki.plugin.PluginIndexPluginTest
+Move Class	com.ecyrd.jspwiki.plugin.PluginManagerTest moved to org.apache.wiki.plugin.PluginManagerTest
+Move Class	com.ecyrd.jspwiki.plugin.ReferredPagesPluginTest moved to org.apache.wiki.plugin.ReferredPagesPluginTest
+Move Class	com.ecyrd.jspwiki.plugin.ReferringPagesPluginTest moved to org.apache.wiki.plugin.ReferringPagesPluginTest
+Move Class	com.ecyrd.jspwiki.plugin.SamplePlugin moved to org.apache.wiki.plugin.SamplePlugin
+Move Class	com.ecyrd.jspwiki.plugin.TableOfContentsTest moved to org.apache.wiki.plugin.TableOfContentsTest
+Move Class	com.ecyrd.jspwiki.plugin.UndefinedPagesPluginTest moved to org.apache.wiki.plugin.UndefinedPagesPluginTest
+Move Class	com.ecyrd.jspwiki.providers.AllTests moved to org.apache.wiki.providers.AllTests
+Move Class	com.ecyrd.jspwiki.providers.BasicAttachmentProviderTest moved to org.apache.wiki.providers.BasicAttachmentProviderTest
+Move Class	com.ecyrd.jspwiki.providers.CachingProviderTest moved to org.apache.wiki.providers.CachingProviderTest
+Move Class	com.ecyrd.jspwiki.providers.CounterProvider moved to org.apache.wiki.providers.CounterProvider
+Move Class	com.ecyrd.jspwiki.providers.FileSystemProviderTest moved to org.apache.wiki.providers.FileSystemProviderTest
+Move Class	com.ecyrd.jspwiki.providers.RCSFileProviderTest moved to org.apache.wiki.providers.RCSFileProviderTest
+Move Class	com.ecyrd.jspwiki.providers.VersioningFileProviderTest moved to org.apache.wiki.providers.VersioningFileProviderTest
+Move Class	com.ecyrd.jspwiki.providers.VerySimpleProvider moved to org.apache.wiki.providers.VerySimpleProvider
+Move Class	com.ecyrd.jspwiki.render.AllTests moved to org.apache.wiki.render.AllTests
+Move Class	com.ecyrd.jspwiki.render.CreoleRendererTest moved to org.apache.wiki.render.CreoleRendererTest
+Move Class	com.ecyrd.jspwiki.render.RenderingManagerTest moved to org.apache.wiki.render.RenderingManagerTest
+Move Class	com.ecyrd.jspwiki.render.WysiwygEditingRendererTest moved to org.apache.wiki.render.WysiwygEditingRendererTest
+Move Class	com.ecyrd.jspwiki.rss.AllTests moved to org.apache.wiki.rss.AllTests
+Move Class	com.ecyrd.jspwiki.rss.RSSGeneratorTest moved to org.apache.wiki.rss.RSSGeneratorTest
+Move Class	com.ecyrd.jspwiki.search.AllTests moved to org.apache.wiki.search.AllTests
+Move Class	com.ecyrd.jspwiki.search.SearchManagerTest moved to org.apache.wiki.search.SearchManagerTest
+Move Class	com.ecyrd.jspwiki.ui.AllTests moved to org.apache.wiki.ui.AllTests
+Move Class	com.ecyrd.jspwiki.ui.InputValidatorTest moved to org.apache.wiki.ui.InputValidatorTest
+Move Class	com.ecyrd.jspwiki.ui.migrator.AllTests moved to org.apache.wiki.ui.migrator.AllTests
+Move Class	com.ecyrd.jspwiki.ui.migrator.BundleMigratorTest moved to org.apache.wiki.ui.migrator.BundleMigratorTest
+Move Class	com.ecyrd.jspwiki.ui.migrator.JSPWikiJspTransformerTest moved to org.apache.wiki.ui.migrator.JSPWikiJspTransformerTest
+Move Class	com.ecyrd.jspwiki.ui.migrator.JspDocumentTest moved to org.apache.wiki.ui.migrator.JspDocumentTest
+Move Class	com.ecyrd.jspwiki.ui.migrator.JspParserTest moved to org.apache.wiki.ui.migrator.JspParserTest
+Move Class	com.ecyrd.jspwiki.ui.migrator.StripesJspTransformerTest moved to org.apache.wiki.ui.migrator.StripesJspTransformerTest
+Move Class	com.ecyrd.jspwiki.ui.migrator.TagTest moved to org.apache.wiki.ui.migrator.TagTest
+Move Class	com.ecyrd.jspwiki.ui.stripes.AllTests moved to org.apache.wiki.ui.stripes.AllTests
+Move Class	com.ecyrd.jspwiki.ui.stripes.HandlerInfoTest moved to org.apache.wiki.ui.stripes.HandlerInfoTest
+Move Class	com.ecyrd.jspwiki.url.AllTests moved to org.apache.wiki.url.AllTests
+Move Class	com.ecyrd.jspwiki.url.DefaultURLConstructorTest moved to org.apache.wiki.url.DefaultURLConstructorTest
+Move Class	com.ecyrd.jspwiki.url.ShortURLConstructorTest moved to org.apache.wiki.url.ShortURLConstructorTest
+Move Class	com.ecyrd.jspwiki.url.ShortViewURLConstructorTest moved to org.apache.wiki.url.ShortViewURLConstructorTest
+Move Class	com.ecyrd.jspwiki.util.AllTests moved to org.apache.wiki.util.AllTests
+Move Class	com.ecyrd.jspwiki.util.ClassUtilTest moved to org.apache.wiki.util.ClassUtilTest
+Move Class	com.ecyrd.jspwiki.util.CommentedPropertiesTest moved to org.apache.wiki.util.CommentedPropertiesTest
+Move Class	com.ecyrd.jspwiki.util.CryptoUtilTest moved to org.apache.wiki.util.CryptoUtilTest
+Move Class	com.ecyrd.jspwiki.util.MailUtilTest moved to org.apache.wiki.util.MailUtilTest
+Move Class	com.ecyrd.jspwiki.util.PriorityListTest moved to org.apache.wiki.util.PriorityListTest
+Move Class	com.ecyrd.jspwiki.util.SerializerTest moved to org.apache.wiki.util.SerializerTest
+Move Class	com.ecyrd.jspwiki.util.TextUtilTest moved to org.apache.wiki.util.TextUtilTest
+Move Class	com.ecyrd.jspwiki.util.TimedCounterListTest moved to org.apache.wiki.util.TimedCounterListTest
+Move Class	com.ecyrd.jspwiki.util.UtilJ2eeCompatTest moved to org.apache.wiki.util.UtilJ2eeCompatTest
+Move Class	com.ecyrd.jspwiki.web.AllTests moved to org.apache.wiki.web.AllTests
+Move Class	com.ecyrd.jspwiki.web.TestContainer moved to org.apache.wiki.web.TestContainer
+Move Class	com.ecyrd.jspwiki.workflow.AllTests moved to org.apache.wiki.workflow.AllTests
+Move Class	com.ecyrd.jspwiki.workflow.ApprovalWorkflowTest moved to org.apache.wiki.workflow.ApprovalWorkflowTest
+Move Class	com.ecyrd.jspwiki.workflow.DecisionQueueTest moved to org.apache.wiki.workflow.DecisionQueueTest
+Move Class	com.ecyrd.jspwiki.workflow.FactTest moved to org.apache.wiki.workflow.FactTest
+Move Class	com.ecyrd.jspwiki.workflow.OutcomeTest moved to org.apache.wiki.workflow.OutcomeTest
+Move Class	com.ecyrd.jspwiki.workflow.SimpleDecisionTest moved to org.apache.wiki.workflow.SimpleDecisionTest
+Move Class	com.ecyrd.jspwiki.workflow.TaskTest moved to org.apache.wiki.workflow.TaskTest
+Move Class	com.ecyrd.jspwiki.workflow.WorkflowManagerTest moved to org.apache.wiki.workflow.WorkflowManagerTest
+Move Class	com.ecyrd.jspwiki.workflow.WorkflowTest moved to org.apache.wiki.workflow.WorkflowTest
+Move Class	com.ecyrd.jspwiki.xmlrpc.AllTests moved to org.apache.wiki.xmlrpc.AllTests
+Move Class	com.ecyrd.jspwiki.xmlrpc.RPCHandlerTest moved to org.apache.wiki.xmlrpc.RPCHandlerTest
+Move Class	com.ecyrd.jspwiki.WikiEngine moved to org.apache.wiki.WikiEngine
+Move Class	com.ecyrd.jspwiki.auth.permissions.PermissionFactory moved to org.apache.wiki.auth.permissions.PermissionFactory
+Move Class	com.ecyrd.jspwiki.forms.FormOpen moved to org.apache.wiki.forms.FormOpen
+Move Class	com.ecyrd.jspwiki.search.BasicSearchProvider moved to org.apache.wiki.search.BasicSearchProvider
+Move Class	com.ecyrd.jspwiki.tags.IteratorTag moved to org.apache.wiki.tags.IteratorTag
+Move Class	com.ecyrd.jspwiki.util.FileUtil moved to org.apache.wiki.util.FileUtil
+Move Class	com.ecyrd.jspwiki.TestJNDIContext moved to org.apache.wiki.TestJNDIContext
+Move Class	com.ecyrd.management.SimpleMBean moved to org.apache.wiki.management.SimpleMBean
+Move Class	org.apache.jspwiki.api.FilterException moved to org.apache.wiki.api.FilterException
+Move Class	org.apache.jspwiki.api.PageFilter moved to org.apache.wiki.api.PageFilter
+Move Class	org.apache.jspwiki.api.PluginException moved to org.apache.wiki.api.PluginException
+Move Class	org.apache.jspwiki.api.Release moved to org.apache.wiki.api.Release
+Move Class	org.apache.jspwiki.api.WikiEngine moved to org.apache.wiki.api.WikiEngine
+Move Class	org.apache.jspwiki.api.WikiException moved to org.apache.wiki.api.WikiException
+Move Class	org.apache.jspwiki.api.WikiPage moved to org.apache.wiki.api.WikiPage
+Move Class	org.apache.jspwiki.api.WikiPlugin moved to org.apache.wiki.api.WikiPlugin
+Move Class	org.apache.jspwiki.api.WikiRenderer moved to org.apache.wiki.api.WikiRenderer
+Move Class	org.apache.jspwiki.api.WikiSession moved to org.apache.wiki.api.WikiSession
+Merge Package	[com.ecyrd, com.ecyrd.jspwiki, org.apache.jspwiki] to org.apache.wiki
+Developers have reported that 10708 commits involve refactoring but only 1978 involve refactoring operations
+There are 49 duplicate commits with refactoring out of the 1978 commits.
+
+No refactorings detected at c88503ebd79ea694ee0c653f1825d6173653484d
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c5012a061aad04c588eb9f1
+Issue Title: : Add current time stamp to WikiVariables
+Refactorings at 4f41091ab70212430e87b2e1abc75c2d59faf4c5
+Rename Method	public testTimeStamp() : void renamed to public testTimeStamp1() : void in class com.ecyrd.jspwiki.VariableManagerTest
+Developers have reported that 10708 commits involve refactoring but only 1979 involve refactoring operations
+There are 49 duplicate commits with refactoring out of the 1979 commits.
+
+No refactorings detected at b49b580c28f21bdd762dd409291de46ab68e3b0d
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c5012c461aad04c588ebb3f
+Issue Title: : Bread crumbs and renamed and deleted pages
+Refactorings at 97858e26b4eed2c49b0166bd21ed4f0fcd332eda
+Add Attribute Modifier	final in attribute private log : Logger from class org.apache.wiki.action.DeleteActionBean
+Add Attribute Modifier	static in attribute private log : Logger from class org.apache.wiki.action.DeleteActionBean
+Change Parameter Type	o : T to pageName : String in method package pushItem(pageName String) : String from class org.apache.wiki.tags.BreadcrumbsTag.FixedQueue
+Rename Parameter	o : T to pageName : String in method package pushItem(pageName String) : String from class org.apache.wiki.tags.BreadcrumbsTag.FixedQueue
+Change Return Type	T to String in method package pushItem(pageName String) : String from class org.apache.wiki.tags.BreadcrumbsTag.FixedQueue
+Change Attribute Access Modifier	private to public in attribute public BREADCRUMBTRAIL_KEY : String from class org.apache.wiki.tags.BreadcrumbsTag
+Change Variable Type	trail : FixedQueue<String> to trail : FixedQueue in method public doWikiStartTag() : int from class org.apache.wiki.tags.BreadcrumbsTag
+Remove Method Annotation	@SuppressWarnings("unchecked") in method public doWikiStartTag() : int from class org.apache.wiki.tags.BreadcrumbsTag
+Developers have reported that 10708 commits involve refactoring but only 1980 involve refactoring operations
+There are 49 duplicate commits with refactoring out of the 1980 commits.
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c5012c461aad04c588ebb3f
+Issue Title: : Bread crumbs and renamed and deleted pages
+Refactorings at 554af5ac27416265b39a3cde436d780fdb36beb8
+Change Parameter Type	o : T to o : String in method package pushItem(o String) : String from class com.ecyrd.jspwiki.tags.BreadcrumbsTag.FixedQueue
+Change Return Type	T to String in method package pushItem(o String) : String from class com.ecyrd.jspwiki.tags.BreadcrumbsTag.FixedQueue
+Change Attribute Access Modifier	private to public in attribute public BREADCRUMBTRAIL_KEY : String from class com.ecyrd.jspwiki.tags.BreadcrumbsTag
+Change Variable Type	trail : FixedQueue<String> to trail : FixedQueue in method public doWikiStartTag() : int from class com.ecyrd.jspwiki.tags.BreadcrumbsTag
+Remove Method Annotation	@SuppressWarnings("unchecked") in method public doWikiStartTag() : int from class com.ecyrd.jspwiki.tags.BreadcrumbsTag
+Developers have reported that 10708 commits involve refactoring but only 1981 involve refactoring operations
+There are 49 duplicate commits with refactoring out of the 1981 commits.
+
+No refactorings detected at d261db7a487d5ca2f84e19834351afc011722c7b
+
+No refactorings detected at d031cf3540b5c673c22877044d307630742d777a
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50130161aad04c588ebd1b
+Issue Title: : change notes are not preserved
+Refactorings at 5e4e494e65f2ad732c64fbd9bdc5cfa659571d6f
+Change Attribute Access Modifier	package to private in attribute private log : Logger from class org.apache.wiki.tags.HistoryIteratorTag
+Add Attribute Modifier	final in attribute private log : Logger from class org.apache.wiki.tags.HistoryIteratorTag
+Developers have reported that 10708 commits involve refactoring but only 1982 involve refactoring operations
+There are 49 duplicate commits with refactoring out of the 1982 commits.
+
+No refactorings detected at 681e6c4e58a660478fc05ec6fb8d1c58a412c0ea
+
+No refactorings detected at 504f179f33debc0e88b61fd9ce7f9ee22b5a0e3b
+
+No refactorings detected at dc6d7dd5ad76164e82b87ef821149049415f7364
+
+No refactorings detected at 51a1014b23627a245b58f23ff3b0af5951cdfe38
+
+No refactorings detected at 06bbb3ddd4b1df302e8fd3809be27ab2b473ebdd
+
+No refactorings detected at db7c84427d6afc95f9f5333579adfde49ff343ca
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50136361aad04c588ebfa7
+Issue Title: : InstallActionBean does not create admin user
+Refactorings at 439fdf3ae9191c888d673af52f2570b80f9ed65a
+Extract Method	private createAdminUser() : String extracted from public save() : Resolution in class org.apache.wiki.action.InstallActionBean
+Developers have reported that 10708 commits involve refactoring but only 1983 involve refactoring operations
+There are 49 duplicate commits with refactoring out of the 1983 commits.
+
+No refactorings detected at b3b4fa6ad77fbcee372f48c6227cc40ee967cc97
+
+No refactorings detected at 49ff23023c70fe7fce0faf17c5e56cac504c0c31
+
+No refactorings detected at 44e4e0defd4f8263f3e81e9ffce692d0eadea4b7
+
+No refactorings detected at 3f0f98aa509f6ae904a45ccfd65bf1211620942d
+
+No refactorings detected at 01f3adc49c4aa5d5d237073f625147cd1783f865
+
+No refactorings detected at 78dbb83e2c02bc78f98189b0be886217bdab2e3f
+
+No refactorings detected at a3b1041393db03d72d32e4d51554941be55e07e3
+
+No refactorings detected at 7882f53823020faf91102381033adfd92ca86570
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c5013ed61aad04c588ec2e4
+Issue Title: : improve JavaDocs for the plugins, provide consistent PARAM_names
+Refactorings at cf5b9d554248bc24ddefeeb089111ab1c167bf2f
+Rename Attribute	TITLE : String to PARAM_TITLE : String in class com.ecyrd.jspwiki.plugin.BugReportHandler
+Rename Attribute	DESCRIPTION : String to PARAM_DESCRIPTION : String in class com.ecyrd.jspwiki.plugin.BugReportHandler
+Rename Attribute	VERSION : String to PARAM_VERSION : String in class com.ecyrd.jspwiki.plugin.BugReportHandler
+Rename Attribute	MAPPINGS : String to PARAM_MAPPINGS : String in class com.ecyrd.jspwiki.plugin.BugReportHandler
+Rename Attribute	PAGE : String to PARAM_PAGE : String in class com.ecyrd.jspwiki.plugin.BugReportHandler
+Extract Attribute	public DEFAULT_TIME_FORMAT : String in class com.ecyrd.jspwiki.plugin.RecentChangesPlugin
+Extract Attribute	public DEFAULT_DATE_FORMAT : String in class com.ecyrd.jspwiki.plugin.RecentChangesPlugin
+Developers have reported that 10708 commits involve refactoring but only 1984 involve refactoring operations
+There are 49 duplicate commits with refactoring out of the 1984 commits.
+
+No refactorings detected at 4b805ba0f7a96bd7a61cfa2a3e3cd8f09b49eb4c
+
+No refactorings detected at 6584ae305019675d79aa91dced2a8868319b4d1f
+
+No refactorings detected at 2a4d28c499f78579ceed2185aa764d8df42e3ad6
+
+No refactorings detected at 0e51dfaaf6b224e5a512b669ed2c941dd3055aab
+
+No refactorings detected at 4f41df8245a9a8bf77a9f6aac0c44b623d195e1f
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50141d61aad04c588ec46f
+Issue Title: : improvement for MissingTranslations tool
+Refactorings at bd6c29572473b7a162b39f48842615dd8ca2c736
+Rename Class	MissingTranslations renamed to TranslationsCheck
+Rename Variable	p : Properties to p1 : Properties in method public diff(source1 String, source2 String) : void from class TranslationsCheck
+Rename Parameter	en : String to source1 : String in method public diff(source1 String, source2 String) : void from class TranslationsCheck
+Rename Parameter	other : String to source2 : String in method public diff(source1 String, source2 String) : void from class TranslationsCheck
+Developers have reported that 10708 commits involve refactoring but only 1985 involve refactoring operations
+There are 49 duplicate commits with refactoring out of the 1985 commits.
+
+No refactorings detected at c1f369e71fb4078fd40227894960573481e7a7ae
+
+No refactorings detected at 68a6b0287dfe6bb851971ccb9d017ff43b4d30a5
+
+No refactorings detected at 9b147b177945a4bd0fc6218481ed8112c7d3ff1f
+
+No refactorings detected at 56aa408f221fc5635171c1951e1f4f08a5ff7dee
+
+No refactorings detected at a5ddcfaf54ad4428c697222d5955195668655c08
+
+No refactorings detected at 2b1effd1a8d4230b69aaa798791205bf29cc3e10
+
+No refactorings detected at 156cdbb54fc913028b3b50f2be21a8dc6645a5c4
+
+No refactorings detected at 982774f960d7d3ec43a3fca50286c88393de5062
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50149a61aad04c588ec7b5
+Issue Title: : Replace multipartrequest.jar with Apache fileupload library
+Refactorings at 6c7af497f71e6ab503cf71ba1c5e7c06e334e086
+Change Variable Type	multiFile : MultipartFile to actualFile : FileItem in method protected upload(req HttpServletRequest) : String from class com.ecyrd.jspwiki.attachment.AttachmentServlet
+Rename Variable	multiFile : MultipartFile to actualFile : FileItem in method protected upload(req HttpServletRequest) : String from class com.ecyrd.jspwiki.attachment.AttachmentServlet
+Developers have reported that 10708 commits involve refactoring but only 1986 involve refactoring operations
+There are 49 duplicate commits with refactoring out of the 1986 commits.
+
+No refactorings detected at fc788a1610f38f186e5d5e0181b7a04b36921d54
+
+No refactorings detected at 9387e0f8b8fb9652910e3f9209e7da8be82ebc5f
+
+No refactorings detected at bebce5cefe45acd4c30396c8d2ba89220f1a1b7c
+
+No refactorings detected at bd9b392f1d46c51276e8f1047b32570450e91547
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c5014b161aad04c588ec881
+Issue Title: : Rename may cause dataloss
+Refactorings at f28794b0dccc253f7d23cc7efe20d8e89ef11c2c
+Inline Variable	p : WikiPage in method public getPageInfo(pageName String, version int) : WikiPage from class com.ecyrd.jspwiki.PageManager
+Change Variable Type	sb : StringBuffer to sb : StringBuilder in method private replaceReferrerString(context WikiContext, sourceText String, from String, to String) : String from class com.ecyrd.jspwiki.content.PageRenamer
+Developers have reported that 10708 commits involve refactoring but only 1987 involve refactoring operations
+There are 49 duplicate commits with refactoring out of the 1987 commits.
+
+No refactorings detected at e9c60bf867eb0adc1b4c4c4413b65630b8ea2f2c
+
+No refactorings detected at 626201ec52ff3a2b3dca7e442d9cde9c17f79142
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c5014d161aad04c588ec95b
+Issue Title: : NPE while deleting an attachment from a renamed page
+Refactorings at 4af7285a100a299ba5c4a51f92a904c9870b9411
+Extract Variable	e : CacheEntry in method public cacheEntryRemoved(aEvent CacheEntryEvent) : void from class com.ecyrd.jspwiki.providers.CachingAttachmentProvider.CachedAttachmentCollector
+Developers have reported that 10708 commits involve refactoring but only 1988 involve refactoring operations
+There are 49 duplicate commits with refactoring out of the 1988 commits.
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c5014e461aad04c588ec9d7
+Issue Title: : PageRenamer does not support changing referrer links
+Refactorings at f28794b0dccc253f7d23cc7efe20d8e89ef11c2c
+Inline Variable	p : WikiPage in method public getPageInfo(pageName String, version int) : WikiPage from class com.ecyrd.jspwiki.PageManager
+Change Variable Type	sb : StringBuffer to sb : StringBuilder in method private replaceReferrerString(context WikiContext, sourceText String, from String, to String) : String from class com.ecyrd.jspwiki.content.PageRenamer
+Developers have reported that 10708 commits involve refactoring but only 1989 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 1989 commits.
+
+No refactorings detected at 6801640c6ca59349d0c5ce307bb9b610b1fad779
+
+No refactorings detected at 1473b483a03e85df7dabb7a477377a4fbd313304
+
+No refactorings detected at 6a23ee44454a69a3f427d85b0a6bfc6d2031e624
+
+No refactorings detected at 1473b483a03e85df7dabb7a477377a4fbd313304
+
+No refactorings detected at 56aa408f221fc5635171c1951e1f4f08a5ff7dee
+
+No refactorings detected at 06ca09f8a00cbe5a3d4f0ce8e0aada9a102a2ed5
+
+No refactorings detected at 7ce6c53b332a568f7bc18b539bcd9f862d5855bb
+
+No refactorings detected at eed50d21d96f3713fce3b78d1eb619787efa8566
+
+No refactorings detected at b3e96b6b60f84a833f5dcba21656b01b9dc317c3
+
+No refactorings detected at c363744a5c528c684dd24a0d52992ecc3584c970
+
+No refactorings detected at ddb0daea2cc28f2b959a147c5a8a10f2bf27434e
+
+No refactorings detected at 1233c4e31ae76825168a47bc64f61423a86bbaa5
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50157961aad04c588ece3a
+Issue Title: : WikiPageRenameEvent not fired during page rename
+Refactorings at 06c5dbf632118db6ce08e3459e6afe1375945858
+Add Parameter Modifier	final in parameter context : WikiContext in method public renamePage(context WikiContext, renameFrom String, renameTo String) : String from class org.apache.wiki.content.ContentManager
+Add Parameter Modifier	final in parameter renameFrom : String in method public renamePage(context WikiContext, renameFrom String, renameTo String) : String from class org.apache.wiki.content.ContentManager
+Add Parameter Modifier	final in parameter renameTo : String in method public renamePage(context WikiContext, renameFrom String, renameTo String) : String from class org.apache.wiki.content.ContentManager
+Developers have reported that 10708 commits involve refactoring but only 1990 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 1990 commits.
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50157961aad04c588ece3a
+Issue Title: : WikiPageRenameEvent not fired during page rename
+Refactorings at ea9a87895bab1d93b7134367a7e20c8b722c9053
+Add Variable Annotation	@SuppressWarnings("unchecked") in variable attachments : Collection<Attachment> in method public renamePage(context WikiContext, renameFrom String, renameTo String, changeReferrers boolean) : String from class com.ecyrd.jspwiki.content.PageRenamer
+Add Parameter Modifier	final in parameter context : WikiContext in method public renamePage(context WikiContext, renameFrom String, renameTo String, changeReferrers boolean) : String from class com.ecyrd.jspwiki.content.PageRenamer
+Add Parameter Modifier	final in parameter renameFrom : String in method public renamePage(context WikiContext, renameFrom String, renameTo String, changeReferrers boolean) : String from class com.ecyrd.jspwiki.content.PageRenamer
+Add Parameter Modifier	final in parameter renameTo : String in method public renamePage(context WikiContext, renameFrom String, renameTo String, changeReferrers boolean) : String from class com.ecyrd.jspwiki.content.PageRenamer
+Add Parameter Modifier	final in parameter changeReferrers : boolean in method public renamePage(context WikiContext, renameFrom String, renameTo String, changeReferrers boolean) : String from class com.ecyrd.jspwiki.content.PageRenamer
+Remove Method Annotation	@SuppressWarnings("unchecked") in method private updateReferrers(context WikiContext, fromPage WikiPage, toPage WikiPage, referrers Set<String>) : void from class com.ecyrd.jspwiki.content.PageRenamer
+Add Variable Annotation	@SuppressWarnings("unchecked") in variable r : Collection<String> in method private getReferencesToChange(fromPage WikiPage, engine WikiEngine) : Set<String> from class com.ecyrd.jspwiki.content.PageRenamer
+Add Variable Annotation	@SuppressWarnings("unchecked") in variable attachments : Collection<Attachment> in method private getReferencesToChange(fromPage WikiPage, engine WikiEngine) : Set<String> from class com.ecyrd.jspwiki.content.PageRenamer
+Add Variable Annotation	@SuppressWarnings("unchecked") in variable c : Collection<String> in method private getReferencesToChange(fromPage WikiPage, engine WikiEngine) : Set<String> from class com.ecyrd.jspwiki.content.PageRenamer
+Developers have reported that 10708 commits involve refactoring but only 1991 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 1991 commits.
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50157f61aad04c588ece6c
+Issue Title: : Remove @author-tags from code
+Refactorings at 6304c94497af4137c4611b257c4e624cbaf2542b
+Remove Class Annotation	@ModuleData(author = "JSPWiki development group") in class org.apache.wiki.filters.SpamFilter
+Remove Class Annotation	@ModuleData(author = "JSPWiki development group") in class org.apache.wiki.plugin.Image
+Modify Class Annotation	@ModuleData(author = "Harry Metske", minVersion = "3.0", maxVersion = "1000000", minAPIVersion = "2.8") to @ModuleData(minVersion = "3.0", maxVersion = "1000000", minAPIVersion = "2.8") in class org.apache.wiki.plugin.PluginIndexPlugin
+Modify Class Annotation	@ModuleData(author = "Urgle Burgle", aliases = {"samplealias2","samplealias"}) to @ModuleData(aliases = {"samplealias2","samplealias"}) in class org.apache.wiki.plugin.SamplePlugin
+Developers have reported that 10708 commits involve refactoring but only 1992 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 1992 commits.
+
+No refactorings detected at cf517829f0c14c7bfc92c98ad387828c25dd1e36
+
+No refactorings detected at 73c3e6019d98b30731d8a242b8aa1530242ca6a1
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50158b61aad04c588ecef1
+Issue Title: : Rename page - page index still shows attachment with old page name
+Refactorings at 6e0eca0c628d9f6cc6c278a450a34a319489130e
+Rename Variable	attachments : Collection<Attachment> to attachmentsNewName : Collection<Attachment> in method public renamePage(context WikiContext, renameFrom String, renameTo String, changeReferrers boolean) : String from class org.apache.wiki.content.PageRenamer
+Developers have reported that 10708 commits involve refactoring but only 1993 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 1993 commits.
+
+No refactorings detected at 4c3205c25261d4a77024deee7b4e6b22e4363c20
+
+No refactorings detected at b7fb4bf8f02f71f18576303b2b5b1d03d7ec19a9
+
+No refactorings detected at 624d4190a6801a0b5c6fbc17efb4dd3bfdea597f
+
+No refactorings detected at b0e3e6726390af4f48747e7c6e4f5b83b265da7f
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50159161aad04c588ecf37
+Issue Title: : JSPWiki-API library creation
+Refactorings at f5af026905a529344e7190ca818790d06d2bac93
+Add Class Modifier	final in class org.apache.wiki.filters.DefaultFilterManager
+Developers have reported that 10708 commits involve refactoring but only 1994 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 1994 commits.
+
+No refactorings detected at 6e1ddb805a360de687730a8e8436ae130b82b76b
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50159161aad04c588ecf37
+Issue Title: : JSPWiki-API library creation
+Refactorings at 11b6fefacad0c8b00c05cd1c22b1d0b080e3079c
+Move Class	org.apache.wiki.api.filters.FilterManager moved to org.apache.wiki.api.engine.FilterManager
+Move Class	org.apache.wiki.api.plugin.PluginManager moved to org.apache.wiki.api.engine.PluginManager
+Add Method Annotation	@Deprecated in method public getRequiredProperty(props Properties, key String) : String from class org.apache.wiki.WikiEngine
+Developers have reported that 10708 commits involve refactoring but only 1995 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 1995 commits.
+
+No refactorings detected at 8e0ed99f4418ba90789816668a7147296c38dbe9
+
+No refactorings detected at b868efc551de65354ec19cff2639bfb983c51973
+
+No refactorings detected at 80e828d40f37d45d453a9f59715d2ffabc28c4c2
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c5015a461aad04c588ecff4
+Issue Title: : Unlocalized content at workflow's notification for creating a new user
+Refactorings at 84e46881b27d3fc8b99c90ae6d86098fb0514791
+Add Method Annotation	@Deprecated in method public SaveUserProfileTask(engine WikiEngine) from class org.apache.wiki.auth.UserManager.SaveUserProfileTask
+Developers have reported that 10708 commits involve refactoring but only 1996 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 1996 commits.
+
+No refactorings detected at 057d9b9b52d6ffc6b0add23ecb501b517c02af59
+
+No refactorings detected at aa9bdd72c52d9e264f5cab1736d9a52e1d2fd1c1
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c5015b161aad04c588ed076
+Issue Title: : ChangeLog published on site
+Refactorings at b450458a77a7d3cdb54575a54e11639edca9d7aa
+Change Variable Type	iter : Iterator to iter : Iterator<String> in method public diff(source1 String, source2 String) : Map<String,Integer> from class org.apache.wiki.TranslationsCheck
+Change Return Type	void to Map<String,Integer> in method public diff(source1 String, source2 String) : Map<String,Integer> from class org.apache.wiki.TranslationsCheck
+Change Return Type	List to List<String> in method private sortedNames(p Properties) : List<String> from class org.apache.wiki.TranslationsCheck
+Change Return Type	void to int in method public detectDuplicates(source String) : int from class org.apache.wiki.TranslationsCheck
+Change Method Access Modifier	private to public in method public detectDuplicates(source String) : int from class org.apache.wiki.TranslationsCheck
+Developers have reported that 10708 commits involve refactoring but only 1997 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 1997 commits.
+
+No refactorings detected at 39293781fde7eba49e77cb3c5495f61acc508201
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c5015de61aad04c588ed1d7
+Issue Title: : Move from log4j to slf4j
+Refactorings at 7746b3da9d98f1c56d0e58323915cfc87972ad49
+Remove Method Annotation	@SuppressWarnings("unchecked") in method public entries() : Enumeration from class com.ecyrd.jspwiki.auth.acl.Acl
+Remove Method Annotation	@SuppressWarnings("unchecked") in method public permissions() : Enumeration from class com.ecyrd.jspwiki.auth.acl.AclEntry
+Remove Method Annotation	@SuppressWarnings("unchecked") in method public permissions() : Enumeration from class com.ecyrd.jspwiki.auth.acl.AclEntryImpl
+Remove Method Annotation	@SuppressWarnings("unchecked") in method public entries() : Enumeration from class com.ecyrd.jspwiki.auth.acl.AclImpl
+Remove Method Annotation	@SuppressWarnings("unchecked") in method private updateReferrers(context WikiContext, fromPage WikiPage, toPage WikiPage, referrers Set<String>) : void from class com.ecyrd.jspwiki.content.PageRenamer
+Change Attribute Type	log : org.apache.log4j.Logger to log : com.ecyrd.jspwiki.log.Logger in class com.ecyrd.jspwiki.forms.FormOpen
+Remove Method Annotation	@SuppressWarnings("unchecked") in method public doGet(context WikiContext) : String from class com.ecyrd.jspwiki.ui.admin.beans.PluginBean
+Add Attribute Modifier	static in attribute private log : Logger from class com.ecyrd.jspwiki.util.WatchDog
+Developers have reported that 10708 commits involve refactoring but only 1998 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 1998 commits.
+
+No refactorings detected at fced29869650b5f327facbb92d1c2f436eb04001
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c5015ea61aad04c588ed259
+Issue Title: : Replace OpenSymphony's oscache with ehcache
+Refactorings at 058d81253937ee381aa7b74add242ef7c75f4c64
+Remove Method Annotation	@SuppressWarnings("unchecked") in method public listAttachments(page WikiPage) : Collection from class org.apache.wiki.providers.CachingAttachmentProvider
+Remove Method Annotation	@SuppressWarnings("unchecked") in method private refresh(page WikiPage) : Collection<Attachment> from class org.apache.wiki.providers.CachingAttachmentProvider
+Change Variable Type	c : Collection to c : Collection<Attachment> in method public getAttachmentInfo(page WikiPage, name String, version int) : Attachment from class org.apache.wiki.providers.CachingAttachmentProvider
+Change Attribute Access Modifier	private to public in attribute public DEFAULT_CACHECAPACITY : int from class org.apache.wiki.providers.CachingProvider
+Change Variable Type	cached : WikiPage to cacheElement : Element in method private getPageInfoFromCache(name String) : WikiPage from class org.apache.wiki.providers.CachingProvider
+Rename Variable	cached : WikiPage to cacheElement : Element in method private getPageInfoFromCache(name String) : WikiPage from class org.apache.wiki.providers.CachingProvider
+Rename Method	public testNonexistantPage() : void renamed to public testNonexistentPage() : void in class org.apache.wiki.attachment.AttachmentManagerTest
+Developers have reported that 10708 commits involve refactoring but only 1999 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 1999 commits.
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c5015eb61aad04c588ed268
+Issue Title: : Move site to trunk so content generated from source gets built automatically
+Refactorings at f3a84e095a5b718703406ee6e65c90991ade5871
+Move Class	org.apache.wiki.TranslationsCheck moved to org.apache.wiki.site.TranslationsCheck
+Move Source Folder	jspwiki-war to jspwiki-site
+Change Variable Type	iter : Iterator to iter : Iterator<String> in method public main(args String[]) : void from class org.apache.wiki.site.TranslationsCheck
+Change Variable Type	iter : Enumeration to iter : Enumeration<String> in method private sortedNames(p Properties) : List<String> from class org.apache.wiki.site.TranslationsCheck
+Add Variable Annotation	@SuppressWarnings("unchecked") in variable iter : Enumeration<String> in method private sortedNames(p Properties) : List<String> from class org.apache.wiki.site.TranslationsCheck
+Change Variable Type	iter : Enumeration to iter : Enumeration<String> in method public detectDuplicates(source String) : int from class org.apache.wiki.site.TranslationsCheck
+Add Variable Annotation	@SuppressWarnings("unchecked") in variable iter : Enumeration<String> in method public detectDuplicates(source String) : int from class org.apache.wiki.site.TranslationsCheck
+Developers have reported that 10708 commits involve refactoring but only 2000 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 2000 commits.
+
+No refactorings detected at 71fc59c856ef0a01698e948f3ee994155bd00811
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50160361aad04c588ed33e
+Issue Title: : Consider replacing ECS with JDOM
+Refactorings at a7fc9bd6e1ed81a41d37f4bc7319329c48a2ea89
+Change Variable Type	field : input to field : Element in method public execute(ctx WikiContext, params Map<String,String>) : String from class org.apache.wiki.forms.FormInput
+Change Variable Type	field : ConcreteElement to field : Element in method public execute(ctx WikiContext, params Map<String,String>) : String from class org.apache.wiki.forms.FormSelect
+Change Variable Type	optionElements : option[] to optionElements : Element[] in method private buildSelect(pluginParams Map<String,String>, ctxValues Map<String,String>, rb ResourceBundle) : Element from class org.apache.wiki.forms.FormSelect
+Change Return Type	select to Element in method private buildSelect(pluginParams Map<String,String>, ctxValues Map<String,String>, rb ResourceBundle) : Element from class org.apache.wiki.forms.FormSelect
+Change Variable Type	field : textarea to field : Element in method private buildTextArea(params Map<String,String>, previousValues Map<String,String>, rb ResourceBundle) : Element from class org.apache.wiki.forms.FormTextarea
+Change Return Type	textarea to Element in method private buildTextArea(params Map<String,String>, previousValues Map<String,String>, rb ResourceBundle) : Element from class org.apache.wiki.forms.FormTextarea
+Change Variable Type	list : ul to list : Element in method private stackTrace(params Map<String,String>, t Throwable) : String from class org.apache.wiki.plugin.DefaultPluginManager
+Change Variable Type	masterDiv : div to masterDiv : Element in method public execute(context WikiContext, params Map<String,String>) : String from class org.apache.wiki.plugin.IndexPlugin
+Change Variable Type	indexDiv : div to indexDiv : Element in method public execute(context WikiContext, params Map<String,String>) : String from class org.apache.wiki.plugin.IndexPlugin
+Change Variable Type	currentDiv : div to currentDiv : Element in method public execute(context WikiContext, params Map<String,String>) : String from class org.apache.wiki.plugin.IndexPlugin
+Change Variable Type	result : ArrayList<String> to result : List<String> in method private listPages(context WikiContext, include String, exclude String) : List<String> from class org.apache.wiki.plugin.IndexPlugin
+Change Variable Type	pages : Collection to pages : Collection<String> in method private listPages(context WikiContext, include String, exclude String) : List<String> from class org.apache.wiki.plugin.IndexPlugin
+Add Variable Annotation	@SuppressWarnings("unchecked") in variable pages : Collection<String> in method private listPages(context WikiContext, include String, exclude String) : List<String> from class org.apache.wiki.plugin.IndexPlugin
+Change Variable Type	i : Iterator to i : Iterator<String> in method private listPages(context WikiContext, include String, exclude String) : List<String> from class org.apache.wiki.plugin.IndexPlugin
+Add Attribute Modifier	final in attribute private log : Logger from class org.apache.wiki.plugin.RecentChangesPlugin
+Inline Variable	infocol : td in method public execute(context WikiContext, params Map<String,String>) : String from class org.apache.wiki.plugin.RecentChangesPlugin
+Change Variable Type	changes : Collection to changes : Collection<WikiPage> in method public execute(context WikiContext, params Map<String,String>) : String from class org.apache.wiki.plugin.RecentChangesPlugin
+Change Variable Type	i : Iterator to i : Iterator<WikiPage> in method public execute(context WikiContext, params Map<String,String>) : String from class org.apache.wiki.plugin.RecentChangesPlugin
+Change Variable Type	rt : table to rt : Element in method public execute(context WikiContext, params Map<String,String>) : String from class org.apache.wiki.plugin.RecentChangesPlugin
+Change Variable Type	row : tr to row : Element in method public execute(context WikiContext, params Map<String,String>) : String from class org.apache.wiki.plugin.RecentChangesPlugin
+Change Variable Type	row : tr to row : Element in method public execute(context WikiContext, params Map<String,String>) : String from class org.apache.wiki.plugin.RecentChangesPlugin
+Change Variable Type	col : td to col : Element in method public execute(context WikiContext, params Map<String,String>) : String from class org.apache.wiki.plugin.RecentChangesPlugin
+Change Variable Type	col : td to col : Element in method public execute(context WikiContext, params Map<String,String>) : String from class org.apache.wiki.plugin.RecentChangesPlugin
+Change Variable Type	infocol : td to infocol : Element in method public execute(context WikiContext, params Map<String,String>) : String from class org.apache.wiki.plugin.RecentChangesPlugin
+Change Variable Type	authorinfo : td to authorinfo : Element in method public execute(context WikiContext, params Map<String,String>) : String from class org.apache.wiki.plugin.RecentChangesPlugin
+Rename Variable	link : String to href : String in method public execute(context WikiContext, params Map<String,String>) : String from class org.apache.wiki.plugin.RecentChangesPlugin
+Add Method Annotation	@SuppressWarnings("unchecked") in method public execute(context WikiContext, params Map<String,String>) : String from class org.apache.wiki.plugin.RecentChangesPlugin
+Change Variable Type	results : Collection to results : Collection<SearchResult> in method public execute(context WikiContext, params Map<String,String>) : String from class org.apache.wiki.plugin.Search
+Add Method Annotation	@SuppressWarnings("unchecked") in method public execute(context WikiContext, params Map<String,String>) : String from class org.apache.wiki.plugin.Search
+Change Variable Type	list : Collection to list : Collection<SearchResult> in method private doBasicQuery(context WikiContext, query String) : Collection<SearchResult> from class org.apache.wiki.plugin.Search
+Add Variable Annotation	@SuppressWarnings("unchecked") in variable list : Collection<SearchResult> in method private doBasicQuery(context WikiContext, query String) : Collection<SearchResult> from class org.apache.wiki.plugin.Search
+Change Return Type	Collection to Collection<SearchResult> in method private doBasicQuery(context WikiContext, query String) : Collection<SearchResult> from class org.apache.wiki.plugin.Search
+Change Variable Type	root : XML to root : Element in method public getString() : String from class org.apache.wiki.rss.RSS10Feed
+Change Variable Type	items : XML to items : Element in method private getRDFItems() : Element from class org.apache.wiki.rss.RSS10Feed
+Change Variable Type	rdfseq : XML to rdfseq : Element in method private getRDFItems() : Element from class org.apache.wiki.rss.RSS10Feed
+Change Return Type	XML to Element in method private getRDFItems() : Element from class org.apache.wiki.rss.RSS10Feed
+Change Variable Type	channel : XML to channel : Element in method private getChannelElement() : Element from class org.apache.wiki.rss.RSS10Feed
+Change Return Type	XML to Element in method private getChannelElement() : Element from class org.apache.wiki.rss.RSS10Feed
+Change Parameter Type	root : XML to root : Element in method private addItemList(root Element) : void from class org.apache.wiki.rss.RSS10Feed
+Change Variable Type	item : XML to item : Element in method private addItemList(root Element) : void from class org.apache.wiki.rss.RSS10Feed
+Change Variable Type	content : XML to content : Element in method private addItemList(root Element) : void from class org.apache.wiki.rss.RSS10Feed
+Change Variable Type	contributor : XML to contributor : Element in method private addItemList(root Element) : void from class org.apache.wiki.rss.RSS10Feed
+Rename Variable	e : Entry to entry : Entry in method private addItemList(root Element) : void from class org.apache.wiki.rss.RSS10Feed
+Extract Method	package validPluginVersion(info WikiPluginInfo) : String extracted from public doGet(context WikiContext) : String in class org.apache.wiki.ui.admin.beans.PluginBean
+Change Variable Type	head : tr to trHead : Element in method public doGet(context WikiContext) : String from class org.apache.wiki.ui.admin.beans.PluginBean
+Change Variable Type	row : tr to tr : Element in method public doGet(context WikiContext) : String from class org.apache.wiki.ui.admin.beans.PluginBean
+Change Variable Type	tb : table to tb : Element in method public doGet(context WikiContext) : String from class org.apache.wiki.ui.admin.beans.PluginBean
+Rename Variable	head : tr to trHead : Element in method public doGet(context WikiContext) : String from class org.apache.wiki.ui.admin.beans.PluginBean
+Rename Variable	row : tr to tr : Element in method public doGet(context WikiContext) : String from class org.apache.wiki.ui.admin.beans.PluginBean
+Developers have reported that 10708 commits involve refactoring but only 2001 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 2001 commits.
+
+No refactorings detected at 3908a706d81e8aa4924f927b19854f9d43c7b0c0
+
+No refactorings detected at 681e6c4e58a660478fc05ec6fb8d1c58a412c0ea
+
+No refactorings detected at f56bb0dbadbea8d4366117206d34fd78d3cd84ee
+
+No refactorings detected at f580850e57ce792e974e151a9758520d114d769a
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50160761aad04c588ed35e
+Issue Title: : TestEngine sometimes creates testrepositories with double timestamps after r1567444
+Refactorings at d1474fc70c987d40b030e555f4a3e749e9823606
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.wiki.providers.FileSystemProviderTest
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.wiki.providers.FileSystemProviderTest
+Developers have reported that 10708 commits involve refactoring but only 2002 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 2002 commits.
+
+No refactorings detected at f580850e57ce792e974e151a9758520d114d769a
+
+No refactorings detected at a6dd61184804886d566f86c4937a668adeb9cb74
+
+No refactorings detected at 3908a706d81e8aa4924f927b19854f9d43c7b0c0
+
+No refactorings detected at b5ca6360357815db8f81a7e0f0cf483b0d798b16
+
+No refactorings detected at e0a789aa431dd8b6528eb29185f1803ea71dae52
+
+No refactorings detected at 40182c229dcf37802e745f73b2689bf87dc4c701
+
+No refactorings detected at 051fd9964a18422227e0d53aa025725a01f4ad15
+
+No refactorings detected at fa5e3b46994a23c4048d0110688fbd85a0f3ec19
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50163a61aad04c588ed551
+Issue Title: : Replace org.apache.catalina dependency
+Refactorings at f0e2bd644035c4748cfde8dbf8d7e450cf1a3874
+Remove Method Annotation	@SuppressWarnings("deprecation") in method public commit() : void from class org.apache.wiki.auth.user.AbstractUserDatabase
+Developers have reported that 10708 commits involve refactoring but only 2003 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 2003 commits.
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50163f61aad04c588ed57a
+Issue Title: : Recent Changes Plugin breaks markup if generates an empty table
+Refactorings at 5a2e9fcbf65041ddf3eea72b14dcdb83daea9642
+Change Attribute Access Modifier	private to public in attribute public EXPAND_EMPTY_NODES : Format from class org.apache.wiki.util.XhtmlUtil
+Move Attribute	private EXPAND_EMPTY_NODES : Format from class org.apache.wiki.ui.admin.beans.PluginBean to public EXPAND_EMPTY_NODES : Format from class org.apache.wiki.util.XhtmlUtil
+Developers have reported that 10708 commits involve refactoring but only 2004 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 2004 commits.
+
+No refactorings detected at a44ace2214ca229b17bf692a96367f1eaa5626ba
+
+No refactorings detected at 952f532cd804009d70a955c5fba81a22fa752d5a
+
+No refactorings detected at 6088c1b2c3607a0c4be8dd43069bb4597323d2d1
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50166161aad04c588ed65c
+Issue Title: : proper handling of page deletes and renames for the Breadcrumb trail
+Refactorings at d7130d52deda76899cfcb8a74944ca62af474eb5
+Add Parameter	request : HttpServletRequest in method public deleteFromBreadCrumb(request HttpServletRequest, pageName String) : void from class org.apache.wiki.tags.BreadcrumbsTag
+Change Method Access Modifier	package to public in method public deleteFromBreadCrumb(request HttpServletRequest, pageName String) : void from class org.apache.wiki.tags.BreadcrumbsTag
+Add Method Modifier	static in method public deleteFromBreadCrumb(request HttpServletRequest, pageName String) : void from class org.apache.wiki.tags.BreadcrumbsTag
+Move Method	package deleteFromBreadCrumb(pageName String) : void from class org.apache.wiki.action.AbstractPageActionBean to public deleteFromBreadCrumb(request HttpServletRequest, pageName String) : void from class org.apache.wiki.tags.BreadcrumbsTag
+Developers have reported that 10708 commits involve refactoring but only 2005 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 2005 commits.
+
+No refactorings detected at 7294d30c8d957e0c7f54927dad277dc47cbcd092
+
+No refactorings detected at 7dff0c04f3f03809db0d9d7543f2c696c0e30d35
+
+No refactorings detected at 152ebf72ca29742ccb9cba06043d29eaf93e014a
+
+No refactorings detected at 76da9d2a0b01718220b1942a9d96c6a7dc97d704
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50167761aad04c588ed721
+Issue Title: : AJAX server-side rewrite
+Refactorings at 8044eadcc1bab10fb7d14b3931dc0883fbf07248
+Move Class	org.apache.wiki.WikiAjaxDispatcherServlet moved to org.apache.wiki.ajax.WikiAjaxDispatcherServlet
+Extract Attribute	public JSON_USERS : String in class org.apache.wiki.auth.UserManager
+Rename Attribute	m_fullname : String to fullname : String in class org.apache.wiki.auth.user.DefaultUserProfile
+Rename Attribute	m_password : String to password : String in class org.apache.wiki.auth.user.DefaultUserProfile
+Rename Attribute	m_loginName : String to loginName : String in class org.apache.wiki.auth.user.DefaultUserProfile
+Rename Attribute	m_email : String to email : String in class org.apache.wiki.auth.user.DefaultUserProfile
+Rename Attribute	m_wikiname : String to wikiname : String in class org.apache.wiki.auth.user.DefaultUserProfile
+Rename Attribute	m_modified : Date to modified : Date in class org.apache.wiki.auth.user.DefaultUserProfile
+Rename Attribute	m_created : Date to created : Date in class org.apache.wiki.auth.user.DefaultUserProfile
+Rename Attribute	m_lockExpiry : Date to lockExpiry : Date in class org.apache.wiki.auth.user.DefaultUserProfile
+Rename Attribute	m_uid : String to uid : String in class org.apache.wiki.auth.user.DefaultUserProfile
+Add Parameter	info : WikiPluginInfo in method protected initializePlugin(info WikiPluginInfo, engine WikiEngine, searchPath List<String>, externalJars List<String>) : void from class org.apache.wiki.plugin.DefaultPluginManager.WikiPluginInfo
+Rename Method	protected doGet(req HttpServletRequest, resp HttpServletResponse) : void renamed to public service(request HttpServletRequest, response HttpServletResponse, actionName String, params List<String>) : void in class org.apache.wiki.plugin.SampleAjaxPlugin
+Rename Parameter	req : HttpServletRequest to request : HttpServletRequest in method public service(request HttpServletRequest, response HttpServletResponse, actionName String, params List<String>) : void from class org.apache.wiki.plugin.SampleAjaxPlugin
+Rename Parameter	resp : HttpServletResponse to response : HttpServletResponse in method public service(request HttpServletRequest, response HttpServletResponse, actionName String, params List<String>) : void from class org.apache.wiki.plugin.SampleAjaxPlugin
+Add Parameter	actionName : String in method public service(request HttpServletRequest, response HttpServletResponse, actionName String, params List<String>) : void from class org.apache.wiki.plugin.SampleAjaxPlugin
+Add Parameter	params : List<String> in method public service(request HttpServletRequest, response HttpServletResponse, actionName String, params List<String>) : void from class org.apache.wiki.plugin.SampleAjaxPlugin
+Change Method Access Modifier	protected to public in method public service(request HttpServletRequest, response HttpServletResponse, actionName String, params List<String>) : void from class org.apache.wiki.plugin.SampleAjaxPlugin
+Add Class Annotation	@Deprecated in class org.apache.wiki.rpc.RPCCallable
+Add Class Annotation	@Deprecated in class org.apache.wiki.rpc.RPCManager
+Add Class Annotation	@Deprecated in class org.apache.wiki.rpc.json.JSONRPCManager
+Change Return Type	List to List<String> in method public getSuggestions(wikiName String, maxLength int) : List<String> from class org.apache.wiki.search.SearchManager.JSONSearch
+Change Variable Type	list : List<HashMap> to list : List<Map<String,Object>> in method public findPages(searchString String, maxLength int) : List<Map<String,Object>> from class org.apache.wiki.search.SearchManager.JSONSearch
+Change Return Type	List to List<Map<String,Object>> in method public findPages(searchString String, maxLength int) : List<Map<String,Object>> from class org.apache.wiki.search.SearchManager.JSONSearch
+Change Variable Type	servlet : HttpServlet to servlet : WikiAjaxServlet in method public testServlets() : void from class org.apache.wiki.WikiAjaxServletTest
+Change Variable Type	servlet3 : HttpServlet to servlet3 : WikiAjaxServlet in method public testServlets() : void from class org.apache.wiki.WikiAjaxServletTest
+Change Attribute Type	ajaxServlets : Map<String,HttpServlet> to ajaxServlets : Map<String,AjaxServletContainer> in class org.apache.wiki.ajax.WikiAjaxDispatcherServlet
+Remove Attribute Modifier	final in attribute private PATH_AJAX : String from class org.apache.wiki.WikiAjaxDispatcherServlet
+Remove Attribute Modifier	static in attribute private PATH_AJAX : String from class org.apache.wiki.WikiAjaxDispatcherServlet
+Change Variable Type	ajaxServlet : HttpServlet to container : AjaxServletContainer in method private performAction(req HttpServletRequest, res HttpServletResponse) : void from class org.apache.wiki.ajax.WikiAjaxDispatcherServlet
+Rename Variable	ajaxServlet : HttpServlet to container : AjaxServletContainer in method private performAction(req HttpServletRequest, res HttpServletResponse) : void from class org.apache.wiki.ajax.WikiAjaxDispatcherServlet
+Rename Parameter	servletName : String to servletAlias : String in method public findServletByName(servletAlias String) : WikiAjaxServlet from class org.apache.wiki.ajax.WikiAjaxDispatcherServlet
+Change Return Type	HttpServlet to WikiAjaxServlet in method public findServletByName(servletAlias String) : WikiAjaxServlet from class org.apache.wiki.ajax.WikiAjaxDispatcherServlet
+Extract And Move Method	public registerServlet(servlet WikiAjaxServlet) : void extracted from public testServlets() : void in class org.apache.wiki.WikiAjaxServletTest & moved to class org.apache.wiki.ajax.WikiAjaxDispatcherServlet
+Developers have reported that 10708 commits involve refactoring but only 2006 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 2006 commits.
+
+No refactorings detected at 53abccdb02e9f8d92804ee0e2cb32b39fbb981b8
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50168b61aad04c588ed7ee
+Issue Title: : Fix test-failure when using existing localized locale in OutComeTest
+Refactorings at 610fa2325b94195dad719109175865d04508ce29
+Rename Variable	english : Locale to rootLocale : Locale in method public testMessage() : void from class org.apache.wiki.workflow.OutcomeTest
+Developers have reported that 10708 commits involve refactoring but only 2007 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 2007 commits.
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50169d61aad04c588ed89e
+Issue Title: : DOM-based popups to replace regular js alert or prompt dialog boxes
+Refactorings at 64d04b2c8ecefbffaddfaca7d77b6c8b5a08e7e5
+Rename Method	public setClass(arg String) : void renamed to public setCssClass(arg String) : void in class org.apache.wiki.tags.LinkTag
+Rename Attribute	m_class : String to m_cssClass : String in class org.apache.wiki.tags.LinkTag
+Developers have reported that 10708 commits involve refactoring but only 2008 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 2008 commits.
+
+No refactorings detected at 3908a706d81e8aa4924f927b19854f9d43c7b0c0
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50169f61aad04c588ed8a9
+Issue Title: : add menu with available editors to Edit button
+Refactorings at 64d04b2c8ecefbffaddfaca7d77b6c8b5a08e7e5
+Rename Method	public setClass(arg String) : void renamed to public setCssClass(arg String) : void in class org.apache.wiki.tags.LinkTag
+Rename Attribute	m_class : String to m_cssClass : String in class org.apache.wiki.tags.LinkTag
+Developers have reported that 10708 commits involve refactoring but only 2009 involve refactoring operations
+There are 51 duplicate commits with refactoring out of the 2009 commits.
+
+No refactorings detected at 79b46aa45e3e780adcbbadfcb7a3638fa689e0c1
+
+No refactorings detected at ec999ef9cab5415c1dcd1f32471ad8c2f3ec6d37
+
+No refactorings detected at 968dfead1eecbf00f0d1f54610e0ed7db6d4a3de
+
+No refactorings detected at 2ce946deb08e5f2a5fcaebaba67fa7ff3c55607b
+
+No refactorings detected at c7123546cb68bd5a03404bec4c5f0723a887c824
+
+No refactorings detected at 9fddd644dabc5b64d1bc50c4eee6185f15a392a4
+
+No refactorings detected at e635eb75f8c71443aa521ef75e742cf0579dc881
+
+No refactorings detected at 544d58bd6ab68dbb8c75cf7c83fdfe4eb75b67f4
+
+No refactorings detected at 2e3da23a887548876fa7f61303efaf1fa15fc333
+
+No refactorings detected at 014dc670790bc3c1e4b5d306efa2b75be2426161
+
+No refactorings detected at 3e3b53cfc71687ec5c5d147f2091e6563da8f2e8
+
+VCS System: https://github.com/apache/jspwiki.git
+Issue ID: : 5c50173061aad04c588edcdf
+Issue Title: : Link to non-existing page doesn't change if linked page is created
+Refactorings at f13a30804bd9ba88a9565c0947f1b3c968867a19
+Extract Method	package useCache(context WikiContext) : boolean extracted from protected getRenderedDocument(context WikiContext, pagedata String) : WikiDocument in class org.apache.wiki.render.RenderingManager
+Developers have reported that 10708 commits involve refactoring but only 2010 involve refactoring operations
+There are 51 duplicate commits with refactoring out of the 2010 commits.
+
+No refactorings detected at af3253d7ffe1c4d9ccbffbd22d951277b0b98b31
+
+No refactorings detected at 29d274675157ed1e915366508bb7c83c322d67bb
+

@@ -70,6 +70,12 @@
     <Content Include="Java\detectedRefactorings\tika.git.refactorings" />
     <Content Include="Java\detectedRefactorings\wss4j.git.refactorings" />
     <Content Include="Java\Main.java" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-03 211753.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-03 212311.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-03 212651.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-03 212942.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-03 213421.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-03 213617.png" />
     <Content Include="Python\issue_tracked_projects.txt" />
     <Content Include="Python\JavaConsoleOutputParser\detected_errors" />
     <Content Include="Python\mongo_db_extract_refactoring_doc.txt" />
@@ -81,6 +87,7 @@
     <Folder Include="Java\detectedRefactorings\" />
     <Folder Include="Python\" />
     <Folder Include="Python\JavaConsoleOutputParser\" />
+    <Folder Include="Python\GoogleExtensionRefactoringMiner\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

@@ -778,3 +778,783 @@ Change Variable Type	newMap : Map<Object,Object> to newMap : Map<String,Object> 
 Developers have reported that 10708 commits involve refactoring but only 889 involve refactoring operations
 There are 18 duplicate commits with refactoring out of the 889 commits.
 
+No refactorings detected at 2b2389ddacb7af05326bd59d1b00bf2bf7ee3e3c
+
+No refactorings detected at 0f9b7cc8db1f6fa633c12ab661d833b0d7dacf00
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed58ca2ae62813868e73ba
+Issue Title: : Add general array type conversion
+Refactorings at 19c81683ce7adc0d4d3675f96a82a83d6fadd4eb
+Extract Method	protected convertToCollection(type Class, value Object) : Collection extracted from protected convertToType(type Class, value Object) : Object in class org.apache.commons.beanutils.converters.ArrayConverter
+Developers have reported that 10708 commits involve refactoring but only 876 involve refactoring operations
+There are 17 duplicate commits with refactoring out of the 876 commits.
+
+No refactorings detected at c50a32cdaf25dd87c9a0b9a3aadf86aa8e828041
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed58cf2ae62813868e73d1
+Issue Title: : Improve Converter Implementations
+Refactorings at c203a56f1fd2ce7eafa07be45fe52e03e23dcafd
+Inline Variable	converter : Converter in method public setProperty(bean Object, name String, value Object) : void from class org.apache.commons.beanutils.BeanUtilsBean
+Developers have reported that 10708 commits involve refactoring but only 877 involve refactoring operations
+There are 17 duplicate commits with refactoring out of the 877 commits.
+
+No refactorings detected at 4537b0b88a2f58e555f494c45ff4fdcd183a3428
+
+No refactorings detected at c13bf868cda36a6cd2167d155bf1e85994760d6d
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed58cf2ae62813868e73d1
+Issue Title: : Improve Converter Implementations
+Refactorings at 2b2d0c0eae398ca89cefa3068dbf443414ebc908
+Change Return Type	Object to String in method protected convertToString(value Object) : String from class org.apache.commons.beanutils.converters.AbstractConverter
+Change Return Type	Object to String in method protected convertToString(value Object) : String from class org.apache.commons.beanutils.converters.ArrayConverter
+Change Return Type	Object to String in method protected convertToString(value Object) : String from class org.apache.commons.beanutils.converters.CharacterConverter
+Change Return Type	Object to String in method protected convertToString(value Object) : String from class org.apache.commons.beanutils.converters.ClassConverter
+Change Variable Type	result : Object to result : String in method protected convertToString(value Object) : String from class org.apache.commons.beanutils.converters.DateTimeConverter
+Change Return Type	Object to String in method protected convertToString(value Object) : String from class org.apache.commons.beanutils.converters.DateTimeConverter
+Change Variable Type	result : Object to result : String in method protected convertToString(value Object) : String from class org.apache.commons.beanutils.converters.NumberConverter
+Change Return Type	Object to String in method protected convertToString(value Object) : String from class org.apache.commons.beanutils.converters.NumberConverter
+Developers have reported that 10708 commits involve refactoring but only 878 involve refactoring operations
+There are 17 duplicate commits with refactoring out of the 878 commits.
+
+No refactorings detected at 6f26c441b21dcb2e1d04a80d62eb8421131b4f91
+
+No refactorings detected at b712ecda29ce1e54189eac789eb7750c721abea0
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed58cf2ae62813868e73d1
+Issue Title: : Improve Converter Implementations
+Refactorings at 8c789b517914efd306590a810ec487f6ff2fe9ea
+Change Return Type	String to Object in method protected convertToString(value Object) : Object from class org.apache.commons.beanutils.converters.AbstractConverter
+Inline Variable	sourceType : Class in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.ArrayConverter
+Change Return Type	String to Object in method protected convertToString(value Object) : Object from class org.apache.commons.beanutils.converters.ArrayConverter
+Change Return Type	String to Object in method protected convertToString(value Object) : Object from class org.apache.commons.beanutils.converters.CharacterConverter
+Change Return Type	String to Object in method protected convertToString(value Object) : Object from class org.apache.commons.beanutils.converters.ClassConverter
+Change Variable Type	result : String to result : Object in method protected convertToString(value Object) : Object from class org.apache.commons.beanutils.converters.DateTimeConverter
+Change Return Type	String to Object in method protected convertToString(value Object) : Object from class org.apache.commons.beanutils.converters.DateTimeConverter
+Change Variable Type	result : String to result : Object in method protected convertToString(value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Change Return Type	String to Object in method protected convertToString(value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Developers have reported that 10708 commits involve refactoring but only 879 involve refactoring operations
+There are 17 duplicate commits with refactoring out of the 879 commits.
+
+No refactorings detected at e7bd025ccd39ca3f28e110e7528a413f15773734
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed58cf2ae62813868e73d1
+Issue Title: : Improve Converter Implementations
+Refactorings at 8252efa3a0ba05fd56065bf87c145d6abd4f116e
+Change Return Type	Converter to NumberConverter in method protected makeConverter() : NumberConverter from class org.apache.commons.beanutils.converters.ByteConverterTestCase
+Change Return Type	Converter to NumberConverter in method protected makeConverter() : NumberConverter from class org.apache.commons.beanutils.converters.DoubleConverterTestCase
+Change Return Type	Converter to NumberConverter in method protected makeConverter() : NumberConverter from class org.apache.commons.beanutils.converters.FloatConverterTestCase
+Change Return Type	Converter to NumberConverter in method protected makeConverter() : NumberConverter from class org.apache.commons.beanutils.converters.IntegerConverterTestCase
+Change Return Type	Converter to NumberConverter in method protected makeConverter() : NumberConverter from class org.apache.commons.beanutils.converters.LongConverterTestCase
+Remove Thrown Exception Type	Exception in method public testConvertNull() : void from class org.apache.commons.beanutils.converters.NumberConverterTestBase
+Remove Thrown Exception Type	Exception in method public testConvertNumber() : void from class org.apache.commons.beanutils.converters.NumberConverterTestBase
+Change Return Type	Converter to NumberConverter in method protected abstract makeConverter() : NumberConverter from class org.apache.commons.beanutils.converters.NumberConverterTestBase
+Change Return Type	Converter to NumberConverter in method protected makeConverter() : NumberConverter from class org.apache.commons.beanutils.converters.ShortConverterTestCase
+Extract Superclass	org.apache.commons.beanutils.converters.NumberConverter from classes [org.apache.commons.beanutils.converters.BigDecimalConverter, org.apache.commons.beanutils.converters.BigIntegerConverter, org.apache.commons.beanutils.converters.ByteConverter, org.apache.commons.beanutils.converters.DoubleConverter, org.apache.commons.beanutils.converters.FloatConverter, org.apache.commons.beanutils.converters.IntegerConverter, org.apache.commons.beanutils.converters.LongConverter, org.apache.commons.beanutils.converters.ShortConverter]
+Add Thrown Exception Type	Exception in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Add Thrown Exception Type	Exception in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Add Thrown Exception Type	Exception in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Add Thrown Exception Type	Exception in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Add Thrown Exception Type	Exception in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Add Thrown Exception Type	Exception in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Add Thrown Exception Type	Exception in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Add Thrown Exception Type	Exception in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Change Method Access Modifier	public to protected in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Change Method Access Modifier	public to protected in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Change Method Access Modifier	public to protected in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Change Method Access Modifier	public to protected in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Change Method Access Modifier	public to protected in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Change Method Access Modifier	public to protected in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Change Method Access Modifier	public to protected in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Change Method Access Modifier	public to protected in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Pull Up Method	public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.BigDecimalConverter to protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Pull Up Method	public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.BigIntegerConverter to protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Pull Up Method	public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.ByteConverter to protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Pull Up Method	public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.DoubleConverter to protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Pull Up Method	public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.FloatConverter to protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Pull Up Method	public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.IntegerConverter to protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Pull Up Method	public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.LongConverter to protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Pull Up Method	public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.ShortConverter to protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Developers have reported that 10708 commits involve refactoring but only 880 involve refactoring operations
+There are 17 duplicate commits with refactoring out of the 880 commits.
+
+No refactorings detected at 18655b79d2297b3a9cccd59bc935fbbc80497f31
+
+No refactorings detected at a191bac6e0810e2ca1c59dafdccf11aa29944956
+
+No refactorings detected at f892f0117115f9515d5040dd756864df381bd2e3
+
+No refactorings detected at c54fbdb08e01627e4508e8c7dff31c2680d436ad
+
+No refactorings detected at 62e643b79b41cf91ee6cad3f689de2debe9d9a26
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed59dc2ae62813868e7a5b
+Issue Title: : Run Checkstyle/PMD on the source and get things fixed up
+Refactorings at 7153862be7dfc17134a969a08495566f880481a7
+Extract Attribute	private SPACE : Character in class org.apache.commons.beanutils.ConvertUtilsBean
+Rename Variable	bigDecimalDefault : BigDecimal to bigDecDeflt : BigDecimal in method public registerStandard(throwException boolean, defaultNull boolean) : void from class org.apache.commons.beanutils.ConvertUtilsBean
+Rename Variable	bigIntegerDefault : BigInteger to bigIntDeflt : BigInteger in method public registerStandard(throwException boolean, defaultNull boolean) : void from class org.apache.commons.beanutils.ConvertUtilsBean
+Developers have reported that 10708 commits involve refactoring but only 881 involve refactoring operations
+There are 17 duplicate commits with refactoring out of the 881 commits.
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed59dc2ae62813868e7a5b
+Issue Title: : Run Checkstyle/PMD on the source and get things fixed up
+Refactorings at 9465506f486cf45ae3b476851867e9638c83a476
+Rename Attribute	stringClassArray : Class[] to STRING_CLASS_PARAMETER : Class[] in class org.apache.commons.beanutils.MappedPropertyDescriptor
+Rename Attribute	_log : Log to log : Log in class org.apache.commons.beanutils.converters.AbstractConverter
+Rename Attribute	model : byte[] to MODEL : byte[] in class org.apache.commons.beanutils.converters.ByteArrayConverter
+Rename Attribute	model : char[] to MODEL : char[] in class org.apache.commons.beanutils.converters.CharacterArrayConverter
+Rename Attribute	model : double[] to MODEL : double[] in class org.apache.commons.beanutils.converters.DoubleArrayConverter
+Rename Attribute	model : float[] to MODEL : float[] in class org.apache.commons.beanutils.converters.FloatArrayConverter
+Rename Attribute	model : int[] to MODEL : int[] in class org.apache.commons.beanutils.converters.IntegerArrayConverter
+Rename Attribute	model : long[] to MODEL : long[] in class org.apache.commons.beanutils.converters.LongArrayConverter
+Rename Attribute	model : short[] to MODEL : short[] in class org.apache.commons.beanutils.converters.ShortArrayConverter
+Rename Attribute	model : String[] to MODEL : String[] in class org.apache.commons.beanutils.converters.StringArrayConverter
+Rename Attribute	ints : int[] to INT_MODEL : int[] in class org.apache.commons.beanutils.converters.StringArrayConverter
+Rename Attribute	defaultChars : String to DEFAULT_PATTERN_CHARS : String in class org.apache.commons.beanutils.locale.converters.DateLocaleConverter
+Developers have reported that 10708 commits involve refactoring but only 882 involve refactoring operations
+There are 17 duplicate commits with refactoring out of the 882 commits.
+
+No refactorings detected at f79c39513b19a86e00d7302deebd34718fdc1e9b
+
+No refactorings detected at 7f241adf69af25938b0944eb8332bbe5997a9ace
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed59f92ae62813868e7afe
+Issue Title: : Consider options for BeanUtils compatibility in light of Conversion improvements
+Refactorings at c203a56f1fd2ce7eafa07be45fe52e03e23dcafd
+Inline Variable	converter : Converter in method public setProperty(bean Object, name String, value Object) : void from class org.apache.commons.beanutils.BeanUtilsBean
+Developers have reported that 10708 commits involve refactoring but only 883 involve refactoring operations
+There are 18 duplicate commits with refactoring out of the 883 commits.
+
+No refactorings detected at 9547acb21b34a33d260d6e3c120bf2b003d6edf9
+
+No refactorings detected at e962d9366b987587392549b64fc52b2d72843695
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed5ab62ae62813868e7e49
+Issue Title: : Merge Bean-Collections back into core BeanUtils and remove Bean-Collections sub-project
+Refactorings at cc9e11a2b1baa008484110e659f56415baf26cd5
+Rename Class	org.apache.commons.beanutils.TestBeanMap renamed to org.apache.commons.beanutils.BeanMapTestCase
+Rename Class	org.apache.commons.beanutils.BeanPropertyValueChangeClosureTest renamed to org.apache.commons.beanutils.BeanPropertyValueChangeClosureTestCase
+Rename Class	org.apache.commons.beanutils.BeanPropertyValueEqualsPredicateTest renamed to org.apache.commons.beanutils.BeanPropertyValueEqualsPredicateTestCase
+Rename Class	org.apache.commons.beanutils.BeanToPropertyValueTransformerTest renamed to org.apache.commons.beanutils.BeanToPropertyValueTransformerTestCase
+Move Source Folder	optional/bean-collections/src to src
+Developers have reported that 10708 commits involve refactoring but only 884 involve refactoring operations
+There are 18 duplicate commits with refactoring out of the 884 commits.
+
+No refactorings detected at a4c36f7a53de71df561069bc7c5e46999ca468c7
+
+No refactorings detected at 87475d4e87ddded57c29566fc009d7798a806504
+
+No refactorings detected at 1b5231af20808b9c4a6aeaea6c55e38437c3af88
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed5ae22ae62813868e7ea8
+Issue Title: : Add @Deprecated and @Override Annotations
+Refactorings at 7d805bdcc99a29c764471bb3ace7e1a14fca6a39
+Add Method Annotation	@Override in method public setValue(value Object) : Object from class org.apache.commons.beanutils.BeanMap.Entry
+Add Attribute Annotation	@Deprecated in attribute public defaultTransformers : HashMap from class org.apache.commons.beanutils.BeanMap
+Add Method Annotation	@Override in method public clear() : void from class org.apache.commons.beanutils.BeanMap.defaultTransformers.new HashMap
+Add Method Annotation	@Override in method public containsKey(key Object) : boolean from class org.apache.commons.beanutils.BeanMap.defaultTransformers.new HashMap
+Add Method Annotation	@Override in method public containsValue(value Object) : boolean from class org.apache.commons.beanutils.BeanMap.defaultTransformers.new HashMap
+Add Method Annotation	@Override in method public entrySet() : Set from class org.apache.commons.beanutils.BeanMap.defaultTransformers.new HashMap
+Add Method Annotation	@Override in method public get(key Object) : Object from class org.apache.commons.beanutils.BeanMap.defaultTransformers.new HashMap
+Add Method Annotation	@Override in method public isEmpty() : boolean from class org.apache.commons.beanutils.BeanMap.defaultTransformers.new HashMap
+Add Method Annotation	@Override in method public keySet() : Set from class org.apache.commons.beanutils.BeanMap.defaultTransformers.new HashMap
+Add Method Annotation	@Override in method public put(key Object, value Object) : Object from class org.apache.commons.beanutils.BeanMap.defaultTransformers.new HashMap
+Add Method Annotation	@Override in method public putAll(m Map) : void from class org.apache.commons.beanutils.BeanMap.defaultTransformers.new HashMap
+Add Method Annotation	@Override in method public remove(key Object) : Object from class org.apache.commons.beanutils.BeanMap.defaultTransformers.new HashMap
+Add Method Annotation	@Override in method public size() : int from class org.apache.commons.beanutils.BeanMap.defaultTransformers.new HashMap
+Add Method Annotation	@Override in method public values() : Collection from class org.apache.commons.beanutils.BeanMap.defaultTransformers.new HashMap
+Add Method Annotation	@Override in method public toString() : String from class org.apache.commons.beanutils.BeanMap
+Add Method Annotation	@Override in method public clone() : Object from class org.apache.commons.beanutils.BeanMap
+Add Method Annotation	@Override in method public clear() : void from class org.apache.commons.beanutils.BeanMap
+Add Method Annotation	@Override in method public containsKey(name Object) : boolean from class org.apache.commons.beanutils.BeanMap
+Add Method Annotation	@Override in method public containsValue(value Object) : boolean from class org.apache.commons.beanutils.BeanMap
+Add Method Annotation	@Override in method public get(name Object) : Object from class org.apache.commons.beanutils.BeanMap
+Add Method Annotation	@Override in method public put(name Object, value Object) : Object from class org.apache.commons.beanutils.BeanMap
+Add Method Annotation	@Override in method public size() : int from class org.apache.commons.beanutils.BeanMap
+Add Method Annotation	@Override in method public keySet() : Set from class org.apache.commons.beanutils.BeanMap
+Add Method Annotation	@Override in method public iterator() : Iterator from class org.apache.commons.beanutils.BeanMap.entrySet.decorate.new AbstractSet
+Add Method Annotation	@Override in method public size() : int from class org.apache.commons.beanutils.BeanMap.entrySet.decorate.new AbstractSet
+Add Method Annotation	@Override in method public entrySet() : Set from class org.apache.commons.beanutils.BeanMap
+Add Method Annotation	@Override in method public values() : Collection from class org.apache.commons.beanutils.BeanMap
+Add Attribute Annotation	@Deprecated in attribute private debug : int from class org.apache.commons.beanutils.BeanUtils
+Add Method Annotation	@Deprecated in method public getDebug() : int from class org.apache.commons.beanutils.BeanUtils
+Add Method Annotation	@Deprecated in method public setDebug(newDebug int) : void from class org.apache.commons.beanutils.BeanUtils
+Add Method Annotation	@Override in method protected convert(value Object, type Class) : Object from class org.apache.commons.beanutils.BeanUtilsBean2
+Add Method Annotation	@Override in method public getCause() : Throwable from class org.apache.commons.beanutils.ConversionException
+Add Method Annotation	@Deprecated in method public getDefaultBoolean() : boolean from class org.apache.commons.beanutils.ConvertUtils
+Add Method Annotation	@Deprecated in method public setDefaultBoolean(newDefaultBoolean boolean) : void from class org.apache.commons.beanutils.ConvertUtils
+Add Method Annotation	@Deprecated in method public getDefaultByte() : byte from class org.apache.commons.beanutils.ConvertUtils
+Add Method Annotation	@Deprecated in method public setDefaultByte(newDefaultByte byte) : void from class org.apache.commons.beanutils.ConvertUtils
+Add Method Annotation	@Deprecated in method public getDefaultCharacter() : char from class org.apache.commons.beanutils.ConvertUtils
+Add Method Annotation	@Deprecated in method public setDefaultCharacter(newDefaultCharacter char) : void from class org.apache.commons.beanutils.ConvertUtils
+Add Method Annotation	@Deprecated in method public getDefaultDouble() : double from class org.apache.commons.beanutils.ConvertUtils
+Add Method Annotation	@Deprecated in method public setDefaultDouble(newDefaultDouble double) : void from class org.apache.commons.beanutils.ConvertUtils
+Add Method Annotation	@Deprecated in method public getDefaultFloat() : float from class org.apache.commons.beanutils.ConvertUtils
+Add Method Annotation	@Deprecated in method public setDefaultFloat(newDefaultFloat float) : void from class org.apache.commons.beanutils.ConvertUtils
+Add Method Annotation	@Deprecated in method public getDefaultInteger() : int from class org.apache.commons.beanutils.ConvertUtils
+Add Method Annotation	@Deprecated in method public setDefaultInteger(newDefaultInteger int) : void from class org.apache.commons.beanutils.ConvertUtils
+Add Method Annotation	@Deprecated in method public getDefaultLong() : long from class org.apache.commons.beanutils.ConvertUtils
+Add Method Annotation	@Deprecated in method public setDefaultLong(newDefaultLong long) : void from class org.apache.commons.beanutils.ConvertUtils
+Add Method Annotation	@Deprecated in method public getDefaultShort() : short from class org.apache.commons.beanutils.ConvertUtils
+Add Method Annotation	@Deprecated in method public setDefaultShort(newDefaultShort short) : void from class org.apache.commons.beanutils.ConvertUtils
+Add Attribute Annotation	@Deprecated in attribute private defaultBoolean : Boolean from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Attribute Annotation	@Deprecated in attribute private defaultByte : Byte from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Attribute Annotation	@Deprecated in attribute private defaultCharacter : Character from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Attribute Annotation	@Deprecated in attribute private defaultDouble : Double from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Attribute Annotation	@Deprecated in attribute private defaultFloat : Float from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Attribute Annotation	@Deprecated in attribute private defaultInteger : Integer from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Attribute Annotation	@Deprecated in attribute private defaultLong : Long from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Attribute Annotation	@Deprecated in attribute private defaultShort : Short from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Method Annotation	@Deprecated in method public getDefaultBoolean() : boolean from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Method Annotation	@Deprecated in method public setDefaultBoolean(newDefaultBoolean boolean) : void from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Method Annotation	@Deprecated in method public getDefaultByte() : byte from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Method Annotation	@Deprecated in method public setDefaultByte(newDefaultByte byte) : void from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Method Annotation	@Deprecated in method public getDefaultCharacter() : char from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Method Annotation	@Deprecated in method public setDefaultCharacter(newDefaultCharacter char) : void from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Method Annotation	@Deprecated in method public getDefaultDouble() : double from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Method Annotation	@Deprecated in method public setDefaultDouble(newDefaultDouble double) : void from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Method Annotation	@Deprecated in method public getDefaultFloat() : float from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Method Annotation	@Deprecated in method public setDefaultFloat(newDefaultFloat float) : void from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Method Annotation	@Deprecated in method public getDefaultInteger() : int from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Method Annotation	@Deprecated in method public setDefaultInteger(newDefaultInteger int) : void from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Method Annotation	@Deprecated in method public getDefaultLong() : long from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Method Annotation	@Deprecated in method public setDefaultLong(newDefaultLong long) : void from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Method Annotation	@Deprecated in method public getDefaultShort() : short from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Method Annotation	@Deprecated in method public setDefaultShort(newDefaultShort short) : void from class org.apache.commons.beanutils.ConvertUtilsBean
+Add Method Annotation	@Override in method public convert(value Object) : String from class org.apache.commons.beanutils.ConvertUtilsBean2
+Add Method Annotation	@Override in method public convert(value String, clazz Class) : Object from class org.apache.commons.beanutils.ConvertUtilsBean2
+Add Method Annotation	@Override in method public convert(value String[], clazz Class) : Object from class org.apache.commons.beanutils.ConvertUtilsBean2
+Add Method Annotation	@Override in method public set(name String, value Object) : void from class org.apache.commons.beanutils.ConvertingWrapDynaBean
+Add Method Annotation	@Override in method public getDynaProperty(name String) : DynaProperty from class org.apache.commons.beanutils.LazyDynaClass
+Add Method Annotation	@Override in method public add(index int, element Object) : void from class org.apache.commons.beanutils.LazyDynaList
+Add Method Annotation	@Override in method public add(element Object) : boolean from class org.apache.commons.beanutils.LazyDynaList
+Add Method Annotation	@Override in method public addAll(collection Collection) : boolean from class org.apache.commons.beanutils.LazyDynaList
+Add Method Annotation	@Override in method public addAll(index int, collection Collection) : boolean from class org.apache.commons.beanutils.LazyDynaList
+Add Method Annotation	@Override in method public get(index int) : Object from class org.apache.commons.beanutils.LazyDynaList
+Add Method Annotation	@Override in method public set(index int, element Object) : Object from class org.apache.commons.beanutils.LazyDynaList
+Add Method Annotation	@Override in method public toArray() : Object[] from class org.apache.commons.beanutils.LazyDynaList
+Add Method Annotation	@Override in method public toArray(model Object[]) : Object[] from class org.apache.commons.beanutils.LazyDynaList
+Add Method Annotation	@Override in method public getMap() : Map from class org.apache.commons.beanutils.LazyDynaMap
+Add Method Annotation	@Override in method public set(name String, value Object) : void from class org.apache.commons.beanutils.LazyDynaMap
+Add Method Annotation	@Override in method protected isDynaProperty(name String) : boolean from class org.apache.commons.beanutils.LazyDynaMap
+Add Attribute Annotation	@Deprecated in attribute public INDEXED_DELIM : char from class org.apache.commons.beanutils.PropertyUtils
+Add Attribute Annotation	@Deprecated in attribute public INDEXED_DELIM2 : char from class org.apache.commons.beanutils.PropertyUtils
+Add Attribute Annotation	@Deprecated in attribute public MAPPED_DELIM : char from class org.apache.commons.beanutils.PropertyUtils
+Add Attribute Annotation	@Deprecated in attribute public MAPPED_DELIM2 : char from class org.apache.commons.beanutils.PropertyUtils
+Add Attribute Annotation	@Deprecated in attribute public NESTED_DELIM : char from class org.apache.commons.beanutils.PropertyUtils
+Add Attribute Annotation	@Deprecated in attribute private debug : int from class org.apache.commons.beanutils.PropertyUtils
+Add Method Annotation	@Deprecated in method public getDebug() : int from class org.apache.commons.beanutils.PropertyUtils
+Add Method Annotation	@Deprecated in method public setDebug(newDebug int) : void from class org.apache.commons.beanutils.PropertyUtils
+Add Method Annotation	@Deprecated in method public getMappedPropertyDescriptors(beanClass Class) : FastHashMap from class org.apache.commons.beanutils.PropertyUtils
+Add Method Annotation	@Deprecated in method public getMappedPropertyDescriptors(bean Object) : FastHashMap from class org.apache.commons.beanutils.PropertyUtils
+Add Method Annotation	@Deprecated in method public getMappedPropertyDescriptors(beanClass Class) : FastHashMap from class org.apache.commons.beanutils.PropertyUtilsBean
+Add Method Annotation	@Deprecated in method public getMappedPropertyDescriptors(bean Object) : FastHashMap from class org.apache.commons.beanutils.PropertyUtilsBean
+Add Method Annotation	@Override in method protected loadClass(className String) : Class from class org.apache.commons.beanutils.ResultSetDynaClass
+Add Method Annotation	@Override in method public equals(o Object) : boolean from class org.apache.commons.beanutils.WeakFastHashMap.CollectionView
+Add Method Annotation	@Override in method public hashCode() : int from class org.apache.commons.beanutils.WeakFastHashMap.CollectionView
+Add Method Annotation	@Override in method protected get(map Map) : Collection from class org.apache.commons.beanutils.WeakFastHashMap.KeySet
+Add Method Annotation	@Override in method protected iteratorNext(entry Map.Entry) : Object from class org.apache.commons.beanutils.WeakFastHashMap.KeySet
+Add Method Annotation	@Override in method protected get(map Map) : Collection from class org.apache.commons.beanutils.WeakFastHashMap.Values
+Add Method Annotation	@Override in method protected iteratorNext(entry Map.Entry) : Object from class org.apache.commons.beanutils.WeakFastHashMap.Values
+Add Method Annotation	@Override in method protected get(map Map) : Collection from class org.apache.commons.beanutils.WeakFastHashMap.EntrySet
+Add Method Annotation	@Override in method protected iteratorNext(entry Map.Entry) : Object from class org.apache.commons.beanutils.WeakFastHashMap.EntrySet
+Add Method Annotation	@Override in method public get(key Object) : Object from class org.apache.commons.beanutils.WeakFastHashMap
+Add Method Annotation	@Override in method public size() : int from class org.apache.commons.beanutils.WeakFastHashMap
+Add Method Annotation	@Override in method public isEmpty() : boolean from class org.apache.commons.beanutils.WeakFastHashMap
+Add Method Annotation	@Override in method public containsKey(key Object) : boolean from class org.apache.commons.beanutils.WeakFastHashMap
+Add Method Annotation	@Override in method public containsValue(value Object) : boolean from class org.apache.commons.beanutils.WeakFastHashMap
+Add Method Annotation	@Override in method public put(key Object, value Object) : Object from class org.apache.commons.beanutils.WeakFastHashMap
+Add Method Annotation	@Override in method public putAll(in Map) : void from class org.apache.commons.beanutils.WeakFastHashMap
+Add Method Annotation	@Override in method public remove(key Object) : Object from class org.apache.commons.beanutils.WeakFastHashMap
+Add Method Annotation	@Override in method public clear() : void from class org.apache.commons.beanutils.WeakFastHashMap
+Add Method Annotation	@Override in method public equals(o Object) : boolean from class org.apache.commons.beanutils.WeakFastHashMap
+Add Method Annotation	@Override in method public hashCode() : int from class org.apache.commons.beanutils.WeakFastHashMap
+Add Method Annotation	@Override in method public clone() : Object from class org.apache.commons.beanutils.WeakFastHashMap
+Add Method Annotation	@Override in method public entrySet() : Set from class org.apache.commons.beanutils.WeakFastHashMap
+Add Method Annotation	@Override in method public keySet() : Set from class org.apache.commons.beanutils.WeakFastHashMap
+Add Method Annotation	@Override in method public values() : Collection from class org.apache.commons.beanutils.WeakFastHashMap
+Add Attribute Annotation	@Deprecated in attribute protected beanClass : Class from class org.apache.commons.beanutils.WrapDynaClass
+Add Method Annotation	@Override in method protected initialValue() : Object from class org.apache.commons.beanutils.WrapDynaClass.CLASSLOADER_CACHE.new ContextClassLoaderLocal
+Add Attribute Annotation	@Deprecated in attribute protected dynaClasses : HashMap from class org.apache.commons.beanutils.WrapDynaClass
+Add Method Annotation	@Override in method public clear() : void from class org.apache.commons.beanutils.WrapDynaClass.dynaClasses.new HashMap
+Add Method Annotation	@Override in method public containsKey(key Object) : boolean from class org.apache.commons.beanutils.WrapDynaClass.dynaClasses.new HashMap
+Add Method Annotation	@Override in method public containsValue(value Object) : boolean from class org.apache.commons.beanutils.WrapDynaClass.dynaClasses.new HashMap
+Add Method Annotation	@Override in method public entrySet() : Set from class org.apache.commons.beanutils.WrapDynaClass.dynaClasses.new HashMap
+Add Method Annotation	@Override in method public equals(o Object) : boolean from class org.apache.commons.beanutils.WrapDynaClass.dynaClasses.new HashMap
+Add Method Annotation	@Override in method public get(key Object) : Object from class org.apache.commons.beanutils.WrapDynaClass.dynaClasses.new HashMap
+Add Method Annotation	@Override in method public hashCode() : int from class org.apache.commons.beanutils.WrapDynaClass.dynaClasses.new HashMap
+Add Method Annotation	@Override in method public isEmpty() : boolean from class org.apache.commons.beanutils.WrapDynaClass.dynaClasses.new HashMap
+Add Method Annotation	@Override in method public keySet() : Set from class org.apache.commons.beanutils.WrapDynaClass.dynaClasses.new HashMap
+Add Method Annotation	@Override in method public put(key Object, value Object) : Object from class org.apache.commons.beanutils.WrapDynaClass.dynaClasses.new HashMap
+Add Method Annotation	@Override in method public putAll(m Map) : void from class org.apache.commons.beanutils.WrapDynaClass.dynaClasses.new HashMap
+Add Method Annotation	@Override in method public remove(key Object) : Object from class org.apache.commons.beanutils.WrapDynaClass.dynaClasses.new HashMap
+Add Method Annotation	@Override in method public size() : int from class org.apache.commons.beanutils.WrapDynaClass.dynaClasses.new HashMap
+Add Method Annotation	@Override in method public values() : Collection from class org.apache.commons.beanutils.WrapDynaClass.dynaClasses.new HashMap
+Add Class Annotation	@Deprecated in class org.apache.commons.beanutils.converters.AbstractArrayConverter
+Add Method Annotation	@Override in method protected getDefaultType() : Class from class org.apache.commons.beanutils.converters.ArrayConverter
+Add Method Annotation	@Override in method protected convertToString(value Object) : String from class org.apache.commons.beanutils.converters.ArrayConverter
+Add Method Annotation	@Override in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.ArrayConverter
+Add Method Annotation	@Override in method protected convertArray(value Object) : Object from class org.apache.commons.beanutils.converters.ArrayConverter
+Add Method Annotation	@Override in method protected getDefault(type Class) : Object from class org.apache.commons.beanutils.converters.ArrayConverter
+Add Method Annotation	@Override in method public toString() : String from class org.apache.commons.beanutils.converters.ArrayConverter
+Add Method Annotation	@Override in method protected getDefaultType() : Class from class org.apache.commons.beanutils.converters.BigDecimalConverter
+Add Method Annotation	@Override in method protected getDefaultType() : Class from class org.apache.commons.beanutils.converters.BigIntegerConverter
+Add Class Annotation	@Deprecated in class org.apache.commons.beanutils.converters.BooleanArrayConverter
+Add Method Annotation	@Override in method public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.BooleanArrayConverter
+Add Attribute Annotation	@Deprecated in attribute public NO_DEFAULT : Object from class org.apache.commons.beanutils.converters.BooleanConverter
+Add Method Annotation	@Override in method protected getDefaultType() : Class from class org.apache.commons.beanutils.converters.BooleanConverter
+Add Method Annotation	@Override in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.BooleanConverter
+Add Class Annotation	@Deprecated in class org.apache.commons.beanutils.converters.ByteArrayConverter
+Add Method Annotation	@Override in method public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.ByteArrayConverter
+Add Method Annotation	@Override in method protected getDefaultType() : Class from class org.apache.commons.beanutils.converters.ByteConverter
+Add Method Annotation	@Override in method protected getDefaultType() : Class from class org.apache.commons.beanutils.converters.CalendarConverter
+Add Class Annotation	@Deprecated in class org.apache.commons.beanutils.converters.CharacterArrayConverter
+Add Method Annotation	@Override in method public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.CharacterArrayConverter
+Add Method Annotation	@Override in method protected getDefaultType() : Class from class org.apache.commons.beanutils.converters.CharacterConverter
+Add Method Annotation	@Override in method protected convertToString(value Object) : String from class org.apache.commons.beanutils.converters.CharacterConverter
+Add Method Annotation	@Override in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.CharacterConverter
+Add Method Annotation	@Override in method protected getDefaultType() : Class from class org.apache.commons.beanutils.converters.ClassConverter
+Add Method Annotation	@Override in method protected convertToString(value Object) : String from class org.apache.commons.beanutils.converters.ClassConverter
+Add Method Annotation	@Override in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.ClassConverter
+Add Method Annotation	@Override in method protected getDefaultType() : Class from class org.apache.commons.beanutils.converters.DateConverter
+Add Method Annotation	@Override in method protected convertToString(value Object) : String from class org.apache.commons.beanutils.converters.DateTimeConverter
+Add Method Annotation	@Override in method protected convertToType(targetType Class, value Object) : Object from class org.apache.commons.beanutils.converters.DateTimeConverter
+Add Method Annotation	@Override in method public toString() : String from class org.apache.commons.beanutils.converters.DateTimeConverter
+Add Class Annotation	@Deprecated in class org.apache.commons.beanutils.converters.DoubleArrayConverter
+Add Method Annotation	@Override in method public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.DoubleArrayConverter
+Add Method Annotation	@Override in method protected getDefaultType() : Class from class org.apache.commons.beanutils.converters.DoubleConverter
+Add Method Annotation	@Override in method protected getDefaultType() : Class from class org.apache.commons.beanutils.converters.FileConverter
+Add Method Annotation	@Override in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.FileConverter
+Add Class Annotation	@Deprecated in class org.apache.commons.beanutils.converters.FloatArrayConverter
+Add Method Annotation	@Override in method public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.FloatArrayConverter
+Add Method Annotation	@Override in method protected getDefaultType() : Class from class org.apache.commons.beanutils.converters.FloatConverter
+Add Class Annotation	@Deprecated in class org.apache.commons.beanutils.converters.IntegerArrayConverter
+Add Method Annotation	@Override in method public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.IntegerArrayConverter
+Add Method Annotation	@Override in method protected getDefaultType() : Class from class org.apache.commons.beanutils.converters.IntegerConverter
+Add Class Annotation	@Deprecated in class org.apache.commons.beanutils.converters.LongArrayConverter
+Add Method Annotation	@Override in method public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.LongArrayConverter
+Add Method Annotation	@Override in method protected getDefaultType() : Class from class org.apache.commons.beanutils.converters.LongConverter
+Add Method Annotation	@Override in method protected convertToString(value Object) : String from class org.apache.commons.beanutils.converters.NumberConverter
+Add Method Annotation	@Override in method protected convertToType(targetType Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Add Method Annotation	@Override in method public toString() : String from class org.apache.commons.beanutils.converters.NumberConverter
+Add Class Annotation	@Deprecated in class org.apache.commons.beanutils.converters.ShortArrayConverter
+Add Method Annotation	@Override in method public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.ShortArrayConverter
+Add Method Annotation	@Override in method protected getDefaultType() : Class from class org.apache.commons.beanutils.converters.ShortConverter
+Add Method Annotation	@Override in method protected getDefaultType() : Class from class org.apache.commons.beanutils.converters.SqlDateConverter
+Add Method Annotation	@Override in method protected getDefaultType() : Class from class org.apache.commons.beanutils.converters.SqlTimeConverter
+Add Method Annotation	@Override in method protected getFormat(locale Locale, timeZone TimeZone) : DateFormat from class org.apache.commons.beanutils.converters.SqlTimeConverter
+Add Method Annotation	@Override in method protected getDefaultType() : Class from class org.apache.commons.beanutils.converters.SqlTimestampConverter
+Add Method Annotation	@Override in method protected getFormat(locale Locale, timeZone TimeZone) : DateFormat from class org.apache.commons.beanutils.converters.SqlTimestampConverter
+Add Class Annotation	@Deprecated in class org.apache.commons.beanutils.converters.StringArrayConverter
+Add Method Annotation	@Override in method public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.StringArrayConverter
+Add Method Annotation	@Override in method protected getDefaultType() : Class from class org.apache.commons.beanutils.converters.StringConverter
+Add Method Annotation	@Override in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.StringConverter
+Add Method Annotation	@Override in method protected getDefaultType() : Class from class org.apache.commons.beanutils.converters.URLConverter
+Add Method Annotation	@Override in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.URLConverter
+Add Class Annotation	@Deprecated in class org.apache.commons.beanutils.locale.LocaleBeanUtils.Descriptor
+Add Method Annotation	@Deprecated in method protected calculate(bean Object, name String) : Descriptor from class org.apache.commons.beanutils.locale.LocaleBeanUtils
+Add Class Annotation	@Deprecated in class org.apache.commons.beanutils.locale.LocaleBeanUtilsBean.Descriptor
+Add Method Annotation	@Override in method protected initialValue() : Object from class org.apache.commons.beanutils.locale.LocaleBeanUtilsBean.LOCALE_BEANS_BY_CLASSLOADER.new ContextClassLoaderLocal
+Add Method Annotation	@Override in method public getIndexedProperty(bean Object, name String) : String from class org.apache.commons.beanutils.locale.LocaleBeanUtilsBean
+Add Method Annotation	@Override in method public getIndexedProperty(bean Object, name String, index int) : String from class org.apache.commons.beanutils.locale.LocaleBeanUtilsBean
+Add Method Annotation	@Override in method public getSimpleProperty(bean Object, name String) : String from class org.apache.commons.beanutils.locale.LocaleBeanUtilsBean
+Add Method Annotation	@Override in method public getMappedProperty(bean Object, name String, key String) : String from class org.apache.commons.beanutils.locale.LocaleBeanUtilsBean
+Add Method Annotation	@Override in method public getMappedProperty(bean Object, name String) : String from class org.apache.commons.beanutils.locale.LocaleBeanUtilsBean
+Add Method Annotation	@Override in method public getNestedProperty(bean Object, name String) : String from class org.apache.commons.beanutils.locale.LocaleBeanUtilsBean
+Add Method Annotation	@Override in method public getProperty(bean Object, name String) : String from class org.apache.commons.beanutils.locale.LocaleBeanUtilsBean
+Add Method Annotation	@Override in method public setProperty(bean Object, name String, value Object) : void from class org.apache.commons.beanutils.locale.LocaleBeanUtilsBean
+Add Method Annotation	@Deprecated in method protected calculate(bean Object, name String) : Descriptor from class org.apache.commons.beanutils.locale.LocaleBeanUtilsBean
+Add Method Annotation	@Deprecated in method protected lookup(locale Locale) : FastHashMap from class org.apache.commons.beanutils.locale.LocaleConvertUtils
+Add Method Annotation	@Deprecated in method protected create(locale Locale) : FastHashMap from class org.apache.commons.beanutils.locale.LocaleConvertUtils
+Add Method Annotation	@Override in method public clear() : void from class org.apache.commons.beanutils.locale.LocaleConvertUtilsBean.DelegateFastHashMap
+Add Method Annotation	@Override in method public containsKey(key Object) : boolean from class org.apache.commons.beanutils.locale.LocaleConvertUtilsBean.DelegateFastHashMap
+Add Method Annotation	@Override in method public containsValue(value Object) : boolean from class org.apache.commons.beanutils.locale.LocaleConvertUtilsBean.DelegateFastHashMap
+Add Method Annotation	@Override in method public entrySet() : Set from class org.apache.commons.beanutils.locale.LocaleConvertUtilsBean.DelegateFastHashMap
+Add Method Annotation	@Override in method public equals(o Object) : boolean from class org.apache.commons.beanutils.locale.LocaleConvertUtilsBean.DelegateFastHashMap
+Add Method Annotation	@Override in method public get(key Object) : Object from class org.apache.commons.beanutils.locale.LocaleConvertUtilsBean.DelegateFastHashMap
+Add Method Annotation	@Override in method public hashCode() : int from class org.apache.commons.beanutils.locale.LocaleConvertUtilsBean.DelegateFastHashMap
+Add Method Annotation	@Override in method public isEmpty() : boolean from class org.apache.commons.beanutils.locale.LocaleConvertUtilsBean.DelegateFastHashMap
+Add Method Annotation	@Override in method public keySet() : Set from class org.apache.commons.beanutils.locale.LocaleConvertUtilsBean.DelegateFastHashMap
+Add Method Annotation	@Override in method public put(key Object, value Object) : Object from class org.apache.commons.beanutils.locale.LocaleConvertUtilsBean.DelegateFastHashMap
+Add Method Annotation	@Override in method public putAll(m Map) : void from class org.apache.commons.beanutils.locale.LocaleConvertUtilsBean.DelegateFastHashMap
+Add Method Annotation	@Override in method public remove(key Object) : Object from class org.apache.commons.beanutils.locale.LocaleConvertUtilsBean.DelegateFastHashMap
+Add Method Annotation	@Override in method public size() : int from class org.apache.commons.beanutils.locale.LocaleConvertUtilsBean.DelegateFastHashMap
+Add Method Annotation	@Override in method public values() : Collection from class org.apache.commons.beanutils.locale.LocaleConvertUtilsBean.DelegateFastHashMap
+Add Method Annotation	@Override in method public getFast() : boolean from class org.apache.commons.beanutils.locale.LocaleConvertUtilsBean.DelegateFastHashMap
+Add Method Annotation	@Override in method public setFast(fast boolean) : void from class org.apache.commons.beanutils.locale.LocaleConvertUtilsBean.DelegateFastHashMap
+Add Method Annotation	@Deprecated in method protected lookup(locale Locale) : FastHashMap from class org.apache.commons.beanutils.locale.LocaleConvertUtilsBean
+Add Method Annotation	@Deprecated in method protected create(locale Locale) : FastHashMap from class org.apache.commons.beanutils.locale.LocaleConvertUtilsBean
+Add Method Annotation	@Override in method protected parse(value Object, pattern String) : Object from class org.apache.commons.beanutils.locale.converters.BigDecimalLocaleConverter
+Add Method Annotation	@Override in method protected parse(value Object, pattern String) : Object from class org.apache.commons.beanutils.locale.converters.BigIntegerLocaleConverter
+Add Method Annotation	@Override in method protected parse(value Object, pattern String) : Object from class org.apache.commons.beanutils.locale.converters.ByteLocaleConverter
+Add Method Annotation	@Override in method protected parse(value Object, pattern String) : Object from class org.apache.commons.beanutils.locale.converters.DateLocaleConverter
+Add Method Annotation	@Override in method protected parse(value Object, pattern String) : Object from class org.apache.commons.beanutils.locale.converters.DecimalLocaleConverter
+Add Method Annotation	@Override in method protected parse(value Object, pattern String) : Object from class org.apache.commons.beanutils.locale.converters.DoubleLocaleConverter
+Add Method Annotation	@Override in method protected parse(value Object, pattern String) : Object from class org.apache.commons.beanutils.locale.converters.FloatLocaleConverter
+Add Method Annotation	@Override in method protected parse(value Object, pattern String) : Object from class org.apache.commons.beanutils.locale.converters.IntegerLocaleConverter
+Add Method Annotation	@Override in method protected parse(value Object, pattern String) : Object from class org.apache.commons.beanutils.locale.converters.LongLocaleConverter
+Add Method Annotation	@Override in method protected parse(value Object, pattern String) : Object from class org.apache.commons.beanutils.locale.converters.ShortLocaleConverter
+Add Method Annotation	@Override in method protected parse(value Object, pattern String) : Object from class org.apache.commons.beanutils.locale.converters.SqlDateLocaleConverter
+Add Method Annotation	@Override in method protected parse(value Object, pattern String) : Object from class org.apache.commons.beanutils.locale.converters.SqlTimeLocaleConverter
+Add Method Annotation	@Override in method protected parse(value Object, pattern String) : Object from class org.apache.commons.beanutils.locale.converters.SqlTimestampLocaleConverter
+Add Method Annotation	@Override in method protected parse(value Object, pattern String) : Object from class org.apache.commons.beanutils.locale.converters.StringLocaleConverter
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.BasicDynaBeanTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.BasicDynaBeanTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.BeanComparatorTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.BeanComparatorTestCase
+Add Method Annotation	@Override in method public getSampleKeys() : Object[] from class org.apache.commons.beanutils.BeanMapTestCase
+Add Method Annotation	@Override in method public getSampleValues() : Object[] from class org.apache.commons.beanutils.BeanMapTestCase
+Add Method Annotation	@Override in method public getNewSampleValues() : Object[] from class org.apache.commons.beanutils.BeanMapTestCase
+Add Method Annotation	@Override in method public verifyValues() : void from class org.apache.commons.beanutils.BeanMapTestCase
+Add Method Annotation	@Override in method public isPutAddSupported() : boolean from class org.apache.commons.beanutils.BeanMapTestCase
+Add Method Annotation	@Override in method public isRemoveSupported() : boolean from class org.apache.commons.beanutils.BeanMapTestCase
+Add Method Annotation	@Override in method public makeFullMap() : Map from class org.apache.commons.beanutils.BeanMapTestCase
+Add Method Annotation	@Override in method public makeEmptyMap() : Map from class org.apache.commons.beanutils.BeanMapTestCase
+Add Method Annotation	@Override in method public ignoredTests() : String[] from class org.apache.commons.beanutils.BeanMapTestCase
+Add Method Annotation	@Override in method public testMapClear() : void from class org.apache.commons.beanutils.BeanMapTestCase
+Add Method Annotation	@Override in method public testMapPut() : void from class org.apache.commons.beanutils.BeanMapTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.BeanUtils2TestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.BeanUtils2TestCase
+Add Method Annotation	@Override in method public testCopyPropertyConvertToString() : void from class org.apache.commons.beanutils.BeanUtils2TestCase
+Add Method Annotation	@Override in method public testCopyPropertyConvertToStringArray() : void from class org.apache.commons.beanutils.BeanUtils2TestCase
+Add Method Annotation	@Override in method public testCopyPropertyConvertToStringIndexed() : void from class org.apache.commons.beanutils.BeanUtils2TestCase
+Add Method Annotation	@Override in method public testGetArrayPropertyDate() : void from class org.apache.commons.beanutils.BeanUtils2TestCase
+Add Method Annotation	@Override in method public testGetIndexedPropertyDate() : void from class org.apache.commons.beanutils.BeanUtils2TestCase
+Add Method Annotation	@Override in method public testGetSimplePropertyDate() : void from class org.apache.commons.beanutils.BeanUtils2TestCase
+Add Method Annotation	@Override in method public testSetPropertyConvertToString() : void from class org.apache.commons.beanutils.BeanUtils2TestCase
+Add Method Annotation	@Override in method public testSetPropertyConvertToStringArray() : void from class org.apache.commons.beanutils.BeanUtils2TestCase
+Add Method Annotation	@Override in method public testSetPropertyConvertToStringIndexed() : void from class org.apache.commons.beanutils.BeanUtils2TestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.BeanUtilsBenchCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.BeanUtilsBenchCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.BeanUtilsTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.BeanUtilsTestCase
+Add Method Annotation	@Override in method public toString() : String from class org.apache.commons.beanutils.BeanificationTestCase.TestClassLoader
+Add Method Annotation	@Override in method public run() : void from class org.apache.commons.beanutils.BeanificationTestCase.testMemoryLeak.GetBeanUtilsBeanThread
+Add Method Annotation	@Override in method public toString() : String from class org.apache.commons.beanutils.BeanificationTestCase.testMemoryLeak.GetBeanUtilsBeanThread
+Add Method Annotation	@Override in method public run() : void from class org.apache.commons.beanutils.BeanificationTestCase.testGetByContextClassLoader.GetBeanUtilsBeanThread
+Add Method Annotation	@Override in method public toString() : String from class org.apache.commons.beanutils.BeanificationTestCase.testGetByContextClassLoader.GetBeanUtilsBeanThread
+Add Method Annotation	@Override in method public run() : void from class org.apache.commons.beanutils.BeanificationTestCase.testContextClassLoaderLocal.CCLLTesterThread
+Add Method Annotation	@Override in method public toString() : String from class org.apache.commons.beanutils.BeanificationTestCase.testContextClassLoaderLocal.CCLLTesterThread
+Add Method Annotation	@Override in method public run() : void from class org.apache.commons.beanutils.BeanificationTestCase.testContextClassloaderIndependence.TestIndependenceThread
+Add Method Annotation	@Override in method public toString() : String from class org.apache.commons.beanutils.BeanificationTestCase.testContextClassloaderIndependence.TestIndependenceThread
+Add Method Annotation	@Override in method public run() : void from class org.apache.commons.beanutils.BeanificationTestCase.testBeanUtilsBeanSetInstance.SetInstanceTesterThread
+Add Method Annotation	@Override in method public toString() : String from class org.apache.commons.beanutils.BeanificationTestCase.testBeanUtilsBeanSetInstance.SetInstanceTesterThread
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.BeanificationTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.BeanificationTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.ConstructorUtilsTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.ConstructorUtilsTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.ConvertUtilsTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.ConvertUtilsTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.DynaBeanMapDecoratorTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.DynaBeanMapDecoratorTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.DynaBeanUtilsTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.DynaBeanUtilsTestCase
+Add Method Annotation	@Override in method protected setUp() : void from class org.apache.commons.beanutils.DynaPropertyTestCase
+Add Method Annotation	@Override in method protected tearDown() : void from class org.apache.commons.beanutils.DynaPropertyTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.DynaPropertyUtilsTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.DynaPropertyUtilsTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.DynaResultSetTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.DynaResultSetTestCase
+Add Method Annotation	@Override in method public getObject(columnName String) : Object from class org.apache.commons.beanutils.DynaRowSetTestCase.TestResultSetInconsistent
+Add Method Annotation	@Override in method public getColumnClassName(columnIndex int) : String from class org.apache.commons.beanutils.DynaRowSetTestCase.TestResultSetMetaDataInconsistent
+Add Method Annotation	@Override in method public toString() : String from class org.apache.commons.beanutils.DynaRowSetTestCase.CustomTimestamp
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.DynaRowSetTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.DynaRowSetTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.IndexedPropertyTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.IndexedPropertyTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.LazyDynaBeanTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.LazyDynaBeanTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.LazyDynaClassTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.LazyDynaClassTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.LazyDynaListTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.LazyDynaListTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.LazyDynaMapTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.LazyDynaMapTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.MappedPropertyTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.MappedPropertyTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.MethodUtilsTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.MethodUtilsTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.PropertyUtilsBenchCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.PropertyUtilsBenchCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.PropertyUtilsTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.PropertyUtilsTestCase
+Add Method Annotation	@Override in method protected getPropertyOfMapBean(bean Map, propertyName String) : Object from class org.apache.commons.beanutils.PropsFirstPropertyUtilsBean
+Add Method Annotation	@Override in method protected setPropertyOfMapBean(bean Map, propertyName String, value Object) : void from class org.apache.commons.beanutils.PropsFirstPropertyUtilsBean
+Add Method Annotation	@Deprecated in method public getBigDecimal(columnIndex int, scale int) : BigDecimal from class org.apache.commons.beanutils.TestResultSet
+Add Method Annotation	@Deprecated in method public getBigDecimal(columnName String, scale int) : BigDecimal from class org.apache.commons.beanutils.TestResultSet
+Add Method Annotation	@Deprecated in method public getUnicodeStream(columnIndex int) : InputStream from class org.apache.commons.beanutils.TestResultSet
+Add Method Annotation	@Deprecated in method public getUnicodeStream(columnName String) : InputStream from class org.apache.commons.beanutils.TestResultSet
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.WrapDynaBeanTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.WrapDynaBeanTestCase
+Add Method Annotation	@Override in method public testMappedContains() : void from class org.apache.commons.beanutils.WrapDynaBeanTestCase
+Add Method Annotation	@Override in method public testMappedRemove() : void from class org.apache.commons.beanutils.WrapDynaBeanTestCase
+Add Method Annotation	@Override in method public testSerialization() : void from class org.apache.commons.beanutils.WrapDynaBeanTestCase
+Add Method Annotation	@Override in method protected setUp() : void from class org.apache.commons.beanutils.bugs.Jira157TestCase
+Add Method Annotation	@Override in method protected tearDown() : void from class org.apache.commons.beanutils.bugs.Jira157TestCase
+Add Method Annotation	@Override in method protected setUp() : void from class org.apache.commons.beanutils.bugs.Jira18TestCase
+Add Method Annotation	@Override in method protected tearDown() : void from class org.apache.commons.beanutils.bugs.Jira18TestCase
+Add Method Annotation	@Override in method protected setUp() : void from class org.apache.commons.beanutils.bugs.Jira273TestCase
+Add Method Annotation	@Override in method protected tearDown() : void from class org.apache.commons.beanutils.bugs.Jira273TestCase
+Add Method Annotation	@Override in method protected setUp() : void from class org.apache.commons.beanutils.bugs.Jira298TestCase
+Add Method Annotation	@Override in method protected tearDown() : void from class org.apache.commons.beanutils.bugs.Jira298TestCase
+Add Method Annotation	@Override in method protected setUp() : void from class org.apache.commons.beanutils.bugs.Jira339TestCase
+Add Method Annotation	@Override in method protected tearDown() : void from class org.apache.commons.beanutils.bugs.Jira339TestCase
+Add Method Annotation	@Override in method protected setUp() : void from class org.apache.commons.beanutils.bugs.Jira345TestCase
+Add Method Annotation	@Override in method protected tearDown() : void from class org.apache.commons.beanutils.bugs.Jira345TestCase
+Add Method Annotation	@Override in method protected setUp() : void from class org.apache.commons.beanutils.bugs.Jira349TestCase
+Add Method Annotation	@Override in method protected tearDown() : void from class org.apache.commons.beanutils.bugs.Jira349TestCase
+Add Method Annotation	@Override in method public getFoo() : String from class org.apache.commons.beanutils.bugs.Jira357TestCase.ConcreteTestBean
+Add Method Annotation	@Override in method public setFoo(foo String) : void from class org.apache.commons.beanutils.bugs.Jira357TestCase.ConcreteTestBean
+Add Method Annotation	@Override in method public isBar() : boolean from class org.apache.commons.beanutils.bugs.Jira357TestCase.ConcreteTestBean
+Add Method Annotation	@Override in method public setBar(bar boolean) : void from class org.apache.commons.beanutils.bugs.Jira357TestCase.ConcreteTestBean
+Add Method Annotation	@Override in method public getInnerClassProperty() : ConcreteTestBean.InnerClass from class org.apache.commons.beanutils.bugs.Jira357TestCase.ConcreteTestBean
+Add Method Annotation	@Override in method protected setUp() : void from class org.apache.commons.beanutils.bugs.Jira357TestCase
+Add Method Annotation	@Override in method protected tearDown() : void from class org.apache.commons.beanutils.bugs.Jira357TestCase
+Add Method Annotation	@Override in method protected setUp() : void from class org.apache.commons.beanutils.bugs.Jira358TestCase
+Add Method Annotation	@Override in method protected tearDown() : void from class org.apache.commons.beanutils.bugs.Jira358TestCase
+Add Method Annotation	@Override in method protected setUp() : void from class org.apache.commons.beanutils.bugs.Jira359TestCase
+Add Method Annotation	@Override in method protected tearDown() : void from class org.apache.commons.beanutils.bugs.Jira359TestCase
+Add Method Annotation	@Override in method protected setUp() : void from class org.apache.commons.beanutils.bugs.Jira368TestCase
+Add Method Annotation	@Override in method protected tearDown() : void from class org.apache.commons.beanutils.bugs.Jira368TestCase
+Add Method Annotation	@Override in method protected setUp() : void from class org.apache.commons.beanutils.bugs.Jira369TestCase
+Add Method Annotation	@Override in method protected tearDown() : void from class org.apache.commons.beanutils.bugs.Jira369TestCase
+Add Method Annotation	@Override in method protected setUp() : void from class org.apache.commons.beanutils.bugs.Jira411TestCase
+Add Method Annotation	@Override in method protected setUp() : void from class org.apache.commons.beanutils.bugs.Jira61TestCase
+Add Method Annotation	@Override in method protected tearDown() : void from class org.apache.commons.beanutils.bugs.Jira61TestCase
+Add Method Annotation	@Override in method protected setUp() : void from class org.apache.commons.beanutils.bugs.Jira87TestCase
+Add Method Annotation	@Override in method protected tearDown() : void from class org.apache.commons.beanutils.bugs.Jira87TestCase
+Add Method Annotation	@Override in method public getBeanValue() : String from class org.apache.commons.beanutils.bugs.other.Jira273BeanFactory.PrivatePublicOverriden
+Add Method Annotation	@Override in method public getBeanValue() : String from class org.apache.commons.beanutils.bugs.other.Jira273BeanFactory.PrivatePrivatePublicOverriden
+Add Method Annotation	@Override in method public getBeanValue() : String from class org.apache.commons.beanutils.bugs.other.Jira273BeanFactory.createAnnonymousOverriden.new PublicBeanWithMethod
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.converters.ArrayConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.converters.ArrayConverterTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.converters.BigDecimalConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.converters.BigDecimalConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter() : NumberConverter from class org.apache.commons.beanutils.converters.BigDecimalConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter(defaultValue Object) : NumberConverter from class org.apache.commons.beanutils.converters.BigDecimalConverterTestCase
+Add Method Annotation	@Override in method protected getExpectedType() : Class from class org.apache.commons.beanutils.converters.BigDecimalConverterTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.converters.BigIntegerConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.converters.BigIntegerConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter() : NumberConverter from class org.apache.commons.beanutils.converters.BigIntegerConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter(defaultValue Object) : NumberConverter from class org.apache.commons.beanutils.converters.BigIntegerConverterTestCase
+Add Method Annotation	@Override in method protected getExpectedType() : Class from class org.apache.commons.beanutils.converters.BigIntegerConverterTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.converters.ByteConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.converters.ByteConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter() : NumberConverter from class org.apache.commons.beanutils.converters.ByteConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter(defaultValue Object) : NumberConverter from class org.apache.commons.beanutils.converters.ByteConverterTestCase
+Add Method Annotation	@Override in method protected getExpectedType() : Class from class org.apache.commons.beanutils.converters.ByteConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter() : DateTimeConverter from class org.apache.commons.beanutils.converters.CalendarConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter(defaultValue Object) : DateTimeConverter from class org.apache.commons.beanutils.converters.CalendarConverterTestCase
+Add Method Annotation	@Override in method protected getExpectedType() : Class from class org.apache.commons.beanutils.converters.CalendarConverterTestCase
+Add Method Annotation	@Override in method protected toType(value Calendar) : Object from class org.apache.commons.beanutils.converters.CalendarConverterTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.converters.CharacterConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.converters.CharacterConverterTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.converters.ClassConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.converters.ClassConverterTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.converters.DateConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.converters.DateConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter() : DateTimeConverter from class org.apache.commons.beanutils.converters.DateConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter(defaultValue Object) : DateTimeConverter from class org.apache.commons.beanutils.converters.DateConverterTestCase
+Add Method Annotation	@Override in method protected getExpectedType() : Class from class org.apache.commons.beanutils.converters.DateConverterTestCase
+Add Method Annotation	@Override in method protected toType(value Calendar) : Object from class org.apache.commons.beanutils.converters.DateConverterTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.converters.DoubleConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.converters.DoubleConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter() : NumberConverter from class org.apache.commons.beanutils.converters.DoubleConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter(defaultValue Object) : NumberConverter from class org.apache.commons.beanutils.converters.DoubleConverterTestCase
+Add Method Annotation	@Override in method protected getExpectedType() : Class from class org.apache.commons.beanutils.converters.DoubleConverterTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.converters.FileConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.converters.FileConverterTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.converters.FloatConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.converters.FloatConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter() : NumberConverter from class org.apache.commons.beanutils.converters.FloatConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter(defaultValue Object) : NumberConverter from class org.apache.commons.beanutils.converters.FloatConverterTestCase
+Add Method Annotation	@Override in method protected getExpectedType() : Class from class org.apache.commons.beanutils.converters.FloatConverterTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.converters.IntegerConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.converters.IntegerConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter() : NumberConverter from class org.apache.commons.beanutils.converters.IntegerConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter(defaultValue Object) : NumberConverter from class org.apache.commons.beanutils.converters.IntegerConverterTestCase
+Add Method Annotation	@Override in method protected getExpectedType() : Class from class org.apache.commons.beanutils.converters.IntegerConverterTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.converters.LongConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.converters.LongConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter() : NumberConverter from class org.apache.commons.beanutils.converters.LongConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter(defaultValue Object) : NumberConverter from class org.apache.commons.beanutils.converters.LongConverterTestCase
+Add Method Annotation	@Override in method protected getExpectedType() : Class from class org.apache.commons.beanutils.converters.LongConverterTestCase
+Add Method Annotation	@Override in method public toString() : String from class org.apache.commons.beanutils.converters.NumberConverterTestBase.testStringToNumberPattern.obj.new Object
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.converters.ShortConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.converters.ShortConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter() : NumberConverter from class org.apache.commons.beanutils.converters.ShortConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter(defaultValue Object) : NumberConverter from class org.apache.commons.beanutils.converters.ShortConverterTestCase
+Add Method Annotation	@Override in method protected getExpectedType() : Class from class org.apache.commons.beanutils.converters.ShortConverterTestCase
+Add Method Annotation	@Override in method public testDefaultStringToTypeConvert() : void from class org.apache.commons.beanutils.converters.SqlDateConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter() : DateTimeConverter from class org.apache.commons.beanutils.converters.SqlDateConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter(defaultValue Object) : DateTimeConverter from class org.apache.commons.beanutils.converters.SqlDateConverterTestCase
+Add Method Annotation	@Override in method protected getExpectedType() : Class from class org.apache.commons.beanutils.converters.SqlDateConverterTestCase
+Add Method Annotation	@Override in method protected toType(value Calendar) : Object from class org.apache.commons.beanutils.converters.SqlDateConverterTestCase
+Add Method Annotation	@Override in method public testLocale() : void from class org.apache.commons.beanutils.converters.SqlTimeConverterTestCase
+Add Method Annotation	@Override in method public testDefaultStringToTypeConvert() : void from class org.apache.commons.beanutils.converters.SqlTimeConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter() : DateTimeConverter from class org.apache.commons.beanutils.converters.SqlTimeConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter(defaultValue Object) : DateTimeConverter from class org.apache.commons.beanutils.converters.SqlTimeConverterTestCase
+Add Method Annotation	@Override in method protected getExpectedType() : Class from class org.apache.commons.beanutils.converters.SqlTimeConverterTestCase
+Add Method Annotation	@Override in method protected toType(value Calendar) : Object from class org.apache.commons.beanutils.converters.SqlTimeConverterTestCase
+Add Method Annotation	@Override in method public testLocale() : void from class org.apache.commons.beanutils.converters.SqlTimestampConverterTestCase
+Add Method Annotation	@Override in method public testDefaultStringToTypeConvert() : void from class org.apache.commons.beanutils.converters.SqlTimestampConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter() : DateTimeConverter from class org.apache.commons.beanutils.converters.SqlTimestampConverterTestCase
+Add Method Annotation	@Override in method protected makeConverter(defaultValue Object) : DateTimeConverter from class org.apache.commons.beanutils.converters.SqlTimestampConverterTestCase
+Add Method Annotation	@Override in method protected getExpectedType() : Class from class org.apache.commons.beanutils.converters.SqlTimestampConverterTestCase
+Add Method Annotation	@Override in method protected toType(value Calendar) : Object from class org.apache.commons.beanutils.converters.SqlTimestampConverterTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.converters.URLConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.converters.URLConverterTestCase
+Add Method Annotation	@Override in method protected setUp() : void from class org.apache.commons.beanutils.expression.DefaultResolverTestCase
+Add Method Annotation	@Override in method protected tearDown() : void from class org.apache.commons.beanutils.expression.DefaultResolverTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.locale.LocaleBeanUtilsTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.locale.LocaleBeanUtilsTestCase
+Add Method Annotation	@Override in method public toString() : String from class org.apache.commons.beanutils.locale.LocaleBeanificationTestCase.TestClassLoader
+Add Method Annotation	@Override in method public run() : void from class org.apache.commons.beanutils.locale.LocaleBeanificationTestCase.testMemoryLeak.GetBeanUtilsBeanThread
+Add Method Annotation	@Override in method public toString() : String from class org.apache.commons.beanutils.locale.LocaleBeanificationTestCase.testMemoryLeak.GetBeanUtilsBeanThread
+Add Method Annotation	@Override in method public run() : void from class org.apache.commons.beanutils.locale.LocaleBeanificationTestCase.testGetByContextClassLoader.GetBeanUtilsBeanThread
+Add Method Annotation	@Override in method public toString() : String from class org.apache.commons.beanutils.locale.LocaleBeanificationTestCase.testGetByContextClassLoader.GetBeanUtilsBeanThread
+Add Method Annotation	@Override in method public run() : void from class org.apache.commons.beanutils.locale.LocaleBeanificationTestCase.testContextClassLoaderLocal.CCLLTesterThread
+Add Method Annotation	@Override in method public toString() : String from class org.apache.commons.beanutils.locale.LocaleBeanificationTestCase.testContextClassLoaderLocal.CCLLTesterThread
+Add Method Annotation	@Override in method public run() : void from class org.apache.commons.beanutils.locale.LocaleBeanificationTestCase.testContextClassloaderIndependence.TestIndependenceThread
+Add Method Annotation	@Override in method public toString() : String from class org.apache.commons.beanutils.locale.LocaleBeanificationTestCase.testContextClassloaderIndependence.TestIndependenceThread
+Add Method Annotation	@Override in method public run() : void from class org.apache.commons.beanutils.locale.LocaleBeanificationTestCase.testBeanUtilsBeanSetInstance.SetInstanceTesterThread
+Add Method Annotation	@Override in method public toString() : String from class org.apache.commons.beanutils.locale.LocaleBeanificationTestCase.testBeanUtilsBeanSetInstance.SetInstanceTesterThread
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.locale.LocaleBeanificationTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.locale.LocaleBeanificationTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.locale.LocaleConvertUtilsTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.locale.LocaleConvertUtilsTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.locale.converters.BaseLocaleConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.locale.converters.BaseLocaleConverterTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.locale.converters.BigDecimalLocaleConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.locale.converters.BigDecimalLocaleConverterTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.locale.converters.BigIntegerLocaleConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.locale.converters.BigIntegerLocaleConverterTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.locale.converters.ByteLocaleConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.locale.converters.ByteLocaleConverterTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.locale.converters.DateLocaleConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.locale.converters.DateLocaleConverterTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.locale.converters.DoubleLocaleConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.locale.converters.DoubleLocaleConverterTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.locale.converters.FloatLocaleConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.locale.converters.FloatLocaleConverterTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.locale.converters.IntegerLocaleConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.locale.converters.IntegerLocaleConverterTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.locale.converters.LongLocaleConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.locale.converters.LongLocaleConverterTestCase
+Add Method Annotation	@Override in method public setUp() : void from class org.apache.commons.beanutils.locale.converters.ShortLocaleConverterTestCase
+Add Method Annotation	@Override in method public tearDown() : void from class org.apache.commons.beanutils.locale.converters.ShortLocaleConverterTestCase
+Add Method Annotation	@Override in method public doubleValue() : double from class org.apache.commons.beanutils.memoryleaktests.pojotests.CustomInteger
+Add Method Annotation	@Override in method public floatValue() : float from class org.apache.commons.beanutils.memoryleaktests.pojotests.CustomInteger
+Add Method Annotation	@Override in method public intValue() : int from class org.apache.commons.beanutils.memoryleaktests.pojotests.CustomInteger
+Add Method Annotation	@Override in method public longValue() : long from class org.apache.commons.beanutils.memoryleaktests.pojotests.CustomInteger
+Add Method Annotation	@Override in method public toString() : String from class org.apache.commons.beanutils.memoryleaktests.pojotests.CustomInteger
+Add Method Annotation	@Override in method public getBar() : String from class org.apache.commons.beanutils.priv.PrivateBeanSubclass
+Developers have reported that 10708 commits involve refactoring but only 885 involve refactoring operations
+There are 18 duplicate commits with refactoring out of the 885 commits.
+
+No refactorings detected at 487e9efc7a00b40a7c8440b2d7ed6e823b07d831
+
+No refactorings detected at 380f222457649ea5e45f071064fc6a355a59b869
+
+No refactorings detected at 3b3e19f1795adb010248eb2169b7d1c90b63dd82
+
+No refactorings detected at 56e4523e75666a31e963fe6f06ff52248324510c
+
+No refactorings detected at 10ff6ba8c7f06304902984646f7420ff37f21bf8
+
+No refactorings detected at ebab04c7c6c99911e8f7398da5d34d1c326db734
+
+No refactorings detected at 5f98bcf579bd65363a0f175164811be4cdb3c6c4
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed5b912ae62813868e81d1
+Issue Title: : Remove copied Collections classes
+Refactorings at 633bcd4f70d548e1a39fd39f10ab9d9b06874aa1
+Change Attribute Type	converters : FastHashMap to converters : Map in class org.apache.commons.beanutils.ConvertUtilsBean
+Change Variable Type	mappeds : HashMap to mappeds : Map in method protected introspect() : void from class org.apache.commons.beanutils.WrapDynaClass
+Developers have reported that 10708 commits involve refactoring but only 886 involve refactoring operations
+There are 18 duplicate commits with refactoring out of the 886 commits.
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed5cf82ae62813868e840c
+Issue Title: : Replace UnmodifiableSet.decorate with Collections.unModifiableSet
+Refactorings at 95db7d0aab9bea25d3a14db42a7787ef77861f45
+Modify Method Annotation	@SuppressWarnings("unchecked") to @SuppressWarnings({"unchecked","rawtypes"}) in method public keySet() : Set<Object> from class org.apache.commons.beanutils.BeanMap
+Developers have reported that 10708 commits involve refactoring but only 887 involve refactoring operations
+There are 18 duplicate commits with refactoring out of the 887 commits.
+
+No refactorings detected at bd9cb6e5772d9cd05d0bb34fd9333e6e5f9c3ea7
+
+No refactorings detected at 4ef866da3e6d2410c3502f4a927fec1a8f3e43a8
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed5d242ae62813868e8455
+Issue Title: : Write methods for PropertyDescriptors created during custom introspection are lost
+Refactorings at 8f77bd63d8b5b2ab593b134fef2bf5e59bed0441
+Change Method Access Modifier	package to public in method public getWriteMethod(clazz Class<?>, descriptor PropertyDescriptor) : Method from class org.apache.commons.beanutils.PropertyUtilsBean
+Developers have reported that 10708 commits involve refactoring but only 888 involve refactoring operations
+There are 18 duplicate commits with refactoring out of the 888 commits.
+
+No refactorings detected at b42e9f30d422c6da948383605721be8a7ccd0bf1
+
+No refactorings detected at b44b3d95b321cef0281cdf130e8c286bfdcd60af
+
+No refactorings detected at 10ffa59e1b117b507544f2977ceecfcc2d7800f9
+
+No refactorings detected at a097839338082366071d8a1e0b68e9762459b634
+
+No refactorings detected at 5bd1004511c543e21a925cd1dd11da94820ba5d9
+
+No refactorings detected at 6d7b36b3870a5076f6197433ef0c91b87135962a
+
+No refactorings detected at 330d5cf99c1eefe3fe86dae260a8873068650866
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed5eff2ae62813868e85c6
+Issue Title: : change visibility of method "evaluateValue" belongs to the class BeanPropertyValueEqualsPredicate to "protected".
+Refactorings at c6518c3d4064724dbd7d4c67ab469d398652ab36
+Change Method Access Modifier	private to protected in method protected evaluateValue(expected Object, actual Object) : boolean from class org.apache.commons.beanutils.BeanPropertyValueEqualsPredicate
+Developers have reported that 10708 commits involve refactoring but only 889 involve refactoring operations
+There are 18 duplicate commits with refactoring out of the 889 commits.
+
+No refactorings detected at 4c56c27896e3038ff9f5f9172c0d4f4b58494b98
+
+No refactorings detected at bf5e10371fbff53481cd2db6b11b7b10e3c0a84b
+
+No refactorings detected at 4fec4e856d81145bdc59307aaf4d8b1ee4374601
+
+No refactorings detected at b0081abe29fd9ec36b006267677e7f4f4cd23d7e
+
+No refactorings detected at 693d479e5476a234828cb6d4194d933acfe6b870
+
+No refactorings detected at bd3c9b598202736d17720f5635e8cbc48c6fd3f1
+
+No refactorings detected at 3b6dec3c581f883cf9dff6f04512011cf277f586
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed5f232ae62813868e8701
+Issue Title: : Remove deprecated code for 2.0.0
+Refactorings at 673dde7b799be245f74575f605dde83ccc8fbb13
+Remove Method Annotation	@Deprecated in method protected lookup(locale Locale) : Map<Class<?>,LocaleConverter> from class org.apache.commons.beanutils2.locale.LocaleConvertUtilsBean
+Change Attribute Type	decoratedMap : Map<Object,Object> to decoratedMap : Map<String,Object> in class org.apache.commons.beanutils2.DynaBeanMapDecoratorTestCase
+Change Attribute Type	modifiableMap : Map<Object,Object> to modifiableMap : Map<String,Object> in class org.apache.commons.beanutils2.DynaBeanMapDecoratorTestCase
+Change Attribute Type	emptyMap : Map<Object,Object> to emptyMap : Map<String,Object> in class org.apache.commons.beanutils2.DynaBeanMapDecoratorTestCase
+Change Variable Type	set : Set<Map.Entry<Object,Object>> to set : Set<Map.Entry<String,Object>> in method public testEntrySet() : void from class org.apache.commons.beanutils2.DynaBeanMapDecoratorTestCase
+Change Variable Type	m : Map<Object,Object> to m : Map<String,Object> in method public testEntrySet() : void from class org.apache.commons.beanutils2.DynaBeanMapDecoratorTestCase
+Change Variable Type	iterator : Iterator<Map.Entry<Object,Object>> to iterator : Iterator<Map.Entry<String,Object>> in method public testEntrySet() : void from class org.apache.commons.beanutils2.DynaBeanMapDecoratorTestCase
+Change Variable Type	entry : Map.Entry<Object,Object> to entry : Map.Entry<String,Object> in method public testEntrySet() : void from class org.apache.commons.beanutils2.DynaBeanMapDecoratorTestCase
+Change Variable Type	set : Set<Object> to set : Set<String> in method public testKeySet() : void from class org.apache.commons.beanutils2.DynaBeanMapDecoratorTestCase
+Change Variable Type	newMap : Map<Object,Object> to newMap : Map<String,Object> in method public testPutAll() : void from class org.apache.commons.beanutils2.DynaBeanMapDecoratorTestCase
+Developers have reported that 10708 commits involve refactoring but only 890 involve refactoring operations
+There are 18 duplicate commits with refactoring out of the 890 commits.
+
