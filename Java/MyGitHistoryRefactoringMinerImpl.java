@@ -395,6 +395,8 @@ public class MyGitHistoryRefactoringMinerImpl implements GitHistoryRefactoringMi
                     entryDestination.getParentFile().mkdirs();
                     InputStream in = zipFile.getInputStream(entry);
 
+                    // Zip file folders are santuario-java.git-747ca8f60a653451e7ff81841c2216880ec27d50 and santuario-java.git-63f192c1606c76c47477568defc9a2bb27caf5d5
+
                     if(entryDestination.getAbsolutePath().contains("C:\\SmartSHARK\\RefactoringMiner\\repos\\santuario-java-747ca8f60a653451e7ff81841c2216880ec27d50\\samples\\data\\org\\w3c\\www\\interop\\xmldsig11\\sun\\index.html?C=D;O=A")
                     || entryDestination.getAbsolutePath().contains("C:\\SmartSHARK\\RefactoringMiner\\repos\\santuario-java-747ca8f60a653451e7ff81841c2216880ec27d50\\src\\test\\resources\\org\\w3c\\www\\interop\\xmldsig11\\sun\\index.html?C=D;O=A")
                             || entryDestination.getAbsolutePath().contains("C:\\SmartSHARK\\RefactoringMiner\\repos\\santuario-java-63f192c1606c76c47477568defc9a2bb27caf5d5\\src\\test\\resources\\org\\w3c\\www\\interop\\xmldsig11\\sun\\index.html?C=D;O=A")
