@@ -331,6 +331,7 @@ public class MyGitHistoryRefactoringMinerImpl implements GitHistoryRefactoringMi
             File currentFolder = new File(projectFolder.getParentFile(), projectFolder.getName() + "-" + currentCommitId);
             File parentFolder = new File(projectFolder.getParentFile(), projectFolder.getName() + "-" + parentCommitId);
             if (!currentFolder.exists()) {
+                System.out.println("Trying to download and extract the Santuario-Java repository archive.");
                 downloadAndExtractZipFile(projectFolder, cloneURL, currentCommitId);
             }
             if (!parentFolder.exists()) {
@@ -394,8 +395,6 @@ public class MyGitHistoryRefactoringMinerImpl implements GitHistoryRefactoringMi
                 } else {
                     entryDestination.getParentFile().mkdirs();
                     InputStream in = zipFile.getInputStream(entry);
-
-                    // Zip file folders are santuario-java.git-747ca8f60a653451e7ff81841c2216880ec27d50 and santuario-java.git-63f192c1606c76c47477568defc9a2bb27caf5d5
 
                     if(entryDestination.getAbsolutePath().contains("C:\\SmartSHARK\\RefactoringMiner\\repos\\santuario-java-747ca8f60a653451e7ff81841c2216880ec27d50\\samples\\data\\org\\w3c\\www\\interop\\xmldsig11\\sun\\index.html?C=D;O=A")
                     || entryDestination.getAbsolutePath().contains("C:\\SmartSHARK\\RefactoringMiner\\repos\\santuario-java-747ca8f60a653451e7ff81841c2216880ec27d50\\src\\test\\resources\\org\\w3c\\www\\interop\\xmldsig11\\sun\\index.html?C=D;O=A")
@@ -693,12 +692,14 @@ public class MyGitHistoryRefactoringMinerImpl implements GitHistoryRefactoringMi
             RevCommit commit = walk.parseCommit(repository.resolve(commitId));
             if (commit.getParentCount() > 0) {
                 walk.parseCommit(commit.getParent(0));
+                System.out.println("Detecting refactorings in the Santuario-Java repository.");
                 this.detectRefactorings(gitService, repository, handler, commit);
             }
             else {
                 logger.warn(String.format("Ignored revision %s because it has no parent", commitId));
             }
         } catch (MissingObjectException moe) {
+            moe.printStackTrace();
             this.detectRefactorings(handler, projectFolder, cloneURL, commitId);
         } catch (RefactoringMinerTimedOutException e) {
             logger.warn(String.format("Ignored revision %s due to timeout", commitId), e);
