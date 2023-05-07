@@ -70,10 +70,12 @@
     <Content Include="Java\detectedRefactorings\tika.git.refactorings" />
     <Content Include="Java\detectedRefactorings\wss4j.git.refactorings" />
     <Content Include="Java\Main.java" />
+    <Content Include="Java\MyGitHistoryRefactoringMinerImpl.java" />
     <Content Include="Java\MyGitService.java" />
     <Content Include="Java\MyGitServiceImpl.java" />
     <Content Include="Java\Screenshot 2023-05-06 212942 %28tryToCloneWSS4J%29.png" />
     <Content Include="Java\Screenshot 2023-05-06 213403.png" />
+    <Content Include="Java\Screenshot 2023-05-07 072010 %28mineLastCommitInSantuarioJavaRepo%29.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-06 200507.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-03 211753.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-03 212311.png" />

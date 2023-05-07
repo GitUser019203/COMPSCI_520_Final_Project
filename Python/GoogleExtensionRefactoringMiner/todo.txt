@@ -2,3 +2,4 @@ Continue mining from line 303 of detected_errors.
 There's a todo in the idea project with the last few lines of console output.
 Commit at line 28374 isn't mineable in google. https://github.com/apache/santuario-java/commit/747ca8f60a653451e7ff81841c2216880ec27d50
 Also, the wss4j repository doesn't exist.
+Caused by outdated database release.
