@@ -69,7 +69,6 @@ for projects in projectCollection:
             #print(com)
             if issue.issue_type is not None and issue.issue_type.lower() in bugSynonymList:
                 count_bugs_dev_label += 1
-            
             if issue.issue_type_verified is not None and issue.issue_type_verified.lower() in bugSynonymList:
                 count_bugs_validated += 1
             if Commit.objects(linked_issue_ids=issue.id).count()>0:
@@ -92,7 +91,6 @@ for projects in projectCollection:
         #print('Number of issues referenced by commits:', count_referenced_by_commits)
         #print('Number of issues labeled as bugs by developers:', count_bugs_dev_label)
         totalBugs+=count_bugs_dev_label
-        #print('Number of issues labeled validated as bug by researchers:', count_bugs_validated)
         totalValidatedBugs+=count_bugs_validated
 
 print("Total Issues reported: ",totalIssues)
@@ -101,4 +99,5 @@ print("Total bugs reported: ",totalBugs)
 print("Total bugs validated: ",totalValidatedBugs)
 print("Detected bugs",len(detectedBugList))
 print("Commited bugs detected",len(commitBugsDetected))
+print(" The number of issues that talk about bugst are (Evaluation Criteria) : ", ((totalValidatedBugs+len(detectedBugList))/totalIssues)*100 )
 
