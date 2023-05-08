@@ -44,8 +44,11 @@ public class Main {
             try {
                 vcsSystemURL = SMART_SHARK_2_0_ISSUE_TRACKED_VCS_SYSTEM_URLS[i];
                 vcsSystemName =  vcsSystemURL.substring(vcsSystemURL.lastIndexOf('/') + 1);
+                System.out.println("vcsSystemURL: " + vcsSystemURL);
+                System.out.println("vcsSystemName: " + vcsSystemName);
 
-                File refactoringDataFile = new File("C:/SmartSHARK/RefactoringMiner/detectedRefactorings/" + vcsSystemName + ".refactorings");
+//                File refactoringDataFile = new File("C:/SmartSHARK/RefactoringMiner/detectedRefactorings/" + vcsSystemName + ".refactorings");
+                File refactoringDataFile = new File("preston/CS520_Final_Project/SmartSHARK/RefactoringMiner/detectedRefactorings/" + vcsSystemName + ".refactorings");
                 refactoringDataFile.createNewFile();
                 refactoringInfoWriter = new BufferedWriter(new FileWriter(refactoringDataFile, true));
                 repo = gitService.cloneIfNotExists(
