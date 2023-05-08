@@ -84,19 +84,22 @@ def countTotalIssueTitles(file_path):
     # Return total number of issue titles
     return total_num_issue_titles
 
+
 def countIssueTitlesContaining():
     """
-    Counts grand total number of issues
+    Counts grand total number of issues containing specific words relating to a key word.
     """
     return 0
 
 
-
 def main():
     """Main Method"""
+    # Calculate total number of issue titles
     total_iss = countTotalIssueTitles(file_path="/Users/preston/CS520_Final_Project/COMPSCI_520_Final_Project/Python/mongo_db_extract_refactoring_doc.txt")
     print("TOTAL_ISSUE_TITLES:", total_iss)
 >>>>>>> 1ec81ef... Added countTotalIssueTitles() of IssuesCount.py
+
+    # Later: We calculate total number of issue titles containing key words or related words
 
 if __name__ == "__main__":
     main()
