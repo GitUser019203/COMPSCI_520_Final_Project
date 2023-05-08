@@ -1,10 +1,11 @@
 package org.refactoringissuesminer;
 
 import java.util.List;
-import org.refactoringminer.api.GitHistoryRefactoringMiner;
-import org.refactoringminer.api.Refactoring;
+
+import org.eclipse.jgit.revwalk.RevCommit;
+import org.eclipse.jgit.revwalk.RevWalk;
+import org.refactoringminer.api.*;
 import org.refactoringminer.api.GitService;
-import org.refactoringminer.api.RefactoringHandler;
 import org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl;
 import org.refactoringminer.util.GitServiceImpl;
 import java.io.BufferedWriter;
@@ -15,6 +16,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.LineNumberReader;
 import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.eclipse.jgit.lib.Repository;
@@ -93,6 +96,45 @@ public class Main {
 
     }
 
+    private static void tryToCloneWSS4J() {
+        MyGitServiceImpl myGitService = new MyGitServiceImpl();
+        String username = "YourUsername";
+        String token = "Yourtoken";
+        try {
+            repo = myGitService.cloneIfNotExists(
+                    "C:/SmartSHARK/RefactoringMiner/repos/" + "wss4j.git",
+                    "https://github.com/apache/wss4j.git",
+                    username,
+                    token);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private static void mineLastCommitInSantuarioJavaRepo() {
+        try {
+            repo = gitService.cloneIfNotExists(
+                    "C:\\SmartSHARK\\RefactoringMiner\\repos\\santuario-java.git",
+                    "https://github.com/apache/santuario-java.git");
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        // Mine the commit revHash in the VCS system vcsSystemURL with a timeout of 60s
+        miner.detectAtCommit(repo, "747ca8f60a653451e7ff81841c2216880ec27d50", new RefactoringHandler() {
+            @Override
+            public void handle(String commitId, List<Refactoring> refactorings) {
+                 if(refactorings.size() > 0) {
+                    System.out.println("Refactorings at " + commitId);
+                    for (Refactoring ref : refactorings) {
+                        System.out.println(ref.toString());
+                    }
+                 } else {
+                    System.out.println("No refactorings detected at " + commitId + "\n");
+                }
+            }
+        }, 3600);
+    }
+
     private static void openDataFile() {
         try {
             dataExtractor = new LineNumberReader(new FileReader("mongo_db_extract_refactoring_doc.txt"));
@@ -139,6 +181,7 @@ public class Main {
                 }
                 numCommitsMined += 1;
             }
-        }, 360);
+        }, 3600);
     }
 }
+
