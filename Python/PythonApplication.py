@@ -11,9 +11,16 @@ with open(r"Python/regexp.txt",'r') as file:
     for line in file:
         reg_exp = line.strip()
 
+if sys.argv[0] == 'Preston':
+    db_user = 'root'
+    db_password = 'mongoElise2024'
+else:
+    db_user = ''
+    db_password = ''
+
 # You may have to update this dict to match your DB credentials
-credentials = {'db_user': 'root',
-               'db_password': 'mongoElise2024',
+credentials = {'db_user': db_user,
+               'db_password': db_password,
                'db_hostname': 'localhost',
                'db_port': 27017,
                'db_authentication_database': '',
