@@ -108,5 +108,5 @@ with open("Python\\mongo_db_extract_refactoring_doc.txt", 'w', encoding="utf-8")
     #print("However, developers have reported that only " + str(len(unique_commit_hashes_with_refactoring_reported)) + " of them involve refactoring.", file=out_file)
     #print(f"There are {total_num_commits_linked_to_issues_documenting_refactoring - len(unique_commit_hashes)} duplicate commits linked to issues documenting refactoring.", file=out_file)
     #print(f"Developers have affirmed that {total_num_commits_reporting_refactoring_linked_to_issues_documenting_refactoring - len(unique_commit_hashes_with_refactoring_reported)} of the duplicate linked commits do refactoring.", file=out_file)
-
+    print(" The number of issues that talk about refactoring are (Evaluation Criteria) : ", (len(unique_commit_hashes_with_refactoring_reported)/total_num_issues)*100 )
     
