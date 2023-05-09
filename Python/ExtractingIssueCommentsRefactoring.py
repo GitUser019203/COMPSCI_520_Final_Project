@@ -50,16 +50,11 @@ with open("Python\\extractedIssueComments.txt", 'w', encoding="utf-8") as out_fi
             issue_trackers = IssueSystem.objects(project_id=project.id)
 
             if issue_trackers.count() > 0:
-                if issue_trackers.count() > 1:
-                    print(f"The VCS system {vcs_system} has more than one issue tracker.", file=out_file)
-                    [print(f"Issue Tracker URL: {issue_tracker.url}", file=out_file) for issue_tracker in issue_trackers]
-
                 for issue_tracker in issue_trackers:
                     issue_tracker_reported_refactoring = False
                     # we can now work with the issues
                     num_issues = Issue.objects(issue_system_id=issue_tracker.id).count()
                     total_num_issues += num_issues        
-
                     refactor_pattern = re.compile(reg_exp, re.I | re.M | re.DOTALL)
 
                     for issue in Issue.objects(issue_system_id=issue_tracker.id):
@@ -79,15 +74,8 @@ with open("Python\\extractedIssueComments.txt", 'w', encoding="utf-8") as out_fi
                                     total_num_issues_documenting_refactoring_with_linked_commits_reporting_refactoring += 1
                                     if vcs_system_reported_refactoring:
                                         if not issue_tracker_reported_refactoring:
-                                            #print("Issue Title: " + issue.title + "\nIssue Id: " \
-                                            #+ str(issue.id), file=out_file)
-                                        #else:
-                                            #print('Issue Tracker:', issue_tracker.url + "\nIssue Title: " + issue.title + "\nIssue Id: " \
-                                            #+ str(issue.id), file=out_file)
                                             issue_tracker_reported_refactoring = True
                                     else:
-                                        #print('VCS System:' + vcs_system.url + "\n" + 'Issue Tracker:', issue_tracker.url \
-                                        #+ "\nIssue Title: " + issue.title + "\nIssue Id: " + str(issue.id), file=out_file)
                                         vcs_system_reported_refactoring = True
                                         issue_tracker_reported_refactoring = True
                                         
@@ -97,16 +85,4 @@ with open("Python\\extractedIssueComments.txt", 'w', encoding="utf-8") as out_fi
                                         total_num_commits_reporting_refactoring_linked_to_issues_documenting_refactoring += 1
                                         # Although distinct commits can have identical commit hashes it is rare
                                         unique_commit_hashes_with_refactoring_reported.add(revision_hash)
-                                        #print("Linked Commit Revision Hash: " + str(revision_hash), file=out_file)
-                                        #print("Linked Commit Github URL: " + vcs_system.url.replace(".git", "") + "/commit/" + revision_hash, file=out_file)
-
-    print("\n", file=out_file)
-    print("RESULTS", file=out_file)
-    print("=" * 100, file=out_file)
-    print("The total number of issues is " + str(total_num_issues) + ".", file=out_file)
-    print("The total number of issues with refactoring documentation in their titles is " + str(total_num_issues_documenting_refactoring) + ".", file=out_file)
-    print("However, only " + str(total_num_issues_documenting_refactoring_with_linked_commits_reporting_refactoring) + " of the issues have linked commits that developers have labelled as involving refactoring.", file=out_file)
-    print("The total number of unique commits linked to issues documenting refactoring is " + str(len(unique_commit_hashes)) + ".", file=out_file)    
-    print("However, developers have reported that only " + str(len(unique_commit_hashes_with_refactoring_reported)) + " of them involve refactoring.", file=out_file)
-    print(f"There are {total_num_commits_linked_to_issues_documenting_refactoring - len(unique_commit_hashes)} duplicate commits linked to issues documenting refactoring.", file=out_file)
-    print(f"Developers have affirmed that {total_num_commits_reporting_refactoring_linked_to_issues_documenting_refactoring - len(unique_commit_hashes_with_refactoring_reported)} of the duplicate linked commits do refactoring.", file=out_file)
+                                      
