@@ -2,6 +2,8 @@ import re
 from mongoengine import connect
 from pycoshark.mongomodels import Project, VCSSystem, Commit, FileAction, Hunk, Refactoring, IssueSystem, Issue, IssueComment, MailingList, Message
 from pycoshark.utils import create_mongodb_uri_string
+import matplotlib.pyplot as plt
+import numpy as np
 
 with open("issue_tracked_projects.txt",'r') as file:
     for line in file:
@@ -101,3 +103,31 @@ print("Detected bugs",len(detectedBugList))
 print("Commited bugs detected",len(commitBugsDetected))
 print(" The number of issues that talk about bugst are (Evaluation Criteria) : ", ((totalValidatedBugs+len(detectedBugList))/totalIssues)*100 )
 
+x = (totalValidatedBugs/totalIssues)*100
+y = np.array([x, 100 - x])
+myexplode = [0.2,0]
+ax1 = plt.subplot()
+plotLabel = ["Validated Issue titles containing 'bug'","Other Issues"]
+ax1.pie(y, labels=plotLabel,explode = myexplode,autopct='%1.1f%%', startangle=90)
+ax1.axis('equal')
+plt.show()
+
+ax2 = plt.subplot()
+a = (len(detectedBugList)/totalIssues)*100
+b = np.array([a, 100 - a])
+myexplode = [0.2,0]
+fig1, ax1 = plt.subplots()
+plotLabel = ["Validated Issue titles containing 'bug'synonyms","Other Issues"]
+ax2.pie(b, labels=plotLabel,explode = myexplode,autopct='%1.1f%%', startangle=90)
+ax2.axis('equal')
+plt.show()
+
+ax3 = plt.subplot()
+c = ((totalValidatedBugs+len(detectedBugList))/totalIssues)*100 
+d = np.array([c, 100 - c])
+myexplode = [0.2,0]
+fig1, ax1 = plt.subplots()
+plotLabel = ["Bug related Issues","Other Issues"]
+ax3.pie(d, labels=plotLabel,explode = myexplode,autopct='%1.1f%%', startangle=90)
+ax3.axis('equal')
+plt.show()
