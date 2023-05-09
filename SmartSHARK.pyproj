@@ -5,7 +5,7 @@
     <ProjectGuid>4c889f48-76b6-4c25-8f84-ada9d29d7352</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>Python\JavaConsoleOutputParser\parser.py</StartupFile>
+    <StartupFile>Python\PythonApplication.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +23,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Python\bug_mining.py" />
     <Compile Include="Python\JavaConsoleOutputParser\parser.py" />
     <Compile Include="Python\PythonApplication.py" />
     <Compile Include="Python\WSS4J\gitparser.py" />
