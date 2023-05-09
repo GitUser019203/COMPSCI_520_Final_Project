@@ -2,6 +2,8 @@ import re
 from mongoengine import connect
 from pycoshark.mongomodels import Project, VCSSystem, Commit, FileAction, Hunk, Refactoring, IssueSystem, Issue, IssueComment, MailingList, Message
 from pycoshark.utils import create_mongodb_uri_string
+import matplotlib.pyplot as plt
+import numpy as np
 
 with open(r"issue_tracked_projects.txt",'r') as file:
     for line in file:
@@ -85,5 +87,14 @@ with open("Python\\mongo_db_extract_refactoring_doc.txt", 'w', encoding="utf-8")
                                         unique_commit_hashes_with_refactoring_reported.add(revision_hash)
 
     
-    print(" The number of issues that talk about refactoring are (Evaluation Criteria) : ", (len(unique_commit_hashes_with_refactoring_reported)/total_num_issues)*100 )
+print(" The number of issues that talk about refactoring are (Evaluation Criteria) : ", (len(unique_commit_hashes_with_refactoring_reported)/total_num_issues)*100 )
     
+ax3 = plt.subplot()
+c = (len(unique_commit_hashes_with_refactoring_reported)/total_num_issues)*100 
+d = np.array([c, 100 - c])
+myexplode = [0.2,0]
+fig1, ax1 = plt.subplots()
+plotLabel = ["Refactoring related Issues","Other Issues"]
+ax3.pie(d, labels=plotLabel,explode = myexplode,autopct='%1.1f%%', startangle=90)
+ax3.axis('equal')
+plt.show()
