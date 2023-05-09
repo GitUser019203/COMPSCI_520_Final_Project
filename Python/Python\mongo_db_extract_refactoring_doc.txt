@@ -38908,14 +38908,3 @@ Issue Title: Support additional elements in SubjectConfirmationData
 Issue Id: 5b4db2aa174f92230d646c8e
 Linked Commit Revision Hash: 8c3f421efbc3bbb806a48f4dade16282623eb2c4
 Linked Commit Github URL: https://github.com/apache/wss4j/commit/8c3f421efbc3bbb806a48f4dade16282623eb2c4
-
-
-RESULTS
-====================================================================================================
-The total number of issues is 53393.
-The total number of issues with refactoring documentation in their titles is 13023.
-However, only 6986 of the issues have linked commits that developers have labelled as involving refactoring.
-The total number of unique commits linked to issues documenting refactoring is 15102.
-However, developers have reported that only 12270 of them involve refactoring.
-There are 180 duplicate commits linked to issues documenting refactoring.
-Developers have affirmed that 158 of the duplicate linked commits do refactoring.
