@@ -108,8 +108,8 @@ def main():
     print("Total 'refactor' Issue Titles:", total_iss_refactor)
     print("Total 'refactor-related' Issue Titles:", total_related_iss_refactor)
     print()
-    print("Bug Percentage:", bug_percent)
-    print("Refactor Percentage:", refactor_percent)
+    print("Bug Percentage: ", bug_percent, "%", sep="")
+    print("Refactor Percentage: ", refactor_percent, "%", sep="")
 
 if __name__ == "__main__":
     main()
