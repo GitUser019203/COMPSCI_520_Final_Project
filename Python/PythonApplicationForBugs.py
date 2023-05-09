@@ -102,13 +102,11 @@ ax2.pie(b, labels=plotLabel,explode = myexplode,autopct='%1.1f%%', startangle=90
 ax2.axis('equal')
 plt.show()
 """
-
-ax3 = plt.subplot()
-c = ((totalValidatedBugs+len(detectedBugList))/totalIssues)*100 
-d = np.array([c, 100 - c])
+Allbugs = ((totalValidatedBugs+len(detectedBugList))/totalIssues)*100 
+chartArr = np.array([Allbugs, 100 - Allbugs])
 myexplode = [0.2,0]
 fig1, ax1 = plt.subplots()
 plotLabel = ["Bug related Issues","Other Issues"]
-ax3.pie(d, labels=plotLabel,explode = myexplode,autopct='%1.1f%%', startangle=90)
-ax3.axis('equal')
+plt.pie(chartArr, labels=plotLabel,explode = myexplode,autopct='%1.1f%%', startangle=90)
+plt.axis('equal')
 plt.show()
