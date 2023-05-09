@@ -1,4 +1,5 @@
 import re
+import sys
 from mongoengine import connect
 from pycoshark.mongomodels import Project, VCSSystem, Commit, FileAction, Hunk, Refactoring, IssueSystem, Issue, IssueComment, MailingList, Message
 from pycoshark.utils import create_mongodb_uri_string
