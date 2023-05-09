@@ -102,6 +102,7 @@
     <Content Include="Python\mongo_db_extract_refactoring_doc.txt" />
     <Content Include="Python\regexp.txt" />
     <Content Include="Python\WSS4J\wss4j.mongodb" />
+    <Content Include="Python\WSS4J\wss4j.mongodb.csv" />
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
