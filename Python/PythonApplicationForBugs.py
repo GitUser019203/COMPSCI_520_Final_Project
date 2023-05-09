@@ -82,6 +82,7 @@ print("Detected bugs",len(detectedBugList))
 print("Commited bugs detected",len(commitBugsDetected))
 print(" The number of issues that talk about bugst are (Evaluation Criteria) : ", ((totalValidatedBugs+len(detectedBugList))/totalIssues)*100 )
 
+"""
 x = (totalValidatedBugs/totalIssues)*100
 y = np.array([x, 100 - x])
 myexplode = [0.2,0]
@@ -100,6 +101,7 @@ plotLabel = ["Validated Issue titles containing 'bug'synonyms","Other Issues"]
 ax2.pie(b, labels=plotLabel,explode = myexplode,autopct='%1.1f%%', startangle=90)
 ax2.axis('equal')
 plt.show()
+"""
 
 ax3 = plt.subplot()
 c = ((totalValidatedBugs+len(detectedBugList))/totalIssues)*100 
