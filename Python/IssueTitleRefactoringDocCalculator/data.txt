@@ -1,0 +1,6 @@
+The total number of issues is 45323.
+The total number of issues with refactoring documentation in their titles is 10911.
+RefactoringMiner calculates that 2452 or 22.472733938227478% of issues with refactoring documentation in their titles contained refactoring operations.
+However, only 5745 of the issues have linked commits that developers have labelled as involving refactoring.
+Out of the 5745 issues, RefactoringMiner detects refactoring operations in only 2452.
+Thus, according to RefactoringMiner only 42.68059181897302% of the 5745 issues contained refactoring operations.

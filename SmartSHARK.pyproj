@@ -5,7 +5,7 @@
     <ProjectGuid>4c889f48-76b6-4c25-8f84-ada9d29d7352</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>Python\PythonApplication.py</StartupFile>
+    <StartupFile>Python\IssueTitleRefactoringDocCalculator\main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,6 +25,9 @@
   <ItemGroup>
     <Compile Include="Python\bug_mining.py" />
     <Compile Include="Python\IssuesCount.py" />
+    <Compile Include="Python\IssueTitleRefactoringDocCalculator\main.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Python\JavaConsoleOutputParser\parser.py" />
     <Compile Include="Python\PythonApplication.py" />
     <Compile Include="Python\WSS4J\gitparser.py" />
@@ -99,6 +102,10 @@
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-06 200925.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-06 201636.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\todo.txt" />
+    <Content Include="Python\IssueTitleRefactoringDocCalculator\data.txt" />
+    <Content Include="Python\IssueTitleRefactoringDocCalculator\issue_title_refactoring_doc_text_patterns.csv" />
+    <Content Include="Python\IssueTitleRefactoringDocCalculator\issue_title_refactoring_doc_text_patterns.csv.xlsx" />
+    <Content Include="Python\IssueTitleRefactoringDocCalculator\reg_exp_grouped.txt" />
     <Content Include="Python\issue_tracked_projects.txt" />
     <Content Include="Python\JavaConsoleOutputParser\detected_errors" />
     <Content Include="Python\mongo_db_extract_refactoring_doc.txt" />
@@ -114,6 +121,7 @@
     <Folder Include="Python\" />
     <Folder Include="Python\JavaConsoleOutputParser\" />
     <Folder Include="Python\GoogleExtensionRefactoringMiner\" />
+    <Folder Include="Python\IssueTitleRefactoringDocCalculator\" />
     <Folder Include="Python\WSS4J\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
