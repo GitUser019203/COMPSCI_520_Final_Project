@@ -3,17 +3,17 @@ from mongoengine import connect
 from pycoshark.mongomodels import Project, VCSSystem, Commit, FileAction, Hunk, Refactoring, IssueSystem, Issue, IssueComment, MailingList, Message
 from pycoshark.utils import create_mongodb_uri_string
 
-with open(r"Python/issue_tracked_projects.txt",'r') as file:
+with open(r"issue_tracked_projects.txt",'r') as file:
     for line in file:
         project_data = line.strip().split(',')
     
-with open(r"Python/regexp.txt",'r') as file:
+with open(r"regexp.txt",'r') as file:
     for line in file:
         reg_exp = line.strip()
 
 # You may have to update this dict to match your DB credentials
-credentials = {'db_user': 'root',
-               'db_password': 'mongoElise2024',
+credentials = {'db_user': '',
+               'db_password': '',
                'db_hostname': 'localhost',
                'db_port': 27017,
                'db_authentication_database': '',
