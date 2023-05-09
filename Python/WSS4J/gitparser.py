@@ -4,7 +4,7 @@ import logging
 import re
 import uuid
 import multiprocessing
-
+import csv
 import pygit2
 
 from queue import Queue
@@ -39,7 +39,6 @@ class GitParser(BaseParser):
         self.commits_to_be_processed = {}
         self.logger = logging.getLogger("parser")
         self.datastore = None
-
         # Replaced JoinableQueue with Queue
         self.commit_queue = Queue()
 
@@ -254,7 +253,7 @@ class GitParser(BaseParser):
 
         return
 
-class CommitParserProcess():
+class CommitParser():
     """
     A process, which inherits from :class:`multiprocessing.Process`, that will parse the branches it
     gets from the queue and call the :func:`pyvcsshark.datastores.basestore.BaseStore.addCommit` function to add
@@ -277,7 +276,9 @@ class CommitParserProcess():
         self.datastore = datastore
         self.logger = logging.getLogger("parser")
         self.repository = repository
-        self.debug_file = open("wss4j.mongodb", "a", encoding='utf-8')
+        fields = ['CommitHash', 'Branches', 'Tags', 'Parents', 'AuthorName', 'AuthorEmail', 'AuthorTime', 'AuthorOffset', 'CommitterName', 'CommitterEmail', 'CommitterTime', 'CommitterOffset', 'Message', 'ChangedFiles']
+        self.debug_file = csv.writer(open("wss4j.mongodb.csv", "w", encoding='utf-8'))
+        self.debug_file.writerow(fields)
 
     def run(self):
         """
@@ -293,7 +294,6 @@ class CommitParserProcess():
             commitHash = pygit2.Oid(hex=next_task)
             commit = self.repository[commitHash]
             self.parse_commit(commit)
-        self.debug_file.close()
         return
 
     def parse_commit(self, commit):
@@ -334,11 +334,17 @@ class CommitParserProcess():
                                    self.commits_to_be_processed[string_commit_hash]['tags'], parent_ids,
                                    author_model, committer_model, commit.message, changed_files, commit.author.time,
                                    commit.author.offset, commit.committer.time, commit.committer.offset)
-        commit_model_str = str(commit_model)
-        commit_models = [string.trim() for string in commit_model_str.split(',')]
 
-        self.debug_file.write(str(commit_model))
-        self.debug_file.write('\n')
+        row = [string_commit_hash, str(self.commits_to_be_processed[string_commit_hash]['branches']),
+                                   str(self.commits_to_be_processed[string_commit_hash]['tags']), str(parent_ids),
+                                   commit.author.name, commit.author.email, commit.author.time, commit.author.offset, commit.committer.name, 
+                                   commit.committer.email, str(commit.committer.time), str(commit.committer.offset), str(commit.message), str(changed_files)]
+        self.debug_file.writerow(row)
+        #commit_model_str = str(commit_model)
+        #commit_models = [string.strip() for string in commit_model_str.split(',')]
+
+        #self.debug_file.write(str(commit_model))
+        #self.debug_file.write('\nNext Commit Model\n')
         self.datastore.add_commit(commit_model)
 
         del self.commits_to_be_processed[string_commit_hash]
