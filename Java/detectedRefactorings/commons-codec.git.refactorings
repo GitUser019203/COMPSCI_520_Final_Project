@@ -884,3 +884,476 @@ No refactorings detected at 8edd3ec573649443c2dc0747cf3cddc1608d43d6
 
 No refactorings detected at 809bc2171b4563fb642687e87bb68741c1dd5026
 
+No refactorings detected at a50a203248662d2b4fe6f5b6952d3066ab3ab8ba
+
+No refactorings detected at 8e90d4892135355d6dc65443a2039429d8e34e9a
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed83f1ce433a4260b61118
+Issue Title: : Soundex and RefinedSoundex issues with character arrays
+Issue Description:  Soundex and RefinedSoundex both have public US_ENGLISH_MAPPING char arrays. These don't appear to be used externally, so should be made private - or at least package protected.
+Refactorings at cb63f4a959e30de6882b20af10d189c7307a6da2
+Change Attribute Access Modifier	public to private in attribute private US_ENGLISH_MAPPING : char[] from class org.apache.commons.codec.language.RefinedSoundex
+Change Attribute Access Modifier	public to private in attribute private US_ENGLISH_MAPPING : char[] from class org.apache.commons.codec.language.Soundex
+Developers have reported that 11158 commits involve refactoring but only 796 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 796 commits.
+
+No refactorings detected at ae518f45a2aa79bd1f03e634129d5d0eeb927909
+
+No refactorings detected at cdcca2e6c4ee0d8d7aa92163cac6aa4b551ef184
+
+No refactorings detected at f6336648d893f0ad455d53ab85f82128937fa41c
+
+No refactorings detected at ffd08a49645240d4f184f338ecb1175a7b7f0b0c
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed83f8ce433a4260b6116a
+Issue Title: : Base64:  Improve Code Coverage
+Issue Description:  Base64:  Improve Code Coverage
+Refactorings at 2f76d9d334ac7470d908ab59feab58249f6ea8ac
+Extract Attribute	private UTF_8_NAME : String in class org.apache.commons.codec.binary.Base64InputStreamTest
+Extract Attribute	private STRING_FIXTURE : String in class org.apache.commons.codec.binary.Base64InputStreamTest
+Developers have reported that 11158 commits involve refactoring but only 797 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 797 commits.
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed83f8ce433a4260b6116a
+Issue Title: : Base64:  Improve Code Coverage
+Issue Description:  Base64:  Improve Code Coverage
+Refactorings at 6a43ce7aa8fb6be26fd0559b189dce704a0a32f5
+Extract Attribute	private UTF_8_NAME : String in class org.apache.commons.codec.binary.Base64OutputStreamTest
+Extract Attribute	private STRING_FIXTURE : String in class org.apache.commons.codec.binary.Base64OutputStreamTest
+Change Method Access Modifier	public to package in method package randomData(size int, urlSafe boolean) : byte[][] from class org.apache.commons.codec.binary.Base64TestData
+Developers have reported that 11158 commits involve refactoring but only 798 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 798 commits.
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed8411ce433a4260b612a3
+Issue Title: : Base64 default constructor behaviour changed to enable chunking in 1.4
+Issue Description:  The following test passes in commons-codec 1.3 but fails in 1.4:
+Refactorings at 9535a94f6934edc9f3cc16d74621ca61429ebf8f
+Move Method	public testObjectEncode() : void from class org.apache.commons.codec.binary.Base64Codec13Test to public testObjectEncode() : void from class org.apache.commons.codec.binary.Base64Test
+Developers have reported that 11158 commits involve refactoring but only 799 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 799 commits.
+
+No refactorings detected at c10f11cf583e8e59bdc146d3a9d25bd53fc97ecc
+
+No refactorings detected at 240542361bcfcd2522e60155686709830e98bfd6
+
+No refactorings detected at cbe33f0a85fd9f2c04efb96296a26880995618b0
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed8414ce433a4260b612e0
+Issue Title: : Thread safety and malicious code safety improvements
+Issue Description:  There are some non-private fields which could be made final.This improves thread-safety, as final fields are guaranteed to be published to all threads.
+Refactorings at d09530a36ddb367da4d47c487496b68d999f7837
+Add Attribute Modifier	final in attribute protected charset : String from class org.apache.commons.codec.net.URLCodec
+Add Attribute Modifier	final in attribute protected ESCAPE_CHAR : byte from class org.apache.commons.codec.net.URLCodec
+Developers have reported that 11158 commits involve refactoring but only 800 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 800 commits.
+
+No refactorings detected at f90324f509ca16e50aabd416be4623c835ba9c1c
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed842ace433a4260b6144b
+Issue Title: : org.apache.commons.codec.language.RefinedSoundex.US_ENGLISH_MAPPING should be package protected MALICIOUS_CODE
+Issue Description:  Findbugs says:
+Refactorings at 395b4d902fe83f39581198ebf276079b07bdd442
+Change Attribute Access Modifier	package to private in attribute private US_ENGLISH_MAPPING : char[] from class org.apache.commons.codec.language.RefinedSoundex
+Developers have reported that 11158 commits involve refactoring but only 801 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 801 commits.
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed842ace433a4260b6144b
+Issue Title: : org.apache.commons.codec.language.RefinedSoundex.US_ENGLISH_MAPPING should be package protected MALICIOUS_CODE
+Issue Description:  Findbugs says:
+Refactorings at b0117669677f27a448c8fcafcd1430e2e0a5c3db
+Change Attribute Access Modifier	public to package in attribute package US_ENGLISH_MAPPING : char[] from class org.apache.commons.codec.language.RefinedSoundex
+Developers have reported that 11158 commits involve refactoring but only 802 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 802 commits.
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed842bce433a4260b61455
+Issue Title: : Add a String version of Base64.isArrayByteBase64()
+Issue Description:  Add a String version of Base64.isArrayByteBase64().  Right now we just have a byte[] version.
+Refactorings at 9250cf31de34c32ddbab386fb0f8bc41613decba
+Rename Method	public isStringBase64(base64 String) : boolean renamed to public isBase64(base64 String) : boolean in class org.apache.commons.codec.binary.Base64
+Developers have reported that 11158 commits involve refactoring but only 803 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 803 commits.
+
+No refactorings detected at 5223a63fa67fddcd092b2ae214b1eff0173a52c2
+
+No refactorings detected at 2f30607e7cba172292d5811d638aa127139296dd
+
+No refactorings detected at d67766da7b3ab470013cd32e91d18d9074171e07
+
+No refactorings detected at 4008ff9e49715f77cd6ac956b358160b7e416e69
+
+No refactorings detected at c45a7d3ac48e5e10551b9c98a73b6cd8e1a06958
+
+No refactorings detected at 1f5240e5f0a7c18e93dc68ee53c4a4ff9b6dfd69
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed843ace433a4260b61547
+Issue Title: : DigestUtils: add APIs named after standard alg name SHA-1
+Issue Description:  DigestUtils already has SHA APIs but they use the "SHA" algorithm name which is not on the standard name list here: http://docs.oracle.com/javase/6/docs/technotes/guides/security/StandardNames.html.
+Refactorings at 531b5dcb45b80f1d72a305603e32105962b14ce7
+Rename Method	public testUpdateWithByteArray() : void renamed to public testShaUpdateWithByteArray() : void in class org.apache.commons.codec.digest.DigestUtilsTest
+Rename Method	public testUpdateWithString() : void renamed to public testShaUpdateWithString() : void in class org.apache.commons.codec.digest.DigestUtilsTest
+Developers have reported that 11158 commits involve refactoring but only 804 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 804 commits.
+
+No refactorings detected at 2cb3bbda5a0c09bdb4da5533df4ef7061c1c8125
+
+No refactorings detected at abbaedb43f52aeb6ca5b494e8ec10d60e430f517
+
+No refactorings detected at 6d151e706834e7b1ba831e9d3607156996f694ca
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed8444ce433a4260b615c9
+Issue Title: : DigestUtils: add updateDigest methods and make methods public.
+Issue Description:  I've slightly modified the DigestUtils class:- changed the visibility (protected --> public) of a few methods: these methods are generally useful if one just wants to get a MessageDigest instance for a given algorithm
+Refactorings at 007d6b8423333630213d3ed1d2813ed22b59473d
+Change Method Access Modifier	package to public in method public getDigest(algorithm String) : MessageDigest from class org.apache.commons.codec.digest.DigestUtils
+Change Method Access Modifier	private to public in method public getMd5Digest() : MessageDigest from class org.apache.commons.codec.digest.DigestUtils
+Change Method Access Modifier	private to public in method public getSha256Digest() : MessageDigest from class org.apache.commons.codec.digest.DigestUtils
+Change Method Access Modifier	private to public in method public getSha384Digest() : MessageDigest from class org.apache.commons.codec.digest.DigestUtils
+Change Method Access Modifier	private to public in method public getSha512Digest() : MessageDigest from class org.apache.commons.codec.digest.DigestUtils
+Change Method Access Modifier	private to public in method public getShaDigest() : MessageDigest from class org.apache.commons.codec.digest.DigestUtils
+Developers have reported that 11158 commits involve refactoring but only 805 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 805 commits.
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed844dce433a4260b61667
+Issue Title: : Add Match Rating Approach (MRA) phonetic algorithm encoder
+Issue Description:  I want to add MatchRatingApproach algorithm to the Lucene project via commons codec.What I have at the moment is a class called org.apache.lucene.analysis.phoenetic.MatchRatingApproach implementing StringEncoder
+Refactorings at 78856d8417f9c63c2b6a5616f27df06b1e462ed9
+Rename Method	public testGetMinRating_2_Return1_Successfully() : void renamed to public testGetMinRating_13_Returns_1_Successfully() : void in class org.apache.commons.codec.language.MatchRatingApproachEncoderTest
+Developers have reported that 11158 commits involve refactoring but only 806 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 806 commits.
+
+No refactorings detected at e2701a5a1872adc57a2735d39ac9a0dca37f75e3
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed844fce433a4260b616b4
+Issue Title: : ColognePhonetic encoder unneccessarily creates many char arrays on every loop run
+Issue Description:  The summary says it all.I've created a patch and have attached it.
+Refactorings at 9e2f9e8f0062bce5a31988c8b01d638061b39dc1
+Extract Attribute	private AHKLOQRUX : char[] in class org.apache.commons.codec.language.ColognePhonetic
+Extract Attribute	private AHOUKQX : char[] in class org.apache.commons.codec.language.ColognePhonetic
+Extract Attribute	private SZ : char[] in class org.apache.commons.codec.language.ColognePhonetic
+Extract Attribute	private TDX : char[] in class org.apache.commons.codec.language.ColognePhonetic
+Extract Attribute	private CKQ : char[] in class org.apache.commons.codec.language.ColognePhonetic
+Extract Attribute	private GKQ : char[] in class org.apache.commons.codec.language.ColognePhonetic
+Extract Attribute	private WFPV : char[] in class org.apache.commons.codec.language.ColognePhonetic
+Extract Attribute	private SCZ : char[] in class org.apache.commons.codec.language.ColognePhonetic
+Extract Attribute	private AEIJOUY : char[] in class org.apache.commons.codec.language.ColognePhonetic
+Developers have reported that 11158 commits involve refactoring but only 807 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 807 commits.
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed8450ce433a4260b616ca
+Issue Title: : Add DigestUtils.updateDigest(MessageDigest, InputStream)
+Issue Description:  The attached patch provides an overload for {{DigestUtils.updateDigest()}} that reads input data from an {{InputStream}}.
+Refactorings at fd48c7cea91e4cc99e11c54206e0de227728eebe
+Extract Method	public updateDigest(digest MessageDigest, data InputStream) : MessageDigest extracted from private digest(digest MessageDigest, data InputStream) : byte[] in class org.apache.commons.codec.digest.DigestUtils
+Developers have reported that 11158 commits involve refactoring but only 808 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 808 commits.
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed8455ce433a4260b616fb
+Issue Title: : Improve performance of Beider Morse encoder
+Issue Description:  I use Beider Morse encoder with Solr. When it indexes a lot of documents using this encoder, the import time is multiplied by 30. So, I have decided to optimize the current implementation in the commons-codec.
+Refactorings at c170f6b67d6927aa7e1efff3f0618542483f8708
+Add Variable Modifier	final in variable languages : LanguageSet in method public apply(phonemeExpr Rule.PhonemeExpr, maxPhonemes int) : void from class org.apache.commons.codec.language.bm.PhoneticEngine.PhonemeBuilder
+Change Variable Type	newPhonemes : Set<Rule.Phoneme> to newPhonemes : List<Rule.Phoneme> in method public apply(phonemeExpr Rule.PhonemeExpr, maxPhonemes int) : void from class org.apache.commons.codec.language.bm.PhoneticEngine.PhonemeBuilder
+Change Return Type	PhonemeBuilder to void in method public apply(phonemeExpr Rule.PhonemeExpr, maxPhonemes int) : void from class org.apache.commons.codec.language.bm.PhoneticEngine.PhonemeBuilder
+Developers have reported that 11158 commits involve refactoring but only 809 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 809 commits.
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed8455ce433a4260b616fb
+Issue Title: : Improve performance of Beider Morse encoder
+Issue Description:  I use Beider Morse encoder with Solr. When it indexes a lot of documents using this encoder, the import time is multiplied by 30. So, I have decided to optimize the current implementation in the commons-codec.
+Refactorings at f98699421fe6e66c911559559979f23a50ad0c9d
+Extract Method	public getInstanceMap(nameType NameType, rt RuleType, langs Languages.LanguageSet) : Map<String,List<Rule>> extracted from public getInstance(nameType NameType, rt RuleType, langs Languages.LanguageSet) : Map<String,List<Rule>> in class org.apache.commons.codec.language.bm.Rule
+Extract Method	public getInstanceMap(nameType NameType, rt RuleType, lang String) : Map<String,List<Rule>> extracted from public getInstance(nameType NameType, rt RuleType, lang String) : Map<String,List<Rule>> in class org.apache.commons.codec.language.bm.Rule
+Change Return Type	Map<String,List<Rule>> to List<Rule> in method public getInstance(nameType NameType, rt RuleType, langs Languages.LanguageSet) : List<Rule> from class org.apache.commons.codec.language.bm.Rule
+Change Return Type	Map<String,List<Rule>> to List<Rule> in method public getInstance(nameType NameType, rt RuleType, lang String) : List<Rule> from class org.apache.commons.codec.language.bm.Rule
+Developers have reported that 11158 commits involve refactoring but only 810 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 810 commits.
+
+No refactorings detected at 78c75127ae121958de3ec2ee4da69a10528fe52c
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed8455ce433a4260b616fb
+Issue Title: : Improve performance of Beider Morse encoder
+Issue Description:  I use Beider Morse encoder with Solr. When it indexes a lot of documents using this encoder, the import time is multiplied by 30. So, I have decided to optimize the current implementation in the commons-codec.
+Refactorings at bacf66673718f3af8d9500e6fc22cc2a85201839
+Change Variable Type	newPhonemes : List<Rule.Phoneme> to newPhonemes : Set<Rule.Phoneme> in method public apply(phonemeExpr Rule.PhonemeExpr, maxPhonemes int) : void from class org.apache.commons.codec.language.bm.PhoneticEngine.PhonemeBuilder
+Developers have reported that 11158 commits involve refactoring but only 811 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 811 commits.
+
+No refactorings detected at 4fec7b8be71732ef571a39bed987b935bb088a5b
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed8455ce433a4260b616fb
+Issue Title: : Improve performance of Beider Morse encoder
+Issue Description:  I use Beider Morse encoder with Solr. When it indexes a lot of documents using this encoder, the import time is multiplied by 30. So, I have decided to optimize the current implementation in the commons-codec.
+Refactorings at 6207523b518b2e0a98c558d8df56f38362066010
+Change Return Type	void to Phoneme in method public append(str CharSequence) : Phoneme from class org.apache.commons.codec.language.bm.Rule.Phoneme
+Developers have reported that 11158 commits involve refactoring but only 812 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 812 commits.
+
+No refactorings detected at 8b0318c9dded3ef6306d3ee5904721149b7981e1
+
+No refactorings detected at 5af6d23690d89bcbae93bbf0cd43cbb91d6bb9ae
+
+No refactorings detected at 5b2806103d5e6d4a7a6df1ebc8d88005ad7731be
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed8477ce433a4260b6183a
+Issue Title: : Add convenience method Hex.decodeHex(String)
+Issue Description:  Add convenience method decodeHex(String)Linked Commit Github URL: https://github.com/apache/commons-codec/commit/7388ec14401571d45af94906310e136463f7dd58
+Refactorings at 1b7b452c7e49efd2bf6fbca0b4239c7aedc993db
+Rename Method	public testDecodeCharArrayEmpty() : void renamed to public testDecodeHexCharArrayEmpty() : void in class org.apache.commons.codec.binary.HexTest
+Rename Method	public testEncodeDecodeRandom() : void renamed to public testEncodeDecodeHexCharArrayRandom() : void in class org.apache.commons.codec.binary.HexTest
+Extract And Move Method	public decodeHex(data String) : byte[] extracted from public testUUID() : void in class org.apache.commons.codec.binary.Base64Test & moved to class org.apache.commons.codec.binary.Hex
+Developers have reported that 11158 commits involve refactoring but only 813 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 813 commits.
+
+No refactorings detected at 2d315263cb4a9f0eceaf8720375cd8452a490aeb
+
+No refactorings detected at 2b9c06f58c983bb915b220f02be99aefaccd0a1d
+
+No refactorings detected at e941b7e3c45e7df96dad9c49235553b1bf585b61
+
+No refactorings detected at fc18ae928f5dcfdb331e189f866e3ef96f676eee
+
+No refactorings detected at a9b17e3af5b608e9d807fed3344cebd5f624c098
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed8483ce433a4260b6194f
+Issue Title: : Create enum MessageDigestAlgorithm and deprecate class MessageDigestAlgorithms
+Issue Description:  Create enum MessageDigestAlgorithm and deprecate class MessageDigestAlgorithms.Linked Commit Github URL: https://github.com/apache/commons-codec/commit/c116dde41fd1c073f00093123f771c276e8af6d9
+Refactorings at 8ed787c3799bb9d194e948b54d68ebdabcf1a2ee
+Rename Method	public getAlgorithm() : String renamed to public getName() : String in class org.apache.commons.codec.digest.MessageDigestAlgorithm
+Developers have reported that 11158 commits involve refactoring but only 814 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 814 commits.
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed8483ce433a4260b6194f
+Issue Title: : Create enum MessageDigestAlgorithm and deprecate class MessageDigestAlgorithms
+Issue Description:  Create enum MessageDigestAlgorithm and deprecate class MessageDigestAlgorithms.Linked Commit Github URL: https://github.com/apache/commons-codec/commit/c116dde41fd1c073f00093123f771c276e8af6d9
+Refactorings at a82070e546d2c2f871895d32cd2f6629480c02bc
+Add Class Annotation	@Deprecated in class org.apache.commons.codec.digest.MessageDigestAlgorithms
+Encapsulate Attribute	private testData : byte[] from class org.apache.commons.codec.digest.DigestUtilsTest
+Encapsulate Attribute	private testFile : File from class org.apache.commons.codec.digest.DigestUtilsTest
+Developers have reported that 11158 commits involve refactoring but only 815 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 815 commits.
+
+No refactorings detected at 3b6468ac4f765262f68d3d289d25bea3da521c16
+
+No refactorings detected at 97851a1983e19656e1f82277b47ed09d90bffc31
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed8483ce433a4260b6196d
+Issue Title: : Add java.io.File APIs to DigestUtils
+Issue Description:  The original ticket called for adding File APIs to DigestUtils:
+Refactorings at 895315e100486f5778f13106c4ea4f3440eb1298
+Extract Method	private assumeJava8() : void extracted from public testSha224() : void in class org.apache.commons.codec.digest.DigestUtilsTest
+Add Method Annotation	@Before in method public setUp() : void from class org.apache.commons.codec.digest.DigestUtilsTest
+Change Method Access Modifier	protected to public in method public setUp() : void from class org.apache.commons.codec.digest.DigestUtilsTest
+Developers have reported that 11158 commits involve refactoring but only 816 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 816 commits.
+
+No refactorings detected at c7b540bae35372e92490fb47f75fac508fbf25ba
+
+No refactorings detected at 76a941217f9272693b5484ef360e8cf6491ef3a4
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed848dce433a4260b619d0
+Issue Title: : Refactor HmacUtils methods into the HmacAlgorithms enum
+Issue Description:  Refactor HmacUtils methods into the HmacAlgorithms enum.
+Refactorings at 1e48e151ea23f8891902834a4553a806c1312d60
+Rename Attribute	algorithm : String to name : String in class org.apache.commons.codec.digest.HmacAlgorithms
+Encapsulate Attribute	private name : String from class org.apache.commons.codec.digest.HmacAlgorithms
+Add Method Annotation	@Deprecated in method public getHmacMd5(key byte[]) : Mac from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public getHmacSha1(key byte[]) : Mac from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public getHmacSha256(key byte[]) : Mac from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public getHmacSha384(key byte[]) : Mac from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public getHmacSha512(key byte[]) : Mac from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public getInitializedMac(algorithm HmacAlgorithms, key byte[]) : Mac from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacMd5(key byte[], valueToDigest byte[]) : byte[] from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacMd5(key byte[], valueToDigest InputStream) : byte[] from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacMd5(key String, valueToDigest String) : byte[] from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacMd5Hex(key byte[], valueToDigest byte[]) : String from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacMd5Hex(key byte[], valueToDigest InputStream) : String from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacMd5Hex(key String, valueToDigest String) : String from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha1(key byte[], valueToDigest byte[]) : byte[] from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha1(key byte[], valueToDigest InputStream) : byte[] from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha1(key String, valueToDigest String) : byte[] from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha1Hex(key byte[], valueToDigest byte[]) : String from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha1Hex(key byte[], valueToDigest InputStream) : String from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha1Hex(key String, valueToDigest String) : String from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha256(key byte[], valueToDigest byte[]) : byte[] from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha256(key byte[], valueToDigest InputStream) : byte[] from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha256(key String, valueToDigest String) : byte[] from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha256Hex(key byte[], valueToDigest byte[]) : String from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha256Hex(key byte[], valueToDigest InputStream) : String from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha256Hex(key String, valueToDigest String) : String from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha384(key byte[], valueToDigest byte[]) : byte[] from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha384(key byte[], valueToDigest InputStream) : byte[] from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha384(key String, valueToDigest String) : byte[] from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha384Hex(key byte[], valueToDigest byte[]) : String from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha384Hex(key byte[], valueToDigest InputStream) : String from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha384Hex(key String, valueToDigest String) : String from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha512(key byte[], valueToDigest byte[]) : byte[] from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha512(key byte[], valueToDigest InputStream) : byte[] from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha512(key String, valueToDigest String) : byte[] from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha512Hex(key byte[], valueToDigest byte[]) : String from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha512Hex(key byte[], valueToDigest InputStream) : String from class org.apache.commons.codec.digest.HmacUtils
+Add Method Annotation	@Deprecated in method public hmacSha512Hex(key String, valueToDigest String) : String from class org.apache.commons.codec.digest.HmacUtils
+Extract Class	org.apache.commons.codec.digest.HmacAlgorithmsTest from class org.apache.commons.codec.digest.HmacUtilsTest
+Move Attribute	private STANDARD_KEY_STRING : String from class org.apache.commons.codec.digest.HmacUtilsTest to package STANDARD_KEY_STRING : String from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Change Attribute Access Modifier	private to package in attribute package STANDARD_KEY_STRING : String from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Move Attribute	private STANDARD_KEY_BYTES : byte[] from class org.apache.commons.codec.digest.HmacUtilsTest to package STANDARD_KEY_BYTES : byte[] from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Change Attribute Access Modifier	private to package in attribute package STANDARD_KEY_BYTES : byte[] from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Move Attribute	private STANDARD_MD5_RESULT_BYTES : byte[] from class org.apache.commons.codec.digest.HmacUtilsTest to package STANDARD_MD5_RESULT_BYTES : byte[] from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Change Attribute Access Modifier	private to package in attribute package STANDARD_MD5_RESULT_BYTES : byte[] from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Move Attribute	private STANDARD_MD5_RESULT_STRING : String from class org.apache.commons.codec.digest.HmacUtilsTest to package STANDARD_MD5_RESULT_STRING : String from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Change Attribute Access Modifier	private to package in attribute package STANDARD_MD5_RESULT_STRING : String from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Move Attribute	private STANDARD_PHRASE_STRING : String from class org.apache.commons.codec.digest.HmacUtilsTest to package STANDARD_PHRASE_STRING : String from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Change Attribute Access Modifier	private to package in attribute package STANDARD_PHRASE_STRING : String from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Move Attribute	private STANDARD_PHRASE_BYTES : byte[] from class org.apache.commons.codec.digest.HmacUtilsTest to package STANDARD_PHRASE_BYTES : byte[] from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Change Attribute Access Modifier	private to package in attribute package STANDARD_PHRASE_BYTES : byte[] from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Move Attribute	private STANDARD_SHA1_RESULT_BYTES : byte[] from class org.apache.commons.codec.digest.HmacUtilsTest to package STANDARD_SHA1_RESULT_BYTES : byte[] from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Change Attribute Access Modifier	private to package in attribute package STANDARD_SHA1_RESULT_BYTES : byte[] from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Move Attribute	private STANDARD_SHA1_RESULT_STRING : String from class org.apache.commons.codec.digest.HmacUtilsTest to package STANDARD_SHA1_RESULT_STRING : String from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Change Attribute Access Modifier	private to package in attribute package STANDARD_SHA1_RESULT_STRING : String from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Move Attribute	private STANDARD_SHA256_RESULT_BYTES : byte[] from class org.apache.commons.codec.digest.HmacUtilsTest to package STANDARD_SHA256_RESULT_BYTES : byte[] from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Change Attribute Access Modifier	private to package in attribute package STANDARD_SHA256_RESULT_BYTES : byte[] from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Move Attribute	private STANDARD_SHA256_RESULT_STRING : String from class org.apache.commons.codec.digest.HmacUtilsTest to package STANDARD_SHA256_RESULT_STRING : String from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Change Attribute Access Modifier	private to package in attribute package STANDARD_SHA256_RESULT_STRING : String from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Move Attribute	private STANDARD_SHA384_RESULT_BYTES : byte[] from class org.apache.commons.codec.digest.HmacUtilsTest to package STANDARD_SHA384_RESULT_BYTES : byte[] from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Change Attribute Access Modifier	private to package in attribute package STANDARD_SHA384_RESULT_BYTES : byte[] from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Move Attribute	private STANDARD_SHA384_RESULT_STRING : String from class org.apache.commons.codec.digest.HmacUtilsTest to package STANDARD_SHA384_RESULT_STRING : String from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Change Attribute Access Modifier	private to package in attribute package STANDARD_SHA384_RESULT_STRING : String from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Move Attribute	private STANDARD_SHA512_RESULT_BYTES : byte[] from class org.apache.commons.codec.digest.HmacUtilsTest to package STANDARD_SHA512_RESULT_BYTES : byte[] from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Change Attribute Access Modifier	private to package in attribute package STANDARD_SHA512_RESULT_BYTES : byte[] from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Move Attribute	private STANDARD_SHA512_RESULT_STRING : String from class org.apache.commons.codec.digest.HmacUtilsTest to package STANDARD_SHA512_RESULT_STRING : String from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Change Attribute Access Modifier	private to package in attribute package STANDARD_SHA512_RESULT_STRING : String from class org.apache.commons.codec.digest.HmacAlgorithmsTest
+Extract And Move Method	public getHmac(key byte[]) : Mac extracted from public getHmacMd5(key byte[]) : Mac in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public getHmac(key byte[]) : Mac extracted from public getHmacSha1(key byte[]) : Mac in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public getHmac(key byte[]) : Mac extracted from public getHmacSha256(key byte[]) : Mac in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public getHmac(key byte[]) : Mac extracted from public getHmacSha384(key byte[]) : Mac in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public getHmac(key byte[]) : Mac extracted from public getHmacSha512(key byte[]) : Mac in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public getInitializedMac(key byte[]) : Mac extracted from public getInitializedMac(algorithm HmacAlgorithms, key byte[]) : Mac in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmac(key byte[], valueToDigest byte[]) : byte[] extracted from public hmacMd5(key byte[], valueToDigest byte[]) : byte[] in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmac(key byte[], valueToDigest byte[]) : byte[] extracted from public hmacSha1(key byte[], valueToDigest byte[]) : byte[] in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmac(key byte[], valueToDigest byte[]) : byte[] extracted from public hmacSha256(key byte[], valueToDigest byte[]) : byte[] in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmac(key byte[], valueToDigest byte[]) : byte[] extracted from public hmacSha384(key byte[], valueToDigest byte[]) : byte[] in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmac(key byte[], valueToDigest byte[]) : byte[] extracted from public hmacSha512(key byte[], valueToDigest byte[]) : byte[] in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmac(key byte[], valueToDigest InputStream) : byte[] extracted from public hmacMd5(key byte[], valueToDigest InputStream) : byte[] in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmac(key byte[], valueToDigest InputStream) : byte[] extracted from public hmacSha1(key byte[], valueToDigest InputStream) : byte[] in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmac(key byte[], valueToDigest InputStream) : byte[] extracted from public hmacSha256(key byte[], valueToDigest InputStream) : byte[] in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmac(key byte[], valueToDigest InputStream) : byte[] extracted from public hmacSha384(key byte[], valueToDigest InputStream) : byte[] in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmac(key byte[], valueToDigest InputStream) : byte[] extracted from public hmacSha512(key byte[], valueToDigest InputStream) : byte[] in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmac(key String, valueToDigest String) : byte[] extracted from public hmacMd5(key String, valueToDigest String) : byte[] in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmac(key String, valueToDigest String) : byte[] extracted from public hmacSha1(key String, valueToDigest String) : byte[] in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmac(key String, valueToDigest String) : byte[] extracted from public hmacSha256(key String, valueToDigest String) : byte[] in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmac(key String, valueToDigest String) : byte[] extracted from public hmacSha384(key String, valueToDigest String) : byte[] in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmac(key String, valueToDigest String) : byte[] extracted from public hmacSha512(key String, valueToDigest String) : byte[] in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmacHex(key byte[], valueToDigest byte[]) : String extracted from public hmacMd5Hex(key byte[], valueToDigest byte[]) : String in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmacHex(key byte[], valueToDigest byte[]) : String extracted from public hmacSha1Hex(key byte[], valueToDigest byte[]) : String in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmacHex(key byte[], valueToDigest byte[]) : String extracted from public hmacSha256Hex(key byte[], valueToDigest byte[]) : String in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmacHex(key byte[], valueToDigest byte[]) : String extracted from public hmacSha384Hex(key byte[], valueToDigest byte[]) : String in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmacHex(key byte[], valueToDigest byte[]) : String extracted from public hmacSha512Hex(key byte[], valueToDigest byte[]) : String in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmacHex(key byte[], valueToDigest InputStream) : String extracted from public hmacMd5Hex(key byte[], valueToDigest InputStream) : String in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmacHex(key byte[], valueToDigest InputStream) : String extracted from public hmacSha1Hex(key byte[], valueToDigest InputStream) : String in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmacHex(key byte[], valueToDigest InputStream) : String extracted from public hmacSha256Hex(key byte[], valueToDigest InputStream) : String in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmacHex(key byte[], valueToDigest InputStream) : String extracted from public hmacSha384Hex(key byte[], valueToDigest InputStream) : String in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmacHex(key byte[], valueToDigest InputStream) : String extracted from public hmacSha512Hex(key byte[], valueToDigest InputStream) : String in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmacHex(key String, valueToDigest String) : String extracted from public hmacMd5Hex(key String, valueToDigest String) : String in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmacHex(key String, valueToDigest String) : String extracted from public hmacSha1Hex(key String, valueToDigest String) : String in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmacHex(key String, valueToDigest String) : String extracted from public hmacSha256Hex(key String, valueToDigest String) : String in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmacHex(key String, valueToDigest String) : String extracted from public hmacSha384Hex(key String, valueToDigest String) : String in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Extract And Move Method	public hmacHex(key String, valueToDigest String) : String extracted from public hmacSha512Hex(key String, valueToDigest String) : String in class org.apache.commons.codec.digest.HmacUtils & moved to class org.apache.commons.codec.digest.HmacAlgorithms
+Developers have reported that 11158 commits involve refactoring but only 817 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 817 commits.
+
+No refactorings detected at 4f7912d16b286daf1e0db27ad23c6b693a2db72f
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed8492ce433a4260b61a0e
+Issue Title: : Use Charset objects when possible, create Charsets class for required character encodings
+Issue Description:  Use Charset objects when possible, create Charsets for required character encodings.Linked Commit Github URL: https://github.com/apache/commons-codec/commit/ade211e45062595351caa3ec3d53c594095a3e69
+Refactorings at 7bf19f98e6debf76ace944034f7e5d376d4870fd
+Change Attribute Type	charset : String to charset : Charset in class org.apache.commons.codec.net.BCodec
+Encapsulate Attribute	private charset : Charset from class org.apache.commons.codec.net.BCodec
+Extract Method	public encode(value String, charset Charset) : String extracted from public encode(value String) : String in class org.apache.commons.codec.net.BCodec
+Change Parameter Type	charset : String to charset : Charset in method public BCodec(charset Charset) from class org.apache.commons.codec.net.BCodec
+Change Attribute Type	charset : String to charset : Charset in class org.apache.commons.codec.net.QCodec
+Encapsulate Attribute	private charset : Charset from class org.apache.commons.codec.net.QCodec
+Extract Method	public encode(pString String, charset Charset) : String extracted from public encode(pString String) : String in class org.apache.commons.codec.net.QCodec
+Change Parameter Type	charset : String to charset : Charset in method public QCodec(charset Charset) from class org.apache.commons.codec.net.QCodec
+Extract Method	protected encodeText(text String, charset Charset) : String extracted from protected encodeText(text String, charset String) : String in class org.apache.commons.codec.net.RFC1522Codec
+Rename Variable	rawdata : byte[] to rawData : byte[] in method protected encodeText(text String, charset Charset) : String from class org.apache.commons.codec.net.RFC1522Codec
+Rename Parameter	charset : String to charsetName : String in method protected encodeText(text String, charsetName String) : String from class org.apache.commons.codec.net.RFC1522Codec
+Modify Method Annotation	@Test to @Test(expected = UnsupportedCharsetException.class) in method public testInvalidEncoding() : void from class org.apache.commons.codec.net.BCodecTest
+Modify Method Annotation	@Test to @Test(expected = UnsupportedCharsetException.class) in method public testInvalidEncoding() : void from class org.apache.commons.codec.net.QCodecTest
+Developers have reported that 11158 commits involve refactoring but only 818 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 818 commits.
+
+No refactorings detected at 453c56cff0dbbc0ecefaa7f20b8df6d11d6d12ec
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed8492ce433a4260b61a0e
+Issue Title: : Use Charset objects when possible, create Charsets class for required character encodings
+Issue Description:  Use Charset objects when possible, create Charsets for required character encodings.Linked Commit Github URL: https://github.com/apache/commons-codec/commit/ade211e45062595351caa3ec3d53c594095a3e69
+Refactorings at 90caed967e6d24a4acd8a9f0739b75f6bb2e7b37
+Change Parameter Type	csName : String to charset : Charset in method public Hex(charset Charset) from class org.apache.commons.codec.binary.Hex
+Rename Parameter	csName : String to charset : Charset in method public Hex(charset Charset) from class org.apache.commons.codec.binary.Hex
+Rename Attribute	charsetName : String to charset : Charset in class org.apache.commons.codec.binary.Hex
+Change Attribute Type	charsetName : String to charset : Charset in class org.apache.commons.codec.binary.Hex
+Encapsulate Attribute	private charset : Charset from class org.apache.commons.codec.binary.Hex
+Developers have reported that 11158 commits involve refactoring but only 819 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 819 commits.
+
+No refactorings detected at f0028e1b90f8d10266f3fe26bafa0882a81ffe82
+
+No refactorings detected at 847a6d07793a198d28819731e5166f9ed3845164
+
+No refactorings detected at 82d967a3f9e3d4c1927ff682d0df7a09399df7b6
+
+No refactorings detected at 817666037d3c09b9138b161964b0fafc76d65998
+
+No refactorings detected at ce54f3476745a68d02b1db11444b71c758b1d1bb
+
+No refactorings detected at 46649dc97546418e1d6d2362d74dca92a8eb401f
+
+VCS System: https://github.com/apache/commons-codec.git
+Issue ID: : 5bed84a8ce433a4260b61b39
+Issue Title: : Add Percent-Encoding Codec (described in RFC3986 and RFC7578)
+Issue Description:  Similar but more generic than the URLCodec.
+Refactorings at 0842a997e840cd2a7c18121b67f21f334a343a0a
+Rename Parameter	alwaysEncodeChars : byte[] to alwaysEncodeCharsArray : byte[] in method private insertAlwaysEncodeChars(alwaysEncodeCharsArray byte[]) : void from class org.apache.commons.codec.net.PercentCodec
+Developers have reported that 11158 commits involve refactoring but only 820 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 820 commits.
+
+No refactorings detected at 83e83029dc3b2623adef53d0b8f3a572f633d9a4
+
+No refactorings detected at c87b885cdfdfdf9cd5dc87267301b95842c7d7fb
+
+No refactorings detected at 95083b50042f370097f344906fe47d42b76f16ae
+
+No refactorings detected at 924540abc919d32a8aaa92c6f18906f01e64e167
+
+No refactorings detected at de8a7fa6ea01e46ca0869dc8bcb259d3a1487eab
+
+No refactorings detected at 043178c583cec0271bd00aab4eeb93145dec327d
+
+No refactorings detected at 8edd3ec573649443c2dc0747cf3cddc1608d43d6
+
+No refactorings detected at 809bc2171b4563fb642687e87bb68741c1dd5026
+

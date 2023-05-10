@@ -398,3 +398,204 @@ No refactorings detected at e2feaed85df37bc91fdeb59220c90fac2d3ade4b
 
 No refactorings detected at 946da9d66480c27a221e6ef1282c88d7f81ee8af
 
+No refactorings detected at 18afdcb4b17aa0a4ff7c0e73b2c35b559cda1fc4
+
+No refactorings detected at abd219b9711f70b07d38070f9d4511ef68b7a3f4
+
+No refactorings detected at a2956bb8436273a794dd58a8ca3d63215758f9bb
+
+VCS System: https://github.com/apache/commons-validator.git
+Issue ID: : 5bf434253f221d19ef6a8dce
+Issue Title: : Extend ISBN validator to support smooth transition to ISBN-13 / EAN-13 standard
+Issue Description:  Hi,
+Refactorings at 58156c57c1b3d6dee2c90e06d87e49b69e9b50a0
+Rename Parameter	isbn : String to code : String in method public isValid(code String) : boolean from class org.apache.commons.validator.routines.ISBNValidator
+Rename Method	public testIsValid() : void renamed to public testInvalid() : void in class org.apache.commons.validator.routines.ISBNValidatorTest
+Remove Thrown Exception Type	Exception in method public testIsValid() : void from class org.apache.commons.validator.routines.ISBNValidatorTest
+Developers have reported that 11158 commits involve refactoring but only 1426 involve refactoring operations
+There are 32 duplicate commits with refactoring out of the 1426 commits.
+
+No refactorings detected at b266ec40183da15de916b6eb14d3c9999b600a77
+
+VCS System: https://github.com/apache/commons-validator.git
+Issue ID: : 5bf434393f221d19ef6a8e14
+Issue Title: : Lodaing of Digester Rules for classes extending  ValidatorResources does not work
+Issue Description:  If we extend the class "ValidatorResources", then the loading of the digester rules does not work properly.
+Refactorings at 7f6d2217fe853ff3c0085395aa724b1e5bb8e9c5
+Extract Attribute	private VALIDATOR_RULES : String in class org.apache.commons.validator.ValidatorResources
+Developers have reported that 11158 commits involve refactoring but only 1427 involve refactoring operations
+There are 32 duplicate commits with refactoring out of the 1427 commits.
+
+No refactorings detected at 9ea5854fe24f08759c9355e71b6e105119c45348
+
+No refactorings detected at d629b42bc061170f86873b03495d59bfa6b20ad1
+
+No refactorings detected at 5607336eae30dcbfabd1df2739cf96fbb04245f3
+
+No refactorings detected at bcd3cd5d93fe9c7050a4052d656df6f4839027ed
+
+No refactorings detected at 5607336eae30dcbfabd1df2739cf96fbb04245f3
+
+No refactorings detected at 862461b89f222c9cd9b09956b46c47bf8a463d2b
+
+No refactorings detected at 7d9d905705fb1e0a4d6ce10166c9019d0e1d2e14
+
+VCS System: https://github.com/apache/commons-validator.git
+Issue ID: : 5bf434963f221d19ef6a9038
+Issue Title: : Move CreditCardValidator to routines package and refactor to use new CodeValidator
+Issue Description:  Having copied CreditCardValidator to routines, it now needs to be refactored to use CodeValidator/LuhnCheckDigit/etc. It might also make sense to break CreditCardType out into a separate 1.4-style typesafe enum so it can be easily converted to a real enum for Validator 2.Linked Commit Github URL: https://github.com/apache/commons-validator/commit/b46846b5229e66839e0023b6f15ced1b4883cd63
+Refactorings at 9e01e13ab1f01ec06722311955be4df115b17f01
+Change Variable Type	type : CreditCardType to type : CodeValidator in method public isValid(card String) : boolean from class org.apache.commons.validator.routines.CreditCardValidator
+Developers have reported that 11158 commits involve refactoring but only 1428 involve refactoring operations
+There are 32 duplicate commits with refactoring out of the 1428 commits.
+
+No refactorings detected at abd219b9711f70b07d38070f9d4511ef68b7a3f4
+
+No refactorings detected at a2956bb8436273a794dd58a8ca3d63215758f9bb
+
+No refactorings detected at 97e8d4f02546c3fdace8fc8f5d3be6796f51d750
+
+No refactorings detected at 27c1eb288daa995901bdaf9af654ad9546fb9be8
+
+No refactorings detected at dcd8c5aa35a4418adeecd6543056255e8ca8886c
+
+VCS System: https://github.com/apache/commons-validator.git
+Issue ID: : 5bf434a53f221d19ef6a90aa
+Issue Title: : Remove the dependency on Jakarta ORO (move to JDK 1.4 regular expression support)
+Issue Description:  Hey,
+Refactorings at 5e1816009b086574a20b3c107f685d51a7e809f4
+Change Attribute Type	LEGAL_ASCII_PATTERN : String to LEGAL_ASCII_PATTERN : Pattern in class org.apache.commons.validator.EmailValidator
+Change Attribute Type	EMAIL_PATTERN : String to EMAIL_PATTERN : Pattern in class org.apache.commons.validator.EmailValidator
+Change Attribute Type	IP_DOMAIN_PATTERN : String to IP_DOMAIN_PATTERN : Pattern in class org.apache.commons.validator.EmailValidator
+Change Attribute Type	TLD_PATTERN : String to TLD_PATTERN : Pattern in class org.apache.commons.validator.EmailValidator
+Change Attribute Type	USER_PATTERN : String to USER_PATTERN : Pattern in class org.apache.commons.validator.EmailValidator
+Change Attribute Type	DOMAIN_PATTERN : String to DOMAIN_PATTERN : Pattern in class org.apache.commons.validator.EmailValidator
+Change Attribute Type	ATOM_PATTERN : String to ATOM_PATTERN : Pattern in class org.apache.commons.validator.EmailValidator
+Change Variable Type	atomMatcher : Perl5Util to atomMatcher : Matcher in method protected isValidSymbolicDomain(domain String) : boolean from class org.apache.commons.validator.EmailValidator
+Localize Parameter	ipAddressMatcher : Perl5Util to ipAddressMatcher : Matcher in method protected isValidIpAddress(ipAddress String) : boolean from class org.apache.commons.validator.EmailValidator
+Change Variable Type	ipAddressMatcher : Perl5Util to ipAddressMatcher : Matcher in method protected isValidIpAddress(ipAddress String) : boolean from class org.apache.commons.validator.EmailValidator
+Add Parameter	ipAddress : String in method protected isValidIpAddress(ipAddress String) : boolean from class org.apache.commons.validator.EmailValidator
+Developers have reported that 11158 commits involve refactoring but only 1429 involve refactoring operations
+There are 32 duplicate commits with refactoring out of the 1429 commits.
+
+VCS System: https://github.com/apache/commons-validator.git
+Issue ID: : 5bf434a53f221d19ef6a90aa
+Issue Title: : Remove the dependency on Jakarta ORO (move to JDK 1.4 regular expression support)
+Issue Description:  Hey,
+Refactorings at 8f4cf677920a5c00280f76c7ee7ea6c996b34ff6
+Change Attribute Type	URL_PATTERN : String to URL_PATTERN : Pattern in class org.apache.commons.validator.UrlValidator
+Change Attribute Type	SCHEME_PATTERN : String to SCHEME_PATTERN : Pattern in class org.apache.commons.validator.UrlValidator
+Change Attribute Type	AUTHORITY_PATTERN : String to AUTHORITY_PATTERN : Pattern in class org.apache.commons.validator.UrlValidator
+Change Attribute Type	PATH_PATTERN : String to PATH_PATTERN : Pattern in class org.apache.commons.validator.UrlValidator
+Change Attribute Type	QUERY_PATTERN : String to QUERY_PATTERN : Pattern in class org.apache.commons.validator.UrlValidator
+Change Attribute Type	LEGAL_ASCII_PATTERN : String to LEGAL_ASCII_PATTERN : Pattern in class org.apache.commons.validator.UrlValidator
+Change Attribute Type	DOMAIN_PATTERN : String to DOMAIN_PATTERN : Pattern in class org.apache.commons.validator.UrlValidator
+Change Attribute Type	PORT_PATTERN : String to PORT_PATTERN : Pattern in class org.apache.commons.validator.UrlValidator
+Change Attribute Type	ATOM_PATTERN : String to ATOM_PATTERN : Pattern in class org.apache.commons.validator.UrlValidator
+Change Attribute Type	ALPHA_PATTERN : String to ALPHA_PATTERN : Pattern in class org.apache.commons.validator.UrlValidator
+Change Variable Type	matchUrlPat : Perl5Util to urlMatcher : Matcher in method public isValid(value String) : boolean from class org.apache.commons.validator.UrlValidator
+Rename Variable	matchUrlPat : Perl5Util to urlMatcher : Matcher in method public isValid(value String) : boolean from class org.apache.commons.validator.UrlValidator
+Change Variable Type	authorityMatcher : Perl5Util to authorityMatcher : Matcher in method protected isValidAuthority(authority String) : boolean from class org.apache.commons.validator.UrlValidator
+Change Variable Type	atomMatcher : Perl5Util to atomMatcher : Matcher in method protected isValidAuthority(authority String) : boolean from class org.apache.commons.validator.UrlValidator
+Developers have reported that 11158 commits involve refactoring but only 1430 involve refactoring operations
+There are 32 duplicate commits with refactoring out of the 1430 commits.
+
+VCS System: https://github.com/apache/commons-validator.git
+Issue ID: : 5bf434a53f221d19ef6a90aa
+Issue Title: : Remove the dependency on Jakarta ORO (move to JDK 1.4 regular expression support)
+Issue Description:  Hey,
+Refactorings at 041da14c24f3cb6cea15d48ab025c64158780172
+Change Variable Type	emailMatcher : Perl5Util to emailMatcher : Matcher in method public isValid(email String) : boolean from class org.apache.commons.validator.routines.EmailValidator
+Developers have reported that 11158 commits involve refactoring but only 1431 involve refactoring operations
+There are 32 duplicate commits with refactoring out of the 1431 commits.
+
+VCS System: https://github.com/apache/commons-validator.git
+Issue ID: : 5bf434a53f221d19ef6a90aa
+Issue Title: : Remove the dependency on Jakarta ORO (move to JDK 1.4 regular expression support)
+Issue Description:  Hey,
+Refactorings at bad789443636b51b9bf3d329373463ede1ee01ee
+Change Variable Type	atomMatcher : Perl5Util to atomMatcher : Matcher in method protected isValidSymbolicDomain(domain String) : boolean from class org.apache.commons.validator.routines.EmailValidator
+Developers have reported that 11158 commits involve refactoring but only 1432 involve refactoring operations
+There are 32 duplicate commits with refactoring out of the 1432 commits.
+
+No refactorings detected at ace83fcd9bf2925b2ff91f6448403d4a746ce3d3
+
+No refactorings detected at 9467d9f6b8175f5c4cb2d6d4556350cd028d0d8b
+
+VCS System: https://github.com/apache/commons-validator.git
+Issue ID: : 5bf434a53f221d19ef6a90aa
+Issue Title: : Remove the dependency on Jakarta ORO (move to JDK 1.4 regular expression support)
+Issue Description:  Hey,
+Refactorings at 43e4a6f830607fcbe27d498afd4895ad6c9ccb39
+Change Variable Type	matchAsciiPat : Perl5Util to matchAsciiPat : Pattern in method public isValid(value String) : boolean from class org.apache.commons.validator.routines.UrlValidator
+Developers have reported that 11158 commits involve refactoring but only 1433 involve refactoring operations
+There are 32 duplicate commits with refactoring out of the 1433 commits.
+
+No refactorings detected at 6f25ebcc59e5bf09129b2393dfa4926922b7cd29
+
+VCS System: https://github.com/apache/commons-validator.git
+Issue ID: : 5bf434a53f221d19ef6a90aa
+Issue Title: : Remove the dependency on Jakarta ORO (move to JDK 1.4 regular expression support)
+Issue Description:  Hey,
+Refactorings at 295e6dd6d207c8f8c5b88b3b97768e9411301bf3
+Change Variable Type	matchUrlPat : Perl5Util to urlMatcher : Matcher in method public isValid(value String) : boolean from class org.apache.commons.validator.routines.UrlValidator
+Rename Variable	matchUrlPat : Perl5Util to urlMatcher : Matcher in method public isValid(value String) : boolean from class org.apache.commons.validator.routines.UrlValidator
+Developers have reported that 11158 commits involve refactoring but only 1434 involve refactoring operations
+There are 32 duplicate commits with refactoring out of the 1434 commits.
+
+No refactorings detected at 3767649d496d506e3ad457b2e83922bc5655ae84
+
+VCS System: https://github.com/apache/commons-validator.git
+Issue ID: : 5bf434a53f221d19ef6a90aa
+Issue Title: : Remove the dependency on Jakarta ORO (move to JDK 1.4 regular expression support)
+Issue Description:  Hey,
+Refactorings at b616dc9ef661e7379575484be38c8e3308e6188d
+Change Variable Type	authorityMatcher : Perl5Util to authorityMatcher : Matcher in method protected isValidAuthority(authority String) : boolean from class org.apache.commons.validator.routines.UrlValidator
+Developers have reported that 11158 commits involve refactoring but only 1435 involve refactoring operations
+There are 32 duplicate commits with refactoring out of the 1435 commits.
+
+No refactorings detected at d9f0ed68302f41a46cbb97d3e78742561b936132
+
+No refactorings detected at da7193f00873d8ad48da8ce532186191da31737f
+
+VCS System: https://github.com/apache/commons-validator.git
+Issue ID: : 5bf434a53f221d19ef6a90aa
+Issue Title: : Remove the dependency on Jakarta ORO (move to JDK 1.4 regular expression support)
+Issue Description:  Hey,
+Refactorings at 58156c57c1b3d6dee2c90e06d87e49b69e9b50a0
+Rename Parameter	isbn : String to code : String in method public isValid(code String) : boolean from class org.apache.commons.validator.routines.ISBNValidator
+Rename Method	public testIsValid() : void renamed to public testInvalid() : void in class org.apache.commons.validator.routines.ISBNValidatorTest
+Remove Thrown Exception Type	Exception in method public testIsValid() : void from class org.apache.commons.validator.routines.ISBNValidatorTest
+Developers have reported that 11158 commits involve refactoring but only 1436 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1436 commits.
+
+No refactorings detected at f5c9ccd4bb5ce3a6ed78eccdc6bd513d24541049
+
+No refactorings detected at c6e75535b2f622a82ece6831d08b02a4054f3a37
+
+No refactorings detected at 8a1b37cef8e33305b4660e8731966f03a8d8936d
+
+No refactorings detected at e8b35df457ba86106f8a86e6b0292f6da292b5f7
+
+No refactorings detected at 37093d3b9dcf4c34b58e2d65971f0b30230ff630
+
+No refactorings detected at cd6387d00a55eab28fb2ffd77d4ac3b773447542
+
+No refactorings detected at 1bb7b0d18c27b9d61f1010c860adc4e643659d82
+
+No refactorings detected at f8b0a0a96ecc08fef15c2e7e66bf0a62c3616858
+
+No refactorings detected at 27ee44fb05078102402c2b7be6ab7864063dccf6
+
+No refactorings detected at 97dfbef102792bada5ce921e0104814591a9b0df
+
+No refactorings detected at 701e88856da1223a34eb6ad7fd133e0e0644c4fa
+
+No refactorings detected at c45994e38779957dbc09d74831aaa664e7031a46
+
+No refactorings detected at edad71ad47d5f78d7cc93f2f281bfb3b60c56200
+
+No refactorings detected at b696e321d599319a4bc94e055af27298c979874f
+
+No refactorings detected at e2feaed85df37bc91fdeb59220c90fac2d3ade4b
+
