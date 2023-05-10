@@ -28,6 +28,8 @@ with open(r"Python\IssueTitleRefactoringDocCalculator\data.txt", 'w') as out_fil
     print(f"Out of the 5745 issues, RefactoringMiner detects refactoring operations in only {len(issue_IDs)}.", file = out_file)
     print(f"Thus, according to RefactoringMiner only {percent_5745_issues_with_refactoring}% of the 5745 issues contained refactoring operations.", file = out_file)
 
+with open(r"Python\IssueTitleRefactoringDocCalculator\reg_exp_grouped.txt", 'r') as input_file:
+    issue_title_reg_exp = input_file.readline().strip()
 issue_title_phrases_terms = ['RECODE', 'REENGINEER', 
                              'REWRIT', 'EDIT', 'ADD', 'CHANG', 'CREAT', 
                              'EXTEND', 'EXTRACT', 'FIX', 'IMPROV', 'INLIN', 
@@ -42,12 +44,6 @@ issue_title_phrases_terms = ['RECODE', 'REENGINEER',
 issue_title_phrases_terms_dict = {}
 for phrase_term in issue_title_phrases_terms:
     issue_title_phrases_terms_dict[phrase_term] = 0
-
-issue_title_reg_exps = {}
-with open(r"Python\IssueTitleRefactoringDocCalculator\reg_exp_grouped.txt", 'r') as input_file:
-    for phrase_term in issue_title_phrases_terms:
-        issue_title_reg_exps[phrase_term] = input_file.readline().strip()
-
 with open(r"Python\mongo_db_extract_refactoring_doc.txt", encoding='utf-8') as input_file:
     while True:
         line = input_file.readline()
@@ -58,13 +54,15 @@ with open(r"Python\mongo_db_extract_refactoring_doc.txt", encoding='utf-8') as i
            issue_title = line[13:]
         elif "Issue Id:" in line:
             if line[10:] in issue_IDs:
-                for phrase_term in issue_title_reg_exps:
-                    matches = re.search(issue_title_reg_exps[phrase_term], issue_title, re.I | re.M | re.DOTALL)
-                    if matches:
+                matches = re.search(issue_title_reg_exp, issue_title, re.I | re.M | re.DOTALL)
+                group_dict = matches.groupdict()
+                valid_keys = [key for key in group_dict if group_dict[key] is not None]
+                for phrase_term in issue_title_phrases_terms:
+                    if phrase_term in valid_keys:
                         issue_title_phrases_terms_dict[phrase_term] += 1
 
 with open(r"Python\IssueTitleRefactoringDocCalculator\issue_title_refactoring_doc_text_patterns.csv", 'w', newline='') as output_csv:
     csv_writer = csv.DictWriter(output_csv, fieldnames = issue_title_phrases_terms)
     csv_writer.writeheader()
-    percentages_dict = {pattern: ((100.0 * issue_title_phrases_terms_dict[pattern]) / sum([issue_title_phrases_terms_dict[pattern] for pattern in issue_title_phrases_terms_dict])) for pattern in issue_title_phrases_terms_dict}
+    percentages_dict = {pattern: ((100.0 * issue_title_phrases_terms_dict[pattern]) / 2452.00) for pattern in issue_title_phrases_terms_dict}
     csv_writer.writerow(percentages_dict)
