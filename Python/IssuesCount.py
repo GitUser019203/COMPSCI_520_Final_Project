@@ -40,7 +40,7 @@ def countIssueTitlesContaining(file_path, key_word_list):
 def main():
     """Main Method"""
     # File path
-    file_path_test = "./Python/mongo_db_extract_refactoring_doc.txt"
+    file_path_test = "mongo_db_extract_refactoring_doc.txt"
 
     # Calculate total number of issue titles
     total_iss = countTotalIssueTitles(file_path=file_path_test)
