@@ -60,8 +60,8 @@ with open("Python\\extractedIssueComments.txt", 'w', encoding="utf-8") as out_fi
                     for issue in Issue.objects(issue_system_id=issue_tracker.id):
                         if issue.title is not None and re.search(refactor_pattern, issue.title):                            
                             total_num_issues_documenting_refactoring += 1 # There could be False positives!
-                            com = IssueComment.objects(issue_id=issue.id).values_list('comment')
-                            print("Comment: ",com,file=out_file)
+                            comment = IssueComment.objects(issue_id=issue.id).values_list('comment')
+                            print("Comment: ",comment,file=out_file)
                             linked_commits = Commit.objects(linked_issue_ids=issue.id)
                             for commit in linked_commits:
                                 # Although distinct commits can have identical commit hashes it is rare
