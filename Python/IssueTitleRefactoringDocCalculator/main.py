@@ -58,6 +58,7 @@ with open(r"Python\mongo_db_extract_refactoring_doc.txt", encoding='utf-8') as i
            issue_title = line[13:]
         elif "Issue Id:" in line:
             if line[10:] in issue_IDs:
+                issue_IDs.remove(line[10:])
                 for phrase_term in issue_title_reg_exps:
                     matches = re.search(issue_title_reg_exps[phrase_term], issue_title, re.I | re.M | re.DOTALL)
                     if matches:
