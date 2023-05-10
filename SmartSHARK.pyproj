@@ -24,14 +24,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Python\bug_mining.py" />
-    <Compile Include="Python\IssuesCount.py" />
     <Compile Include="Python\IssueTitleRefactoringDocCalculator\main.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Python\JavaConsoleOutputParser\parser.py" />
     <Compile Include="Python\PythonApplication.py" />
-    <Compile Include="Python\WSS4J\gitparser.py" />
-    <Compile Include="Python\WSS4J\mongostore.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="C++\projects.cpp" />
