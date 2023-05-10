@@ -22,11 +22,11 @@ percent_detected_refactoring_in_issue_titles_with_refactoring_doc = 100 * (len(i
 
 with open(r"Python\IssueRefactoringDocCalculator\data.txt", 'w') as out_file:
     print("The total number of issues is 45323.", file = out_file)
-    print("The total number of issues with refactoring documentation in their titles is 10911.", file = out_file)
+    print("The total number of issues with refactoring documentation in their titles is 11194.", file = out_file)
     print(f"RefactoringMiner calculates that {len(issue_IDs)} or {percent_detected_refactoring_in_issue_titles_with_refactoring_doc}% of issues with refactoring documentation in their titles contained refactoring operations.", file = out_file)
-    print("However, only 5745 of the issues have linked commits that developers have labelled as involving refactoring.", file = out_file)        
-    print(f"Out of the 5745 issues, RefactoringMiner detects refactoring operations in only {len(issue_IDs)}.", file = out_file)
-    print(f"Thus, according to RefactoringMiner only {percent_5745_issues_with_refactoring}% of the 5745 issues contained refactoring operations.", file = out_file)
+    print("However, only 5932 of the issues have linked commits that developers have labelled as involving refactoring.", file = out_file)        
+    print(f"Out of the 5932 issues, RefactoringMiner detects refactoring operations in only {len(issue_IDs)}.", file = out_file)
+    print(f"Thus, according to RefactoringMiner only {percent_5745_issues_with_refactoring}% of the 5932 issues contained refactoring operations.", file = out_file)
 
 issue_title_phrases_terms = ['RECODE', 'REENGINEER', 
                              'REWRIT', 'EDIT', 'ADD', 'CHANG', 'CREAT', 
