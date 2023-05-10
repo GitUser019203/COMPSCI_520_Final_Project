@@ -103,6 +103,7 @@
     <Content Include="Python\IssueRefactoringDocCalculator\issue_title_refactoring_doc_text_patterns.csv" />
     <Content Include="Python\IssueRefactoringDocCalculator\issue_title_refactoring_doc_text_patterns.csv.xlsx" />
     <Content Include="Python\IssueRefactoringDocCalculator\reg_exp_grouped.txt" />
+    <Content Include="Python\IssueRefactoringDocCalculator\test.csv" />
     <Content Include="Python\issue_tracked_projects.txt" />
     <Content Include="Python\JavaConsoleOutputParser\extracted_errors" />
     <Content Include="Python\mongo_db_extract_refactoring_doc.txt" />
