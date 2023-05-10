@@ -165,7 +165,7 @@ public class Main {
             @Override
             public void handle(String commitId, List<Refactoring> refactorings) {
                 String outputString = new String();
-                System.out.println("\nAlready mined " + String.valueOf(numCommitsMined) + "/13,596 commits.");
+                System.out.println("\nAlready mined " + String.valueOf(numCommitsMined) + "/13,901 commits.");
                 if(refactorings.size() > 0) {
                     outputString += "VCS System: " + vcsSystemURL + "\n";
                     System.out.println("VCS System: " + vcsSystemURL);
