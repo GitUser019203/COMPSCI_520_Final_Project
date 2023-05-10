@@ -464,3 +464,236 @@ No refactorings detected at 5bf2975e3c507911f83dbaa665fee068ffbf50a6
 
 No refactorings detected at 8d471cde5ae841fbd3206fe9b84483be06a5a868
 
+No refactorings detected at 294f1f93e81ede18e826a9bf66312a7d53f32d1a
+
+No refactorings detected at 418ed6d5f337221ec4c64bef240ab3c994603509
+
+VCS System: https://github.com/apache/commons-net.git
+Issue ID: : 5bec3c50a43d084785b6e876
+Issue Title: : [net] PATCH] FTP and FTPClient changes
+Issue Description:  I've included 3 patch files for changes I've made to the FTP andFTPClientclasses in the commons-net package.
+Refactorings at eb945ea4b8810c4a32f622b1bea7781079a3ab37
+Change Attribute Type	__commandBuffer : StringBuffer to __commandBuffer : StringBuilder in class org.apache.commons.net.ftp.FTP
+Change Attribute Access Modifier	package to protected in attribute protected _replyCode : int from class org.apache.commons.net.ftp.FTP
+Change Attribute Type	_replyLines : Vector to _replyLines : Vector<String> in class org.apache.commons.net.ftp.FTP
+Change Attribute Access Modifier	package to protected in attribute protected _replyLines : Vector<String> from class org.apache.commons.net.ftp.FTP
+Change Attribute Access Modifier	package to protected in attribute protected _newReplyString : boolean from class org.apache.commons.net.ftp.FTP
+Change Attribute Access Modifier	package to protected in attribute protected _replyString : String from class org.apache.commons.net.ftp.FTP
+Change Attribute Access Modifier	package to protected in attribute protected _controlEncoding : String from class org.apache.commons.net.ftp.FTP
+Developers have reported that 11158 commits involve refactoring but only 1386 involve refactoring operations
+There are 31 duplicate commits with refactoring out of the 1386 commits.
+
+VCS System: https://github.com/apache/commons-net.git
+Issue ID: : 5bec3c9ca43d084785b6eab7
+Issue Title: : Method createServerSocket of FTPSSocketFactory will never be called and thus UseClientMode is incorrect in a secured ftp transfer using active mode.
+Issue Description:  When the data channel is secured and we are using Active mode , we need to set UseClientMode to true in the FTP Client so even though the FtpServer is initiating the connection, he is the "server" in the SSL handshake.
+Refactorings at a4244f86bdafafb60f7fb63ced991a105d65f611
+Add Attribute Modifier	final in attribute private context : SSLContext from class org.apache.commons.net.ftp.FTPSSocketFactory
+Extract Class	org.apache.commons.net.ftp.FTPSServerSocketFactory from class org.apache.commons.net.ftp.FTPSSocketFactory
+Move Method	public createServerSocket(port int) : ServerSocket from class org.apache.commons.net.ftp.FTPSSocketFactory to public createServerSocket(port int) : ServerSocket from class org.apache.commons.net.ftp.FTPSServerSocketFactory
+Move Method	public createServerSocket(port int, backlog int) : ServerSocket from class org.apache.commons.net.ftp.FTPSSocketFactory to public createServerSocket(port int, backlog int) : ServerSocket from class org.apache.commons.net.ftp.FTPSServerSocketFactory
+Move Method	public createServerSocket(port int, backlog int, ifAddress InetAddress) : ServerSocket from class org.apache.commons.net.ftp.FTPSSocketFactory to public createServerSocket(port int, backlog int, ifAddress InetAddress) : ServerSocket from class org.apache.commons.net.ftp.FTPSServerSocketFactory
+Move Method	public init(socket ServerSocket) : ServerSocket from class org.apache.commons.net.ftp.FTPSSocketFactory to public init(socket ServerSocket) : ServerSocket from class org.apache.commons.net.ftp.FTPSServerSocketFactory
+Developers have reported that 11158 commits involve refactoring but only 1387 involve refactoring operations
+There are 31 duplicate commits with refactoring out of the 1387 commits.
+
+No refactorings detected at 8302e66819928b2113d3b83fe9be42ee01792c46
+
+No refactorings detected at c4cd3d1c5ea6d15316713a633196185c78e5a8fc
+
+No refactorings detected at f4509e7fff01493c2f1683c1ef0b9cbbcf3b4c09
+
+No refactorings detected at 9de4928a1860c043a8aec6a7bdf150650a33632f
+
+VCS System: https://github.com/apache/commons-net.git
+Issue ID: : 5bec3ccea43d084785b6ec72
+Issue Title: : ftp.FTPClient.initiateListParsing(String parserKey, String pathname) can call createFileEntryParser with null systemName
+Issue Description:  ftp.FTPClient.initiateListParsing(String parserKey, String pathname) can call createFileEntryParser(String) with null systemName if the getSystemName() method fails.
+Refactorings at a2db3224814e0ef2adcd8c46145eab05a7e439a0
+Add Method Annotation	@Deprecated in method public getSystemName() : String from class org.apache.commons.net.ftp.FTPClient
+Rename Variable	systemName : String to systemType : String in method public initiateListParsing(parserKey String, pathname String) : FTPListParseEngine from class org.apache.commons.net.ftp.FTPClient
+Developers have reported that 11158 commits involve refactoring but only 1388 involve refactoring operations
+There are 31 duplicate commits with refactoring out of the 1388 commits.
+
+No refactorings detected at 7fccfce6c1d235daa78e4bb916cac07f3d46d00c
+
+VCS System: https://github.com/apache/commons-net.git
+Issue ID: : 5bec3cd2a43d084785b6ec8c
+Issue Title: : Add a FTPClient.listFiles(FTPFileFilter) method
+Issue Description:  It would be nice if there was a way to list *only* those files I'm interested in.  I've had to write a loop a couple of times to figure out which files had the right naming conventions.  If the API handled that for me, I would have less boilerplate code to write.
+Refactorings at fad92c0ffd3d313b02561e4fcd47db066bc0d9ab
+Extract Method	public getFiles(filter FTPFileFilter) : FTPFile[] extracted from public getFiles() : FTPFile[] in class org.apache.commons.net.ftp.FTPListParseEngine
+Developers have reported that 11158 commits involve refactoring but only 1389 involve refactoring operations
+There are 31 duplicate commits with refactoring out of the 1389 commits.
+
+VCS System: https://github.com/apache/commons-net.git
+Issue ID: : 5bec3ce1a43d084785b6ed25
+Issue Title: : Move ProtocolCommandSupport to SocketClient
+Issue Description:  All the SocketClient subclass branches currently define a ProtocolCommandSupport field and supporting methods.
+Refactorings at 781a36776e39e80e6748480bf34f65017d94eef5
+Change Attribute Access Modifier	protected to private in attribute private _commandSupport_ : ProtocolCommandSupport from class org.apache.commons.net.SocketClient
+Change Attribute Access Modifier	protected to private in attribute private _commandSupport_ : ProtocolCommandSupport from class org.apache.commons.net.SocketClient
+Change Attribute Access Modifier	protected to private in attribute private _commandSupport_ : ProtocolCommandSupport from class org.apache.commons.net.SocketClient
+Change Attribute Access Modifier	protected to private in attribute private _commandSupport_ : ProtocolCommandSupport from class org.apache.commons.net.SocketClient
+Change Attribute Access Modifier	protected to private in attribute private _commandSupport_ : ProtocolCommandSupport from class org.apache.commons.net.SocketClient
+Pull Up Attribute	protected _commandSupport_ : ProtocolCommandSupport from class org.apache.commons.net.ftp.FTP to private _commandSupport_ : ProtocolCommandSupport from class org.apache.commons.net.SocketClient
+Pull Up Attribute	protected _commandSupport_ : ProtocolCommandSupport from class org.apache.commons.net.imap.IMAP to private _commandSupport_ : ProtocolCommandSupport from class org.apache.commons.net.SocketClient
+Pull Up Attribute	protected _commandSupport_ : ProtocolCommandSupport from class org.apache.commons.net.nntp.NNTP to private _commandSupport_ : ProtocolCommandSupport from class org.apache.commons.net.SocketClient
+Pull Up Attribute	protected _commandSupport_ : ProtocolCommandSupport from class org.apache.commons.net.pop3.POP3 to private _commandSupport_ : ProtocolCommandSupport from class org.apache.commons.net.SocketClient
+Pull Up Attribute	protected _commandSupport_ : ProtocolCommandSupport from class org.apache.commons.net.smtp.SMTP to private _commandSupport_ : ProtocolCommandSupport from class org.apache.commons.net.SocketClient
+Pull Up Method	public addProtocolCommandListener(listener ProtocolCommandListener) : void from class org.apache.commons.net.ftp.FTP to public addProtocolCommandListener(listener ProtocolCommandListener) : void from class org.apache.commons.net.SocketClient
+Pull Up Method	public addProtocolCommandListener(listener ProtocolCommandListener) : void from class org.apache.commons.net.imap.IMAP to public addProtocolCommandListener(listener ProtocolCommandListener) : void from class org.apache.commons.net.SocketClient
+Pull Up Method	public addProtocolCommandListener(listener ProtocolCommandListener) : void from class org.apache.commons.net.nntp.NNTP to public addProtocolCommandListener(listener ProtocolCommandListener) : void from class org.apache.commons.net.SocketClient
+Pull Up Method	public addProtocolCommandListener(listener ProtocolCommandListener) : void from class org.apache.commons.net.pop3.POP3 to public addProtocolCommandListener(listener ProtocolCommandListener) : void from class org.apache.commons.net.SocketClient
+Pull Up Method	public addProtocolCommandListener(listener ProtocolCommandListener) : void from class org.apache.commons.net.smtp.SMTP to public addProtocolCommandListener(listener ProtocolCommandListener) : void from class org.apache.commons.net.SocketClient
+Pull Up Method	public removeProtocolCommandListener(listener ProtocolCommandListener) : void from class org.apache.commons.net.ftp.FTP to public removeProtocolCommandListener(listener ProtocolCommandListener) : void from class org.apache.commons.net.SocketClient
+Pull Up Method	public removeProtocolCommandListener(listener ProtocolCommandListener) : void from class org.apache.commons.net.nntp.NNTP to public removeProtocolCommandListener(listener ProtocolCommandListener) : void from class org.apache.commons.net.SocketClient
+Pull Up Method	public removeProtocolCommandistener(listener ProtocolCommandListener) : void from class org.apache.commons.net.imap.IMAP to public removeProtocolCommandListener(listener ProtocolCommandListener) : void from class org.apache.commons.net.SocketClient
+Pull Up Method	public removeProtocolCommandistener(listener ProtocolCommandListener) : void from class org.apache.commons.net.pop3.POP3 to public removeProtocolCommandListener(listener ProtocolCommandListener) : void from class org.apache.commons.net.SocketClient
+Pull Up Method	public removeProtocolCommandistener(listener ProtocolCommandListener) : void from class org.apache.commons.net.smtp.SMTP to public removeProtocolCommandListener(listener ProtocolCommandListener) : void from class org.apache.commons.net.SocketClient
+Extract And Move Method	protected fireReplyReceived(replyCode int, reply String) : void extracted from private __getReply(reportReply boolean) : void in class org.apache.commons.net.ftp.FTP & moved to class org.apache.commons.net.SocketClient
+Extract And Move Method	protected fireReplyReceived(replyCode int, reply String) : void extracted from private __parsePassiveModeReply(reply String) : void in class org.apache.commons.net.ftp.FTPClient & moved to class org.apache.commons.net.SocketClient
+Extract And Move Method	protected fireReplyReceived(replyCode int, reply String) : void extracted from private __getReply(wantTag boolean) : void in class org.apache.commons.net.imap.IMAP & moved to class org.apache.commons.net.SocketClient
+Extract And Move Method	protected fireReplyReceived(replyCode int, reply String) : void extracted from private __getReply() : void in class org.apache.commons.net.nntp.NNTP & moved to class org.apache.commons.net.SocketClient
+Extract And Move Method	protected fireReplyReceived(replyCode int, reply String) : void extracted from private __getReply() : void in class org.apache.commons.net.pop3.POP3 & moved to class org.apache.commons.net.SocketClient
+Extract And Move Method	protected fireReplyReceived(replyCode int, reply String) : void extracted from private __getReply() : void in class org.apache.commons.net.smtp.SMTP & moved to class org.apache.commons.net.SocketClient
+Extract And Move Method	protected fireCommandSent(command String, message String) : void extracted from public sendCommand(command String, args String) : int in class org.apache.commons.net.ftp.FTP & moved to class org.apache.commons.net.SocketClient
+Extract And Move Method	protected fireCommandSent(command String, message String) : void extracted from private sendCommandWithID(commandID String, command String, args String) : int in class org.apache.commons.net.imap.IMAP & moved to class org.apache.commons.net.SocketClient
+Extract And Move Method	protected fireCommandSent(command String, message String) : void extracted from public sendCommand(command String, args String) : int in class org.apache.commons.net.nntp.NNTP & moved to class org.apache.commons.net.SocketClient
+Extract And Move Method	protected fireCommandSent(command String, message String) : void extracted from public sendCommand(command String, args String) : int in class org.apache.commons.net.pop3.POP3 & moved to class org.apache.commons.net.SocketClient
+Extract And Move Method	protected fireCommandSent(command String, message String) : void extracted from private __sendCommand(command String, args String, includeSpace boolean) : int in class org.apache.commons.net.smtp.SMTP & moved to class org.apache.commons.net.SocketClient
+Developers have reported that 11158 commits involve refactoring but only 1390 involve refactoring operations
+There are 31 duplicate commits with refactoring out of the 1390 commits.
+
+VCS System: https://github.com/apache/commons-net.git
+Issue ID: : 5bec3ceaa43d084785b6ed5b
+Issue Title: : add streaming methods (corresponding to array methods) to NNTPClient
+Issue Description:  NNTPClient.listNewNews(..) can use a lot of memory for large groups.  I recommend adding streaming version of the same.
+Refactorings at 7bba666b88d80afbc2d63ca28a13f9dee4b6539f
+Rename Variable	i : int to j : int in method public main(args String[]) : void from class examples.nntp.ListNewsgroups
+Add Method Modifier	static in method private __parseGroupReply(reply String, info NewsgroupInfo) : void from class org.apache.commons.net.nntp.NNTPClient
+Change Method Access Modifier	private to package in method package __parseNewsgroupListEntry(entry String) : NewsgroupInfo from class org.apache.commons.net.nntp.NNTPClient
+Add Method Modifier	static in method package __parseNewsgroupListEntry(entry String) : NewsgroupInfo from class org.apache.commons.net.nntp.NNTPClient
+Developers have reported that 11158 commits involve refactoring but only 1391 involve refactoring operations
+There are 31 duplicate commits with refactoring out of the 1391 commits.
+
+VCS System: https://github.com/apache/commons-net.git
+Issue ID: : 5bec3cefa43d084785b6ed8b
+Issue Title: : DotTerminatedMessageReader should extend BufferedReader, rather than Reader
+Issue Description:  DotTerminatedMessageReader is a line oriented reader, yet does not extend BufferedReader.
+Refactorings at 7d757759b39af559c9212194df3b803897627a17
+Rename Variable	ch : int to chint : int in method public read() : int from class org.apache.commons.net.io.DotTerminatedMessageReader
+Rename Attribute	SEP : String to CRLF : String in class org.apache.commons.net.io.DotTerminatedMessageReaderTest
+Change Attribute Access Modifier	package to private in attribute private CRLF : String from class org.apache.commons.net.io.DotTerminatedMessageReaderTest
+Developers have reported that 11158 commits involve refactoring but only 1392 involve refactoring operations
+There are 31 duplicate commits with refactoring out of the 1392 commits.
+
+No refactorings detected at 602a7e915c8a585c2beb7c026fe21b88dad1c8f0
+
+No refactorings detected at e7415018429890873ea9556112f8b04479852deb
+
+No refactorings detected at c702d38a6e54c9c949d45b85f34db398c21d866a
+
+No refactorings detected at 0e3a5bf9d1fd57895bf1ada985ecc800f5261838
+
+No refactorings detected at 6858072e1ee0bfc7c9865bffade4df0bb1696a72
+
+No refactorings detected at 90ccc18509a354a05768f1c82051b4096fd5a954
+
+No refactorings detected at c8dc878a01645f13059f9504ea64014f28441552
+
+No refactorings detected at 54b53793a5f46eed7648ff3d2236eb114c4f1121
+
+No refactorings detected at 9ff7ca5e6079b51ffc3c1bd93380db8f5dbc6e86
+
+No refactorings detected at d5bceac7a0b8c1a31d46b05a275663c5e45e3028
+
+VCS System: https://github.com/apache/commons-net.git
+Issue ID: : 5bec3df5a43d084785b6f7c2
+Issue Title: : Added missing set methods on NTP class and interface
+Issue Description:  I was the original contributor of the NTP implementation and have recently cleaned the source and submitting the relevant changes.
+Refactorings at c0277c63ac45e691270e5c7b41844ccaec02bc47
+Change Variable Type	response : NtpV3Packet to response : NtpV3Packetbis in method protected handlePacket(request DatagramPacket, rcvTime long) : void from class examples.ntp.SimpleNTPServer
+Change Variable Type	message : NtpV3Packet to message : NtpV3Packetbis in method public testCreate() : void from class org.apache.commons.net.ntp.TestNtpPacket
+Change Variable Type	packet2 : NtpV3Packet to packet2 : NtpV3Packetbis in method public testNotEquals() : void from class org.apache.commons.net.ntp.TestTimeInfo
+Extract Interface	org.apache.commons.net.ntp.NtpV3Packetbis from classes [org.apache.commons.net.ntp.NtpV3Impl]
+Push Down Method	public setPrecision(precision int) : void from class org.apache.commons.net.ntp.NtpV3Packet to public setPrecision(precision int) : void from class org.apache.commons.net.ntp.NtpV3Packetbis
+Push Down Method	public setRootDelay(delay int) : void from class org.apache.commons.net.ntp.NtpV3Packet to public setRootDelay(delay int) : void from class org.apache.commons.net.ntp.NtpV3Packetbis
+Push Down Method	public setRootDispersion(dispersion int) : void from class org.apache.commons.net.ntp.NtpV3Packet to public setRootDispersion(dispersion int) : void from class org.apache.commons.net.ntp.NtpV3Packetbis
+Developers have reported that 11158 commits involve refactoring but only 1393 involve refactoring operations
+There are 31 duplicate commits with refactoring out of the 1393 commits.
+
+VCS System: https://github.com/apache/commons-net.git
+Issue ID: : 5bec3df5a43d084785b6f7c2
+Issue Title: : Added missing set methods on NTP class and interface
+Issue Description:  I was the original contributor of the NTP implementation and have recently cleaned the source and submitting the relevant changes.
+Refactorings at b4fabe83da5d59144b32bd24001e769a30fd16ab
+Extract Method	private setInt(idx int, value int) : void extracted from public setReferenceId(refId int) : void in class org.apache.commons.net.ntp.NtpV3Impl
+Rename Parameter	mode : int to version : int in method public setVersion(version int) : void from class org.apache.commons.net.ntp.NtpV3Packet
+Developers have reported that 11158 commits involve refactoring but only 1394 involve refactoring operations
+There are 31 duplicate commits with refactoring out of the 1394 commits.
+
+VCS System: https://github.com/apache/commons-net.git
+Issue ID: : 5bec3df9a43d084785b6f7e2
+Issue Title: : Add FTPClient method to return an FTPFile from an MDTM command
+Issue Description:  FTPClient supports MDTM via the getModificationTime method, but this returns an unparsed String for the date.
+Refactorings at 809652a391eca056eebc494d106a4bb0ceefdd59
+Extract Method	public parseGMTdateTime(timestamp String) : Calendar extracted from public parseFTPEntry(entry String) : FTPFile in class org.apache.commons.net.ftp.parser.MLSxEntryParser
+Parameterize Variable	factvalue : String to timestamp : String in method public parseGMTdateTime(timestamp String) : Calendar from class org.apache.commons.net.ftp.parser.MLSxEntryParser
+Developers have reported that 11158 commits involve refactoring but only 1395 involve refactoring operations
+There are 31 duplicate commits with refactoring out of the 1395 commits.
+
+No refactorings detected at f6d1a4d9d0fa98e275bef1a65cd40374bfe751be
+
+VCS System: https://github.com/apache/commons-net.git
+Issue ID: : 5bec3e2ea43d084785b6f9b4
+Issue Title: : DefaultUnixFTPFileEntryParserFactory Issue (leading spaces removal configuration)
+Issue Description:  I have an issue when calling listFiles() method on a FTP server.The FTPFileEntry parser fail to parse the entry by adding a non existing leading space in the filename.
+Refactorings at cd299336abb873f53664063e0a977650f22fe8f3
+Change Attribute Access Modifier	private to package in attribute package trimLeadingSpaces : boolean from class org.apache.commons.net.ftp.parser.UnixFTPEntryParser
+Developers have reported that 11158 commits involve refactoring but only 1396 involve refactoring operations
+There are 31 duplicate commits with refactoring out of the 1396 commits.
+
+No refactorings detected at 8138f8c25af368ba6b31e6c0885265cf0783d6d8
+
+VCS System: https://github.com/apache/commons-net.git
+Issue ID: : 5bec3e4ba43d084785b6fac3
+Issue Title: : SubnetUtils  - improve binary netmask algorithm
+Issue Description:  SubnetUtils runs a for-loop to create a binary netmask.
+Refactorings at d969913836215396e8f586ffe6e0151c47d057c5
+Inline Variable	cidrPart : int in method private calculate(mask String) : void from class org.apache.commons.net.util.SubnetUtils
+Developers have reported that 11158 commits involve refactoring but only 1397 involve refactoring operations
+There are 31 duplicate commits with refactoring out of the 1397 commits.
+
+No refactorings detected at 8ade49c09a726757d9a479f0a310d77d79d6819f
+
+No refactorings detected at ba2886c990242c32e75d94a9d4c7ec9aa2571f10
+
+VCS System: https://github.com/apache/commons-net.git
+Issue ID: : 5bec3e54a43d084785b6fb1e
+Issue Title: : SubnetUtils - improve construction
+Issue Description:  The constructors for CIDR format and (address, mask) format both use the same calculate() method. This assumes the input is in CIDR format, which means that the constructor which handles (address, mask) format has to convert the strings to binary and then recreate the CIDR format.
+Refactorings at d651fb37e5a3ebc1f0a4241fe569d13f6e460bae
+Add Attribute Modifier	final in attribute private netmask : int from class org.apache.commons.net.util.SubnetUtils
+Add Attribute Modifier	final in attribute private address : int from class org.apache.commons.net.util.SubnetUtils
+Add Attribute Modifier	final in attribute private network : int from class org.apache.commons.net.util.SubnetUtils
+Add Attribute Modifier	final in attribute private broadcast : int from class org.apache.commons.net.util.SubnetUtils
+Inline Method	private calculate(mask String) : void inlined to public SubnetUtils(cidrNotation String) in class org.apache.commons.net.util.SubnetUtils
+Inline Method	private toCidrNotation(addr String, mask String) : String inlined to public SubnetUtils(address String, mask String) in class org.apache.commons.net.util.SubnetUtils
+Add Method Modifier	static in method private toInteger(address String) : int from class org.apache.commons.net.util.SubnetUtils
+Add Method Modifier	static in method private matchAddress(matcher Matcher) : int from class org.apache.commons.net.util.SubnetUtils
+Add Method Modifier	static in method private rangeCheck(value int, begin int, end int) : int from class org.apache.commons.net.util.SubnetUtils
+Replace Variable With Attribute	maskInt : int to netmask : int in method public SubnetUtils(address String, mask String) from class org.apache.commons.net.util.SubnetUtils
+Developers have reported that 11158 commits involve refactoring but only 1398 involve refactoring operations
+There are 31 duplicate commits with refactoring out of the 1398 commits.
+
+No refactorings detected at 51a731ba04c8a5555afdb235095076382f67dae6
+
+No refactorings detected at 1f53268e6c72cb65abecb04826c5e4243418789a
+
+No refactorings detected at c773b26e733cec41d815bf055871e51e4c69c67e
+
+No refactorings detected at 5c025d31fc6462f3eb7d1c61e4e9b52779d6bb47
+
+No refactorings detected at 5bf2975e3c507911f83dbaa665fee068ffbf50a6
+
