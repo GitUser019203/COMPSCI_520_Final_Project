@@ -29,7 +29,7 @@ totalIssues = 0
 totalCommits = 0
 detectedBugList = []
 
-with open("Python\\extractedIssueCommentsBugs.txt", 'w', encoding="utf-8") as out_file:
+with open("extractedIssueCommentsBugs.txt", 'w', encoding="utf-8") as out_file:
     for projects in projectCollection:
         for project in projects:
             # We now select the version control system of the project

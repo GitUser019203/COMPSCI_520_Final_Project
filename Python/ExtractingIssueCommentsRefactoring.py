@@ -33,7 +33,7 @@ total_num_commits_reporting_refactoring_linked_to_issues_documenting_refactoring
 unique_commit_hashes = set()
 unique_commit_hashes_with_refactoring_reported = set()
 
-with open("Python\\extractedIssueComments.txt", 'w', encoding="utf-8") as out_file:
+with open("extractedIssueCommentsRefactoring.txt", 'w', encoding="utf-8") as out_file:
     for projects in projectCollection:
         for project in projects:
             vcs_system_reported_refactoring = False
