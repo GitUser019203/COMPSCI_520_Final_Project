@@ -27,6 +27,7 @@ public class Main {
     private static String vcsSystemURL = new String();
     private static String vcsSystemName = new String();
     private static String issueTitle = new String();
+    private static String issueDesc = new String();
     private static String issueID = new String();
     private static int numCommitsWithRefactoring = 0;
     private static int numCommitsMined = 0;
@@ -47,11 +48,8 @@ public class Main {
             try {
                 vcsSystemURL = SMART_SHARK_2_0_ISSUE_TRACKED_VCS_SYSTEM_URLS[i];
                 vcsSystemName =  vcsSystemURL.substring(vcsSystemURL.lastIndexOf('/') + 1);
-                System.out.println("vcsSystemURL: " + vcsSystemURL);
-                System.out.println("vcsSystemName: " + vcsSystemName);
 
-//                File refactoringDataFile = new File("C:/SmartSHARK/RefactoringMiner/detectedRefactorings/" + vcsSystemName + ".refactorings");
-                File refactoringDataFile = new File("preston/CS520_Final_Project/SmartSHARK/RefactoringMiner/detectedRefactorings/" + vcsSystemName + ".refactorings");
+                File refactoringDataFile = new File("C:/SmartSHARK/RefactoringMiner/detectedRefactorings/" + vcsSystemName + ".refactorings");
                 refactoringDataFile.createNewFile();
                 refactoringInfoWriter = new BufferedWriter(new FileWriter(refactoringDataFile, true));
                 repo = gitService.cloneIfNotExists(
@@ -62,27 +60,43 @@ public class Main {
                 line = dataExtractor.readLine();
                 while(line != null) {
                     System.out.println("Currently parsing line " + String.valueOf(dataExtractor.getLineNumber() - 1));
-                    if(line.contains("VCS System:")){
+                    if (line.contains("VCS System:")) {
                         // If the line is about the VCS system
                         int index = line.indexOf("https://");
                         String URL = line.substring(index);
-                        if(!URL.equals(vcsSystemURL)) {
+                        if (!URL.equals(vcsSystemURL)) {
                             break;
                         }
-                    } else if(line.contains("Linked Commit Github URL:")) {
+                    } else if (line.contains("Linked Commit Github URL:")) {
                         // If the line is about a linked commit's GitHub URL
                         int index = line.indexOf("https://");
                         String URL = line.substring(index);
                         String revHash = URL.substring(URL.lastIndexOf("/") + 1);
                         mineCommit(revHash);
-                    } else if(line.contains("Issue Id:")) {
+                    } else if (line.contains("Issue Id:")) {
                         // If the line is about an issue Id
                         int index = line.indexOf(": ");
                         issueID = line.substring(index);
-                    } else if(line.contains("Issue Title:")) {
+                    } else if (line.contains("Issue Title:")) {
                         // If the line is about an issue title
                         int index = line.indexOf(": ");
                         issueTitle = line.substring(index);
+                    } else if (line.contains("Issue Description:")) {
+                        // If the line is about an issue description
+                        int index = line.indexOf(":");
+                        if(line.length() >= index + 2) {
+                            issueDesc = line.substring(index + 1);
+                        } else {
+                            issueDesc = "NULL";
+                        }
+
+                        while(true) {
+                            line = dataExtractor.readLine();
+                            if(!line.contains("Linked Commit Revision Hash")) {
+                                issueDesc += line;
+                                break;
+                            }
+                        }
                     }
 
                     // Read the next line
@@ -119,8 +133,10 @@ public class Main {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+        MyGitHistoryRefactoringMinerImpl myMiner = new MyGitHistoryRefactoringMinerImpl();
+
         // Mine the commit revHash in the VCS system vcsSystemURL with a timeout of 60s
-        miner.detectAtCommit(repo, "747ca8f60a653451e7ff81841c2216880ec27d50", new RefactoringHandler() {
+        myMiner.detectAtCommit(repo, "747ca8f60a653451e7ff81841c2216880ec27d50", new RefactoringHandler() {
             @Override
             public void handle(String commitId, List<Refactoring> refactorings) {
                  if(refactorings.size() > 0) {
@@ -149,7 +165,7 @@ public class Main {
             @Override
             public void handle(String commitId, List<Refactoring> refactorings) {
                 String outputString = new String();
-                System.out.println("\nAlready mined " + String.valueOf(numCommitsMined) + "/13,596 commits.");
+                System.out.println("\nAlready mined " + String.valueOf(numCommitsMined) + "/13,901 commits.");
                 if(refactorings.size() > 0) {
                     outputString += "VCS System: " + vcsSystemURL + "\n";
                     System.out.println("VCS System: " + vcsSystemURL);
@@ -157,6 +173,8 @@ public class Main {
                     System.out.println("Issue ID: " + issueID);
                     outputString += "Issue Title: " + issueTitle + "\n";
                     System.out.println("Issue Title: " + issueTitle);
+                    outputString += "Issue Description: " + issueDesc + "\n";
+                    System.out.println("Issue Description: " + issueDesc);
                     outputString += "Refactorings at " + commitId + "\n";
                     System.out.println("Refactorings at " + commitId);
                     for (Refactoring ref : refactorings) {
@@ -165,8 +183,8 @@ public class Main {
                     }
                     numCommitsWithRefactoring += 1;
                     uniqueRevisionHashesWithRefactoring.add(commitId);
-                    outputString += "Developers have reported that 10708 commits involve refactoring but only " + String.valueOf(numCommitsWithRefactoring) + " involve refactoring operations" + "\n";
-                    System.out.println("Developers have reported that 10708 commits involve refactoring but only " + String.valueOf(numCommitsWithRefactoring) + " involve refactoring operations");
+                    outputString += "Developers have reported that 11158 commits involve refactoring but only " + String.valueOf(numCommitsWithRefactoring) + " involve refactoring operations" + "\n";
+                    System.out.println("Developers have reported that 11158 commits involve refactoring but only " + String.valueOf(numCommitsWithRefactoring) + " involve refactoring operations");
                     outputString += "There are " + String.valueOf(numCommitsWithRefactoring - uniqueRevisionHashesWithRefactoring.size()) + " duplicate commits with refactoring out of the " + String.valueOf(numCommitsWithRefactoring) + " commits." + "\n\n";
                     System.out.println("There are " + String.valueOf(numCommitsWithRefactoring - uniqueRevisionHashesWithRefactoring.size()) + " duplicate commits with refactoring out of the " + String.valueOf(numCommitsWithRefactoring) + " commits.\n");
                 } else {

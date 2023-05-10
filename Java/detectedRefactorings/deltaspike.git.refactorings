@@ -3300,3 +3300,1472 @@ No refactorings detected at e16cea14048cba867db28157ceed2d60a2a398d8
 
 No refactorings detected at 269eb82f739828c3c5a081e361bec31437f7a9c7
 
+No refactorings detected at 2891d7bf0c351f76de14ed744af6b77a7c49db54
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643131509da0016d6b53b3
+Issue Title: : move util methods to BeanProvider
+Issue Description:  public <T> T getContextualReference(Class<T> type, boolean optionalBeanAllowed, Annotation... qualifiers)public <T> T getContextualReference(String name, boolean optionalBeanAllowed, Class<T> targetType)
+Refactorings at 3d250c75e2658388ed84fd1a9ebfa93be051b642
+Add Parameter	optional : boolean in method public getContextualReference(type Class<T>, optional boolean, qualifiers Annotation...) : T from class org.apache.deltaspike.core.api.provider.BeanProvider
+Add Method Modifier	static in method public getContextualReference(type Class<T>, optional boolean, qualifiers Annotation...) : T from class org.apache.deltaspike.core.api.provider.BeanProvider
+Move Method	public getContextualReference(type Class<T>, qualifiers Annotation...) : T from class org.apache.deltaspike.core.api.provider.BeanManagerProvider to public getContextualReference(type Class<T>, optional boolean, qualifiers Annotation...) : T from class org.apache.deltaspike.core.api.provider.BeanProvider
+Add Parameter	optional : boolean in method public getContextualReference(type Class<T>, optional boolean, name String) : T from class org.apache.deltaspike.core.api.provider.BeanProvider
+Add Method Modifier	static in method public getContextualReference(type Class<T>, optional boolean, name String) : T from class org.apache.deltaspike.core.api.provider.BeanProvider
+Move Method	public getContextualReference(type Class<T>, name String) : T from class org.apache.deltaspike.core.api.provider.BeanManagerProvider to public getContextualReference(type Class<T>, optional boolean, name String) : T from class org.apache.deltaspike.core.api.provider.BeanProvider
+Add Method Modifier	static in method private getContextualReference(type Class<T>, beanManager BeanManager, beans Set<Bean<?>>) : T from class org.apache.deltaspike.core.api.provider.BeanProvider
+Move And Rename Method	private getReference(type Class<T>, beanManager BeanManager, beans Set<Bean<?>>) : T from class org.apache.deltaspike.core.api.provider.BeanManagerProvider to private getContextualReference(type Class<T>, beanManager BeanManager, beans Set<Bean<?>>) : T from class org.apache.deltaspike.core.api.provider.BeanProvider
+Developers have reported that 11158 commits involve refactoring but only 1456 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1456 commits.
+
+No refactorings detected at 2a572635897da3ea98b0d26c134263f8d42ab136
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643151509da0016d6b5494
+Issue Title: : Create testing structure
+Issue Description:  NoneLinked Commit Github URL: https://github.com/apache/deltaspike/commit/80cad55dc453510e0cbc06eb0cc45ac1afec1f78
+Refactorings at 9804c0d8be183925d28a71b47bf25a0281434944
+Move Package	org.apache.deltaspike.core.test to org.apache.deltaspike.test.core
+Move Class	org.apache.deltaspike.core.test.api.config.ConfigSourceTest moved to org.apache.deltaspike.test.core.api.config.ConfigSourceTest
+Move Class	org.apache.deltaspike.core.test.api.projectstage.ProjectStageProducerTest moved to org.apache.deltaspike.test.core.api.projectstage.ProjectStageProducerTest
+Move Class	org.apache.deltaspike.core.test.api.projectstage.ProjectStageTest moved to org.apache.deltaspike.test.core.api.projectstage.ProjectStageTest
+Move Class	org.apache.deltaspike.core.test.api.projectstage.TestProjectStages moved to org.apache.deltaspike.test.core.api.projectstage.TestProjectStages
+Move Class	org.apache.deltaspike.core.test.api.provider.BeanManagerProviderTest moved to org.apache.deltaspike.test.core.api.provider.BeanManagerProviderTest
+Move Class	org.apache.deltaspike.core.test.api.provider.BeanProviderTest moved to org.apache.deltaspike.test.core.api.provider.BeanProviderTest
+Move Class	org.apache.deltaspike.core.test.api.provider.MBean01 moved to org.apache.deltaspike.test.core.api.provider.MBean01
+Move Class	org.apache.deltaspike.core.test.api.provider.MBean02 moved to org.apache.deltaspike.test.core.api.provider.MBean02
+Move Class	org.apache.deltaspike.core.test.api.provider.MultiBean moved to org.apache.deltaspike.test.core.api.provider.MultiBean
+Move Class	org.apache.deltaspike.core.test.api.provider.NoBean moved to org.apache.deltaspike.test.core.api.provider.NoBean
+Move Class	org.apache.deltaspike.core.test.api.provider.TestBean moved to org.apache.deltaspike.test.core.api.provider.TestBean
+Move Class	org.apache.deltaspike.core.test.api.temptestutil.ShrinkWrapArchiveUtil moved to org.apache.deltaspike.test.core.api.temptestutil.ShrinkWrapArchiveUtil
+Developers have reported that 11158 commits involve refactoring but only 1457 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1457 commits.
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643151509da0016d6b5494
+Issue Title: : Create testing structure
+Issue Description:  NoneLinked Commit Github URL: https://github.com/apache/deltaspike/commit/80cad55dc453510e0cbc06eb0cc45ac1afec1f78
+Refactorings at 87989f765e1242c7517a58668027f405dee4c92c
+Rename Variable	fileUrl : URL to deltaSpikeConfig : URL in method public deploy() : WebArchive from class org.apache.deltaspike.integration.core.api.exclude.ExcludeIntegrationTest
+Developers have reported that 11158 commits involve refactoring but only 1458 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1458 commits.
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643151509da0016d6b5494
+Issue Title: : Create testing structure
+Issue Description:  NoneLinked Commit Github URL: https://github.com/apache/deltaspike/commit/80cad55dc453510e0cbc06eb0cc45ac1afec1f78
+Refactorings at cbd80adb3cf9ade8389fd13e964ea1dfe065e29d
+Change Type Declaration Kind	class to interface in type org.apache.deltaspike.core.spi.config.ConfigSource
+Rename Method	protected getDefaultOrdinal() : int renamed to public getOrdinal() : int in class org.apache.deltaspike.core.impl.config.EnvironmentPropertyConfigSource
+Extract Attribute	private ordinal : int in class org.apache.deltaspike.core.impl.config.EnvironmentPropertyConfigSource
+Change Method Access Modifier	protected to public in method public getOrdinal() : int from class org.apache.deltaspike.core.impl.config.EnvironmentPropertyConfigSource
+Rename Method	protected getDefaultOrdinal() : int renamed to public getOrdinal() : int in class org.apache.deltaspike.core.impl.config.LocalJndiConfigSource
+Change Method Access Modifier	protected to public in method public getOrdinal() : int from class org.apache.deltaspike.core.impl.config.LocalJndiConfigSource
+Rename Method	protected getDefaultOrdinal() : int renamed to public getOrdinal() : int in class org.apache.deltaspike.core.impl.config.PropertyFileConfigSource
+Rename Method	private loadPropertiesFromMetaInf() : Properties renamed to private loadProperties(url URL) : Properties in class org.apache.deltaspike.core.impl.config.PropertyFileConfigSource
+Extract Attribute	private ordinal : int in class org.apache.deltaspike.core.impl.config.PropertyFileConfigSource
+Change Method Access Modifier	protected to public in method public getOrdinal() : int from class org.apache.deltaspike.core.impl.config.PropertyFileConfigSource
+Rename Variable	properties : Properties to props : Properties in method private loadProperties(url URL) : Properties from class org.apache.deltaspike.core.impl.config.PropertyFileConfigSource
+Add Parameter	url : URL in method private loadProperties(url URL) : Properties from class org.apache.deltaspike.core.impl.config.PropertyFileConfigSource
+Rename Method	protected getDefaultOrdinal() : int renamed to public getOrdinal() : int in class org.apache.deltaspike.core.impl.config.SystemPropertyConfigSource
+Extract Attribute	private ordinal : int in class org.apache.deltaspike.core.impl.config.SystemPropertyConfigSource
+Change Method Access Modifier	protected to public in method public getOrdinal() : int from class org.apache.deltaspike.core.impl.config.SystemPropertyConfigSource
+Change Variable Type	testBean : Bean to testBean : AlwaysActiveBean in method public simpleCheckOfBeansInPackage() : void from class org.apache.deltaspike.test.core.api.exclude.ExcludeTest
+Modify Class Annotation	@Exclude(ifProjectStage = ProjectStage.Development.class) to @Exclude(ifProjectStage = {ProjectStage.Development.class,ProjectStage.IntegrationTest.class}) in class org.apache.deltaspike.test.core.api.exclude.StdBean
+Change Variable Type	testBean : Bean to testBean : AlwaysActiveBean in method public simpleCheckOfBeansInPackage() : void from class org.apache.deltaspike.integration.core.api.exclude.ExcludeIntegrationTest
+Push Down Attribute	private ordinal : int from class org.apache.deltaspike.core.spi.config.ConfigSource to private ordinal : int from class org.apache.deltaspike.core.impl.config.EnvironmentPropertyConfigSource
+Push Down Attribute	private ordinal : int from class org.apache.deltaspike.core.spi.config.ConfigSource to private ordinal : int from class org.apache.deltaspike.core.impl.config.PropertyFileConfigSource
+Push Down Attribute	private ordinal : int from class org.apache.deltaspike.core.spi.config.ConfigSource to private ordinal : int from class org.apache.deltaspike.core.impl.config.SystemPropertyConfigSource
+Rename Method	protected getDefaultOrdinal() : int renamed to public getOrdinal() : int in class org.apache.deltaspike.core.spi.config.ConfigSource
+Change Method Access Modifier	protected to public in method public getOrdinal() : int from class org.apache.deltaspike.core.spi.config.ConfigSource
+Developers have reported that 11158 commits involve refactoring but only 1459 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1459 commits.
+
+No refactorings detected at cefea5630d621fad77c8016408fc6a030e4de929
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643151509da0016d6b5494
+Issue Title: : Create testing structure
+Issue Description:  NoneLinked Commit Github URL: https://github.com/apache/deltaspike/commit/80cad55dc453510e0cbc06eb0cc45ac1afec1f78
+Refactorings at 4362ba54143e3fbcae5da662aa18df8c725fcbd5
+Move Class	org.apache.deltaspike.integration.FullProfileCategory moved to org.apache.deltaspike.integration.category.FullProfileCategory
+Move Class	org.apache.deltaspike.integration.SeCategory moved to org.apache.deltaspike.integration.category.SeCategory
+Move Class	org.apache.deltaspike.integration.WebProfileCategory moved to org.apache.deltaspike.integration.category.WebProfileCategory
+Developers have reported that 11158 commits involve refactoring but only 1460 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1460 commits.
+
+No refactorings detected at 105c4f4a85397aa8a374458ed0c32f5029408e76
+
+No refactorings detected at d5b218ce9c407d105863f6992f3d2f12be95f29e
+
+No refactorings detected at becf0ff57bfbf472fc7c1e07a0c68746aa00018b
+
+No refactorings detected at 56af95587cb0506fd9cefded4a90b888cee69c2a
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643190509da0016d6b563f
+Issue Title: : add a method to inject CDI beans in a particular instance
+Issue Description:  It could be cool to get a method accessible from the CdiContainer to do injections in a particular instance:
+Refactorings at 04017e4c6fa6cae90eccc14632f469a2ad0337c8
+Change Attribute Access Modifier	package to private in attribute private i : int from class org.apache.deltaspike.test.core.api.provider.TestBean
+Developers have reported that 11158 commits involve refactoring but only 1461 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1461 commits.
+
+No refactorings detected at cc07153e7423c8d716c75fa222e8c47efbab5c63
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643196509da0016d6b5673
+Issue Title: : refactoring of util classes
+Issue Description:  NoneLinked Commit Github URL: https://github.com/apache/deltaspike/commit/bdbb4b30a94ef9475e14a601fd1ed52d18daa404
+Refactorings at ccb8cb01830bb895f3d7f98cf0af8d1308a3a73e
+Rename Class	org.apache.deltaspike.core.util.Beans renamed to org.apache.deltaspike.core.util.BeanUtils
+Rename Class	org.apache.deltaspike.core.util.Reflections renamed to org.apache.deltaspike.core.util.ReflectionUtils
+Developers have reported that 11158 commits involve refactoring but only 1462 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1462 commits.
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643196509da0016d6b5673
+Issue Title: : refactoring of util classes
+Issue Description:  NoneLinked Commit Github URL: https://github.com/apache/deltaspike/commit/bdbb4b30a94ef9475e14a601fd1ed52d18daa404
+Refactorings at 2e1f60ec82fb61d0080186addef8381f2e55e193
+Rename Class	org.apache.deltaspike.core.util.ClassDeactivation renamed to org.apache.deltaspike.core.util.ClassDeactivationUtils
+Modify Variable Annotation	@SuppressWarnings("unchecked") to @SuppressWarnings({"unchecked","UnnecessaryLocalVariable"}) in variable result : T in method public invoke(receiver Object, creationalContext CreationalContext<T>, redefinition ParameterValueRedefiner) : T from class org.apache.deltaspike.core.api.metadata.builder.InjectableMethod
+Add Class Modifier	abstract in class org.apache.deltaspike.core.util.BeanUtils
+Add Class Annotation	@Typed in class org.apache.deltaspike.core.util.BeanUtils
+Rename Method	public findDeclaredField(clazz Class<?>, name String) : Field renamed to public tryToFindDeclaredField(clazz Class<?>, name String) : Field in class org.apache.deltaspike.core.util.ReflectionUtils
+Rename Method	public getActualTypeArguments(clazz Class<?>) : Type[] renamed to public getTypeArguments(clazz Class<?>) : Type[] in class org.apache.deltaspike.core.util.ReflectionUtils
+Rename Method	public getActualTypeArguments(type Type) : Type[] renamed to public getTypeArguments(type Type) : Type[] in class org.apache.deltaspike.core.util.ReflectionUtils
+Rename Method	public isParamerterizedTypeWithWildcard(type Class<?>) : boolean renamed to public isParameterizedTypeWithWildcard(type Class<?>) : boolean in class org.apache.deltaspike.core.util.ReflectionUtils
+Add Method Annotation	@Deprecated in method public setAccessible(member A) : A from class org.apache.deltaspike.core.util.ReflectionUtils
+Change Method Access Modifier	public to private in method private getRawType(type Type) : Class<T> from class org.apache.deltaspike.core.util.ReflectionUtils
+Change Method Access Modifier	public to private in method private containsWildcards(types Type[]) : boolean from class org.apache.deltaspike.core.util.ReflectionUtils
+Developers have reported that 11158 commits involve refactoring but only 1463 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1463 commits.
+
+No refactorings detected at f102e93b6e4dd05ef3555f999f27d7e732952932
+
+No refactorings detected at 7f880cd71d699011ba6da14ed961ff2cc8b0532d
+
+No refactorings detected at 9372b2ce851bd87e37ba2fbdeb602eb584ddfffc
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b64319d509da0016d6b5692
+Issue Title: : refactor "deploy"-methods of arquillian tests
+Issue Description:  right now all test-classes get added to the deployable archive. -> only the needed test-classes should be added.the test-classes should be added to a named jar.
+Refactorings at f9506fc1289a642e0f66efd440e124562d65df79
+Extract And Move Method	public getDeltaSpikeCoreAndSecurityArchive() : JavaArchive[] extracted from public deploy() : WebArchive in class org.apache.deltaspike.test.security.impl.secured.SecuredAnnotationTest & moved to class org.apache.deltaspike.test.util.ArchiveUtils
+Extract And Move Method	public getBeansXml() : Asset extracted from public deploy() : WebArchive in class org.apache.deltaspike.test.security.impl.secured.SecuredAnnotationTest & moved to class org.apache.deltaspike.test.util.ArchiveUtils
+Developers have reported that 11158 commits involve refactoring but only 1464 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1464 commits.
+
+No refactorings detected at bd2004c9713f261a4d533674b6f4fabe17f4a97e
+
+No refactorings detected at 95131b9391f0c392a752391351ccafced24e6ed6
+
+No refactorings detected at 9ee56e88a359013a5d43befc2f27d5206d8edb5b
+
+No refactorings detected at b259252f9f8c9845c8685bfb8b29c4b5a7a355b8
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b6431ab509da0016d6b56ed
+Issue Title: : change the test-config to allow to restrict tests to a specific environment
+Issue Description:  we just need groups/categories to mark that a test should be executed only with specific environments. even though a java-ee6 application server has to be able to run all tests in theory, we have to exclude some tests because there are e.g. packaging issues, issues with arquillian, remote execution issues,... . if a test isn't restricted to an environment, no category is used for the test-class.Linked Commit Github URL: https://github.com/apache/deltaspike/commit/cf39ef9d560cb8ee953bf381172298330253add8
+Refactorings at b3439014166855c92114766ad0545b87810b459f
+Move Source Folder	deltaspike/core/api/src/test to deltaspike/test-utils/src/main
+Developers have reported that 11158 commits involve refactoring but only 1465 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1465 commits.
+
+No refactorings detected at 11c04913d664ed7c52859be3a131c90ad553cba2
+
+No refactorings detected at dcd3e23f6766a36ee19e69ef687307370a89bc42
+
+No refactorings detected at 79479b81ebf90207cd58d3a5722825b75b023f61
+
+No refactorings detected at 35af48a96e2aeec221cb6451eb5b340656af63f0
+
+No refactorings detected at a24d38bb1c3f9dd6eb58b23b2912a230d6571a2a
+
+No refactorings detected at 7ccdbfaca33be44d02ad22bf2a5013182786ac2e
+
+No refactorings detected at 5505bd950497ff98ac2b74ba0d32567ca3aa0703
+
+No refactorings detected at 7c063de9663e72d718b339c3d1c8d43c6aa04ac8
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b6431c6509da0016d6b57a4
+Issue Title: : remove useless OWB workaround
+Issue Description:  We currently have a few OWB 'workarounds' in our code which are indeed not needed.They store information in a static Map<ClassLoader, Info> and expose this info via static methods.
+Refactorings at 7101eac548ef5b16d40ad36a243cd87de6f6cd44
+Modify Method Annotation	@SuppressWarnings({"unchecked","rawtypes"}) to @SuppressWarnings({"unchecked"}) in method private lazyInitTargetBean(beanManager BeanManager) : void from class org.apache.deltaspike.security.impl.extension.Authorizer
+Replace Variable With Attribute	securityMetaDataStorage : SecurityMetaDataStorage to securityMetaDataStorage : SecurityMetaDataStorage in method public getMetaDataStorage() : SecurityMetaDataStorage from class org.apache.deltaspike.security.impl.extension.SecurityExtension
+Remove Method Modifier	static in method public getMetaDataStorage() : SecurityMetaDataStorage from class org.apache.deltaspike.security.impl.extension.SecurityExtension
+Developers have reported that 11158 commits involve refactoring but only 1466 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1466 commits.
+
+No refactorings detected at 62e6a00b800624a88248e69f16193aef90570fae
+
+No refactorings detected at 39fa0ddd8a4504ea7faa203eeb55f03e881b11d9
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b6431c7509da0016d6b57b6
+Issue Title: : create default-value handling for ConfigResolver
+Issue Description:  currently we only support getPropertyValue(String key).
+Refactorings at 3a610280c37df5991772e3c9bff21efbab07ce90
+Rename Class	org.apache.deltaspike.core.impl.config.injectable.extension.InjectionTargetEntry renamed to org.apache.deltaspike.core.impl.config.injectable.extension.ConfigInjectionTargetEntry
+Change Attribute Type	injectionTargets : Set<InjectionTargetEntry> to injectionTargets : Set<ConfigInjectionTargetEntry> in class org.apache.deltaspike.core.impl.config.injectable.extension.ConfigPropertyExtension
+Change Variable Type	injectionTargetEntry : InjectionTargetEntry to injectionTargetEntry : ConfigInjectionTargetEntry in method protected addDependentBeans(event AfterBeanDiscovery) : void from class org.apache.deltaspike.core.impl.config.injectable.extension.ConfigPropertyExtension
+Change Variable Type	that : InjectionTargetEntry to that : ConfigInjectionTargetEntry in method public equals(o Object) : boolean from class org.apache.deltaspike.core.impl.config.injectable.extension.ConfigInjectionTargetEntry
+Developers have reported that 11158 commits involve refactoring but only 1467 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1467 commits.
+
+No refactorings detected at 3dfa03963fe22bb475ce4442321f84c5e6a849cb
+
+No refactorings detected at 79b067158335d743b28fcefa80b91c10ec6bce2a
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b6431d8509da0016d6b5832
+Issue Title: : replace ProcessAnnotatedType<Object> with ProcessAnnotatedType without type restriction
+Issue Description:  <Object> != <? extends Object>
+Refactorings at 599ddeb4eeeca60c73a6238fd91db38a54c53b30
+Change Parameter Type	processAnnotatedType : ProcessAnnotatedType<Object> to processAnnotatedType : ProcessAnnotatedType in method protected vetoBeans(processAnnotatedType ProcessAnnotatedType, beanManager BeanManager) : void from class org.apache.deltaspike.core.impl.exclude.extension.ExcludeExtension
+Change Parameter Type	processAnnotatedType : ProcessAnnotatedType<Object> to processAnnotatedType : ProcessAnnotatedType in method protected vetoCustomProjectStageBeans(processAnnotatedType ProcessAnnotatedType) : void from class org.apache.deltaspike.core.impl.exclude.extension.ExcludeExtension
+Change Parameter Type	processAnnotatedType : ProcessAnnotatedType<Object> to processAnnotatedType : ProcessAnnotatedType in method private activateGlobalAlternativesWeld(processAnnotatedType ProcessAnnotatedType, beanManager BeanManager) : void from class org.apache.deltaspike.core.impl.exclude.extension.ExcludeExtension
+Change Parameter Type	processAnnotatedType : ProcessAnnotatedType<Object> to processAnnotatedType : ProcessAnnotatedType in method private activateGlobalAlternativesOwb(processAnnotatedType ProcessAnnotatedType, beanManager BeanManager) : void from class org.apache.deltaspike.core.impl.exclude.extension.ExcludeExtension
+Change Parameter Type	processAnnotatedType : ProcessAnnotatedType<Object> to processAnnotatedType : ProcessAnnotatedType in method private evalExcludeWithoutCondition(processAnnotatedType ProcessAnnotatedType, exclude Exclude) : boolean from class org.apache.deltaspike.core.impl.exclude.extension.ExcludeExtension
+Change Parameter Type	processAnnotatedType : ProcessAnnotatedType<Object> to processAnnotatedType : ProcessAnnotatedType in method private evalExcludeInProjectStage(processAnnotatedType ProcessAnnotatedType, exclude Exclude, currentlyConfiguredProjectStage ProjectStage) : boolean from class org.apache.deltaspike.core.impl.exclude.extension.ExcludeExtension
+Change Parameter Type	processAnnotatedType : ProcessAnnotatedType<Object> to processAnnotatedType : ProcessAnnotatedType in method private evalExcludeNotInProjectStage(processAnnotatedType ProcessAnnotatedType, exclude Exclude, currentlyConfiguredProjectStage ProjectStage) : boolean from class org.apache.deltaspike.core.impl.exclude.extension.ExcludeExtension
+Change Parameter Type	processAnnotatedType : ProcessAnnotatedType<Object> to processAnnotatedType : ProcessAnnotatedType in method private evalExcludeWithExpression(processAnnotatedType ProcessAnnotatedType, exclude Exclude) : void from class org.apache.deltaspike.core.impl.exclude.extension.ExcludeExtension
+Change Parameter Type	processAnnotatedType : ProcessAnnotatedType<?> to processAnnotatedType : ProcessAnnotatedType in method private veto(processAnnotatedType ProcessAnnotatedType, vetoType String) : void from class org.apache.deltaspike.core.impl.exclude.extension.ExcludeExtension
+Change Parameter Type	processAnnotatedType : ProcessAnnotatedType<?> to processAnnotatedType : ProcessAnnotatedType in method protected detectInterfaces(processAnnotatedType ProcessAnnotatedType) : void from class org.apache.deltaspike.core.impl.message.MessageBundleExtension
+Developers have reported that 11158 commits involve refactoring but only 1468 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1468 commits.
+
+No refactorings detected at 562e984a42fc42daebf0ae05cdee492ed083ce9a
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b6431ee509da0016d6b586c
+Issue Title: : change misleading name of PropertyConfigSource
+Issue Description:  config-sources have to be of type org.apache.deltaspike.core.spi.config.ConfigSourceLinked Commit Github URL: https://github.com/apache/deltaspike/commit/c14bf5052b276e58dd5fd0bf8c6dd582828b4d58
+Refactorings at 5083e8e5b1673b91e34c7e866a39fd16c4c16621
+Rename Method	public getFilePath() : String renamed to public getPropertyFileName() : String in class org.apache.deltaspike.test.core.api.config.propertyconfigsource.MyCustomPropertyFileConfig
+Rename Method	public getFilePath() : String renamed to public getPropertyFileName() : String in class org.apache.deltaspike.example.config.CustomPropertyFileConfig
+Rename Method	public getFilePath() : String renamed to public getPropertyFileName() : String in class org.apache.deltaspike.core.api.config.PropertyFileConfig
+Developers have reported that 11158 commits involve refactoring but only 1469 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1469 commits.
+
+No refactorings detected at dabf0137cab36fd4f44a50e6196d92c6460a085d
+
+No refactorings detected at d83165d23e6633754b40d8bb7462a165f6013d6b
+
+No refactorings detected at 1aab84604028f13ec42b2bc5ef3a1f1cb1b6dbc3
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b64320e509da0016d6b591d
+Issue Title: : improve the compatibility with new versions of weld
+Issue Description:  org.jboss.weld.context.beanstore.BeanStore changed in the latest snapshots (and can be changed at any time). we should use a proxy for it.Linked Commit Github URL: https://github.com/apache/deltaspike/commit/c947ae1c70eecec631574cc75a43569ec050d60c
+Refactorings at 7d8a52fa4e86eb89c0ac4dff91569a6d5920c898
+Add Method Modifier	synchronized in method public boot() : void from class org.apache.deltaspike.cdise.weld.WeldContainerControl
+Add Method Modifier	synchronized in method public shutdown() : void from class org.apache.deltaspike.cdise.weld.WeldContainerControl
+Add Method Modifier	synchronized in method public getContextControl() : ContextControl from class org.apache.deltaspike.cdise.weld.WeldContainerControl
+Developers have reported that 11158 commits involve refactoring but only 1470 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1470 commits.
+
+No refactorings detected at f12ab0fe2635a1f8ff4be52e10211a257dba05a9
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643226509da0016d6b59b3
+Issue Title: : move NarrowingBeanBuilder to API utils and rename it
+Issue Description:  NarrowingBeanBuilder is currently in the deltaspike-impl message package. But this class is really usable especially for Extension developers as well. Thus we shall move it to deltaspike-api util package.
+Refactorings at bc187acb64c3b71788e2731e389c8fd027e777ec
+Rename Package	org.apache.deltaspike.core.util.builder to org.apache.deltaspike.core.util.bean
+Move Class	org.apache.deltaspike.core.util.builder.AbstractImmutableBean moved to org.apache.deltaspike.core.util.bean.AbstractImmutableBean
+Move Class	org.apache.deltaspike.core.util.builder.ImmutableBeanWrapper moved to org.apache.deltaspike.core.util.bean.ImmutableBeanWrapper
+Move Class	org.apache.deltaspike.core.util.builder.ImmutablePassivationCapableBeanWrapper moved to org.apache.deltaspike.core.util.bean.ImmutablePassivationCapableBeanWrapper
+Move Class	org.apache.deltaspike.core.util.builder.WrappingBeanBuilder moved to org.apache.deltaspike.core.util.bean.WrappingBeanBuilder
+Change Class Access Modifier	package to public in class org.apache.deltaspike.core.util.bean.AbstractImmutableBean
+Change Class Access Modifier	package to public in class org.apache.deltaspike.core.util.bean.ImmutableBeanWrapper
+Rename Parameter	delegate : Bean<T> to bean : Bean<T> in method public ImmutablePassivationCapableBeanWrapper(bean Bean<T>, name String, qualifiers Set<Annotation>, scope Class<? extends Annotation>, stereotypes Set<Class<? extends Annotation>>, types Set<Type>, alternative boolean, nullable boolean, toString String, id String) from class org.apache.deltaspike.core.util.bean.ImmutablePassivationCapableBeanWrapper
+Developers have reported that 11158 commits involve refactoring but only 1471 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1471 commits.
+
+No refactorings detected at 306d6be460bc4a1691c5726d874411724a8f85d7
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643226509da0016d6b59b3
+Issue Title: : move NarrowingBeanBuilder to API utils and rename it
+Issue Description:  NarrowingBeanBuilder is currently in the deltaspike-impl message package. But this class is really usable especially for Extension developers as well. Thus we shall move it to deltaspike-api util package.
+Refactorings at c3c612336798b91f1dc4761b890e0e3d31ba20c4
+Move Class	org.apache.deltaspike.core.impl.util.ArraysUtils moved to org.apache.deltaspike.core.util.ArraysUtils
+Move Class	org.apache.deltaspike.core.impl.message.AbstractImmutableBean moved to org.apache.deltaspike.core.util.builder.AbstractImmutableBean
+Move Class	org.apache.deltaspike.core.impl.message.ImmutableBeanWrapper moved to org.apache.deltaspike.core.util.builder.ImmutableBeanWrapper
+Move And Rename Class	org.apache.deltaspike.core.impl.message.NarrowingBeanBuilder moved and renamed to org.apache.deltaspike.core.util.builder.WrappingBeanBuilder
+Change Class Access Modifier	package to public in class org.apache.deltaspike.core.util.builder.WrappingBeanBuilder
+Change Method Access Modifier	package to public in method public WrappingBeanBuilder(delegate Bean<Object>, beanManager BeanManager) from class org.apache.deltaspike.core.util.builder.WrappingBeanBuilder
+Change Return Type	NarrowingBeanBuilder<T> to WrappingBeanBuilder<T> in method public readFromType(type AnnotatedType<T>) : WrappingBeanBuilder<T> from class org.apache.deltaspike.core.util.builder.WrappingBeanBuilder
+Change Return Type	NarrowingBeanBuilder<T> to WrappingBeanBuilder<T> in method public types(types Set<Type>) : WrappingBeanBuilder<T> from class org.apache.deltaspike.core.util.builder.WrappingBeanBuilder
+Change Return Type	NarrowingBeanBuilder<T> to WrappingBeanBuilder<T> in method public types(types Type...) : WrappingBeanBuilder<T> from class org.apache.deltaspike.core.util.builder.WrappingBeanBuilder
+Change Return Type	NarrowingBeanBuilder<T> to WrappingBeanBuilder<T> in method public addType(type Type) : WrappingBeanBuilder<T> from class org.apache.deltaspike.core.util.builder.WrappingBeanBuilder
+Change Return Type	NarrowingBeanBuilder<T> to WrappingBeanBuilder<T> in method public addTypes(types Type...) : WrappingBeanBuilder<T> from class org.apache.deltaspike.core.util.builder.WrappingBeanBuilder
+Change Return Type	NarrowingBeanBuilder<T> to WrappingBeanBuilder<T> in method public addTypes(types Collection<Type>) : WrappingBeanBuilder<T> from class org.apache.deltaspike.core.util.builder.WrappingBeanBuilder
+Change Return Type	NarrowingBeanBuilder<T> to WrappingBeanBuilder<T> in method public qualifiers(qualifiers Set<Annotation>) : WrappingBeanBuilder<T> from class org.apache.deltaspike.core.util.builder.WrappingBeanBuilder
+Change Return Type	NarrowingBeanBuilder<T> to WrappingBeanBuilder<T> in method public qualifiers(qualifiers Annotation...) : WrappingBeanBuilder<T> from class org.apache.deltaspike.core.util.builder.WrappingBeanBuilder
+Change Return Type	NarrowingBeanBuilder<T> to WrappingBeanBuilder<T> in method public addQualifier(qualifier Annotation) : WrappingBeanBuilder<T> from class org.apache.deltaspike.core.util.builder.WrappingBeanBuilder
+Change Return Type	NarrowingBeanBuilder<T> to WrappingBeanBuilder<T> in method public addQualifiers(qualifiers Annotation...) : WrappingBeanBuilder<T> from class org.apache.deltaspike.core.util.builder.WrappingBeanBuilder
+Change Return Type	NarrowingBeanBuilder<T> to WrappingBeanBuilder<T> in method public addQualifiers(qualifiers Collection<Annotation>) : WrappingBeanBuilder<T> from class org.apache.deltaspike.core.util.builder.WrappingBeanBuilder
+Change Return Type	NarrowingBeanBuilder<T> to WrappingBeanBuilder<T> in method public name(name String) : WrappingBeanBuilder<T> from class org.apache.deltaspike.core.util.builder.WrappingBeanBuilder
+Change Return Type	NarrowingBeanBuilder<T> to WrappingBeanBuilder<T> in method public scope(scope Class<? extends Annotation>) : WrappingBeanBuilder<T> from class org.apache.deltaspike.core.util.builder.WrappingBeanBuilder
+Change Return Type	NarrowingBeanBuilder<T> to WrappingBeanBuilder<T> in method public alternative(alternative boolean) : WrappingBeanBuilder<T> from class org.apache.deltaspike.core.util.builder.WrappingBeanBuilder
+Change Return Type	NarrowingBeanBuilder<T> to WrappingBeanBuilder<T> in method public stereotypes(stereotypes Set<Class<? extends Annotation>>) : WrappingBeanBuilder<T> from class org.apache.deltaspike.core.util.builder.WrappingBeanBuilder
+Change Return Type	NarrowingBeanBuilder<T> to WrappingBeanBuilder<T> in method public toString(toString String) : WrappingBeanBuilder<T> from class org.apache.deltaspike.core.util.builder.WrappingBeanBuilder
+Change Return Type	NarrowingBeanBuilder<T> to WrappingBeanBuilder<T> in method public nullable(nullable boolean) : WrappingBeanBuilder<T> from class org.apache.deltaspike.core.util.builder.WrappingBeanBuilder
+Change Return Type	NarrowingBeanBuilder<T> to WrappingBeanBuilder<T> in method public passivationCapable(passivationCapable boolean) : WrappingBeanBuilder<T> from class org.apache.deltaspike.core.util.builder.WrappingBeanBuilder
+Change Return Type	NarrowingBeanBuilder<T> to WrappingBeanBuilder<T> in method public id(id String) : WrappingBeanBuilder<T> from class org.apache.deltaspike.core.util.builder.WrappingBeanBuilder
+Developers have reported that 11158 commits involve refactoring but only 1472 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1472 commits.
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643236509da0016d6b5a4d
+Issue Title: : Add a new annotation to override the location of the apache-deltaspike.properties file
+Issue Description:  I don't see a property (or annotation) that we can use to override the name to be used to load the properties file (META-INF/apache-deltaspike.properties) and its location like we can do with Spring (@ContextConfiguration(locations = { "classpath:mycontext.xml" })).Linked Commit Github URL: https://github.com/apache/deltaspike/commit/2b5095035c3b2f8bbbd7deda4c9b1dbb08acf386
+Refactorings at ca029be8f676292d96a17926c3c0e8ea99b10453
+Change Variable Type	propertyFileUrls : Enumeration<URL> to epcsp : EnvironmentPropertyConfigSourceProvider in method public DefaultConfigSourceProvider() from class org.apache.deltaspike.core.impl.config.DefaultConfigSourceProvider
+Rename Variable	propertyFileUrls : Enumeration<URL> to epcsp : EnvironmentPropertyConfigSourceProvider in method public DefaultConfigSourceProvider() from class org.apache.deltaspike.core.impl.config.DefaultConfigSourceProvider
+Developers have reported that 11158 commits involve refactoring but only 1473 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1473 commits.
+
+No refactorings detected at 0e47ca62ddbf142e898788268770483aea0daf51
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643254509da0016d6b5b26
+Issue Title: : Create a common base for writing Contexts
+Issue Description:  When writing CDI Contexts you always have to deal with a few basic things. One is e.g. the encapsulation of the CreationalContext<T>, the Contextual<T> and the instance T for each contextual instance stored in the Context. Another common functionality is destroying all beans at shutdown.
+Refactorings at b29dab06520a12cd6cc382df01d79234b406008e
+Rename Method	protected abstract getContextStorage() : ContextualStorage renamed to protected abstract getContextualStorage() : ContextualStorage in class org.apache.deltaspike.core.util.context.AbstractContext
+Remove Parameter	beanManager : BeanManager in method protected AbstractContext(beanManager BeanManager, scope Class<? extends Annotation>, concurrent boolean) from class org.apache.deltaspike.core.util.context.AbstractContext
+Remove Parameter	concurrent : boolean in method protected AbstractContext(beanManager BeanManager, scope Class<? extends Annotation>, concurrent boolean) from class org.apache.deltaspike.core.util.context.AbstractContext
+Rename Method	public ContextualInstanceInfo(creationalContext CreationalContext<T>, contextualInstance T) renamed to public setContextualInstance(contextualInstance T) : void in class org.apache.deltaspike.core.util.context.ContextualInstanceInfo
+Encapsulate Attribute	private creationalContext : CreationalContext<T> from class org.apache.deltaspike.core.util.context.ContextualInstanceInfo
+Remove Parameter	creationalContext : CreationalContext<T> in method public ContextualInstanceInfo(creationalContext CreationalContext<T>, contextualInstance T) from class org.apache.deltaspike.core.util.context.ContextualInstanceInfo
+Encapsulate Attribute	private concurrent : boolean from class org.apache.deltaspike.core.util.context.ContextualStorage
+Developers have reported that 11158 commits involve refactoring but only 1474 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1474 commits.
+
+No refactorings detected at 2999b9f3a88b78bd9acb43fee50ce20bd6583f0d
+
+No refactorings detected at 97564d0e712804b287c037728ca78a6b65d67ec4
+
+No refactorings detected at b45b2daa9199ec5bef7e41e2399f2f3437948422
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643254509da0016d6b5b26
+Issue Title: : Create a common base for writing Contexts
+Issue Description:  When writing CDI Contexts you always have to deal with a few basic things. One is e.g. the encapsulation of the CreationalContext<T>, the Contextual<T> and the instance T for each contextual instance stored in the Context. Another common functionality is destroying all beans at shutdown.
+Refactorings at 82d0329412d3841247766ae10283ef4cdc9d3f8e
+Remove Method Annotation	@Ignore in method public testDummyContext() : void from class org.apache.deltaspike.test.core.api.context.AbstractContextTest
+Developers have reported that 11158 commits involve refactoring but only 1475 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1475 commits.
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643254509da0016d6b5b26
+Issue Title: : Create a common base for writing Contexts
+Issue Description:  When writing CDI Contexts you always have to deal with a few basic things. One is e.g. the encapsulation of the CreationalContext<T>, the Contextual<T> and the instance T for each contextual instance stored in the Context. Another common functionality is destroying all beans at shutdown.
+Refactorings at 2385c87aca93a5fbfed952e90645405b1b1a8886
+Rename Method	public destroyAll() : void renamed to public destroyAllActive() : void in class org.apache.deltaspike.core.util.context.AbstractContext
+Extract Variable	storage : ContextualStorage in method public get(bean Contextual<T>) : T from class org.apache.deltaspike.core.util.context.AbstractContext
+Extract Variable	storage : ContextualStorage in method public destroy(bean Contextual) : boolean from class org.apache.deltaspike.core.util.context.AbstractContext
+Extract Variable	storage : ContextualStorage in method public destroyAllActive() : void from class org.apache.deltaspike.core.util.context.AbstractContext
+Rename Variable	storage : Map<Contextual<?>,ContextualInstanceInfo<?>> to contextMap : Map<Contextual<?>,ContextualInstanceInfo<?>> in method public destroyAllActive() : void from class org.apache.deltaspike.core.util.context.AbstractContext
+Developers have reported that 11158 commits involve refactoring but only 1476 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1476 commits.
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643260509da0016d6b5b64
+Issue Title: : Typesafe Messgaes for JSF: add JsfMessage<?> feature
+Issue Description:  As discussed on the list here is the proposal how we could provide typesafe messages in JSF:
+Refactorings at 42fa86735cb89bdde76545946d154c045513c12b
+Change Return Type	JsfMessage<?> to JsfMessage in method public createJsfMessage(injectionPoint InjectionPoint) : JsfMessage from class org.apache.deltaspike.jsf.impl.message.JsfMessageProducer
+Change Return Type	JsfMessage<?> to JsfMessage in method private createJsfMessageFor(injectionPoint InjectionPoint, rawType Class<Object>) : JsfMessage from class org.apache.deltaspike.jsf.impl.message.JsfMessageProducer
+Developers have reported that 11158 commits involve refactoring but only 1477 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1477 commits.
+
+No refactorings detected at 77e111dc3131b44bd7ef9edca5fd31dd2e27e67a
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643260509da0016d6b5b64
+Issue Title: : Typesafe Messgaes for JSF: add JsfMessage<?> feature
+Issue Description:  As discussed on the list here is the proposal how we could provide typesafe messages in JSF:
+Refactorings at ef74dca0b05d652ca33820b090a1dd4f6b16f18b
+Move Class	org.apache.deltaspike.jsf.message.JsfMessage moved to org.apache.deltaspike.jsf.api.message.JsfMessage
+Developers have reported that 11158 commits involve refactoring but only 1478 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1478 commits.
+
+No refactorings detected at de286e000716ec9057dfdaefeeda91d34be22d64
+
+No refactorings detected at 737771ba18bca7bdd3e8684f06f127b6f16f6e18
+
+No refactorings detected at bfbc5024840ee4f60d52377b1192d8650451cb13
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643260509da0016d6b5b64
+Issue Title: : Typesafe Messgaes for JSF: add JsfMessage<?> feature
+Issue Description:  As discussed on the list here is the proposal how we could provide typesafe messages in JSF:
+Refactorings at 497c7441ad1370b383d3c00c614d32dec4ef1952
+Rename Class	org.apache.deltaspike.test.jsf.impl.scope.view.beans.BackingBean renamed to org.apache.deltaspike.test.jsf.impl.scope.view.beans.ViewScopedBackingBean
+Change Parameter Type	rawType : Class<Object> to rawType : Type in method private createJsfMessageFor(injectionPoint InjectionPoint, rawType Type) : JsfMessage from class org.apache.deltaspike.jsf.impl.message.JsfMessageProducer
+Developers have reported that 11158 commits involve refactoring but only 1479 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1479 commits.
+
+No refactorings detected at 649a65fae047377bf52978ef47f3d50020f1c048
+
+No refactorings detected at 48694d0bba7f6756c0b2396ca32d6aee1bfad2e4
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643260509da0016d6b5b65
+Issue Title: : add 'category' to Message API
+Issue Description:  Sometimes we need different versions of a rendered message. This could be a shortText vs a longText for example. Or in JSF it's the summary vs detail message.
+Refactorings at 426b094ec7683cd482b87ff7fe102a005ff1dac3
+Move Method	public getCurrentWindowId() : String from class org.apache.deltaspike.core.spi.scope.window.WindowContextManager to public getCurrentWindowId() : String from class org.apache.deltaspike.core.spi.scope.window.WindowContext
+Move Method	public activateWindowContext(windowId String) : void from class org.apache.deltaspike.core.spi.scope.window.WindowContextManager to public activateWindowContext(windowId String) : void from class org.apache.deltaspike.core.spi.scope.window.WindowContext
+Move Method	public closeCurrentWindowContext() : boolean from class org.apache.deltaspike.core.spi.scope.window.WindowContextManager to public closeCurrentWindowContext() : boolean from class org.apache.deltaspike.core.spi.scope.window.WindowContext
+Move Method	public closeAllWindowContexts() : void from class org.apache.deltaspike.core.spi.scope.window.WindowContextManager to public closeAllWindowContexts() : void from class org.apache.deltaspike.core.spi.scope.window.WindowContext
+Developers have reported that 11158 commits involve refactoring but only 1480 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1480 commits.
+
+No refactorings detected at 279d85bb562cc3dd2b20549d037f9ef44ffdbcff
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643260509da0016d6b5b65
+Issue Title: : add 'category' to Message API
+Issue Description:  Sometimes we need different versions of a rendered message. This could be a shortText vs a longText for example. Or in JSF it's the summary vs detail message.
+Refactorings at b0caefee80a42d6737b3a255316487b668fab104
+Extract Method	public toString(category String) : String extracted from public toString() : String in class org.apache.deltaspike.core.impl.message.DefaultMessage
+Extract Method	public toString(messageContext MessageContext, category String) : String extracted from public toString(messageContext MessageContext) : String in class org.apache.deltaspike.core.impl.message.DefaultMessage
+Developers have reported that 11158 commits involve refactoring but only 1481 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1481 commits.
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643260509da0016d6b5b65
+Issue Title: : add 'category' to Message API
+Issue Description:  Sometimes we need different versions of a rendered message. This could be a shortText vs a longText for example. Or in JSF it's the summary vs detail message.
+Refactorings at 8e593fdf24a9af820af9cead5dc0630891905f76
+Add Parameter	category : String in method public getMessage(messageContext MessageContext, messageTemplate String, category String) : String from class org.apache.deltaspike.core.impl.message.DefaultMessageResolver
+Add Parameter	category : String in method public getMessage(messageContext MessageContext, messageTemplate String, category String) : String from class org.apache.deltaspike.core.api.message.MessageResolver
+Add Parameter	category : String in method public getMessage(messageContext MessageContext, messageTemplate String, category String) : String from class org.apache.deltaspike.test.core.api.message.TestMessageResolver
+Developers have reported that 11158 commits involve refactoring but only 1482 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1482 commits.
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b64326d509da0016d6b5bdf
+Issue Title: : remove hard dependency to javassist
+Issue Description:  some users don't like to have it as a required dependency, but they would like to use interfaces for partial beans (and don't need abstract classes as partial beans).
+Refactorings at 208789be849089160f0a97a4d3e89cd01ac06316
+Rename Class	org.apache.deltaspike.partialbean.impl.PartialBeanMethodHandler renamed to org.apache.deltaspike.partialbean.impl.PartialBeanAbstractMethodHandler
+Change Attribute Type	partialBeanMethodHandler : PartialBeanMethodHandler to partialBeanMethodHandler : PartialBeanAbstractMethodHandler in class org.apache.deltaspike.partialbean.impl.MethodHandlerProxy
+Change Parameter Type	partialBeanMethodHandler : PartialBeanMethodHandler to partialBeanMethodHandler : PartialBeanAbstractMethodHandler in method package setPartialBeanMethodHandler(partialBeanMethodHandler PartialBeanAbstractMethodHandler) : void from class org.apache.deltaspike.partialbean.impl.MethodHandlerProxy
+Developers have reported that 11158 commits involve refactoring but only 1483 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1483 commits.
+
+No refactorings detected at d860a471e7ebbfbfd89815dd26ccb96944d61dd3
+
+No refactorings detected at 37ebe0b3c428cd64734a3dd3eee4d94a3f715e26
+
+No refactorings detected at a092dabf5506162608d7915e8faa8604538e34aa
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643290509da0016d6b5d2e
+Issue Title: : Add JSFLocaleResolver as an DeaultLocaleResolver
+Issue Description:  Add an JSFLocaleResolver which should get the Locale out of the view root.For messages used in views this would be fine if delta spike would provide it out of the box.
+Refactorings at 34d6a1696206e011e698fd74c2b75bc968c9384d
+Remove Class Annotation	@SessionScoped in class org.apache.deltaspike.core.impl.scope.window.DefaultWindowContext
+Add Class Annotation	@RequestScoped in class org.apache.deltaspike.core.impl.scope.window.WindowIdHolder
+Developers have reported that 11158 commits involve refactoring but only 1484 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1484 commits.
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b6432c9509da0016d6b5e93
+Issue Title: : Improve JavaDoc
+Issue Description:  Where we bundle all kind of javadoc related work if we find 'problems'Linked Commit Github URL: https://github.com/apache/deltaspike/commit/de7a4539258e4b2f31b3fd2d2e507fa0c073a32a
+Refactorings at 8efa6867b8c2e5ebbb372cd36994999879a74d82
+Remove Class Annotation	@SuppressWarnings("UnusedDeclaration") in class org.apache.deltaspike.core.api.config.DeltaSpikeConfig
+Developers have reported that 11158 commits involve refactoring but only 1485 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1485 commits.
+
+No refactorings detected at 65d3d9d0cb57d9d62d4ecfc78923519f09107657
+
+No refactorings detected at 2ed57df7df256b407f6011136bfadd6ae6b80466
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b64331d509da0016d6b6074
+Issue Title: : add tests with simple ear-packaging
+Issue Description:  for all tests with war-file deployments, we should also add a test which packages the war-file into an ear-file. that's the minimum we should safeguard with our tests.Linked Commit Github URL: https://github.com/apache/deltaspike/commit/4adb68be2ce5789a05dccbddad8da03c64d2b1f4
+Refactorings at 02880d6fa5d199b73f1d2256f7dd81da2cf1780b
+Add Class Modifier	abstract in class org.apache.deltaspike.test.security.impl.authorization.secured.SecuredAnnotationTest
+Remove Class Annotation	@RunWith(Arquillian.class) in class org.apache.deltaspike.test.security.impl.authorization.secured.SecuredAnnotationTest
+Developers have reported that 11158 commits involve refactoring but only 1486 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1486 commits.
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b64331d509da0016d6b6074
+Issue Title: : add tests with simple ear-packaging
+Issue Description:  for all tests with war-file deployments, we should also add a test which packages the war-file into an ear-file. that's the minimum we should safeguard with our tests.Linked Commit Github URL: https://github.com/apache/deltaspike/commit/4adb68be2ce5789a05dccbddad8da03c64d2b1f4
+Refactorings at 7dd252cd4f984823a28816a1c81633ff15e7b00b
+Remove Class Annotation	@RunWith(Arquillian.class) in class org.apache.deltaspike.test.core.api.exclude.ExcludeTest
+Remove Class Annotation	@RunWith(Arquillian.class) in class org.apache.deltaspike.test.core.api.exclude.ExcludeTestProjectStageDevelopment
+Remove Class Annotation	@RunWith(Arquillian.class) in class org.apache.deltaspike.test.core.api.provider.BeanManagerProviderTest
+Add Class Modifier	abstract in class org.apache.deltaspike.test.core.api.partialbean.uc001.PartialBeanAsInterfaceTest
+Remove Class Annotation	@RunWith(Arquillian.class) in class org.apache.deltaspike.test.core.api.partialbean.uc001.PartialBeanAsInterfaceTest
+Push Down Method	public war() : WebArchive from class org.apache.deltaspike.test.core.api.partialbean.uc001.PartialBeanAsInterfaceTest to public deploy() : WebArchive from class org.apache.deltaspike.test.core.api.partialbean.uc001.PartialBeanAsInterfaceWarFileTest
+Developers have reported that 11158 commits involve refactoring but only 1487 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1487 commits.
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b64331d509da0016d6b6074
+Issue Title: : add tests with simple ear-packaging
+Issue Description:  for all tests with war-file deployments, we should also add a test which packages the war-file into an ear-file. that's the minimum we should safeguard with our tests.Linked Commit Github URL: https://github.com/apache/deltaspike/commit/4adb68be2ce5789a05dccbddad8da03c64d2b1f4
+Refactorings at 8acf16e6d40726d54085753c49fd9cce855e1f9b
+Remove Class Modifier	abstract in class org.apache.deltaspike.test.core.api.exclude.ExcludeTestProjectStageEarFileDevelopment
+Remove Class Modifier	abstract in class org.apache.deltaspike.test.core.api.exclude.ExcludeTestProjectStageWarFileDevelopment
+Add Class Modifier	abstract in class org.apache.deltaspike.test.core.api.provider.BeanManagerProviderTest
+Developers have reported that 11158 commits involve refactoring but only 1488 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1488 commits.
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b64331d509da0016d6b6074
+Issue Title: : add tests with simple ear-packaging
+Issue Description:  for all tests with war-file deployments, we should also add a test which packages the war-file into an ear-file. that's the minimum we should safeguard with our tests.Linked Commit Github URL: https://github.com/apache/deltaspike/commit/4adb68be2ce5789a05dccbddad8da03c64d2b1f4
+Refactorings at 90c0129b9fb375688f423f4dcc664002161ed855
+Add Class Modifier	abstract in class org.apache.deltaspike.test.core.api.exclude.ExcludeTest
+Push Down Method	public deploy() : WebArchive from class org.apache.deltaspike.test.core.api.exclude.ExcludeTest to public deploy() : WebArchive from class org.apache.deltaspike.test.core.api.exclude.ExcludeWarFileTest
+Developers have reported that 11158 commits involve refactoring but only 1489 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1489 commits.
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b64331d509da0016d6b6074
+Issue Title: : add tests with simple ear-packaging
+Issue Description:  for all tests with war-file deployments, we should also add a test which packages the war-file into an ear-file. that's the minimum we should safeguard with our tests.Linked Commit Github URL: https://github.com/apache/deltaspike/commit/4adb68be2ce5789a05dccbddad8da03c64d2b1f4
+Refactorings at 97bde124179e03afa70ff92e4ccd24f6592fa745
+Add Class Modifier	abstract in class org.apache.deltaspike.test.core.api.exclude.ExcludeTestProjectStageDevelopment
+Push Down Method	public deploy() : WebArchive from class org.apache.deltaspike.test.core.api.exclude.ExcludeTestProjectStageDevelopment to public deploy() : WebArchive from class org.apache.deltaspike.test.core.api.exclude.ExcludeTestProjectStageWarFileDevelopment
+Developers have reported that 11158 commits involve refactoring but only 1490 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1490 commits.
+
+No refactorings detected at 84c21570d5f8b71c332f0d1104de6488b77e2993
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b64331d509da0016d6b6074
+Issue Title: : add tests with simple ear-packaging
+Issue Description:  for all tests with war-file deployments, we should also add a test which packages the war-file into an ear-file. that's the minimum we should safeguard with our tests.Linked Commit Github URL: https://github.com/apache/deltaspike/commit/4adb68be2ce5789a05dccbddad8da03c64d2b1f4
+Refactorings at 7b0650b95b8fff36272553e186f0802ad0cfc636
+Add Class Modifier	abstract in class org.apache.deltaspike.test.scheduler.custom.CustomSchedulerTest
+Add Class Annotation	@Typed in class org.apache.deltaspike.test.scheduler.custom.CustomSchedulerTest
+Remove Class Annotation	@RunWith(Arquillian.class) in class org.apache.deltaspike.test.scheduler.custom.CustomSchedulerTest
+Push Down Method	public deploy() : WebArchive from class org.apache.deltaspike.test.scheduler.custom.CustomSchedulerTest to public deploy() : WebArchive from class org.apache.deltaspike.test.scheduler.custom.CustomSchedulerWarFileTest
+Developers have reported that 11158 commits involve refactoring but only 1491 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1491 commits.
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b64331d509da0016d6b6074
+Issue Title: : add tests with simple ear-packaging
+Issue Description:  for all tests with war-file deployments, we should also add a test which packages the war-file into an ear-file. that's the minimum we should safeguard with our tests.Linked Commit Github URL: https://github.com/apache/deltaspike/commit/4adb68be2ce5789a05dccbddad8da03c64d2b1f4
+Refactorings at c956c99b96f93d318a93a5c0961b73c7318d9ecb
+Add Class Modifier	abstract in class org.apache.deltaspike.test.core.impl.jmx.SimpleRegistrationTest
+Remove Class Annotation	@RunWith(Arquillian.class) in class org.apache.deltaspike.test.core.impl.jmx.SimpleRegistrationTest
+Push Down Method	public war() : WebArchive from class org.apache.deltaspike.test.core.impl.jmx.SimpleRegistrationTest to public deploy() : WebArchive from class org.apache.deltaspike.test.core.impl.jmx.SimpleRegistrationWarFileTest
+Developers have reported that 11158 commits involve refactoring but only 1492 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1492 commits.
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b64331d509da0016d6b6074
+Issue Title: : add tests with simple ear-packaging
+Issue Description:  for all tests with war-file deployments, we should also add a test which packages the war-file into an ear-file. that's the minimum we should safeguard with our tests.Linked Commit Github URL: https://github.com/apache/deltaspike/commit/4adb68be2ce5789a05dccbddad8da03c64d2b1f4
+Refactorings at b2d2db6840b8b4d1b6a6b8149b951013e8aa5b04
+Add Class Modifier	abstract in class org.apache.deltaspike.test.core.api.alternative.local.BdaAlternativeTest
+Remove Class Annotation	@RunWith(Arquillian.class) in class org.apache.deltaspike.test.core.api.alternative.local.BdaAlternativeTest
+Push Down Method	public deploy() : WebArchive from class org.apache.deltaspike.test.core.api.alternative.local.BdaAlternativeTest to public deploy() : WebArchive from class org.apache.deltaspike.test.core.api.alternative.local.BdaAlternativeWarFileTest
+Developers have reported that 11158 commits involve refactoring but only 1493 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1493 commits.
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b64331d509da0016d6b6074
+Issue Title: : add tests with simple ear-packaging
+Issue Description:  for all tests with war-file deployments, we should also add a test which packages the war-file into an ear-file. that's the minimum we should safeguard with our tests.Linked Commit Github URL: https://github.com/apache/deltaspike/commit/4adb68be2ce5789a05dccbddad8da03c64d2b1f4
+Refactorings at f93b669634e7d434f2ffa7dbd02024cd4efd2ca2
+Add Class Modifier	abstract in class org.apache.deltaspike.test.core.impl.util.JndiUtilsTest
+Remove Class Annotation	@RunWith(Arquillian.class) in class org.apache.deltaspike.test.core.impl.util.JndiUtilsTest
+Remove Class Annotation	@Category(WebProfileCategory.class) in class org.apache.deltaspike.test.core.impl.util.JndiUtilsTest
+Push Down Method	public deploy() : WebArchive from class org.apache.deltaspike.test.core.impl.util.JndiUtilsTest to public deploy() : WebArchive from class org.apache.deltaspike.test.core.impl.util.JndiUtilsWarFileTest
+Developers have reported that 11158 commits involve refactoring but only 1494 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1494 commits.
+
+No refactorings detected at f36d0e63eb7231756857ad15eae8ff4a0152b412
+
+No refactorings detected at 98934db9bbd12ab843df3a86007abebffd9b0415
+
+No refactorings detected at 0f3902141ca08612da77955644ca730f1e511133
+
+No refactorings detected at b0251ee16bfc7be945261a0b5da8938409d1979d
+
+No refactorings detected at fb58108ed0952dac72c708cb54ed48779873cdf2
+
+No refactorings detected at 504dfa564e4b907e149061edf49b199c361f793a
+
+No refactorings detected at 17fdf0ef9c3726196585d1ce4b6068749b22e8ee
+
+No refactorings detected at a28c394ca335688ee38c0e6fcdf1ca605cb9b53a
+
+No refactorings detected at 89309c311eae12ee868a9dc20e79d7b5acc9afbb
+
+No refactorings detected at 0338b71df28dc82f5bbb6aa777f51809549dffeb
+
+No refactorings detected at 6c9524b56556469924e6e25730cf9c02e4ab3928
+
+No refactorings detected at 80ea63f28e4e8ca3d82a191805d67d510ccf6543
+
+No refactorings detected at 8078097eb72ddd1bc5dbfaa3d223790062f911a8
+
+No refactorings detected at 1550c8870a6043253273ae176279de4951283e74
+
+No refactorings detected at 4814760684233665b0314c2eacfc50a2932159d8
+
+No refactorings detected at 2498256926474e3aeed8088cb655dfc95088bbe7
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b64337a509da0016d6b636f
+Issue Title: : improved weld-support
+Issue Description:  with some versions of weld (e.g. 1.1.16) InvocationContext#getTarget returns the subclass-proxy. due to the proxy-class, we can't extract the correct annotations.
+Refactorings at 6c0169550c2f282d38d7b1103db493704f522864
+Extract Variable	targetClass : Class in method public execute(invocationContext InvocationContext) : Object from class org.apache.deltaspike.jpa.impl.transaction.ResourceLocalTransactionStrategy
+Extract Variable	targetClass : Class in method protected extractTransactionalAnnotation(context InvocationContext) : Transactional from class org.apache.deltaspike.jpa.impl.transaction.TransactionStrategyHelper
+Extract Variable	targetClass : Class in method public execute(invocationContext InvocationContext) : Object from class org.apache.deltaspike.security.impl.extension.DefaultSecurityStrategy
+Developers have reported that 11158 commits involve refactoring but only 1495 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1495 commits.
+
+No refactorings detected at 6060db960d2e5eac128d43f95f92c5cb4baa0d4e
+
+No refactorings detected at 170647869b279e735cefa4541d45510071989ac4
+
+No refactorings detected at fe5fca485d161c06fd95f2101c2c2fbffde20493
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b64339b509da0016d6b647a
+Issue Title: : Create new bean-validation module
+Issue Description:  Create new module bean-validation and child api/impl.  Note API will currently be empty, this is impl only.Linked Commit Github URL: https://github.com/apache/deltaspike/commit/c4d5975f84bfb6ba7542ed93d2412c7b2b4bbd6f
+Refactorings at 8ec331bff1ca4097e71c2cd4b92adcbbea924b70
+Move Source Folder	deltaspike/modules/beanval to deltaspike/modules/bean-validation
+Developers have reported that 11158 commits involve refactoring but only 1496 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1496 commits.
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b64339b509da0016d6b647a
+Issue Title: : Create new bean-validation module
+Issue Description:  Create new module bean-validation and child api/impl.  Note API will currently be empty, this is impl only.Linked Commit Github URL: https://github.com/apache/deltaspike/commit/c4d5975f84bfb6ba7542ed93d2412c7b2b4bbd6f
+Refactorings at 2f322a0e8cc2324b9485e9a779a38709217f36ba
+Rename Package	org.apache.deltaspike.beanval to org.apache.deltaspike.beanValidation
+Move Class	org.apache.deltaspike.beanval.test.ArchiveUtils moved to org.apache.deltaspike.beanValidation.test.ArchiveUtils
+Move Class	org.apache.deltaspike.beanval.test.ArrayChecker moved to org.apache.deltaspike.beanValidation.test.ArrayChecker
+Move Class	org.apache.deltaspike.beanval.test.BasicPojo moved to org.apache.deltaspike.beanValidation.test.BasicPojo
+Move Class	org.apache.deltaspike.beanval.test.InjectableConstraintValidator moved to org.apache.deltaspike.beanValidation.test.InjectableConstraintValidator
+Move Class	org.apache.deltaspike.beanval.test.InjectedValidationTest moved to org.apache.deltaspike.beanValidation.test.InjectedValidationTest
+Developers have reported that 11158 commits involve refactoring but only 1497 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1497 commits.
+
+No refactorings detected at f2eea2241ff1a4c2d07d84e10e09dfa6b1113f24
+
+No refactorings detected at 484f94ceb3c96bc1daebbb5e63725dfd0ec7e636
+
+No refactorings detected at 82218970b4964f51af92d453cad89425e902132f
+
+No refactorings detected at 89502997c73e8c45e86c450e607b4ae73c76b39d
+
+No refactorings detected at cfd2c6f584bee84fedf941fcb7d84858635137d0
+
+No refactorings detected at 38a17fe52aff949517aa88ff42732034e0f18437
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b6433e7509da0016d6b677e
+Issue Title: : Fix Criteria API count methods signatures
+Issue Description:  The method signatures for the count should:- Return a QuerySelection<E, Long>
+Refactorings at 11af2fa08063970c31338e05970f2cc2e88c7b64
+Extract Method	private createCriteriaQuery(builder CriteriaBuilder) : CriteriaQuery<?> extracted from public createQuery() : TypedQuery<R> in class org.apache.deltaspike.data.impl.criteria.QueryCriteria
+Change Variable Type	query : CriteriaQuery<R> to query : CriteriaQuery<?> in method public createQuery() : TypedQuery<R> from class org.apache.deltaspike.data.impl.criteria.QueryCriteria
+Change Parameter Type	query : CriteriaQuery<R> to query : CriteriaQuery<?> in method package applyProcessors(query CriteriaQuery<?>, builder CriteriaBuilder, from From<C,C>) : void from class org.apache.deltaspike.data.impl.criteria.QueryCriteria
+Change Parameter Type	query : CriteriaQuery<R> to query : CriteriaQuery<?> in method private prepareSelections(query CriteriaQuery<?>, builder CriteriaBuilder, root From<C,C>) : Selection<?>[] from class org.apache.deltaspike.data.impl.criteria.QueryCriteria
+Change Return Type	Selection<N> to Selection<Long> in method public toSelection(query CriteriaQuery<R>, builder CriteriaBuilder, path Path<? extends P>) : Selection<Long> from class org.apache.deltaspike.data.impl.criteria.selection.numeric.Count
+Remove Method Annotation	@SuppressWarnings("unchecked") in method public toSelection(query CriteriaQuery<R>, builder CriteriaBuilder, path Path<? extends P>) : Selection<N> from class org.apache.deltaspike.data.impl.criteria.selection.numeric.Count
+Change Parameter Type	attribute : SingularAttribute<E,N> to attribute : SingularAttribute<E,?> in method public count(attribute SingularAttribute<E,?>) : QuerySelection<E,Long> from class org.apache.deltaspike.data.impl.handler.CriteriaSupportHandler
+Change Return Type	QuerySelection<E,N> to QuerySelection<E,Long> in method public count(attribute SingularAttribute<E,?>) : QuerySelection<E,Long> from class org.apache.deltaspike.data.impl.handler.CriteriaSupportHandler
+Change Return Type	QuerySelection<E,N> to QuerySelection<E,Long> in method public count(attribute SingularAttribute<E,?>) : QuerySelection<E,Long> from class org.apache.deltaspike.data.api.criteria.CriteriaSupport
+Change Parameter Type	attribute : SingularAttribute<E,N> to attribute : SingularAttribute<E,?> in method public count(attribute SingularAttribute<E,?>) : QuerySelection<E,Long> from class org.apache.deltaspike.data.api.criteria.CriteriaSupport
+Developers have reported that 11158 commits involve refactoring but only 1498 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1498 commits.
+
+No refactorings detected at 8006d52c6e43d5c7e87ae78f398a7a4e74db8e68
+
+No refactorings detected at ae2291937417f1fb337f55bc987fdda53d1591aa
+
+No refactorings detected at 04ee688a8d1ffbefc3aae7db4ce02297e226a350
+
+No refactorings detected at 730c8a9b7eb16eea871726b01f8dd9f59325e736
+
+No refactorings detected at 5bdd172ad12e46b679b85d498bc528c7efc280f0
+
+No refactorings detected at cd805aabc4191545ca84f8f0832efe7d193c77e1
+
+No refactorings detected at 7cee58435df3ff295ed02974cfc840960c044a6d
+
+No refactorings detected at 311aef6b54715b6ac6141ed9dbe5e04abeda40aa
+
+No refactorings detected at 5d019f9d99d477b0fdd5390345f2a039346bf7f9
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b6434bc509da0016d6b6ec8
+Issue Title: : BeanManager lookup fails when BeanManager created in parent classloader and in SE mode
+Issue Description:  using embeadded tomcat and CdiServletContextListener attempting to use BeanProvider from within a Servlet fails:
+Refactorings at 6e62f8eb3048fdffd2ce5fef53d6e338d4c05747
+Inline Method	private isParentBeanManagerBooted() : boolean inlined to public getBeanManager() : BeanManager in class org.apache.deltaspike.core.api.provider.BeanManagerProvider
+Split Conditional	return parentBmi != null && parentBmi.booted; to [bmi.loadTimeBm=parentBmi.loadTimeBm;, if(parentBmi != null)] in method public getBeanManager() : BeanManager from class org.apache.deltaspike.core.api.provider.BeanManagerProvider
+Developers have reported that 11158 commits involve refactoring but only 1499 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1499 commits.
+
+No refactorings detected at cc45eac0fc28605ff7b8de22514a7513b18ddcd6
+
+No refactorings detected at 965f572a619e3e58e59532f870df56165d524a79
+
+No refactorings detected at 12a3a43270c24f76ce96108f98e76e367cb55065
+
+No refactorings detected at 887d347c1663c1d63e579815085f6824bc083450
+
+No refactorings detected at 6a12b319e2e3fa59e4f0ada504681ea3e80379ae
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b64352a509da0016d6b7316
+Issue Title: : move proxy-handling to ds-core
+Issue Description:  with that we can get rid of the optional dependency to javassist in the jsf-module...Linked Commit Github URL: https://github.com/apache/deltaspike/commit/38b1fa25261fff29bd36f78d389686d4ff0e55b7
+Refactorings at fcf4d77d692971a6a93731e64d044f6cf1757d6c
+Move Package	org.apache.deltaspike.partialbean.impl.interception to org.apache.deltaspike.core.util.invocation
+Move Class	org.apache.deltaspike.partialbean.impl.interception.AbstractManualInvocationHandler moved to org.apache.deltaspike.core.util.invocation.AbstractManualInvocationHandler
+Move Class	org.apache.deltaspike.partialbean.impl.interception.ManualInvocationContext moved to org.apache.deltaspike.core.util.invocation.ManualInvocationContext
+Move Class	org.apache.deltaspike.partialbean.impl.interception.ManualInvocationThrowableWrapperException moved to org.apache.deltaspike.core.util.invocation.ManualInvocationThrowableWrapperException
+Move Class	org.apache.deltaspike.partialbean.impl.proxy.AsmProxyClassGenerator moved to org.apache.deltaspike.core.util.proxy.AsmProxyClassGenerator
+Move And Rename Class	org.apache.deltaspike.partialbean.impl.proxy.CallSuperManualInvocationHandler moved and renamed to org.apache.deltaspike.core.util.proxy.invocation.DelegateManualInvocationHandler
+Move And Rename Class	org.apache.deltaspike.partialbean.impl.proxy.RedirectManualInvocationHandler moved and renamed to org.apache.deltaspike.core.util.proxy.invocation.InterceptManualInvocationHandler
+Move And Rename Class	org.apache.deltaspike.partialbean.impl.PartialBeanLifecycle moved and renamed to org.apache.deltaspike.core.util.proxy.DeltaSpikeProxyContextualLifecycle
+Move And Rename Class	org.apache.deltaspike.partialbean.impl.proxy.PartialBeanProxyFactory moved and renamed to org.apache.deltaspike.core.util.proxy.DeltaSpikeProxyFactory
+Move Package	org.apache.deltaspike.partialbean.impl.proxy to org.apache.deltaspike.core.util.proxy.invocation
+Remove Method Annotation	@SuppressWarnings("UnusedDeclaration") in method public createBeans(afterBeanDiscovery AfterBeanDiscovery, beanManager BeanManager) : void from class org.apache.deltaspike.jsf.impl.injection.proxy.ConverterAndValidatorProxyExtension
+Add Method Annotation	@Override in method public clearInitialState() : void from class org.apache.deltaspike.jsf.impl.injection.proxy.DefaultPartialStateHolder
+Add Method Annotation	@Override in method public initialStateMarked() : boolean from class org.apache.deltaspike.jsf.impl.injection.proxy.DefaultPartialStateHolder
+Add Method Annotation	@Override in method public markInitialState() : void from class org.apache.deltaspike.jsf.impl.injection.proxy.DefaultPartialStateHolder
+Change Variable Type	beanLifecycle : PartialBeanLifecycle to lifecycle : DeltaSpikeProxyContextualLifecycle in method protected createPartialBean(beanClass Class<T>, descriptor PartialBeanDescriptor, afterBeanDiscovery AfterBeanDiscovery, beanManager BeanManager) : Bean<T> from class org.apache.deltaspike.partialbean.impl.PartialBeanBindingExtension
+Rename Variable	beanLifecycle : PartialBeanLifecycle to lifecycle : DeltaSpikeProxyContextualLifecycle in method protected createPartialBean(beanClass Class<T>, descriptor PartialBeanDescriptor, afterBeanDiscovery AfterBeanDiscovery, beanManager BeanManager) : Bean<T> from class org.apache.deltaspike.partialbean.impl.PartialBeanBindingExtension
+Rename Method	private definePartialBeanProxyMethods(cw ClassWriter, proxyType Type, invocationHandlerType Type) : void renamed to private defineDeltaSpikeProxyMethods(cw ClassWriter, proxyType Type, invocationHandlerType Type) : void in class org.apache.deltaspike.core.util.proxy.AsmProxyClassGenerator
+Split Parameter	redirectMethods : Method[] to [additionalInterfaces : Class<?>[], delegateMethods : Method[]] in method public generateProxyClass(classLoader ClassLoader, targetClass Class<T>, invocationHandlerClass Class<? extends InvocationHandler>, suffix String, superAccessorMethodSuffix String, additionalInterfaces Class<?>[], delegateMethods Method[], interceptMethods Method[]) : Class<T> from class org.apache.deltaspike.core.util.proxy.AsmProxyClassGenerator
+Add Parameter	interceptMethods : Method[] in method public generateProxyClass(classLoader ClassLoader, targetClass Class<T>, invocationHandlerClass Class<? extends InvocationHandler>, suffix String, superAccessorMethodSuffix String, additionalInterfaces Class<?>[], delegateMethods Method[], interceptMethods Method[]) : Class<T> from class org.apache.deltaspike.core.util.proxy.AsmProxyClassGenerator
+Remove Parameter	interceptionMethods : Method[] in method public generateProxyClass(classLoader ClassLoader, targetClass Class<T>, invocationHandlerClass Class<? extends InvocationHandler>, suffix String, superAccessorMethodSuffix String, redirectMethods Method[], interceptionMethods Method[]) : Class<T> from class org.apache.deltaspike.partialbean.impl.proxy.AsmProxyClassGenerator
+Add Parameter	additionalInterfaces : Class<?>[] in method private generateProxyClassBytes(targetClass Class<?>, invocationHandlerClass Class<? extends InvocationHandler>, proxyName String, superAccessorMethodSuffix String, additionalInterfaces Class<?>[], delegateMethods Method[], interceptMethods Method[]) : byte[] from class org.apache.deltaspike.core.util.proxy.AsmProxyClassGenerator
+Add Parameter	delegateMethods : Method[] in method private generateProxyClassBytes(targetClass Class<?>, invocationHandlerClass Class<? extends InvocationHandler>, proxyName String, superAccessorMethodSuffix String, additionalInterfaces Class<?>[], delegateMethods Method[], interceptMethods Method[]) : byte[] from class org.apache.deltaspike.core.util.proxy.AsmProxyClassGenerator
+Add Parameter	interceptMethods : Method[] in method private generateProxyClassBytes(targetClass Class<?>, invocationHandlerClass Class<? extends InvocationHandler>, proxyName String, superAccessorMethodSuffix String, additionalInterfaces Class<?>[], delegateMethods Method[], interceptMethods Method[]) : byte[] from class org.apache.deltaspike.core.util.proxy.AsmProxyClassGenerator
+Remove Parameter	redirectMethods : Method[] in method private generateProxyClassBytes(targetClass Class<?>, invocationHandlerClass Class<? extends InvocationHandler>, proxyName String, superAccessorMethodSuffix String, redirectMethods Method[], interceptionMethods Method[]) : byte[] from class org.apache.deltaspike.partialbean.impl.proxy.AsmProxyClassGenerator
+Remove Parameter	interceptionMethods : Method[] in method private generateProxyClassBytes(targetClass Class<?>, invocationHandlerClass Class<? extends InvocationHandler>, proxyName String, superAccessorMethodSuffix String, redirectMethods Method[], interceptionMethods Method[]) : byte[] from class org.apache.deltaspike.partialbean.impl.proxy.AsmProxyClassGenerator
+Rename Attribute	FIELDNAME_HANDLER : String to FIELDNAME_DELEGATE_INVOCATION_HANDLER : String in class org.apache.deltaspike.core.util.proxy.AsmProxyClassGenerator
+Change Attribute Type	INSTANCE : CallSuperManualInvocationHandler to INSTANCE : DelegateManualInvocationHandler in class org.apache.deltaspike.core.util.proxy.invocation.DelegateManualInvocationHandler
+Change Attribute Type	INSTANCE : RedirectManualInvocationHandler to INSTANCE : InterceptManualInvocationHandler in class org.apache.deltaspike.core.util.proxy.invocation.InterceptManualInvocationHandler
+Change Class Access Modifier	package to public in class org.apache.deltaspike.core.util.proxy.DeltaSpikeProxyContextualLifecycle
+Rename Method	private createHandlerInstance() : H renamed to protected instantiateDelegateInvocationHandler() : H in class org.apache.deltaspike.core.util.proxy.DeltaSpikeProxyContextualLifecycle
+Rename Parameter	partialBeanClass : Class<T> to targetClass : Class<T> in method public DeltaSpikeProxyContextualLifecycle(targetClass Class<T>, delegateInvocationHandlerClass Class<H>, proxyFactory DeltaSpikeProxyFactory, beanManager BeanManager) from class org.apache.deltaspike.core.util.proxy.DeltaSpikeProxyContextualLifecycle
+Rename Parameter	handlerClass : Class<H> to delegateInvocationHandlerClass : Class<H> in method public DeltaSpikeProxyContextualLifecycle(targetClass Class<T>, delegateInvocationHandlerClass Class<H>, proxyFactory DeltaSpikeProxyFactory, beanManager BeanManager) from class org.apache.deltaspike.core.util.proxy.DeltaSpikeProxyContextualLifecycle
+Add Parameter	proxyFactory : DeltaSpikeProxyFactory in method public DeltaSpikeProxyContextualLifecycle(targetClass Class<T>, delegateInvocationHandlerClass Class<H>, proxyFactory DeltaSpikeProxyFactory, beanManager BeanManager) from class org.apache.deltaspike.core.util.proxy.DeltaSpikeProxyContextualLifecycle
+Change Method Access Modifier	package to public in method public DeltaSpikeProxyContextualLifecycle(targetClass Class<T>, delegateInvocationHandlerClass Class<H>, proxyFactory DeltaSpikeProxyFactory, beanManager BeanManager) from class org.apache.deltaspike.core.util.proxy.DeltaSpikeProxyContextualLifecycle
+Change Method Access Modifier	private to protected in method protected instantiateDelegateInvocationHandler() : H from class org.apache.deltaspike.core.util.proxy.DeltaSpikeProxyContextualLifecycle
+Rename Attribute	partialBeanClass : Class<T> to targetClass : Class<T> in class org.apache.deltaspike.core.util.proxy.DeltaSpikeProxyContextualLifecycle
+Rename Attribute	handlerClass : Class<H> to delegateInvocationHandlerClass : Class<H> in class org.apache.deltaspike.core.util.proxy.DeltaSpikeProxyContextualLifecycle
+Remove Class Annotation	@Typed in class org.apache.deltaspike.partialbean.impl.proxy.PartialBeanProxyFactory
+Split Method	private collectMethods(clazz Class<?>, redirectMethods ArrayList<Method>, interceptionMethods ArrayList<Method>) : void to [protected collectAllMethods(clazz Class<?>) : ArrayList<Method>, protected filterInterceptMethods(targetClass Class<?>, allMethods ArrayList<Method>) : ArrayList<Method>] in class org.apache.deltaspike.core.util.proxy.DeltaSpikeProxyFactory
+Change Variable Type	methods : List<Method> to methods : ArrayList<Method> in method protected collectAllMethods(clazz Class<?>) : ArrayList<Method> from class org.apache.deltaspike.core.util.proxy.DeltaSpikeProxyFactory
+Change Variable Type	methods : List<Method> to methods : ArrayList<Method> in method protected filterInterceptMethods(targetClass Class<?>, allMethods ArrayList<Method>) : ArrayList<Method> from class org.apache.deltaspike.core.util.proxy.DeltaSpikeProxyFactory
+Remove Method Modifier	static in method public getProxyClass(targetClass Class<T>, invocationHandlerClass Class<? extends InvocationHandler>) : Class<T> from class org.apache.deltaspike.partialbean.impl.proxy.PartialBeanProxyFactory
+Rename Variable	interceptionMethods : ArrayList<Method> to interceptMethods : ArrayList<Method> in method private createProxyClass(classLoader ClassLoader, targetClass Class<T>, invocationHandlerClass Class<? extends InvocationHandler>) : Class<T> from class org.apache.deltaspike.core.util.proxy.DeltaSpikeProxyFactory
+Remove Method Modifier	static in method private createProxyClass(classLoader ClassLoader, targetClass Class<T>, invocationHandlerClass Class<? extends InvocationHandler>) : Class<T> from class org.apache.deltaspike.partialbean.impl.proxy.PartialBeanProxyFactory
+Change Method Access Modifier	private to protected in method protected containsInterceptorBinding(annotations Annotation[]) : boolean from class org.apache.deltaspike.core.util.proxy.DeltaSpikeProxyFactory
+Remove Method Modifier	static in method private containsInterceptorBinding(annotations Annotation[]) : boolean from class org.apache.deltaspike.partialbean.impl.proxy.PartialBeanProxyFactory
+Change Method Access Modifier	private to protected in method protected constructProxyClassName(clazz Class<?>) : String from class org.apache.deltaspike.core.util.proxy.DeltaSpikeProxyFactory
+Remove Method Modifier	static in method private constructProxyClassName(clazz Class<?>) : String from class org.apache.deltaspike.partialbean.impl.proxy.PartialBeanProxyFactory
+Change Method Access Modifier	private to protected in method protected constructSuperAccessorMethodName(method Method) : String from class org.apache.deltaspike.core.util.proxy.DeltaSpikeProxyFactory
+Remove Method Modifier	static in method public isProxyClass(clazz Class<?>) : boolean from class org.apache.deltaspike.partialbean.impl.proxy.PartialBeanProxyFactory
+Change Method Access Modifier	private to protected in method protected ignoreMethod(method Method, methods List<Method>) : boolean from class org.apache.deltaspike.core.util.proxy.DeltaSpikeProxyFactory
+Remove Method Modifier	static in method private ignoreMethod(method Method, methods List<Method>) : boolean from class org.apache.deltaspike.partialbean.impl.proxy.PartialBeanProxyFactory
+Change Method Access Modifier	private to protected in method protected hasSameSignature(a Method, b Method) : boolean from class org.apache.deltaspike.core.util.proxy.DeltaSpikeProxyFactory
+Remove Method Modifier	static in method private hasSameSignature(a Method, b Method) : boolean from class org.apache.deltaspike.partialbean.impl.proxy.PartialBeanProxyFactory
+Developers have reported that 11158 commits involve refactoring but only 1500 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1500 commits.
+
+No refactorings detected at e3c9caa2c2eb5f627e977d67f1ead1dbf2742985
+
+No refactorings detected at 8a84303c91df932d8b3f668b61eaec818a6e0336
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643531509da0016d6b7366
+Issue Title: : allow to inherit dynamically changed metadata
+Issue Description:  currently a ConfigPreProcessor can manipulate custom metadata.such a changed annotation-instance will be used instead of the found one.
+Refactorings at 0752f78aac43451cc043258340c0e7789ba83d1a
+Extract Variable	resultToAdd : Annotation in method private preProcessMetaData(mergedMetaData List<Annotation>, node ViewConfigNode) : List<Annotation> from class org.apache.deltaspike.jsf.impl.config.view.DefaultConfigNodeConverter
+Rename Method	protected addViewMetaData(currentClass Class) : List<Annotation> renamed to protected findViewMetaData(currentClass Class, viewConfigNode ViewConfigNode) : List<Annotation> in class org.apache.deltaspike.jsf.impl.config.view.DefaultViewConfigInheritanceStrategy
+Add Parameter	viewConfigNode : ViewConfigNode in method protected findViewMetaData(currentClass Class, viewConfigNode ViewConfigNode) : List<Annotation> from class org.apache.deltaspike.jsf.impl.config.view.DefaultViewConfigInheritanceStrategy
+Developers have reported that 11158 commits involve refactoring but only 1501 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1501 commits.
+
+No refactorings detected at 888e2fe18eddd382a95317ee7b33cd0804c0f86a
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b64354a509da0016d6b73b5
+Issue Title: : Create a new module for proxy
+Issue Description:  We are now using asm to create our own proxies - with 1.3.0 that was added to the partial bean module - now We replace the optional proxies created in the JSF module for converters/validators with the same approach -> the proxy code was moved to ds-core. that works but isn't nice and not that flexible -> the goal is an own module "side by side" with core and all modules which need proxy stuff have core and that new proxy module as dep. (currently the partial-bean and JSF module).It allows to support different versions of asm once it's needed... (e.g. for diff. versions of java if the latest version drops e.g. backward compat. to and old version...) It's already discussed and agreed on the dev list so you can just create a ticket and just move the code + update the release poms so that the new module is part of the release as well...
+Refactorings at d7210631b0e6f42dd33883155f0f467d6b15171a
+Move Class	org.apache.deltaspike.core.util.proxy.invocation.DelegateManualInvocationHandler moved to org.apache.deltaspike.proxy.invocation.DelegateManualInvocationHandler
+Move Class	org.apache.deltaspike.core.util.proxy.invocation.InterceptManualInvocationHandler moved to org.apache.deltaspike.proxy.invocation.InterceptManualInvocationHandler
+Move Class	org.apache.deltaspike.core.util.invocation.AbstractManualInvocationHandler moved to org.apache.deltaspike.proxy.invocation.AbstractManualInvocationHandler
+Move Class	org.apache.deltaspike.core.util.invocation.ManualInvocationContext moved to org.apache.deltaspike.proxy.invocation.ManualInvocationContext
+Move Class	org.apache.deltaspike.core.util.invocation.ManualInvocationThrowableWrapperException moved to org.apache.deltaspike.proxy.invocation.ManualInvocationThrowableWrapperException
+Move Package	org.apache.deltaspike.core.util.proxy to org.apache.deltaspike.proxy.util
+Move Class	org.apache.deltaspike.core.util.proxy.AsmProxyClassGenerator moved to org.apache.deltaspike.proxy.util.AsmProxyClassGenerator
+Move Class	org.apache.deltaspike.core.util.proxy.DeltaSpikeProxy moved to org.apache.deltaspike.proxy.util.DeltaSpikeProxy
+Move Class	org.apache.deltaspike.core.util.proxy.DeltaSpikeProxyContextualLifecycle moved to org.apache.deltaspike.proxy.util.DeltaSpikeProxyContextualLifecycle
+Move Class	org.apache.deltaspike.core.util.proxy.DeltaSpikeProxyFactory moved to org.apache.deltaspike.proxy.util.DeltaSpikeProxyFactory
+Developers have reported that 11158 commits involve refactoring but only 1502 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1502 commits.
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643550509da0016d6b7405
+Issue Title: : Remove erroneous WarpTest annotation and Warp dependency from JSF impl tests
+Issue Description:  Many tests in the JSF impl module are annotated {{@WarpTest}} and the {{modules/jsf/impl/pom.xml}} contains {{arquillian-warp-api}} dependency.
+Refactorings at 320ae6e1ffb856276c4864d540d003d65d530976
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.config.view.controller.uc001.ViewConfigTestDrone
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.config.view.controller.uc002.ViewConfigTestDrone
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.config.view.controller.uc003.ViewConfigTestDrone
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.config.view.navigation.destination.uc001.ViewConfigTestDrone
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.config.view.navigation.destination.uc002.ViewConfigTestDrone
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.config.view.navigation.destination.uc003.ViewConfigTestDrone
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.config.view.navigation.destination.uc004.ViewConfigTestDrone
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.config.view.navigation.destination.uc006.ViewConfigTestDrone
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.config.view.navigation.event.uc001.PreViewConfigNavigateEventTest
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.config.view.navigation.parameter.uc003.NavigationParameterTest
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.config.view.navigation.parameter.uc004.NavigationParameterTest
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.config.view.navigation.parameter.uc005.NavigationParameterTest
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.config.view.navigation.parameter.uc006.NavigationParameterTest
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.injection.uc001.InjectionDroneTest
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.injection.uc002.InjectionDroneTest
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.injection.uc003.InjectionDroneTest
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.injection.uc004.InjectionDroneTest
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.message.JsfMessageTest
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.scope.mapped.MappedJsfContextTest
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.scope.view.ViewScopedContextTest
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.scope.viewaccess.ViewAccessScopedWebAppTest
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.scope.viewaccess.ViewAccessScopedWithFViewActionWebAppTest
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.scope.window.WindowMaxCountTest
+Remove Class Annotation	@WarpTest in class org.apache.deltaspike.test.jsf.impl.scope.window.WindowScopedContextTest
+Developers have reported that 11158 commits involve refactoring but only 1503 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1503 commits.
+
+No refactorings detected at 45639a700bda7a514ae6d48ff9168911f773a9dd
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643572509da0016d6b756d
+Issue Title: : Add #tableName() to AbstractEntityRepository
+Issue Description:  As table names can easiely be changed via @Table, it would be an typesafe usage to get the native table name for native queries
+Refactorings at 66dfd4f3647bc09b05fae1dc2e84b6b3347086d5
+Add Parameter	tableName : String in method package EntityDescriptor(name String, packageName String, className String, idClass String, id String, tableName String) from class org.apache.deltaspike.data.impl.meta.unit.EntityDescriptor
+Change Method Access Modifier	package to protected in method protected abstract tagName() : String from class org.apache.deltaspike.data.impl.meta.unit.EntityDescriptorReader.EntityBuilder
+Change Method Access Modifier	package to protected in method protected tagName() : String from class org.apache.deltaspike.data.impl.meta.unit.EntityDescriptorReader.readFromDocument.entities.build.new EntityBuilder<EntityDescriptor>
+Add Parameter	tableName : String in method protected instance(name String, packageName String, className String, idClass String, id String, tableName String) : EntityDescriptor from class org.apache.deltaspike.data.impl.meta.unit.EntityDescriptorReader.readFromDocument.entities.build.new EntityBuilder<EntityDescriptor>
+Change Method Access Modifier	package to protected in method protected instance(name String, packageName String, className String, idClass String, id String, tableName String) : EntityDescriptor from class org.apache.deltaspike.data.impl.meta.unit.EntityDescriptorReader.readFromDocument.entities.build.new EntityBuilder<EntityDescriptor>
+Change Method Access Modifier	package to protected in method protected instance(name String, packageName String, className String, idClass String, id String) : MappedSuperclassDescriptor from class org.apache.deltaspike.data.impl.meta.unit.EntityDescriptorReader.readFromDocument.superClasses.build.new MappedSuperClassBuilder<MappedSuperclassDescriptor>
+Change Method Access Modifier	package to protected in method protected tagName() : String from class org.apache.deltaspike.data.impl.meta.unit.EntityDescriptorReader.readFromDocument.superClasses.build.new MappedSuperClassBuilder<MappedSuperclassDescriptor>
+Extract Superclass	org.apache.deltaspike.data.impl.meta.unit.EntityDescriptorReader.PersistenceBuilder from classes [org.apache.deltaspike.data.impl.meta.unit.EntityDescriptorReader.EntityBuilder]
+Pull Up Method	public build(doc Document) : List<T> from class org.apache.deltaspike.data.impl.meta.unit.EntityDescriptorReader.EntityBuilder to public build(doc Document) : List<T> from class org.apache.deltaspike.data.impl.meta.unit.EntityDescriptorReader.PersistenceBuilder
+Change Method Access Modifier	package to protected in method protected abstract instance(name String, packageName String, className String, idClass String, id String) : T from class org.apache.deltaspike.data.impl.meta.unit.EntityDescriptorReader.MappedSuperClassBuilder
+Move Method	package abstract instance(name String, packageName String, className String, idClass String, id String) : T from class org.apache.deltaspike.data.impl.meta.unit.EntityDescriptorReader.EntityBuilder to protected abstract instance(name String, packageName String, className String, idClass String, id String) : T from class org.apache.deltaspike.data.impl.meta.unit.EntityDescriptorReader.MappedSuperClassBuilder
+Developers have reported that 11158 commits involve refactoring but only 1504 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1504 commits.
+
+No refactorings detected at 1238dbaee3fb8c52d99661ada6f4df200d065507
+
+No refactorings detected at 7a300c370085b0409d639c36e7647dbe0693e47b
+
+No refactorings detected at 8f36723cb95e2000e40f3d3db207709403e015e7
+
+No refactorings detected at 7823bf88a2f5e70bd10bb7d5e7e036d869b642e8
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643590509da0016d6b7690
+Issue Title: : Refactor ClientWindow server side
+Issue Description:  Split DefaultClientWindow to own implementations with a abstract basiscurrently DefaultClientWindow contains the logic for every mode and feels very unstructured
+Refactorings at 1f15e89e4c9dc59f7b292a29be7a0e3279ea1e3f
+Rename Method	protected getPostBackWindowId(facesContext FacesContext) : String renamed to protected getWindowIdPostParameter(facesContext FacesContext) : String in class org.apache.deltaspike.jsf.impl.scope.window.strategy.AbstractClientWindowStrategy
+Split Conditional	if(windowId != null && windowId.length() > this.maxWindowIdCount) to [if(windowId.length() > this.maxWindowIdCount), if(windowId != null)] in method public getWindowId(facesContext FacesContext) : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.AbstractClientWindowStrategy
+Rename Method	protected getRequestToken(externalContext ExternalContext) : String renamed to protected getRequestTokenParameter(externalContext ExternalContext) : String in class org.apache.deltaspike.jsf.impl.scope.window.strategy.ClientSideWindowStrategy
+Rename Parameter	windowId : String to requestToken : String in method public getRequestWindowIdCookie(context FacesContext, requestToken String) : Object from class org.apache.deltaspike.jsf.impl.util.ClientWindowHelper
+Add Parameter	requestToken : String in method public addRequestWindowIdCookie(context FacesContext, requestToken String, windowId String) : void from class org.apache.deltaspike.jsf.impl.util.ClientWindowHelper
+Extract And Move Method	protected getWindowIdParameter(facesContext FacesContext) : String extracted from protected getOrCreateWindowId(facesContext FacesContext) : String in class org.apache.deltaspike.jsf.impl.scope.window.strategy.LazyWindowStrategy & moved to class org.apache.deltaspike.jsf.impl.scope.window.strategy.AbstractClientWindowStrategy
+Move And Inline Method	public removeRequestWindowIdCookie(context FacesContext, cookie Cookie) : void moved from class org.apache.deltaspike.jsf.impl.util.ClientWindowHelper to class org.apache.deltaspike.jsf.impl.component.window.WindowIdHtmlRenderer & inlined to public encodeBegin(context FacesContext, component UIComponent) : void
+Developers have reported that 11158 commits involve refactoring but only 1505 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1505 commits.
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643590509da0016d6b7690
+Issue Title: : Refactor ClientWindow server side
+Issue Description:  Split DefaultClientWindow to own implementations with a abstract basiscurrently DefaultClientWindow contains the logic for every mode and feels very unstructured
+Refactorings at ff4c502f23ae36143923e00cea7c6e57da8a97f5
+Extract Method	protected getClientWindow(facesContext FacesContext) : ClientWindow extracted from public disableClientWindowRenderMode(facesContext FacesContext) : void in class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow
+Extract Method	protected getClientWindow(facesContext FacesContext) : ClientWindow extracted from public enableClientWindowRenderMode(facesContext FacesContext) : void in class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow
+Extract Method	protected getClientWindow(facesContext FacesContext) : ClientWindow extracted from public isClientWindowRenderModeEnabled(facesContext FacesContext) : boolean in class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow
+Extract Method	protected getClientWindow(facesContext FacesContext) : ClientWindow extracted from public getQueryURLParameters(facesContext FacesContext) : Map<String,String> in class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow
+Change Attribute Access Modifier	public to private in attribute private INITIAL_REDIRECT_WINDOW_ID : String from class org.apache.deltaspike.jsf.impl.util.ClientWindowHelper
+Extract Class	org.apache.deltaspike.jsf.impl.scope.window.strategy.ClientSideWindowStrategy from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow
+Change Attribute Access Modifier	private to public in attribute public DEFAULT_WINDOW_ID : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.AbstractClientWindowStrategy
+Change Attribute Access Modifier	private to protected in attribute protected jsfModuleConfig : JsfModuleConfig from class org.apache.deltaspike.jsf.impl.scope.window.strategy.AbstractClientWindowStrategy
+Change Attribute Access Modifier	private to protected in attribute protected windowContext : WindowContext from class org.apache.deltaspike.jsf.impl.scope.window.strategy.AbstractClientWindowStrategy
+Move Attribute	private PER_USE_CLIENT_WINDOW_URL_QUERY_PARAMETER_DISABLED_KEY : String from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow to private PER_USE_CLIENT_WINDOW_URL_QUERY_PARAMETER_DISABLED_KEY : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.AbstractClientWindowStrategy
+Move Attribute	private DEFAULT_WINDOW_ID : String from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow to public DEFAULT_WINDOW_ID : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.AbstractClientWindowStrategy
+Move Attribute	private CACHE_QUERY_URL_PARAMETERS : String from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow to private CACHE_QUERY_URL_PARAMETERS : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.AbstractClientWindowStrategy
+Move Attribute	private jsfModuleConfig : JsfModuleConfig from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow to protected jsfModuleConfig : JsfModuleConfig from class org.apache.deltaspike.jsf.impl.scope.window.strategy.AbstractClientWindowStrategy
+Move Attribute	private windowContext : WindowContext from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow to protected windowContext : WindowContext from class org.apache.deltaspike.jsf.impl.scope.window.strategy.AbstractClientWindowStrategy
+Move Attribute	private maxWindowIdCount : int from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow to private maxWindowIdCount : int from class org.apache.deltaspike.jsf.impl.scope.window.strategy.AbstractClientWindowStrategy
+Move Method	protected getOrCreateWindowId(facesContext FacesContext) : String from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow to protected getOrCreateWindowId(facesContext FacesContext) : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.ClientSideWindowStrategy
+Inline Variable	externalContext : ExternalContext in method protected getOrCreateWindowId(facesContext FacesContext) : String from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow
+Add Method Annotation	@Override in method protected getOrCreateWindowId(facesContext FacesContext) : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.ClientSideWindowStrategy
+Move Method	private isNoscriptRequest(externalContext ExternalContext) : boolean from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow to protected isNoscriptRequest(externalContext ExternalContext) : boolean from class org.apache.deltaspike.jsf.impl.scope.window.strategy.ClientSideWindowStrategy
+Change Method Access Modifier	private to protected in method protected isNoscriptRequest(externalContext ExternalContext) : boolean from class org.apache.deltaspike.jsf.impl.scope.window.strategy.ClientSideWindowStrategy
+Move Method	private sendWindowHandlerHtml(externalContext ExternalContext, windowId String) : void from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow to protected sendWindowHandlerHtml(externalContext ExternalContext, windowId String) : void from class org.apache.deltaspike.jsf.impl.scope.window.strategy.ClientSideWindowStrategy
+Change Method Access Modifier	private to protected in method protected sendWindowHandlerHtml(externalContext ExternalContext, windowId String) : void from class org.apache.deltaspike.jsf.impl.scope.window.strategy.ClientSideWindowStrategy
+Move Method	private getNoscriptUrl(externalContext ExternalContext) : String from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow to protected getNoscriptUrl(externalContext ExternalContext) : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.ClientSideWindowStrategy
+Change Method Access Modifier	private to protected in method protected getNoscriptUrl(externalContext ExternalContext) : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.ClientSideWindowStrategy
+Move Method	private getVerifiedWindowIdFromCookie(externalContext ExternalContext) : String from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow to protected getVerifiedWindowIdFromCookie(externalContext ExternalContext) : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.ClientSideWindowStrategy
+Change Method Access Modifier	private to protected in method protected getVerifiedWindowIdFromCookie(externalContext ExternalContext) : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.ClientSideWindowStrategy
+Move Method	private getRequestToken(externalContext ExternalContext) : String from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow to protected getRequestToken(externalContext ExternalContext) : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.ClientSideWindowStrategy
+Change Method Access Modifier	private to protected in method protected getRequestToken(externalContext ExternalContext) : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.ClientSideWindowStrategy
+Move Attribute	public AUTOMATED_ENTRY_POINT_PARAMETER_KEY : String from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow to private AUTOMATED_ENTRY_POINT_PARAMETER_KEY : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.ClientSideWindowStrategy
+Change Attribute Access Modifier	public to private in attribute private AUTOMATED_ENTRY_POINT_PARAMETER_KEY : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.ClientSideWindowStrategy
+Move Attribute	private UNINITIALIZED_WINDOW_ID_VALUE : String from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow to private UNINITIALIZED_WINDOW_ID_VALUE : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.ClientSideWindowStrategy
+Move Attribute	private WINDOW_ID_REPLACE_PATTERN : String from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow to private WINDOW_ID_REPLACE_PATTERN : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.ClientSideWindowStrategy
+Move Attribute	private NOSCRIPT_URL_REPLACE_PATTERN : String from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow to private NOSCRIPT_URL_REPLACE_PATTERN : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.ClientSideWindowStrategy
+Move Attribute	private NOSCRIPT_PARAMETER : String from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow to private NOSCRIPT_PARAMETER : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.ClientSideWindowStrategy
+Move Method	protected init() : void from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow to protected init() : void from class org.apache.deltaspike.jsf.impl.scope.window.strategy.AbstractClientWindowStrategy
+Change Method Access Modifier	private to protected in method protected generateNewWindowId() : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.AbstractClientWindowStrategy
+Move Method	private generateNewWindowId() : String from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow to protected generateNewWindowId() : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.AbstractClientWindowStrategy
+Rename Parameter	context : FacesContext to facesContext : FacesContext in method protected isPost(facesContext FacesContext) : boolean from class org.apache.deltaspike.jsf.impl.scope.window.strategy.AbstractClientWindowStrategy
+Change Method Access Modifier	private to protected in method protected isPost(facesContext FacesContext) : boolean from class org.apache.deltaspike.jsf.impl.scope.window.strategy.AbstractClientWindowStrategy
+Move Method	private isPost(context FacesContext) : boolean from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow to protected isPost(facesContext FacesContext) : boolean from class org.apache.deltaspike.jsf.impl.scope.window.strategy.AbstractClientWindowStrategy
+Change Method Access Modifier	private to protected in method protected getPostBackWindowId(facesContext FacesContext) : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.AbstractClientWindowStrategy
+Move Method	private getPostBackWindowId(facesContext FacesContext) : String from class org.apache.deltaspike.jsf.impl.scope.window.DefaultClientWindow to protected getPostBackWindowId(facesContext FacesContext) : String from class org.apache.deltaspike.jsf.impl.scope.window.strategy.AbstractClientWindowStrategy
+Developers have reported that 11158 commits involve refactoring but only 1506 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1506 commits.
+
+No refactorings detected at 508ab2d8d081e0d9a520bf458faefed50257f471
+
+No refactorings detected at 203a0dac4b99ec8aff0063383219297d609d0ba8
+
+No refactorings detected at bcaee613d3ee54487138178515b44f8cbbd01b0b
+
+No refactorings detected at a1eba4ad67a839f333c17f8538906089e1917d73
+
+No refactorings detected at 2991e38f817a593e540e63c798f91742ae33d057
+
+No refactorings detected at 61830c63d576a72965b984071611511d9bbcbaa3
+
+No refactorings detected at 1cadbf06678785c81b6e09d1c2b96c0679971be1
+
+No refactorings detected at 5895eb73b5fc295d88912aed30907f1f4eb9c5f0
+
+No refactorings detected at e2ba93ae871e69ea31c67b442065f531427e1043
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b6435cc509da0016d6b784f
+Issue Title: : Introduce @MBean.type() to customize type in JMX bean objectName
+Issue Description:  The {{type}} part in a JMX bean's {{objectName}} is the only thing that is not yet configurable. The attached patch changes that by introducing {{@MBean.type()}} similar to {{@MBean.category()}}.Linked Commit Github URL: https://github.com/apache/deltaspike/commit/44e5bbb6b2a60cb5a1b9876d8465a701155138ce
+Refactorings at b3570077ab5dc0c7568051bee825fa8ccdc1995f
+Extract Attribute	private DEFAULT_TYPE : String in class org.apache.deltaspike.core.impl.jmx.MBeanExtension
+Extract Attribute	private DEFAULT_CATEGORY : String in class org.apache.deltaspike.core.impl.jmx.MBeanExtension
+Add Variable Modifier	final in variable name : String in method private registerObject(bean ProcessManagedBean<?>, mBeanAnnotation MBean, bm BeanManager) : void from class org.apache.deltaspike.core.impl.jmx.MBeanExtension
+Developers have reported that 11158 commits involve refactoring but only 1507 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1507 commits.
+
+No refactorings detected at d9e7eac3bc35ce7446505f9673219b14f9166166
+
+No refactorings detected at c41f1c92449e4a6cd1c60769a69b6e4c73e4def5
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b64361b509da0016d6b7a3f
+Issue Title: : Fix type parameters of OrderBy query processor
+Issue Description:  Class {{OrderBy}} represents a list of ORDER BY clauses and is defined as
+Refactorings at 2acb0b76f38f88e824c6882901ecf04f9ebec0eb
+Change Attribute Type	orderByProcessor : OrderBy to orderByProcessor : OrderBy<C> in class org.apache.deltaspike.data.impl.criteria.QueryCriteria
+Change Variable Type	query : CriteriaQuery<?> to query : CriteriaQuery<R> in method public createQuery() : TypedQuery<R> from class org.apache.deltaspike.data.impl.criteria.QueryCriteria
+Change Return Type	CriteriaQuery<?> to CriteriaQuery<R> in method private createCriteriaQuery(builder CriteriaBuilder) : CriteriaQuery<R> from class org.apache.deltaspike.data.impl.criteria.QueryCriteria
+Add Method Annotation	@SuppressWarnings("unchecked") in method private createCriteriaQuery(builder CriteriaBuilder) : CriteriaQuery<R> from class org.apache.deltaspike.data.impl.criteria.QueryCriteria
+Change Parameter Type	att : SingularAttribute<? super C,?> to att : SingularAttribute<? super C,P> in method private addOrderBy(att SingularAttribute<? super C,P>, orderDirection OrderDirection) : void from class org.apache.deltaspike.data.impl.criteria.QueryCriteria
+Change Variable Type	that : OrderByDefinition to that : OrderByDefinition<V> in method public equals(o Object) : boolean from class org.apache.deltaspike.data.impl.criteria.processor.OrderBy.OrderByDefinition
+Change Attribute Type	orderByDefinitions : List<OrderByDefinition> to orderByDefinitions : List<OrderByDefinition<?>> in class org.apache.deltaspike.data.impl.criteria.processor.OrderBy
+Change Variable Type	iterator : Iterator<OrderByDefinition> to iterator : Iterator<OrderByDefinition<?>> in method public process(query CriteriaQuery<R>, builder CriteriaBuilder, path Path<P>) : void from class org.apache.deltaspike.data.impl.criteria.processor.OrderBy
+Change Variable Type	orderByDefinition : OrderByDefinition to orderByDefinition : OrderByDefinition<?> in method public process(query CriteriaQuery<R>, builder CriteriaBuilder, path Path<P>) : void from class org.apache.deltaspike.data.impl.criteria.processor.OrderBy
+Developers have reported that 11158 commits involve refactoring but only 1508 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1508 commits.
+
+No refactorings detected at 6894ea5e28877dc22aa0a758ada89d56a49facfa
+
+No refactorings detected at dc479926b1feb4733ce25ebfaa3cfbf62cee6347
+
+No refactorings detected at 949f02179a05688c99cb2f5b3521e76cc4c8e41a
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643654509da0016d6b7b9d
+Issue Title: : Move  persistence/orm.xml mapping + parsing from DATA impl to JPA api/spi
+Issue Description:  NoneLinked Commit Github URL: https://github.com/apache/deltaspike/commit/6c673128707ca3b5b6dd9c4d6d73fbc907440e3e
+Refactorings at 6480a0e5466567f487f36d73de697c6310f69149
+Move Package	org.apache.deltaspike.data.impl.meta.unit to org.apache.deltaspike.jpa.spi.descriptor.xml
+Move Package	org.apache.deltaspike.data.impl.meta.unit to org.apache.deltaspike.jpa.spi.descriptor.xml
+Move Class	org.apache.deltaspike.data.impl.meta.unit.Descriptor moved to org.apache.deltaspike.jpa.spi.descriptor.xml.Descriptor
+Move Class	org.apache.deltaspike.data.impl.meta.unit.DescriptorReader moved to org.apache.deltaspike.jpa.spi.descriptor.xml.DescriptorReader
+Move Class	org.apache.deltaspike.data.impl.meta.unit.EntityDescriptor moved to org.apache.deltaspike.jpa.spi.descriptor.xml.EntityDescriptor
+Move Class	org.apache.deltaspike.data.impl.meta.unit.MappedSuperclassDescriptor moved to org.apache.deltaspike.jpa.spi.descriptor.xml.MappedSuperclassDescriptor
+Move Package	org.apache.deltaspike.data.impl.util.cl to org.apache.deltaspike.core.util
+Move Class	org.apache.deltaspike.data.impl.util.cl.AggregatedClassLoader moved to org.apache.deltaspike.core.util.AggregatedClassLoader
+Move And Rename Class	org.apache.deltaspike.data.impl.meta.unit.PersistentClassDescriptor moved and renamed to org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Rename Method	private criteriaList(entityClass Class<?>) : List<PropertyCriteria> renamed to private primaryKeyPropertyCriteriaList(entityClass Class<?>) : List<PropertyCriteria> in class org.apache.deltaspike.data.impl.util.EntityUtils
+Change Variable Type	fromMappingFiles : String to fromMappingFiles : String[] in method private primaryKeyPropertyCriteriaList(entityClass Class<?>) : List<PropertyCriteria> from class org.apache.deltaspike.data.impl.util.EntityUtils
+Change Variable Type	idField1 : String to idField1 : String[] in method public should_recognize_ids() : void from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnitsTest
+Change Variable Type	idField2 : String to idField2 : String[] in method public should_recognize_ids() : void from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnitsTest
+Change Class Access Modifier	package to public in class org.apache.deltaspike.jpa.spi.descriptor.xml.Descriptor
+Change Method Access Modifier	package to protected in method protected readAllFromClassPath(resource String) : List<Descriptor> from class org.apache.deltaspike.jpa.spi.descriptor.xml.DescriptorReader
+Change Method Access Modifier	package to protected in method protected readFromClassPath(resource String) : Descriptor from class org.apache.deltaspike.jpa.spi.descriptor.xml.DescriptorReader
+Change Method Access Modifier	package to protected in method protected readFromUrl(url URL) : Descriptor from class org.apache.deltaspike.jpa.spi.descriptor.xml.DescriptorReader
+Change Method Access Modifier	package to protected in method protected read(baseUrl String, resource String) : Descriptor from class org.apache.deltaspike.jpa.spi.descriptor.xml.DescriptorReader
+Change Method Access Modifier	package to protected in method protected extractBaseUrl(fileUrl URL, resource String) : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.DescriptorReader
+Change Method Access Modifier	package to protected in method protected classLoader() : ClassLoader from class org.apache.deltaspike.jpa.spi.descriptor.xml.DescriptorReader
+Rename Attribute	log : Logger to LOG : Logger in class org.apache.deltaspike.jpa.spi.descriptor.xml.DescriptorReader
+Change Class Access Modifier	package to public in class org.apache.deltaspike.jpa.spi.descriptor.xml.EntityDescriptor
+Change Attribute Access Modifier	protected to private in attribute private tableName : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.EntityDescriptor
+Encapsulate Attribute	private tableName : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.EntityDescriptor
+Remove Attribute Modifier	final in attribute protected tableName : String from class org.apache.deltaspike.data.impl.meta.unit.EntityDescriptor
+Change Parameter Type	idClass : String to idClass : Class<? extends Serializable> in method public EntityDescriptor(id String[], version String, name String, entityClass Class<?>, idClass Class<? extends Serializable>, parent AbstractEntityDescriptor, tableName String) from class org.apache.deltaspike.jpa.spi.descriptor.xml.EntityDescriptor
+Change Parameter Type	id : String to id : String[] in method public EntityDescriptor(id String[], version String, name String, entityClass Class<?>, idClass Class<? extends Serializable>, parent AbstractEntityDescriptor, tableName String) from class org.apache.deltaspike.jpa.spi.descriptor.xml.EntityDescriptor
+Add Parameter	entityClass : Class<?> in method public EntityDescriptor(id String[], version String, name String, entityClass Class<?>, idClass Class<? extends Serializable>, parent AbstractEntityDescriptor, tableName String) from class org.apache.deltaspike.jpa.spi.descriptor.xml.EntityDescriptor
+Add Parameter	parent : AbstractEntityDescriptor in method public EntityDescriptor(id String[], version String, name String, entityClass Class<?>, idClass Class<? extends Serializable>, parent AbstractEntityDescriptor, tableName String) from class org.apache.deltaspike.jpa.spi.descriptor.xml.EntityDescriptor
+Remove Parameter	packageName : String in method package EntityDescriptor(name String, packageName String, className String, idClass String, id String, version String, tableName String) from class org.apache.deltaspike.data.impl.meta.unit.EntityDescriptor
+Remove Parameter	className : String in method package EntityDescriptor(name String, packageName String, className String, idClass String, id String, version String, tableName String) from class org.apache.deltaspike.data.impl.meta.unit.EntityDescriptor
+Reorder Parameter	[name : String, packageName : String, className : String, idClass : String, id : String, version : String, tableName : String] to [id : String[], version : String, name : String, entityClass : Class<?>, idClass : Class<? extends Serializable>, parent : AbstractEntityDescriptor, tableName : String] in method public EntityDescriptor(id String[], version String, name String, entityClass Class<?>, idClass Class<? extends Serializable>, parent AbstractEntityDescriptor, tableName String) from class org.apache.deltaspike.jpa.spi.descriptor.xml.EntityDescriptor
+Change Method Access Modifier	package to public in method public EntityDescriptor(id String[], version String, name String, entityClass Class<?>, idClass Class<? extends Serializable>, parent AbstractEntityDescriptor, tableName String) from class org.apache.deltaspike.jpa.spi.descriptor.xml.EntityDescriptor
+Change Class Access Modifier	package to public in class org.apache.deltaspike.jpa.spi.descriptor.xml.MappedSuperclassDescriptor
+Change Parameter Type	idClass : String to idClass : Class<? extends Serializable> in method public MappedSuperclassDescriptor(id String[], version String, name String, entityClass Class<?>, idClass Class<? extends Serializable>, parent AbstractEntityDescriptor) from class org.apache.deltaspike.jpa.spi.descriptor.xml.MappedSuperclassDescriptor
+Change Parameter Type	id : String to id : String[] in method public MappedSuperclassDescriptor(id String[], version String, name String, entityClass Class<?>, idClass Class<? extends Serializable>, parent AbstractEntityDescriptor) from class org.apache.deltaspike.jpa.spi.descriptor.xml.MappedSuperclassDescriptor
+Reorder Parameter	[name : String, packageName : String, className : String, idClass : String, id : String, version : String] to [id : String[], version : String, name : String, entityClass : Class<?>, idClass : Class<? extends Serializable>, parent : AbstractEntityDescriptor] in method public MappedSuperclassDescriptor(id String[], version String, name String, entityClass Class<?>, idClass Class<? extends Serializable>, parent AbstractEntityDescriptor) from class org.apache.deltaspike.jpa.spi.descriptor.xml.MappedSuperclassDescriptor
+Change Method Access Modifier	package to public in method public MappedSuperclassDescriptor(id String[], version String, name String, entityClass Class<?>, idClass Class<? extends Serializable>, parent AbstractEntityDescriptor) from class org.apache.deltaspike.jpa.spi.descriptor.xml.MappedSuperclassDescriptor
+Change Class Access Modifier	package to public in class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Change Attribute Access Modifier	protected to private in attribute private name : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Encapsulate Attribute	private name : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Remove Attribute Modifier	final in attribute protected name : String from class org.apache.deltaspike.data.impl.meta.unit.PersistentClassDescriptor
+Change Attribute Access Modifier	protected to private in attribute private entityClass : Class<?> from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Encapsulate Attribute	private entityClass : Class<?> from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Remove Attribute Modifier	final in attribute protected entityClass : Class<?> from class org.apache.deltaspike.data.impl.meta.unit.PersistentClassDescriptor
+Change Attribute Access Modifier	protected to private in attribute private idClass : Class<? extends Serializable> from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Encapsulate Attribute	private idClass : Class<? extends Serializable> from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Remove Attribute Modifier	final in attribute protected idClass : Class<? extends Serializable> from class org.apache.deltaspike.data.impl.meta.unit.PersistentClassDescriptor
+Change Attribute Type	id : String to id : String[] in class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Change Attribute Access Modifier	protected to private in attribute private id : String[] from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Encapsulate Attribute	private id : String[] from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Remove Attribute Modifier	final in attribute protected id : String from class org.apache.deltaspike.data.impl.meta.unit.PersistentClassDescriptor
+Change Attribute Access Modifier	protected to private in attribute private version : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Encapsulate Attribute	private version : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Remove Attribute Modifier	final in attribute protected version : String from class org.apache.deltaspike.data.impl.meta.unit.PersistentClassDescriptor
+Change Attribute Type	parent : PersistentClassDescriptor to parent : AbstractEntityDescriptor in class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Change Return Type	String to String[] in method public getId() : String[] from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Change Return Type	PersistentClassDescriptor to AbstractEntityDescriptor in method public getParent() : AbstractEntityDescriptor from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Change Parameter Type	parent : PersistentClassDescriptor to parent : AbstractEntityDescriptor in method public setParent(parent AbstractEntityDescriptor) : void from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Change Parameter Type	id : String to id : String[] in method public AbstractEntityDescriptor(id String[], version String, name String, entityClass Class<?>, idClass Class<? extends Serializable>, parent AbstractEntityDescriptor) from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Change Parameter Type	idClass : String to idClass : Class<? extends Serializable> in method public AbstractEntityDescriptor(id String[], version String, name String, entityClass Class<?>, idClass Class<? extends Serializable>, parent AbstractEntityDescriptor) from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Parameterize Variable	clazz : Class<?> to entityClass : Class<?> in method public AbstractEntityDescriptor(id String[], version String, name String, entityClass Class<?>, idClass Class<? extends Serializable>, parent AbstractEntityDescriptor) from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Add Parameter	parent : AbstractEntityDescriptor in method public AbstractEntityDescriptor(id String[], version String, name String, entityClass Class<?>, idClass Class<? extends Serializable>, parent AbstractEntityDescriptor) from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Remove Parameter	packageName : String in method package PersistentClassDescriptor(name String, packageName String, className String, idClass String, id String, version String) from class org.apache.deltaspike.data.impl.meta.unit.PersistentClassDescriptor
+Remove Parameter	className : String in method package PersistentClassDescriptor(name String, packageName String, className String, idClass String, id String, version String) from class org.apache.deltaspike.data.impl.meta.unit.PersistentClassDescriptor
+Reorder Parameter	[name : String, packageName : String, className : String, idClass : String, id : String, version : String] to [id : String[], version : String, name : String, entityClass : Class<?>, idClass : Class<? extends Serializable>, parent : AbstractEntityDescriptor] in method public AbstractEntityDescriptor(id String[], version String, name String, entityClass Class<?>, idClass Class<? extends Serializable>, parent AbstractEntityDescriptor) from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Change Method Access Modifier	package to public in method public AbstractEntityDescriptor(id String[], version String, name String, entityClass Class<?>, idClass Class<? extends Serializable>, parent AbstractEntityDescriptor) from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityDescriptor
+Extract Class	org.apache.deltaspike.jpa.spi.descriptor.xml.EntityMappingsDescriptorParser from class org.apache.deltaspike.data.impl.meta.unit.PersistentClassDescriptor
+Move Method	private buildClassName(clazzName String, packageName String) : String from class org.apache.deltaspike.data.impl.meta.unit.PersistentClassDescriptor to protected buildClassName(clazzName String, packageName String) : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.EntityMappingsDescriptorParser
+Change Method Access Modifier	private to protected in method protected buildClassName(clazzName String, packageName String) : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.EntityMappingsDescriptorParser
+Move Method	private isClassNameQualified(name String) : boolean from class org.apache.deltaspike.data.impl.meta.unit.PersistentClassDescriptor to protected isClassNameQualified(name String) : boolean from class org.apache.deltaspike.jpa.spi.descriptor.xml.EntityMappingsDescriptorParser
+Change Method Access Modifier	private to protected in method protected isClassNameQualified(name String) : boolean from class org.apache.deltaspike.jpa.spi.descriptor.xml.EntityMappingsDescriptorParser
+Add Parameter	entities : List<EntityDescriptor> in method public buildHierarchy(entities List<EntityDescriptor>, superClasses List<MappedSuperclassDescriptor>) : void from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityHierarchyBuilder
+Add Parameter	superClasses : List<MappedSuperclassDescriptor> in method public buildHierarchy(entities List<EntityDescriptor>, superClasses List<MappedSuperclassDescriptor>) : void from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityHierarchyBuilder
+Add Method Modifier	static in method public buildHierarchy(entities List<EntityDescriptor>, superClasses List<MappedSuperclassDescriptor>) : void from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityHierarchyBuilder
+Move Method	public buildHierarchy() : void from class org.apache.deltaspike.data.impl.meta.unit.DescriptorHierarchyBuilder to public buildHierarchy(entities List<EntityDescriptor>, superClasses List<MappedSuperclassDescriptor>) : void from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityHierarchyBuilder
+Change Variable Type	superDescriptor : PersistentClassDescriptor to superDescriptor : AbstractEntityDescriptor in method protected buildHierarchy(descriptor AbstractEntityDescriptor, entities List<EntityDescriptor>, superClasses List<MappedSuperclassDescriptor>) : void from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityHierarchyBuilder
+Change Parameter Type	descriptor : PersistentClassDescriptor to descriptor : AbstractEntityDescriptor in method protected buildHierarchy(descriptor AbstractEntityDescriptor, entities List<EntityDescriptor>, superClasses List<MappedSuperclassDescriptor>) : void from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityHierarchyBuilder
+Add Parameter	entities : List<EntityDescriptor> in method protected buildHierarchy(descriptor AbstractEntityDescriptor, entities List<EntityDescriptor>, superClasses List<MappedSuperclassDescriptor>) : void from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityHierarchyBuilder
+Add Parameter	superClasses : List<MappedSuperclassDescriptor> in method protected buildHierarchy(descriptor AbstractEntityDescriptor, entities List<EntityDescriptor>, superClasses List<MappedSuperclassDescriptor>) : void from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityHierarchyBuilder
+Change Method Access Modifier	private to protected in method protected buildHierarchy(descriptor AbstractEntityDescriptor, entities List<EntityDescriptor>, superClasses List<MappedSuperclassDescriptor>) : void from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityHierarchyBuilder
+Add Method Modifier	static in method protected buildHierarchy(descriptor AbstractEntityDescriptor, entities List<EntityDescriptor>, superClasses List<MappedSuperclassDescriptor>) : void from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityHierarchyBuilder
+Move Method	private buildHierarchy(descriptor PersistentClassDescriptor) : void from class org.apache.deltaspike.data.impl.meta.unit.DescriptorHierarchyBuilder to protected buildHierarchy(descriptor AbstractEntityDescriptor, entities List<EntityDescriptor>, superClasses List<MappedSuperclassDescriptor>) : void from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityHierarchyBuilder
+Change Return Type	PersistentClassDescriptor to AbstractEntityDescriptor in method protected findPersistentClassDescriptor(superClass Class<?>, entities List<EntityDescriptor>, superClasses List<MappedSuperclassDescriptor>) : AbstractEntityDescriptor from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityHierarchyBuilder
+Add Parameter	entities : List<EntityDescriptor> in method protected findPersistentClassDescriptor(superClass Class<?>, entities List<EntityDescriptor>, superClasses List<MappedSuperclassDescriptor>) : AbstractEntityDescriptor from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityHierarchyBuilder
+Add Parameter	superClasses : List<MappedSuperclassDescriptor> in method protected findPersistentClassDescriptor(superClass Class<?>, entities List<EntityDescriptor>, superClasses List<MappedSuperclassDescriptor>) : AbstractEntityDescriptor from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityHierarchyBuilder
+Change Method Access Modifier	private to protected in method protected findPersistentClassDescriptor(superClass Class<?>, entities List<EntityDescriptor>, superClasses List<MappedSuperclassDescriptor>) : AbstractEntityDescriptor from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityHierarchyBuilder
+Add Method Modifier	static in method protected findPersistentClassDescriptor(superClass Class<?>, entities List<EntityDescriptor>, superClasses List<MappedSuperclassDescriptor>) : AbstractEntityDescriptor from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityHierarchyBuilder
+Move Method	private findPersistentClassDescriptor(superClass Class<?>) : PersistentClassDescriptor from class org.apache.deltaspike.data.impl.meta.unit.DescriptorHierarchyBuilder to protected findPersistentClassDescriptor(superClass Class<?>, entities List<EntityDescriptor>, superClasses List<MappedSuperclassDescriptor>) : AbstractEntityDescriptor from class org.apache.deltaspike.jpa.spi.descriptor.xml.AbstractEntityHierarchyBuilder
+Extract Variable	document : Document in method public readAll(baseUrl String, resource String) : EntityMappingsDescriptor from class org.apache.deltaspike.jpa.spi.descriptor.xml.EntityMappingsDescriptorParser
+Change Return Type	MappingFile to EntityMappingsDescriptor in method public readAll(baseUrl String, resource String) : EntityMappingsDescriptor from class org.apache.deltaspike.jpa.spi.descriptor.xml.EntityMappingsDescriptorParser
+Move Method	public readAll(baseUrl String, resource String) : MappingFile from class org.apache.deltaspike.data.impl.meta.unit.EntityDescriptorReader to public readAll(baseUrl String, resource String) : EntityMappingsDescriptor from class org.apache.deltaspike.jpa.spi.descriptor.xml.EntityMappingsDescriptorParser
+Change Method Access Modifier	private to protected in method protected extractNodeAttribute(element Element, childName String, attribute String) : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.EntityMappingsDescriptorParser
+Move Method	private extractNodeAttribute(element Element, childName String, attribute String) : String from class org.apache.deltaspike.data.impl.meta.unit.EntityDescriptorReader to protected extractNodeAttribute(element Element, childName String, attribute String) : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.EntityMappingsDescriptorParser
+Change Method Access Modifier	private to protected in method protected extractAttribute(item Node, name String) : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.EntityMappingsDescriptorParser
+Move Method	private extractAttribute(item Node, name String) : String from class org.apache.deltaspike.data.impl.meta.unit.EntityDescriptorReader to protected extractAttribute(item Node, name String) : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.EntityMappingsDescriptorParser
+Change Method Access Modifier	private to protected in method protected extractNodeContent(element Element, name String) : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.EntityMappingsDescriptorParser
+Move Method	private extractNodeContent(element Element, name String) : String from class org.apache.deltaspike.data.impl.meta.unit.EntityDescriptorReader to protected extractNodeContent(element Element, name String) : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.EntityMappingsDescriptorParser
+Rename Parameter	unitName : String to name : String in method public PersistenceUnitDescriptor(name String, entityDescriptors List<EntityDescriptor>, properties Map<String,String>) from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptor
+Rename Parameter	entities : List<EntityDescriptor> to entityDescriptors : List<EntityDescriptor> in method public PersistenceUnitDescriptor(name String, entityDescriptors List<EntityDescriptor>, properties Map<String,String>) from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptor
+Change Method Access Modifier	package to public in method public PersistenceUnitDescriptor(name String, entityDescriptors List<EntityDescriptor>, properties Map<String,String>) from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptor
+Move And Rename Method	package PersistenceUnit(unitName String, entities List<EntityDescriptor>, properties Map<String,String>) from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnit to public PersistenceUnitDescriptor(name String, entityDescriptors List<EntityDescriptor>, properties Map<String,String>) from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptor
+Add Parameter	descriptor : PersistenceUnitDescriptor in method protected find(entityClass Class<?>, descriptor PersistenceUnitDescriptor) : EntityDescriptor from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorProvider
+Change Method Access Modifier	public to protected in method protected find(entityClass Class<?>, descriptor PersistenceUnitDescriptor) : EntityDescriptor from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorProvider
+Move Method	public find(entityClass Class<?>) : EntityDescriptor from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnit to protected find(entityClass Class<?>, descriptor PersistenceUnitDescriptor) : EntityDescriptor from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorProvider
+Move Method	public getProperties() : Map<String,String> from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnit to public getProperties() : Map<String,String> from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptor
+Move Method	public toString() : String from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnit to public toString() : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptor
+Change Variable Type	result : List<PersistenceUnit> to result : List<PersistenceUnitDescriptor> in method protected lookupUnits(descriptor Descriptor) : List<PersistenceUnitDescriptor> from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorParser
+Change Return Type	List<PersistenceUnit> to List<PersistenceUnitDescriptor> in method protected lookupUnits(descriptor Descriptor) : List<PersistenceUnitDescriptor> from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorParser
+Change Method Access Modifier	private to protected in method protected lookupUnits(descriptor Descriptor) : List<PersistenceUnitDescriptor> from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorParser
+Move Method	private lookupUnits(descriptor Descriptor) : List<PersistenceUnit> from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnitReader to protected lookupUnits(descriptor Descriptor) : List<PersistenceUnitDescriptor> from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorParser
+Change Variable Type	mappings : MappingFile to mappings : EntityMappingsDescriptor in method protected extractMappings(element Element, baseUrl String, unitName String) : List<EntityDescriptor> from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorParser
+Change Method Access Modifier	private to protected in method protected extractMappings(element Element, baseUrl String, unitName String) : List<EntityDescriptor> from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorParser
+Move Method	private extractMappings(element Element, baseUrl String, unitName String) : List<EntityDescriptor> from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnitReader to protected extractMappings(element Element, baseUrl String, unitName String) : List<EntityDescriptor> from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorParser
+Change Variable Type	mappings : MappingFile to mappings : EntityMappingsDescriptor in method protected readMappingFiles(baseUrl String, unitName String, entities List<EntityDescriptor>, superClasses List<MappedSuperclassDescriptor>, list NodeList) : void from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorParser
+Remove Parameter	reader : EntityDescriptorReader in method private readMappingFiles(baseUrl String, unitName String, reader EntityDescriptorReader, entities List<EntityDescriptor>, superClasses List<MappedSuperclassDescriptor>, list NodeList) : void from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnitReader
+Change Method Access Modifier	private to protected in method protected readMappingFiles(baseUrl String, unitName String, entities List<EntityDescriptor>, superClasses List<MappedSuperclassDescriptor>, list NodeList) : void from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorParser
+Move Method	private readMappingFiles(baseUrl String, unitName String, reader EntityDescriptorReader, entities List<EntityDescriptor>, superClasses List<MappedSuperclassDescriptor>, list NodeList) : void from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnitReader to protected readMappingFiles(baseUrl String, unitName String, entities List<EntityDescriptor>, superClasses List<MappedSuperclassDescriptor>, list NodeList) : void from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorParser
+Change Method Access Modifier	private to protected in method protected extractUnitName(node Node) : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorParser
+Move Method	private extractUnitName(node Node) : String from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnitReader to protected extractUnitName(node Node) : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorParser
+Change Method Access Modifier	private to protected in method protected extractProperties(element Element) : Map<String,String> from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorParser
+Move Method	private extractProperties(element Element) : Map<String,String> from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnitReader to protected extractProperties(element Element) : Map<String,String> from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorParser
+Change Variable Type	unit : PersistenceUnit to unit : PersistenceUnitDescriptor in method public get(name String) : PersistenceUnitDescriptor from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorProvider
+Change Return Type	PersistenceUnit to PersistenceUnitDescriptor in method public get(name String) : PersistenceUnitDescriptor from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorProvider
+Move Method	public get(name String) : PersistenceUnit from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnits to public get(name String) : PersistenceUnitDescriptor from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorProvider
+Move Method	public isEntity(entityClass Class<?>) : boolean from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnits to public isEntity(entityClass Class<?>) : boolean from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorProvider
+Move And Rename Method	public primaryKeyField(entityClass Class<?>) : String from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnits to public entityName(entityClass Class<?>) : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorProvider
+Move And Rename Method	public versionField(entityClass Class<?>) : String from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnits to public entityTableName(entityClass Class<?>) : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorProvider
+Change Return Type	Class<?> to String in method public entityTableName(entityClass Class<?>) : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorProvider
+Move And Rename Method	public primaryKeyIdClass(entityClass Class<?>) : Class<?> from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnits to public entityTableName(entityClass Class<?>) : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorProvider
+Move And Rename Method	public entityName(entityClass Class<?>) : String from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnits to public entityTableName(entityClass Class<?>) : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorProvider
+Change Variable Type	unit : PersistenceUnit to unit : PersistenceUnitDescriptor in method public find(entityClass Class<?>) : EntityDescriptor from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorProvider
+Change Method Access Modifier	private to public in method public find(entityClass Class<?>) : EntityDescriptor from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorProvider
+Move Method	private find(entityClass Class<?>) : EntityDescriptor from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnits to public find(entityClass Class<?>) : EntityDescriptor from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorProvider
+Move Method	public entityTableName(entityClass Class<?>) : String from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnits to public entityTableName(entityClass Class<?>) : String from class org.apache.deltaspike.jpa.spi.descriptor.xml.PersistenceUnitDescriptorProvider
+Developers have reported that 11158 commits involve refactoring but only 1509 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1509 commits.
+
+No refactorings detected at a77f4551ac0dca5b02588a9f6b123cc84944845c
+
+No refactorings detected at 68939f30a2d55921d823b9232bb8cd914cfadb00
+
+No refactorings detected at f21e0266d240305f6b9327e2f7111298c95a7335
+
+No refactorings detected at 531f0450defa2e1abbcf1d9db33eb8e403ce2ab6
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643a21509da0016d6b7da1
+Issue Title: : Add support for firstXX in query method expressions
+Issue Description:  Add support for being able to find the first N results directly in a query method format, something like
+Refactorings at f632269f12404626b0ae24b0fbf1c643b3aae8d9
+Remove Class Modifier	static in class org.apache.deltaspike.data.impl.meta.MethodPrefix.KnownQueryPrefix
+Add Parameter	singleResultType : SingleResultType in method package KnownQueryPrefix(prefix String, singleResultType SingleResultType) from class org.apache.deltaspike.data.impl.meta.MethodPrefix.KnownQueryPrefix
+Change Method Access Modifier	private to package in method package KnownQueryPrefix(prefix String, singleResultType SingleResultType) from class org.apache.deltaspike.data.impl.meta.MethodPrefix.KnownQueryPrefix
+Add Parameter	repositoryMethod : RepositoryMethod in method public create(method Method, parameters Object[], repositoryMethod RepositoryMethod) : Parameters from class org.apache.deltaspike.data.impl.param.Parameters
+Add Parameter	repositoryMethod : RepositoryMethod in method private extractSizeRestriction(method Method, repositoryMethod RepositoryMethod) : int from class org.apache.deltaspike.data.impl.param.Parameters
+Developers have reported that 11158 commits involve refactoring but only 1510 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1510 commits.
+
+No refactorings detected at 1054cd83c64e016245304b9965f3495fceb48f14
+
+No refactorings detected at 0b5c027c6c8696a078e795ca9747ae75a8128b43
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643a60509da0016d6b7f6e
+Issue Title: : add logout link to security example
+Issue Description:  add logout link to secured page, so people can logout to return the home page, then can try to relogin and then on.
+Refactorings at 80c9ae77da24932e967c10dfc6ca38bb7e5a5f18
+Remove Class Annotation	@Secured(LoggedInAccessDecisionVoter.class) in class org.apache.deltaspike.example.security.requestedpage.picketlink.Pages.Secure.Home
+Add Class Annotation	@Secured(LoggedInAccessDecisionVoter.class) in class org.apache.deltaspike.example.security.requestedpage.picketlink.Pages.Secure
+Developers have reported that 11158 commits involve refactoring but only 1511 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1511 commits.
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643a61509da0016d6b7f76
+Issue Title: : deltaspike configuration: Variable Replacement in Configured Values is NOT fully stage aware
+Issue Description:  using the following apache-deltaspike.properties{code}
+Refactorings at 7215f7b7fdea436017c8a331d5468dc8fc5c7145
+Split Method	public testProjectStageAwarePropertyValueReference() : void to [public testProjectStageAwarePropertyValueReference_1() : void, public testProjectStageAwarePropertyValueReference_2() : void] in class org.apache.deltaspike.test.api.config.ConfigResolverTest
+Rename Variable	expected : String to expectedFooUrl : String in method public testProjectStageAwarePropertyValueReference_1() : void from class org.apache.deltaspike.test.api.config.ConfigResolverTest
+Rename Variable	projectStageAwareExampleEntry1 : String to actualFooUrl : String in method public testProjectStageAwarePropertyValueReference_1() : void from class org.apache.deltaspike.test.api.config.ConfigResolverTest
+Developers have reported that 11158 commits involve refactoring but only 1512 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1512 commits.
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643a61509da0016d6b7f77
+Issue Title: : deltaspike configuration: Variable Replacement in Configured Values is NOT (!) stage aware
+Issue Description:  using the following apache-deltaspike.properties{code}
+Refactorings at db8560c419cb8411dc77a634e52b3557a807be23
+Extract Method	private resolveVariables(value String, configResolverContext ConfigResolverContext) : String extracted from public getPropertyValue(key String, evaluateVariables boolean) : String in class org.apache.deltaspike.core.api.config.ConfigResolver
+Extract Method	private getPropertyValue(key String, configResolverContext ConfigResolverContext) : String extracted from public getPropertyValue(key String, evaluateVariables boolean) : String in class org.apache.deltaspike.core.api.config.ConfigResolver
+Developers have reported that 11158 commits involve refactoring but only 1513 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1513 commits.
+
+No refactorings detected at 6d4fbd8e6a50555ed70c06b4a10669e7e6f403d1
+
+No refactorings detected at 96c6ba2af7a16368c66a8326e0a474e9d1ded2c0
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643a96509da0016d6b8152
+Issue Title: : Refactor RepositoryComponent/s
+Issue Description:  Currently a RepositoryComponent is initialized during PAT. Therefore RepositoryComponent requires a lazyInit.If we move the actual creation of the RepositoryComponent's to AfterBeanDiscovery, we don't need such lazy init "hacks".
+Refactorings at 46a3b6759fabb55fd2b913b9f7b4635687d0c5d7
+Rename Class	org.apache.deltaspike.data.impl.meta.MethodPrefix renamed to org.apache.deltaspike.data.impl.meta.RepositoryMethodPrefix
+Rename Class	org.apache.deltaspike.data.impl.meta.RepositoryEntity renamed to org.apache.deltaspike.data.impl.meta.EntityMetadata
+Rename Class	org.apache.deltaspike.data.impl.meta.RepositoryMethod renamed to org.apache.deltaspike.data.impl.meta.RepositoryMethodMetadata
+Rename Method	public getComponents() : RepositoryComponents renamed to public getRepositoryClasses() : ArrayList<Class<?>> in class org.apache.deltaspike.data.impl.RepositoryExtension
+Rename Variable	repoClass : Class<X> to repositoryClass : Class<X> in method package processAnnotatedType(event ProcessAnnotatedType<X>) : void from class org.apache.deltaspike.data.impl.RepositoryExtension
+Change Variable Type	result : RepositoryComponents to result : ArrayList<Class<?>> in method public getRepositoryClasses() : ArrayList<Class<?>> from class org.apache.deltaspike.data.impl.RepositoryExtension
+Change Return Type	RepositoryComponents to ArrayList<Class<?>> in method public getRepositoryClasses() : ArrayList<Class<?>> from class org.apache.deltaspike.data.impl.RepositoryExtension
+Split Attribute	staticComponents : RepositoryComponents to [REPOSITORY_CLASSES : ArrayList<Class<?>>, repositoryClasses : ArrayList<Class<?>>] in class org.apache.deltaspike.data.impl.RepositoryExtension
+Rename Attribute	log : Logger to LOG : Logger in class org.apache.deltaspike.data.impl.RepositoryExtension
+Rename Attribute	components : RepositoryComponents to repositoryClasses : ArrayList<Class<?>> in class org.apache.deltaspike.data.impl.RepositoryExtension
+Change Attribute Type	components : RepositoryComponents to repositoryClasses : ArrayList<Class<?>> in class org.apache.deltaspike.data.impl.RepositoryExtension
+Add Attribute Modifier	final in attribute private repositoryClasses : ArrayList<Class<?>> from class org.apache.deltaspike.data.impl.RepositoryExtension
+Modify Class Annotation	@QueryInvocation(MethodType.ANNOTATED) to @QueryInvocation(RepositoryMethodType.ANNOTATED) in class org.apache.deltaspike.data.impl.builder.AnnotatedQueryBuilder
+Modify Class Annotation	@QueryInvocation(MethodType.DELEGATE) to @QueryInvocation(RepositoryMethodType.DELEGATE) in class org.apache.deltaspike.data.impl.builder.DelegateQueryBuilder
+Modify Class Annotation	@QueryInvocation(MethodType.PARSE) to @QueryInvocation(RepositoryMethodType.PARSE) in class org.apache.deltaspike.data.impl.builder.MethodQueryBuilder
+Change Attribute Type	LITERALS : Map<MethodType,QueryInvocationLiteral> to LITERALS : Map<RepositoryMethodType,QueryInvocationLiteral> in class org.apache.deltaspike.data.impl.builder.QueryBuilderFactory
+Change Parameter Type	method : RepositoryMethod to methodMetadata : RepositoryMethodMetadata in method public build(methodMetadata RepositoryMethodMetadata, context CdiQueryInvocationContext) : QueryBuilder from class org.apache.deltaspike.data.impl.builder.QueryBuilderFactory
+Rename Parameter	method : RepositoryMethod to methodMetadata : RepositoryMethodMetadata in method public build(methodMetadata RepositoryMethodMetadata, context CdiQueryInvocationContext) : QueryBuilder from class org.apache.deltaspike.data.impl.builder.QueryBuilderFactory
+Change Parameter Type	repo : RepositoryComponent to repo : RepositoryMetadata in method protected build(queryPart String, method String, repo RepositoryMetadata) : QueryPart from class org.apache.deltaspike.data.impl.builder.part.AndQueryPart
+Change Parameter Type	repo : RepositoryComponent to repo : RepositoryMetadata in method package validate(name String, method String, repo RepositoryMetadata) : void from class org.apache.deltaspike.data.impl.builder.part.BasePropertyQueryPart
+Change Parameter Type	repo : RepositoryComponent to repo : RepositoryMetadata in method protected build(queryPart String, method String, repo RepositoryMetadata) : QueryPart from class org.apache.deltaspike.data.impl.builder.part.OrQueryPart
+Change Parameter Type	repo : RepositoryComponent to repo : RepositoryMetadata in method protected build(queryPart String, method String, repo RepositoryMetadata) : QueryPart from class org.apache.deltaspike.data.impl.builder.part.OrderByQueryPart
+Change Parameter Type	repo : RepositoryComponent to repo : RepositoryMetadata in method protected build(queryPart String, method String, repo RepositoryMetadata) : QueryPart from class org.apache.deltaspike.data.impl.builder.part.PropertyQueryPart
+Change Attribute Type	methodPrefix : MethodPrefix to methodPrefix : RepositoryMethodPrefix in class org.apache.deltaspike.data.impl.builder.part.QueryRoot
+Change Parameter Type	methodPrefix : MethodPrefix to methodPrefix : RepositoryMethodPrefix in method protected QueryRoot(entityName String, methodPrefix RepositoryMethodPrefix) from class org.apache.deltaspike.data.impl.builder.part.QueryRoot
+Change Parameter Type	repo : RepositoryComponent to repo : RepositoryMetadata in method public create(method String, repo RepositoryMetadata, prefix RepositoryMethodPrefix) : QueryRoot from class org.apache.deltaspike.data.impl.builder.part.QueryRoot
+Change Parameter Type	prefix : MethodPrefix to prefix : RepositoryMethodPrefix in method public create(method String, repo RepositoryMetadata, prefix RepositoryMethodPrefix) : QueryRoot from class org.apache.deltaspike.data.impl.builder.part.QueryRoot
+Change Parameter Type	repo : RepositoryComponent to repo : RepositoryMetadata in method protected build(queryPart String, method String, repo RepositoryMetadata) : QueryPart from class org.apache.deltaspike.data.impl.builder.part.QueryRoot
+Change Attribute Type	methodPrefix : MethodPrefix to methodPrefix : RepositoryMethodPrefix in class org.apache.deltaspike.data.impl.builder.result.QueryProcessorFactory
+Change Parameter Type	methodPrefix : MethodPrefix to methodPrefix : RepositoryMethodPrefix in method private QueryProcessorFactory(method Method, methodPrefix RepositoryMethodPrefix) from class org.apache.deltaspike.data.impl.builder.result.QueryProcessorFactory
+Change Parameter Type	methodPrefix : MethodPrefix to methodPrefix : RepositoryMethodPrefix in method public newInstance(method Method, methodPrefix RepositoryMethodPrefix) : QueryProcessorFactory from class org.apache.deltaspike.data.impl.builder.result.QueryProcessorFactory
+Change Parameter Type	repoMethod : RepositoryMethod to repositoryMethodMetadata : RepositoryMethodMetadata in method public CdiQueryInvocationContext(proxy Object, method Method, args Object[], repositoryMetadata RepositoryMetadata, repositoryMethodMetadata RepositoryMethodMetadata, entityManager EntityManager) from class org.apache.deltaspike.data.impl.handler.CdiQueryInvocationContext
+Rename Parameter	repoMethod : RepositoryMethod to repositoryMethodMetadata : RepositoryMethodMetadata in method public CdiQueryInvocationContext(proxy Object, method Method, args Object[], repositoryMetadata RepositoryMetadata, repositoryMethodMetadata RepositoryMethodMetadata, entityManager EntityManager) from class org.apache.deltaspike.data.impl.handler.CdiQueryInvocationContext
+Split Parameter	repoMethod : RepositoryMethod to [repositoryMetadata : RepositoryMetadata, repositoryMethodMetadata : RepositoryMethodMetadata] in method public CdiQueryInvocationContext(proxy Object, method Method, args Object[], repositoryMetadata RepositoryMetadata, repositoryMethodMetadata RepositoryMethodMetadata, entityManager EntityManager) from class org.apache.deltaspike.data.impl.handler.CdiQueryInvocationContext
+Split Attribute	repoMethod : RepositoryMethod to [repositoryMetadata : RepositoryMetadata, repositoryMethodMetadata : RepositoryMethodMetadata] in class org.apache.deltaspike.data.impl.handler.CdiQueryInvocationContext
+Change Parameter Type	repository : RepositoryComponent to repositoryMetadata : RepositoryMetadata in method public lookupReference(repositoryMetadata RepositoryMetadata) : EntityManagerRef from class org.apache.deltaspike.data.impl.handler.EntityManagerRefLookup
+Rename Parameter	repository : RepositoryComponent to repositoryMetadata : RepositoryMetadata in method public lookupReference(repositoryMetadata RepositoryMetadata) : EntityManagerRef from class org.apache.deltaspike.data.impl.handler.EntityManagerRefLookup
+Change Variable Type	repo : RepositoryComponent to repositoryMetadata : RepositoryMetadata in method public process(proxy Object, method Method, args Object[]) : Object from class org.apache.deltaspike.data.impl.handler.QueryHandler
+Change Variable Type	repoMethod : RepositoryMethod to repositoryMethodMetadata : RepositoryMethodMetadata in method public process(proxy Object, method Method, args Object[]) : Object from class org.apache.deltaspike.data.impl.handler.QueryHandler
+Rename Variable	repo : RepositoryComponent to repositoryMetadata : RepositoryMetadata in method public process(proxy Object, method Method, args Object[]) : Object from class org.apache.deltaspike.data.impl.handler.QueryHandler
+Rename Variable	repoMethod : RepositoryMethod to repositoryMethodMetadata : RepositoryMethodMetadata in method public process(proxy Object, method Method, args Object[]) : Object from class org.apache.deltaspike.data.impl.handler.QueryHandler
+Add Parameter	repositoryMetadata : RepositoryMetadata in method private createContext(proxy Object, method Method, args Object[], entityManager EntityManager, repositoryMetadata RepositoryMetadata, repositoryMethodMetadata RepositoryMethodMetadata) : CdiQueryInvocationContext from class org.apache.deltaspike.data.impl.handler.QueryHandler
+Add Parameter	repositoryMethodMetadata : RepositoryMethodMetadata in method private createContext(proxy Object, method Method, args Object[], entityManager EntityManager, repositoryMetadata RepositoryMetadata, repositoryMethodMetadata RepositoryMethodMetadata) : CdiQueryInvocationContext from class org.apache.deltaspike.data.impl.handler.QueryHandler
+Remove Parameter	repoMethod : RepositoryMethod in method private createContext(proxy Object, method Method, args Object[], entityManager EntityManager, repoMethod RepositoryMethod) : CdiQueryInvocationContext from class org.apache.deltaspike.data.impl.handler.QueryHandler
+Rename Attribute	components : RepositoryComponents to metadataHandler : RepositoryMetadataHandler in class org.apache.deltaspike.data.impl.handler.QueryHandler
+Change Attribute Type	components : RepositoryComponents to metadataHandler : RepositoryMetadataHandler in class org.apache.deltaspike.data.impl.handler.QueryHandler
+Remove Attribute Annotation	@Initialized in attribute private components : RepositoryComponents from class org.apache.deltaspike.data.impl.handler.QueryHandler
+Change Attribute Type	methodType : MethodType to methodType : RepositoryMethodType in class org.apache.deltaspike.data.impl.meta.QueryInvocationLiteral
+Change Return Type	MethodType to RepositoryMethodType in method public value() : RepositoryMethodType from class org.apache.deltaspike.data.impl.meta.QueryInvocationLiteral
+Change Parameter Type	methodType : MethodType to methodType : RepositoryMethodType in method public QueryInvocationLiteral(methodType RepositoryMethodType) from class org.apache.deltaspike.data.impl.meta.QueryInvocationLiteral
+Change Parameter Type	repositoryMethod : RepositoryMethod to repositoryMethod : RepositoryMethodMetadata in method public create(method Method, parameters Object[], repositoryMethod RepositoryMethodMetadata) : Parameters from class org.apache.deltaspike.data.impl.param.Parameters
+Change Parameter Type	repositoryMethod : RepositoryMethod to repositoryMethod : RepositoryMethodMetadata in method private extractSizeRestriction(method Method, repositoryMethod RepositoryMethodMetadata) : int from class org.apache.deltaspike.data.impl.param.Parameters
+Inline Variable	method : Method in method private needsTransaction(context CdiQueryInvocationContext) : boolean from class org.apache.deltaspike.data.impl.tx.TransactionalQueryRunner
+Change Attribute Type	repo : RepositoryComponent to repo : RepositoryMetadata in class org.apache.deltaspike.data.impl.builder.part.QueryRootTest
+Change Attribute Type	repoFetchBy : RepositoryComponent to repoFetchBy : RepositoryMetadata in class org.apache.deltaspike.data.impl.builder.part.QueryRootTest
+Change Return Type	MethodPrefix to RepositoryMethodPrefix in method private prefix(name String) : RepositoryMethodPrefix from class org.apache.deltaspike.data.impl.builder.part.QueryRootTest
+Change Return Type	RepositoryComponent to RepositoryMetadata in method private dummyRepo() : RepositoryMetadata from class org.apache.deltaspike.data.impl.handler.CdiQueryContextHolderTest
+Change Variable Type	methodPrefix : MethodPrefix to methodPrefix : RepositoryMethodPrefix in method public shouldParseArbitraryMethodFindPrefix() : void from class org.apache.deltaspike.data.impl.meta.MethodPrefixTest
+Change Variable Type	methodPrefix : MethodPrefix to methodPrefix : RepositoryMethodPrefix in method public shouldParseFirst20MethodFindPrefix() : void from class org.apache.deltaspike.data.impl.meta.MethodPrefixTest
+Change Variable Type	methodPrefix : MethodPrefix to methodPrefix : RepositoryMethodPrefix in method public shouldParseDefinedMaxResults() : void from class org.apache.deltaspike.data.impl.meta.MethodPrefixTest
+Change Variable Type	methodPrefix : MethodPrefix to methodPrefix : RepositoryMethodPrefix in method public shouldNotParseNonMatchingMethodName() : void from class org.apache.deltaspike.data.impl.meta.MethodPrefixTest
+Change Variable Type	methodPrefix : MethodPrefix to methodPrefix : RepositoryMethodPrefix in method public shouldParseOrderByEmailDesc() : void from class org.apache.deltaspike.data.impl.meta.MethodPrefixTest
+Change Variable Type	methodPrefix : MethodPrefix to methodPrefix : RepositoryMethodPrefix in method public shouldParseOrderByEmail() : void from class org.apache.deltaspike.data.impl.meta.MethodPrefixTest
+Change Variable Type	methodPrefix : MethodPrefix to methodPrefix : RepositoryMethodPrefix in method public shouldParseFindAllOrderByName() : void from class org.apache.deltaspike.data.impl.meta.MethodPrefixTest
+Change Variable Type	entity1 : RepositoryEntity to entity1 : EntityMetadata in method public should_prepare_repo_entity() : void from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnitsTest
+Change Variable Type	entity2 : RepositoryEntity to entity2 : EntityMetadata in method public should_prepare_repo_entity() : void from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnitsTest
+Change Variable Type	entity3 : RepositoryEntity to entity3 : EntityMetadata in method public should_prepare_repo_entity() : void from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnitsTest
+Change Return Type	RepositoryEntity to EntityMetadata in method protected lookupMetadata(entityClass Class<?>) : EntityMetadata from class org.apache.deltaspike.data.impl.meta.unit.PersistenceUnitsTest
+Change Method Access Modifier	package to public in method public getDefinedMaxResults() : int from class org.apache.deltaspike.data.impl.meta.RepositoryMethodPrefix
+Rename Parameter	primaryClass : Class<? extends Serializable> to primaryKeyClass : Class<? extends Serializable> in method public EntityMetadata(entityClass Class<?>, primaryKeyClass Class<? extends Serializable>) from class org.apache.deltaspike.data.impl.meta.EntityMetadata
+Rename Method	public isOptional() : boolean renamed to public isOptionalAsReturnType() : boolean in class org.apache.deltaspike.data.impl.meta.RepositoryMethodMetadata
+Encapsulate Attribute	private method : Method from class org.apache.deltaspike.data.impl.meta.RepositoryMethodMetadata
+Remove Attribute Modifier	final in attribute private method : Method from class org.apache.deltaspike.data.impl.meta.RepositoryMethod
+Change Attribute Type	methodType : MethodType to methodType : RepositoryMethodType in class org.apache.deltaspike.data.impl.meta.RepositoryMethodMetadata
+Encapsulate Attribute	private methodType : RepositoryMethodType from class org.apache.deltaspike.data.impl.meta.RepositoryMethodMetadata
+Remove Attribute Modifier	final in attribute private methodType : MethodType from class org.apache.deltaspike.data.impl.meta.RepositoryMethod
+Change Attribute Type	methodPrefix : MethodPrefix to methodPrefix : RepositoryMethodPrefix in class org.apache.deltaspike.data.impl.meta.RepositoryMethodMetadata
+Encapsulate Attribute	private methodPrefix : RepositoryMethodPrefix from class org.apache.deltaspike.data.impl.meta.RepositoryMethodMetadata
+Remove Attribute Modifier	final in attribute private methodPrefix : MethodPrefix from class org.apache.deltaspike.data.impl.meta.RepositoryMethod
+Encapsulate Attribute	private queryRoot : QueryRoot from class org.apache.deltaspike.data.impl.meta.RepositoryMethodMetadata
+Remove Attribute Modifier	final in attribute private queryRoot : QueryRoot from class org.apache.deltaspike.data.impl.meta.RepositoryMethod
+Encapsulate Attribute	private queryProcessor : QueryProcessor from class org.apache.deltaspike.data.impl.meta.RepositoryMethodMetadata
+Remove Attribute Modifier	final in attribute private queryProcessor : QueryProcessor from class org.apache.deltaspike.data.impl.meta.RepositoryMethod
+Change Attribute Type	queryInOutMapperIsNormalScope : Boolean to queryInOutMapperIsNormalScope : boolean in class org.apache.deltaspike.data.impl.meta.RepositoryMethodMetadata
+Encapsulate Attribute	private queryInOutMapperIsNormalScope : boolean from class org.apache.deltaspike.data.impl.meta.RepositoryMethodMetadata
+Remove Attribute Modifier	volatile in attribute private queryInOutMapperIsNormalScope : Boolean from class org.apache.deltaspike.data.impl.meta.RepositoryMethod
+Change Return Type	MethodType to RepositoryMethodType in method public getMethodType() : RepositoryMethodType from class org.apache.deltaspike.data.impl.meta.RepositoryMethodMetadata
+Change Attribute Type	entityManagerResolverIsNormalScope : Boolean to entityManagerResolverIsNormalScope : boolean in class org.apache.deltaspike.data.impl.meta.RepositoryMetadata
+Encapsulate Attribute	private entityManagerResolverIsNormalScope : boolean from class org.apache.deltaspike.data.impl.meta.RepositoryMetadata
+Remove Attribute Modifier	volatile in attribute private entityManagerResolverIsNormalScope : Boolean from class org.apache.deltaspike.data.impl.meta.RepositoryComponent
+Encapsulate Attribute	private entityManagerFlushMode : FlushModeType from class org.apache.deltaspike.data.impl.meta.RepositoryMetadata
+Remove Attribute Modifier	final in attribute private entityManagerFlushMode : FlushModeType from class org.apache.deltaspike.data.impl.meta.RepositoryComponent
+Rename Class	org.apache.deltaspike.data.impl.meta.RepositoryComponent renamed to org.apache.deltaspike.data.impl.meta.RepositoryMetadata
+Extract Class	org.apache.deltaspike.data.impl.meta.RepositoryMetadataInitializer from class org.apache.deltaspike.data.impl.meta.RepositoryComponent
+Move Method	private collectClasses(cls Class<?>, result Set<Class<?>>) : void from class org.apache.deltaspike.data.impl.meta.RepositoryComponent to private collectClasses(cls Class<?>, result Set<Class<?>>) : void from class org.apache.deltaspike.data.impl.meta.RepositoryMetadataInitializer
+Move Method	private extractEntityManagerResolver(clazz Class<?>) : Class<? extends EntityManagerResolver> from class org.apache.deltaspike.data.impl.meta.RepositoryComponent to private extractEntityManagerResolver(clazz Class<?>) : Class<? extends EntityManagerResolver> from class org.apache.deltaspike.data.impl.meta.RepositoryMetadataInitializer
+Move Method	private extractEntityManagerFlushMode(clazz Class<?>) : FlushModeType from class org.apache.deltaspike.data.impl.meta.RepositoryComponent to private extractEntityManagerFlushMode(clazz Class<?>) : FlushModeType from class org.apache.deltaspike.data.impl.meta.RepositoryMetadataInitializer
+Move Method	private extractEntityManagerConfig(clazz Class<?>) : EntityManagerConfig from class org.apache.deltaspike.data.impl.meta.RepositoryComponent to private extractEntityManagerConfig(clazz Class<?>) : EntityManagerConfig from class org.apache.deltaspike.data.impl.meta.RepositoryMetadataInitializer
+Move Attribute	private log : Logger from class org.apache.deltaspike.data.impl.meta.RepositoryComponent to private log : Logger from class org.apache.deltaspike.data.impl.meta.RepositoryMetadataInitializer
+Change Return Type	RepositoryComponent to RepositoryMetadata in method public lookupComponent(candidateClasses List<Class<?>>) : RepositoryMetadata from class org.apache.deltaspike.data.impl.meta.RepositoryMetadataHandler
+Move Method	public lookupComponent(candidateClasses List<Class<?>>) : RepositoryComponent from class org.apache.deltaspike.data.impl.meta.RepositoryComponents to public lookupComponent(candidateClasses List<Class<?>>) : RepositoryMetadata from class org.apache.deltaspike.data.impl.meta.RepositoryMetadataHandler
+Change Return Type	RepositoryComponent to RepositoryMetadata in method public lookupComponent(repoClass Class<?>) : RepositoryMetadata from class org.apache.deltaspike.data.impl.meta.RepositoryMetadataHandler
+Move Method	public lookupComponent(repoClass Class<?>) : RepositoryComponent from class org.apache.deltaspike.data.impl.meta.RepositoryComponents to public lookupComponent(repoClass Class<?>) : RepositoryMetadata from class org.apache.deltaspike.data.impl.meta.RepositoryMetadataHandler
+Change Variable Type	result : RepositoryEntity to result : EntityMetadata in method private extractFromType(type Type) : EntityMetadata from class org.apache.deltaspike.data.impl.meta.EntityMetadataInitializer
+Change Return Type	RepositoryEntity to EntityMetadata in method private extractFromType(type Type) : EntityMetadata from class org.apache.deltaspike.data.impl.meta.EntityMetadataInitializer
+Remove Method Annotation	@SuppressWarnings("unchecked") in method private extractFrom(type Type) : RepositoryEntity from class org.apache.deltaspike.data.impl.meta.extractor.TypeMetadataExtractor
+Move And Rename Method	private extractFrom(type Type) : RepositoryEntity from class org.apache.deltaspike.data.impl.meta.extractor.TypeMetadataExtractor to private extractFromType(type Type) : EntityMetadata from class org.apache.deltaspike.data.impl.meta.EntityMetadataInitializer
+Move Method	private isValid(query Query) : boolean from class org.apache.deltaspike.data.impl.meta.RepositoryMethod to private isValid(query Query) : boolean from class org.apache.deltaspike.data.impl.meta.RepositoryMethodMetadataInitializer
+Add Parameter	repositoryMetadata : RepositoryMetadata in method private isMethodExpression(repositoryMetadata RepositoryMetadata, repositoryMethodMetadata RepositoryMethodMetadata) : boolean from class org.apache.deltaspike.data.impl.meta.RepositoryMethodMetadataInitializer
+Add Parameter	repositoryMethodMetadata : RepositoryMethodMetadata in method private isMethodExpression(repositoryMetadata RepositoryMetadata, repositoryMethodMetadata RepositoryMethodMetadata) : boolean from class org.apache.deltaspike.data.impl.meta.RepositoryMethodMetadataInitializer
+Move Method	private isMethodExpression() : boolean from class org.apache.deltaspike.data.impl.meta.RepositoryMethod to private isMethodExpression(repositoryMetadata RepositoryMetadata, repositoryMethodMetadata RepositoryMethodMetadata) : boolean from class org.apache.deltaspike.data.impl.meta.RepositoryMethodMetadataInitializer
+Change Parameter Type	repoComponent : RepositoryComponent to repositoryMetadata : RepositoryMetadata in method private extractMapper(queryMethod Method, repositoryMetadata RepositoryMetadata) : Class<? extends QueryInOutMapper<?>> from class org.apache.deltaspike.data.impl.meta.RepositoryMethodMetadataInitializer
+Rename Parameter	repoComponent : RepositoryComponent to repositoryMetadata : RepositoryMetadata in method private extractMapper(queryMethod Method, repositoryMetadata RepositoryMetadata) : Class<? extends QueryInOutMapper<?>> from class org.apache.deltaspike.data.impl.meta.RepositoryMethodMetadataInitializer
+Move Method	private extractMapper(queryMethod Method, repoComponent RepositoryComponent) : Class<? extends QueryInOutMapper<?>> from class org.apache.deltaspike.data.impl.meta.RepositoryMethod to private extractMapper(queryMethod Method, repositoryMetadata RepositoryMetadata) : Class<? extends QueryInOutMapper<?>> from class org.apache.deltaspike.data.impl.meta.RepositoryMethodMetadataInitializer
+Remove Variable Modifier	final in variable beans : Set<Bean<?>> in method private init(beanManager BeanManager) : void from class org.apache.deltaspike.data.impl.meta.RepositoryMethod
+Remove Variable Modifier	final in variable scope : Class<? extends Annotation> in method private init(beanManager BeanManager) : void from class org.apache.deltaspike.data.impl.meta.RepositoryMethod
+Add Parameter	repositoryMetadata : RepositoryMetadata in method private initQueryInOutMapperIsNormalScope(repositoryMetadata RepositoryMetadata, repositoryMethodMetadata RepositoryMethodMetadata, beanManager BeanManager) : void from class org.apache.deltaspike.data.impl.meta.RepositoryMethodMetadataInitializer
+Add Parameter	repositoryMethodMetadata : RepositoryMethodMetadata in method private initQueryInOutMapperIsNormalScope(repositoryMetadata RepositoryMetadata, repositoryMethodMetadata RepositoryMethodMetadata, beanManager BeanManager) : void from class org.apache.deltaspike.data.impl.meta.RepositoryMethodMetadataInitializer
+Remove Method Modifier	synchronized in method private init(beanManager BeanManager) : void from class org.apache.deltaspike.data.impl.meta.RepositoryMethod
+Move And Rename Method	private init(beanManager BeanManager) : void from class org.apache.deltaspike.data.impl.meta.RepositoryMethod to private initQueryInOutMapperIsNormalScope(repositoryMetadata RepositoryMetadata, repositoryMethodMetadata RepositoryMethodMetadata, beanManager BeanManager) : void from class org.apache.deltaspike.data.impl.meta.RepositoryMethodMetadataInitializer
+Extract And Move Method	public getEntityMetadata() : EntityMetadata extracted from public getEntityClass() : Class<?> in class org.apache.deltaspike.data.impl.handler.CdiQueryInvocationContext & moved to class org.apache.deltaspike.data.impl.meta.RepositoryMetadata
+Change Parameter Type	repo : RepositoryComponent to repo : RepositoryMetadata in method protected abstract build(queryPart String, method String, repo RepositoryMetadata) : QueryPart from class org.apache.deltaspike.data.impl.builder.part.QueryPart
+Rename Method	public isOptional() : boolean renamed to public isOptionalAsReturnType() : boolean in class org.apache.deltaspike.data.impl.handler.CdiQueryInvocationContext
+Developers have reported that 11158 commits involve refactoring but only 1514 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1514 commits.
+
+No refactorings detected at 3451eb32f593ed839c73d0e37dd545877ba99e15
+
+No refactorings detected at 73a4969dd8a826b5e0d00a9deb432899faa6c817
+
+No refactorings detected at b48416ae6a33c80c6a2c9c7e763abd157d580014
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643a97509da0016d6b815f
+Issue Title: : Remove second factory mechanism of QueryBuilder's
+Issue Description:  We don't need that "second layer" factory mechanism
+Refactorings at 442366998715112497f6b18391bbee33dfa31a71
+Remove Class Annotation	@QueryInvocation(RepositoryMethodType.ANNOTATED) in class org.apache.deltaspike.data.impl.builder.AnnotatedQueryBuilder
+Remove Class Annotation	@QueryInvocation(RepositoryMethodType.DELEGATE) in class org.apache.deltaspike.data.impl.builder.DelegateQueryBuilder
+Remove Class Annotation	@QueryInvocation(RepositoryMethodType.PARSE) in class org.apache.deltaspike.data.impl.builder.MethodQueryBuilder
+Developers have reported that 11158 commits involve refactoring but only 1515 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1515 commits.
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643a9d509da0016d6b8194
+Issue Title: : Refactor proxy-module / improve performance
+Issue Description:  Currently on each proxy method invocation, a dynamic lookup of the InvocationHandler wrappers happens via BeanProvider.We can simple refactor the proxy to pass the bean reference on proxy creation.
+Refactorings at b4c2ed26341a732f475db440c1b16f6a77115617
+Rename Class	org.apache.deltaspike.proxy.spi.ProxyClassGenerator renamed to org.apache.deltaspike.proxy.spi.DeltaSpikeProxyClassGenerator
+Move And Rename Class	org.apache.deltaspike.proxy.impl.invocation.InterceptorLookup moved and renamed to org.apache.deltaspike.proxy.spi.invocation.DeltaSpikeProxyInterceptorLookup
+Move And Rename Class	org.apache.deltaspike.proxy.impl.invocation.ManualInvocationThrowableWrapperException moved and renamed to org.apache.deltaspike.proxy.spi.invocation.DeltaSpikeProxyInvocationWrapperException
+Move And Rename Class	org.apache.deltaspike.proxy.impl.invocation.ManualInvocationContext moved and renamed to org.apache.deltaspike.proxy.spi.invocation.DeltaSpikeProxyInvocationContext
+Rename Class	org.apache.deltaspike.proxy.impl.AsmProxyClassGenerator renamed to org.apache.deltaspike.proxy.impl.AsmDeltaSpikeProxyClassGenerator
+Change Method Access Modifier	private to public in method public getBeanDefinitions(type Class<T>, optional boolean, includeDefaultScopedBeans boolean, beanManager BeanManager) : Set<Bean<T>> from class org.apache.deltaspike.core.api.provider.BeanProvider
+Replace Variable With Attribute	handlerBean : Bean<H> to handlerBean : Bean<H> in method protected instantiateDelegateInvocationHandler() : H from class org.apache.deltaspike.proxy.api.DeltaSpikeProxyContextualLifecycle
+Replace Variable With Attribute	beanManager : BeanManager to beanManager : BeanManager in method protected instantiateDelegateInvocationHandler() : H from class org.apache.deltaspike.proxy.api.DeltaSpikeProxyContextualLifecycle
+Extract Method	public getDelegateMethods(targetClass Class<?>) : Method[] extracted from private createProxyClass(beanManager BeanManager, classLoader ClassLoader, targetClass Class<T>) : Class<T> in class org.apache.deltaspike.proxy.api.DeltaSpikeProxyFactory
+Change Variable Type	delegateMethods : ArrayList<Method> to delegateMethods : Method[] in method private createProxyClass(beanManager BeanManager, classLoader ClassLoader, targetClass Class<T>) : Class<T> from class org.apache.deltaspike.proxy.api.DeltaSpikeProxyFactory
+Change Variable Type	proxyClassGenerator : ProxyClassGenerator to proxyClassGenerator : DeltaSpikeProxyClassGenerator in method private createProxyClass(beanManager BeanManager, classLoader ClassLoader, targetClass Class<T>) : Class<T> from class org.apache.deltaspike.proxy.api.DeltaSpikeProxyFactory
+Change Method Access Modifier	public to private in method private resolveAlreadyDefinedProxyClass(targetClass Class<T>) : Class<T> from class org.apache.deltaspike.proxy.api.DeltaSpikeProxyFactory
+Change Method Access Modifier	protected to private in method private containsInterceptorBinding(beanManager BeanManager, annotations Annotation[]) : boolean from class org.apache.deltaspike.proxy.api.DeltaSpikeProxyFactory
+Change Method Access Modifier	protected to private in method private constructProxyClassName(clazz Class<?>) : String from class org.apache.deltaspike.proxy.api.DeltaSpikeProxyFactory
+Change Method Access Modifier	protected to private in method private constructSuperAccessorMethodName(method Method) : String from class org.apache.deltaspike.proxy.api.DeltaSpikeProxyFactory
+Change Method Access Modifier	protected to private in method private ignoreMethod(method Method, methods List<Method>) : boolean from class org.apache.deltaspike.proxy.api.DeltaSpikeProxyFactory
+Change Variable Type	asmProxyClassGenerator : AsmProxyClassGenerator to asmProxyClassGenerator : AsmDeltaSpikeProxyClassGenerator in method public init() : void from class org.apache.deltaspike.proxy.impl.AsmProxyClassGeneratorTest
+Change Class Access Modifier	public to package in class org.apache.deltaspike.proxy.spi.invocation.DeltaSpikeProxyInterceptorLookup
+Change Method Access Modifier	protected to private in method private resolveInterceptors(instance Object, method Method) : List<Interceptor<?>> from class org.apache.deltaspike.proxy.spi.invocation.DeltaSpikeProxyInterceptorLookup
+Change Method Access Modifier	protected to private in method private extractInterceptorBindings(beanManager BeanManager, instance Object, method Method) : Annotation[] from class org.apache.deltaspike.proxy.spi.invocation.DeltaSpikeProxyInterceptorLookup
+Change Method Access Modifier	protected to private in method private addInterceptorBindings(beanManager BeanManager, bindings ArrayList<Annotation>, declaredAnnotations Annotation[]) : void from class org.apache.deltaspike.proxy.spi.invocation.DeltaSpikeProxyInterceptorLookup
+Remove Parameter	delegateInvocationHandlerType : Type in method private defineDeltaSpikeProxyMethods(cw ClassWriter, proxyType Type, delegateInvocationHandlerType Type) : void from class org.apache.deltaspike.proxy.impl.AsmProxyClassGenerator
+Rename Parameter	manualInvocationHandlerClass : Class to proxyType : Type in method private defineMethod(cw ClassWriter, method Method, proxyType Type) : void from class org.apache.deltaspike.proxy.impl.AsmDeltaSpikeProxyClassGenerator
+Change Parameter Type	manualInvocationHandlerClass : Class to proxyType : Type in method private defineMethod(cw ClassWriter, method Method, proxyType Type) : void from class org.apache.deltaspike.proxy.impl.AsmDeltaSpikeProxyClassGenerator
+Change Method Access Modifier	protected to public in method public hasSameSignature(a Method, b Method) : boolean from class org.apache.deltaspike.core.util.ReflectionUtils
+Add Method Modifier	static in method public hasSameSignature(a Method, b Method) : boolean from class org.apache.deltaspike.core.util.ReflectionUtils
+Move Method	protected hasSameSignature(a Method, b Method) : boolean from class org.apache.deltaspike.proxy.api.DeltaSpikeProxyFactory to public hasSameSignature(a Method, b Method) : boolean from class org.apache.deltaspike.core.util.ReflectionUtils
+Remove Method Annotation	@Override in method protected proceedOriginal(proxy Object, method Method, parameters Object[]) : Object from class org.apache.deltaspike.proxy.impl.invocation.InterceptManualInvocationHandler
+Move And Rename Method	protected proceedOriginal(proxy Object, method Method, parameters Object[]) : Object from class org.apache.deltaspike.proxy.impl.invocation.InterceptManualInvocationHandler to protected proceed(proxy Object, method Method, parameters Object[]) : Object from class org.apache.deltaspike.proxy.spi.invocation.DeltaSpikeProxyInvocationHandler
+Developers have reported that 11158 commits involve refactoring but only 1516 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1516 commits.
+
+No refactorings detected at 38bc9c3d340b17410b4fc2a1ce45d77981b366e5
+
+No refactorings detected at 7748876931635172a906808d550cd316342109ac
+
+No refactorings detected at 1cfe5dc46695716cdbcc6184fcbaaef2bb0c68c2
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643ac9509da0016d6b831b
+Issue Title: : create a master/client encryption handling
+Issue Description:  For storing passwords in our configuration I'd like to implement a 2 stage approach to symmetric encryption.The current ideas is to have an encrypted hash derived from a master password and machine specific information (MAC, IP, expiry date, etc).
+Refactorings at ebcac8257f3a170d5dcb2e8244e476830ade4c43
+Remove Thrown Exception Type	CipherException in method public setMasterHash(masterPassword String, masterSalt String, overwrite boolean) : void from class org.apache.deltaspike.core.api.crypto.CipherService
+Remove Thrown Exception Type	CipherException in method public encrypt(cleartext String, masterSalt String) : String from class org.apache.deltaspike.core.api.crypto.CipherService
+Remove Thrown Exception Type	CipherException in method public decrypt(encryptedValue String, masterSalt String) : String from class org.apache.deltaspike.core.api.crypto.CipherService
+Remove Class Annotation	@ApplicationScoped in class org.apache.deltaspike.core.impl.crypto.DefaultCipherService
+Change Attribute Access Modifier	public to private in attribute private UTF_8 : Charset from class org.apache.deltaspike.core.impl.crypto.DefaultCipherService
+Remove Thrown Exception Type	CipherException in method protected getMasterKey(masterSalt String) : String from class org.apache.deltaspike.core.impl.crypto.DefaultCipherService
+Remove Method Annotation	@Override in method public encrypt(cleartext String, masterSalt String) : String from class org.apache.deltaspike.core.impl.crypto.DefaultCipherService
+Remove Thrown Exception Type	CipherException in method public encrypt(cleartext String, masterSalt String) : String from class org.apache.deltaspike.core.impl.crypto.DefaultCipherService
+Remove Method Annotation	@Override in method public decrypt(encryptedValue String, masterSalt String) : String from class org.apache.deltaspike.core.impl.crypto.DefaultCipherService
+Remove Thrown Exception Type	CipherException in method public decrypt(encryptedValue String, masterSalt String) : String from class org.apache.deltaspike.core.impl.crypto.DefaultCipherService
+Extract Attribute	private CIPHER_ALGORITHM : String in class org.apache.deltaspike.core.impl.crypto.DefaultCipherService
+Change Return Type	void to String in method public setMasterHash(masterPassword String, masterSalt String, overwrite boolean) : String from class org.apache.deltaspike.core.impl.crypto.DefaultCipherService
+Remove Method Annotation	@Override in method public setMasterHash(masterPassword String, masterSalt String, overwrite boolean) : void from class org.apache.deltaspike.core.impl.crypto.DefaultCipherService
+Remove Thrown Exception Type	CipherException in method public setMasterHash(masterPassword String, masterSalt String, overwrite boolean) : void from class org.apache.deltaspike.core.impl.crypto.DefaultCipherService
+Developers have reported that 11158 commits involve refactoring but only 1517 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1517 commits.
+
+No refactorings detected at 98d4c2ab2ea2ce15cfe60c637a3792c3843b49f4
+
+No refactorings detected at d1cc650d68686d02656f53a4f532a2acb911bc6d
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643acd509da0016d6b833d
+Issue Title: : [Config] add List support
+Issue Description:  Currently there is no built-in way to configure lists of values. This is useful if you think about e.g. something like
+Refactorings at 83a93da2a5dd423fe26ef55447b51406c8a85ee3
+Add Class Annotation	@SuppressWarnings("Duplicates") in class org.apache.deltaspike.test.api.config.ConfigResolverTest
+Developers have reported that 11158 commits involve refactoring but only 1518 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1518 commits.
+
+No refactorings detected at 9423d7466d9507bc243ca3e7bea5a97986bd3bb6
+
+No refactorings detected at f06a78939a6c448717856db21c8a33565d450402
+
+No refactorings detected at 3734100febf7895923028a5ef836027eed2015c0
+
+No refactorings detected at 2c185bd5f02ea842b9d2f4628a7204c0453eec0d
+
+VCS System: https://github.com/apache/deltaspike.git
+Issue ID: : 5b643ae8509da0016d6b840b
+Issue Title: : minor type improvement of the ViewConfigNode spi
+Issue Description:  usually #getMetaData is enough, however, to get the +physical+ annotations via #getSource a cast from Class to Class<?> is neededLinked Commit Github URL: https://github.com/apache/deltaspike/commit/fe0106d4a0ceaded2f6f38bdc83292de28888b4f
+Refactorings at add0adf311d260b9e727e172d5248161bdc62d16
+Change Return Type	Class to Class<?> in method public getSource() : Class<?> from class org.apache.deltaspike.core.spi.config.view.ViewConfigNode
+Change Attribute Type	nodeId : Class to nodeId : Class<?> in class org.apache.deltaspike.jsf.impl.config.view.FolderConfigNode
+Change Return Type	Class to Class<?> in method public getSource() : Class<?> from class org.apache.deltaspike.jsf.impl.config.view.FolderConfigNode
+Change Parameter Type	nodeId : Class to nodeId : Class<?> in method public FolderConfigNode(nodeId Class<?>, parent ViewConfigNode, nodeMetaData Set<Annotation>) from class org.apache.deltaspike.jsf.impl.config.view.FolderConfigNode
+Developers have reported that 11158 commits involve refactoring but only 1519 involve refactoring operations
+There are 33 duplicate commits with refactoring out of the 1519 commits.
+
+No refactorings detected at e16cea14048cba867db28157ceed2d60a2a398d8
+
+No refactorings detected at 269eb82f739828c3c5a081e361bec31437f7a9c7
+
