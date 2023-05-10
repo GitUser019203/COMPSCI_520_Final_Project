@@ -105,6 +105,7 @@
     <Content Include="Python\IssueRefactoringDocCalculator\reg_exp_grouped.txt" />
     <Content Include="Python\issue_tracked_projects.txt" />
     <Content Include="Python\JavaConsoleOutputParser\detected_errors" />
+    <Content Include="Python\mongo_db_extract_refactoring_doc.txt" />
     <Content Include="Python\regexp.txt" />
     <Content Include="Python\WSS4J\wss4j.mongodb" />
     <Content Include="Python\WSS4J\wss4j.mongodb.csv" />
