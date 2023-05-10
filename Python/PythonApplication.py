@@ -1,4 +1,5 @@
 import re
+import sys
 from mongoengine import connect
 from pycoshark.mongomodels import Project, VCSSystem, Commit, FileAction, Hunk, Refactoring, IssueSystem, Issue, IssueComment, MailingList, Message
 from pycoshark.utils import create_mongodb_uri_string
@@ -11,9 +12,16 @@ with open(r"regexp.txt",'r') as file:
     for line in file:
         reg_exp = line.strip()
 
+if sys.argv[0] == 'Preston':
+    db_user = 'root'
+    db_password = 'mongoElise2024'
+else:
+    db_user = ''
+    db_password = ''
+
 # You may have to update this dict to match your DB credentials
-credentials = {'db_user': '',
-               'db_password': '',
+credentials = {'db_user': db_user,
+               'db_password': db_password,
                'db_hostname': 'localhost',
                'db_port': 27017,
                'db_authentication_database': '',
@@ -78,14 +86,14 @@ with open("mongo_db_extract_refactoring_doc.txt", 'w', encoding="utf-8") as out_
                                     if vcs_system_reported_refactoring:
                                         if issue_tracker_reported_refactoring:
                                             print("Issue Title: " + issue.title + "\nIssue Id: " \
-                                            + str(issue.id), file=out_file)
+                                            + str(issue.id) + f"\nIssue Description: {issue.desc}", file=out_file)
                                         else:
                                             print('Issue Tracker:', issue_tracker.url + "\nIssue Title: " + issue.title + "\nIssue Id: " \
-                                            + str(issue.id), file=out_file)
+                                            + str(issue.id) + f"\nIssue Description: {issue.desc}", file=out_file)
                                             issue_tracker_reported_refactoring = True
                                     else:
                                         print('VCS System:' + vcs_system.url + "\n" + 'Issue Tracker:', issue_tracker.url \
-                                        + "\nIssue Title: " + issue.title + "\nIssue Id: " + str(issue.id), file=out_file)
+                                        + "\nIssue Title: " + issue.title + "\nIssue Id: " + str(issue.id) + f"\nIssue Description: {issue.desc}", file=out_file)
                                         vcs_system_reported_refactoring = True
                                         issue_tracker_reported_refactoring = True
                                         
