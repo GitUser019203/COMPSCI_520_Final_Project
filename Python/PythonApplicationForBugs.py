@@ -31,18 +31,28 @@ detectedBugList = []
 
 for projects in projectCollection:
     for project in projects:
+
         # We now select the version control system of the project
         vcs_system = VCSSystem.objects(project_id=project.id).get()
+
+        #print('VCS System:', vcs_system.url)
+
         # We can now fetch the commits and analyze them
         num_commits = Commit.objects(vcs_system_id=vcs_system.id).count()
         totalCommits+=num_commits
+        #print('Number of commits:', num_commits)
+
         # We now select the issue tracking system of the project
         # Please note that some projects have multiple issue trackers
         # In this case get() would fail and you would need to loop over them
         issue_tracker = IssueSystem.objects(project_id=project.id).get()
+
+        #print('Issue Tracker:', issue_tracker.url)
+
         # we can now work with the issues
         num_issues = Issue.objects(issue_system_id=issue_tracker.id).count()
 
+        #print('Number of issues:', num_issues)
         totalIssues+=num_issues
 
         count_comments = 0
@@ -52,30 +62,39 @@ for projects in projectCollection:
         detectedBug = 0
         commitBugsDetected = []
         bugSynonymList = ['bug','bugs','error','failure','defect','fault']
-        bug_pattern = re.compile("[ \.;'\"\?!]restructure[ \.;'\"\?!]|[ \.;'\"\?!]restructured[ \.;'\"\?!]|[ \.;'\"\?!]restructuring[ \.;'\"\?!]|[ \.;'\"\?!]restructures[ \.;'\"\?!]|^restructure[ \.;'\"\?!]|^restructured[ \.;'\"\?!]|^restructures[ \.;'\"\?!]|^restructuring[ \.;'\"\?!]|[ \.;'\"\?!]restructure$|[ \.;'\"\?!]restructured$|[ \.;'\"\?!]restructuring$|[ \.;'\"\?!]restructures$|[ \.;'\"\?!]recode[ \.;'\"\?!]|[ \.;'\"\?!]recoded[ \.;'\"\?!]|[ \.;'\"\?!]recoding[ \.;'\"\?!]|[ \.;'\"\?!]recodes[ \.;'\"\?!]|[ \.;'\"\?!]recode$|[ \.;'\"\?!]recoded$|[ \.;'\"\?!]recoding$|[ \.;'\"\?!]recodes$|^recode[ \.;'\"\?!]|^recodes[ \.;'\"\?!]|^recoding[ \.;'\"\?!]|^recoded[ \.;'\"\?!]|[ \.;'\"\?!]reengineer[ \.;'\"\?!]|[ \.;'\"\?!]reengineered[ \.;'\"\?!]|[ \.;'\"\?!]reengineers[ \.;'\"\?!]|[ \.;'\"\?!]reengineer$|[ \.;'\"\?!]reengineered$|[ \.;'\"\?!]reengineers$|^reengineer[ \.;'\"\?!]|^reengineers[ \.;'\"\?!]|^reengineered[ \.;'\"\?!]|[ \.;'\"\?!]rewrite[ \.;'\"\?!]|[ \.;'\"\?!]rewrote[ \.;'\"\?!]|[ \.;'\"\?!]rewritten[ \.;'\"\?!]|[ \.;'\"\?!]rewrites[ \.;'\"\?!]|[ \.;'\"\?!]rewrite$|[ \.;'\"\?!]rewrote$|[ \.;'\"\?!]rewritten$|[ \.;'\"\?!]rewrites$|^rewrite[ \.;'\"\?!]|^rewrote[ \.;'\"\?!]|^rewrites[ \.;'\"\?!]|^rewritten[ \.;'\"\?!]|[ \.;'\"\?!]edit[ \.;'\"\?!]|[ \.;'\"\?!]edits[ \.;'\"\?!]|[ \.;'\"\?!]edited[ \.;'\"\?!]|[ \.;'\"\?!]edit$|[ \.;'\"\?!]edits$|[ \.;'\"\?!]edited$|^edit[ \.;'\"\?!]|^edited[ \.;'\"\?!]|^edits[ \.;'\"\?!]|[ \.;'\"\?!]add.*|^add.*|[ \.;'\"\?!]Add.*|^Add.*|[ \.;'\"\?!]chang.*|^chang.*|[ \.;'\"\?!]Chang.*|^Chang.*|[ \.;'\"\?!]creat.*|^creat.*|[ \.;'\"\?!]Creat.*|^Creat.*|[ \.;'\"\?!]extend.*|^extend.*|[ \.;'\"\?!]Extend.*|^Extend.*|[ \.;'\"\?!]extract.*|^extract.*|[ \.;'\"\?!]Extract.*|^Extract.*|[ \.;'\"\?!]fix.*|^fix.*|[ \.;'\"\?!]Fix.*|^Fix.*|[ \.;'\"\?!]improv.*|^improv.*|[ \.;'\"\?!]Improv.*|^Improv.*|[ \.;'\"\?!]inlin.*|^inlin.*|[ \.;'\"\?!]Inlin.*|^Inlin.*|[ \.;'\"\?!]introduc.*|^introduc.*|[ \.;'\"\?!]Introduc.*|^Introduc.*|[ \.;'\"\?!]merg.*|^merg.*|[ \.;'\"\?!]Merg.*|^Merg.*|[ \.;'\"\?!]mov.*|^mov.*|[ \.;'\"\?!]Mov.*|^Mov.*|[ \.;'\"\?!]repackag.*|^repackag.*|[ \.;'\"\?!]Repackag.*|^Repackag.*|[ \.;'\"\?!]redesign.*|^redesign.*|[ \.;'\"\?!]Redesign.*|^Redesign.*|[ \.;'\"\?!]reduc.*|^reduc.*|[ \.;'\"\?!]Reduc.*|^Reduc.*|[ \.;'\"\?!]refin.*|^refin.*|[ \.;'\"\?!]Refin.*|^Refin.*|[ \.;'\"\?!]remov.*|^remov.*|[ \.;'\"\?!]Remov.*|^Remov.*|[ \.;'\"\?!]renam.*|^renam.*|[ \.;'\"\?!]Renam.*|^Renam.*|[ \.;'\"\?!]reorganiz.*|^reorganiz.*|[ \.;'\"\?!]Reorganiz.*|^Reorganiz.*|[ \.;'\"\?!]replac.*|^replac.*|[ \.;'\"\?!]Replac.*|^Replac.*|[ \.;'\"\?!]restructur.*|^restructur.*|[ \.;'\"\?!]Restructur.*|^Restructur.*|[ \.;'\"\?!]rewrit.*|^rewrit.*|[ \.;'\"\?!]Rewrit.*|^Rewrit.*|[ \.;'\"\?!]split.*|^split.*|[ \.;'\"\?!]Split.*|^Split.*|[ \.;'\"\?!]chang.* the name[ \.;'\"\?!]|[ \.;'\"\?!]chang.* the name$|^chang.* the name[ \.;'\"\?!]|^chang.* the name$|[ \.;'\"\?!]clean.* up code[ \.;'\"\?!]|[ \.;'\"\?!]clean.* up code$|^clean.* up code[ \.;'\"\?!]|^clean.* up code$|[ \.;'\"\?!]cleanup[ \.;'\"\?!]|[ \.;'\"\?!]cleanup$|^cleanup[ \.;'\"\?!]|^cleanup$|[ \.;'\"\?!]code clean.*[ \.;'\"\?!]|[ \.;'\"\?!]code clean.*$|^code clean.*[ \.;'\"\?!]|^code clean.*$|[ \.;'\"\?!]code optimization[ \.;'\"\?!]|[ \.;'\"\?!]code optimization$|^code optimization[ \.;'\"\?!]|^code optimization$|[ \.;'\"\?!]fix.* code style[ \.;'\"\?!]|[ \.;'\"\?!]fix.* code style$|^fix.* code style[ \.;'\"\?!]|^fix.* code style$|[ \.;'\"\?!]improv.* code quality[ \.;'\"\?!]|[ \.;'\"\?!]improv.* code quality$|^improv.* code quality[ \.;'\"\?!]|^improv.* code quality$|[ \.;'\"\?!]pull.* up[ \.;'\"\?!]|[ \.;'\"\?!]pull.* up$|^pull.* up[ \.;'\"\?!]|^pull.* up$|[ \.;'\"\?!]push.* down[ \.;'\"\?!]|[ \.;'\"\?!]push.* down$|^push.* down[ \.;'\"\?!]|^push.* down$|[ \.;'\"\?!]simplify.* code[ \.;'\"\?!]|[ \.;'\"\?!]simplify.* code$|^simplify.* code[ \.;'\"\?!]|^simplify.* code$", re.I | re.M)
-
+        bug_pattern = re.compile("[ \.;'\"\?!]bug|^bug|[ \.;'\"\?!]bugs|^bugs|[ \.;'\"\?!]error|^error|[ \.;'\"\?!]fault|[ \.;'\"\?!]faults|[ \.;'\"\?!]defect|[ \.;'\"\?!]bugs|^bugged|^bug|[ \.;'\"\?!]problem|^problems", re.I | re.M)
+        
         
         for issue in Issue.objects(issue_system_id=issue_tracker.id):
             count_comments += IssueComment.objects(issue_id=issue.id).count()
-            if issue.issue_type is not None and issue.issue_type.lower()=='refactor':
+            if issue.issue_type is not None and issue.issue_type.lower() in bugSynonymList:
                 count_bugs_dev_label += 1
             if issue.issue_type_verified is not None and issue.issue_type_verified.lower() in bugSynonymList:
                 count_bugs_validated += 1
             if Commit.objects(linked_issue_ids=issue.id).count()>0:
                 count_referenced_by_commits += 1
             for commits in Commit.objects(linked_issue_ids=issue.id):
+                #print(commits.labels)
                 if commits.message is not None and re.search(bug_pattern, commits.message):
                     commitBugsDetected.append(commits.message)
             if issue.title is not None and re.search(bug_pattern, issue.title):
                 detectedBugList.append(issue.title)
+                
+                #print("Issue Title: " + issue.title + "\nIssue Id: " + str(issue.id))
                 linked_commits = Commit.objects(linked_issue_ids=issue.id)
                 revision_hashes = [commit.revision_hash for commit in linked_commits]
                 commit_ids = [commit.id for commit in linked_commits]
-
+                #print("Linked Commit Revision Hashes: " + str(revision_hashes))
+                #print("Linked Commit Ids: " + str(commit_ids))
+        
+        #print('Number of comments in discussions:', count_comments)
+        #print('Number of issues referenced by commits:', count_referenced_by_commits)
+        #print('Number of issues labeled as bugs by developers:', count_bugs_dev_label)
         totalBugs+=count_bugs_dev_label
         totalValidatedBugs+=count_bugs_validated
 
 print("Total Issues reported: ",totalIssues)
+print("Total commits", totalCommits)
 print("Total bugs reported: ",totalBugs)
 print("Total bugs validated: ",totalValidatedBugs)
 print("Detected bugs",len(detectedBugList))
@@ -102,10 +121,10 @@ ax2.pie(b, labels=plotLabel,explode = myexplode,autopct='%1.1f%%', startangle=90
 ax2.axis('equal')
 plt.show()
 """
-Allbugs = ((totalValidatedBugs+len(detectedBugList))/totalIssues)*100 
-chartArr = np.array([Allbugs, 100 - Allbugs])
+
+evalCriteria = ((totalValidatedBugs+len(detectedBugList))/totalIssues)*100 
+chartArr= np.array([evalCriteria, 100 - evalCriteria])
 myexplode = [0.2,0]
-fig1, ax1 = plt.subplots()
 plotLabel = ["Bug related Issues","Other Issues"]
 plt.pie(chartArr, labels=plotLabel,explode = myexplode,autopct='%1.1f%%', startangle=90)
 plt.axis('equal')
