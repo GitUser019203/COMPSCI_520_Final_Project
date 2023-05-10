@@ -204,3 +204,89 @@ Add Thrown Exception Type	Exception in method public setUp() : void from class o
 Developers have reported that 10708 commits involve refactoring but only 1130 involve refactoring operations
 There are 24 duplicate commits with refactoring out of the 1130 commits.
 
+No refactorings detected at 7ba907996d120a75ebf1e50f42b04e6859f94e9e
+
+No refactorings detected at 27b498cecd284e36d31898b38df4ca276e4ce3f1
+
+No refactorings detected at f8f441ef352feacb7c142cbe315e9a6ae96b2379
+
+No refactorings detected at ab5bbe340c2dfd65e9661876442acd7fcc04e586
+
+No refactorings detected at e72f3e2239eb7b72e30737039e88f37e538f33d7
+
+No refactorings detected at 89fee834756bbe6d9e060376f95188d66789b1f7
+
+No refactorings detected at bf4b873dd3d8aaa5836ce3ce793790c61d3fd45d
+
+No refactorings detected at e66bb3bccdc6ec7afc5d9295b020bb0eb23dc3ef
+
+VCS System: https://github.com/apache/commons-jcs.git
+Issue ID: : 5bef223156f6a02953b57b81
+Issue Title: : cleanup mvn deps + add missing headers
+Issue Description:  NoneLinked Commit Github URL: https://github.com/apache/commons-jcs/commit/4d561133ca105888da78c2c162745260b8c95a47
+Refactorings at 403618e1e97cc03ac6bc0689bc740bb0113c429a
+Extract Variable	keyType : Class<?> in method public createCache(cacheName String, configuration C) : Cache<K,V> from class org.apache.commons.jcs.jcache.JCSCachingManager
+Extract Variable	valueType : Class<?> in method public createCache(cacheName String, configuration C) : Cache<K,V> from class org.apache.commons.jcs.jcache.JCSCachingManager
+Developers have reported that 11158 commits involve refactoring but only 993 involve refactoring operations
+There are 19 duplicate commits with refactoring out of the 993 commits.
+
+VCS System: https://github.com/apache/commons-jcs.git
+Issue ID: : 5bef223256f6a02953b57b98
+Issue Title: : Admin.jsp on remote cache server does not broadcast removes - patch
+Issue Description:  We'd like to contribute some patches to fix an issue with the JCSAdmin.jsp when it's used on a JCS remote cache server.
+Refactorings at 35045d3421d3e476da97c20bd2f1deacfd5e40fc
+Change Variable Type	e : Exception to e : IOException in method public getByteCount(cache CompositeCache) : int from class org.apache.jcs.admin.JCSAdminBean
+Change Class Access Modifier	package to public in class org.apache.jcs.auxiliary.remote.server.RemoteCacheServer
+Change Method Access Modifier	package to protected in method protected RemoteCacheServer(rcsa IRemoteCacheServerAttributes) from class org.apache.jcs.auxiliary.remote.server.RemoteCacheServer
+Change Method Access Modifier	package to protected in method protected RemoteCacheServer(rcsa IRemoteCacheServerAttributes, customRMISocketFactory RMISocketFactory) from class org.apache.jcs.auxiliary.remote.server.RemoteCacheServer
+Developers have reported that 11158 commits involve refactoring but only 994 involve refactoring operations
+There are 19 duplicate commits with refactoring out of the 994 commits.
+
+No refactorings detected at 160f5bc2bfa0b9a39ddec7e40c46129b7a5aed41
+
+No refactorings detected at f66b0593a5fd31d5513bab28d3b2650d55d7d777
+
+No refactorings detected at d2a54557bffc8e917d0790bd77b327171661da89
+
+No refactorings detected at a20839bbeffc365bb3b9eb74325a6732fe700b2c
+
+No refactorings detected at f772c1a208ea66520e8472061e0213980976dc08
+
+VCS System: https://github.com/apache/commons-jcs.git
+Issue ID: : 5bef225f56f6a02953b57dad
+Issue Title: : BlockDiskCache partial remove / group remove doesn't work
+Issue Description:  BlockDiskCache implementation improperly handles removal using prefixes and groups.
+Refactorings at b6ea863a2667310b470ae59413204ff6b2719ba9
+Extract Method	private performPartialKeyRemoval(key String) : boolean extracted from protected processRemove(key K) : boolean in class org.apache.commons.jcs.auxiliary.disk.block.BlockDiskCache
+Extract Method	private performSingleKeyRemoval(key K) : boolean extracted from protected processRemove(key K) : boolean in class org.apache.commons.jcs.auxiliary.disk.block.BlockDiskCache
+Developers have reported that 11158 commits involve refactoring but only 995 involve refactoring operations
+There are 19 duplicate commits with refactoring out of the 995 commits.
+
+VCS System: https://github.com/apache/commons-jcs.git
+Issue ID: : 5bef226056f6a02953b57dbe
+Issue Title: : NullPointerException in IndexedDiskCache.addToRecycleBin(...)
+Issue Description:  One of our users got the following exception:java.lang.NullPointerException
+Refactorings at 7cec158bc9faa1d2aa267ddd6a02790ac1f2c3ec
+Change Attribute Type	bytesFree : long to bytesFree : AtomicLong in class org.apache.commons.jcs.auxiliary.disk.indexed.IndexedDiskCache
+Remove Method Modifier	synchronized in method protected getBytesFree() : long from class org.apache.commons.jcs.auxiliary.disk.indexed.IndexedDiskCache
+Remove Method Modifier	synchronized in method private resetBytesFree() : void from class org.apache.commons.jcs.auxiliary.disk.indexed.IndexedDiskCache
+Remove Method Modifier	synchronized in method private adjustBytesFree(ded IndexedDiskElementDescriptor, add boolean) : void from class org.apache.commons.jcs.auxiliary.disk.indexed.IndexedDiskCache
+Developers have reported that 11158 commits involve refactoring but only 996 involve refactoring operations
+There are 19 duplicate commits with refactoring out of the 996 commits.
+
+VCS System: https://github.com/apache/commons-jcs.git
+Issue ID: : 5bef227e56f6a02953b57f0b
+Issue Title: : Removing entries using a name group does not remove them from the disk cache.
+Issue Description:  The scenario is that I add entries to the cache using name groups, e.g. using keys "0:key0", "0:key1", "1:key0", etc. then issue a remove using a name group, e.g. "0:".
+Refactorings at c56eedd7733db2eaec1d30d626b46fdcf928285f
+Change Attribute Type	storageLock : ReentrantWriterPreferenceReadWriteLock to storageLock : WriterPreferenceReadWriteLock in class org.apache.jcs.auxiliary.disk.block.BlockDiskCache
+Change Attribute Access Modifier	protected to private in attribute private storageLock : WriterPreferenceReadWriteLock from class org.apache.jcs.auxiliary.disk.block.BlockDiskCache
+Extract Method	private performPartialKeyRemoval(key String) : boolean extracted from public doRemove(key Serializable) : boolean in class org.apache.jcs.auxiliary.disk.indexed.IndexedDiskCache
+Extract Method	private performGroupRemoval(key GroupId) : boolean extracted from public doRemove(key Serializable) : boolean in class org.apache.jcs.auxiliary.disk.indexed.IndexedDiskCache
+Extract Method	private performSingleKeyRemoval(key Serializable) : boolean extracted from public doRemove(key Serializable) : boolean in class org.apache.jcs.auxiliary.disk.indexed.IndexedDiskCache
+Add Thrown Exception Type	Exception in method public BlockDiskCacheConcurrentUnitTest(testName String) from class org.apache.jcs.auxiliary.disk.block.BlockDiskCacheConcurrentUnitTest
+Add Thrown Exception Type	Exception in method public suite() : Test from class org.apache.jcs.auxiliary.disk.block.BlockDiskCacheConcurrentUnitTest
+Add Thrown Exception Type	Exception in method public setUp() : void from class org.apache.jcs.auxiliary.disk.block.BlockDiskCacheSameRegionConcurrentUnitTest
+Developers have reported that 11158 commits involve refactoring but only 997 involve refactoring operations
+There are 19 duplicate commits with refactoring out of the 997 commits.
+

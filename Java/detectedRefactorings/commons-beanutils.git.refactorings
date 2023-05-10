@@ -1558,3 +1558,265 @@ Change Variable Type	newMap : Map<Object,Object> to newMap : Map<String,Object> 
 Developers have reported that 10708 commits involve refactoring but only 890 involve refactoring operations
 There are 18 duplicate commits with refactoring out of the 890 commits.
 
+No refactorings detected at 2b2389ddacb7af05326bd59d1b00bf2bf7ee3e3c
+
+No refactorings detected at 0f9b7cc8db1f6fa633c12ab661d833b0d7dacf00
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed58ca2ae62813868e73ba
+Issue Title: : Add general array type conversion
+Issue Description:  When using a method such as BeanUtils.copyProperty(), it would be good if it could automatically handle conversion between array types, rather than having to explicitly write an array converter for each target type.
+Refactorings at 19c81683ce7adc0d4d3675f96a82a83d6fadd4eb
+Extract Method	protected convertToCollection(type Class, value Object) : Collection extracted from protected convertToType(type Class, value Object) : Object in class org.apache.commons.beanutils.converters.ArrayConverter
+Developers have reported that 11158 commits involve refactoring but only 783 involve refactoring operations
+There are 12 duplicate commits with refactoring out of the 783 commits.
+
+No refactorings detected at c50a32cdaf25dd87c9a0b9a3aadf86aa8e828041
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed58cf2ae62813868e73d1
+Issue Title: : Improve Converter Implementations
+Issue Description:  The "Converter" contract has the following signature....
+Refactorings at c203a56f1fd2ce7eafa07be45fe52e03e23dcafd
+Inline Variable	converter : Converter in method public setProperty(bean Object, name String, value Object) : void from class org.apache.commons.beanutils.BeanUtilsBean
+Developers have reported that 11158 commits involve refactoring but only 784 involve refactoring operations
+There are 12 duplicate commits with refactoring out of the 784 commits.
+
+No refactorings detected at d88792e1ad159c935794f74707027b56d83fdbbc
+
+No refactorings detected at 4537b0b88a2f58e555f494c45ff4fdcd183a3428
+
+No refactorings detected at c13bf868cda36a6cd2167d155bf1e85994760d6d
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed58cf2ae62813868e73d1
+Issue Title: : Improve Converter Implementations
+Issue Description:  The "Converter" contract has the following signature....
+Refactorings at 2b2d0c0eae398ca89cefa3068dbf443414ebc908
+Change Return Type	Object to String in method protected convertToString(value Object) : String from class org.apache.commons.beanutils.converters.AbstractConverter
+Change Return Type	Object to String in method protected convertToString(value Object) : String from class org.apache.commons.beanutils.converters.ArrayConverter
+Change Return Type	Object to String in method protected convertToString(value Object) : String from class org.apache.commons.beanutils.converters.CharacterConverter
+Change Return Type	Object to String in method protected convertToString(value Object) : String from class org.apache.commons.beanutils.converters.ClassConverter
+Change Variable Type	result : Object to result : String in method protected convertToString(value Object) : String from class org.apache.commons.beanutils.converters.DateTimeConverter
+Change Return Type	Object to String in method protected convertToString(value Object) : String from class org.apache.commons.beanutils.converters.DateTimeConverter
+Change Variable Type	result : Object to result : String in method protected convertToString(value Object) : String from class org.apache.commons.beanutils.converters.NumberConverter
+Change Return Type	Object to String in method protected convertToString(value Object) : String from class org.apache.commons.beanutils.converters.NumberConverter
+Developers have reported that 11158 commits involve refactoring but only 785 involve refactoring operations
+There are 12 duplicate commits with refactoring out of the 785 commits.
+
+No refactorings detected at 6f26c441b21dcb2e1d04a80d62eb8421131b4f91
+
+No refactorings detected at b712ecda29ce1e54189eac789eb7750c721abea0
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed58cf2ae62813868e73d1
+Issue Title: : Improve Converter Implementations
+Issue Description:  The "Converter" contract has the following signature....
+Refactorings at 8c789b517914efd306590a810ec487f6ff2fe9ea
+Change Return Type	String to Object in method protected convertToString(value Object) : Object from class org.apache.commons.beanutils.converters.AbstractConverter
+Inline Variable	sourceType : Class in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.ArrayConverter
+Change Return Type	String to Object in method protected convertToString(value Object) : Object from class org.apache.commons.beanutils.converters.ArrayConverter
+Change Return Type	String to Object in method protected convertToString(value Object) : Object from class org.apache.commons.beanutils.converters.CharacterConverter
+Change Return Type	String to Object in method protected convertToString(value Object) : Object from class org.apache.commons.beanutils.converters.ClassConverter
+Change Variable Type	result : String to result : Object in method protected convertToString(value Object) : Object from class org.apache.commons.beanutils.converters.DateTimeConverter
+Change Return Type	String to Object in method protected convertToString(value Object) : Object from class org.apache.commons.beanutils.converters.DateTimeConverter
+Change Variable Type	result : String to result : Object in method protected convertToString(value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Change Return Type	String to Object in method protected convertToString(value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Developers have reported that 11158 commits involve refactoring but only 786 involve refactoring operations
+There are 12 duplicate commits with refactoring out of the 786 commits.
+
+No refactorings detected at e7bd025ccd39ca3f28e110e7528a413f15773734
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed58cf2ae62813868e73d1
+Issue Title: : Improve Converter Implementations
+Issue Description:  The "Converter" contract has the following signature....
+Refactorings at 8252efa3a0ba05fd56065bf87c145d6abd4f116e
+Change Return Type	Converter to NumberConverter in method protected makeConverter() : NumberConverter from class org.apache.commons.beanutils.converters.ByteConverterTestCase
+Change Return Type	Converter to NumberConverter in method protected makeConverter() : NumberConverter from class org.apache.commons.beanutils.converters.DoubleConverterTestCase
+Change Return Type	Converter to NumberConverter in method protected makeConverter() : NumberConverter from class org.apache.commons.beanutils.converters.FloatConverterTestCase
+Change Return Type	Converter to NumberConverter in method protected makeConverter() : NumberConverter from class org.apache.commons.beanutils.converters.IntegerConverterTestCase
+Change Return Type	Converter to NumberConverter in method protected makeConverter() : NumberConverter from class org.apache.commons.beanutils.converters.LongConverterTestCase
+Remove Thrown Exception Type	Exception in method public testConvertNull() : void from class org.apache.commons.beanutils.converters.NumberConverterTestBase
+Remove Thrown Exception Type	Exception in method public testConvertNumber() : void from class org.apache.commons.beanutils.converters.NumberConverterTestBase
+Change Return Type	Converter to NumberConverter in method protected abstract makeConverter() : NumberConverter from class org.apache.commons.beanutils.converters.NumberConverterTestBase
+Change Return Type	Converter to NumberConverter in method protected makeConverter() : NumberConverter from class org.apache.commons.beanutils.converters.ShortConverterTestCase
+Extract Superclass	org.apache.commons.beanutils.converters.NumberConverter from classes [org.apache.commons.beanutils.converters.BigDecimalConverter, org.apache.commons.beanutils.converters.BigIntegerConverter, org.apache.commons.beanutils.converters.ByteConverter, org.apache.commons.beanutils.converters.DoubleConverter, org.apache.commons.beanutils.converters.FloatConverter, org.apache.commons.beanutils.converters.IntegerConverter, org.apache.commons.beanutils.converters.LongConverter, org.apache.commons.beanutils.converters.ShortConverter]
+Add Thrown Exception Type	Exception in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Add Thrown Exception Type	Exception in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Add Thrown Exception Type	Exception in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Add Thrown Exception Type	Exception in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Add Thrown Exception Type	Exception in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Add Thrown Exception Type	Exception in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Add Thrown Exception Type	Exception in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Add Thrown Exception Type	Exception in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Change Method Access Modifier	public to protected in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Change Method Access Modifier	public to protected in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Change Method Access Modifier	public to protected in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Change Method Access Modifier	public to protected in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Change Method Access Modifier	public to protected in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Change Method Access Modifier	public to protected in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Change Method Access Modifier	public to protected in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Change Method Access Modifier	public to protected in method protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Pull Up Method	public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.BigDecimalConverter to protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Pull Up Method	public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.BigIntegerConverter to protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Pull Up Method	public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.ByteConverter to protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Pull Up Method	public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.DoubleConverter to protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Pull Up Method	public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.FloatConverter to protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Pull Up Method	public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.IntegerConverter to protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Pull Up Method	public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.LongConverter to protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Pull Up Method	public convert(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.ShortConverter to protected convertToType(type Class, value Object) : Object from class org.apache.commons.beanutils.converters.NumberConverter
+Developers have reported that 11158 commits involve refactoring but only 787 involve refactoring operations
+There are 12 duplicate commits with refactoring out of the 787 commits.
+
+No refactorings detected at 18655b79d2297b3a9cccd59bc935fbbc80497f31
+
+No refactorings detected at a191bac6e0810e2ca1c59dafdccf11aa29944956
+
+No refactorings detected at f892f0117115f9515d5040dd756864df381bd2e3
+
+No refactorings detected at c54fbdb08e01627e4508e8c7dff31c2680d436ad
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed59dc2ae62813868e7a5b
+Issue Title: : Run Checkstyle/PMD on the source and get things fixed up
+Issue Description:  NoneLinked Commit Github URL: https://github.com/apache/commons-beanutils/commit/7153862be7dfc17134a969a08495566f880481a7
+Refactorings at 9465506f486cf45ae3b476851867e9638c83a476
+Rename Attribute	stringClassArray : Class[] to STRING_CLASS_PARAMETER : Class[] in class org.apache.commons.beanutils.MappedPropertyDescriptor
+Rename Attribute	_log : Log to log : Log in class org.apache.commons.beanutils.converters.AbstractConverter
+Rename Attribute	model : byte[] to MODEL : byte[] in class org.apache.commons.beanutils.converters.ByteArrayConverter
+Rename Attribute	model : char[] to MODEL : char[] in class org.apache.commons.beanutils.converters.CharacterArrayConverter
+Rename Attribute	model : double[] to MODEL : double[] in class org.apache.commons.beanutils.converters.DoubleArrayConverter
+Rename Attribute	model : float[] to MODEL : float[] in class org.apache.commons.beanutils.converters.FloatArrayConverter
+Rename Attribute	model : int[] to MODEL : int[] in class org.apache.commons.beanutils.converters.IntegerArrayConverter
+Rename Attribute	model : long[] to MODEL : long[] in class org.apache.commons.beanutils.converters.LongArrayConverter
+Rename Attribute	model : short[] to MODEL : short[] in class org.apache.commons.beanutils.converters.ShortArrayConverter
+Rename Attribute	model : String[] to MODEL : String[] in class org.apache.commons.beanutils.converters.StringArrayConverter
+Rename Attribute	ints : int[] to INT_MODEL : int[] in class org.apache.commons.beanutils.converters.StringArrayConverter
+Rename Attribute	defaultChars : String to DEFAULT_PATTERN_CHARS : String in class org.apache.commons.beanutils.locale.converters.DateLocaleConverter
+Developers have reported that 11158 commits involve refactoring but only 788 involve refactoring operations
+There are 12 duplicate commits with refactoring out of the 788 commits.
+
+No refactorings detected at f79c39513b19a86e00d7302deebd34718fdc1e9b
+
+No refactorings detected at 7f241adf69af25938b0944eb8332bbe5997a9ace
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed59f92ae62813868e7afe
+Issue Title: : Consider options for BeanUtils compatibility in light of Conversion improvements
+Issue Description:  The Conversion improvements associated with BEANUTILS-258 potentially create compatibility issues - this was highlighted by Betwixt's tests failing recently in the gump run - see http://tinyurl.com/2mxbv8 for more details.
+Refactorings at c203a56f1fd2ce7eafa07be45fe52e03e23dcafd
+Inline Variable	converter : Converter in method public setProperty(bean Object, name String, value Object) : void from class org.apache.commons.beanutils.BeanUtilsBean
+Developers have reported that 11158 commits involve refactoring but only 789 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 789 commits.
+
+No refactorings detected at 9547acb21b34a33d260d6e3c120bf2b003d6edf9
+
+No refactorings detected at e962d9366b987587392549b64fc52b2d72843695
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed5ab62ae62813868e7e49
+Issue Title: : Merge Bean-Collections back into core BeanUtils and remove Bean-Collections sub-project
+Issue Description:  This issue has been discussed in the following thread: http://tinyurl.com/2xdpku
+Refactorings at cc9e11a2b1baa008484110e659f56415baf26cd5
+Rename Class	org.apache.commons.beanutils.TestBeanMap renamed to org.apache.commons.beanutils.BeanMapTestCase
+Rename Class	org.apache.commons.beanutils.BeanPropertyValueChangeClosureTest renamed to org.apache.commons.beanutils.BeanPropertyValueChangeClosureTestCase
+Rename Class	org.apache.commons.beanutils.BeanPropertyValueEqualsPredicateTest renamed to org.apache.commons.beanutils.BeanPropertyValueEqualsPredicateTestCase
+Rename Class	org.apache.commons.beanutils.BeanToPropertyValueTransformerTest renamed to org.apache.commons.beanutils.BeanToPropertyValueTransformerTestCase
+Move Source Folder	optional/bean-collections/src to src
+Developers have reported that 11158 commits involve refactoring but only 790 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 790 commits.
+
+No refactorings detected at a4c36f7a53de71df561069bc7c5e46999ca468c7
+
+No refactorings detected at 87475d4e87ddded57c29566fc009d7798a806504
+
+No refactorings detected at 3b3e19f1795adb010248eb2169b7d1c90b63dd82
+
+No refactorings detected at 56e4523e75666a31e963fe6f06ff52248324510c
+
+No refactorings detected at 10ff6ba8c7f06304902984646f7420ff37f21bf8
+
+No refactorings detected at ebab04c7c6c99911e8f7398da5d34d1c326db734
+
+No refactorings detected at 5f98bcf579bd65363a0f175164811be4cdb3c6c4
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed5b912ae62813868e81d1
+Issue Title: : Remove copied Collections classes
+Issue Description:  The following 4 Commons Collections classes were copied into BeanUtils so that the dependency on Commons Collections could be removed (these were included in the BeanUtils 1.7.0 release)
+Refactorings at 633bcd4f70d548e1a39fd39f10ab9d9b06874aa1
+Change Attribute Type	converters : FastHashMap to converters : Map in class org.apache.commons.beanutils.ConvertUtilsBean
+Change Variable Type	mappeds : HashMap to mappeds : Map in method protected introspect() : void from class org.apache.commons.beanutils.WrapDynaClass
+Developers have reported that 11158 commits involve refactoring but only 791 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 791 commits.
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed5cf82ae62813868e840c
+Issue Title: : Replace UnmodifiableSet.decorate with Collections.unModifiableSet
+Issue Description:  Two methods in BeanUtils call UnmodifiableSet.decorate() from Commons Collections.
+Refactorings at 95db7d0aab9bea25d3a14db42a7787ef77861f45
+Modify Method Annotation	@SuppressWarnings("unchecked") to @SuppressWarnings({"unchecked","rawtypes"}) in method public keySet() : Set<Object> from class org.apache.commons.beanutils.BeanMap
+Developers have reported that 11158 commits involve refactoring but only 792 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 792 commits.
+
+No refactorings detected at bd9cb6e5772d9cd05d0bb34fd9333e6e5f9c3ea7
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed5d242ae62813868e8455
+Issue Title: : Write methods for PropertyDescriptors created during custom introspection are lost
+Issue Description:  From version 1.9.0 on, BeanUtils allows custom introspection. This means that the properties of classes are supported which do not necessarily conform to the Java Beans specification.
+Refactorings at 8f77bd63d8b5b2ab593b134fef2bf5e59bed0441
+Change Method Access Modifier	package to public in method public getWriteMethod(clazz Class<?>, descriptor PropertyDescriptor) : Method from class org.apache.commons.beanutils.PropertyUtilsBean
+Developers have reported that 11158 commits involve refactoring but only 793 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 793 commits.
+
+No refactorings detected at b42e9f30d422c6da948383605721be8a7ccd0bf1
+
+No refactorings detected at b44b3d95b321cef0281cdf130e8c286bfdcd60af
+
+No refactorings detected at 10ffa59e1b117b507544f2977ceecfcc2d7800f9
+
+No refactorings detected at a097839338082366071d8a1e0b68e9762459b634
+
+No refactorings detected at 5bd1004511c543e21a925cd1dd11da94820ba5d9
+
+No refactorings detected at 6d7b36b3870a5076f6197433ef0c91b87135962a
+
+No refactorings detected at 330d5cf99c1eefe3fe86dae260a8873068650866
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed5eff2ae62813868e85c6
+Issue Title: : change visibility of method "evaluateValue" belongs to the class BeanPropertyValueEqualsPredicate to "protected".
+Issue Description:  change visibility of method "evaluateValue" that belongs to class BeanPropertyValueEqualsPredicate to "protected".I want  to override this method with this visibility to expand the functionality of this class and not having to remake this entire class just to modify this small method
+Refactorings at c6518c3d4064724dbd7d4c67ab469d398652ab36
+Change Method Access Modifier	private to protected in method protected evaluateValue(expected Object, actual Object) : boolean from class org.apache.commons.beanutils.BeanPropertyValueEqualsPredicate
+Developers have reported that 11158 commits involve refactoring but only 794 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 794 commits.
+
+No refactorings detected at 4c56c27896e3038ff9f5f9172c0d4f4b58494b98
+
+No refactorings detected at bf5e10371fbff53481cd2db6b11b7b10e3c0a84b
+
+No refactorings detected at bd3c9b598202736d17720f5635e8cbc48c6fd3f1
+
+No refactorings detected at 3b6dec3c581f883cf9dff6f04512011cf277f586
+
+VCS System: https://github.com/apache/commons-beanutils.git
+Issue ID: : 5bed5f232ae62813868e8701
+Issue Title: : Remove deprecated code for 2.0.0
+Issue Description:  Remove all code marked with {{@deprecated}} and {{@Deprecated}}.Linked Commit Github URL: https://github.com/apache/commons-beanutils/commit/693d479e5476a234828cb6d4194d933acfe6b870
+Refactorings at 673dde7b799be245f74575f605dde83ccc8fbb13
+Remove Method Annotation	@Deprecated in method protected lookup(locale Locale) : Map<Class<?>,LocaleConverter> from class org.apache.commons.beanutils2.locale.LocaleConvertUtilsBean
+Change Attribute Type	decoratedMap : Map<Object,Object> to decoratedMap : Map<String,Object> in class org.apache.commons.beanutils2.DynaBeanMapDecoratorTestCase
+Change Attribute Type	modifiableMap : Map<Object,Object> to modifiableMap : Map<String,Object> in class org.apache.commons.beanutils2.DynaBeanMapDecoratorTestCase
+Change Attribute Type	emptyMap : Map<Object,Object> to emptyMap : Map<String,Object> in class org.apache.commons.beanutils2.DynaBeanMapDecoratorTestCase
+Change Variable Type	set : Set<Map.Entry<Object,Object>> to set : Set<Map.Entry<String,Object>> in method public testEntrySet() : void from class org.apache.commons.beanutils2.DynaBeanMapDecoratorTestCase
+Change Variable Type	m : Map<Object,Object> to m : Map<String,Object> in method public testEntrySet() : void from class org.apache.commons.beanutils2.DynaBeanMapDecoratorTestCase
+Change Variable Type	iterator : Iterator<Map.Entry<Object,Object>> to iterator : Iterator<Map.Entry<String,Object>> in method public testEntrySet() : void from class org.apache.commons.beanutils2.DynaBeanMapDecoratorTestCase
+Change Variable Type	entry : Map.Entry<Object,Object> to entry : Map.Entry<String,Object> in method public testEntrySet() : void from class org.apache.commons.beanutils2.DynaBeanMapDecoratorTestCase
+Change Variable Type	set : Set<Object> to set : Set<String> in method public testKeySet() : void from class org.apache.commons.beanutils2.DynaBeanMapDecoratorTestCase
+Change Variable Type	newMap : Map<Object,Object> to newMap : Map<String,Object> in method public testPutAll() : void from class org.apache.commons.beanutils2.DynaBeanMapDecoratorTestCase
+Developers have reported that 11158 commits involve refactoring but only 795 involve refactoring operations
+There are 13 duplicate commits with refactoring out of the 795 commits.
+

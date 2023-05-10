@@ -3902,3 +3902,1040 @@ Change Attribute Access Modifier	private to package in attribute package DATA : 
 Developers have reported that 10708 commits involve refactoring but only 3200 involve refactoring operations
 There are 68 duplicate commits with refactoring out of the 3200 commits.
 
+No refactorings detected at 8d878afb497810ceb34a0b8a4788914d9debf74b
+
+No refactorings detected at 8d878afb497810ceb34a0b8a4788914d9debf74b
+
+No refactorings detected at 998d6507ecabf025188d9f3e8c8367f810895a17
+
+No refactorings detected at 031a762d105bceda2049204ba54b8f8737f359b4
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b4854042123a750e0616705
+Issue Title: : parquet-cascading and the mapred API does not create metadata file
+Issue Description:  Repro: run a scalding job that writes parquet files to a folder. no _metadata and _common_metadata file is created
+Refactorings at 12ee6b442bbf6557c06ecd7c1f7ae2fceeae55d6
+Inline Method	public writeMetaDataFile(configuration Configuration, outputPath Path) : void inlined to public commitJob(jobContext JobContext) : void in class parquet.hadoop.ParquetOutputCommitter
+Move And Inline Method	public setAsOutputFormat(jobConf JobConf) : void moved from class parquet.hadoop.mapred.DeprecatedParquetOutputFormat to class parquet.cascading.ParquetTBaseScheme & inlined to public sinkConfInit(fp FlowProcess<JobConf>, tap Tap<JobConf,RecordReader,OutputCollector>, jobConf JobConf) : void
+Move And Inline Method	public setAsOutputFormat(jobConf JobConf) : void moved from class parquet.hadoop.mapred.DeprecatedParquetOutputFormat to class parquet.cascading.ParquetTupleScheme & inlined to public sinkConfInit(fp FlowProcess<JobConf>, tap Tap<JobConf,RecordReader,OutputCollector>, jobConf JobConf) : void
+Move And Inline Method	public setAsOutputFormat(jobConf JobConf) : void moved from class parquet.hadoop.mapred.DeprecatedParquetOutputFormat to class parquet.scrooge.ParquetScroogeScheme & inlined to public sinkConfInit(fp FlowProcess<JobConf>, tap Tap<JobConf,RecordReader,OutputCollector>, jobConf JobConf) : void
+Developers have reported that 11158 commits involve refactoring but only 2616 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2616 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b4854042123a750e0616705
+Issue Title: : parquet-cascading and the mapred API does not create metadata file
+Issue Description:  Repro: run a scalding job that writes parquet files to a folder. no _metadata and _common_metadata file is created
+Refactorings at 5851e6da7a05b5d53a01803ccabc0f685fc36d52
+Extract Method	public writeMetaDataFile(configuration Configuration, outputPath Path) : void extracted from public commitJob(jobContext JobContext) : void in class parquet.hadoop.ParquetOutputCommitter
+Extract And Move Method	public setAsOutputFormat(jobConf JobConf) : void extracted from public sinkConfInit(fp FlowProcess<JobConf>, tap Tap<JobConf,RecordReader,OutputCollector>, jobConf JobConf) : void in class parquet.cascading.ParquetTBaseScheme & moved to class parquet.hadoop.mapred.DeprecatedParquetOutputFormat
+Extract And Move Method	public setAsOutputFormat(jobConf JobConf) : void extracted from public sinkConfInit(fp FlowProcess<JobConf>, tap Tap<JobConf,RecordReader,OutputCollector>, jobConf JobConf) : void in class parquet.cascading.ParquetTupleScheme & moved to class parquet.hadoop.mapred.DeprecatedParquetOutputFormat
+Extract And Move Method	public setAsOutputFormat(jobConf JobConf) : void extracted from public sinkConfInit(fp FlowProcess<JobConf>, tap Tap<JobConf,RecordReader,OutputCollector>, jobConf JobConf) : void in class parquet.scrooge.ParquetScroogeScheme & moved to class parquet.hadoop.mapred.DeprecatedParquetOutputFormat
+Developers have reported that 11158 commits involve refactoring but only 2617 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2617 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b4854042123a750e0616705
+Issue Title: : parquet-cascading and the mapred API does not create metadata file
+Issue Description:  Repro: run a scalding job that writes parquet files to a folder. no _metadata and _common_metadata file is created
+Refactorings at 2e3c05359a0e21be44d307104eea3134afcef5f0
+Extract Variable	hadoopFlowConnector : HadoopFlowConnector in method public testWrite() : void from class parquet.cascading.TestParquetTBaseScheme
+Extract Method	public writeMetaDataFile(configuration Configuration, outputPath Path) : void extracted from public commitJob(jobContext JobContext) : void in class parquet.hadoop.ParquetOutputCommitter
+Extract And Move Method	public setAsOutputFormat(jobConf JobConf) : void extracted from public sinkConfInit(fp FlowProcess<JobConf>, tap Tap<JobConf,RecordReader,OutputCollector>, jobConf JobConf) : void in class parquet.cascading.ParquetTBaseScheme & moved to class parquet.hadoop.mapred.DeprecatedParquetOutputFormat
+Extract And Move Method	public setAsOutputFormat(jobConf JobConf) : void extracted from public sinkConfInit(fp FlowProcess<JobConf>, tap Tap<JobConf,RecordReader,OutputCollector>, jobConf JobConf) : void in class parquet.cascading.ParquetTupleScheme & moved to class parquet.hadoop.mapred.DeprecatedParquetOutputFormat
+Extract And Move Method	public setAsOutputFormat(jobConf JobConf) : void extracted from public sinkConfInit(fp FlowProcess<JobConf>, tap Tap<JobConf,RecordReader,OutputCollector>, jobConf JobConf) : void in class parquet.scrooge.ParquetScroogeScheme & moved to class parquet.hadoop.mapred.DeprecatedParquetOutputFormat
+Developers have reported that 11158 commits involve refactoring but only 2618 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2618 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b4854112123a750e0616777
+Issue Title: : Fix compatibility of parquet.metadata with 1.5.0
+Issue Description:  There are quite a few incompatible changes to {{parquet.metadata}} (see below). It seems like it is part of the API because the metadata is exposed. Fixing it will be annoying because {{ColumnPath}} was removed entirely.
+Refactorings at 920192a542ab9e9dd2fbf090e1efd3c4ec99977d
+Move Class	parquet.common.internal.Canonicalizer moved to parquet.hadoop.metadata.Canonicalizer
+Move Class	parquet.common.schema.ColumnPath moved to parquet.hadoop.metadata.ColumnPath
+Merge Package	[parquet.common.internal, parquet.common.schema] to parquet.hadoop.metadata
+Developers have reported that 11158 commits involve refactoring but only 2619 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2619 commits.
+
+No refactorings detected at 8a2c6186628da556504dfde803ad660f5280d640
+
+No refactorings detected at 859b6b4b9485186fdfd3dd0cd0439d2a48b56aa5
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b48541e2123a750e0616809
+Issue Title: : Add an option to read the rowgroup metadata on the task side.
+Issue Description:  https://github.com/apache/incubator-parquet-mr/pull/45parquet.task.side.metadata=true
+Refactorings at 5dafd127f3de7c516ce9c1b7329087a01ab2fc57
+Move Class	parquet.hadoop.ParquetInputFormat.HDFSBlocks moved to parquet.hadoop.ClientSideMetadataSplitStrategy.HDFSBlocks
+Move Class	parquet.hadoop.ParquetInputFormat.SplitInfo moved to parquet.hadoop.ClientSideMetadataSplitStrategy.SplitInfo
+Extract Method	public readParquetMetadata(from InputStream, filter MetadataFilter) : ParquetMetadata extracted from public readParquetMetadata(from InputStream) : ParquetMetadata in class parquet.format.converter.ParquetMetadataConverter
+Add Method Annotation	@Deprecated in method public readParquetMetadata(from InputStream) : ParquetMetadata from class parquet.format.converter.ParquetMetadataConverter
+Extract Method	package readSummaryMetadata(configuration Configuration, basePath Path, skipRowGroups boolean) : ParquetMetadata extracted from public readAllFootersInParallelUsingSummaryFiles(configuration Configuration, partFiles List<FileStatus>) : List<Footer> in class parquet.hadoop.ParquetFileReader
+Extract Method	public readAllFootersInParallelUsingSummaryFiles(configuration Configuration, partFiles Collection<FileStatus>, skipRowGroups boolean) : List<Footer> extracted from public readAllFootersInParallelUsingSummaryFiles(configuration Configuration, partFiles List<FileStatus>) : List<Footer> in class parquet.hadoop.ParquetFileReader
+Extract Method	public readAllFootersInParallel(configuration Configuration, partFiles List<FileStatus>, skipRowGroups boolean) : List<Footer> extracted from public readAllFootersInParallel(configuration Configuration, partFiles List<FileStatus>) : List<Footer> in class parquet.hadoop.ParquetFileReader
+Extract Method	private listFiles(conf Configuration, fileStatus FileStatus) : List<FileStatus> extracted from public readAllFootersInParallel(configuration Configuration, fileStatus FileStatus) : List<Footer> in class parquet.hadoop.ParquetFileReader
+Extract Method	package footersFromSummaryFile(parent Path, mergedFooters ParquetMetadata) : List<Footer> extracted from public readSummaryFile(configuration Configuration, summaryStatus FileStatus) : List<Footer> in class parquet.hadoop.ParquetFileReader
+Extract Method	public readFooter(configuration Configuration, file Path, filter MetadataFilter) : ParquetMetadata extracted from public readFooter(configuration Configuration, file Path) : ParquetMetadata in class parquet.hadoop.ParquetFileReader
+Extract Method	public readFooter(configuration Configuration, file FileStatus, filter MetadataFilter) : ParquetMetadata extracted from public readFooter(configuration Configuration, file FileStatus) : ParquetMetadata in class parquet.hadoop.ParquetFileReader
+Remove Variable Modifier	final in variable fs : FileSystem in method public readAllFootersInParallel(configuration Configuration, fileStatus FileStatus) : List<Footer> from class parquet.hadoop.ParquetFileReader
+Rename Parameter	configuration : Configuration to conf : Configuration in method private listFiles(conf Configuration, fileStatus FileStatus) : List<FileStatus> from class parquet.hadoop.ParquetFileReader
+Remove Parameter Modifier	final in parameter configuration : Configuration in method public readAllFootersInParallelUsingSummaryFiles(configuration Configuration, partFiles List<FileStatus>) : List<Footer> from class parquet.hadoop.ParquetFileReader
+Add Method Annotation	@Deprecated in method public readAllFootersInParallelUsingSummaryFiles(configuration Configuration, partFiles List<FileStatus>) : List<Footer> from class parquet.hadoop.ParquetFileReader
+Add Method Annotation	@Deprecated in method public readAllFootersInParallel(configuration Configuration, partFiles List<FileStatus>) : List<Footer> from class parquet.hadoop.ParquetFileReader
+Add Method Annotation	@Deprecated in method public readFooters(configuration Configuration, pathStatus FileStatus) : List<Footer> from class parquet.hadoop.ParquetFileReader
+Add Method Annotation	@Deprecated in method public readFooter(configuration Configuration, file Path) : ParquetMetadata from class parquet.hadoop.ParquetFileReader
+Add Method Annotation	@Deprecated in method public readFooter(configuration Configuration, file FileStatus) : ParquetMetadata from class parquet.hadoop.ParquetFileReader
+Rename Parameter	file : Path to path : Path in method public readFooters(configuration Configuration, path Path) : List<Footer> from class parquet.hadoop.ParquetFileReader
+Add Method Annotation	@Deprecated in method public readFooters(configuration Configuration, path Path) : List<Footer> from class parquet.hadoop.ParquetFileReader
+Remove Method Modifier	final in method public readFooters(configuration Configuration, file Path) : List<Footer> from class parquet.hadoop.ParquetFileReader
+Extract Method	private writeMetadataFile(outputPath Path, metadataFooter ParquetMetadata, fs FileSystem, parquetMetadataFile String) : void extracted from public writeMetadataFile(configuration Configuration, outputPath Path, footers List<Footer>) : void in class parquet.hadoop.ParquetFileWriter
+Parameterize Attribute	PARQUET_METADATA_FILE : String to parquetMetadataFile : String in method private writeMetadataFile(outputPath Path, metadataFooter ParquetMetadata, fs FileSystem, parquetMetadataFile String) : void from class parquet.hadoop.ParquetFileWriter
+Extract Method	public getFooters(configuration Configuration, statuses Collection<FileStatus>) : List<Footer> extracted from public getFooters(configuration Configuration, statuses List<FileStatus>) : List<Footer> in class parquet.hadoop.ParquetInputFormat
+Extract Variable	strictTypeChecking : boolean in method public getSplits(configuration Configuration, footers List<Footer>) : List<ParquetInputSplit> from class parquet.hadoop.ParquetInputFormat
+Add Class Annotation	@Private in class parquet.hadoop.ParquetInputSplit
+Rename Method	package decompressString(in DataInput) : String renamed to private readUTF8(in DataInput) : String in class parquet.hadoop.ParquetInputSplit
+Inline Method	package compressString(str String) : byte[] inlined to public write(hout DataOutput) : void in class parquet.hadoop.ParquetInputSplit
+Inline Method	private writeBlock(out DataOutput, block BlockMetaData) : void inlined to public write(hout DataOutput) : void in class parquet.hadoop.ParquetInputSplit
+Change Variable Type	gzip : GZIPOutputStream to out : DataOutputStream in method public write(hout DataOutput) : void from class parquet.hadoop.ParquetInputSplit
+Rename Variable	obj : ByteArrayOutputStream to baos : ByteArrayOutputStream in method public write(hout DataOutput) : void from class parquet.hadoop.ParquetInputSplit
+Rename Variable	gzip : GZIPOutputStream to out : DataOutputStream in method public write(hout DataOutput) : void from class parquet.hadoop.ParquetInputSplit
+Change Variable Type	column : ColumnChunkMetaData to o : long in method public write(hout DataOutput) : void from class parquet.hadoop.ParquetInputSplit
+Rename Variable	column : ColumnChunkMetaData to o : long in method public write(hout DataOutput) : void from class parquet.hadoop.ParquetInputSplit
+Extract Method	private readArray(in DataInput) : byte[] extracted from public readFields(in DataInput) : void in class parquet.hadoop.ParquetInputSplit
+Extract Method	private writeArray(out DataOutput, bytes byte[]) : void extracted from public write(out DataOutput) : void in class parquet.hadoop.ParquetInputSplit
+Extract Method	private readArray(in DataInput) : byte[] extracted from package decompressString(in DataInput) : String in class parquet.hadoop.ParquetInputSplit
+Rename Variable	blocksSize : int to len : int in method private readArray(in DataInput) : byte[] from class parquet.hadoop.ParquetInputSplit
+Add Method Annotation	@Deprecated in method public ParquetInputSplit(path Path, start long, length long, hosts String[], blocks List<BlockMetaData>, requestedSchema String, fileSchema String, extraMetadata Map<String,String>, readSupportMetadata Map<String,String>) from class parquet.hadoop.ParquetInputSplit
+Localize Parameter	in : DataInput to in : DataInputStream in method public readFields(hin DataInput) : void from class parquet.hadoop.ParquetInputSplit
+Change Variable Type	in : DataInput to in : DataInputStream in method public readFields(hin DataInput) : void from class parquet.hadoop.ParquetInputSplit
+Add Parameter	hin : DataInput in method public readFields(hin DataInput) : void from class parquet.hadoop.ParquetInputSplit
+Add Method Modifier	final in method public readFields(hin DataInput) : void from class parquet.hadoop.ParquetInputSplit
+Localize Parameter	out : DataOutput to out : DataOutputStream in method public write(hout DataOutput) : void from class parquet.hadoop.ParquetInputSplit
+Change Variable Type	out : DataOutput to out : DataOutputStream in method public write(hout DataOutput) : void from class parquet.hadoop.ParquetInputSplit
+Add Parameter	hout : DataOutput in method public write(hout DataOutput) : void from class parquet.hadoop.ParquetInputSplit
+Add Method Modifier	final in method public write(hout DataOutput) : void from class parquet.hadoop.ParquetInputSplit
+Change Variable Type	hosts : String[] to hosts : String in method public toString() : String from class parquet.hadoop.ParquetInputSplit
+Change Method Access Modifier	public to package in method package getRequestedSchema() : String from class parquet.hadoop.ParquetInputSplit
+Change Method Access Modifier	public to package in method package getReadSupportMetadata() : Map<String,String> from class parquet.hadoop.ParquetInputSplit
+Change Method Access Modifier	package to private in method private readUTF8(in DataInput) : String from class parquet.hadoop.ParquetInputSplit
+Add Method Modifier	static in method private readUTF8(in DataInput) : String from class parquet.hadoop.ParquetInputSplit
+Rename Attribute	fileSchema : String to end : long in class parquet.hadoop.ParquetInputSplit
+Change Attribute Type	fileSchema : String to end : long in class parquet.hadoop.ParquetInputSplit
+Extract Variable	path : Path in method private initializeInternalReader(split ParquetInputSplit, configuration Configuration) : void from class parquet.hadoop.ParquetRecordReader
+Extract Variable	requestedSchema : MessageType in method private initializeInternalReader(split ParquetInputSplit, configuration Configuration) : void from class parquet.hadoop.ParquetRecordReader
+Extract Variable	readSupportMetadata : Map<String,String> in method private initializeInternalReader(split ParquetInputSplit, configuration Configuration) : void from class parquet.hadoop.ParquetRecordReader
+Remove Class Annotation	@SuppressWarnings("deprecation") in class parquet.hadoop.mapred.DeprecatedParquetInputFormat
+Remove Class Annotation	@SuppressWarnings("deprecation") in class parquet.hadoop.mapred.DeprecatedParquetOutputFormat
+Rename Method	public testReadWriteWithCounteDeprecated() : void renamed to public testReadWriteWithCountDeprecated() : void in class parquet.hadoop.DeprecatedInputFormatTest
+Extract Variable	loc : int in method private shouldSplitLocationBe(splits List<ParquetInputSplit>, locations int...) : void from class parquet.hadoop.TestInputFormat
+Extract Variable	split : ParquetInputSplit in method private shouldSplitLocationBe(splits List<ParquetInputSplit>, locations int...) : void from class parquet.hadoop.TestInputFormat
+Extract Method	private runMapReduceJob(codec CompressionCodecName, extraConf Map<String,String>) : void extracted from private runMapReduceJob(codec CompressionCodecName) : void in class parquet.hadoop.example.TestInputOutputFormat
+Extract Method	private testReadWrite(codec CompressionCodecName, conf Map<String,String>) : void extracted from private testReadWrite(codec CompressionCodecName) : void in class parquet.hadoop.example.TestInputOutputFormat
+Change Class Access Modifier	private to package in class parquet.hadoop.ClientSideMetadataSplitStrategy.SplitInfo
+Remove Parameter	fileMetaData : FileMetaData in method public getParquetInputSplit(fileStatus FileStatus, fileMetaData FileMetaData, requestedSchema String, readSupportMetadata Map<String,String>, fileSchema String) : ParquetInputSplit from class parquet.hadoop.ParquetInputFormat.SplitInfo
+Remove Parameter	fileSchema : String in method public getParquetInputSplit(fileStatus FileStatus, fileMetaData FileMetaData, requestedSchema String, readSupportMetadata Map<String,String>, fileSchema String) : ParquetInputSplit from class parquet.hadoop.ParquetInputFormat.SplitInfo
+Move Attribute	private LOG : Log from class parquet.hadoop.ParquetInputSplit to private LOG : Log from class parquet.hadoop.SplitStrategy
+Move Attribute	private LOG : Log from class parquet.hadoop.ParquetInputSplit to private LOG : Log from class parquet.hadoop.ClientSideMetadataSplitStrategy
+Move Attribute	private LOG : Log from class parquet.hadoop.mapred.DeprecatedParquetOutputFormat to private LOG : Log from class parquet.hadoop.SplitStrategy
+Move Attribute	private LOG : Log from class parquet.hadoop.mapred.DeprecatedParquetOutputFormat to private LOG : Log from class parquet.hadoop.ClientSideMetadataSplitStrategy
+Move Method	private checkSorted(rowGroupBlocks List<BlockMetaData>) : void from class parquet.hadoop.ParquetInputFormat to private checkSorted(rowGroupBlocks List<BlockMetaData>) : void from class parquet.hadoop.ClientSideMetadataSplitStrategy
+Inline Method	private readBlock(in DataInput) : BlockMetaData inlined to public readFields(hin DataInput) : void in class parquet.hadoop.ParquetInputSplit
+Developers have reported that 11158 commits involve refactoring but only 2620 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2620 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b4854242123a750e061685d
+Issue Title: : Adding Type Persuasion for Primitive Types
+Issue Description:  Pull request: https://github.com/apache/incubator-parquet-mr/pull/3Original from the old repo: Parquet/parquet-mr#410
+Refactorings at 9ad5485c3310a8c51510ea50e24834b6cf98c45c
+Extract Method	public getColumnIO(requestedSchema MessageType, fileSchema MessageType, strict boolean) : MessageColumnIO extracted from public getColumnIO(requestedSchema MessageType, fileSchema MessageType) : MessageColumnIO in class parquet.io.ColumnIOFactory
+Extract Method	protected union(toMerge Type, strict boolean) : Type extracted from protected union(toMerge Type) : Type in class parquet.schema.GroupType
+Extract Method	package mergeFields(toMerge GroupType, strict boolean) : List<Type> extracted from package mergeFields(toMerge GroupType) : List<Type> in class parquet.schema.GroupType
+Extract Method	public union(toMerge MessageType, strict boolean) : MessageType extracted from public union(toMerge MessageType) : MessageType in class parquet.schema.MessageType
+Extract Method	protected union(toMerge Type, strict boolean) : Type extracted from protected union(toMerge Type) : Type in class parquet.schema.PrimitiveType
+Extract Method	package getGlobalMetaData(footers List<Footer>, strict boolean) : GlobalMetaData extracted from package getGlobalMetaData(footers List<Footer>) : GlobalMetaData in class parquet.hadoop.ParquetFileWriter
+Extract Method	package mergeInto(toMerge FileMetaData, mergedMetadata GlobalMetaData, strict boolean) : GlobalMetaData extracted from package mergeInto(toMerge FileMetaData, mergedMetadata GlobalMetaData) : GlobalMetaData in class parquet.hadoop.ParquetFileWriter
+Extract Method	package mergeInto(toMerge MessageType, mergedSchema MessageType, strict boolean) : MessageType extracted from package mergeInto(toMerge MessageType, mergedSchema MessageType) : MessageType in class parquet.hadoop.ParquetFileWriter
+Add Parameter	dictionarySupport : boolean in method public FieldStringConverter(parent ParentValueContainer, dictionarySupport boolean) from class parquet.pig.convert.TupleConverter.FieldStringConverter
+Developers have reported that 11158 commits involve refactoring but only 2621 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2621 commits.
+
+No refactorings detected at 0751f97bf6677c3d55aa71542d572dc8fcb9e79a
+
+No refactorings detected at 21d871b54940ad8e552fac54808fe0b31872ade8
+
+No refactorings detected at f8b06df7a56f92f4bc7dd564ad7ec026e3b4f3da
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b4854562123a750e0616a56
+Issue Title: : improve parquet scrooge integration
+Issue Description:  upgrade to scrooge 3.17.0, remove reflection based field info inspection, support enum and requirement type correctly
+Refactorings at 52f3240d90f2397cd1850ab11674ba08a0ecb2a0
+Rename Method	private convertStructFromClassName(className String) : ThriftType.StructType renamed to private convertStructFromClass(klass Class) : ThriftType.StructType in class parquet.scrooge.ScroogeStructConverter
+Extract Method	private getCompanionClass(klass Class) : Class extracted from private convertStructFromClassName(className String) : ThriftType.StructType in class parquet.scrooge.ScroogeStructConverter
+Change Parameter Type	className : String to klass : Class in method private getCompanionClass(klass Class) : Class from class parquet.scrooge.ScroogeStructConverter
+Rename Parameter	className : String to klass : Class in method private getCompanionClass(klass Class) : Class from class parquet.scrooge.ScroogeStructConverter
+Change Variable Type	e : Exception to e : ReflectiveOperationException in method private convertCompanionClassToStruct(companionClass Class<?>) : ThriftType.StructType from class parquet.scrooge.ScroogeStructConverter
+Change Variable Type	field : ThriftStructField to field : ThriftStructFieldInfo in method private convertCompanionClassToStruct(companionClass Class<?>) : ThriftType.StructType from class parquet.scrooge.ScroogeStructConverter
+Change Variable Type	scroogeFields : Iterable<ThriftStructField> to scroogeFields : Iterable<ThriftStructFieldInfo> in method private convertCompanionClassToStruct(companionClass Class<?>) : ThriftType.StructType from class parquet.scrooge.ScroogeStructConverter
+Rename Parameter	className : String to klass : Class in method private convertStructFromClass(klass Class) : ThriftType.StructType from class parquet.scrooge.ScroogeStructConverter
+Change Parameter Type	className : String to klass : Class in method private convertStructFromClass(klass Class) : ThriftType.StructType from class parquet.scrooge.ScroogeStructConverter
+Change Parameter Type	scroogeField : ThriftStructField to scroogeField : ThriftStructFieldInfo in method public toThriftField(scroogeField ThriftStructFieldInfo) : ThriftField from class parquet.scrooge.ScroogeStructConverter
+Change Parameter Type	f : ThriftStructField to f : ThriftStructFieldInfo in method private convertSetTypeField(f ThriftStructFieldInfo, requirement Requirement) : ThriftType from class parquet.scrooge.ScroogeStructConverter
+Change Parameter Type	f : ThriftStructField to f : ThriftStructFieldInfo in method private convertListTypeField(f ThriftStructFieldInfo, requirement Requirement) : ThriftType from class parquet.scrooge.ScroogeStructConverter
+Change Parameter Type	f : ThriftStructField to f : ThriftStructFieldInfo in method private convertMapTypeField(f ThriftStructFieldInfo, requirement Requirement) : ThriftType from class parquet.scrooge.ScroogeStructConverter
+Change Variable Type	e : Exception to e : ReflectiveOperationException in method public convertEnumTypeField(f ThriftStructFieldInfo) : ThriftType from class parquet.scrooge.ScroogeStructConverter
+Change Parameter Type	f : ThriftStructField to f : ThriftStructFieldInfo in method public convertEnumTypeField(f ThriftStructFieldInfo) : ThriftType from class parquet.scrooge.ScroogeStructConverter
+Developers have reported that 11158 commits involve refactoring but only 2622 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2622 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b4854652123a750e0616add
+Issue Title: : Refactor and Document Parquet Tools
+Issue Description:  make Parquet Tools runnable from a bundle, create documentation on the usage of it.So the use can use parquet tools with:
+Refactorings at 31fb4dfef212791f86f052ce8a3adeabaf830cf2
+Extract Variable	VoidStream : PrintStream in method public main(args String[]) : void from class parquet.tools.Main
+Change Variable Type	metaData : ParquetMetadata to footers : List<Footer> in method public execute(options CommandLine) : void from class parquet.tools.command.ShowMetaCommand
+Rename Variable	metaData : ParquetMetadata to footers : List<Footer> in method public execute(options CommandLine) : void from class parquet.tools.command.ShowMetaCommand
+Developers have reported that 11158 commits involve refactoring but only 2623 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2623 commits.
+
+No refactorings detected at fbe458f8407210b20aaa2d60de9359ff88bc05c4
+
+No refactorings detected at b287d35fe6c3814f38db44e31cf52d978e659960
+
+No refactorings detected at 4b5cda5a2c6ca613db5129d50ffffce2604ad9eb
+
+No refactorings detected at 2e62764c0c386632e87ee8d12d0505848df1015e
+
+No refactorings detected at 5f48f19ec460a05e4eddc841e5eb436f0a8dc97e
+
+No refactorings detected at 013b445ede8d9e7aad4915859d0c869b9b712f8d
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b4854b32123a750e0616d6d
+Issue Title: : Encoding issue with fixed length byte arrays
+Issue Description:  While running some tests against the master branch I hit an encoding issue that seemed like a bug to me.
+Refactorings at bfb314505469afcd5ea7b5bd15121acd50425318
+Change Parameter Type	context : TaskInputOutputContext to context : TaskAttemptContext in method public getCounter(context TaskAttemptContext, groupName String, counterName String) : Counter from class parquet.hadoop.util.ContextUtil
+Extract Method	public initCounterFromContext(context TaskAttemptContext) : void extracted from public initCounterFromContext(context TaskInputOutputContext<?,?,?,?>) : void in class parquet.hadoop.util.counters.BenchmarkCounter
+Add Method Annotation	@Deprecated in method public initCounterFromContext(context TaskInputOutputContext<?,?,?,?>) : void from class parquet.hadoop.util.counters.BenchmarkCounter
+Change Attribute Type	context : TaskInputOutputContext<?,?,?,?> to context : TaskAttemptContext in class parquet.hadoop.util.counters.mapreduce.MapReduceCounterLoader
+Add Method Annotation	@Deprecated in method public MapReduceCounterLoader(context TaskInputOutputContext<?,?,?,?>) from class parquet.hadoop.util.counters.mapreduce.MapReduceCounterLoader
+Developers have reported that 11158 commits involve refactoring but only 2624 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2624 commits.
+
+No refactorings detected at 54bb983271adcbcc1519ab9e2288871d69093708
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b4854ba2123a750e0616d94
+Issue Title: : Improvements in ByteBuffer read path
+Issue Description:  For Apache Drill, we are looking to pass in a buffer that we have already allocated (in this case from Direct memory), wrapped in a ByteBuffer.The current effort to allow a ByteBuffer read path is great except that the interface allocates the memory and there is no way for an application to pass in memory that has been allocated or (even better) to provide an allocator.
+Refactorings at 6b605a4ea05b66e1a6bf843353abcb4834a4ced8
+Remove Method Modifier	static in method public getColumnDescriptorValuesWriter(maxLevel int, initialSizePerCol int, pageSize int) : ValuesWriter from class org.apache.parquet.column.ParquetProperties
+Add Parameter	allocator : ByteBufferAllocator in method public newColumnWriteStore(schema MessageType, pageStore PageWriteStore, pageSize int, allocator ByteBufferAllocator) : ColumnWriteStore from class org.apache.parquet.column.ParquetProperties
+Change Variable Type	bytes : byte[] to bytes : ByteBuffer in method private readPageV1(page DataPageV1) : void from class org.apache.parquet.column.impl.ColumnReaderImpl
+Change Parameter Type	bytes : byte[] to bytes : ByteBuffer in method private initDataReader(dataEncoding Encoding, bytes ByteBuffer, offset int, valueCount int) : void from class org.apache.parquet.column.impl.ColumnReaderImpl
+Add Parameter	allocator : ByteBufferAllocator in method public ColumnWriteStoreV1(pageWriteStore PageWriteStore, pageSizeThreshold int, dictionaryPageSizeThreshold int, enableDictionary boolean, writerVersion WriterVersion, allocator ByteBufferAllocator) from class org.apache.parquet.column.impl.ColumnWriteStoreV1
+Add Method Annotation	@Override in method public getBufferedSizeInMemory() : long from class org.apache.parquet.column.impl.ColumnWriterV1
+Add Parameter	allocator : ByteBufferAllocator in method public ColumnWriterV1(path ColumnDescriptor, pageWriter PageWriter, pageSizeThreshold int, dictionaryPageSizeThreshold int, enableDictionary boolean, writerVersion WriterVersion, allocator ByteBufferAllocator) from class org.apache.parquet.column.impl.ColumnWriterV1
+Rename Method	public createDictionaryPage() : DictionaryPage renamed to public toDictPageAndClose() : DictionaryPage in class org.apache.parquet.column.values.ValuesWriter
+Change Attribute Type	in : ByteArrayInputStream to in : ByteBufferInputStream in class org.apache.parquet.column.values.bitpacking.BitPackingValuesReader
+Change Parameter Type	in : byte[] to in : ByteBuffer in method public initFromPage(valueCount int, in ByteBuffer, offset int) : void from class org.apache.parquet.column.values.bitpacking.BitPackingValuesReader
+Add Parameter	allocator : ByteBufferAllocator in method public BitPackingValuesWriter(bound int, initialCapacity int, pageSize int, allocator ByteBufferAllocator) from class org.apache.parquet.column.values.bitpacking.BitPackingValuesWriter
+Change Attribute Type	encoded : byte[] to encoded : ByteBuffer in class org.apache.parquet.column.values.bitpacking.ByteBitPackingValuesReader
+Change Parameter Type	page : byte[] to page : ByteBuffer in method public initFromPage(valueCount int, page ByteBuffer, offset int) : void from class org.apache.parquet.column.values.bitpacking.ByteBitPackingValuesReader
+Change Attribute Type	buf : byte[] to buf : ByteBuffer in class org.apache.parquet.column.values.boundedint.BitReader
+Change Parameter Type	buf : byte[] to buf : ByteBuffer in method public prepare(buf ByteBuffer, offset int, length int) : void from class org.apache.parquet.column.values.boundedint.BitReader
+Add Parameter	allocator : ByteBufferAllocator in method public BitWriter(initialCapacity int, pageSize int, allocator ByteBufferAllocator) from class org.apache.parquet.column.values.boundedint.BitWriter
+Add Parameter	allocator : ByteBufferAllocator in method public getBoundedWriter(bound int, initialCapacity int, pageSize int, allocator ByteBufferAllocator) : ValuesWriter from class org.apache.parquet.column.values.boundedint.BoundedIntValuesFactory
+Change Parameter Type	in : byte[] to in : ByteBuffer in method public initFromPage(valueCount int, in ByteBuffer, offset int) : void from class org.apache.parquet.column.values.boundedint.BoundedIntValuesReader
+Add Parameter	allocator : ByteBufferAllocator in method public BoundedIntValuesWriter(bound int, initialCapacity int, pageSize int, allocator ByteBufferAllocator) from class org.apache.parquet.column.values.boundedint.BoundedIntValuesWriter
+Change Parameter Type	in : byte[] to in : ByteBuffer in method public initFromPage(valueCount int, in ByteBuffer, offset int) : void from class org.apache.parquet.column.values.boundedint.ZeroIntegerValuesReader
+Change Attribute Type	page : byte[] to page : ByteBuffer in class org.apache.parquet.column.values.delta.DeltaBinaryPackingValuesReader
+Change Attribute Type	in : ByteArrayInputStream to in : ByteBufferInputStream in class org.apache.parquet.column.values.delta.DeltaBinaryPackingValuesReader
+Change Parameter Type	page : byte[] to page : ByteBuffer in method public initFromPage(valueCount int, page ByteBuffer, offset int) : void from class org.apache.parquet.column.values.delta.DeltaBinaryPackingValuesReader
+Add Parameter	allocator : ByteBufferAllocator in method public DeltaBinaryPackingValuesWriter(slabSize int, pageSize int, allocator ByteBufferAllocator) from class org.apache.parquet.column.values.delta.DeltaBinaryPackingValuesWriter
+Add Parameter	allocator : ByteBufferAllocator in method public DeltaBinaryPackingValuesWriter(blockSizeInValues int, miniBlockNum int, slabSize int, pageSize int, allocator ByteBufferAllocator) from class org.apache.parquet.column.values.delta.DeltaBinaryPackingValuesWriter
+Change Attribute Type	in : byte[] to in : ByteBuffer in class org.apache.parquet.column.values.deltalengthbytearray.DeltaLengthByteArrayValuesReader
+Change Parameter Type	in : byte[] to in : ByteBuffer in method public initFromPage(valueCount int, in ByteBuffer, offset int) : void from class org.apache.parquet.column.values.deltalengthbytearray.DeltaLengthByteArrayValuesReader
+Add Parameter	allocator : ByteBufferAllocator in method public DeltaLengthByteArrayValuesWriter(initialSize int, pageSize int, allocator ByteBufferAllocator) from class org.apache.parquet.column.values.deltalengthbytearray.DeltaLengthByteArrayValuesWriter
+Change Parameter Type	page : byte[] to page : ByteBuffer in method public initFromPage(valueCount int, page ByteBuffer, offset int) : void from class org.apache.parquet.column.values.deltastrings.DeltaByteArrayReader
+Add Parameter	allocator : ByteBufferAllocator in method public DeltaByteArrayWriter(initialCapacity int, pageSize int, allocator ByteBufferAllocator) from class org.apache.parquet.column.values.deltastrings.DeltaByteArrayWriter
+Change Attribute Type	in : ByteArrayInputStream to in : ByteBufferInputStream in class org.apache.parquet.column.values.dictionary.DictionaryValuesReader
+Change Parameter Type	page : byte[] to page : ByteBuffer in method public initFromPage(valueCount int, page ByteBuffer, offset int) : void from class org.apache.parquet.column.values.dictionary.DictionaryValuesReader
+Rename Method	public createDictionaryPage() : DictionaryPage renamed to public toDictPageAndClose() : DictionaryPage in class org.apache.parquet.column.values.dictionary.DictionaryValuesWriter.PlainBinaryDictionaryValuesWriter
+Add Parameter	allocator : ByteBufferAllocator in method public PlainBinaryDictionaryValuesWriter(maxDictionaryByteSize int, encodingForDataPage Encoding, encodingForDictionaryPage Encoding, allocator ByteBufferAllocator) from class org.apache.parquet.column.values.dictionary.DictionaryValuesWriter.PlainBinaryDictionaryValuesWriter
+Rename Method	public createDictionaryPage() : DictionaryPage renamed to public toDictPageAndClose() : DictionaryPage in class org.apache.parquet.column.values.dictionary.DictionaryValuesWriter.PlainFixedLenArrayDictionaryValuesWriter
+Add Parameter	allocator : ByteBufferAllocator in method public PlainFixedLenArrayDictionaryValuesWriter(maxDictionaryByteSize int, length int, encodingForDataPage Encoding, encodingForDictionaryPage Encoding, allocator ByteBufferAllocator) from class org.apache.parquet.column.values.dictionary.DictionaryValuesWriter.PlainFixedLenArrayDictionaryValuesWriter
+Rename Method	public createDictionaryPage() : DictionaryPage renamed to public toDictPageAndClose() : DictionaryPage in class org.apache.parquet.column.values.dictionary.DictionaryValuesWriter.PlainLongDictionaryValuesWriter
+Add Parameter	allocator : ByteBufferAllocator in method public PlainLongDictionaryValuesWriter(maxDictionaryByteSize int, encodingForDataPage Encoding, encodingForDictionaryPage Encoding, allocator ByteBufferAllocator) from class org.apache.parquet.column.values.dictionary.DictionaryValuesWriter.PlainLongDictionaryValuesWriter
+Rename Method	public createDictionaryPage() : DictionaryPage renamed to public toDictPageAndClose() : DictionaryPage in class org.apache.parquet.column.values.dictionary.DictionaryValuesWriter.PlainDoubleDictionaryValuesWriter
+Add Parameter	allocator : ByteBufferAllocator in method public PlainDoubleDictionaryValuesWriter(maxDictionaryByteSize int, encodingForDataPage Encoding, encodingForDictionaryPage Encoding, allocator ByteBufferAllocator) from class org.apache.parquet.column.values.dictionary.DictionaryValuesWriter.PlainDoubleDictionaryValuesWriter
+Rename Method	public createDictionaryPage() : DictionaryPage renamed to public toDictPageAndClose() : DictionaryPage in class org.apache.parquet.column.values.dictionary.DictionaryValuesWriter.PlainIntegerDictionaryValuesWriter
+Add Parameter	allocator : ByteBufferAllocator in method public PlainIntegerDictionaryValuesWriter(maxDictionaryByteSize int, encodingForDataPage Encoding, encodingForDictionaryPage Encoding, allocator ByteBufferAllocator) from class org.apache.parquet.column.values.dictionary.DictionaryValuesWriter.PlainIntegerDictionaryValuesWriter
+Rename Method	public createDictionaryPage() : DictionaryPage renamed to public toDictPageAndClose() : DictionaryPage in class org.apache.parquet.column.values.dictionary.DictionaryValuesWriter.PlainFloatDictionaryValuesWriter
+Add Parameter	allocator : ByteBufferAllocator in method public PlainFloatDictionaryValuesWriter(maxDictionaryByteSize int, encodingForDataPage Encoding, encodingForDictionaryPage Encoding, allocator ByteBufferAllocator) from class org.apache.parquet.column.values.dictionary.DictionaryValuesWriter.PlainFloatDictionaryValuesWriter
+Rename Parameter	dictionaryEncoder : ValuesWriter to dictPageWriter : ValuesWriter in method protected dictPage(dictPageWriter ValuesWriter) : DictionaryPage from class org.apache.parquet.column.values.dictionary.DictionaryValuesWriter
+Add Parameter	allocator : ByteBufferAllocator in method protected DictionaryValuesWriter(maxDictionaryByteSize int, encodingForDataPage Encoding, encodingForDictionaryPage Encoding, allocator ByteBufferAllocator) from class org.apache.parquet.column.values.dictionary.DictionaryValuesWriter
+Change Variable Type	dictionaryBytes : byte[] to dictionaryBytes : ByteBuffer in method public PlainBinaryDictionary(dictionaryPage DictionaryPage, length Integer) from class org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainBinaryDictionary
+Change Variable Type	dictionaryBytes : byte[] to dictionaryByteBuf : ByteBuffer in method public PlainLongDictionary(dictionaryPage DictionaryPage) from class org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainLongDictionary
+Rename Variable	dictionaryBytes : byte[] to dictionaryByteBuf : ByteBuffer in method public PlainLongDictionary(dictionaryPage DictionaryPage) from class org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainLongDictionary
+Change Variable Type	dictionaryBytes : byte[] to dictionaryByteBuf : ByteBuffer in method public PlainDoubleDictionary(dictionaryPage DictionaryPage) from class org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainDoubleDictionary
+Rename Variable	dictionaryBytes : byte[] to dictionaryByteBuf : ByteBuffer in method public PlainDoubleDictionary(dictionaryPage DictionaryPage) from class org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainDoubleDictionary
+Change Variable Type	dictionaryBytes : byte[] to dictionaryByteBuf : ByteBuffer in method public PlainIntegerDictionary(dictionaryPage DictionaryPage) from class org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainIntegerDictionary
+Rename Variable	dictionaryBytes : byte[] to dictionaryByteBuf : ByteBuffer in method public PlainIntegerDictionary(dictionaryPage DictionaryPage) from class org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainIntegerDictionary
+Change Variable Type	dictionaryBytes : byte[] to dictionaryByteBuf : ByteBuffer in method public PlainFloatDictionary(dictionaryPage DictionaryPage) from class org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainFloatDictionary
+Rename Variable	dictionaryBytes : byte[] to dictionaryByteBuf : ByteBuffer in method public PlainFloatDictionary(dictionaryPage DictionaryPage) from class org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainFloatDictionary
+Rename Method	public createDictionaryPage() : DictionaryPage renamed to public toDictPageAndClose() : DictionaryPage in class org.apache.parquet.column.values.fallback.FallbackValuesWriter
+Change Attribute Type	in : byte[] to in : ByteBuffer in class org.apache.parquet.column.values.plain.BinaryPlainValuesReader
+Change Parameter Type	in : byte[] to in : ByteBuffer in method public initFromPage(valueCount int, in ByteBuffer, offset int) : void from class org.apache.parquet.column.values.plain.BinaryPlainValuesReader
+Change Parameter Type	in : byte[] to in : ByteBuffer in method public initFromPage(valueCount int, in ByteBuffer, offset int) : void from class org.apache.parquet.column.values.plain.BooleanPlainValuesReader
+Change Attribute Type	in : byte[] to in : ByteBuffer in class org.apache.parquet.column.values.plain.FixedLenByteArrayPlainValuesReader
+Change Parameter Type	in : byte[] to in : ByteBuffer in method public initFromPage(valueCount int, in ByteBuffer, offset int) : void from class org.apache.parquet.column.values.plain.FixedLenByteArrayPlainValuesReader
+Add Parameter	allocator : ByteBufferAllocator in method public FixedLenByteArrayPlainValuesWriter(length int, initialSize int, pageSize int, allocator ByteBufferAllocator) from class org.apache.parquet.column.values.plain.FixedLenByteArrayPlainValuesWriter
+Change Parameter Type	in : byte[] to in : ByteBuffer in method public initFromPage(valueCount int, in ByteBuffer, offset int) : void from class org.apache.parquet.column.values.plain.PlainValuesReader
+Add Parameter	allocator : ByteBufferAllocator in method public PlainValuesWriter(initialSize int, pageSize int, allocator ByteBufferAllocator) from class org.apache.parquet.column.values.plain.PlainValuesWriter
+Change Attribute Type	in : ByteArrayInputStream to in : InputStream in class org.apache.parquet.column.values.rle.RunLengthBitPackingHybridDecoder
+Change Parameter Type	in : ByteArrayInputStream to in : InputStream in method public RunLengthBitPackingHybridDecoder(bitWidth int, in InputStream) from class org.apache.parquet.column.values.rle.RunLengthBitPackingHybridDecoder
+Add Parameter	allocator : ByteBufferAllocator in method public RunLengthBitPackingHybridEncoder(bitWidth int, initialCapacity int, pageSize int, allocator ByteBufferAllocator) from class org.apache.parquet.column.values.rle.RunLengthBitPackingHybridEncoder
+Change Variable Type	in : ByteArrayInputStream to in : ByteBufferInputStream in method public initFromPage(valueCountL int, page ByteBuffer, offset int) : void from class org.apache.parquet.column.values.rle.RunLengthBitPackingHybridValuesReader
+Change Parameter Type	page : byte[] to page : ByteBuffer in method public initFromPage(valueCountL int, page ByteBuffer, offset int) : void from class org.apache.parquet.column.values.rle.RunLengthBitPackingHybridValuesReader
+Add Parameter	allocator : ByteBufferAllocator in method public RunLengthBitPackingHybridValuesWriter(bitWidth int, initialCapacity int, pageSize int, allocator ByteBufferAllocator) from class org.apache.parquet.column.values.rle.RunLengthBitPackingHybridValuesWriter
+Remove Attribute Modifier	transient in attribute private value : ByteBuffer from class org.apache.parquet.io.api.Binary.ByteBufferBackedBinary
+Remove Attribute Modifier	transient in attribute private cachedBytes : byte[] from class org.apache.parquet.io.api.Binary.ByteBufferBackedBinary
+Extract Variable	ret : ByteBuffer in method public toByteBuffer() : ByteBuffer from class org.apache.parquet.io.api.Binary.ByteBufferBackedBinary
+Add Parameter	offset : int in method public ByteBufferBackedBinary(value ByteBuffer, offset int, length int, isBackingBytesReused boolean) from class org.apache.parquet.io.api.Binary.ByteBufferBackedBinary
+Add Parameter	length : int in method public ByteBufferBackedBinary(value ByteBuffer, offset int, length int, isBackingBytesReused boolean) from class org.apache.parquet.io.api.Binary.ByteBufferBackedBinary
+Change Method Access Modifier	package to public in method public PrimitiveType(repetition Repetition, primitive PrimitiveTypeName, length int, name String, originalType OriginalType, decimalMeta DecimalMetadata, id ID) from class org.apache.parquet.schema.PrimitiveType
+Extract Method	private getDeltaByteArrayWriter() : DeltaByteArrayWriter extracted from public testReassemblyWithCorruptPage() : void in class org.apache.parquet.column.impl.TestCorruptDeltaByteArrays
+Extract Method	private getDeltaByteArrayWriter() : DeltaByteArrayWriter extracted from public testReassemblyWithoutCorruption() : void in class org.apache.parquet.column.impl.TestCorruptDeltaByteArrays
+Extract Method	private getDeltaByteArrayWriter() : DeltaByteArrayWriter extracted from public testOldReassemblyWithoutCorruption() : void in class org.apache.parquet.column.impl.TestCorruptDeltaByteArrays
+Extract Method	private getDeltaByteArrayWriter() : DeltaByteArrayWriter extracted from public testColumnReaderImplWithCorruptPage() : void in class org.apache.parquet.column.impl.TestCorruptDeltaByteArrays
+Change Variable Type	firstPageBytes : byte[] to firstPageBytes : ByteBuffer in method public testReassemblyWithCorruptPage() : void from class org.apache.parquet.column.impl.TestCorruptDeltaByteArrays
+Change Variable Type	corruptPageBytes : byte[] to corruptPageBytes : ByteBuffer in method public testReassemblyWithCorruptPage() : void from class org.apache.parquet.column.impl.TestCorruptDeltaByteArrays
+Change Variable Type	firstPageBytes : byte[] to firstPageBytes : ByteBuffer in method public testReassemblyWithoutCorruption() : void from class org.apache.parquet.column.impl.TestCorruptDeltaByteArrays
+Change Variable Type	secondPageBytes : byte[] to secondPageBytes : ByteBuffer in method public testReassemblyWithoutCorruption() : void from class org.apache.parquet.column.impl.TestCorruptDeltaByteArrays
+Change Variable Type	firstPageBytes : byte[] to firstPageBytes : ByteBuffer in method public testOldReassemblyWithoutCorruption() : void from class org.apache.parquet.column.impl.TestCorruptDeltaByteArrays
+Change Variable Type	secondPageBytes : byte[] to secondPageBytes : ByteBuffer in method public testOldReassemblyWithoutCorruption() : void from class org.apache.parquet.column.impl.TestCorruptDeltaByteArrays
+Extract Method	private getDeltaLengthByteArrayValuesWriter() : DeltaLengthByteArrayValuesWriter extracted from public testSerialization() : void in class org.apache.parquet.column.values.deltalengthbytearray.TestDeltaLengthByteArray
+Extract Method	private getDeltaLengthByteArrayValuesWriter() : DeltaLengthByteArrayValuesWriter extracted from public testRandomStrings() : void in class org.apache.parquet.column.values.deltalengthbytearray.TestDeltaLengthByteArray
+Extract Method	private getDeltaLengthByteArrayValuesWriter() : DeltaLengthByteArrayValuesWriter extracted from public testLengths() : void in class org.apache.parquet.column.values.deltalengthbytearray.TestDeltaLengthByteArray
+Change Variable Type	bytes : byte[] to bytes : ByteBuffer in method public testZeroValues() : void from class org.apache.parquet.column.values.dictionary.TestDictionary
+Change Variable Type	encodedBytes : byte[] to encodedBytes : ByteBuffer in method private doIntegrationTest(bitWidth int) : void from class org.apache.parquet.column.values.rle.RunLengthBitPackingHybridIntegrationTest
+Change Variable Type	in : ByteArrayInputStream to in : ByteBufferInputStream in method private doIntegrationTest(bitWidth int) : void from class org.apache.parquet.column.values.rle.RunLengthBitPackingHybridIntegrationTest
+Extract Method	private getRunLengthBitPackingHybridEncoder(bitWidth int, initialCapacity int, pageSize int) : RunLengthBitPackingHybridEncoder extracted from public testRLEOnly() : void in class org.apache.parquet.column.values.rle.TestRunLengthBitPackingHybridEncoder
+Extract Method	private getRunLengthBitPackingHybridEncoder(bitWidth int, initialCapacity int, pageSize int) : RunLengthBitPackingHybridEncoder extracted from public testRepeatedZeros() : void in class org.apache.parquet.column.values.rle.TestRunLengthBitPackingHybridEncoder
+Extract Method	private getRunLengthBitPackingHybridEncoder(bitWidth int, initialCapacity int, pageSize int) : RunLengthBitPackingHybridEncoder extracted from public testBitWidthZero() : void in class org.apache.parquet.column.values.rle.TestRunLengthBitPackingHybridEncoder
+Extract Method	private getRunLengthBitPackingHybridEncoder(bitWidth int, initialCapacity int, pageSize int) : RunLengthBitPackingHybridEncoder extracted from public testBitPackingOnly() : void in class org.apache.parquet.column.values.rle.TestRunLengthBitPackingHybridEncoder
+Extract Method	private getRunLengthBitPackingHybridEncoder(bitWidth int, initialCapacity int, pageSize int) : RunLengthBitPackingHybridEncoder extracted from public testBitPackingOverflow() : void in class org.apache.parquet.column.values.rle.TestRunLengthBitPackingHybridEncoder
+Extract Method	private getRunLengthBitPackingHybridEncoder(bitWidth int, initialCapacity int, pageSize int) : RunLengthBitPackingHybridEncoder extracted from public testTransitionFromBitPackingToRle() : void in class org.apache.parquet.column.values.rle.TestRunLengthBitPackingHybridEncoder
+Extract Method	private getRunLengthBitPackingHybridEncoder(bitWidth int, initialCapacity int, pageSize int) : RunLengthBitPackingHybridEncoder extracted from public testPaddingZerosOnUnfinishedBitPackedRuns() : void in class org.apache.parquet.column.values.rle.TestRunLengthBitPackingHybridEncoder
+Extract Method	private getRunLengthBitPackingHybridEncoder(bitWidth int, initialCapacity int, pageSize int) : RunLengthBitPackingHybridEncoder extracted from public testSwitchingModes() : void in class org.apache.parquet.column.values.rle.TestRunLengthBitPackingHybridEncoder
+Change Attribute Type	EMPTY_SLAB : byte[] to EMPTY_SLAB : ByteBuffer in class org.apache.parquet.bytes.CapacityByteArrayOutputStream
+Change Attribute Type	slabs : List<byte[]> to slabs : List<ByteBuffer> in class org.apache.parquet.bytes.CapacityByteArrayOutputStream
+Change Attribute Type	currentSlab : byte[] to currentSlab : ByteBuffer in class org.apache.parquet.bytes.CapacityByteArrayOutputStream
+Extract Method	public withTargetNumSlabs(minSlabSize int, maxCapacityHint int, targetNumSlabs int, allocator ByteBufferAllocator) : CapacityByteArrayOutputStream extracted from public withTargetNumSlabs(minSlabSize int, maxCapacityHint int, targetNumSlabs int) : CapacityByteArrayOutputStream in class org.apache.parquet.bytes.CapacityByteArrayOutputStream
+Add Method Annotation	@Deprecated in method public CapacityByteArrayOutputStream(initialSlabSize int, maxCapacityHint int) from class org.apache.parquet.bytes.CapacityByteArrayOutputStream
+Inline Variable	slab : byte[] in method public writeTo(out OutputStream) : void from class org.apache.parquet.bytes.CapacityByteArrayOutputStream
+Change Variable Type	slab : byte[] to slab : ByteBuffer in method public setByte(index long, value byte) : void from class org.apache.parquet.bytes.CapacityByteArrayOutputStream
+Add Parameter	useByteArray : boolean in method private generateUnpack(fw FileWriter, bitWidth int, batch int, msbFirst boolean, useByteArray boolean) : void from class org.apache.parquet.encoding.bitpacking.ByteBasedBitPackingGenerator
+Add Class Modifier	abstract in class org.apache.parquet.hadoop.CodecFactory.BytesDecompressor
+Add Class Modifier	static in class org.apache.parquet.hadoop.CodecFactory.BytesDecompressor
+Add Class Modifier	abstract in class org.apache.parquet.hadoop.CodecFactory.BytesCompressor
+Change Class Access Modifier	package to public in class org.apache.parquet.hadoop.CodecFactory
+Change Attribute Access Modifier	private to protected in attribute protected configuration : Configuration from class org.apache.parquet.hadoop.CodecFactory
+Extract Method	protected createDecompressor(codecName CompressionCodecName) : BytesDecompressor extracted from public getDecompressor(codecName CompressionCodecName) : BytesDecompressor in class org.apache.parquet.hadoop.CodecFactory
+Inline Variable	codec : CompressionCodec in method public getDecompressor(codecName CompressionCodecName) : BytesDecompressor from class org.apache.parquet.hadoop.CodecFactory
+Change Method Access Modifier	private to protected in method protected getCodec(codecName CompressionCodecName) : CompressionCodec from class org.apache.parquet.hadoop.CodecFactory
+Add Parameter	pageSize : int in method public CodecFactory(configuration Configuration, pageSize int) from class org.apache.parquet.hadoop.CodecFactory
+Remove Parameter	pageSize : int in method public getCompressor(codecName CompressionCodecName, pageSize int) : BytesCompressor from class org.apache.parquet.hadoop.CodecFactory
+Add Parameter	allocator : ByteBufferAllocator in method private ColumnChunkPageWriter(path ColumnDescriptor, compressor BytesCompressor, allocator ByteBufferAllocator) from class org.apache.parquet.hadoop.ColumnChunkPageWriteStore.ColumnChunkPageWriter
+Remove Parameter	pageSize : int in method private ColumnChunkPageWriter(path ColumnDescriptor, compressor BytesCompressor, pageSize int) from class org.apache.parquet.hadoop.ColumnChunkPageWriteStore.ColumnChunkPageWriter
+Change Parameter Type	pageSize : int to allocator : ByteBufferAllocator in method public ColumnChunkPageWriteStore(compressor BytesCompressor, schema MessageType, allocator ByteBufferAllocator) from class org.apache.parquet.hadoop.ColumnChunkPageWriteStore
+Rename Parameter	pageSize : int to allocator : ByteBufferAllocator in method public ColumnChunkPageWriteStore(compressor BytesCompressor, schema MessageType, allocator ByteBufferAllocator) from class org.apache.parquet.hadoop.ColumnChunkPageWriteStore
+Add Parameter	allocator : ByteBufferAllocator in method public InternalParquetRecordWriter(parquetFileWriter ParquetFileWriter, writeSupport WriteSupport<T>, schema MessageType, extraMetaData Map<String,String>, rowGroupSize long, pageSize int, compressor BytesCompressor, dictionaryPageSize int, enableDictionary boolean, validating boolean, writerVersion WriterVersion, allocator ByteBufferAllocator) from class org.apache.parquet.hadoop.InternalParquetRecordWriter
+Change Parameter Type	data : byte[] to data : ByteBuffer in method public Chunk(descriptor ChunkDescriptor, data ByteBuffer, offset int) from class org.apache.parquet.hadoop.ParquetFileReader.Chunk
+Change Parameter Type	data : byte[] to byteBuf : ByteBuffer in method private WorkaroundChunk(descriptor ChunkDescriptor, byteBuf ByteBuffer, offset int, f FSDataInputStream) from class org.apache.parquet.hadoop.ParquetFileReader.WorkaroundChunk
+Rename Parameter	data : byte[] to byteBuf : ByteBuffer in method private WorkaroundChunk(descriptor ChunkDescriptor, byteBuf ByteBuffer, offset int, f FSDataInputStream) from class org.apache.parquet.hadoop.ParquetFileReader.WorkaroundChunk
+Change Variable Type	chunksBytes : byte[] to chunksByteBuffer : ByteBuffer in method public readAll(f FSDataInputStream) : List<Chunk> from class org.apache.parquet.hadoop.ParquetFileReader.ConsecutiveChunkList
+Rename Variable	chunksBytes : byte[] to chunksByteBuffer : ByteBuffer in method public readAll(f FSDataInputStream) : List<Chunk> from class org.apache.parquet.hadoop.ParquetFileReader.ConsecutiveChunkList
+Extract Superclass	org.apache.parquet.bytes.ByteBufferInputStream from classes [org.apache.parquet.hadoop.ParquetFileReader.Chunk]
+Extract Subclass	org.apache.parquet.hadoop.CodecFactory.HeapBytesDecompressor from class org.apache.parquet.hadoop.CodecFactory.BytesDecompressor
+Extract Subclass	org.apache.parquet.hadoop.CodecFactory.HeapBytesCompressor from class org.apache.parquet.hadoop.CodecFactory.BytesCompressor
+Push Down Method	public decompress(bytes BytesInput, uncompressedSize int) : BytesInput from class org.apache.parquet.hadoop.CodecFactory.BytesDecompressor to public decompress(bytes BytesInput, uncompressedSize int) : BytesInput from class org.apache.parquet.hadoop.CodecFactory.HeapBytesDecompressor
+Add Method Annotation	@Override in method public decompress(bytes BytesInput, uncompressedSize int) : BytesInput from class org.apache.parquet.hadoop.CodecFactory.HeapBytesDecompressor
+Push Down Method	private release() : void from class org.apache.parquet.hadoop.CodecFactory.BytesDecompressor to protected release() : void from class org.apache.parquet.hadoop.CodecFactory.HeapBytesDecompressor
+Change Method Access Modifier	private to protected in method protected release() : void from class org.apache.parquet.hadoop.CodecFactory.HeapBytesDecompressor
+Push Down Attribute	private codec : CompressionCodec from class org.apache.parquet.hadoop.CodecFactory.BytesDecompressor to private codec : CompressionCodec from class org.apache.parquet.hadoop.CodecFactory.HeapBytesDecompressor
+Push Down Attribute	private decompressor : Decompressor from class org.apache.parquet.hadoop.CodecFactory.BytesDecompressor to private decompressor : Decompressor from class org.apache.parquet.hadoop.CodecFactory.HeapBytesDecompressor
+Push Down Method	public compress(bytes BytesInput) : BytesInput from class org.apache.parquet.hadoop.CodecFactory.BytesCompressor to public compress(bytes BytesInput) : BytesInput from class org.apache.parquet.hadoop.CodecFactory.HeapBytesCompressor
+Add Method Annotation	@Override in method public compress(bytes BytesInput) : BytesInput from class org.apache.parquet.hadoop.CodecFactory.HeapBytesCompressor
+Push Down Method	private release() : void from class org.apache.parquet.hadoop.CodecFactory.BytesCompressor to protected release() : void from class org.apache.parquet.hadoop.CodecFactory.HeapBytesCompressor
+Add Method Annotation	@Override in method protected release() : void from class org.apache.parquet.hadoop.CodecFactory.HeapBytesCompressor
+Change Method Access Modifier	private to protected in method protected release() : void from class org.apache.parquet.hadoop.CodecFactory.HeapBytesCompressor
+Push Down Method	public getCodecName() : CompressionCodecName from class org.apache.parquet.hadoop.CodecFactory.BytesCompressor to public getCodecName() : CompressionCodecName from class org.apache.parquet.hadoop.CodecFactory.HeapBytesCompressor
+Push Down Attribute	private codec : CompressionCodec from class org.apache.parquet.hadoop.CodecFactory.BytesCompressor to private codec : CompressionCodec from class org.apache.parquet.hadoop.CodecFactory.HeapBytesCompressor
+Push Down Attribute	private compressor : Compressor from class org.apache.parquet.hadoop.CodecFactory.BytesCompressor to private compressor : Compressor from class org.apache.parquet.hadoop.CodecFactory.HeapBytesCompressor
+Push Down Attribute	private compressedOutBuffer : ByteArrayOutputStream from class org.apache.parquet.hadoop.CodecFactory.BytesCompressor to private compressedOutBuffer : ByteArrayOutputStream from class org.apache.parquet.hadoop.CodecFactory.HeapBytesCompressor
+Push Down Attribute	private codecName : CompressionCodecName from class org.apache.parquet.hadoop.CodecFactory.BytesCompressor to private codecName : CompressionCodecName from class org.apache.parquet.hadoop.CodecFactory.HeapBytesCompressor
+Rename Parameter	codec : CompressionCodec to codecName : CompressionCodecName in method package HeapBytesDecompressor(codecName CompressionCodecName) from class org.apache.parquet.hadoop.CodecFactory.HeapBytesDecompressor
+Change Parameter Type	codec : CompressionCodec to codecName : CompressionCodecName in method package HeapBytesDecompressor(codecName CompressionCodecName) from class org.apache.parquet.hadoop.CodecFactory.HeapBytesDecompressor
+Change Method Access Modifier	public to package in method package HeapBytesDecompressor(codecName CompressionCodecName) from class org.apache.parquet.hadoop.CodecFactory.HeapBytesDecompressor
+Push Down Method	public BytesDecompressor(codec CompressionCodec) from class org.apache.parquet.hadoop.CodecFactory.BytesDecompressor to package HeapBytesDecompressor(codecName CompressionCodecName) from class org.apache.parquet.hadoop.CodecFactory.HeapBytesDecompressor
+Remove Parameter	codec : CompressionCodec in method public BytesCompressor(codecName CompressionCodecName, codec CompressionCodec, pageSize int) from class org.apache.parquet.hadoop.CodecFactory.BytesCompressor
+Remove Parameter	pageSize : int in method public BytesCompressor(codecName CompressionCodecName, codec CompressionCodec, pageSize int) from class org.apache.parquet.hadoop.CodecFactory.BytesCompressor
+Change Method Access Modifier	public to package in method package HeapBytesCompressor(codecName CompressionCodecName) from class org.apache.parquet.hadoop.CodecFactory.HeapBytesCompressor
+Push Down Method	public BytesCompressor(codecName CompressionCodecName, codec CompressionCodec, pageSize int) from class org.apache.parquet.hadoop.CodecFactory.BytesCompressor to package HeapBytesCompressor(codecName CompressionCodecName) from class org.apache.parquet.hadoop.CodecFactory.HeapBytesCompressor
+Change Parameter Type	page : byte[] to page : ByteBuffer in method public abstract initFromPage(valueCount int, page ByteBuffer, offset int) : void from class org.apache.parquet.column.values.ValuesReader
+Developers have reported that 11158 commits involve refactoring but only 2625 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2625 commits.
+
+No refactorings detected at ad443210312d2420efef6d03a0296d71e71feb22
+
+No refactorings detected at 079bcd0339f30343c01c5fd3d5521be4b822d30f
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b4854cf2123a750e0616e9b
+Issue Title: : Improve alignment between row groups and HDFS blocks
+Issue Description:  Row groups should not span HDFS blocks to avoid remote reads. There are 3 things we can use to avoid this:1. Set the next row group's size to the remaining bytes in the current HDFS block
+Refactorings at 412ab9669810921d04f9feabfbeafa906d4de506
+Change Variable Type	recordSize : float to recordSize : long in method private checkBlockSizeReached() : void from class org.apache.parquet.hadoop.InternalParquetRecordWriter
+Change Parameter Type	rlEncoding : org.apache.parquet.column.Encoding to rlEncoding : Encoding in method public writeDataPage(valueCount int, uncompressedPageSize int, bytes BytesInput, rlEncoding Encoding, dlEncoding Encoding, valuesEncoding Encoding) : void from class org.apache.parquet.hadoop.ParquetFileWriter
+Change Parameter Type	dlEncoding : org.apache.parquet.column.Encoding to dlEncoding : Encoding in method public writeDataPage(valueCount int, uncompressedPageSize int, bytes BytesInput, rlEncoding Encoding, dlEncoding Encoding, valuesEncoding Encoding) : void from class org.apache.parquet.hadoop.ParquetFileWriter
+Change Parameter Type	valuesEncoding : org.apache.parquet.column.Encoding to valuesEncoding : Encoding in method public writeDataPage(valueCount int, uncompressedPageSize int, bytes BytesInput, rlEncoding Encoding, dlEncoding Encoding, valuesEncoding Encoding) : void from class org.apache.parquet.hadoop.ParquetFileWriter
+Change Parameter Type	rlEncoding : org.apache.parquet.column.Encoding to rlEncoding : Encoding in method public writeDataPage(valueCount int, uncompressedPageSize int, bytes BytesInput, statistics Statistics, rlEncoding Encoding, dlEncoding Encoding, valuesEncoding Encoding) : void from class org.apache.parquet.hadoop.ParquetFileWriter
+Change Parameter Type	dlEncoding : org.apache.parquet.column.Encoding to dlEncoding : Encoding in method public writeDataPage(valueCount int, uncompressedPageSize int, bytes BytesInput, statistics Statistics, rlEncoding Encoding, dlEncoding Encoding, valuesEncoding Encoding) : void from class org.apache.parquet.hadoop.ParquetFileWriter
+Change Parameter Type	valuesEncoding : org.apache.parquet.column.Encoding to valuesEncoding : Encoding in method public writeDataPage(valueCount int, uncompressedPageSize int, bytes BytesInput, statistics Statistics, rlEncoding Encoding, dlEncoding Encoding, valuesEncoding Encoding) : void from class org.apache.parquet.hadoop.ParquetFileWriter
+Replace Variable With Attribute	schema : MessageType to SCHEMA : MessageType in method public testWriteRead() : void from class org.apache.parquet.hadoop.TestParquetFileWriter
+Replace Variable With Attribute	c1 : ColumnDescriptor to C1 : ColumnDescriptor in method public testWriteRead() : void from class org.apache.parquet.hadoop.TestParquetFileWriter
+Replace Variable With Attribute	codec : CompressionCodecName to CODEC : CompressionCodecName in method public testWriteRead() : void from class org.apache.parquet.hadoop.TestParquetFileWriter
+Replace Variable With Attribute	stats1 : BinaryStatistics to STATS1 : BinaryStatistics in method public testWriteRead() : void from class org.apache.parquet.hadoop.TestParquetFileWriter
+Replace Variable With Attribute	bytes1 : byte[] to BYTES1 : byte[] in method public testWriteRead() : void from class org.apache.parquet.hadoop.TestParquetFileWriter
+Replace Variable With Attribute	c2 : ColumnDescriptor to C2 : ColumnDescriptor in method public testWriteRead() : void from class org.apache.parquet.hadoop.TestParquetFileWriter
+Replace Variable With Attribute	stats2 : BinaryStatistics to STATS2 : BinaryStatistics in method public testWriteRead() : void from class org.apache.parquet.hadoop.TestParquetFileWriter
+Replace Variable With Attribute	bytes2 : byte[] to BYTES2 : byte[] in method public testWriteRead() : void from class org.apache.parquet.hadoop.TestParquetFileWriter
+Replace Variable With Attribute	bytes3 : byte[] to BYTES3 : byte[] in method public testWriteRead() : void from class org.apache.parquet.hadoop.TestParquetFileWriter
+Replace Variable With Attribute	bytes4 : byte[] to BYTES4 : byte[] in method public testWriteRead() : void from class org.apache.parquet.hadoop.TestParquetFileWriter
+Replace Variable With Attribute	path1 : String[] to PATH1 : String[] in method public testWriteRead() : void from class org.apache.parquet.hadoop.TestParquetFileWriter
+Replace Variable With Attribute	path2 : String[] to PATH2 : String[] in method public testWriteRead() : void from class org.apache.parquet.hadoop.TestParquetFileWriter
+Developers have reported that 11158 commits involve refactoring but only 2626 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2626 commits.
+
+No refactorings detected at fbb2c9e7230cc84c9458c9bf313d7cec7af310f3
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b4855372123a750e06171ba
+Issue Title: : PrimitiveType.union accepts fixed_len_byte_array fields with different lengths when strict mode is on
+Issue Description:  The following two schemas probably shouldn't be allowed to be union-ed when strict schema-merging mode is on:{noformat}
+Refactorings at c26fa78817f30cc3eb91165b783e07fb80d80f59
+Extract Method	private reportSchemaMergeError(toMerge Type) : void extracted from protected union(toMerge Type, strict boolean) : Type in class org.apache.parquet.schema.PrimitiveType
+Developers have reported that 11158 commits involve refactoring but only 2627 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2627 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b4855712123a750e06173e1
+Issue Title: : Add Dictionary Based Filtering to Filter2 API
+Issue Description:  Dictionary based predicate evaluation show very significant gains for certain cases like the following: - Sparse values in dictionary encoded columns
+Refactorings at a87c98163505fab39bcf8461b11fbb909a4c1bed
+Add Method Annotation	@Deprecated in method private RowGroupFilter(blocks List<BlockMetaData>, schema MessageType) from class org.apache.parquet.filter2.compat.RowGroupFilter
+Invert Condition	!StatisticsFilter.canDrop(filterPredicate,block.getColumns()) to drop=StatisticsFilter.canDrop(filterPredicate,block.getColumns()); in method public visit(filterPredicateCompat FilterCompat.FilterPredicateCompat) : List<BlockMetaData> from class org.apache.parquet.filter2.compat.RowGroupFilter
+Extract Variable	drop : boolean in method public visit(filterPredicateCompat FilterCompat.FilterPredicateCompat) : List<BlockMetaData> from class org.apache.parquet.filter2.compat.RowGroupFilter
+Add Method Annotation	@Override in method public contains(offset long) : boolean from class org.apache.parquet.format.converter.ParquetMetadataConverter.RangeMetadataFilter
+Change Method Access Modifier	package to public in method public contains(offset long) : boolean from class org.apache.parquet.format.converter.ParquetMetadataConverter.RangeMetadataFilter
+Change Parameter Type	filter : RangeMetadataFilter to filter : OffsetMetadataFilter in method public visit(filter OffsetMetadataFilter) : FileMetaData from class org.apache.parquet.format.converter.ParquetMetadataConverter.readParquetMetadata.fileMetaData.accept.new MetadataFilterVisitor<FileMetaData,IOException>
+Change Parameter Type	filter : RangeMetadataFilter to filter : OffsetMetadataFilter in method package filterFileMetaData(metaData FileMetaData, filter OffsetMetadataFilter) : FileMetaData from class org.apache.parquet.format.converter.ParquetMetadataConverter
+Localize Parameter	parquetFileMetadata : FileMetaData to parquetFileMetadata : FileMetaData in method public initialize(reader ParquetFileReader, configuration Configuration) : void from class org.apache.parquet.hadoop.InternalParquetRecordReader
+Add Parameter	reader : ParquetFileReader in method public initialize(reader ParquetFileReader, configuration Configuration) : void from class org.apache.parquet.hadoop.InternalParquetRecordReader
+Remove Parameter	fileSchema : MessageType in method public initialize(fileSchema MessageType, parquetFileMetadata FileMetaData, file Path, blocks List<BlockMetaData>, configuration Configuration) : void from class org.apache.parquet.hadoop.InternalParquetRecordReader
+Remove Parameter	file : Path in method public initialize(fileSchema MessageType, parquetFileMetadata FileMetaData, file Path, blocks List<BlockMetaData>, configuration Configuration) : void from class org.apache.parquet.hadoop.InternalParquetRecordReader
+Remove Parameter	blocks : List<BlockMetaData> in method public initialize(fileSchema MessageType, parquetFileMetadata FileMetaData, file Path, blocks List<BlockMetaData>, configuration Configuration) : void from class org.apache.parquet.hadoop.InternalParquetRecordReader
+Encapsulate Attribute	private blocks : List<BlockMetaData> from class org.apache.parquet.hadoop.ParquetFileReader
+Remove Attribute Modifier	final in attribute private blocks : List<BlockMetaData> from class org.apache.parquet.hadoop.ParquetFileReader
+Extract Method	private readFooter(file FileStatus, f FSDataInputStream, filter MetadataFilter) : ParquetMetadata extracted from public readFooter(configuration Configuration, file FileStatus, filter MetadataFilter) : ParquetMetadata in class org.apache.parquet.hadoop.ParquetFileReader
+Extract Method	private advanceToNextBlock() : boolean extracted from public readNextRowGroup() : PageReadStore in class org.apache.parquet.hadoop.ParquetFileReader
+Rename Variable	f : FSDataInputStream to in : FSDataInputStream in method public readFooter(configuration Configuration, file FileStatus, filter MetadataFilter) : ParquetMetadata from class org.apache.parquet.hadoop.ParquetFileReader
+Add Method Annotation	@Deprecated in method public ParquetFileReader(configuration Configuration, fileMetaData FileMetaData, filePath Path, blocks List<BlockMetaData>, columns List<ColumnDescriptor>) from class org.apache.parquet.hadoop.ParquetFileReader
+Change Method Access Modifier	package to public in method public open(conf Configuration, file Path) : ParquetFileReader from class org.apache.parquet.hadoop.ParquetFileReader
+Rename Attribute	filePath : Path to fileStatus : FileStatus in class org.apache.parquet.hadoop.ParquetFileReader
+Change Attribute Type	filePath : Path to fileStatus : FileStatus in class org.apache.parquet.hadoop.ParquetFileReader
+Extract Variable	fileReader : ParquetFileReader in method private initReader() : void from class org.apache.parquet.hadoop.ParquetReader
+Extract Variable	blocks : List<BlockMetaData> in method private initializeInternalReader(split ParquetInputSplit, configuration Configuration) : void from class org.apache.parquet.hadoop.ParquetRecordReader
+Merge Variable	[fileSchema : MessageType, footer : ParquetMetadata, path : Path, filteredBlocks : List<BlockMetaData>] to reader : ParquetFileReader in method private initializeInternalReader(split ParquetInputSplit, configuration Configuration) : void from class org.apache.parquet.hadoop.ParquetRecordReader
+Merge Variable	[footer : ParquetMetadata, filteredBlocks : List<BlockMetaData>] to reader : ParquetFileReader in method private initializeInternalReader(split ParquetInputSplit, configuration Configuration) : void from class org.apache.parquet.hadoop.ParquetRecordReader
+Extract Interface	org.apache.parquet.format.converter.ParquetMetadataConverter.OffsetMetadataFilter from classes [org.apache.parquet.format.converter.ParquetMetadataConverter.RangeMetadataFilter]
+Extract And Move Method	public offsets(offsets long...) : MetadataFilter extracted from private initializeInternalReader(split ParquetInputSplit, configuration Configuration) : void in class org.apache.parquet.hadoop.ParquetRecordReader & moved to class org.apache.parquet.format.converter.ParquetMetadataConverter
+Extract And Move Method	public getRecordCount() : long extracted from public initialize(fileSchema MessageType, parquetFileMetadata FileMetaData, file Path, blocks List<BlockMetaData>, configuration Configuration) : void in class org.apache.parquet.hadoop.InternalParquetRecordReader & moved to class org.apache.parquet.hadoop.ParquetFileReader
+Developers have reported that 11158 commits involve refactoring but only 2628 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2628 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b4855712123a750e06173e1
+Issue Title: : Add Dictionary Based Filtering to Filter2 API
+Issue Description:  Dictionary based predicate evaluation show very significant gains for certain cases like the following: - Sparse values in dictionary encoded columns
+Refactorings at 4b1ff8f4b9dfa0ccb064ef286cf2953bfb2c492d
+Add Method Annotation	@Deprecated in method private RowGroupFilter(blocks List<BlockMetaData>, schema MessageType) from class org.apache.parquet.filter2.compat.RowGroupFilter
+Invert Condition	!StatisticsFilter.canDrop(filterPredicate,block.getColumns()) to drop=StatisticsFilter.canDrop(filterPredicate,block.getColumns()); in method public visit(filterPredicateCompat FilterCompat.FilterPredicateCompat) : List<BlockMetaData> from class org.apache.parquet.filter2.compat.RowGroupFilter
+Extract Variable	drop : boolean in method public visit(filterPredicateCompat FilterCompat.FilterPredicateCompat) : List<BlockMetaData> from class org.apache.parquet.filter2.compat.RowGroupFilter
+Add Method Annotation	@Override in method public contains(offset long) : boolean from class org.apache.parquet.format.converter.ParquetMetadataConverter.RangeMetadataFilter
+Change Method Access Modifier	package to public in method public contains(offset long) : boolean from class org.apache.parquet.format.converter.ParquetMetadataConverter.RangeMetadataFilter
+Change Parameter Type	filter : RangeMetadataFilter to filter : OffsetMetadataFilter in method public visit(filter OffsetMetadataFilter) : FileMetaData from class org.apache.parquet.format.converter.ParquetMetadataConverter.readParquetMetadata.fileMetaData.accept.new MetadataFilterVisitor<FileMetaData,IOException>
+Change Parameter Type	filter : RangeMetadataFilter to filter : OffsetMetadataFilter in method package filterFileMetaData(metaData FileMetaData, filter OffsetMetadataFilter) : FileMetaData from class org.apache.parquet.format.converter.ParquetMetadataConverter
+Localize Parameter	parquetFileMetadata : FileMetaData to parquetFileMetadata : FileMetaData in method public initialize(reader ParquetFileReader, configuration Configuration) : void from class org.apache.parquet.hadoop.InternalParquetRecordReader
+Add Parameter	reader : ParquetFileReader in method public initialize(reader ParquetFileReader, configuration Configuration) : void from class org.apache.parquet.hadoop.InternalParquetRecordReader
+Remove Parameter	fileSchema : MessageType in method public initialize(fileSchema MessageType, parquetFileMetadata FileMetaData, file Path, blocks List<BlockMetaData>, configuration Configuration) : void from class org.apache.parquet.hadoop.InternalParquetRecordReader
+Remove Parameter	file : Path in method public initialize(fileSchema MessageType, parquetFileMetadata FileMetaData, file Path, blocks List<BlockMetaData>, configuration Configuration) : void from class org.apache.parquet.hadoop.InternalParquetRecordReader
+Remove Parameter	blocks : List<BlockMetaData> in method public initialize(fileSchema MessageType, parquetFileMetadata FileMetaData, file Path, blocks List<BlockMetaData>, configuration Configuration) : void from class org.apache.parquet.hadoop.InternalParquetRecordReader
+Encapsulate Attribute	private blocks : List<BlockMetaData> from class org.apache.parquet.hadoop.ParquetFileReader
+Remove Attribute Modifier	final in attribute private blocks : List<BlockMetaData> from class org.apache.parquet.hadoop.ParquetFileReader
+Extract Method	private readFooter(file FileStatus, f FSDataInputStream, filter MetadataFilter) : ParquetMetadata extracted from public readFooter(configuration Configuration, file FileStatus, filter MetadataFilter) : ParquetMetadata in class org.apache.parquet.hadoop.ParquetFileReader
+Extract Method	private advanceToNextBlock() : boolean extracted from public readNextRowGroup() : PageReadStore in class org.apache.parquet.hadoop.ParquetFileReader
+Rename Variable	f : FSDataInputStream to in : FSDataInputStream in method public readFooter(configuration Configuration, file FileStatus, filter MetadataFilter) : ParquetMetadata from class org.apache.parquet.hadoop.ParquetFileReader
+Add Method Annotation	@Deprecated in method public ParquetFileReader(configuration Configuration, fileMetaData FileMetaData, filePath Path, blocks List<BlockMetaData>, columns List<ColumnDescriptor>) from class org.apache.parquet.hadoop.ParquetFileReader
+Change Method Access Modifier	package to public in method public open(conf Configuration, file Path) : ParquetFileReader from class org.apache.parquet.hadoop.ParquetFileReader
+Rename Attribute	filePath : Path to fileStatus : FileStatus in class org.apache.parquet.hadoop.ParquetFileReader
+Change Attribute Type	filePath : Path to fileStatus : FileStatus in class org.apache.parquet.hadoop.ParquetFileReader
+Extract Variable	fileReader : ParquetFileReader in method private initReader() : void from class org.apache.parquet.hadoop.ParquetReader
+Extract Variable	blocks : List<BlockMetaData> in method private initializeInternalReader(split ParquetInputSplit, configuration Configuration) : void from class org.apache.parquet.hadoop.ParquetRecordReader
+Merge Variable	[fileSchema : MessageType, footer : ParquetMetadata, path : Path, filteredBlocks : List<BlockMetaData>] to reader : ParquetFileReader in method private initializeInternalReader(split ParquetInputSplit, configuration Configuration) : void from class org.apache.parquet.hadoop.ParquetRecordReader
+Merge Variable	[footer : ParquetMetadata, filteredBlocks : List<BlockMetaData>] to reader : ParquetFileReader in method private initializeInternalReader(split ParquetInputSplit, configuration Configuration) : void from class org.apache.parquet.hadoop.ParquetRecordReader
+Extract Interface	org.apache.parquet.format.converter.ParquetMetadataConverter.OffsetMetadataFilter from classes [org.apache.parquet.format.converter.ParquetMetadataConverter.RangeMetadataFilter]
+Extract And Move Method	public offsets(offsets long...) : MetadataFilter extracted from private initializeInternalReader(split ParquetInputSplit, configuration Configuration) : void in class org.apache.parquet.hadoop.ParquetRecordReader & moved to class org.apache.parquet.format.converter.ParquetMetadataConverter
+Extract And Move Method	public getRecordCount() : long extracted from public initialize(fileSchema MessageType, parquetFileMetadata FileMetaData, file Path, blocks List<BlockMetaData>, configuration Configuration) : void in class org.apache.parquet.hadoop.InternalParquetRecordReader & moved to class org.apache.parquet.hadoop.ParquetFileReader
+Developers have reported that 11158 commits involve refactoring but only 2629 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2629 commits.
+
+No refactorings detected at dc08bb8ea6cdf01188f6699559e779e6cc296287
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b4855c42123a750e061766f
+Issue Title: : Remove BoundedInt encodings
+Issue Description:  The classes in org.apache.parquet.column.values.boundedint aren't used. It looks like this was intended to be the "right" way to use the RLE/BitPacking hybrid, but callers ended up instantiating the RLE encoder or writer directly.
+Refactorings at 6a62646bfcecec9c0806a216b17e1a4ccb4609aa
+Move Class	org.apache.parquet.column.values.boundedint.DevNullValuesWriter moved to org.apache.parquet.column.values.bitpacking.DevNullValuesWriter
+Move Class	org.apache.parquet.column.values.boundedint.ZeroIntegerValuesReader moved to org.apache.parquet.column.values.rle.ZeroIntegerValuesReader
+Split Package	org.apache.parquet.column.values.boundedint to [org.apache.parquet.column.values.bitpacking, org.apache.parquet.column.values.rle]
+Developers have reported that 11158 commits involve refactoring but only 2630 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2630 commits.
+
+No refactorings detected at 06768d91b5fe9eb98f5872efcbe87c3ea447f61e
+
+No refactorings detected at e5cd652aeb3305ef2b82a7925cce3a132bf6f5ae
+
+No refactorings detected at dcd1c33f0dba247b43418b922c1c3a2fc432dc11
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b48571d2123a750e0617f5e
+Issue Title: : Remove unnecessary objectmapper from ParquetMetadata
+Issue Description:  NoneLinked Commit Github URL: https://github.com/apache/parquet-mr/commit/21d84b0cb1ed485367067441a5fa00c730d4eee4
+Refactorings at 367fe13b46a0b4dda56b7f12273d6c9afb1da23f
+Add Attribute Modifier	final in attribute private objectMapper : ObjectMapper from class org.apache.parquet.hadoop.metadata.ParquetMetadata
+Remove Parameter	mapper : ObjectMapper in method private toJSON(parquetMetaData ParquetMetadata, mapper ObjectMapper) : String from class org.apache.parquet.hadoop.metadata.ParquetMetadata
+Add Parameter	isPrettyPrint : boolean in method private toJSON(parquetMetaData ParquetMetadata, isPrettyPrint boolean) : String from class org.apache.parquet.hadoop.metadata.ParquetMetadata
+Replace Variable With Attribute	mapper : ObjectMapper to objectMapper : ObjectMapper in method private toJSON(parquetMetaData ParquetMetadata, isPrettyPrint boolean) : String from class org.apache.parquet.hadoop.metadata.ParquetMetadata
+Remove Thrown Exception Type	NoSuchFieldException in method public testNullFieldMetadataDebugLogging() : void from class org.apache.parquet.format.converter.TestParquetMetadataConverter
+Remove Thrown Exception Type	IllegalAccessException in method public testNullFieldMetadataDebugLogging() : void from class org.apache.parquet.format.converter.TestParquetMetadataConverter
+Remove Thrown Exception Type	IOException in method public testNullFieldMetadataDebugLogging() : void from class org.apache.parquet.format.converter.TestParquetMetadataConverter
+Developers have reported that 11158 commits involve refactoring but only 2631 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2631 commits.
+
+No refactorings detected at ff8baa74ffc57529c09a44525fc61e7acad32aa6
+
+No refactorings detected at 1f91c79de5e2d852c6e7d0cf7a4255087ef618ef
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b48578e2123a750e0618251
+Issue Title: : Caching nulls on group node to improve write performance on wide schema sparse data
+Issue Description:  or really wide schema with sparse data, If a group node is empty, it could have a huge number of leaves underneath it. Calling writeMull for each leaf every time when it's ancestor group node is null is in-effcient and is bad for data locality in the memory especially when the number of leaves is huge.
+Refactorings at 8e4741f3556991550afecabf8a297c6b2a43e29c
+Extract Variable	recordWriter : RecordConsumer in method private writeGroups(writtenSchema MessageType, memPageStore MemPageStore, groups Group...) : void from class org.apache.parquet.io.TestColumnIO
+Extract Variable	recordWriter : RecordConsumer in method public testColumnIO() : void from class org.apache.parquet.io.TestColumnIO
+Extract Variable	recordWriter : RecordConsumer in method private testSchema(messageSchema MessageType, groups List<Group>) : void from class org.apache.parquet.io.TestColumnIO
+Extract Variable	recordWriter : RecordConsumer in method public testPushParser() : void from class org.apache.parquet.io.TestColumnIO
+Extract Variable	recordWriter : RecordConsumer in method public testWriteWithGroupWriter() : void from class org.apache.parquet.io.TestColumnIO
+Extract Variable	recordWriter : RecordConsumer in method private writeTestRecords(columnIO MessageColumnIO, number int) : MemPageStore from class org.apache.parquet.io.TestFiltered
+Replace Attribute With Variable	columnIO : MessageColumnIO to columnIO : MessageColumnIO in method private checkRead() : void from class org.apache.parquet.hadoop.InternalParquetRecordReader
+Developers have reported that 11158 commits involve refactoring but only 2632 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2632 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b48578e2123a750e0618251
+Issue Title: : Caching nulls on group node to improve write performance on wide schema sparse data
+Issue Description:  or really wide schema with sparse data, If a group node is empty, it could have a huge number of leaves underneath it. Calling writeMull for each leaf every time when it's ancestor group node is null is in-effcient and is bad for data locality in the memory especially when the number of leaves is huge.
+Refactorings at 01fbf81e34a36cedf505f20b1c52306afceedc3e
+Extract Variable	recordWriter : RecordConsumer in method private writeGroups(writtenSchema MessageType, memPageStore MemPageStore, groups Group...) : void from class org.apache.parquet.io.TestColumnIO
+Extract Variable	recordWriter : RecordConsumer in method public testColumnIO() : void from class org.apache.parquet.io.TestColumnIO
+Extract Variable	recordWriter : RecordConsumer in method private testSchema(messageSchema MessageType, groups List<Group>) : void from class org.apache.parquet.io.TestColumnIO
+Extract Variable	recordWriter : RecordConsumer in method public testPushParser() : void from class org.apache.parquet.io.TestColumnIO
+Extract Variable	recordWriter : RecordConsumer in method public testWriteWithGroupWriter() : void from class org.apache.parquet.io.TestColumnIO
+Extract Variable	recordWriter : RecordConsumer in method private writeTestRecords(columnIO MessageColumnIO, number int) : MemPageStore from class org.apache.parquet.io.TestFiltered
+Replace Attribute With Variable	columnIO : MessageColumnIO to columnIO : MessageColumnIO in method private checkRead() : void from class org.apache.parquet.hadoop.InternalParquetRecordReader
+Developers have reported that 11158 commits involve refactoring but only 2633 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2633 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b4858dc2123a750e06186a0
+Issue Title: : Add a size limit for heap allocations when reading
+Issue Description:  [G1GC allocates humongous objects directly in the old generation|https://www.infoq.com/articles/tuning-tips-G1-GC] to avoid unnecessary copies, which means that these allocations aren't garbage collected until a full GC runs. Humongous objects are objects that are 50% of the region size or more. Region size is at most 32MB (see the table for [region size from heap size|http://product.hubspot.com/blog/g1gc-fundamentals-lessons-from-taming-garbage-collection#Regions]).
+Refactorings at 8bbc6cb95fd9b4b9e86c924ca1e40fd555ecac1d
+Extract Variable	in : ByteBufferInputStream in method private readPageV1(page DataPageV1) : void from class org.apache.parquet.column.impl.ColumnReaderImpl
+Change Variable Type	bytes : ByteBuffer to bytes : BytesInput in method private readPageV1(page DataPageV1) : void from class org.apache.parquet.column.impl.ColumnReaderImpl
+Merge Variable	[bytes : ByteBuffer, next : int] to in : ByteBufferInputStream in method private readPageV1(page DataPageV1) : void from class org.apache.parquet.column.impl.ColumnReaderImpl
+Merge Parameter	[bytes : ByteBuffer, offset : int] to in : ByteBufferInputStream in method private initDataReader(dataEncoding Encoding, in ByteBufferInputStream, valueCount int) : void from class org.apache.parquet.column.impl.ColumnReaderImpl
+Add Parameter	stream : ByteBufferInputStream in method public initFromPage(valueCount int, stream ByteBufferInputStream) : void from class org.apache.parquet.column.values.bitpacking.BitPackingValuesReader
+Remove Parameter	in : ByteBuffer in method public initFromPage(valueCount int, in ByteBuffer, offset int) : void from class org.apache.parquet.column.values.bitpacking.BitPackingValuesReader
+Remove Parameter	offset : int in method public initFromPage(valueCount int, in ByteBuffer, offset int) : void from class org.apache.parquet.column.values.bitpacking.BitPackingValuesReader
+Replace Attribute With Variable	encoded : ByteBuffer to encoded : ByteBuffer in method public readInteger() : int from class org.apache.parquet.column.values.bitpacking.ByteBitPackingValuesReader
+Add Parameter	stream : ByteBufferInputStream in method public initFromPage(valueCount int, stream ByteBufferInputStream) : void from class org.apache.parquet.column.values.bitpacking.ByteBitPackingValuesReader
+Remove Parameter	page : ByteBuffer in method public initFromPage(valueCount int, page ByteBuffer, offset int) : void from class org.apache.parquet.column.values.bitpacking.ByteBitPackingValuesReader
+Remove Parameter	offset : int in method public initFromPage(valueCount int, page ByteBuffer, offset int) : void from class org.apache.parquet.column.values.bitpacking.ByteBitPackingValuesReader
+Add Thrown Exception Type	IOException in method private loadNewBlockToBuffer() : void from class org.apache.parquet.column.values.delta.DeltaBinaryPackingValuesReader
+Add Thrown Exception Type	IOException in method private unpackMiniBlock(packer BytePackerForLong) : void from class org.apache.parquet.column.values.delta.DeltaBinaryPackingValuesReader
+Change Variable Type	pos : int to buffer : ByteBuffer in method private unpack8Values(packer BytePackerForLong) : void from class org.apache.parquet.column.values.delta.DeltaBinaryPackingValuesReader
+Rename Variable	pos : int to buffer : ByteBuffer in method private unpack8Values(packer BytePackerForLong) : void from class org.apache.parquet.column.values.delta.DeltaBinaryPackingValuesReader
+Add Thrown Exception Type	IOException in method private unpack8Values(packer BytePackerForLong) : void from class org.apache.parquet.column.values.delta.DeltaBinaryPackingValuesReader
+Change Parameter Type	page : ByteBuffer to stream : ByteBufferInputStream in method public initFromPage(valueCount int, stream ByteBufferInputStream) : void from class org.apache.parquet.column.values.delta.DeltaBinaryPackingValuesReader
+Rename Parameter	page : ByteBuffer to stream : ByteBufferInputStream in method public initFromPage(valueCount int, stream ByteBufferInputStream) : void from class org.apache.parquet.column.values.delta.DeltaBinaryPackingValuesReader
+Remove Parameter	offset : int in method public initFromPage(valueCount int, page ByteBuffer, offset int) : void from class org.apache.parquet.column.values.delta.DeltaBinaryPackingValuesReader
+Change Attribute Type	in : ByteBuffer to in : ByteBufferInputStream in class org.apache.parquet.column.values.deltalengthbytearray.DeltaLengthByteArrayValuesReader
+Merge Parameter	[in : ByteBuffer, offset : int] to stream : ByteBufferInputStream in method public initFromPage(valueCount int, stream ByteBufferInputStream) : void from class org.apache.parquet.column.values.deltalengthbytearray.DeltaLengthByteArrayValuesReader
+Merge Parameter	[page : ByteBuffer, offset : int] to stream : ByteBufferInputStream in method public initFromPage(valueCount int, stream ByteBufferInputStream) : void from class org.apache.parquet.column.values.deltastrings.DeltaByteArrayReader
+Merge Variable	[page : ByteBuffer, next : int] to stream : ByteBufferInputStream in method public initFromPage(valueCount int, stream ByteBufferInputStream) : void from class org.apache.parquet.column.values.deltastrings.DeltaByteArrayReader
+Change Parameter Type	page : ByteBuffer to stream : ByteBufferInputStream in method public initFromPage(valueCount int, stream ByteBufferInputStream) : void from class org.apache.parquet.column.values.dictionary.DictionaryValuesReader
+Rename Parameter	page : ByteBuffer to stream : ByteBufferInputStream in method public initFromPage(valueCount int, stream ByteBufferInputStream) : void from class org.apache.parquet.column.values.dictionary.DictionaryValuesReader
+Remove Parameter	offset : int in method public initFromPage(valueCount int, page ByteBuffer, offset int) : void from class org.apache.parquet.column.values.dictionary.DictionaryValuesReader
+Change Variable Type	dictionaryByteBuf : ByteBuffer to in : ByteBufferInputStream in method public PlainLongDictionary(dictionaryPage DictionaryPage) from class org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainLongDictionary
+Remove Variable Modifier	final in variable dictionaryByteBuf : ByteBuffer in method public PlainLongDictionary(dictionaryPage DictionaryPage) from class org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainLongDictionary
+Rename Variable	dictionaryByteBuf : ByteBuffer to in : ByteBufferInputStream in method public PlainLongDictionary(dictionaryPage DictionaryPage) from class org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainLongDictionary
+Change Variable Type	dictionaryByteBuf : ByteBuffer to in : ByteBufferInputStream in method public PlainDoubleDictionary(dictionaryPage DictionaryPage) from class org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainDoubleDictionary
+Remove Variable Modifier	final in variable dictionaryByteBuf : ByteBuffer in method public PlainDoubleDictionary(dictionaryPage DictionaryPage) from class org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainDoubleDictionary
+Rename Variable	dictionaryByteBuf : ByteBuffer to in : ByteBufferInputStream in method public PlainDoubleDictionary(dictionaryPage DictionaryPage) from class org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainDoubleDictionary
+Change Variable Type	dictionaryByteBuf : ByteBuffer to in : ByteBufferInputStream in method public PlainIntegerDictionary(dictionaryPage DictionaryPage) from class org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainIntegerDictionary
+Remove Variable Modifier	final in variable dictionaryByteBuf : ByteBuffer in method public PlainIntegerDictionary(dictionaryPage DictionaryPage) from class org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainIntegerDictionary
+Rename Variable	dictionaryByteBuf : ByteBuffer to in : ByteBufferInputStream in method public PlainIntegerDictionary(dictionaryPage DictionaryPage) from class org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainIntegerDictionary
+Change Variable Type	dictionaryByteBuf : ByteBuffer to in : ByteBufferInputStream in method public PlainFloatDictionary(dictionaryPage DictionaryPage) from class org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainFloatDictionary
+Remove Variable Modifier	final in variable dictionaryByteBuf : ByteBuffer in method public PlainFloatDictionary(dictionaryPage DictionaryPage) from class org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainFloatDictionary
+Rename Variable	dictionaryByteBuf : ByteBuffer to in : ByteBufferInputStream in method public PlainFloatDictionary(dictionaryPage DictionaryPage) from class org.apache.parquet.column.values.dictionary.PlainValuesDictionary.PlainFloatDictionary
+Change Attribute Type	in : ByteBuffer to in : ByteBufferInputStream in class org.apache.parquet.column.values.plain.BinaryPlainValuesReader
+Merge Parameter	[offset : int, in : ByteBuffer] to stream : ByteBufferInputStream in method public initFromPage(valueCount int, stream ByteBufferInputStream) : void from class org.apache.parquet.column.values.plain.BinaryPlainValuesReader
+Merge Parameter	[in : ByteBuffer, offset : int] to stream : ByteBufferInputStream in method public initFromPage(valueCount int, stream ByteBufferInputStream) : void from class org.apache.parquet.column.values.plain.BooleanPlainValuesReader
+Add Attribute Modifier	final in attribute private length : int from class org.apache.parquet.column.values.plain.FixedLenByteArrayPlainValuesReader
+Change Attribute Type	in : ByteBuffer to in : ByteBufferInputStream in class org.apache.parquet.column.values.plain.FixedLenByteArrayPlainValuesReader
+Change Variable Type	e : RuntimeException to e : IOException|RuntimeException in method public readBytes() : Binary from class org.apache.parquet.column.values.plain.FixedLenByteArrayPlainValuesReader
+Merge Parameter	[offset : int, in : ByteBuffer] to stream : ByteBufferInputStream in method public initFromPage(valueCount int, stream ByteBufferInputStream) : void from class org.apache.parquet.column.values.plain.FixedLenByteArrayPlainValuesReader
+Change Parameter Type	in : ByteBuffer to stream : ByteBufferInputStream in method public initFromPage(valueCount int, stream ByteBufferInputStream) : void from class org.apache.parquet.column.values.plain.PlainValuesReader
+Rename Parameter	in : ByteBuffer to stream : ByteBufferInputStream in method public initFromPage(valueCount int, stream ByteBufferInputStream) : void from class org.apache.parquet.column.values.plain.PlainValuesReader
+Add Parameter	stream : ByteBufferInputStream in method public readData(reader ValuesReader, stream ByteBufferInputStream, length int) : Binary[] from class org.apache.parquet.column.values.Utils
+Remove Parameter	data : byte[] in method public readData(reader ValuesReader, data byte[], offset int, length int) : Binary[] from class org.apache.parquet.column.values.Utils
+Remove Parameter	offset : int in method public readData(reader ValuesReader, data byte[], offset int, length int) : Binary[] from class org.apache.parquet.column.values.Utils
+Add Parameter	stream : ByteBufferInputStream in method public readInts(reader ValuesReader, stream ByteBufferInputStream, length int) : int[] from class org.apache.parquet.column.values.Utils
+Remove Parameter	data : byte[] in method public readInts(reader ValuesReader, data byte[], offset int, length int) : int[] from class org.apache.parquet.column.values.Utils
+Remove Parameter	offset : int in method public readInts(reader ValuesReader, data byte[], offset int, length int) : int[] from class org.apache.parquet.column.values.Utils
+Rename Method	public shouldReturnCorrectOffsetAfterInitialization() : void renamed to public shouldConsumePageDataInInitialization() : void in class org.apache.parquet.column.values.delta.DeltaBinaryPackingValuesWriterForIntegerTest
+Extract Variable	stream : ByteBufferInputStream in method public shouldConsumePageDataInInitialization() : void from class org.apache.parquet.column.values.delta.DeltaBinaryPackingValuesWriterForIntegerTest
+Change Variable Type	offset : int to offset : long in method public shouldConsumePageDataInInitialization() : void from class org.apache.parquet.column.values.delta.DeltaBinaryPackingValuesWriterForIntegerTest
+Extract Variable	stream : ByteBufferInputStream in method public shouldReturnCorrectOffsetAfterInitialization() : void from class org.apache.parquet.column.values.delta.DeltaBinaryPackingValuesWriterForLongTest
+Change Variable Type	offset : int to offset : long in method public shouldReturnCorrectOffsetAfterInitialization() : void from class org.apache.parquet.column.values.delta.DeltaBinaryPackingValuesWriterForLongTest
+Change Variable Type	data : byte[] to data : ByteBufferInputStream in method public benchmarkRandomStringsWithPlainValuesWriter() : void from class org.apache.parquet.column.values.deltalengthbytearray.benchmark.BenchmarkDeltaLengthByteArray
+Change Variable Type	data : byte[] to data : ByteBufferInputStream in method public benchmarkRandomStringsWithDeltaLengthByteArrayValuesWriter() : void from class org.apache.parquet.column.values.deltalengthbytearray.benchmark.BenchmarkDeltaLengthByteArray
+Change Variable Type	data : byte[] to data : ByteBufferInputStream in method public testLengths() : void from class org.apache.parquet.column.values.deltastrings.TestDeltaByteArray
+Change Variable Type	data : byte[] to data : ByteBufferInputStream in method public benchmarkRandomStringsWithPlainValuesWriter() : void from class org.apache.parquet.column.values.deltastrings.benchmark.BenchmarkDeltaByteArray
+Change Variable Type	data : byte[] to data : ByteBufferInputStream in method public benchmarkRandomStringsWithDeltaLengthByteArrayValuesWriter() : void from class org.apache.parquet.column.values.deltastrings.benchmark.BenchmarkDeltaByteArray
+Change Variable Type	data : byte[] to data : ByteBufferInputStream in method public benchmarkSortedStringsWithPlainValuesWriter() : void from class org.apache.parquet.column.values.deltastrings.benchmark.BenchmarkDeltaByteArray
+Change Variable Type	data : byte[] to data : ByteBufferInputStream in method public benchmarkSortedStringsWithDeltaLengthByteArrayValuesWriter() : void from class org.apache.parquet.column.values.deltastrings.benchmark.BenchmarkDeltaByteArray
+Merge Variable	[bytes : ByteBuffer, offset : int] to stream : ByteBufferInputStream in method public testZeroValues() : void from class org.apache.parquet.column.values.dictionary.TestDictionary
+Add Class Modifier	abstract in class org.apache.parquet.bytes.ByteBufferInputStream
+Inline Variable	outputChannel : WritableByteChannel in method public writeAllTo(out OutputStream) : void from class org.apache.parquet.bytes.BytesInput.ByteBufferBytesInput
+Change Return Type	InputStream to ByteBufferInputStream in method public toInputStream() : ByteBufferInputStream from class org.apache.parquet.bytes.BytesInput
+Add Parameter	maxAllocationSize : int in method private HadoopReadOptions(useSignedStringMinMax boolean, useStatsFilter boolean, useDictionaryFilter boolean, useRecordFilter boolean, recordFilter FilterCompat.Filter, metadataFilter MetadataFilter, codecFactory CompressionCodecFactory, allocator ByteBufferAllocator, maxAllocationSize int, properties Map<String,String>, conf Configuration) from class org.apache.parquet.HadoopReadOptions
+Change Attribute Access Modifier	package to protected in attribute protected useSignedStringMinMax : boolean from class org.apache.parquet.ParquetReadOptions.Builder
+Change Attribute Access Modifier	package to protected in attribute protected useStatsFilter : boolean from class org.apache.parquet.ParquetReadOptions.Builder
+Change Attribute Access Modifier	package to protected in attribute protected useDictionaryFilter : boolean from class org.apache.parquet.ParquetReadOptions.Builder
+Change Attribute Access Modifier	package to protected in attribute protected useRecordFilter : boolean from class org.apache.parquet.ParquetReadOptions.Builder
+Change Attribute Access Modifier	package to protected in attribute protected recordFilter : FilterCompat.Filter from class org.apache.parquet.ParquetReadOptions.Builder
+Change Attribute Access Modifier	package to protected in attribute protected metadataFilter : ParquetMetadataConverter.MetadataFilter from class org.apache.parquet.ParquetReadOptions.Builder
+Change Attribute Access Modifier	package to protected in attribute protected codecFactory : CompressionCodecFactory from class org.apache.parquet.ParquetReadOptions.Builder
+Change Attribute Access Modifier	package to protected in attribute protected allocator : ByteBufferAllocator from class org.apache.parquet.ParquetReadOptions.Builder
+Change Attribute Access Modifier	package to protected in attribute protected properties : Map<String,String> from class org.apache.parquet.ParquetReadOptions.Builder
+Add Parameter	maxAllocationSize : int in method package ParquetReadOptions(useSignedStringMinMax boolean, useStatsFilter boolean, useDictionaryFilter boolean, useRecordFilter boolean, recordFilter FilterCompat.Filter, metadataFilter ParquetMetadataConverter.MetadataFilter, codecFactory CompressionCodecFactory, allocator ByteBufferAllocator, maxAllocationSize int, properties Map<String,String>) from class org.apache.parquet.ParquetReadOptions
+Change Attribute Access Modifier	private to protected in attribute protected descriptor : ChunkDescriptor from class org.apache.parquet.hadoop.ParquetFileReader.Chunk
+Merge Parameter	[byteBuf : ByteBuffer, offset : int] to buffers : List<ByteBuffer> in method private WorkaroundChunk(descriptor ChunkDescriptor, buffers List<ByteBuffer>, f SeekableInputStream) from class org.apache.parquet.hadoop.ParquetFileReader.WorkaroundChunk
+Extract Variable	lastAllocationSize : int in method public readAll(f SeekableInputStream) : List<Chunk> from class org.apache.parquet.hadoop.ParquetFileReader.ConsecutiveChunkList
+Rename Variable	currentChunkOffset : int to numAllocations : int in method public readAll(f SeekableInputStream) : List<Chunk> from class org.apache.parquet.hadoop.ParquetFileReader.ConsecutiveChunkList
+Merge Variable	[chunksByteBuffer : ByteBuffer, currentChunkOffset : int] to stream : ByteBufferInputStream in method public readAll(f SeekableInputStream) : List<Chunk> from class org.apache.parquet.hadoop.ParquetFileReader.ConsecutiveChunkList
+Extract Subclass	org.apache.parquet.bytes.MultiBufferInputStream from class org.apache.parquet.bytes.ByteBufferInputStream
+Push Down Method	public skip(n long) : long from class org.apache.parquet.bytes.ByteBufferInputStream to public skip(n long) : long from class org.apache.parquet.bytes.MultiBufferInputStream
+Add Thrown Exception Type	IOException in method public skip(n long) : long from class org.apache.parquet.bytes.MultiBufferInputStream
+Push Down Method	public read(bytes byte[], offset int, length int) : int from class org.apache.parquet.bytes.ByteBufferInputStream to public read(bytes byte[], off int, len int) : int from class org.apache.parquet.bytes.MultiBufferInputStream
+Rename Variable	count : int to bytesToRead : int in method public read(bytes byte[], off int, len int) : int from class org.apache.parquet.bytes.MultiBufferInputStream
+Add Parameter	off : int in method public read(bytes byte[], off int, len int) : int from class org.apache.parquet.bytes.MultiBufferInputStream
+Add Parameter	len : int in method public read(bytes byte[], off int, len int) : int from class org.apache.parquet.bytes.MultiBufferInputStream
+Remove Parameter	offset : int in method public read(bytes byte[], offset int, length int) : int from class org.apache.parquet.bytes.ByteBufferInputStream
+Remove Parameter	length : int in method public read(bytes byte[], offset int, length int) : int from class org.apache.parquet.bytes.ByteBufferInputStream
+Remove Thrown Exception Type	IOException in method public read(bytes byte[], offset int, length int) : int from class org.apache.parquet.bytes.ByteBufferInputStream
+Push Down Method	public read() : int from class org.apache.parquet.bytes.ByteBufferInputStream to public read() : int from class org.apache.parquet.bytes.MultiBufferInputStream
+Push Down Method	public available() : int from class org.apache.parquet.bytes.ByteBufferInputStream to public available() : int from class org.apache.parquet.bytes.MultiBufferInputStream
+Extract And Move Method	public wrap(buffers List<ByteBuffer>) : ByteBufferInputStream extracted from public toInputStream() : InputStream in class org.apache.parquet.bytes.BytesInput & moved to class org.apache.parquet.bytes.ByteBufferInputStream
+Remove Parameter	offset : int in method public abstract initFromPage(valueCount int, page ByteBuffer, offset int) : void from class org.apache.parquet.column.values.ValuesReader
+Remove Parameter	page : ByteBuffer in method public abstract initFromPage(valueCount int, page ByteBuffer, offset int) : void from class org.apache.parquet.column.values.ValuesReader
+Add Parameter	stream : ByteBufferInputStream in method public initFromPage(valueCountL int, stream ByteBufferInputStream) : void from class org.apache.parquet.column.values.rle.RunLengthBitPackingHybridValuesReader
+Remove Parameter	offset : int in method public initFromPage(valueCountL int, page ByteBuffer, offset int) : void from class org.apache.parquet.column.values.rle.RunLengthBitPackingHybridValuesReader
+Rename Parameter	page : ByteBuffer to stream : ByteBufferInputStream in method public initFromPage(valueCountL int, stream ByteBufferInputStream) : void from class org.apache.parquet.column.values.rle.RunLengthBitPackingHybridValuesReader
+Change Parameter Type	page : ByteBuffer to stream : ByteBufferInputStream in method public initFromPage(valueCountL int, stream ByteBufferInputStream) : void from class org.apache.parquet.column.values.rle.RunLengthBitPackingHybridValuesReader
+Remove Parameter	page : ByteBuffer in method public initFromPage(valueCountL int, page ByteBuffer, offset int) : void from class org.apache.parquet.column.values.rle.RunLengthBitPackingHybridValuesReader
+Rename Parameter	in : ByteBuffer to stream : ByteBufferInputStream in method public initFromPage(valueCount int, stream ByteBufferInputStream) : void from class org.apache.parquet.column.values.rle.ZeroIntegerValuesReader
+Remove Parameter	offset : int in method public initFromPage(valueCount int, in ByteBuffer, offset int) : void from class org.apache.parquet.column.values.rle.ZeroIntegerValuesReader
+Change Parameter Type	in : ByteBuffer to stream : ByteBufferInputStream in method public initFromPage(valueCount int, stream ByteBufferInputStream) : void from class org.apache.parquet.column.values.rle.ZeroIntegerValuesReader
+Add Parameter	stream : ByteBufferInputStream in method public initFromPage(valueCount int, stream ByteBufferInputStream) : void from class org.apache.parquet.column.values.rle.ZeroIntegerValuesReader
+Remove Parameter	in : ByteBuffer in method public initFromPage(valueCount int, in ByteBuffer, offset int) : void from class org.apache.parquet.column.values.rle.ZeroIntegerValuesReader
+Developers have reported that 11158 commits involve refactoring but only 2634 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2634 commits.
+
+No refactorings detected at 2d3203b10cc8edf71a6e3e0822f0d742c9516aa3
+
+No refactorings detected at 328c5deb015ee5bc0a24623bc29225f6ec1ae23d
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b4859812123a750e0618acf
+Issue Title: : Add thoroughly parquet test encodings
+Issue Description:  PARQUET-246 highlighted the need to have more thorough validation of the Parquet encodings. With the 2.0 encodings as high priority, we need to validate each encoding with its spec (and ensure there is a spec).
+Refactorings at 47f3823a4a2db6b07d5ade0f51a8583b2abf07c0
+Change Method Access Modifier	protected to public in method public abstract nextValue() : T from class org.apache.parquet.statistics.RandomValues.RandomValueGenerator
+Change Method Access Modifier	protected to public in method public nextValue() : Integer from class org.apache.parquet.statistics.RandomValues.IntGenerator
+Change Method Access Modifier	protected to public in method public nextValue() : Long from class org.apache.parquet.statistics.RandomValues.LongGenerator
+Change Method Access Modifier	protected to public in method public nextValue() : BigInteger from class org.apache.parquet.statistics.RandomValues.Int96Generator
+Change Method Access Modifier	protected to public in method public nextValue() : Float from class org.apache.parquet.statistics.RandomValues.FloatGenerator
+Change Method Access Modifier	protected to public in method public nextValue() : Double from class org.apache.parquet.statistics.RandomValues.DoubleGenerator
+Change Method Access Modifier	protected to public in method public nextValue() : String from class org.apache.parquet.statistics.RandomValues.StringGenerator
+Change Method Access Modifier	protected to public in method public nextValue() : Binary from class org.apache.parquet.statistics.RandomValues.BinaryGenerator
+Change Method Access Modifier	protected to public in method public nextValue() : Binary from class org.apache.parquet.statistics.RandomValues.FixedGenerator
+Developers have reported that 11158 commits involve refactoring but only 2635 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2635 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b4859812123a750e0618acf
+Issue Title: : Add thoroughly parquet test encodings
+Issue Description:  PARQUET-246 highlighted the need to have more thorough validation of the Parquet encodings. With the 2.0 encodings as high priority, we need to validate each encoding with its spec (and ensure there is a spec).
+Refactorings at efafa61992658eab64c893e9eef49f545d75673c
+Change Method Access Modifier	protected to public in method public abstract nextValue() : T from class org.apache.parquet.statistics.RandomValues.RandomValueGenerator
+Change Method Access Modifier	protected to public in method public nextValue() : Integer from class org.apache.parquet.statistics.RandomValues.IntGenerator
+Change Method Access Modifier	protected to public in method public nextValue() : Long from class org.apache.parquet.statistics.RandomValues.LongGenerator
+Change Method Access Modifier	protected to public in method public nextValue() : BigInteger from class org.apache.parquet.statistics.RandomValues.Int96Generator
+Change Method Access Modifier	protected to public in method public nextValue() : Float from class org.apache.parquet.statistics.RandomValues.FloatGenerator
+Change Method Access Modifier	protected to public in method public nextValue() : Double from class org.apache.parquet.statistics.RandomValues.DoubleGenerator
+Change Method Access Modifier	protected to public in method public nextValue() : String from class org.apache.parquet.statistics.RandomValues.StringGenerator
+Change Method Access Modifier	protected to public in method public nextValue() : Binary from class org.apache.parquet.statistics.RandomValues.BinaryGenerator
+Change Method Access Modifier	protected to public in method public nextValue() : Binary from class org.apache.parquet.statistics.RandomValues.FixedGenerator
+Developers have reported that 11158 commits involve refactoring but only 2636 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2636 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b48598d2123a750e0618b19
+Issue Title: : Add an abstraction to get the length of a stream
+Issue Description:  PARQUET-400 introduces {{SeekableInputStream}} to wrap Hadoop v1 and v2 streams and provide ByteBuffer access transparently. This can also be used as an abstraction to allow Parquet to work without the Hadoop API. The missing component is an abstraction that knows how long the file stream is for reading the footer. This could be done by adding a {{getLength}} method to the new stream interface, but I think there is value in adding a higher-level abstraction that carries information about the file and can open streams for it. This abstraction could be passed to a PageReadStore, which could have more complicated logic including parallel streams to read column chunks.Linked Commit Github URL: https://github.com/apache/parquet-mr/commit/2990dea6eda8af82165cbdc85cffca81787ca8c3
+Refactorings at b59be86597cfcd805c24fa406af46071400e24c8
+Extract Method	public readFooter(file InputFile, filter MetadataFilter) : ParquetMetadata extracted from public readFooter(configuration Configuration, file Path, filter MetadataFilter) : ParquetMetadata in class org.apache.parquet.hadoop.ParquetFileReader
+Extract Method	public readFooter(file InputFile, filter MetadataFilter) : ParquetMetadata extracted from public readFooter(configuration Configuration, file FileStatus, filter MetadataFilter) : ParquetMetadata in class org.apache.parquet.hadoop.ParquetFileReader
+Add Parameter	converter : ParquetMetadataConverter in method private readFooter(converter ParquetMetadataConverter, fileLen long, filePath String, f SeekableInputStream, filter MetadataFilter) : ParquetMetadata from class org.apache.parquet.hadoop.ParquetFileReader
+Change Method Access Modifier	public to private in method private readFooter(converter ParquetMetadataConverter, fileLen long, filePath String, f SeekableInputStream, filter MetadataFilter) : ParquetMetadata from class org.apache.parquet.hadoop.ParquetFileReader
+Developers have reported that 11158 commits involve refactoring but only 2637 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2637 commits.
+
+No refactorings detected at 43d0961705c7757018439a3d54cf213ec7b9dda2
+
+No refactorings detected at e9928c94ce1385ec72028336417f19f30ac38ac0
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b48599a2123a750e0618b40
+Issue Title: : Improve performance of ByteBuffer based read / write paths
+Issue Description:  While trying out the newest Parquet version, we noticed that the changes to start using ByteBuffers: https://github.com/apache/parquet-mr/commit/6b605a4ea05b66e1a6bf843353abcb4834a4ced8 and https://github.com/apache/parquet-mr/commit/6b24a1d1b5e2792a7821ad172a45e38d2b04f9b8 (mostly avro but a couple of ByteBuffer changes) caused our jobs to slow down a bit.Read overhead: 4-6% (in MB_Millis)
+Refactorings at 1535970c5072633a69413cdc070208d62c6e0431
+Change Return Type	byte[] to ByteBuffer in method private encodeUTF8(value String) : ByteBuffer from class org.apache.parquet.io.api.Binary.FromStringBinary
+Remove Parameter Modifier	final in parameter value : String in method public fromString(value String) : Binary from class org.apache.parquet.io.api.Binary
+Developers have reported that 11158 commits involve refactoring but only 2638 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2638 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b48599a2123a750e0618b40
+Issue Title: : Improve performance of ByteBuffer based read / write paths
+Issue Description:  While trying out the newest Parquet version, we noticed that the changes to start using ByteBuffers: https://github.com/apache/parquet-mr/commit/6b605a4ea05b66e1a6bf843353abcb4834a4ced8 and https://github.com/apache/parquet-mr/commit/6b24a1d1b5e2792a7821ad172a45e38d2b04f9b8 (mostly avro but a couple of ByteBuffer changes) caused our jobs to slow down a bit.Read overhead: 4-6% (in MB_Millis)
+Refactorings at 7f8e952abc4d2fc4b96c97a51aa25fcf6ed8af02
+Change Parameter Type	value : CharSequence to value : String in method public FromStringBinary(value String) from class org.apache.parquet.io.api.Binary.FromStringBinary
+Change Variable Type	e : CharacterCodingException to e : UnsupportedEncodingException in method private encodeUTF8(value String) : ByteBuffer from class org.apache.parquet.io.api.Binary.FromStringBinary
+Change Parameter Type	value : CharSequence to value : String in method private encodeUTF8(value String) : ByteBuffer from class org.apache.parquet.io.api.Binary.FromStringBinary
+Rename Method	public fromString(value CharSequence) : Binary renamed to public fromCharSequence(value CharSequence) : Binary in class org.apache.parquet.io.api.Binary
+Move Attribute	private ENCODER : ThreadLocal<CharsetEncoder> from class org.apache.parquet.io.api.Binary.FromStringBinary to private ENCODER : ThreadLocal<CharsetEncoder> from class org.apache.parquet.io.api.Binary.FromCharSequenceBinary
+Developers have reported that 11158 commits involve refactoring but only 2639 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2639 commits.
+
+No refactorings detected at 255f10834a67cf13518316de0e2c8a345677ebbf
+
+No refactorings detected at b45c4bdb496381b5f90df6872edca12e0a2e68ca
+
+No refactorings detected at de17deab9c52991d8eba493511caa7728bf40cf1
+
+No refactorings detected at ac62c1c29f319a97a2552c39f32c8e6acd70c9e1
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b4859df2123a750e0618b84
+Issue Title: : Add prerelease logic to semantic versions
+Issue Description:  CDH is including fixes for PARQUET-251. That means that we need to add the fixed versions to the logic that tests whether the fix is present and that requires the appropriate semver logic for prerelease versions because CDH versions are formatted like this: 1.5.0-cdh5.5.0 / <upstream-base>-cdh<cdh-release>.Linked Commit Github URL: https://github.com/apache/parquet-mr/commit/053c19ef72ff249b3a514eaa40d70c780e6b485f
+Refactorings at 04f524d5ad91b1cdda66dfde4089f2f83f4528aa
+Change Variable Type	prerelease : boolean to prerelease : String in method public parse(version String) : SemanticVersion from class org.apache.parquet.SemanticVersion
+Add Variable Modifier	final in variable prerelease : String in method public parse(version String) : SemanticVersion from class org.apache.parquet.SemanticVersion
+Change Method Access Modifier	package to private in method private compareIntegers(x int, y int) : int from class org.apache.parquet.SemanticVersion
+Add Method Modifier	static in method private compareIntegers(x int, y int) : int from class org.apache.parquet.SemanticVersion
+Change Method Access Modifier	package to private in method private compareBooleans(x boolean, y boolean) : int from class org.apache.parquet.SemanticVersion
+Add Method Modifier	static in method private compareBooleans(x boolean, y boolean) : int from class org.apache.parquet.SemanticVersion
+Rename Parameter	isPrerelease : boolean to hasUnknown : boolean in method public SemanticVersion(major int, minor int, patch int, hasUnknown boolean) from class org.apache.parquet.SemanticVersion
+Developers have reported that 11158 commits involve refactoring but only 2640 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2640 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b4859ef2123a750e0618bbe
+Issue Title: : Add Java metadata for PageEncodingStats
+Issue Description:  PARQUET-384 needs to determine whether an entire column chunk is dictionary-encoded, but it is difficult to detect that case based on the set of encodings for a column. For 1.0, this can be done by checking for a PLAIN page because both dictionary pages and dictionary-encoded pages use PLAIN_DICTIONARY and RLE/BIT_PACKING is only used for repetition and definition levels. But for 2.0, dictionary pages might be using PLAIN and there is no way to tell if a column has fallen back.
+Refactorings at d901cf9b67fa718d948053749df55fab5740311e
+Rename Attribute	encodings : Set<Encoding> to dataEncodings : List<Encoding> in class org.apache.parquet.hadoop.ColumnChunkPageWriteStore.ColumnChunkPageWriter
+Change Attribute Type	encodings : Set<Encoding> to dataEncodings : List<Encoding> in class org.apache.parquet.hadoop.ColumnChunkPageWriteStore.ColumnChunkPageWriter
+Change Parameter Type	encodings : List<Encoding> to rlEncodings : Set<Encoding> in method package writeDataPages(bytes BytesInput, uncompressedTotalPageSize long, compressedTotalPageSize long, totalStats Statistics, rlEncodings Set<Encoding>, dlEncodings Set<Encoding>, dataEncodings List<Encoding>) : void from class org.apache.parquet.hadoop.ParquetFileWriter
+Rename Parameter	encodings : List<Encoding> to rlEncodings : Set<Encoding> in method package writeDataPages(bytes BytesInput, uncompressedTotalPageSize long, compressedTotalPageSize long, totalStats Statistics, rlEncodings Set<Encoding>, dlEncodings Set<Encoding>, dataEncodings List<Encoding>) : void from class org.apache.parquet.hadoop.ParquetFileWriter
+Add Parameter	dlEncodings : Set<Encoding> in method package writeDataPages(bytes BytesInput, uncompressedTotalPageSize long, compressedTotalPageSize long, totalStats Statistics, rlEncodings Set<Encoding>, dlEncodings Set<Encoding>, dataEncodings List<Encoding>) : void from class org.apache.parquet.hadoop.ParquetFileWriter
+Extract Method	public get(path ColumnPath, type PrimitiveTypeName, codec CompressionCodecName, encodingStats EncodingStats, encodings Set<Encoding>, statistics Statistics, firstDataPage long, dictionaryPageOffset long, valueCount long, totalSize long, totalUncompressedSize long) : ColumnChunkMetaData extracted from public get(path ColumnPath, type PrimitiveTypeName, codec CompressionCodecName, encodings Set<Encoding>, firstDataPage long, dictionaryPageOffset long, valueCount long, totalSize long, totalUncompressedSize long) : ColumnChunkMetaData in class org.apache.parquet.hadoop.metadata.ColumnChunkMetaData
+Extract Method	public get(path ColumnPath, type PrimitiveTypeName, codec CompressionCodecName, encodingStats EncodingStats, encodings Set<Encoding>, statistics Statistics, firstDataPage long, dictionaryPageOffset long, valueCount long, totalSize long, totalUncompressedSize long) : ColumnChunkMetaData extracted from public get(path ColumnPath, type PrimitiveTypeName, codec CompressionCodecName, encodings Set<Encoding>, statistics Statistics, firstDataPage long, dictionaryPageOffset long, valueCount long, totalSize long, totalUncompressedSize long) : ColumnChunkMetaData in class org.apache.parquet.hadoop.metadata.ColumnChunkMetaData
+Add Method Annotation	@Deprecated in method public get(path ColumnPath, type PrimitiveTypeName, codec CompressionCodecName, encodings Set<Encoding>, statistics Statistics, firstDataPage long, dictionaryPageOffset long, valueCount long, totalSize long, totalUncompressedSize long) : ColumnChunkMetaData from class org.apache.parquet.hadoop.metadata.ColumnChunkMetaData
+Add Parameter	encodingStats : EncodingStats in method package IntColumnChunkMetaData(path ColumnPath, type PrimitiveTypeName, codec CompressionCodecName, encodingStats EncodingStats, encodings Set<Encoding>, statistics Statistics, firstDataPage long, dictionaryPageOffset long, valueCount long, totalSize long, totalUncompressedSize long) from class org.apache.parquet.hadoop.metadata.IntColumnChunkMetaData
+Add Parameter	encodingStats : EncodingStats in method package LongColumnChunkMetaData(path ColumnPath, type PrimitiveTypeName, codec CompressionCodecName, encodingStats EncodingStats, encodings Set<Encoding>, statistics Statistics, firstDataPageOffset long, dictionaryPageOffset long, valueCount long, totalSize long, totalUncompressedSize long) from class org.apache.parquet.hadoop.metadata.LongColumnChunkMetaData
+Developers have reported that 11158 commits involve refactoring but only 2641 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2641 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b4859ef2123a750e0618bbe
+Issue Title: : Add Java metadata for PageEncodingStats
+Issue Description:  PARQUET-384 needs to determine whether an entire column chunk is dictionary-encoded, but it is difficult to detect that case based on the set of encodings for a column. For 1.0, this can be done by checking for a PLAIN page because both dictionary pages and dictionary-encoded pages use PLAIN_DICTIONARY and RLE/BIT_PACKING is only used for repetition and definition levels. But for 2.0, dictionary pages might be using PLAIN and there is no way to tell if a column has fallen back.
+Refactorings at 3dd2210e79a8eb84378c370b32652f9a53f87a93
+Rename Attribute	encodings : Set<Encoding> to dataEncodings : List<Encoding> in class org.apache.parquet.hadoop.ColumnChunkPageWriteStore.ColumnChunkPageWriter
+Change Attribute Type	encodings : Set<Encoding> to dataEncodings : List<Encoding> in class org.apache.parquet.hadoop.ColumnChunkPageWriteStore.ColumnChunkPageWriter
+Change Parameter Type	encodings : List<Encoding> to rlEncodings : Set<Encoding> in method package writeDataPages(bytes BytesInput, uncompressedTotalPageSize long, compressedTotalPageSize long, totalStats Statistics, rlEncodings Set<Encoding>, dlEncodings Set<Encoding>, dataEncodings List<Encoding>) : void from class org.apache.parquet.hadoop.ParquetFileWriter
+Rename Parameter	encodings : List<Encoding> to rlEncodings : Set<Encoding> in method package writeDataPages(bytes BytesInput, uncompressedTotalPageSize long, compressedTotalPageSize long, totalStats Statistics, rlEncodings Set<Encoding>, dlEncodings Set<Encoding>, dataEncodings List<Encoding>) : void from class org.apache.parquet.hadoop.ParquetFileWriter
+Add Parameter	dlEncodings : Set<Encoding> in method package writeDataPages(bytes BytesInput, uncompressedTotalPageSize long, compressedTotalPageSize long, totalStats Statistics, rlEncodings Set<Encoding>, dlEncodings Set<Encoding>, dataEncodings List<Encoding>) : void from class org.apache.parquet.hadoop.ParquetFileWriter
+Extract Method	public get(path ColumnPath, type PrimitiveTypeName, codec CompressionCodecName, encodingStats EncodingStats, encodings Set<Encoding>, statistics Statistics, firstDataPage long, dictionaryPageOffset long, valueCount long, totalSize long, totalUncompressedSize long) : ColumnChunkMetaData extracted from public get(path ColumnPath, type PrimitiveTypeName, codec CompressionCodecName, encodings Set<Encoding>, firstDataPage long, dictionaryPageOffset long, valueCount long, totalSize long, totalUncompressedSize long) : ColumnChunkMetaData in class org.apache.parquet.hadoop.metadata.ColumnChunkMetaData
+Extract Method	public get(path ColumnPath, type PrimitiveTypeName, codec CompressionCodecName, encodingStats EncodingStats, encodings Set<Encoding>, statistics Statistics, firstDataPage long, dictionaryPageOffset long, valueCount long, totalSize long, totalUncompressedSize long) : ColumnChunkMetaData extracted from public get(path ColumnPath, type PrimitiveTypeName, codec CompressionCodecName, encodings Set<Encoding>, statistics Statistics, firstDataPage long, dictionaryPageOffset long, valueCount long, totalSize long, totalUncompressedSize long) : ColumnChunkMetaData in class org.apache.parquet.hadoop.metadata.ColumnChunkMetaData
+Add Method Annotation	@Deprecated in method public get(path ColumnPath, type PrimitiveTypeName, codec CompressionCodecName, encodings Set<Encoding>, statistics Statistics, firstDataPage long, dictionaryPageOffset long, valueCount long, totalSize long, totalUncompressedSize long) : ColumnChunkMetaData from class org.apache.parquet.hadoop.metadata.ColumnChunkMetaData
+Add Parameter	encodingStats : EncodingStats in method package IntColumnChunkMetaData(path ColumnPath, type PrimitiveTypeName, codec CompressionCodecName, encodingStats EncodingStats, encodings Set<Encoding>, statistics Statistics, firstDataPage long, dictionaryPageOffset long, valueCount long, totalSize long, totalUncompressedSize long) from class org.apache.parquet.hadoop.metadata.IntColumnChunkMetaData
+Add Parameter	encodingStats : EncodingStats in method package LongColumnChunkMetaData(path ColumnPath, type PrimitiveTypeName, codec CompressionCodecName, encodingStats EncodingStats, encodings Set<Encoding>, statistics Statistics, firstDataPageOffset long, dictionaryPageOffset long, valueCount long, totalSize long, totalUncompressedSize long) from class org.apache.parquet.hadoop.metadata.LongColumnChunkMetaData
+Developers have reported that 11158 commits involve refactoring but only 2642 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2642 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b4859f22123a750e0618bcf
+Issue Title: : Fix a potential bug in MessageTypeParser where we ignore and overwrite the initial value of a method parameter
+Issue Description:  In org.apache.parquet.schema.MessageTypeParser, for addGroupType() and addPrimitiveType(), the initial value of this parameter t is ignored, and t is overwritten here.
+Refactorings at e37811ab66431e44090c94cdae95c01594bb108c
+Localize Parameter	t : String to t : String in method private addGroupType(st Tokenizer, r Repetition, builder GroupBuilder<?>) : void from class org.apache.parquet.schema.MessageTypeParser
+Localize Parameter	t : String to t : String in method private addPrimitiveType(st Tokenizer, type PrimitiveTypeName, r Repetition, builder Types.GroupBuilder<?>) : void from class org.apache.parquet.schema.MessageTypeParser
+Developers have reported that 11158 commits involve refactoring but only 2643 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2643 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b4859f22123a750e0618bcf
+Issue Title: : Fix a potential bug in MessageTypeParser where we ignore and overwrite the initial value of a method parameter
+Issue Description:  In org.apache.parquet.schema.MessageTypeParser, for addGroupType() and addPrimitiveType(), the initial value of this parameter t is ignored, and t is overwritten here.
+Refactorings at 30ee10d2740fe1f28595989c6b21f22b75a147fc
+Localize Parameter	t : String to t : String in method private addGroupType(st Tokenizer, r Repetition, builder GroupBuilder<?>) : void from class org.apache.parquet.schema.MessageTypeParser
+Localize Parameter	t : String to t : String in method private addPrimitiveType(st Tokenizer, type PrimitiveTypeName, r Repetition, builder Types.GroupBuilder<?>) : void from class org.apache.parquet.schema.MessageTypeParser
+Developers have reported that 11158 commits involve refactoring but only 2644 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2644 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b485a102123a750e0618c3c
+Issue Title: : Fix mismatch of javadoc names and method parameters in module encoding, column, and hadoop
+Issue Description:  Codes change now and then, but some corresponding doc comments are left out.
+Refactorings at 84b2b74179da8e279e2fafdafd031748c285e1b7
+Rename Parameter	stats : Statistics<?> to statistics : Statistics<?> in method public DataPageV1(bytes BytesInput, valueCount int, uncompressedSize int, statistics Statistics<?>, rlEncoding Encoding, dlEncoding Encoding, valuesEncoding Encoding) from class org.apache.parquet.column.page.DataPageV1
+Developers have reported that 11158 commits involve refactoring but only 2645 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2645 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b485a102123a750e0618c3c
+Issue Title: : Fix mismatch of javadoc names and method parameters in module encoding, column, and hadoop
+Issue Description:  Codes change now and then, but some corresponding doc comments are left out.
+Refactorings at 7908bf21f87851bcda517701a9aa20036947b96e
+Rename Parameter	stats : Statistics<?> to statistics : Statistics<?> in method public DataPageV1(bytes BytesInput, valueCount int, uncompressedSize int, statistics Statistics<?>, rlEncoding Encoding, dlEncoding Encoding, valuesEncoding Encoding) from class org.apache.parquet.column.page.DataPageV1
+Developers have reported that 11158 commits involve refactoring but only 2646 involve refactoring operations
+There are 48 duplicate commits with refactoring out of the 2646 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b485a222123a750e0618c87
+Issue Title: : Improve write performance with wide schema sparse data
+Issue Description:  In write path, when there are tons of sparse data, most of time is spent on writing nulls.
+Refactorings at 8e4741f3556991550afecabf8a297c6b2a43e29c
+Extract Variable	recordWriter : RecordConsumer in method private writeGroups(writtenSchema MessageType, memPageStore MemPageStore, groups Group...) : void from class org.apache.parquet.io.TestColumnIO
+Extract Variable	recordWriter : RecordConsumer in method public testColumnIO() : void from class org.apache.parquet.io.TestColumnIO
+Extract Variable	recordWriter : RecordConsumer in method private testSchema(messageSchema MessageType, groups List<Group>) : void from class org.apache.parquet.io.TestColumnIO
+Extract Variable	recordWriter : RecordConsumer in method public testPushParser() : void from class org.apache.parquet.io.TestColumnIO
+Extract Variable	recordWriter : RecordConsumer in method public testWriteWithGroupWriter() : void from class org.apache.parquet.io.TestColumnIO
+Extract Variable	recordWriter : RecordConsumer in method private writeTestRecords(columnIO MessageColumnIO, number int) : MemPageStore from class org.apache.parquet.io.TestFiltered
+Replace Attribute With Variable	columnIO : MessageColumnIO to columnIO : MessageColumnIO in method private checkRead() : void from class org.apache.parquet.hadoop.InternalParquetRecordReader
+Developers have reported that 11158 commits involve refactoring but only 2647 involve refactoring operations
+There are 49 duplicate commits with refactoring out of the 2647 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b485a222123a750e0618c87
+Issue Title: : Improve write performance with wide schema sparse data
+Issue Description:  In write path, when there are tons of sparse data, most of time is spent on writing nulls.
+Refactorings at b3ca6d7b56f41cd0bb1318d8e4e4b00373ef71b1
+Extract Variable	w : ColumnWriter in method public MessageColumnIORecordConsumer(columns ColumnWriteStore) from class org.apache.parquet.io.MessageColumnIO.MessageColumnIORecordConsumer
+Replace Variable With Attribute	columnIO : MessageColumnIO to columnIO : MessageColumnIO in method private checkRead() : void from class org.apache.parquet.hadoop.InternalParquetRecordReader
+Developers have reported that 11158 commits involve refactoring but only 2648 involve refactoring operations
+There are 49 duplicate commits with refactoring out of the 2648 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b485a222123a750e0618c87
+Issue Title: : Improve write performance with wide schema sparse data
+Issue Description:  In write path, when there are tons of sparse data, most of time is spent on writing nulls.
+Refactorings at 2f956f46580e5b4752173e885d37a20fe31a78d8
+Extract Variable	w : ColumnWriter in method public MessageColumnIORecordConsumer(columns ColumnWriteStore) from class org.apache.parquet.io.MessageColumnIO.MessageColumnIORecordConsumer
+Replace Variable With Attribute	columnIO : MessageColumnIO to columnIO : MessageColumnIO in method private checkRead() : void from class org.apache.parquet.hadoop.InternalParquetRecordReader
+Developers have reported that 11158 commits involve refactoring but only 2649 involve refactoring operations
+There are 49 duplicate commits with refactoring out of the 2649 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b485a222123a750e0618c87
+Issue Title: : Improve write performance with wide schema sparse data
+Issue Description:  In write path, when there are tons of sparse data, most of time is spent on writing nulls.
+Refactorings at 01fbf81e34a36cedf505f20b1c52306afceedc3e
+Extract Variable	recordWriter : RecordConsumer in method private writeGroups(writtenSchema MessageType, memPageStore MemPageStore, groups Group...) : void from class org.apache.parquet.io.TestColumnIO
+Extract Variable	recordWriter : RecordConsumer in method public testColumnIO() : void from class org.apache.parquet.io.TestColumnIO
+Extract Variable	recordWriter : RecordConsumer in method private testSchema(messageSchema MessageType, groups List<Group>) : void from class org.apache.parquet.io.TestColumnIO
+Extract Variable	recordWriter : RecordConsumer in method public testPushParser() : void from class org.apache.parquet.io.TestColumnIO
+Extract Variable	recordWriter : RecordConsumer in method public testWriteWithGroupWriter() : void from class org.apache.parquet.io.TestColumnIO
+Extract Variable	recordWriter : RecordConsumer in method private writeTestRecords(columnIO MessageColumnIO, number int) : MemPageStore from class org.apache.parquet.io.TestFiltered
+Replace Attribute With Variable	columnIO : MessageColumnIO to columnIO : MessageColumnIO in method private checkRead() : void from class org.apache.parquet.hadoop.InternalParquetRecordReader
+Developers have reported that 11158 commits involve refactoring but only 2650 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 2650 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b485a342123a750e0618cb9
+Issue Title: : Add compression to FileEncodingIT tests
+Issue Description:  The {{FileEncodingsIT}} test validates that pages can be read independently with all encodings, without compression. Pages should not depend on one another for compression to be correct as well, so we should extend this test to use the other compression codecs.
+Refactorings at bd0b5af025fab9cad8f94260138741c252f45fc8
+Add Parameter	compression : CompressionCodecName in method public FileEncodingsIT(typeName PrimitiveTypeName, compression CompressionCodecName) from class org.apache.parquet.encodings.FileEncodingsIT
+Developers have reported that 11158 commits involve refactoring but only 2651 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 2651 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b485a342123a750e0618cb9
+Issue Title: : Add compression to FileEncodingIT tests
+Issue Description:  The {{FileEncodingsIT}} test validates that pages can be read independently with all encodings, without compression. Pages should not depend on one another for compression to be correct as well, so we should extend this test to use the other compression codecs.
+Refactorings at d59381a5547675cbfdd2775c247f3c18abe43ea2
+Add Parameter	compression : CompressionCodecName in method public FileEncodingsIT(typeName PrimitiveTypeName, compression CompressionCodecName) from class org.apache.parquet.encodings.FileEncodingsIT
+Developers have reported that 11158 commits involve refactoring but only 2652 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 2652 commits.
+
+No refactorings detected at 9c13e834bc4f2f854961eaf87105fbe8498bee5c
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b485a442123a750e0618d0f
+Issue Title: : Create Integration tests to validate statistics
+Issue Description:  In response to [PARQUET-251|https://issues.apache.org/jira/browse/PARQUET-251] create unit tests that validate the statistics fields for each column type.Linked Commit Github URL: https://github.com/apache/parquet-mr/commit/e17e053a8674c97c976f289e43888603e1171ec0
+Refactorings at c3819688c48480ec75a9563c71f18ea755e34620
+Change Class Access Modifier	package to public in class org.apache.parquet.column.impl.ColumnReaderImpl
+Developers have reported that 11158 commits involve refactoring but only 2653 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 2653 commits.
+
+No refactorings detected at 63d5ae78ac00d710c9bf631f8cb9ed6d07e6a2c9
+
+No refactorings detected at a5ce86d370c64ec4dae9c8436d68816644dd9cec
+
+No refactorings detected at 6c9ca4d4c0de4dff29b79f28ac5c51b4f6fed0da
+
+No refactorings detected at 60bbf8e7f488f85c5df033fa167960dd3817d1ed
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b485a5b2123a750e0618d86
+Issue Title: : Add support for temporal logical types to AVRO/Parquet conversion
+Issue Description:  Both [AVRO|https://github.com/apache/avro/blob/trunk/doc/src/content/xdocs/spec.xml] and [Parquet|https://github.com/apache/parquet-format/blob/master/LogicalTypes.md] support logical types for dates, times and timestamps however this information is not transfered from AVRO schema to Parquet schema during conversion.
+Refactorings at 6b24a1d1b5e2792a7821ad172a45e38d2b04f9b8
+Rename Class	org.apache.parquet.avro.AvroRecordConverter.AvroArrayConverter.PrimitiveElementConverter renamed to org.apache.parquet.avro.AvroRecordConverter.AvroArrayConverter.ArrayElementConverter
+Localize Parameter	parent : ParentValueContainer to parent : ParentValueContainer in method private newConverter(schema Schema, type Type, model GenericData, setter ParentValueContainer) : Converter from class org.apache.parquet.avro.AvroIndexedRecordConverter
+Add Parameter	setter : ParentValueContainer in method private newConverter(schema Schema, type Type, model GenericData, setter ParentValueContainer) : Converter from class org.apache.parquet.avro.AvroIndexedRecordConverter
+Extract Method	private newConverter(schema Schema, type Type, model GenericData, knownClass Class<?>, setter ParentValueContainer) : Converter extracted from private newConverter(schema Schema, type Type, model GenericData, parent ParentValueContainer) : Converter in class org.apache.parquet.avro.AvroRecordConverter
+Extract Method	private getDatumClass(conversion Conversion<?>, knownClass Class<T>, schema Schema, model GenericData) : Class<T> extracted from private getDatumClass(schema Schema, model GenericData) : Class<T> in class org.apache.parquet.avro.AvroRecordConverter
+Change Variable Type	e : IllegalAccessException to e : InvocationTargetException in method private getDatumClass(conversion Conversion<?>, knownClass Class<T>, schema Schema, model GenericData) : Class<T> from class org.apache.parquet.avro.AvroRecordConverter
+Change Variable Type	e : InvocationTargetException to e : IllegalAccessException in method private getDatumClass(conversion Conversion<?>, knownClass Class<T>, schema Schema, model GenericData) : Class<T> from class org.apache.parquet.avro.AvroRecordConverter
+Rename Parameter	parent : ParentValueContainer to setter : ParentValueContainer in method private newConverter(schema Schema, type Type, model GenericData, setter ParentValueContainer) : Converter from class org.apache.parquet.avro.AvroRecordConverter
+Remove Method Annotation	@SuppressWarnings("unchecked") in method private getDatumClass(schema Schema, model GenericData) : Class<T> from class org.apache.parquet.avro.AvroRecordConverter
+Add Method Annotation	@SuppressWarnings("deprecation") in method private convertField(fieldName String, schema Schema, repetition Type.Repetition) : Type from class org.apache.parquet.avro.AvroSchemaConverter
+Extract Variable	asPrimitive : PrimitiveType in method private convertField(parquetType Type) : Schema from class org.apache.parquet.avro.AvroSchemaConverter
+Rename Variable	originalType : OriginalType to annotation : OriginalType in method private convertField(parquetType Type) : Schema from class org.apache.parquet.avro.AvroSchemaConverter
+Extract Method	private writeValueWithoutConversion(type Type, avroSchema Schema, value Object) : void extracted from private writeValue(type Type, avroSchema Schema, value Object) : void in class org.apache.parquet.avro.AvroWriteSupport
+Change Variable Type	avroType : Schema.Type to logicalType : LogicalType in method private writeValue(type Type, avroSchema Schema, value Object) : void from class org.apache.parquet.avro.AvroWriteSupport
+Rename Variable	avroType : Schema.Type to logicalType : LogicalType in method private writeValue(type Type, avroSchema Schema, value Object) : void from class org.apache.parquet.avro.AvroWriteSupport
+Remove Method Annotation	@SuppressWarnings("unchecked") in method private writeValue(type Type, avroSchema Schema, value Object) : void from class org.apache.parquet.avro.AvroWriteSupport
+Change Parameter Type	value : String to value : CharSequence in method public FromStringBinary(value CharSequence) from class org.apache.parquet.io.api.Binary.FromStringBinary
+Extract Method	public fromString(value CharSequence) : Binary extracted from public fromString(value String) : Binary in class org.apache.parquet.io.api.Binary
+Remove Parameter Modifier	final in parameter value : String in method public fromString(value String) : Binary from class org.apache.parquet.io.api.Binary
+Change Return Type	BasePrimitiveBuilder<P,THIS> to THIS in method public length(length int) : THIS from class org.apache.parquet.schema.Types.BasePrimitiveBuilder
+Change Return Type	BasePrimitiveBuilder<P,THIS> to THIS in method public precision(precision int) : THIS from class org.apache.parquet.schema.Types.BasePrimitiveBuilder
+Change Return Type	BasePrimitiveBuilder<P,THIS> to THIS in method public scale(scale int) : THIS from class org.apache.parquet.schema.Types.BasePrimitiveBuilder
+Developers have reported that 11158 commits involve refactoring but only 2654 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 2654 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b485a5b2123a750e0618d86
+Issue Title: : Add support for temporal logical types to AVRO/Parquet conversion
+Issue Description:  Both [AVRO|https://github.com/apache/avro/blob/trunk/doc/src/content/xdocs/spec.xml] and [Parquet|https://github.com/apache/parquet-format/blob/master/LogicalTypes.md] support logical types for dates, times and timestamps however this information is not transfered from AVRO schema to Parquet schema during conversion.
+Refactorings at 36e14294235616a5658719e49e98a525856438af
+Rename Class	org.apache.parquet.avro.AvroRecordConverter.AvroArrayConverter.PrimitiveElementConverter renamed to org.apache.parquet.avro.AvroRecordConverter.AvroArrayConverter.ArrayElementConverter
+Localize Parameter	parent : ParentValueContainer to parent : ParentValueContainer in method private newConverter(schema Schema, type Type, model GenericData, setter ParentValueContainer) : Converter from class org.apache.parquet.avro.AvroIndexedRecordConverter
+Add Parameter	setter : ParentValueContainer in method private newConverter(schema Schema, type Type, model GenericData, setter ParentValueContainer) : Converter from class org.apache.parquet.avro.AvroIndexedRecordConverter
+Extract Method	private newConverter(schema Schema, type Type, model GenericData, knownClass Class<?>, setter ParentValueContainer) : Converter extracted from private newConverter(schema Schema, type Type, model GenericData, parent ParentValueContainer) : Converter in class org.apache.parquet.avro.AvroRecordConverter
+Extract Method	private getDatumClass(conversion Conversion<?>, knownClass Class<T>, schema Schema, model GenericData) : Class<T> extracted from private getDatumClass(schema Schema, model GenericData) : Class<T> in class org.apache.parquet.avro.AvroRecordConverter
+Change Variable Type	e : IllegalAccessException to e : InvocationTargetException in method private getDatumClass(conversion Conversion<?>, knownClass Class<T>, schema Schema, model GenericData) : Class<T> from class org.apache.parquet.avro.AvroRecordConverter
+Change Variable Type	e : InvocationTargetException to e : IllegalAccessException in method private getDatumClass(conversion Conversion<?>, knownClass Class<T>, schema Schema, model GenericData) : Class<T> from class org.apache.parquet.avro.AvroRecordConverter
+Rename Parameter	parent : ParentValueContainer to setter : ParentValueContainer in method private newConverter(schema Schema, type Type, model GenericData, setter ParentValueContainer) : Converter from class org.apache.parquet.avro.AvroRecordConverter
+Remove Method Annotation	@SuppressWarnings("unchecked") in method private getDatumClass(schema Schema, model GenericData) : Class<T> from class org.apache.parquet.avro.AvroRecordConverter
+Add Method Annotation	@SuppressWarnings("deprecation") in method private convertField(fieldName String, schema Schema, repetition Type.Repetition) : Type from class org.apache.parquet.avro.AvroSchemaConverter
+Extract Variable	asPrimitive : PrimitiveType in method private convertField(parquetType Type) : Schema from class org.apache.parquet.avro.AvroSchemaConverter
+Rename Variable	originalType : OriginalType to annotation : OriginalType in method private convertField(parquetType Type) : Schema from class org.apache.parquet.avro.AvroSchemaConverter
+Extract Method	private writeValueWithoutConversion(type Type, avroSchema Schema, value Object) : void extracted from private writeValue(type Type, avroSchema Schema, value Object) : void in class org.apache.parquet.avro.AvroWriteSupport
+Change Variable Type	avroType : Schema.Type to logicalType : LogicalType in method private writeValue(type Type, avroSchema Schema, value Object) : void from class org.apache.parquet.avro.AvroWriteSupport
+Rename Variable	avroType : Schema.Type to logicalType : LogicalType in method private writeValue(type Type, avroSchema Schema, value Object) : void from class org.apache.parquet.avro.AvroWriteSupport
+Remove Method Annotation	@SuppressWarnings("unchecked") in method private writeValue(type Type, avroSchema Schema, value Object) : void from class org.apache.parquet.avro.AvroWriteSupport
+Change Return Type	BasePrimitiveBuilder<P,THIS> to THIS in method public length(length int) : THIS from class org.apache.parquet.schema.Types.BasePrimitiveBuilder
+Change Return Type	BasePrimitiveBuilder<P,THIS> to THIS in method public precision(precision int) : THIS from class org.apache.parquet.schema.Types.BasePrimitiveBuilder
+Change Return Type	BasePrimitiveBuilder<P,THIS> to THIS in method public scale(scale int) : THIS from class org.apache.parquet.schema.Types.BasePrimitiveBuilder
+Developers have reported that 11158 commits involve refactoring but only 2655 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 2655 commits.
+
+VCS System: https://github.com/apache/parquet-mr.git
+Issue ID: : 5b485a8d2123a750e0618f10
+Issue Title: : Add support in Parquet to configure the encoding used by ValueWriters
+Issue Description:  Parquet is currently structured to choose the appropriate value writer based on the type of the column as well as the Parquet version. Value writers are responsible for writing out values with the appropriate encoding. As an example, for Boolean data types, we use BooleanPlainValuesWriter (v1.0) or RunLengthBitPackingHybridValuesWriter (v2.0). The code to take these decisions is in [ParquetProperties|https://github.com/apache/parquet-mr/blob/master/parquet-column/src/main/java/org/apache/parquet/column/ParquetProperties.java#L242].
+Refactorings at 30aa91012cf6019bb9720609c1d03b5386a87ffb
+Encapsulate Attribute	private initialSlabSize : int from class org.apache.parquet.column.ParquetProperties
+Add Parameter	writerFactory : ValuesWriterFactory in method private ParquetProperties(writerVersion WriterVersion, pageSize int, dictPageSize int, enableDict boolean, minRowCountForPageSizeCheck int, maxRowCountForPageSizeCheck int, estimateNextSizeCheck boolean, allocator ByteBufferAllocator, writerFactory ValuesWriterFactory) from class org.apache.parquet.column.ParquetProperties
+Rename Parameter	path : ColumnDescriptor to descriptor : ColumnDescriptor in method public newValuesWriter(descriptor ColumnDescriptor) : ValuesWriter from class org.apache.parquet.column.values.factory.DefaultV1ValuesWriterFactory
+Add Method Annotation	@Override in method public newValuesWriter(descriptor ColumnDescriptor) : ValuesWriter from class org.apache.parquet.column.values.factory.DefaultV1ValuesWriterFactory
+Change Method Access Modifier	private to public in method public newValuesWriter(descriptor ColumnDescriptor) : ValuesWriter from class org.apache.parquet.column.values.factory.DefaultV1ValuesWriterFactory
+Move And Rename Method	private plainWriter(path ColumnDescriptor) : ValuesWriter from class org.apache.parquet.column.ParquetProperties to public newValuesWriter(descriptor ColumnDescriptor) : ValuesWriter from class org.apache.parquet.column.values.factory.DefaultV1ValuesWriterFactory
+Extract Method	private getBooleanValuesWriter() : ValuesWriter extracted from private plainWriter(path ColumnDescriptor) : ValuesWriter in class org.apache.parquet.column.values.factory.DefaultV1ValuesWriterFactory
+Parameterize Variable	encodingForDataPage : Encoding to dataPageEncoding : Encoding in method package dictionaryWriter(path ColumnDescriptor, properties ParquetProperties, dictPageEncoding Encoding, dataPageEncoding Encoding) : DictionaryValuesWriter from class org.apache.parquet.column.values.factory.DefaultValuesWriterFactory
+Parameterize Variable	encodingForDictionaryPage : Encoding to dictPageEncoding : Encoding in method package dictionaryWriter(path ColumnDescriptor, properties ParquetProperties, dictPageEncoding Encoding, dataPageEncoding Encoding) : DictionaryValuesWriter from class org.apache.parquet.column.values.factory.DefaultValuesWriterFactory
+Add Parameter	properties : ParquetProperties in method package dictionaryWriter(path ColumnDescriptor, properties ParquetProperties, dictPageEncoding Encoding, dataPageEncoding Encoding) : DictionaryValuesWriter from class org.apache.parquet.column.values.factory.DefaultValuesWriterFactory
+Remove Method Annotation	@SuppressWarnings("deprecation") in method private dictionaryWriter(path ColumnDescriptor) : DictionaryValuesWriter from class org.apache.parquet.column.ParquetProperties
+Change Method Access Modifier	private to package in method package dictionaryWriter(path ColumnDescriptor, properties ParquetProperties, dictPageEncoding Encoding, dataPageEncoding Encoding) : DictionaryValuesWriter from class org.apache.parquet.column.values.factory.DefaultValuesWriterFactory
+Add Method Modifier	static in method package dictionaryWriter(path ColumnDescriptor, properties ParquetProperties, dictPageEncoding Encoding, dataPageEncoding Encoding) : DictionaryValuesWriter from class org.apache.parquet.column.values.factory.DefaultValuesWriterFactory
+Move Method	private dictionaryWriter(path ColumnDescriptor) : DictionaryValuesWriter from class org.apache.parquet.column.ParquetProperties to package dictionaryWriter(path ColumnDescriptor, properties ParquetProperties, dictPageEncoding Encoding, dataPageEncoding Encoding) : DictionaryValuesWriter from class org.apache.parquet.column.values.factory.DefaultValuesWriterFactory
+Parameterize Variable	writerToFallBackTo : ValuesWriter to writerToFallBackTo : ValuesWriter in method package dictWriterWithFallBack(path ColumnDescriptor, parquetProperties ParquetProperties, dictPageEncoding Encoding, dataPageEncoding Encoding, writerToFallBackTo ValuesWriter) : ValuesWriter from class org.apache.parquet.column.values.factory.DefaultValuesWriterFactory
+Add Parameter	parquetProperties : ParquetProperties in method package dictWriterWithFallBack(path ColumnDescriptor, parquetProperties ParquetProperties, dictPageEncoding Encoding, dataPageEncoding Encoding, writerToFallBackTo ValuesWriter) : ValuesWriter from class org.apache.parquet.column.values.factory.DefaultValuesWriterFactory
+Add Parameter	dictPageEncoding : Encoding in method package dictWriterWithFallBack(path ColumnDescriptor, parquetProperties ParquetProperties, dictPageEncoding Encoding, dataPageEncoding Encoding, writerToFallBackTo ValuesWriter) : ValuesWriter from class org.apache.parquet.column.values.factory.DefaultValuesWriterFactory
+Add Parameter	dataPageEncoding : Encoding in method package dictWriterWithFallBack(path ColumnDescriptor, parquetProperties ParquetProperties, dictPageEncoding Encoding, dataPageEncoding Encoding, writerToFallBackTo ValuesWriter) : ValuesWriter from class org.apache.parquet.column.values.factory.DefaultValuesWriterFactory
+Change Method Access Modifier	private to package in method package dictWriterWithFallBack(path ColumnDescriptor, parquetProperties ParquetProperties, dictPageEncoding Encoding, dataPageEncoding Encoding, writerToFallBackTo ValuesWriter) : ValuesWriter from class org.apache.parquet.column.values.factory.DefaultValuesWriterFactory
+Add Method Modifier	static in method package dictWriterWithFallBack(path ColumnDescriptor, parquetProperties ParquetProperties, dictPageEncoding Encoding, dataPageEncoding Encoding, writerToFallBackTo ValuesWriter) : ValuesWriter from class org.apache.parquet.column.values.factory.DefaultValuesWriterFactory
+Move Method	private dictWriterWithFallBack(path ColumnDescriptor) : ValuesWriter from class org.apache.parquet.column.ParquetProperties to package dictWriterWithFallBack(path ColumnDescriptor, parquetProperties ParquetProperties, dictPageEncoding Encoding, dataPageEncoding Encoding, writerToFallBackTo ValuesWriter) : ValuesWriter from class org.apache.parquet.column.values.factory.DefaultValuesWriterFactory
+Developers have reported that 11158 commits involve refactoring but only 2656 involve refactoring operations
+There are 50 duplicate commits with refactoring out of the 2656 commits.
+
