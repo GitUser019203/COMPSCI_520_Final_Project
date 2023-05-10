@@ -112,6 +112,8 @@ public class Main {
     }
 
     private static void mineLastCommitInSantuarioJavaRepo() {
+        private static MyGitHistoryRefactoringMiner miner = new MyGitHistoryRefactoringMinerImpl();
+        private static MyGitService gitService = new MyGitServiceImpl();
         try {
             repo = gitService.cloneIfNotExists(
                     "C:\\SmartSHARK\\RefactoringMiner\\repos\\santuario-java.git",
