@@ -5,7 +5,7 @@
     <ProjectGuid>4c889f48-76b6-4c25-8f84-ada9d29d7352</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>Python\JavaConsoleOutputParser\parser.py</StartupFile>
+    <StartupFile>Python\IssueRefactoringDocCalculator\main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

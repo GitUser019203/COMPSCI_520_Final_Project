@@ -17,8 +17,8 @@ with open(r"Java\consoleOutput", 'r') as input_file:
             issue_IDs.add(matches.groupdict()['Issue_ID'][2:])
             total_num_issues += 1
 
-percent_5745_issues_with_refactoring = 100 * (len(issue_IDs) / 5745.00)
-percent_detected_refactoring_in_issue_titles_with_refactoring_doc = 100 * (len(issue_IDs) / 10911.00)
+percent_5932_issues_with_refactoring = 100 * (len(issue_IDs) / 5932.00)
+percent_detected_refactoring_in_issue_titles_with_refactoring_doc = 100 * (len(issue_IDs) / 11158.00)
 
 with open(r"Python\IssueRefactoringDocCalculator\data.txt", 'w') as out_file:
     print("The total number of issues is 45323.", file = out_file)
@@ -26,9 +26,9 @@ with open(r"Python\IssueRefactoringDocCalculator\data.txt", 'w') as out_file:
     print(f"RefactoringMiner calculates that {len(issue_IDs)} or {percent_detected_refactoring_in_issue_titles_with_refactoring_doc}% of issues with refactoring documentation in their titles contained refactoring operations.", file = out_file)
     print("However, only 5932 of the issues have linked commits that developers have labelled as involving refactoring.", file = out_file)        
     print(f"Out of the 5932 issues, RefactoringMiner detects refactoring operations in only {len(issue_IDs)}.", file = out_file)
-    print(f"Thus, according to RefactoringMiner only {percent_5745_issues_with_refactoring}% of the 5932 issues contained refactoring operations.", file = out_file)
+    print(f"Thus, according to RefactoringMiner only {percent_5932_issues_with_refactoring}% of the 5932 issues contained refactoring operations.", file = out_file)
 
-issue_title_phrases_terms = ['RECODE', 'REENGINEER', 
+issue_title_phrases_terms = ['REFACTOR','RECODE', 'REENGINEER', 
                              'REWRIT', 'EDIT', 'ADD', 'CHANG', 'CREAT', 
                              'EXTEND', 'EXTRACT', 'FIX', 'IMPROV', 'INLIN', 
                              'INTRODUC', 'MERG', 'MOV', 'REPACKAG', 'REDESIGN', 
@@ -84,3 +84,4 @@ with open(r"Python\IssueRefactoringDocCalculator\issue_title_refactoring_doc_tex
     csv_writer.writeheader()
     percentages_dict = {pattern: ((100.0 * issue_title_phrases_terms_dict[pattern]) / sum([issue_title_phrases_terms_dict[pattern] for pattern in issue_title_phrases_terms_dict])) for pattern in issue_title_phrases_terms_dict}
     csv_writer.writerow(percentages_dict)
+    csv_writer.writerow(issue_title_phrases_terms_dict)
