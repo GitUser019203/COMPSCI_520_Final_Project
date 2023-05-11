@@ -24,11 +24,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Python\bug_mining.py" />
+    <Compile Include="Python\ExtractingIssueCommentsBugs.py" />
+    <Compile Include="Python\ExtractingIssueCommentsRefactoring.py" />
+    <Compile Include="Python\ExtractingIssueDescBugs.py" />
+    <Compile Include="Python\ExtractingIssueDescRefactoring.py" />
+    <Compile Include="Python\IssueBodiesCount.py" />
     <Compile Include="Python\IssueRefactoringDocCalculator\main.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Python\IssuesCount.py" />
     <Compile Include="Python\JavaConsoleOutputParser\parser.py" />
     <Compile Include="Python\PythonApplication.py" />
+    <Compile Include="Python\PythonApplicationForBugs.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="C++\projects.cpp" />
@@ -85,6 +92,14 @@
     <Content Include="Java\Screenshot 2023-05-06 213403.png" />
     <Content Include="Java\Screenshot 2023-05-07 072010 %28mineLastCommitInSantuarioJavaRepo%29.png" />
     <Content Include="Java\Screenshot 2023-05-07 075334%28mineLastCommitInSantuarioJavaRepo%29.png" />
+    <Content Include="Python\.DS_Store" />
+    <Content Include="Python\BugIssueTitle.png" />
+    <Content Include="Python\BugsVSIssues.png" />
+    <Content Include="Python\BugSynonymsIssues.png" />
+    <Content Include="Python\extractedIssueCommentsBugs.txt" />
+    <Content Include="Python\extractedIssueCommentsRefactoring.txt" />
+    <Content Include="Python\extractedIssueDescBugs.txt" />
+    <Content Include="Python\extractedIssueDescRefactoring.txt" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-06 200507.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-03 211753.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-03 212311.png" />
@@ -115,6 +130,7 @@
     <Content Include="Python\issue_tracked_projects.txt" />
     <Content Include="Python\JavaConsoleOutputParser\extracted_errors" />
     <Content Include="Python\mongo_db_extract_refactoring_doc.txt" />
+    <Content Include="Python\PythonApplicationForRefactoring" />
     <Content Include="Python\regexp.txt" />
     <Content Include="Python\WSS4J\wss4j.mongodb" />
     <Content Include="Python\WSS4J\wss4j.mongodb.csv" />
