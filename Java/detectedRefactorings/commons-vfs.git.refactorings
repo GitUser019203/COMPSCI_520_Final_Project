@@ -1001,3 +1001,407 @@ Rename Attribute	TIMEOUT : String to SESSION_TIMEOUT_MILLIS : String in class or
 Developers have reported that 11158 commits involve refactoring but only 1455 involve refactoring operations
 There are 33 duplicate commits with refactoring out of the 1455 commits.
 
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf4336aed024064e905a2f9
+Issue Title: : Changes in interface RandomAccessContent.
+Refactorings at 9100a89812009c7a053aef4fc2666caadf5c2ca6
+Rename Method	private createStream() : void renamed to protected getDataInputStream() : DataInputStream in class org.apache.commons.vfs.provider.ftp.FtpRandomAccessContent
+Change Return Type	void to DataInputStream in method protected getDataInputStream() : DataInputStream from class org.apache.commons.vfs.provider.ftp.FtpRandomAccessContent
+Change Method Access Modifier	private to protected in method protected getDataInputStream() : DataInputStream from class org.apache.commons.vfs.provider.ftp.FtpRandomAccessContent
+Rename Method	private createStream() : void renamed to protected getDataInputStream() : DataInputStream in class org.apache.commons.vfs.provider.http.HttpRandomAccesContent
+Change Return Type	void to DataInputStream in method protected getDataInputStream() : DataInputStream from class org.apache.commons.vfs.provider.http.HttpRandomAccesContent
+Change Method Access Modifier	private to protected in method protected getDataInputStream() : DataInputStream from class org.apache.commons.vfs.provider.http.HttpRandomAccesContent
+Rename Method	private createStream() : void renamed to protected getDataInputStream() : DataInputStream in class org.apache.commons.vfs.provider.sftp.SftpRandomAccessContent
+Change Return Type	void to DataInputStream in method protected getDataInputStream() : DataInputStream from class org.apache.commons.vfs.provider.sftp.SftpRandomAccessContent
+Change Method Access Modifier	private to protected in method protected getDataInputStream() : DataInputStream from class org.apache.commons.vfs.provider.sftp.SftpRandomAccessContent
+Rename Method	private createStream() : void renamed to protected getDataInputStream() : DataInputStream in class org.apache.commons.vfs.provider.webdav.WebdavFileObject.WebdavRandomAccesContent
+Change Return Type	void to DataInputStream in method protected getDataInputStream() : DataInputStream from class org.apache.commons.vfs.provider.webdav.WebdavFileObject.WebdavRandomAccesContent
+Change Method Access Modifier	private to protected in method protected getDataInputStream() : DataInputStream from class org.apache.commons.vfs.provider.webdav.WebdavFileObject.WebdavRandomAccesContent
+Extract Superclass	org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent from classes [org.apache.commons.vfs.provider.ftp.FtpRandomAccessContent, org.apache.commons.vfs.provider.http.HttpRandomAccesContent, org.apache.commons.vfs.provider.sftp.SftpRandomAccessContent, org.apache.commons.vfs.provider.webdav.WebdavFileObject.WebdavRandomAccesContent]
+Pull Up Method	public readByte() : byte from class org.apache.commons.vfs.provider.ftp.FtpRandomAccessContent to public readByte() : byte from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readChar() : char from class org.apache.commons.vfs.provider.ftp.FtpRandomAccessContent to public readChar() : char from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readDouble() : double from class org.apache.commons.vfs.provider.ftp.FtpRandomAccessContent to public readDouble() : double from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readFloat() : float from class org.apache.commons.vfs.provider.ftp.FtpRandomAccessContent to public readFloat() : float from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readInt() : int from class org.apache.commons.vfs.provider.ftp.FtpRandomAccessContent to public readInt() : int from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readUnsignedByte() : int from class org.apache.commons.vfs.provider.ftp.FtpRandomAccessContent to public readUnsignedByte() : int from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readUnsignedShort() : int from class org.apache.commons.vfs.provider.ftp.FtpRandomAccessContent to public readUnsignedShort() : int from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readLong() : long from class org.apache.commons.vfs.provider.ftp.FtpRandomAccessContent to public readLong() : long from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readShort() : short from class org.apache.commons.vfs.provider.ftp.FtpRandomAccessContent to public readShort() : short from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readBoolean() : boolean from class org.apache.commons.vfs.provider.ftp.FtpRandomAccessContent to public readBoolean() : boolean from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public skipBytes(n int) : int from class org.apache.commons.vfs.provider.ftp.FtpRandomAccessContent to public skipBytes(n int) : int from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readFully(b byte[]) : void from class org.apache.commons.vfs.provider.ftp.FtpRandomAccessContent to public readFully(b byte[]) : void from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readFully(b byte[], off int, len int) : void from class org.apache.commons.vfs.provider.ftp.FtpRandomAccessContent to public readFully(b byte[], off int, len int) : void from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readUTF() : String from class org.apache.commons.vfs.provider.ftp.FtpRandomAccessContent to public readUTF() : String from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public getInputStream() : InputStream from class org.apache.commons.vfs.provider.ftp.FtpRandomAccessContent to public getInputStream() : InputStream from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readByte() : byte from class org.apache.commons.vfs.provider.http.HttpRandomAccesContent to public readByte() : byte from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readChar() : char from class org.apache.commons.vfs.provider.http.HttpRandomAccesContent to public readChar() : char from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readDouble() : double from class org.apache.commons.vfs.provider.http.HttpRandomAccesContent to public readDouble() : double from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readFloat() : float from class org.apache.commons.vfs.provider.http.HttpRandomAccesContent to public readFloat() : float from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readInt() : int from class org.apache.commons.vfs.provider.http.HttpRandomAccesContent to public readInt() : int from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readUnsignedByte() : int from class org.apache.commons.vfs.provider.http.HttpRandomAccesContent to public readUnsignedByte() : int from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readUnsignedShort() : int from class org.apache.commons.vfs.provider.http.HttpRandomAccesContent to public readUnsignedShort() : int from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readLong() : long from class org.apache.commons.vfs.provider.http.HttpRandomAccesContent to public readLong() : long from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readShort() : short from class org.apache.commons.vfs.provider.http.HttpRandomAccesContent to public readShort() : short from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readBoolean() : boolean from class org.apache.commons.vfs.provider.http.HttpRandomAccesContent to public readBoolean() : boolean from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public skipBytes(n int) : int from class org.apache.commons.vfs.provider.http.HttpRandomAccesContent to public skipBytes(n int) : int from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readFully(b byte[]) : void from class org.apache.commons.vfs.provider.http.HttpRandomAccesContent to public readFully(b byte[]) : void from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readFully(b byte[], off int, len int) : void from class org.apache.commons.vfs.provider.http.HttpRandomAccesContent to public readFully(b byte[], off int, len int) : void from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readUTF() : String from class org.apache.commons.vfs.provider.http.HttpRandomAccesContent to public readUTF() : String from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public getInputStream() : InputStream from class org.apache.commons.vfs.provider.http.HttpRandomAccesContent to public getInputStream() : InputStream from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readByte() : byte from class org.apache.commons.vfs.provider.sftp.SftpRandomAccessContent to public readByte() : byte from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readChar() : char from class org.apache.commons.vfs.provider.sftp.SftpRandomAccessContent to public readChar() : char from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readDouble() : double from class org.apache.commons.vfs.provider.sftp.SftpRandomAccessContent to public readDouble() : double from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readFloat() : float from class org.apache.commons.vfs.provider.sftp.SftpRandomAccessContent to public readFloat() : float from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readInt() : int from class org.apache.commons.vfs.provider.sftp.SftpRandomAccessContent to public readInt() : int from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readUnsignedByte() : int from class org.apache.commons.vfs.provider.sftp.SftpRandomAccessContent to public readUnsignedByte() : int from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readUnsignedShort() : int from class org.apache.commons.vfs.provider.sftp.SftpRandomAccessContent to public readUnsignedShort() : int from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readLong() : long from class org.apache.commons.vfs.provider.sftp.SftpRandomAccessContent to public readLong() : long from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readShort() : short from class org.apache.commons.vfs.provider.sftp.SftpRandomAccessContent to public readShort() : short from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readBoolean() : boolean from class org.apache.commons.vfs.provider.sftp.SftpRandomAccessContent to public readBoolean() : boolean from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public skipBytes(n int) : int from class org.apache.commons.vfs.provider.sftp.SftpRandomAccessContent to public skipBytes(n int) : int from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readFully(b byte[]) : void from class org.apache.commons.vfs.provider.sftp.SftpRandomAccessContent to public readFully(b byte[]) : void from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readFully(b byte[], off int, len int) : void from class org.apache.commons.vfs.provider.sftp.SftpRandomAccessContent to public readFully(b byte[], off int, len int) : void from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readUTF() : String from class org.apache.commons.vfs.provider.sftp.SftpRandomAccessContent to public readUTF() : String from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public getInputStream() : InputStream from class org.apache.commons.vfs.provider.sftp.SftpRandomAccessContent to public getInputStream() : InputStream from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readByte() : byte from class org.apache.commons.vfs.provider.webdav.WebdavFileObject.WebdavRandomAccesContent to public readByte() : byte from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readChar() : char from class org.apache.commons.vfs.provider.webdav.WebdavFileObject.WebdavRandomAccesContent to public readChar() : char from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readDouble() : double from class org.apache.commons.vfs.provider.webdav.WebdavFileObject.WebdavRandomAccesContent to public readDouble() : double from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readFloat() : float from class org.apache.commons.vfs.provider.webdav.WebdavFileObject.WebdavRandomAccesContent to public readFloat() : float from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readInt() : int from class org.apache.commons.vfs.provider.webdav.WebdavFileObject.WebdavRandomAccesContent to public readInt() : int from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readUnsignedByte() : int from class org.apache.commons.vfs.provider.webdav.WebdavFileObject.WebdavRandomAccesContent to public readUnsignedByte() : int from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readUnsignedShort() : int from class org.apache.commons.vfs.provider.webdav.WebdavFileObject.WebdavRandomAccesContent to public readUnsignedShort() : int from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readLong() : long from class org.apache.commons.vfs.provider.webdav.WebdavFileObject.WebdavRandomAccesContent to public readLong() : long from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readShort() : short from class org.apache.commons.vfs.provider.webdav.WebdavFileObject.WebdavRandomAccesContent to public readShort() : short from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readBoolean() : boolean from class org.apache.commons.vfs.provider.webdav.WebdavFileObject.WebdavRandomAccesContent to public readBoolean() : boolean from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public skipBytes(n int) : int from class org.apache.commons.vfs.provider.webdav.WebdavFileObject.WebdavRandomAccesContent to public skipBytes(n int) : int from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readFully(b byte[]) : void from class org.apache.commons.vfs.provider.webdav.WebdavFileObject.WebdavRandomAccesContent to public readFully(b byte[]) : void from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readFully(b byte[], off int, len int) : void from class org.apache.commons.vfs.provider.webdav.WebdavFileObject.WebdavRandomAccesContent to public readFully(b byte[], off int, len int) : void from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public readUTF() : String from class org.apache.commons.vfs.provider.webdav.WebdavFileObject.WebdavRandomAccesContent to public readUTF() : String from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Pull Up Method	public getInputStream() : InputStream from class org.apache.commons.vfs.provider.webdav.WebdavFileObject.WebdavRandomAccesContent to public getInputStream() : InputStream from class org.apache.commons.vfs.provider.AbstractRandomAccessStreamContent
+Developers have reported that 11158 commits involve refactoring but only 1683 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1683 commits.
+
+No refactorings detected at 70abf1063461a6eb4af872387f79ac07abb7c6e1
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf433f0ed024064e905a6bb
+Issue Title: : DefaultFileMonitor does not register changes made on FTP FileObjects
+Refactorings at ade32ac54654a63b461868ea3e020f5228b89a48
+Extract Method	private _addFile(file FileObject) : void extracted from public addFile(file FileObject) : void in class org.apache.commons.vfs.impl.DefaultFileMonitor
+Developers have reported that 11158 commits involve refactoring but only 1684 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1684 commits.
+
+No refactorings detected at e9f926a4bdc395b999f78dc76abef222849b9523
+
+No refactorings detected at 2d42ef9d7b588f98f444ed848af1fa0169d380f1
+
+No refactorings detected at 0535fc054080c5d9b8667da41b2dbb3dc88fdd77
+
+No refactorings detected at 3d93fcbe54eb34a9e17f3098b6542b7d38385213
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf4347fed024064e905a936
+Issue Title: : JarFileSystem incorrectly resolves file if it has been removed from the cache
+Refactorings at 6fe125f096ef2634a7fe6adf5e0caada8a63b588
+Extract Method	package getTestJar(manager FileSystemManager, name String) : FileObject extracted from public getBaseTestFolder(manager FileSystemManager) : FileObject in class org.apache.commons.vfs2.provider.jar.test.JarProviderTestCase
+Developers have reported that 11158 commits involve refactoring but only 1685 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1685 commits.
+
+No refactorings detected at fe3a4ece1438845504c67584da3a7b36fdb5372f
+
+No refactorings detected at 4328a67ee643c46ea6c699ee3cc6b00265fdc936
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf434e5ed024064e905abaa
+Issue Title: : [RAM] Many suggestions to improve the RAM file provider.
+Refactorings at d070f158d01e2719990d1d7e273f10788aa9cb17
+Extract Variable	data : RamFileData in method public write(b byte[], off int, len int) : void from class org.apache.commons.vfs2.provider.ram.RamFileOutputStream
+Developers have reported that 11158 commits involve refactoring but only 1686 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1686 commits.
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf434e5ed024064e905abaa
+Issue Title: : [RAM] Many suggestions to improve the RAM file provider.
+Refactorings at f4fecaca32c4f91f491dd09a3fc161d4afcacda7
+Change Attribute Access Modifier	private to package in attribute package EMPTY : byte[] from class org.apache.commons.vfs2.provider.ram.RamFileData
+Developers have reported that 11158 commits involve refactoring but only 1687 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1687 commits.
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf434e5ed024064e905abaa
+Issue Title: : [RAM] Many suggestions to improve the RAM file provider.
+Refactorings at 535bee81aae6a7f3bbe61d93ea6be611260442b6
+Change Variable Type	maxSize : int to maxSize : long in method package resize(newSize long) : void from class org.apache.commons.vfs2.provider.ram.RamFileObject
+Change Variable Type	size : int to size : long in method package size() : long from class org.apache.commons.vfs2.provider.ram.RamFileSystem
+Change Return Type	int to long in method package size() : long from class org.apache.commons.vfs2.provider.ram.RamFileSystem
+Add Method Annotation	@Deprecated in method public setMaxSize(opts FileSystemOptions, sizeInBytes int) : void from class org.apache.commons.vfs2.provider.ram.RamFileSystemConfigBuilder
+Developers have reported that 11158 commits involve refactoring but only 1688 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1688 commits.
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf434e5ed024064e905abaa
+Issue Title: : [RAM] Many suggestions to improve the RAM file provider.
+Refactorings at 4d00900dacf10fa1337c0f89712e710118f2ac98
+Rename Parameter	buffer : byte[] to content : byte[] in method package setContent(content byte[]) : void from class org.apache.commons.vfs2.provider.ram.RamFileData
+Developers have reported that 11158 commits involve refactoring but only 1689 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1689 commits.
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf434e5ed024064e905abaa
+Issue Title: : [RAM] Many suggestions to improve the RAM file provider.
+Refactorings at 0375323f2583996b18f8141b204cf404f63e3944
+Rename Method	package getBuffer() : byte[] renamed to package getContent() : byte[] in class org.apache.commons.vfs2.provider.ram.RamFileData
+Rename Method	package setBuffer(buffer byte[]) : void renamed to package setContent(buffer byte[]) : void in class org.apache.commons.vfs2.provider.ram.RamFileData
+Rename Attribute	buffer : byte[] to content : byte[] in class org.apache.commons.vfs2.provider.ram.RamFileData
+Developers have reported that 11158 commits involve refactoring but only 1690 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1690 commits.
+
+No refactorings detected at 088ad36f5b8c0133d23b464610a6e6dc4aa5ef0e
+
+No refactorings detected at 202de8a0296d0cd45a9ed8c25bc8633baa89b3d2
+
+No refactorings detected at 7a503c9f24a2529cb3ac174871cc5ef03e6706b4
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf4352ced024064e905ad59
+Issue Title: : Remove extra FileSystem ivar in AbstractFileObject subclasses with generics
+Refactorings at 4702b2cb3d4a8f768e18f2cd81ca7c411f85ceb1
+Change Parameter Type	fileSystem : HttpFileSystem to fileSystem : FS in method protected HttpFileObject(name AbstractFileName, fileSystem FS) from class org.apache.commons.vfs2.provider.http.HttpFileObject
+Change Parameter Type	fileSystem : HttpFileSystem to fileSystem : FS in method protected HttpFileObject(name AbstractFileName, fileSystem FS, builder HttpFileSystemConfigBuilder) from class org.apache.commons.vfs2.provider.http.HttpFileObject
+Developers have reported that 11158 commits involve refactoring but only 1691 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1691 commits.
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf4352ced024064e905ad59
+Issue Title: : Remove extra FileSystem ivar in AbstractFileObject subclasses with generics
+Refactorings at e867faddff39828f395b7e4acdc3bfd30f37c1c6
+Change Attribute Type	fs : AbstractFileSystem to fs : AFS in class org.apache.commons.vfs2.provider.AbstractFileObject
+Encapsulate Attribute	private fs : AFS from class org.apache.commons.vfs2.provider.AbstractFileObject
+Change Parameter Type	fs : AbstractFileSystem to fs : AFS in method protected AbstractFileObject(name AbstractFileName, fs AFS) from class org.apache.commons.vfs2.provider.AbstractFileObject
+Change Parameter Type	fileSystem : AbstractFileSystem to fileSystem : AFS in method public DelegateFileObject(name AbstractFileName, fileSystem AFS, file FileObject) from class org.apache.commons.vfs2.provider.DelegateFileObject
+Change Parameter Type	fs : CompressedFileFileSystem to fs : Bzip2FileSystem in method protected Bzip2FileObject(name AbstractFileName, container FileObject, fs Bzip2FileSystem) from class org.apache.commons.vfs2.provider.bzip2.Bzip2FileObject
+Change Parameter Type	fs : CompressedFileFileSystem to fs : FS in method protected CompressedFileFileObject(name AbstractFileName, container FileObject, fs FS) from class org.apache.commons.vfs2.provider.compressed.CompressedFileFileObject
+Change Parameter Type	fs : CompressedFileFileSystem to fs : GzipFileSystem in method protected GzipFileObject(name AbstractFileName, container FileObject, fs GzipFileSystem) from class org.apache.commons.vfs2.provider.gzip.GzipFileObject
+Replace Attribute With Variable	fs : RamFileSystem to afs : RamFileSystem in method package resize(newSize long) : void from class org.apache.commons.vfs2.provider.ram.RamFileObject
+Extract And Move Method	protected getAbstractFileSystem() : AFS extracted from protected RamFileObject(name AbstractFileName, fs RamFileSystem) in class org.apache.commons.vfs2.provider.ram.RamFileObject & moved to class org.apache.commons.vfs2.provider.AbstractFileObject
+Developers have reported that 11158 commits involve refactoring but only 1692 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1692 commits.
+
+No refactorings detected at d22a429cdd63680dee9e049d6798c2951252f54a
+
+No refactorings detected at 32e6eb5d2963883b52132dad08e4ac0a402c5393
+
+No refactorings detected at b9068577c6c94d1a850231162b4ed505d3bbce40
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf4353aed024064e905adc1
+Issue Title: : Add FileContent write APIs
+Refactorings at 7811abd1970faa733677835e808765ac31a364be
+Rename Parameter	outstr : OutputStream to output : OutputStream in method public writeContent(file FileObject, output OutputStream) : void from class org.apache.commons.vfs2.FileUtil
+Inline Variable	outstr : OutputStream in method public copyContent(srcFile FileObject, destFile FileObject) : void from class org.apache.commons.vfs2.FileUtil
+Extract And Move Method	public write(fileContent FileContent) : long extracted from public writeContent(file FileObject, outstr OutputStream) : void in class org.apache.commons.vfs2.FileUtil & moved to class org.apache.commons.vfs2.provider.DefaultFileContent
+Extract And Move Method	public write(fileContent FileContent) : long extracted from public copyContent(srcFile FileObject, destFile FileObject) : void in class org.apache.commons.vfs2.FileUtil & moved to class org.apache.commons.vfs2.provider.DefaultFileContent
+Extract And Move Method	public write(file FileObject) : long extracted from public writeContent(file FileObject, outstr OutputStream) : void in class org.apache.commons.vfs2.FileUtil & moved to class org.apache.commons.vfs2.provider.DefaultFileContent
+Developers have reported that 11158 commits involve refactoring but only 1693 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1693 commits.
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf4353eed024064e905add6
+Issue Title: : Add FileSystemManager.resolveFile(URI) and resolveFile(URL)
+Refactorings at 19919e8da1d7f65d3b8653ad2e73c30e215fe7a7
+Extract Method	private check(manager FileSystemManager, file FileObject) : void extracted from public testDefaultInstance() : void in class org.apache.commons.vfs2.test.FileSystemManagerFactoryTestCase
+Developers have reported that 11158 commits involve refactoring but only 1694 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1694 commits.
+
+No refactorings detected at 0e7d3aa4a5c4a5eaa084bfadcdf302902af143d3
+
+No refactorings detected at 84807b12a9c579c98d296972e9f08802be9ff42f
+
+No refactorings detected at ccc9374c01be4d7d1256ea38b0705284a65148b9
+
+No refactorings detected at a19219044179e861320d16680a200741c2eb3675
+
+No refactorings detected at 58d258c7768cfc3ab47e455549f8e10b8a3bdc0d
+
+No refactorings detected at 451b4469363e758fa4d30d32f906fe2ee9aa7128
+
+No refactorings detected at 7912197bd9684a33ba79c2b58267149cf1d004d3
+
+No refactorings detected at 523aac6c303cdf131b8a8d805e01ed6a7740be52
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf4357bed024064e905af2b
+Issue Title: : Add APIs FileObject isFile(), FileObject isFolder(), and FileName isFile()
+Refactorings at f78cf393f62ba5174584cdceeb8971f28b278ffa
+Extract Method	public isFile() : boolean extracted from public createFile() : void in class org.apache.commons.vfs2.provider.AbstractFileObject
+Developers have reported that 11158 commits involve refactoring but only 1695 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1695 commits.
+
+No refactorings detected at 6c0b5668f76afcc2ec5df17169cc38ee6273df09
+
+No refactorings detected at 9f0bc3ea5f3a8f0e85533e6923ab76d2fb132118
+
+No refactorings detected at 6e1845426045c86a0d2ba96783c4f2ca8c5d0689
+
+No refactorings detected at 368d1182a8d7149947a6d2cf1534c48f23b94f00
+
+No refactorings detected at da86dc7a4889f051910279ee188147739ffc5af0
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf435c2ed024064e905b086
+Issue Title: : Add more ways to specify alternate HDFS configuration information
+Refactorings at 4edd8c4a18ee1ac19791c63901a0917dc5224435
+Extract Variable	options : FileSystemOptions in method public resolveFile(name FileName) : FileObject from class org.apache.commons.vfs2.provider.hdfs.HdfsFileSystem
+Change Variable Type	configName : String to configNames : String[] in method public resolveFile(name FileName) : FileObject from class org.apache.commons.vfs2.provider.hdfs.HdfsFileSystem
+Rename Variable	configName : String to configNames : String[] in method public resolveFile(name FileName) : FileObject from class org.apache.commons.vfs2.provider.hdfs.HdfsFileSystem
+Rename Method	public getConfigName(opts FileSystemOptions) : String renamed to public getConfigInputStream(opts FileSystemOptions) : InputStream in class org.apache.commons.vfs2.provider.hdfs.HdfsFileSystemConfigBuilder
+Change Return Type	String to InputStream in method public getConfigInputStream(opts FileSystemOptions) : InputStream from class org.apache.commons.vfs2.provider.hdfs.HdfsFileSystemConfigBuilder
+Developers have reported that 11158 commits involve refactoring but only 1696 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1696 commits.
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf435c2ed024064e905b087
+Issue Title: : Add ability to specify alternate HDFS configuration file
+Refactorings at c4d6e6678a1380ada4e8774e5c66a4592ecdc5fa
+Add Variable Modifier	final in variable configName : String in method public resolveFile(name FileName) : FileObject from class org.apache.commons.vfs2.provider.hdfs.HdfsFileSystem
+Add Class Modifier	final in class org.apache.commons.vfs2.provider.hdfs.HdfsFileSystemConfigBuilder
+Rename Attribute	CONFIG_NAME : String to KEY_CONFIG_NAME : String in class org.apache.commons.vfs2.provider.hdfs.HdfsFileSystemConfigBuilder
+Developers have reported that 11158 commits involve refactoring but only 1697 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1697 commits.
+
+No refactorings detected at 1f564c2cb6346539416cc094d9bfb9dd50393de6
+
+No refactorings detected at ebfa9238effab582f48400c371a4b8c07e8d3bf3
+
+No refactorings detected at 9638f7fd97a4f665e23c8b3c1972e1df89df6410
+
+No refactorings detected at 7dfba317e0db7c6f21aadde7acba7a6dc0714c2c
+
+No refactorings detected at 4fbf841cf570ac8ef530ada85e4529c1e2d6b638
+
+No refactorings detected at bff4ec481fa765389cd4e24149e1b9f9dc64e0fe
+
+No refactorings detected at ccc9374c01be4d7d1256ea38b0705284a65148b9
+
+No refactorings detected at 21574ede997502b3feddf2d3d49e289d26151948
+
+No refactorings detected at 1e4e4992e860acd87f7216a3a59be46e4907f417
+
+No refactorings detected at ae1e4c3704cb315c241e4512f101fd101e64069f
+
+No refactorings detected at a6934c7f2622edf9eac4e90e8fb821e9f30b3b85
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf43648ed024064e905b3ce
+Issue Title: : Replace custom TAR code with Apache Commons Compress 1.3
+Refactorings at db57c1f556ae61a86631fc20d9c542bfad46a2ac
+Change Attribute Type	entry : TarEntry to entry : TarArchiveEntry in class org.apache.commons.vfs2.provider.tar.TarFileObject
+Change Parameter Type	entry : TarEntry to entry : TarArchiveEntry in method protected TarFileObject(name AbstractFileName, entry TarArchiveEntry, fs TarFileSystem, tarExists boolean) from class org.apache.commons.vfs2.provider.tar.TarFileObject
+Change Parameter Type	entry : TarEntry to entry : TarArchiveEntry in method protected setTarEntry(entry TarArchiveEntry) : void from class org.apache.commons.vfs2.provider.tar.TarFileObject
+Change Attribute Type	tarFile : TarInputStream to tarFile : TarArchiveInputStream in class org.apache.commons.vfs2.provider.tar.TarFileSystem
+Change Variable Type	entry : TarEntry to entry : TarArchiveEntry in method public init() : void from class org.apache.commons.vfs2.provider.tar.TarFileSystem
+Change Variable Type	tarFile : TarInputStream to tarFile : TarArchiveInputStream in method private recreateTarFile() : void from class org.apache.commons.vfs2.provider.tar.TarFileSystem
+Change Return Type	TarInputStream to TarArchiveInputStream in method protected getTarFile() : TarArchiveInputStream from class org.apache.commons.vfs2.provider.tar.TarFileSystem
+Change Return Type	TarInputStream to TarArchiveInputStream in method protected createTarFile(file File) : TarArchiveInputStream from class org.apache.commons.vfs2.provider.tar.TarFileSystem
+Change Parameter Type	entry : TarEntry to entry : TarArchiveEntry in method public getInputStream(entry TarArchiveEntry) : InputStream from class org.apache.commons.vfs2.provider.tar.TarFileSystem
+Change Parameter Type	entry : TarEntry to entry : TarArchiveEntry in method protected createTarFileObject(name AbstractFileName, entry TarArchiveEntry) : TarFileObject from class org.apache.commons.vfs2.provider.tar.TarFileSystem
+Developers have reported that 11158 commits involve refactoring but only 1698 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1698 commits.
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf4364bed024064e905b3e3
+Issue Title: : [RAM][Local] Add and implement new API: RandomAccessContent.setLength(long)
+Refactorings at 9a7bc0a80ba63578f0018ca55c8f7af7358fab97
+Change Parameter Type	newSize : int to newSize : long in method package resize(newSize long) : void from class org.apache.commons.vfs2.provider.ram.RamFileData
+Change Parameter Type	newSize : int to newSize : long in method package resize(newSize long) : void from class org.apache.commons.vfs2.provider.ram.RamFileObject
+Developers have reported that 11158 commits involve refactoring but only 1699 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1699 commits.
+
+No refactorings detected at 0acf025d455a2180843135690930933a2266cf52
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf43659ed024064e905b430
+Issue Title: : incompatible naming change for tests
+Refactorings at e9b790d50a18dadd8450836dde7737009281a6f6
+Rename Method	public getTestResourceFile(name String) : File renamed to public getTestResource(name String) : File in class org.apache.commons.AbstractVfsTestCase
+Rename Method	public getTestResourceFile(name String, mustExist boolean) : File renamed to public getTestResource(name String, mustExist boolean) : File in class org.apache.commons.AbstractVfsTestCase
+Rename Method	public getTestDirectoryString() : String renamed to public getResourceTestDirectory() : String in class org.apache.commons.AbstractVfsTestCase
+Change Return Type	File to String in method public getTestDirectory() : String from class org.apache.commons.AbstractVfsTestCase
+Developers have reported that 11158 commits involve refactoring but only 1700 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1700 commits.
+
+No refactorings detected at dc614ec5e41590a84377728770a0684f985fb39e
+
+No refactorings detected at fc1345de22127521f183a7a66b3d0e17c31ab9cd
+
+No refactorings detected at 0f86203abf619d6dcfd2309807ffcc3d0ce86116
+
+No refactorings detected at f75475fadd43083db47912b7556db045297ec1d5
+
+No refactorings detected at 2f8decda807f3545bfd35f6a6d5b2fe60d568de0
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf436caed024064e905b66a
+Issue Title: : Make AbstractFileObject easier to extend
+Refactorings at e8727ed01021410c297a763f6559976f321f67db
+Change Attribute Type	content : DefaultFileContent to content : FileContent in class org.apache.commons.vfs.provider.AbstractFileObject
+Extract Method	protected doCreateFileContent() : FileContent extracted from public getContent() : FileContent in class org.apache.commons.vfs.provider.AbstractFileObject
+Developers have reported that 11158 commits involve refactoring but only 1701 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1701 commits.
+
+No refactorings detected at e1e03c7b41650f1647c87f3f98a90db2f46d52eb
+
+No refactorings detected at d41bb29c5f4e417051e80909d6f4541f2390e90a
+
+No refactorings detected at fb7dcb75230f8b48e3b3931c182f896282c91baa
+
+No refactorings detected at bfe8d0a1ee947c583503235745c1ad0b1bd09816
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf4371aed024064e905b83f
+Issue Title: : Add API VFS.setManager(FileSystemManager)
+Refactorings at 20d026bda72139b0b17e892e1ecea53f97e4569b
+Encapsulate Attribute	private instance : FileSystemManager from class org.apache.commons.vfs2.VFS
+Developers have reported that 11158 commits involve refactoring but only 1702 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1702 commits.
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf4372ded024064e905b8b1
+Issue Title: : Add a file inverter FileSelector: InvertIncludeFileSelector
+Refactorings at 680d1b95a699e73ee8765ac846887adde681eea4
+Encapsulate Attribute	private BaseFolder : FileObject from class org.apache.commons.vfs2.PatternFileSelectorTest
+Developers have reported that 11158 commits involve refactoring but only 1703 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1703 commits.
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf4372fed024064e905b8b6
+Issue Title: : FileObject.moveTo(FileObject) API doesn't work well for a Linux FTP
+Refactorings at a95559e5276e56649fd6390154750a1106e2f005
+Extract Method	protected suite(testCase FtpProviderTestCase) : Test extracted from public suite() : Test in class org.apache.commons.vfs2.provider.ftp.test.FtpProviderTestCase
+Add Parameter	rootDirectory : String in method package setUpClass(rootDirectory String, fileSystemFactory FileSystemFactory) : void from class org.apache.commons.vfs2.provider.ftp.test.FtpProviderTestCase
+Add Parameter	fileSystemFactory : FileSystemFactory in method package setUpClass(rootDirectory String, fileSystemFactory FileSystemFactory) : void from class org.apache.commons.vfs2.provider.ftp.test.FtpProviderTestCase
+Developers have reported that 11158 commits involve refactoring but only 1704 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1704 commits.
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf43750ed024064e905b9a4
+Issue Title: : FTP: Exception is thrown when renaming a file
+Refactorings at 52015c1fed06e218065d42d2e914312487016e27
+Extract Method	private moveFile(scratchFolder FileObject, file FileObject, content String) : void extracted from public testRenameFile() : void in class org.apache.commons.vfs2.test.ProviderRenameTests
+Extract Method	private createTestFile(file FileObject) : String extracted from public testRenameFile() : void in class org.apache.commons.vfs2.test.ProviderRenameTests
+Developers have reported that 11158 commits involve refactoring but only 1705 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1705 commits.
+
+VCS System: https://github.com/apache/commons-vfs.git
+Issue ID: : 5bf43754ed024064e905b9cd
+Issue Title: : SFTP moveTo operation hangs if the server does not support SSH channelExec.
+Refactorings at eb4e834b6ae3a17756bd2732ced075ad4a0e5ba6
+Rename Variable	timeout : Integer to sessionTimeout : Integer in method public createConnection(hostname String, port int, username char[], password char[], fileSystemOptions FileSystemOptions) : Session from class org.apache.commons.vfs2.provider.sftp.SftpClientFactory
+Add Method Annotation	@Deprecated in method public getTimeout(opts FileSystemOptions) : Integer from class org.apache.commons.vfs2.provider.sftp.SftpFileSystemConfigBuilder
+Add Method Annotation	@Deprecated in method public setTimeout(opts FileSystemOptions, timeout Integer) : void from class org.apache.commons.vfs2.provider.sftp.SftpFileSystemConfigBuilder
+Rename Attribute	TIMEOUT : String to SESSION_TIMEOUT_MILLIS : String in class org.apache.commons.vfs2.provider.sftp.SftpFileSystemConfigBuilder
+Developers have reported that 11158 commits involve refactoring but only 1706 involve refactoring operations
+There are 42 duplicate commits with refactoring out of the 1706 commits.
+
+No refactorings detected at d34cd289ee1291b6a7d1b4675394248be2b8ea6b
+

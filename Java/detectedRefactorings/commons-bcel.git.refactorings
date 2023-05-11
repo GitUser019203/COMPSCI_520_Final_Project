@@ -661,3 +661,236 @@ No refactorings detected at 8e09c4dd0f87cd8e54df851a7e0d4689731b31ea
 
 No refactorings detected at ed95228968d2437a8cc0e160e21accf696a5d136
 
+No refactorings detected at 5bfa4baa2b7b2cc3dc4cc2600bbcd5d74df7451c
+
+No refactorings detected at 55380ac854e37b3cf1f3169f2e9d2f7fbf9fa960
+
+No refactorings detected at daada0977098e6633de09fe4c73643ddd8331f06
+
+No refactorings detected at f38847e90714fbefc33042912d1282cc4fb7d43e
+
+No refactorings detected at 3025f14f1528e5d6d3e1d74f7108bb219abaec15
+
+No refactorings detected at fe98b6f098069607955a68f1d695031c011f6452
+
+No refactorings detected at 7b028c4d40e4070b9c3f91f5b4c6cbbc86538eac
+
+No refactorings detected at 0f08ebb846c16cb94b9d001337af5664b6d4fd77
+
+VCS System: https://github.com/apache/commons-bcel.git
+Issue ID: : 5ca34d593c8a7f3ac59fd85e
+Issue Title: : Bug fixes and improvements to InvokeDynamic and BootStrapMethods implementation
+Refactorings at 26b8224b8bd46a3a56d424ae8b9716c495e597d4
+Remove Parameter	num_bootstrap_arguments : int in method public BootstrapMethod(bootstrap_method_ref int, num_bootstrap_arguments int, bootstrap_arguments int[]) from class org.apache.commons.bcel6.classfile.BootstrapMethod
+Developers have reported that 11158 commits involve refactoring but only 927 involve refactoring operations
+There are 17 duplicate commits with refactoring out of the 927 commits.
+
+VCS System: https://github.com/apache/commons-bcel.git
+Issue ID: : 5ca34d593c8a7f3ac59fd85e
+Issue Title: : Bug fixes and improvements to InvokeDynamic and BootStrapMethods implementation
+Refactorings at 763333c2572c5ebcb8f1d09c32876da987741c54
+Inline Variable	num_bootstrap_methods : int in method package BootstrapMethod(input DataInput) from class org.apache.bcel.classfile.BootstrapMethod
+Remove Thrown Exception Type	ClassFormatException in method package BootstrapMethod(input DataInput) from class org.apache.bcel.classfile.BootstrapMethod
+Add Parameter	c : BootstrapMethod in method public BootstrapMethod(c BootstrapMethod) from class org.apache.bcel.classfile.BootstrapMethod
+Replace Variable With Attribute	num_bootstrap_methods : int to num_bootstrap_arguments : int in method package BootstrapMethod(input DataInput) from class org.apache.bcel.classfile.BootstrapMethod
+Encapsulate Attribute	protected class_index : int from class org.apache.bcel.classfile.ConstantCP
+Remove Method Modifier	final in method public toString() : String from class org.apache.bcel.classfile.ConstantCP
+Rename Parameter	obj : BootstrapMethods to bm : BootstrapMethods in method public visitBootstrapMethods(bm BootstrapMethods) : void from class org.apache.bcel.classfile.DescendingVisitor
+Remove Method Annotation	@Deprecated in method public getClassName(cpg ConstantPoolGen) : String from class org.apache.bcel.generic.FieldOrMethod
+Remove Parameter	opcode : short in method public INVOKEDYNAMIC(opcode short, index int) from class org.apache.bcel.generic.INVOKEDYNAMIC
+Rename Attribute	REF_NAMES : String[] to METHODHANDLE_NAMES : String[] in class org.apache.bcel.Constants
+Change Return Type	ConstantInvokeDynamic to String in method public getName(cpg ConstantPoolGen) : String from class org.apache.bcel.generic.FieldOrMethod
+Move And Rename Method	public getInvokeDynamic(cpg ConstantPoolGen) : ConstantInvokeDynamic from class org.apache.bcel.generic.INVOKEDYNAMIC to public getName(cpg ConstantPoolGen) : String from class org.apache.bcel.generic.FieldOrMethod
+Developers have reported that 11158 commits involve refactoring but only 928 involve refactoring operations
+There are 17 duplicate commits with refactoring out of the 928 commits.
+
+VCS System: https://github.com/apache/commons-bcel.git
+Issue ID: : 5ca34d643c8a7f3ac59fd89e
+Issue Title: : Remove caching from ObjectType
+Refactorings at c0e9f324eacc6bc8bcf3ae307bb659c27b7236b0
+Remove Method Modifier	synchronized in method public getInstance(class_name String) : ObjectType from class org.apache.bcel.generic.ObjectType
+Rename Parameter	fraction : int to lib : File in method private test(lib File) : void from class org.apache.bcel.PerformanceTest
+Change Parameter Type	fraction : int to lib : File in method private test(lib File) : void from class org.apache.bcel.PerformanceTest
+Developers have reported that 11158 commits involve refactoring but only 929 involve refactoring operations
+There are 17 duplicate commits with refactoring out of the 929 commits.
+
+VCS System: https://github.com/apache/commons-bcel.git
+Issue ID: : 5ca34d743c8a7f3ac59fd8df
+Issue Title: : Remove unused setters
+Refactorings at cdb2699fdcd74fd4698aa5c66a35c6705e8ced2c
+Add Attribute Modifier	final in attribute private annotation_table : AnnotationEntry[] from class org.apache.commons.bcel6.classfile.Annotations
+Extract Method	package makeAnnotationTable(input DataInput, constant_pool ConstantPool, isRuntimeVisible boolean) : AnnotationEntry[] extracted from package Annotations(annotation_type byte, name_index int, length int, input DataInput, constant_pool ConstantPool, isRuntimeVisible boolean) in class org.apache.commons.bcel6.classfile.Annotations
+Replace Attribute With Variable	annotation_table : AnnotationEntry[] to at : AnnotationEntry[] in method package makeAnnotationTable(input DataInput, constant_pool ConstantPool, isRuntimeVisible boolean) : AnnotationEntry[] from class org.apache.commons.bcel6.classfile.Annotations
+Add Attribute Modifier	final in attribute private bootstrap_method_ref : int from class org.apache.commons.bcel6.classfile.BootstrapMethod
+Add Attribute Modifier	final in attribute private bootstrap_arguments : int[] from class org.apache.commons.bcel6.classfile.BootstrapMethod
+Change Attribute Access Modifier	protected to private in attribute private constants : Constant[] from class org.apache.commons.bcel6.generic.ConstantPoolGen
+Developers have reported that 11158 commits involve refactoring but only 930 involve refactoring operations
+There are 17 duplicate commits with refactoring out of the 930 commits.
+
+VCS System: https://github.com/apache/commons-bcel.git
+Issue ID: : 5ca34d743c8a7f3ac59fd8df
+Issue Title: : Remove unused setters
+Refactorings at 84120b06fd5a3edab73eb5eda6aab6595d7eacd7
+Add Attribute Modifier	final in attribute private default_value : ElementValue from class org.apache.commons.bcel6.classfile.AnnotationDefault
+Developers have reported that 11158 commits involve refactoring but only 931 involve refactoring operations
+There are 17 duplicate commits with refactoring out of the 931 commits.
+
+VCS System: https://github.com/apache/commons-bcel.git
+Issue ID: : 5ca34d743c8a7f3ac59fd8df
+Issue Title: : Remove unused setters
+Refactorings at bb47ba1914c0c0794b7665ef2113801bda45ee37
+Add Attribute Modifier	final in attribute private name_index : int from class org.apache.commons.bcel6.classfile.Attribute
+Add Attribute Modifier	final in attribute private name_index : int from class org.apache.commons.bcel6.classfile.ConstantNameAndType
+Add Attribute Modifier	final in attribute private signature_index : int from class org.apache.commons.bcel6.classfile.ConstantNameAndType
+Add Attribute Modifier	final in attribute private string_index : int from class org.apache.commons.bcel6.classfile.ConstantString
+Add Attribute Modifier	final in attribute private constantvalue_index : int from class org.apache.commons.bcel6.classfile.ConstantValue
+Add Attribute Modifier	final in attribute private classIndex : int from class org.apache.commons.bcel6.classfile.EnclosingMethod
+Add Attribute Modifier	final in attribute private methodIndex : int from class org.apache.commons.bcel6.classfile.EnclosingMethod
+Add Attribute Modifier	final in attribute private _cmp : BCELComparator from class org.apache.commons.bcel6.classfile.Field
+Add Attribute Modifier	final in attribute private name_index : int from class org.apache.commons.bcel6.classfile.FieldOrMethod
+Add Attribute Modifier	final in attribute private signature_index : int from class org.apache.commons.bcel6.classfile.FieldOrMethod
+Add Attribute Modifier	final in attribute private inner_class_index : int from class org.apache.commons.bcel6.classfile.InnerClass
+Add Attribute Modifier	final in attribute private outer_class_index : int from class org.apache.commons.bcel6.classfile.InnerClass
+Add Attribute Modifier	final in attribute private inner_name_index : int from class org.apache.commons.bcel6.classfile.InnerClass
+Add Attribute Modifier	final in attribute private inner_access_flags : int from class org.apache.commons.bcel6.classfile.InnerClass
+Add Attribute Modifier	final in attribute private _cmp : BCELComparator from class org.apache.commons.bcel6.classfile.JavaClass
+Add Attribute Modifier	final in attribute private start_pc : short from class org.apache.commons.bcel6.classfile.LineNumber
+Add Attribute Modifier	final in attribute private line_number : short from class org.apache.commons.bcel6.classfile.LineNumber
+Add Attribute Modifier	final in attribute private start_pc : int from class org.apache.commons.bcel6.classfile.LocalVariable
+Add Attribute Modifier	final in attribute private length : int from class org.apache.commons.bcel6.classfile.LocalVariable
+Add Attribute Modifier	final in attribute private name_index : int from class org.apache.commons.bcel6.classfile.LocalVariable
+Add Attribute Modifier	final in attribute private signature_index : int from class org.apache.commons.bcel6.classfile.LocalVariable
+Add Attribute Modifier	final in attribute private index : int from class org.apache.commons.bcel6.classfile.LocalVariable
+Add Attribute Modifier	final in attribute private name_index : int from class org.apache.commons.bcel6.classfile.MethodParameter
+Add Attribute Modifier	final in attribute private access_flags : int from class org.apache.commons.bcel6.classfile.MethodParameter
+Add Attribute Modifier	final in attribute private pmg_class_index : int from class org.apache.commons.bcel6.classfile.PMGClass
+Add Attribute Modifier	final in attribute private pmg_index : int from class org.apache.commons.bcel6.classfile.PMGClass
+Add Attribute Modifier	final in attribute private signature_index : int from class org.apache.commons.bcel6.classfile.Signature
+Add Attribute Modifier	final in attribute private index : int from class org.apache.commons.bcel6.classfile.SimpleElementValue
+Add Attribute Modifier	final in attribute private sourcefile_index : int from class org.apache.commons.bcel6.classfile.SourceFile
+Add Attribute Modifier	final in attribute private byte_code_offset : int from class org.apache.commons.bcel6.classfile.StackMapEntry
+Add Attribute Modifier	final in attribute private types_of_locals : StackMapType[] from class org.apache.commons.bcel6.classfile.StackMapEntry
+Add Attribute Modifier	final in attribute private types_of_stack_items : StackMapType[] from class org.apache.commons.bcel6.classfile.StackMapEntry
+Add Attribute Modifier	final in attribute private constant_pool : ConstantPool from class org.apache.commons.bcel6.classfile.StackMapEntry
+Add Attribute Modifier	final in attribute private constant_pool : ConstantPool from class org.apache.commons.bcel6.classfile.StackMapTableEntry
+Add Attribute Modifier	final in attribute private type : byte from class org.apache.commons.bcel6.classfile.StackMapType
+Add Attribute Modifier	final in attribute private index : int from class org.apache.commons.bcel6.classfile.StackMapType
+Add Attribute Modifier	final in attribute private constant_pool : ConstantPool from class org.apache.commons.bcel6.classfile.StackMapType
+Extract Variable	type : byte in method package StackMapType(file DataInput, constant_pool ConstantPool) from class org.apache.commons.bcel6.classfile.StackMapType
+Developers have reported that 11158 commits involve refactoring but only 932 involve refactoring operations
+There are 17 duplicate commits with refactoring out of the 932 commits.
+
+VCS System: https://github.com/apache/commons-bcel.git
+Issue ID: : 5ca34d743c8a7f3ac59fd8df
+Issue Title: : Remove unused setters
+Refactorings at 91481052f8a277f2fa76f80e05eccc0f53c9a08e
+Add Attribute Modifier	final in attribute private start_pc : int from class org.apache.commons.bcel6.classfile.CodeException
+Add Attribute Modifier	final in attribute private end_pc : int from class org.apache.commons.bcel6.classfile.CodeException
+Add Attribute Modifier	final in attribute private handler_pc : int from class org.apache.commons.bcel6.classfile.CodeException
+Add Attribute Modifier	final in attribute private catch_type : int from class org.apache.commons.bcel6.classfile.CodeException
+Add Attribute Modifier	final in attribute private name_index : int from class org.apache.commons.bcel6.classfile.ConstantClass
+Add Attribute Modifier	final in attribute private bytes : double from class org.apache.commons.bcel6.classfile.ConstantDouble
+Add Attribute Modifier	final in attribute private bytes : float from class org.apache.commons.bcel6.classfile.ConstantFloat
+Add Attribute Modifier	final in attribute private bytes : int from class org.apache.commons.bcel6.classfile.ConstantInteger
+Add Attribute Modifier	final in attribute private bytes : long from class org.apache.commons.bcel6.classfile.ConstantLong
+Add Attribute Modifier	final in attribute private reference_kind : int from class org.apache.commons.bcel6.classfile.ConstantMethodHandle
+Add Attribute Modifier	final in attribute private reference_index : int from class org.apache.commons.bcel6.classfile.ConstantMethodHandle
+Add Attribute Modifier	final in attribute private descriptor_index : int from class org.apache.commons.bcel6.classfile.ConstantMethodType
+Developers have reported that 11158 commits involve refactoring but only 933 involve refactoring operations
+There are 17 duplicate commits with refactoring out of the 933 commits.
+
+No refactorings detected at 4374b673a2b2ebbc7042c062b4f87ab49dd14930
+
+No refactorings detected at 80ed7676093c6ee19c271fd9414d360b6a8d1712
+
+No refactorings detected at 90d616c2d69b145d4935a52f880a7dce18535c98
+
+No refactorings detected at b458818c9540dadd53eda12c6db1048bcb5da474
+
+No refactorings detected at 32f686420686069a826ab2c747838368ee587dc6
+
+No refactorings detected at 9da9fc8e3ea8e9c2cc150fe0273383a892e9da1e
+
+No refactorings detected at d1a73f78b48f20596da8f0b011156f7bcb8d7a6a
+
+No refactorings detected at e83e010913d19a91ad9ce75adc69815a974f7c0a
+
+No refactorings detected at 197e2a83b2898b6b295d0ec168ee648295b6e4ef
+
+No refactorings detected at 7e34067268a3938877c22b4fdd3c4fe8356b259e
+
+No refactorings detected at 44c64cd96ae2a8b3e4bdebef7de0e8ff8eb82b07
+
+No refactorings detected at ae73ee8529938715e54aac99fd573b451d2d0ce9
+
+No refactorings detected at f574335914900890e909f6ab9cc1665a313c9987
+
+No refactorings detected at b433eef1c1ae41112791584346558600d134f7a3
+
+No refactorings detected at 9cfeb74ab75780f1e0c2983905b7e217ddc530a9
+
+No refactorings detected at 31799e060afc7998ac5421ab682633ec3568b3bc
+
+No refactorings detected at d45a94e4a366aebc3d666ace480a0d73040ee818
+
+No refactorings detected at fef71e3c880f8f3c04121481948f790f8531e7ce
+
+No refactorings detected at 65bbdebd843d9d8eed1a4eeaa06db3ec1ff42764
+
+No refactorings detected at dbd47e573968d8ba0d55f6f07523aac9c8f1647b
+
+No refactorings detected at 4463a5ac3eb8fd2141e21ee61684a8bfb50609b4
+
+VCS System: https://github.com/apache/commons-bcel.git
+Issue ID: : 5ca34da63c8a7f3ac59fda43
+Issue Title: : StackMap[Table]Entry.copy() needs to be deep; Improved support for StackMaps
+Refactorings at 21feca713e75b1c486d9fca07aa9aea19410d72c
+Rename Parameter	b : int to new_offset : int in method public setByteCodeOffset(new_offset int) : void from class org.apache.commons.bcel6.classfile.StackMapEntry
+Rename Variable	e : CloneNotSupportedException to ex : CloneNotSupportedException in method public copy() : StackMapEntry from class org.apache.commons.bcel6.classfile.StackMapEntry
+Developers have reported that 11158 commits involve refactoring but only 934 involve refactoring operations
+There are 17 duplicate commits with refactoring out of the 934 commits.
+
+No refactorings detected at cf39e4cd745289a2adac23354ed4c1b1d82b4c26
+
+No refactorings detected at fc5fd06047bf751ec1a2ccd37c3efbd7f353cd1c
+
+No refactorings detected at 0b85abad6a951191875d8cb2af84a7da804c30c9
+
+VCS System: https://github.com/apache/commons-bcel.git
+Issue ID: : 5ca34ddd3c8a7f3ac59fdc45
+Issue Title: : Some additional clone methods should be public.
+Refactorings at 8861e8a0656759384b6dabdb95bbaf8de753582b
+Encapsulate Attribute	protected _this : UninitializedObjectType from class org.apache.commons.bcel6.verifier.structurals.Frame
+Change Method Access Modifier	protected to public in method public clone() : Object from class org.apache.commons.bcel6.verifier.structurals.LocalVariables
+Change Method Access Modifier	protected to public in method public clone() : Object from class org.apache.commons.bcel6.verifier.structurals.OperandStack
+Developers have reported that 11158 commits involve refactoring but only 935 involve refactoring operations
+There are 17 duplicate commits with refactoring out of the 935 commits.
+
+No refactorings detected at f14429b6341be67b3581c1cbb815efc90c7d30f0
+
+VCS System: https://github.com/apache/commons-bcel.git
+Issue ID: : 5ca34ded3c8a7f3ac59fdcf8
+Issue Title: : StackMapTable[Entry] should be removed and improvements merged into StackMap[Entry]
+Refactorings at 3d18de89cb960df1a785472ca46ec9cc67ee08ea
+Rename Method	public setByteCodeOffsetDelta(b int) : void renamed to public setByteCodeOffset(b int) : void in class org.apache.commons.bcel6.classfile.StackMapTableEntry
+Rename Method	public getByteCodeOffsetDelta() : int renamed to public getByteCodeOffset() : int in class org.apache.commons.bcel6.classfile.StackMapTableEntry
+Rename Parameter	file : DataInput to input : DataInput in method package StackMapTableEntry(input DataInput, constant_pool ConstantPool) from class org.apache.commons.bcel6.classfile.StackMapTableEntry
+Rename Parameter	byte_code_offset_delta : int to byte_code_offset : int in method public StackMapTableEntry(tag int, byte_code_offset int, types_of_locals StackMapType[], types_of_stack_items StackMapType[], constant_pool ConstantPool) from class org.apache.commons.bcel6.classfile.StackMapTableEntry
+Rename Attribute	byte_code_offset_delta : int to byte_code_offset : int in class org.apache.commons.bcel6.classfile.StackMapTableEntry
+Developers have reported that 11158 commits involve refactoring but only 936 involve refactoring operations
+There are 17 duplicate commits with refactoring out of the 936 commits.
+
+No refactorings detected at c070c23750e4720fe44b92237b2b55559619e8ac
+
+No refactorings detected at 3da8b11c6c310e5fa5805ab90fb6634c4a7033b4
+
+No refactorings detected at 9b43d102b5f203616a31fd240cae7ba10d3b148e
+
+No refactorings detected at 789557e9e21e9518083ecc69b8920c739d7759cc
+
+No refactorings detected at 8e09c4dd0f87cd8e54df851a7e0d4689731b31ea
+
+No refactorings detected at 7ea677edfec45c6b430ee7aebab944eee5f5589a
+
+No refactorings detected at ed95228968d2437a8cc0e160e21accf696a5d136
+

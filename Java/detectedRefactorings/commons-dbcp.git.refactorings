@@ -789,3 +789,294 @@ No refactorings detected at 16c46bdb4330287fa64cbb2b71014c76852e5c8b
 
 No refactorings detected at 5bac43f7b775c9c876af614e745f80ccb495f01f
 
+No refactorings detected at 6e16bdd30989d261ef8fee6632a6d8925c5a408a
+
+No refactorings detected at 7e2ad45cd61cd2c9d59ec27d147c57bfbe11cb07
+
+No refactorings detected at e29b139f63d661075965993d32f253373f024f0d
+
+No refactorings detected at d2d82f3d98f58182af84223171385bf13e27408c
+
+No refactorings detected at ae96f743eb45c91011bd3cc4756ceaa42acfe1b6
+
+VCS System: https://github.com/apache/commons-dbcp.git
+Issue ID: : 5ca34ddf336b19134def9ea7
+Issue Title: : Deadlock creating/closing PreparedStatement
+Refactorings at 4ae50045738561c1c48c31bbad2ece90eaebffb8
+Remove Method Modifier	synchronized in method public prepareStatement(sql String) : PreparedStatement from class org.apache.commons.dbcp.PoolingConnection
+Remove Method Modifier	synchronized in method public prepareStatement(sql String, resultSetType int, resultSetConcurrency int) : PreparedStatement from class org.apache.commons.dbcp.PoolingConnection
+Developers have reported that 11158 commits involve refactoring but only 1120 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1120 commits.
+
+No refactorings detected at 00f876e37fe96864656a329d44ef511763b8c477
+
+VCS System: https://github.com/apache/commons-dbcp.git
+Issue ID: : 5ca34e21336b19134defa0f5
+Issue Title: : org.apache.commons.jocl.JOCLContentHandler.ConstructorDetails.createObject()  does not throw ClassNotFoundException
+Refactorings at 306c0b6172121eeba1a71f2509e0f02461338a1e
+Remove Thrown Exception Type	ClassNotFoundException in method public createObject() : Object from class org.apache.commons.jocl.JOCLContentHandler.ConstructorDetails
+Developers have reported that 11158 commits involve refactoring but only 1121 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1121 commits.
+
+No refactorings detected at 3e6616ad81a2ebcfada9390eaf14086c864a7f66
+
+No refactorings detected at 35fdfe2a478978e9a2e6b4d02e714975ca0da943
+
+VCS System: https://github.com/apache/commons-dbcp.git
+Issue ID: : 5ca34e47336b19134defa227
+Issue Title: : Improvement of error recovery in KeyedCPDSConnectionFactory
+Refactorings at ea8497a523840df5f586a072e0f1655be2fab9fa
+Change Variable Type	i : Iterator to listeners : Object[] in method package notifyListeners() : void from class org.apache.commons.dbcp.cpdsadapter.PooledConnectionImpl
+Rename Variable	i : Iterator to listeners : Object[] in method package notifyListeners() : void from class org.apache.commons.dbcp.cpdsadapter.PooledConnectionImpl
+Extract Variable	pc : PooledConnection in method public destroyObject(obj Object) : void from class org.apache.commons.dbcp.datasources.CPDSConnectionFactory
+Rename Attribute	muteMap : Map to validatingMap : Map in class org.apache.commons.dbcp.datasources.KeyedCPDSConnectionFactory
+Change Variable Type	i : Iterator to listeners : Object[] in method package notifyListeners() : void from class org.apache.commons.dbcp.datasources.PooledConnectionProxy
+Rename Variable	i : Iterator to listeners : Object[] in method package notifyListeners() : void from class org.apache.commons.dbcp.datasources.PooledConnectionProxy
+Change Variable Type	i : Iterator to listeners : Object[] in method public connectionErrorOccurred(event ConnectionEvent) : void from class org.apache.commons.dbcp.datasources.PooledConnectionProxy
+Rename Variable	i : Iterator to listeners : Object[] in method public connectionErrorOccurred(event ConnectionEvent) : void from class org.apache.commons.dbcp.datasources.PooledConnectionProxy
+Developers have reported that 11158 commits involve refactoring but only 1122 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1122 commits.
+
+VCS System: https://github.com/apache/commons-dbcp.git
+Issue ID: : 5ca34e47336b19134defa227
+Issue Title: : Improvement of error recovery in KeyedCPDSConnectionFactory
+Refactorings at 1be63eb9e4e1f4ebe832cc1f7efa35f6d215b562
+Extract Method	private cleanupListeners() : void extracted from public connectionErrorOccurred(event ConnectionEvent) : void in class org.apache.commons.dbcp.datasources.KeyedCPDSConnectionFactory
+Rename Variable	e2 : Exception to e3 : Exception in method public connectionClosed(event ConnectionEvent) : void from class org.apache.commons.dbcp.datasources.KeyedCPDSConnectionFactory
+Rename Attribute	validatingMap : Map to muteMap : Map in class org.apache.commons.dbcp.datasources.KeyedCPDSConnectionFactory
+Developers have reported that 11158 commits involve refactoring but only 1123 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1123 commits.
+
+VCS System: https://github.com/apache/commons-dbcp.git
+Issue ID: : 5ca34e4e336b19134defa299
+Issue Title: : [dbcp] I'd like to run init SQL after JDBC Connection creation in Tomcat DBCP
+Refactorings at 7d2e19896a7680144d0f9b0ade570dfc811da500
+Add Parameter	isgroup : boolean in method public ConstructorDetails(type Class, parent ConstructorDetails, isnull boolean, isgroup boolean) from class org.apache.commons.jocl.JOCLContentHandler.ConstructorDetails
+Rename Method	public testPrimatives() : void renamed to public testPrimitives() : void in class org.apache.commons.jocl.TestJOCLContentHandler
+Developers have reported that 11158 commits involve refactoring but only 1124 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1124 commits.
+
+VCS System: https://github.com/apache/commons-dbcp.git
+Issue ID: : 5ca34e60336b19134defa378
+Issue Title: : [dbcp][PATCH] Handle changed passwords in SharedPoolDataSource
+Refactorings at a6caba6c9376330dd3c068dec7ee4222b4b8ff72
+Change Attribute Access Modifier	protected to private in attribute private _cpds : ConnectionPoolDataSource from class org.apache.commons.dbcp.datasources.CPDSConnectionFactory
+Add Attribute Modifier	final in attribute private _cpds : ConnectionPoolDataSource from class org.apache.commons.dbcp.datasources.CPDSConnectionFactory
+Change Attribute Access Modifier	protected to private in attribute private _validationQuery : String from class org.apache.commons.dbcp.datasources.CPDSConnectionFactory
+Add Attribute Modifier	final in attribute private _validationQuery : String from class org.apache.commons.dbcp.datasources.CPDSConnectionFactory
+Remove Attribute Modifier	volatile in attribute protected _validationQuery : String from class org.apache.commons.dbcp.datasources.CPDSConnectionFactory
+Change Attribute Access Modifier	protected to private in attribute private _rollbackAfterValidation : boolean from class org.apache.commons.dbcp.datasources.CPDSConnectionFactory
+Add Attribute Modifier	final in attribute private _rollbackAfterValidation : boolean from class org.apache.commons.dbcp.datasources.CPDSConnectionFactory
+Remove Attribute Modifier	volatile in attribute protected _rollbackAfterValidation : boolean from class org.apache.commons.dbcp.datasources.CPDSConnectionFactory
+Change Attribute Access Modifier	protected to private in attribute private _pool : ObjectPool from class org.apache.commons.dbcp.datasources.CPDSConnectionFactory
+Add Attribute Modifier	final in attribute private _pool : ObjectPool from class org.apache.commons.dbcp.datasources.CPDSConnectionFactory
+Remove Attribute Modifier	volatile in attribute protected _pool : ObjectPool from class org.apache.commons.dbcp.datasources.CPDSConnectionFactory
+Change Attribute Access Modifier	protected to private in attribute private _username : String from class org.apache.commons.dbcp.datasources.CPDSConnectionFactory
+Change Attribute Access Modifier	protected to private in attribute private _password : String from class org.apache.commons.dbcp.datasources.CPDSConnectionFactory
+Encapsulate Attribute	private _password : String from class org.apache.commons.dbcp.datasources.CPDSConnectionFactory
+Remove Method Modifier	synchronized in method public getPool() : ObjectPool from class org.apache.commons.dbcp.datasources.CPDSConnectionFactory
+Change Attribute Access Modifier	protected to private in attribute private _cpds : ConnectionPoolDataSource from class org.apache.commons.dbcp.datasources.KeyedCPDSConnectionFactory
+Add Attribute Modifier	final in attribute private _cpds : ConnectionPoolDataSource from class org.apache.commons.dbcp.datasources.KeyedCPDSConnectionFactory
+Change Attribute Access Modifier	protected to private in attribute private _validationQuery : String from class org.apache.commons.dbcp.datasources.KeyedCPDSConnectionFactory
+Add Attribute Modifier	final in attribute private _validationQuery : String from class org.apache.commons.dbcp.datasources.KeyedCPDSConnectionFactory
+Remove Attribute Modifier	volatile in attribute protected _validationQuery : String from class org.apache.commons.dbcp.datasources.KeyedCPDSConnectionFactory
+Change Attribute Access Modifier	protected to private in attribute private _rollbackAfterValidation : boolean from class org.apache.commons.dbcp.datasources.KeyedCPDSConnectionFactory
+Add Attribute Modifier	final in attribute private _rollbackAfterValidation : boolean from class org.apache.commons.dbcp.datasources.KeyedCPDSConnectionFactory
+Remove Attribute Modifier	volatile in attribute protected _rollbackAfterValidation : boolean from class org.apache.commons.dbcp.datasources.KeyedCPDSConnectionFactory
+Change Attribute Access Modifier	protected to private in attribute private _pool : KeyedObjectPool from class org.apache.commons.dbcp.datasources.KeyedCPDSConnectionFactory
+Add Attribute Modifier	final in attribute private _pool : KeyedObjectPool from class org.apache.commons.dbcp.datasources.KeyedCPDSConnectionFactory
+Remove Attribute Modifier	volatile in attribute protected _pool : KeyedObjectPool from class org.apache.commons.dbcp.datasources.KeyedCPDSConnectionFactory
+Remove Method Modifier	synchronized in method public getPool() : KeyedObjectPool from class org.apache.commons.dbcp.datasources.KeyedCPDSConnectionFactory
+Add Variable Modifier	final in variable key : PoolKey in method protected getPooledConnectionAndInfo(username String, password String) : PooledConnectionAndInfo from class org.apache.commons.dbcp.datasources.PerUserPoolDataSource
+Change Variable Type	pool : Object to pool : ObjectPool in method protected getPooledConnectionAndInfo(username String, password String) : PooledConnectionAndInfo from class org.apache.commons.dbcp.datasources.PerUserPoolDataSource
+Rename Attribute	pools : Map to managers : Map in class org.apache.commons.dbcp.datasources.PerUserPoolDataSource
+Rename Parameter	userPwd : String to username : String in method package PoolKey(datasourceName String, username String) from class org.apache.commons.dbcp.datasources.PoolKey
+Rename Attribute	userPwd : String to username : String in class org.apache.commons.dbcp.datasources.PoolKey
+Add Attribute Modifier	transient in attribute private pool : KeyedObjectPool from class org.apache.commons.dbcp.datasources.SharedPoolDataSource
+Extract Variable	con1 : Connection in method public testChangePassword() : void from class org.apache.commons.dbcp.datasources.TestPerUserPoolDataSource
+Extract Variable	con2 : Connection in method public testChangePassword() : void from class org.apache.commons.dbcp.datasources.TestPerUserPoolDataSource
+Extract Variable	con4 : Connection in method public testChangePassword() : void from class org.apache.commons.dbcp.datasources.TestPerUserPoolDataSource
+Extract Variable	con3 : Connection in method public testChangePassword() : void from class org.apache.commons.dbcp.datasources.TestPerUserPoolDataSource
+Extract Variable	con5 : Connection in method public testChangePassword() : void from class org.apache.commons.dbcp.datasources.TestPerUserPoolDataSource
+Extract Variable	con1 : Connection in method public testChangePassword() : void from class org.apache.commons.dbcp.datasources.TestSharedPoolDataSource
+Extract Variable	con2 : Connection in method public testChangePassword() : void from class org.apache.commons.dbcp.datasources.TestSharedPoolDataSource
+Extract Variable	con4 : Connection in method public testChangePassword() : void from class org.apache.commons.dbcp.datasources.TestSharedPoolDataSource
+Extract Variable	con3 : Connection in method public testChangePassword() : void from class org.apache.commons.dbcp.datasources.TestSharedPoolDataSource
+Extract Variable	con5 : Connection in method public testChangePassword() : void from class org.apache.commons.dbcp.datasources.TestSharedPoolDataSource
+Developers have reported that 11158 commits involve refactoring but only 1125 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1125 commits.
+
+No refactorings detected at daefb4d40bba54175761f92e738680cc33b3bcb4
+
+VCS System: https://github.com/apache/commons-dbcp.git
+Issue ID: : 5ca34e60336b19134defa378
+Issue Title: : [dbcp][PATCH] Handle changed passwords in SharedPoolDataSource
+Refactorings at 904ce38619cf3005fb50722f9161543d6f7e7d8d
+Extract Variable	name : String in method private getPoolKey(username String, password String) : PoolKey from class org.apache.commons.dbcp.datasources.PerUserPoolDataSource
+Add Parameter	password : String in method private getPoolKey(username String, password String) : PoolKey from class org.apache.commons.dbcp.datasources.PerUserPoolDataSource
+Rename Parameter	username : String to userPwd : String in method package PoolKey(datasourceName String, userPwd String) from class org.apache.commons.dbcp.datasources.PoolKey
+Rename Attribute	username : String to userPwd : String in class org.apache.commons.dbcp.datasources.PoolKey
+Developers have reported that 11158 commits involve refactoring but only 1126 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1126 commits.
+
+VCS System: https://github.com/apache/commons-dbcp.git
+Issue ID: : 5ca34e60336b19134defa378
+Issue Title: : [dbcp][PATCH] Handle changed passwords in SharedPoolDataSource
+Refactorings at 40d055368b74508a92b022e51e3c85cb53faf0f8
+Extract Variable	name : String in method private getUserPassKey(username String, password String) : UserPassKey from class org.apache.commons.dbcp.datasources.SharedPoolDataSource
+Change Variable Type	e : SQLException to e : SQLNestedException in method public testIncorrectPassword() : void from class org.apache.commons.dbcp.datasources.TestSharedPoolDataSource
+Developers have reported that 11158 commits involve refactoring but only 1127 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1127 commits.
+
+No refactorings detected at e29b139f63d661075965993d32f253373f024f0d
+
+No refactorings detected at e29b139f63d661075965993d32f253373f024f0d
+
+No refactorings detected at ae96f743eb45c91011bd3cc4756ceaa42acfe1b6
+
+No refactorings detected at e39b0fc249f699b62090bffda9a9ca450a7ec51e
+
+VCS System: https://github.com/apache/commons-dbcp.git
+Issue ID: : 5ca34ea3336b19134defa639
+Issue Title: : Connection validationQuery mechanism should be replaced by new method connection#isValid()
+Refactorings at 1ca86a827680f38fab052b83f4f41423f045b04a
+Inline Variable	query : String in method public validateObject(p PooledObject<PooledConnectionAndInfo>) : boolean from class org.apache.commons.dbcp2.datasources.CPDSConnectionFactory
+Add Parameter	validationQueryTimeout : int in method public CPDSConnectionFactory(cpds ConnectionPoolDataSource, validationQuery String, validationQueryTimeout int, rollbackAfterValidation boolean, username String, password String) from class org.apache.commons.dbcp2.datasources.CPDSConnectionFactory
+Inline Variable	query : String in method public validateObject(key UserPassKey, p PooledObject<PooledConnectionAndInfo>) : boolean from class org.apache.commons.dbcp2.datasources.KeyedCPDSConnectionFactory
+Add Parameter	validationQueryTimeout : int in method public KeyedCPDSConnectionFactory(cpds ConnectionPoolDataSource, validationQuery String, validationQueryTimeout int, rollbackAfterValidation boolean) from class org.apache.commons.dbcp2.datasources.KeyedCPDSConnectionFactory
+Developers have reported that 11158 commits involve refactoring but only 1128 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1128 commits.
+
+No refactorings detected at 0955351dbd9add5696a924585edb9a3dc266486a
+
+VCS System: https://github.com/apache/commons-dbcp.git
+Issue ID: : 5ca34eab336b19134defa6c4
+Issue Title: : remove synchronize access of createDataSource
+Refactorings at 8da2e625ba0dd2b72cb453668646f74883721457
+Remove Method Modifier	synchronized in method protected createDataSource() : DataSource from class org.apache.commons.dbcp2.BasicDataSource
+Developers have reported that 11158 commits involve refactoring but only 1129 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1129 commits.
+
+VCS System: https://github.com/apache/commons-dbcp.git
+Issue ID: : 5ca34ebf336b19134defa76b
+Issue Title: : Remove Occurrences of Multiple Statements on One Line
+Refactorings at 154ba8f9f457ab8d19dd8eff7d80b287b7499084
+Change Return Type	java.sql.Savepoint to Savepoint in method public setSavepoint() : Savepoint from class org.apache.commons.dbcp2.DelegatingConnection
+Change Return Type	java.sql.Savepoint to Savepoint in method public setSavepoint(name String) : Savepoint from class org.apache.commons.dbcp2.DelegatingConnection
+Developers have reported that 11158 commits involve refactoring but only 1130 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1130 commits.
+
+No refactorings detected at 6fba874b7d8bfc283b0fb676715883cca8983129
+
+No refactorings detected at 0e2cf5e8c3012e9475e0fe1dfa738e3208ce55b6
+
+VCS System: https://github.com/apache/commons-dbcp.git
+Issue ID: : 5ca34ece336b19134defa80a
+Issue Title: : BasicDataSource createDataSource can return partially initialized DataSource
+Refactorings at 6f1d24654cf889d068f119b5b0cbcb9a8b8736f9
+Extract Variable	newDataSource : DataSource in method protected createDataSource() : DataSource from class org.apache.commons.dbcp2.BasicDataSource
+Developers have reported that 11158 commits involve refactoring but only 1131 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1131 commits.
+
+No refactorings detected at 14fb43afba98293262ccbde4a159b3dee1f7476e
+
+No refactorings detected at 66fac49530b9d55395c55cf577427b7ce4af8447
+
+No refactorings detected at 11819bd33f724b5cfb604eb82379b79020983f8c
+
+No refactorings detected at 95793c7aab86868fc1ebb5ba177481a36d91450f
+
+No refactorings detected at abf6474cecca2a20a4b8b4ae519ce59a8a0a4475
+
+No refactorings detected at 1c1181ec4d90b4da137fdbc1f335ef00610f4519
+
+No refactorings detected at 3a1821ce1ea983f9b4853ad4c39a9f05b4ff8769
+
+No refactorings detected at 8408716a7f2909eab4618ac2ab6e9a1565a993d0
+
+VCS System: https://github.com/apache/commons-dbcp.git
+Issue ID: : 5ca34f32336b19134defac04
+Issue Title: : Refactoring of PStmtKey and PoolingConnection
+Refactorings at e6543480ad73e45c7f02710b0ee15352664e118a
+Remove Variable Modifier	final in variable pps : PoolablePreparedStatement in method public makeObject(key PStmtKey) : PooledObject<DelegatingPreparedStatement> from class org.apache.commons.dbcp2.PoolingConnection
+Encapsulate Attribute	private _sql : String from class org.apache.commons.dbcp2.TesterPreparedStatement
+Developers have reported that 11158 commits involve refactoring but only 1132 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1132 commits.
+
+No refactorings detected at 5226462744f1e3c11fe5477b543a60b18a80e548
+
+No refactorings detected at 661fb0c9c01c87410cdf1abda41d78906656c7e5
+
+VCS System: https://github.com/apache/commons-dbcp.git
+Issue ID: : 5ca34f41336b19134defac81
+Issue Title: : Add support for pooling CallableStatements to the org.apache.commons.dbcp2.cpdsadapter package
+Refactorings at 735d9a839110590ff1c82ff619cbd7facb34d078
+Change Method Access Modifier	protected to public in method public activate() : void from class org.apache.commons.dbcp2.DelegatingStatement
+Change Method Access Modifier	protected to public in method public passivate() : void from class org.apache.commons.dbcp2.DelegatingStatement
+Change Method Access Modifier	protected to public in method public activate() : void from class org.apache.commons.dbcp2.PoolableCallableStatement
+Change Method Access Modifier	protected to public in method public passivate() : void from class org.apache.commons.dbcp2.PoolableCallableStatement
+Change Class Access Modifier	protected to public in class org.apache.commons.dbcp2.PoolingConnection.StatementType
+Remove Class Modifier	static in class org.apache.commons.dbcp2.PoolingConnection.StatementType
+Rename Parameter	c : Connection to conn : Connection in method public PoolingConnection(conn Connection) from class org.apache.commons.dbcp2.PoolingConnection
+Change Variable Type	stmtPool : KeyedObjectPool<PStmtKeyCPDS,PoolablePreparedStatement<PStmtKeyCPDS>> to stmtPool : KeyedObjectPool<PStmtKey,DelegatingPreparedStatement> in method public getPooledConnection(username String, pass String) : PooledConnection from class org.apache.commons.dbcp2.cpdsadapter.DriverAdapterCPDS
+Change Attribute Type	pstmtPool : KeyedObjectPool<PStmtKeyCPDS,PoolablePreparedStatement<PStmtKeyCPDS>> to pstmtPool : KeyedObjectPool<PStmtKey,DelegatingPreparedStatement> in class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Change Return Type	PStmtKeyCPDS to PStmtKey in method protected createKey(sql String) : PStmtKey from class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Change Return Type	PStmtKeyCPDS to PStmtKey in method protected createKey(sql String, autoGeneratedKeys int) : PStmtKey from class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Change Return Type	PStmtKeyCPDS to PStmtKey in method protected createKey(sql String, columnIndexes int[]) : PStmtKey from class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Change Return Type	PStmtKeyCPDS to PStmtKey in method protected createKey(sql String, resultSetType int, resultSetConcurrency int) : PStmtKey from class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Change Return Type	PStmtKeyCPDS to PStmtKey in method protected createKey(sql String, resultSetType int, resultSetConcurrency int, resultSetHoldability int) : PStmtKey from class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Change Return Type	PStmtKeyCPDS to PStmtKey in method protected createKey(sql String, columnNames String[]) : PStmtKey from class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Change Parameter Type	p : PooledObject<PoolablePreparedStatement<PStmtKeyCPDS>> to p : PooledObject<DelegatingPreparedStatement> in method public activateObject(key PStmtKey, p PooledObject<DelegatingPreparedStatement>) : void from class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Change Parameter Type	key : PStmtKeyCPDS to key : PStmtKey in method public activateObject(key PStmtKey, p PooledObject<DelegatingPreparedStatement>) : void from class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Change Parameter Type	p : PooledObject<PoolablePreparedStatement<PStmtKeyCPDS>> to p : PooledObject<DelegatingPreparedStatement> in method public destroyObject(key PStmtKey, p PooledObject<DelegatingPreparedStatement>) : void from class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Change Parameter Type	key : PStmtKeyCPDS to key : PStmtKey in method public destroyObject(key PStmtKey, p PooledObject<DelegatingPreparedStatement>) : void from class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Change Parameter Type	key : PStmtKeyCPDS to key : PStmtKey in method public makeObject(key PStmtKey) : PooledObject<DelegatingPreparedStatement> from class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Change Return Type	PooledObject<PoolablePreparedStatement<PStmtKeyCPDS>> to PooledObject<DelegatingPreparedStatement> in method public makeObject(key PStmtKey) : PooledObject<DelegatingPreparedStatement> from class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Add Method Annotation	@SuppressWarnings("resource") in method public makeObject(key PStmtKey) : PooledObject<DelegatingPreparedStatement> from class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Change Variable Type	ppss : PoolablePreparedStatement<PStmtKeyCPDS> to dps : DelegatingPreparedStatement in method public passivateObject(key PStmtKey, p PooledObject<DelegatingPreparedStatement>) : void from class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Add Variable Annotation	@SuppressWarnings("resource") in variable dps : DelegatingPreparedStatement in method public passivateObject(key PStmtKey, p PooledObject<DelegatingPreparedStatement>) : void from class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Change Parameter Type	p : PooledObject<PoolablePreparedStatement<PStmtKeyCPDS>> to p : PooledObject<DelegatingPreparedStatement> in method public passivateObject(key PStmtKey, p PooledObject<DelegatingPreparedStatement>) : void from class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Rename Variable	ppss : PoolablePreparedStatement<PStmtKeyCPDS> to dps : DelegatingPreparedStatement in method public passivateObject(key PStmtKey, p PooledObject<DelegatingPreparedStatement>) : void from class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Change Parameter Type	key : PStmtKeyCPDS to key : PStmtKey in method public passivateObject(key PStmtKey, p PooledObject<DelegatingPreparedStatement>) : void from class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Change Parameter Type	statementPool : KeyedObjectPool<PStmtKeyCPDS,PoolablePreparedStatement<PStmtKeyCPDS>> to statementPool : KeyedObjectPool<PStmtKey,DelegatingPreparedStatement> in method public setStatementPool(statementPool KeyedObjectPool<PStmtKey,DelegatingPreparedStatement>) : void from class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Change Parameter Type	key : PStmtKeyCPDS to key : PStmtKey in method public validateObject(key PStmtKey, p PooledObject<DelegatingPreparedStatement>) : boolean from class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Change Parameter Type	p : PooledObject<PoolablePreparedStatement<PStmtKeyCPDS>> to p : PooledObject<DelegatingPreparedStatement> in method public validateObject(key PStmtKey, p PooledObject<DelegatingPreparedStatement>) : boolean from class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Developers have reported that 11158 commits involve refactoring but only 1133 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1133 commits.
+
+No refactorings detected at b53521ba1a104bb725b63f5d11c551447b78ea59
+
+VCS System: https://github.com/apache/commons-dbcp.git
+Issue ID: : 5ca34f63336b19134defad62
+Issue Title: : Add some toString() methods for debugging (never printing user names and passwords)
+Refactorings at 3fe15786c11fdcf1808aacc05b8b15d61f7ce23e
+Add Method Modifier	synchronized in method public toString() : String from class org.apache.commons.dbcp2.DelegatingConnection
+Add Method Modifier	synchronized in method public toString() : String from class org.apache.commons.dbcp2.DelegatingPreparedStatement
+Add Method Modifier	synchronized in method public toString() : String from class org.apache.commons.dbcp2.DelegatingResultSet
+Add Method Modifier	synchronized in method public toString() : String from class org.apache.commons.dbcp2.DelegatingStatement
+Add Method Modifier	synchronized in method public toString() : String from class org.apache.commons.dbcp2.PoolingConnection
+Add Method Modifier	synchronized in method public toString() : String from class org.apache.commons.dbcp2.cpdsadapter.DriverAdapterCPDS
+Add Method Modifier	synchronized in method public toString() : String from class org.apache.commons.dbcp2.cpdsadapter.PooledConnectionImpl
+Add Method Modifier	synchronized in method public toString() : String from class org.apache.commons.dbcp2.datasources.CPDSConnectionFactory
+Add Method Modifier	synchronized in method public toString() : String from class org.apache.commons.dbcp2.datasources.InstanceKeyDataSource
+Developers have reported that 11158 commits involve refactoring but only 1134 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1134 commits.
+
+No refactorings detected at 04e3fe1d2cfd176784f164413010d87a01f1e5c2
+
+No refactorings detected at 16c46bdb4330287fa64cbb2b71014c76852e5c8b
+
+No refactorings detected at 5bac43f7b775c9c876af614e745f80ccb495f01f
+
+No refactorings detected at d49d45eba50fae24715a78df93bf5d951c82c6ac
+
+VCS System: https://github.com/apache/commons-dbcp.git
+Issue ID: : 5ca34f6f336b19134defadde
+Issue Title: : Add getters to some classes
+Refactorings at 8d719d4ea9dd0996de476e2c4a9728b1f367fe2b
+Change Method Access Modifier	protected to public in method public getConnectionFactory() : ConnectionFactory from class org.apache.commons.dbcp2.PoolableConnectionFactory
+Change Method Access Modifier	protected to public in method public getPoolStatements() : boolean from class org.apache.commons.dbcp2.PoolableConnectionFactory
+Change Method Access Modifier	protected to public in method public getDataSourceJmxName() : ObjectName from class org.apache.commons.dbcp2.PoolableConnectionFactory
+Developers have reported that 11158 commits involve refactoring but only 1135 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1135 commits.
+
