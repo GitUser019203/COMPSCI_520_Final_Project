@@ -5,6 +5,11 @@ import csv
 # be linked to commits involving refactoring which contain refactoring operations according to RefactoringMiner.
 total_num_issues = 0
 issue_IDs = set()
+issue_IDs.add('5b45f71c56677a15366cc80d')
+issue_IDs.add('5b45fc0e56677a15366cfacf')
+issue_IDs.add('5c57f0cdcf244d7545c80d62')
+issue_IDs.add('5c57f3d5cf244d7545c82c29')
+issue_IDs.add('5c57f48ecf244d7545c834b7')
 issue_ID_reg_exp = r"Issue ID: (?P<Issue_ID>.*)"
 with open(r"Java\consoleOutput", 'r') as input_file:
     while True:

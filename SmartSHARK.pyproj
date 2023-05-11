@@ -145,7 +145,6 @@
     <Content Include="Python\IssueRefactoringDocCalculator\issue_title_refactoring_doc_text_patterns.csv.xlsx" />
     <Content Include="Python\IssueRefactoringDocCalculator\reg_exp_grouped.txt" />
     <Content Include="Python\IssueRefactoringDocCalculator\test.csv" />
-    <Content Include="Python\IssueRefactoringDocCalculator\word_cloud.fig" />
     <Content Include="Python\IssueRefactoringDocCalculator\word_cloud.png" />
     <Content Include="Python\IssueRefactoringDocCalculator\word_cloud_gen.m" />
     <Content Include="Python\issue_tracked_projects.txt" />
