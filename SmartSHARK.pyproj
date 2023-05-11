@@ -34,6 +34,7 @@
     <Content Include="C++\projects.cpp" />
     <Content Include="C++\regexp_gen1.cpp" />
     <Content Include="C++\regexp_gen2.cpp" />
+    <Content Include="Java\commonConsoleOutput" />
     <Content Include="Java\consoleOutput" />
     <Content Include="Java\consoleOutput_after_nutch" />
     <Content Include="Java\consoleOutput_till_nutch" />
