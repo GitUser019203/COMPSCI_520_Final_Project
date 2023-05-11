@@ -58,7 +58,7 @@ def main():
     """Main Method"""
     # File path
     # file_path_test = "mongo_db_extract_refactoring_doc.txt"
-    file_path_test = "./Python/extractedIssueDescRefactoring.txt"
+    file_path_test = "extractedIssueDescRefactoring.txt"
 
     # Calculate total number of issue bodies
     total_iss = countTotalIssueBodies(file_path=file_path_test)
