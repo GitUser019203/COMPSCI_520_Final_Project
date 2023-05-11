@@ -35,6 +35,8 @@
     <Content Include="C++\regexp_gen1.cpp" />
     <Content Include="C++\regexp_gen2.cpp" />
     <Content Include="Java\consoleOutput" />
+    <Content Include="Java\consoleOutput_after_nutch" />
+    <Content Include="Java\consoleOutput_till_nutch" />
     <Content Include="Java\detectedRefactorings\ant-ivy.refactorings" />
     <Content Include="Java\detectedRefactorings\archiva.git.refactorings" />
     <Content Include="Java\detectedRefactorings\calcite.git.refactorings" />
@@ -73,7 +75,8 @@
     <Content Include="Java\detectedRefactorings\systemml.git.refactorings" />
     <Content Include="Java\detectedRefactorings\tika.git.refactorings" />
     <Content Include="Java\detectedRefactorings\wss4j.git.refactorings" />
-    <Content Include="Java\Main.java" />
+    <Content Include="Java\Main_from_nutch.java" />
+    <Content Include="Java\Main_till_nutch.java" />
     <Content Include="Java\MyGitHistoryRefactoringMinerImpl.java" />
     <Content Include="Java\MyGitService.java" />
     <Content Include="Java\MyGitServiceImpl.java" />
