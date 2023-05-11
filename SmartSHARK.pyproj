@@ -5,7 +5,7 @@
     <ProjectGuid>4c889f48-76b6-4c25-8f84-ada9d29d7352</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>Python\IssueRefactoringDocCalculator\main.py</StartupFile>
+    <StartupFile>Python\IssueRefactoringDocCalculator\ref_operations_extractor.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -30,6 +30,9 @@
     <Compile Include="Python\ExtractingIssueDescRefactoring.py" />
     <Compile Include="Python\IssueBodiesCount.py" />
     <Compile Include="Python\IssueRefactoringDocCalculator\main.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Python\IssueRefactoringDocCalculator\ref_operations_extractor.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Python\IssuesCount.py" />
@@ -140,9 +143,10 @@
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 081049.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\todo.txt" />
     <Content Include="Python\IssueRefactoringDocCalculator\data.txt" />
-    <Content Include="Python\IssueRefactoringDocCalculator\issue_title_refactoring_doc_text_patterns - MATLAB.csv" />
+    <Content Include="Python\IssueRefactoringDocCalculator\issue_refactoring_doc_text_patterns - MATLAB.csv" />
     <Content Include="Python\IssueRefactoringDocCalculator\issue_title_refactoring_doc_text_patterns.csv" />
-    <Content Include="Python\IssueRefactoringDocCalculator\issue_title_refactoring_doc_text_patterns.csv.xlsx" />
+    <Content Include="Python\IssueRefactoringDocCalculator\issue_refactoring_doc_text_patterns.csv.xlsx" />
+    <Content Include="Python\IssueRefactoringDocCalculator\refactoring_operations_clustered_by_class.csv" />
     <Content Include="Python\IssueRefactoringDocCalculator\reg_exp_grouped.txt" />
     <Content Include="Python\IssueRefactoringDocCalculator\test.csv" />
     <Content Include="Python\IssueRefactoringDocCalculator\word_cloud.png" />
