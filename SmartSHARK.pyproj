@@ -5,7 +5,7 @@
     <ProjectGuid>4c889f48-76b6-4c25-8f84-ada9d29d7352</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>Python\IssueRefactoringDocCalculator\issue_motivations.py</StartupFile>
+    <StartupFile>Python\IssueRefactoringDocCalculator\ref_operations_extractor.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -122,7 +122,6 @@
     <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.d59c8485c088c511e05ed6495d14cfc5fa041b51.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.f1dedab768f52b7dcb22e16b1897167703897fc4.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\manifold.239b1b988a0d9b381ec0a81ce83fb317232c65ba.html" />
-    <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\manifold.322863fd7e7ea96df17b8dba49025297c2b36c09.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\manifold.47544a120937015a92c61013254543ab5c45326e.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\manifold.84b3a1231a2caaf7f1aa9d830337099ccba19010.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-06 200507.html" />
