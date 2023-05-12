@@ -13,7 +13,7 @@ with open("Python/JavaConsoleOutputParser/extracted_errors", 'w') as out_file:
         lines = console_output.readlines()
         trace_dict = {}
         for i in range(1, len(lines) + 1):
-            if re.search(reg_pattern, lines[i - 1]):
+            if re.search(reg_pattern, lines[i - 1]) and "Issue Description:" not in lines[i - 1]:
                 trace_dict[i] = lines[i - 1]
             else:
                 error_list.append(trace_dict)

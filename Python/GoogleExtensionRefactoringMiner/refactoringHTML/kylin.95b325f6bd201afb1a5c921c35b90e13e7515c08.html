@@ -1,0 +1,120 @@
+<button class="myBtnLink" id="myBtnLink">
+    Refactorings
+    <div class="myDIVLink" id="myDIVLink" style="visibility: hidden; opacity: 0; transition-delay: 0.2s;">
+        <input type="checkbox" id="checkbox" checked="true">
+        <label> ALL REFACTORING TYPES || </label>
+        <input type="checkbox" id="Merge Parameter check" checked="true"> Merge Parameter ||
+        <input type="checkbox" id="Merge Attribute check" checked="true"> Merge Attribute ||
+        <input type="checkbox" id="Extract Class check" checked="true"> Extract Class ||
+        <input type="checkbox" id="Move Attribute check" checked="true"> Move Attribute ||
+        <input type="checkbox" id="Change Attribute Access Modifier check" checked="true"> Change Attribute Access Modifier ||
+        <input type="checkbox" id="Add Attribute Modifier check" checked="true"> Add Attribute Modifier ||
+        <label> </label>
+        <button id="aBtn" class="aBtn">
+            <img class="pinIcon" id="pinIcon" src="chrome-extension://lnloiaibmonmmpnfibfjjlfcddoppmgd/pin.png">
+            <div class="tooltipPin" id="tooltipPin">Pin</div>
+        </button>
+        <div id="myLink" class="myLink" style="display: none;">
+            <b>Merge Parameter</b> [
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aL31">pkStart : GTRecord</a>,
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aL31">pkEnd : GTRecord</a>] to
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aR30">range : GTScanRange</a> in method
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aR30">public GTScanRequest(info GTInfo, range GTScanRange, columns BitSet, filterPushDown TupleFilter)</a> from class org.apache.kylin.storage.gridtable.GTScanRequest
+            <br>
+            <b>Merge Parameter</b> [
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aL40">pkStart : GTRecord</a>,
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aL40">pkEnd : GTRecord</a>] to
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aR38">range : GTScanRange</a> in method
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aR38">public GTScanRequest(info GTInfo, range GTScanRange, aggrGroupBy BitSet, aggrMetrics BitSet, aggrMetricsFuncs String[], filterPushDown TupleFilter)</a> from class org.apache.kylin.storage.gridtable.GTScanRequest
+            <br>
+            <b>Merge Attribute</b> [
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aL15">pkStart : GTRecord</a>,
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aL16">pkEnd : GTRecord</a>] to
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aR15">range : GTScanRange</a> in class org.apache.kylin.storage.gridtable.GTScanRequest
+            <br>
+            <b>Extract Class</b>
+            <a href="#diff-2da0643b258723eb365a9e5f847dd431e7aedbc5aad634e300435adff9967c0cR6">org.apache.kylin.storage.gridtable.GTScanRange</a> from class
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aR11">org.apache.kylin.storage.gridtable.GTScanRequest</a>
+            <br>
+            <b>Move Attribute</b>
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aL15">private pkStart : GTRecord</a> from class org.apache.kylin.storage.gridtable.GTScanRequest to
+            <a href="#diff-2da0643b258723eb365a9e5f847dd431e7aedbc5aad634e300435adff9967c0cR8">public pkStart : GTRecord</a> from class org.apache.kylin.storage.gridtable.GTScanRange
+            <br>
+            <b>Change Attribute Access Modifier</b> private to public in attribute
+            <a href="#diff-2da0643b258723eb365a9e5f847dd431e7aedbc5aad634e300435adff9967c0cR8">public pkStart : GTRecord</a> from class org.apache.kylin.storage.gridtable.GTScanRange
+            <br>
+            <b>Add Attribute Modifier</b> final in attribute
+            <a href="#diff-2da0643b258723eb365a9e5f847dd431e7aedbc5aad634e300435adff9967c0cR8">public pkStart : GTRecord</a> from class org.apache.kylin.storage.gridtable.GTScanRange
+            <br>
+            <b>Move Attribute</b>
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aL16">private pkEnd : GTRecord</a> from class org.apache.kylin.storage.gridtable.GTScanRequest to
+            <a href="#diff-2da0643b258723eb365a9e5f847dd431e7aedbc5aad634e300435adff9967c0cR9">public pkEnd : GTRecord</a> from class org.apache.kylin.storage.gridtable.GTScanRange
+            <br>
+            <b>Change Attribute Access Modifier</b> private to public in attribute
+            <a href="#diff-2da0643b258723eb365a9e5f847dd431e7aedbc5aad634e300435adff9967c0cR9">public pkEnd : GTRecord</a> from class org.apache.kylin.storage.gridtable.GTScanRange
+            <br>
+            <b>Add Attribute Modifier</b> final in attribute
+            <a href="#diff-2da0643b258723eb365a9e5f847dd431e7aedbc5aad634e300435adff9967c0cR9">public pkEnd : GTRecord</a> from class org.apache.kylin.storage.gridtable.GTScanRange
+            <br>
+        </div>
+        <div id="div Merge Parameter" class="Merge Parameter">
+            1:
+            <b>Merge Parameter</b> [
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aL31">pkStart : GTRecord</a>,
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aL31">pkEnd : GTRecord</a>] to
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aR30">range : GTScanRange</a> in method
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aR30">public GTScanRequest(info GTInfo, range GTScanRange, columns BitSet, filterPushDown TupleFilter)</a> from class org.apache.kylin.storage.gridtable.GTScanRequest
+            <br>2:
+            <b>Merge Parameter</b> [
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aL40">pkStart : GTRecord</a>,
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aL40">pkEnd : GTRecord</a>] to
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aR38">range : GTScanRange</a> in method
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aR38">public GTScanRequest(info GTInfo, range GTScanRange, aggrGroupBy BitSet, aggrMetrics BitSet, aggrMetricsFuncs String[], filterPushDown TupleFilter)</a> from class org.apache.kylin.storage.gridtable.GTScanRequest
+            <br>
+        </div>
+        <div id="div Merge Attribute" class="Merge Attribute">
+            3:
+            <b>Merge Attribute</b> [
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aL15">pkStart : GTRecord</a>,
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aL16">pkEnd : GTRecord</a>] to
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aR15">range : GTScanRange</a> in class org.apache.kylin.storage.gridtable.GTScanRequest
+            <br>
+        </div>
+        <div id="div Extract Class" class="Extract Class">
+            4:
+            <b>Extract Class</b>
+            <a href="#diff-2da0643b258723eb365a9e5f847dd431e7aedbc5aad634e300435adff9967c0cR6">org.apache.kylin.storage.gridtable.GTScanRange</a> from class
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aR11">org.apache.kylin.storage.gridtable.GTScanRequest</a>
+            <br>
+        </div>
+        <div id="div Move Attribute" class="Move Attribute">
+            5:
+            <b>Move Attribute</b>
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aL15">private pkStart : GTRecord</a> from class org.apache.kylin.storage.gridtable.GTScanRequest to
+            <a href="#diff-2da0643b258723eb365a9e5f847dd431e7aedbc5aad634e300435adff9967c0cR8">public pkStart : GTRecord</a> from class org.apache.kylin.storage.gridtable.GTScanRange
+            <br>6:
+            <b>Move Attribute</b>
+            <a href="#diff-a8593af3274bd3e276cc5bc1c9b193a56319dc6dad04772b9216f30b87649e3aL16">private pkEnd : GTRecord</a> from class org.apache.kylin.storage.gridtable.GTScanRequest to
+            <a href="#diff-2da0643b258723eb365a9e5f847dd431e7aedbc5aad634e300435adff9967c0cR9">public pkEnd : GTRecord</a> from class org.apache.kylin.storage.gridtable.GTScanRange
+            <br>
+        </div>
+        <div id="div Change Attribute Access Modifier" class="Change Attribute Access Modifier">
+            7:
+            <b>Change Attribute Access Modifier</b> private to public in attribute
+            <a href="#diff-2da0643b258723eb365a9e5f847dd431e7aedbc5aad634e300435adff9967c0cR8">public pkStart : GTRecord</a> from class org.apache.kylin.storage.gridtable.GTScanRange
+            <br>8:
+            <b>Change Attribute Access Modifier</b> private to public in attribute
+            <a href="#diff-2da0643b258723eb365a9e5f847dd431e7aedbc5aad634e300435adff9967c0cR9">public pkEnd : GTRecord</a> from class org.apache.kylin.storage.gridtable.GTScanRange
+            <br>
+        </div>
+        <div id="div Add Attribute Modifier" class="Add Attribute Modifier">
+            9:
+            <b>Add Attribute Modifier</b> final in attribute
+            <a href="#diff-2da0643b258723eb365a9e5f847dd431e7aedbc5aad634e300435adff9967c0cR8">public pkStart : GTRecord</a> from class org.apache.kylin.storage.gridtable.GTScanRange
+            <br>10:
+            <b>Add Attribute Modifier</b> final in attribute
+            <a href="#diff-2da0643b258723eb365a9e5f847dd431e7aedbc5aad634e300435adff9967c0cR9">public pkEnd : GTRecord</a> from class org.apache.kylin.storage.gridtable.GTScanRange
+            <br>
+        </div>
+    </div>
+</button>

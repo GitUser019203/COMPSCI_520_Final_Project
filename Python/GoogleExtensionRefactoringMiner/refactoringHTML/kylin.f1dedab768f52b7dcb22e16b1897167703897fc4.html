@@ -1,0 +1,160 @@
+<button class="myBtnLink" id="myBtnLink">
+    Refactorings
+    <div class="myDIVLink" id="myDIVLink" style="visibility: hidden; opacity: 0; transition-delay: 0.2s;">
+        <input type="checkbox" id="checkbox" checked="true">
+        <label> ALL REFACTORING TYPES || </label>
+        <input type="checkbox" id="Rename Method check" checked="true"> Rename Method ||
+        <input type="checkbox" id="Change Variable Type check" checked="true"> Change Variable Type ||
+        <input type="checkbox" id="Rename Variable check" checked="true"> Rename Variable ||
+        <input type="checkbox" id="Remove Thrown Exception Type check" checked="true"> Remove Thrown Exception Type ||
+        <input type="checkbox" id="Push Down Attribute check" checked="true"> Push Down Attribute ||
+        <input type="checkbox" id="Push Down Method check" checked="true"> Push Down Method ||
+        <input type="checkbox" id="Change Method Access Modifier check" checked="true"> Change Method Access Modifier ||
+        <label> </label>
+        <button id="aBtn" class="aBtn">
+            <img class="pinIcon" id="pinIcon" src="chrome-extension://lnloiaibmonmmpnfibfjjlfcddoppmgd/pin.png">
+            <div class="tooltipPin" id="tooltipPin">Pin</div>
+        </button>
+        <div id="myLink" class="myLink" style="display: none;">
+            <b>Rename Method</b>
+            <a href="#diff-533c2330720732860a599bbf4343f4fd48941d00eb16f9b65b59b21257867d13L172">public getSreamingManager() : StreamingManager</a> renamed to
+            <a href="#diff-533c2330720732860a599bbf4343f4fd48941d00eb16f9b65b59b21257867d13R70">public getStreamingManager() : StreamingManager</a> in class org.apache.kylin.rest.service.BasicService
+            <br>
+            <b>Change Variable Type</b>
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3L129">storageUUID : String</a> to
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R225">cube : CubeInstance</a> in method
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3L123"></a>
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R220">public removeCache(cacheType Broadcaster.TYPE, cacheKey String) : void</a> from class org.apache.kylin.rest.service.CacheService
+            <br>
+            <b>Rename Variable</b>
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3L129">storageUUID : String</a> to
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R225">cube : CubeInstance</a> in method
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3L123"></a>
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R220">public removeCache(cacheType Broadcaster.TYPE, cacheKey String) : void</a> from class org.apache.kylin.rest.service.CacheService
+            <br>
+            <b>Remove Thrown Exception Type</b>
+            <a href="#diff-86dcaf7e3f8ff04a4b713b097732f28d65fd7bd885cf87db9f09aff2c0b2dc4bL795">IOException</a> in method
+            <a href="#diff-86dcaf7e3f8ff04a4b713b097732f28d65fd7bd885cf87db9f09aff2c0b2dc4bL795"></a>
+            <a href="#diff-86dcaf7e3f8ff04a4b713b097732f28d65fd7bd885cf87db9f09aff2c0b2dc4bR791">private reloadCubeLocalAt(path String) : CubeInstance</a> from class org.apache.kylin.cube.CubeManager
+            <br>
+            <b>Push Down Attribute</b>
+            <a href="#diff-533c2330720732860a599bbf4343f4fd48941d00eb16f9b65b59b21257867d13L77">private olapDataSources : ConcurrentMap&lt;String,DataSource&gt;</a> from class org.apache.kylin.rest.service.BasicService to
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R67">private olapDataSources : ConcurrentMap&lt;String,DataSource&gt;</a> from class org.apache.kylin.rest.service.CacheService
+            <br>
+            <b>Push Down Attribute</b>
+            <a href="#diff-533c2330720732860a599bbf4343f4fd48941d00eb16f9b65b59b21257867d13L80">private cacheManager : CacheManager</a> from class org.apache.kylin.rest.service.BasicService to
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R73">private cacheManager : CacheManager</a> from class org.apache.kylin.rest.service.CacheService
+            <br>
+            <b>Push Down Method</b>
+            <a href="#diff-533c2330720732860a599bbf4343f4fd48941d00eb16f9b65b59b21257867d13L86">protected cleanDataCache(storageUUID String) : void</a> from class org.apache.kylin.rest.service.BasicService to
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R80">protected cleanDataCache(storageUUID String) : void</a> from class org.apache.kylin.rest.service.CacheService
+            <br>
+            <b>Push Down Method</b>
+            <a href="#diff-533c2330720732860a599bbf4343f4fd48941d00eb16f9b65b59b21257867d13L95">protected cleanAllDataCache() : void</a> from class org.apache.kylin.rest.service.BasicService to
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R89">protected cleanAllDataCache() : void</a> from class org.apache.kylin.rest.service.CacheService
+            <br>
+            <b>Change Method Access Modifier</b> public to protected in method
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R98">protected removeOLAPDataSource(project String) : void</a> from class org.apache.kylin.rest.service.CacheService
+            <br>
+            <b>Push Down Method</b>
+            <a href="#diff-533c2330720732860a599bbf4343f4fd48941d00eb16f9b65b59b21257867d13L104">public removeOLAPDataSource(project String) : void</a> from class org.apache.kylin.rest.service.BasicService to
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R98">protected removeOLAPDataSource(project String) : void</a> from class org.apache.kylin.rest.service.CacheService
+            <br>
+            <b>Push Down Method</b>
+            <a href="#diff-533c2330720732860a599bbf4343f4fd48941d00eb16f9b65b59b21257867d13L113">public removeAllOLAPDataSources() : void</a> from class org.apache.kylin.rest.service.BasicService to
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R107">public removeAllOLAPDataSources() : void</a> from class org.apache.kylin.rest.service.CacheService
+            <br>
+            <b>Push Down Method</b>
+            <a href="#diff-533c2330720732860a599bbf4343f4fd48941d00eb16f9b65b59b21257867d13L119">public getOLAPDataSource(project String) : DataSource</a> from class org.apache.kylin.rest.service.BasicService to
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R113">public getOLAPDataSource(project String) : DataSource</a> from class org.apache.kylin.rest.service.CacheService
+            <br>
+            <b>Change Method Access Modifier</b> protected to private in method
+            <a href="#diff-87308c6241b9b483607c42c8c127b79ebeb3a400127740ca6a54670cbf7a6f31R489">private close(resultSet ResultSet, stat Statement, conn Connection) : void</a> from class org.apache.kylin.rest.service.QueryService
+            <br>
+            <b>Push Down Method</b>
+            <a href="#diff-533c2330720732860a599bbf4343f4fd48941d00eb16f9b65b59b21257867d13L249">protected close(resultSet ResultSet, stat Statement, conn Connection) : void</a> from class org.apache.kylin.rest.service.BasicService to
+            <a href="#diff-87308c6241b9b483607c42c8c127b79ebeb3a400127740ca6a54670cbf7a6f31R489">private close(resultSet ResultSet, stat Statement, conn Connection) : void</a> from class org.apache.kylin.rest.service.QueryService
+            <br>
+        </div>
+        <div id="div Rename Method" class="Rename Method">
+            1:
+            <b>Rename Method</b>
+            <a href="#diff-533c2330720732860a599bbf4343f4fd48941d00eb16f9b65b59b21257867d13L172">public getSreamingManager() : StreamingManager</a> renamed to
+            <a href="#diff-533c2330720732860a599bbf4343f4fd48941d00eb16f9b65b59b21257867d13R70">public getStreamingManager() : StreamingManager</a> in class org.apache.kylin.rest.service.BasicService
+            <br>
+        </div>
+        <div id="div Change Variable Type" class="Change Variable Type">
+            2:
+            <b>Change Variable Type</b>
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3L129">storageUUID : String</a> to
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R225">cube : CubeInstance</a> in method
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3L123"></a>
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R220">public removeCache(cacheType Broadcaster.TYPE, cacheKey String) : void</a> from class org.apache.kylin.rest.service.CacheService
+            <br>
+        </div>
+        <div id="div Rename Variable" class="Rename Variable">
+            3:
+            <b>Rename Variable</b>
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3L129">storageUUID : String</a> to
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R225">cube : CubeInstance</a> in method
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3L123"></a>
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R220">public removeCache(cacheType Broadcaster.TYPE, cacheKey String) : void</a> from class org.apache.kylin.rest.service.CacheService
+            <br>
+        </div>
+        <div id="div Remove Thrown Exception Type" class="Remove Thrown Exception Type">
+            4:
+            <b>Remove Thrown Exception Type</b>
+            <a href="#diff-86dcaf7e3f8ff04a4b713b097732f28d65fd7bd885cf87db9f09aff2c0b2dc4bL795">IOException</a> in method
+            <a href="#diff-86dcaf7e3f8ff04a4b713b097732f28d65fd7bd885cf87db9f09aff2c0b2dc4bL795"></a>
+            <a href="#diff-86dcaf7e3f8ff04a4b713b097732f28d65fd7bd885cf87db9f09aff2c0b2dc4bR791">private reloadCubeLocalAt(path String) : CubeInstance</a> from class org.apache.kylin.cube.CubeManager
+            <br>
+        </div>
+        <div id="div Push Down Attribute" class="Push Down Attribute">
+            5:
+            <b>Push Down Attribute</b>
+            <a href="#diff-533c2330720732860a599bbf4343f4fd48941d00eb16f9b65b59b21257867d13L77">private olapDataSources : ConcurrentMap&lt;String,DataSource&gt;</a> from class org.apache.kylin.rest.service.BasicService to
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R67">private olapDataSources : ConcurrentMap&lt;String,DataSource&gt;</a> from class org.apache.kylin.rest.service.CacheService
+            <br>6:
+            <b>Push Down Attribute</b>
+            <a href="#diff-533c2330720732860a599bbf4343f4fd48941d00eb16f9b65b59b21257867d13L80">private cacheManager : CacheManager</a> from class org.apache.kylin.rest.service.BasicService to
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R73">private cacheManager : CacheManager</a> from class org.apache.kylin.rest.service.CacheService
+            <br>
+        </div>
+        <div id="div Push Down Method" class="Push Down Method">
+            7:
+            <b>Push Down Method</b>
+            <a href="#diff-533c2330720732860a599bbf4343f4fd48941d00eb16f9b65b59b21257867d13L86">protected cleanDataCache(storageUUID String) : void</a> from class org.apache.kylin.rest.service.BasicService to
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R80">protected cleanDataCache(storageUUID String) : void</a> from class org.apache.kylin.rest.service.CacheService
+            <br>8:
+            <b>Push Down Method</b>
+            <a href="#diff-533c2330720732860a599bbf4343f4fd48941d00eb16f9b65b59b21257867d13L95">protected cleanAllDataCache() : void</a> from class org.apache.kylin.rest.service.BasicService to
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R89">protected cleanAllDataCache() : void</a> from class org.apache.kylin.rest.service.CacheService
+            <br>9:
+            <b>Push Down Method</b>
+            <a href="#diff-533c2330720732860a599bbf4343f4fd48941d00eb16f9b65b59b21257867d13L104">public removeOLAPDataSource(project String) : void</a> from class org.apache.kylin.rest.service.BasicService to
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R98">protected removeOLAPDataSource(project String) : void</a> from class org.apache.kylin.rest.service.CacheService
+            <br>10:
+            <b>Push Down Method</b>
+            <a href="#diff-533c2330720732860a599bbf4343f4fd48941d00eb16f9b65b59b21257867d13L113">public removeAllOLAPDataSources() : void</a> from class org.apache.kylin.rest.service.BasicService to
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R107">public removeAllOLAPDataSources() : void</a> from class org.apache.kylin.rest.service.CacheService
+            <br>11:
+            <b>Push Down Method</b>
+            <a href="#diff-533c2330720732860a599bbf4343f4fd48941d00eb16f9b65b59b21257867d13L119">public getOLAPDataSource(project String) : DataSource</a> from class org.apache.kylin.rest.service.BasicService to
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R113">public getOLAPDataSource(project String) : DataSource</a> from class org.apache.kylin.rest.service.CacheService
+            <br>12:
+            <b>Push Down Method</b>
+            <a href="#diff-533c2330720732860a599bbf4343f4fd48941d00eb16f9b65b59b21257867d13L249">protected close(resultSet ResultSet, stat Statement, conn Connection) : void</a> from class org.apache.kylin.rest.service.BasicService to
+            <a href="#diff-87308c6241b9b483607c42c8c127b79ebeb3a400127740ca6a54670cbf7a6f31R489">private close(resultSet ResultSet, stat Statement, conn Connection) : void</a> from class org.apache.kylin.rest.service.QueryService
+            <br>
+        </div>
+        <div id="div Change Method Access Modifier" class="Change Method Access Modifier">
+            13:
+            <b>Change Method Access Modifier</b> public to protected in method
+            <a href="#diff-3e5f704383ae03004dd9a85e91f0de10aa597fe89936f5cc99fef7ee08805cf3R98">protected removeOLAPDataSource(project String) : void</a> from class org.apache.kylin.rest.service.CacheService
+            <br>14:
+            <b>Change Method Access Modifier</b> protected to private in method
+            <a href="#diff-87308c6241b9b483607c42c8c127b79ebeb3a400127740ca6a54670cbf7a6f31R489">private close(resultSet ResultSet, stat Statement, conn Connection) : void</a> from class org.apache.kylin.rest.service.QueryService
+            <br>
+        </div>
+    </div>
+</button>

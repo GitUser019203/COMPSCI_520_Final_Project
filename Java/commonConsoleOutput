@@ -1,0 +1,1412 @@
+
+
+
+Currently parsing line 68454
+Currently parsing line 68455
+Currently parsing line 68456
+Currently parsing line 68457
+Currently parsing line 68458
+Currently parsing line 68459
+Currently parsing line 68460
+[pool-8517-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git a5183e1d2d1ffeca08781d4f05ddce5f3d4efde8 ...
+[pool-8517-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 29bea6a24ea978596c3c1880a520b24bdeb2252d ...
+
+Already mined 8498/13,596 commits.
+VCS System: https://github.com/apache/nutch.git
+Issue ID: : 5b47579fc298bd5a8f81fded
+Issue Title: : Fetcher  improvements
+Refactorings at 29bea6a24ea978596c3c1880a520b24bdeb2252d
+Move And Rename Class	org.apache.nutch.parse.html.RobotsMetaProcessor.RobotsMetaIndicator moved and renamed to org.apache.nutch.parse.HTMLMetaTags
+Change Variable Type	e : ParseException to e : Exception in method private handleFetch(url String, fle FetchListEntry, output ProtocolOutput) : ParseStatus from class org.apache.nutch.fetcher.Fetcher.FetcherThread
+Localize Parameter	content : Content to content : Content in method private handleFetch(url String, fle FetchListEntry, output ProtocolOutput) : ParseStatus from class org.apache.nutch.fetcher.Fetcher.FetcherThread
+Change Return Type	void to ParseStatus in method private handleFetch(url String, fle FetchListEntry, output ProtocolOutput) : ParseStatus from class org.apache.nutch.fetcher.Fetcher.FetcherThread
+Add Parameter	output : ProtocolOutput in method private handleFetch(url String, fle FetchListEntry, output ProtocolOutput) : ParseStatus from class org.apache.nutch.fetcher.Fetcher.FetcherThread
+Change Parameter Type	status : int to status : ProtocolStatus in method private handleNoFetch(fle FetchListEntry, status ProtocolStatus) : void from class org.apache.nutch.fetcher.Fetcher.FetcherThread
+Change Attribute Access Modifier	public to private in attribute private RETRY : byte from class org.apache.nutch.fetcher.FetcherOutput
+Change Attribute Access Modifier	public to private in attribute private SUCCESS : byte from class org.apache.nutch.fetcher.FetcherOutput
+Change Attribute Access Modifier	public to private in attribute private NOT_FOUND : byte from class org.apache.nutch.fetcher.FetcherOutput
+Change Attribute Access Modifier	public to private in attribute private CANT_PARSE : byte from class org.apache.nutch.fetcher.FetcherOutput
+Change Parameter Type	status : int to protocolStatus : ProtocolStatus in method public FetcherOutput(fetchListEntry FetchListEntry, md5Hash MD5Hash, protocolStatus ProtocolStatus) from class org.apache.nutch.fetcher.FetcherOutput
+Rename Parameter	status : int to protocolStatus : ProtocolStatus in method public FetcherOutput(fetchListEntry FetchListEntry, md5Hash MD5Hash, protocolStatus ProtocolStatus) from class org.apache.nutch.fetcher.FetcherOutput
+Rename Attribute	status : int to protocolStatus : ProtocolStatus in class org.apache.nutch.fetcher.FetcherOutput
+Change Attribute Type	status : int to protocolStatus : ProtocolStatus in class org.apache.nutch.fetcher.FetcherOutput
+Add Parameter	metaTags : HTMLMetaTags in method public filter(content Content, parse Parse, metaTags HTMLMetaTags, doc DocumentFragment) : Parse from class org.apache.nutch.parse.HtmlParseFilters
+Remove Thrown Exception Type	ParseException in method public filter(content Content, parse Parse, doc DocumentFragment) : Parse from class org.apache.nutch.parse.HtmlParseFilters
+Add Parameter	status : ParseStatus in method public ParseData(status ParseStatus, title String, outlinks Outlink[], metadata Properties) from class org.apache.nutch.parse.ParseData
+Remove Thrown Exception Type	ParseException in method public getParse(c Content) : Parse from class org.apache.nutch.parse.Parser
+Change Parameter Type	status : int to status : ParseStatus in method private handleNoContent(status ParseStatus) : void from class org.apache.nutch.tools.ParseSegment.ParserThread
+Remove Parameter	status : int in method private outputPage(parseText ParseText, parseData ParseData, status int) : void from class org.apache.nutch.tools.ParseSegment.ParserThread
+Remove Parameter	status : int in method public ParserOutput(parseData ParseData, parseText ParseText, status int) from class org.apache.nutch.tools.ParseSegment.ParserOutput
+Add Parameter	metaTags : HTMLMetaTags in method public filter(content Content, parse Parse, metaTags HTMLMetaTags, doc DocumentFragment) : Parse from class org.creativecommons.nutch.CCParseFilter
+Remove Thrown Exception Type	ParseException in method public filter(content Content, parse Parse, doc DocumentFragment) : Parse from class org.creativecommons.nutch.CCParseFilter
+Add Parameter	metaTags : HTMLMetaTags in method public filter(content Content, parse Parse, metaTags HTMLMetaTags, doc DocumentFragment) : Parse from class org.apache.nutch.analysis.lang.HTMLLanguageParser
+Remove Thrown Exception Type	ParseException in method public filter(content Content, parse Parse, doc DocumentFragment) : Parse from class org.apache.nutch.analysis.lang.HTMLLanguageParser
+Remove Thrown Exception Type	ParseException in method public getParse(content Content) : Parse from class org.apache.nutch.parse.ext.ExtParser
+Change Variable Type	robotsMeta : RobotsMetaIndicator to metaTags : HTMLMetaTags in method public getParse(content Content) : Parse from class org.apache.nutch.parse.html.HtmlParser
+Rename Variable	robotsMeta : RobotsMetaIndicator to metaTags : HTMLMetaTags in method public getParse(content Content) : Parse from class org.apache.nutch.parse.html.HtmlParser
+Remove Thrown Exception Type	ParseException in method public getParse(content Content) : Parse from class org.apache.nutch.parse.html.HtmlParser
+Change Variable Type	robotsMeta : RobotsMetaIndicator to robotsMeta : HTMLMetaTags in method public testRobotsMetaProcessor() : void from class org.apache.nutch.parse.html.TestRobotsMetaProcessor
+Remove Thrown Exception Type	ParseException in method public getParse(content Content) : Parse from class org.apache.nutch.parse.msword.MSWordParser
+Remove Thrown Exception Type	ParseException in method public getParse(content Content) : Parse from class org.apache.nutch.parse.pdf.PdfParser
+Remove Thrown Exception Type	ParseException in method public getParse(content Content) : Parse from class org.apache.nutch.parse.text.TextParser
+Rename Parameter	timeout : int to to : int in method public setTimeout(to int) : void from class org.apache.nutch.protocol.ftp.Ftp
+Remove Class Modifier	static in class org.apache.nutch.parse.html.RobotsMetaProcessor.RobotsMetaIndicator
+Extract Class	org.apache.nutch.protocol.ProtocolOutput from class org.apache.nutch.fetcher.FetcherOutput
+Move Attribute	public SUCCESS : byte from class org.apache.nutch.tools.ParseSegment.ParserOutput to public SUCCESS : byte from class org.apache.nutch.parse.ParseStatus
+Extract Variable	name : String in method private getMetaTagsHelper(metaTags HTMLMetaTags, node Node, currURL URL) : void from class org.apache.nutch.parse.html.HTMLMetaProcessor
+Change Parameter Type	robotsMeta : RobotsMetaIndicator to metaTags : HTMLMetaTags in method private getMetaTagsHelper(metaTags HTMLMetaTags, node Node, currURL URL) : void from class org.apache.nutch.parse.html.HTMLMetaProcessor
+Rename Parameter	robotsMeta : RobotsMetaIndicator to metaTags : HTMLMetaTags in method private getMetaTagsHelper(metaTags HTMLMetaTags, node Node, currURL URL) : void from class org.apache.nutch.parse.html.HTMLMetaProcessor
+Move And Rename Method	private getRobotsMetaDirectivesHelper(robotsMeta RobotsMetaIndicator, node Node, currURL URL) : void from class org.apache.nutch.parse.html.RobotsMetaProcessor to private getMetaTagsHelper(metaTags HTMLMetaTags, node Node, currURL URL) : void from class org.apache.nutch.parse.html.HTMLMetaProcessor
+Change Parameter Type	status : int to status : ProtocolStatus in method public setStatus(status ProtocolStatus) : void from class org.apache.nutch.protocol.ProtocolOutput
+Move Method	public setStatus(status int) : void from class org.apache.nutch.fetcher.FetcherOutput to public setStatus(status ProtocolStatus) : void from class org.apache.nutch.protocol.ProtocolOutput
+Change Variable Type	e : IOException to mue : MalformedURLException in method public getProtocolOutput(urlString String) : ProtocolOutput from class org.apache.nutch.protocol.httpclient.Http
+Change Variable Type	e : IOException to mue : MalformedURLException in method public getProtocolOutput(urlString String) : ProtocolOutput from class org.apache.nutch.protocol.httpclient.Http
+Change Variable Type	e : IOException to mue : MalformedURLException in method public getProtocolOutput(urlString String) : ProtocolOutput from class org.apache.nutch.protocol.httpclient.Http
+Rename Variable	e : IOException to mue : MalformedURLException in method public getProtocolOutput(urlString String) : ProtocolOutput from class org.apache.nutch.protocol.httpclient.Http
+Rename Variable	e : IOException to mue : MalformedURLException in method public getProtocolOutput(urlString String) : ProtocolOutput from class org.apache.nutch.protocol.httpclient.Http
+Rename Variable	e : IOException to mue : MalformedURLException in method public getProtocolOutput(urlString String) : ProtocolOutput from class org.apache.nutch.protocol.httpclient.Http
+Change Return Type	Content to ProtocolOutput in method public getProtocolOutput(urlString String) : ProtocolOutput from class org.apache.nutch.protocol.httpclient.Http
+Change Return Type	Content to ProtocolOutput in method public getProtocolOutput(urlString String) : ProtocolOutput from class org.apache.nutch.protocol.httpclient.Http
+Change Return Type	Content to ProtocolOutput in method public getProtocolOutput(urlString String) : ProtocolOutput from class org.apache.nutch.protocol.httpclient.Http
+Remove Thrown Exception Type	FileException in method public getContent(urlString String) : Content from class org.apache.nutch.protocol.file.File
+Move And Rename Method	public getContent(urlString String) : Content from class org.apache.nutch.protocol.file.File to public getProtocolOutput(urlString String) : ProtocolOutput from class org.apache.nutch.protocol.httpclient.Http
+Remove Thrown Exception Type	FtpException in method public getContent(urlString String) : Content from class org.apache.nutch.protocol.ftp.Ftp
+Move And Rename Method	public getContent(urlString String) : Content from class org.apache.nutch.protocol.ftp.Ftp to public getProtocolOutput(urlString String) : ProtocolOutput from class org.apache.nutch.protocol.httpclient.Http
+Remove Thrown Exception Type	ProtocolException in method public getContent(urlString String) : Content from class org.apache.nutch.protocol.http.Http
+Move And Rename Method	public getContent(urlString String) : Content from class org.apache.nutch.protocol.http.Http to public getProtocolOutput(urlString String) : ProtocolOutput from class org.apache.nutch.protocol.httpclient.Http
+Extract Method	public getProtocolOutput(fle FetchListEntry) : ProtocolOutput extracted from public getContent(urlString String) : Content in class org.apache.nutch.protocol.httpclient.Http
+Add Parameter	metaTags : HTMLMetaTags in method public filter(content Content, parse Parse, metaTags HTMLMetaTags, doc DocumentFragment) : Parse from class org.apache.nutch.parse.HtmlParseFilter
+Remove Thrown Exception Type	ParseException in method public filter(content Content, parse Parse, doc DocumentFragment) : Parse from class org.apache.nutch.parse.HtmlParseFilter
+Developers have reported that 11158 commits involve refactoring but only 3067 involve refactoring operations
+There are 66 duplicate commits with refactoring out of the 3067 commits.
+
+Currently parsing line 68461
+Currently parsing line 68462
+Currently parsing line 68463
+Currently parsing line 68464
+Currently parsing line 68465
+Currently parsing line 68466
+Currently parsing line 68467
+Currently parsing line 68468
+Currently parsing line 68469
+Currently parsing line 68470
+Currently parsing line 68471
+Currently parsing line 68472
+Currently parsing line 68473
+Currently parsing line 68474
+Currently parsing line 68475
+Currently parsing line 68476
+Currently parsing line 68477
+Currently parsing line 68478
+Currently parsing line 68479
+Currently parsing line 68480
+Currently parsing line 68481
+Currently parsing line 68482
+Currently parsing line 68483
+Currently parsing line 68484
+Currently parsing line 68485
+Currently parsing line 68486
+Currently parsing line 68487
+Currently parsing line 68488
+Currently parsing line 68489
+Currently parsing line 68490
+Currently parsing line 68491
+Currently parsing line 68492
+Currently parsing line 68493
+Currently parsing line 68494
+Currently parsing line 68495
+Currently parsing line 68496
+Currently parsing line 68497
+Currently parsing line 68498
+Currently parsing line 68499
+Currently parsing line 68500
+Currently parsing line 68501
+Currently parsing line 68502
+
+Already mined 8499/13,596 commits.
+No refactorings detected at 0d08e885cfa90583172a03dcc1cdf1e92b2f9f0d
+
+Currently parsing line 68503
+Currently parsing line 68504
+Currently parsing line 68505
+Currently parsing line 68506
+Currently parsing line 68507
+Currently parsing line 68508
+Currently parsing line 68509
+Currently parsing line 68510
+Currently parsing line 68511
+[pool-8519-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git a8d4bbb2b4c18bfb9faa5b0dcb8598017d8d43df ...
+[pool-8519-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 928d6739bd7489aedf4efb76d43c33d4168315ca ...
+
+Already mined 8500/13,596 commits.
+VCS System: https://github.com/apache/nutch.git
+Issue ID: : 5b4758d7c298bd5a8f82003f
+Issue Title: : Duplicate Inlink values
+Refactorings at 928d6739bd7489aedf4efb76d43c33d4168315ca
+Change Attribute Type	inlinks : ArrayList to inlinks : HashSet in class org.apache.nutch.crawl.Inlinks
+Extract Variable	it : Iterator in method public getAnchors() : String[] from class org.apache.nutch.crawl.Inlinks
+Developers have reported that 11158 commits involve refactoring but only 3068 involve refactoring operations
+There are 66 duplicate commits with refactoring out of the 3068 commits.
+
+Currently parsing line 68512
+Currently parsing line 68513
+Currently parsing line 68514
+Currently parsing line 68515
+Currently parsing line 68516
+[pool-8520-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 928d6739bd7489aedf4efb76d43c33d4168315ca ...
+[pool-8520-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 59172d13cf8d69a0cdf825314bd434c56162074c ...
+
+Already mined 8501/13,596 commits.
+VCS System: https://github.com/apache/nutch.git
+Issue ID: : 5b4758d8c298bd5a8f82004c
+Issue Title: : Clustering extension code cleanups and a real JUnit test case for the current implementation.
+Refactorings at 59172d13cf8d69a0cdf825314bd434c56162074c
+Extract Attribute	private CONFIG_FIELD_NAME : String in class org.apache.nutch.clustering.OnlineClustererFactory
+Add Variable Modifier	final in variable extensions : Extension[] in method public getOnlineClusterer() : OnlineClusterer from class org.apache.nutch.clustering.OnlineClustererFactory
+Add Variable Modifier	final in variable extensions : Extension[] in method private findExtension(name String) : Extension from class org.apache.nutch.clustering.OnlineClustererFactory
+Add Variable Modifier	final in variable extension : Extension in method private findExtension(name String) : Extension from class org.apache.nutch.clustering.OnlineClustererFactory
+Add Variable Modifier	final in variable c : Clusterer in method public testEmptyInput() : void from class org.apache.nutch.clustering.carrot2.ClustererTest
+Add Variable Modifier	final in variable hitDetails : HitDetails[] in method public testEmptyInput() : void from class org.apache.nutch.clustering.carrot2.ClustererTest
+Add Variable Modifier	final in variable descriptions : String[] in method public testEmptyInput() : void from class org.apache.nutch.clustering.carrot2.ClustererTest
+Add Variable Modifier	final in variable clusters : HitsCluster[] in method public testEmptyInput() : void from class org.apache.nutch.clustering.carrot2.ClustererTest
+Developers have reported that 11158 commits involve refactoring but only 3069 involve refactoring operations
+There are 66 duplicate commits with refactoring out of the 3069 commits.
+
+Currently parsing line 68517
+Currently parsing line 68518
+Currently parsing line 68519
+Currently parsing line 68520
+Currently parsing line 68521
+Currently parsing line 68522
+Currently parsing line 68523
+Currently parsing line 68524
+Currently parsing line 68525
+Currently parsing line 68526
+Currently parsing line 68527
+Currently parsing line 68528
+Currently parsing line 68529
+Currently parsing line 68530
+Currently parsing line 68531
+Currently parsing line 68532
+Currently parsing line 68533
+Currently parsing line 68534
+Currently parsing line 68535
+Currently parsing line 68536
+Currently parsing line 68537
+Currently parsing line 68538
+Currently parsing line 68539
+Currently parsing line 68540
+Currently parsing line 68541
+Currently parsing line 68542
+Currently parsing line 68543
+Currently parsing line 68544
+Currently parsing line 68545
+Currently parsing line 68546
+Currently parsing line 68547
+Currently parsing line 68548
+Currently parsing line 68549
+Currently parsing line 68550
+Currently parsing line 68551
+Currently parsing line 68552
+Currently parsing line 68553
+Currently parsing line 68554
+Currently parsing line 68555
+Currently parsing line 68556
+Currently parsing line 68557
+Currently parsing line 68558
+Currently parsing line 68559
+Currently parsing line 68560
+Currently parsing line 68561
+Currently parsing line 68562
+Currently parsing line 68563
+Currently parsing line 68564
+Currently parsing line 68565
+Currently parsing line 68566
+Currently parsing line 68567
+Currently parsing line 68568
+Currently parsing line 68569
+Currently parsing line 68570
+Currently parsing line 68571
+Currently parsing line 68572
+[pool-8521-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 5a326cd4e94820cdcae586074bba8f78f12d82f1 ...
+[pool-8521-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 50f738bf48d6db778cfb349ed2e8c6af0ac99906 ...
+
+Already mined 8502/13,596 commits.
+No refactorings detected at 50f738bf48d6db778cfb349ed2e8c6af0ac99906
+
+Currently parsing line 68573
+Currently parsing line 68574
+Currently parsing line 68575
+Currently parsing line 68576
+Currently parsing line 68577
+Currently parsing line 68578
+Currently parsing line 68579
+Currently parsing line 68580
+Currently parsing line 68581
+
+Already mined 8503/13,596 commits.
+No refactorings detected at 2a9b49f94f9551acb6760af0c2e2d829e2534580
+
+Currently parsing line 68582
+Currently parsing line 68583
+Currently parsing line 68584
+Currently parsing line 68585
+Currently parsing line 68586
+Currently parsing line 68587
+Currently parsing line 68588
+Currently parsing line 68589
+Currently parsing line 68590
+[pool-8523-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git d64c3966bf6885e031aa7b3f9a158d08405c3d52 ...
+[pool-8523-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 1a7dabf357ac9a5788e95937eea4d2a7742951bc ...
+
+Already mined 8504/13,596 commits.
+VCS System: https://github.com/apache/nutch.git
+Issue ID: : 5b4758ebc298bd5a8f8200d2
+Issue Title: : Tools for merging and filtering CrawlDb-s and LinkDb-s
+Refactorings at 1a7dabf357ac9a5788e95937eea4d2a7742951bc
+Encapsulate Attribute	private parseMeta : Metadata from class org.apache.nutch.parse.ParseData
+Developers have reported that 11158 commits involve refactoring but only 3070 involve refactoring operations
+There are 66 duplicate commits with refactoring out of the 3070 commits.
+
+Currently parsing line 68591
+Currently parsing line 68592
+Currently parsing line 68593
+Currently parsing line 68594
+Currently parsing line 68595
+Currently parsing line 68596
+Currently parsing line 68597
+Currently parsing line 68598
+Currently parsing line 68599
+[pool-8524-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git e809fb12c5d728ea73530d49c9ef082e60ede931 ...
+[pool-8524-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 050528d758e7b1733b70278a454d29efecdcfa83 ...
+
+Already mined 8505/13,596 commits.
+No refactorings detected at 050528d758e7b1733b70278a454d29efecdcfa83
+
+Currently parsing line 68600
+Currently parsing line 68601
+Currently parsing line 68602
+Currently parsing line 68603
+Currently parsing line 68604
+Currently parsing line 68605
+
+Already mined 8506/13,596 commits.
+No refactorings detected at 0c08989b16be1c3231682f31724b1282f43d2f45
+
+Currently parsing line 68606
+Currently parsing line 68607
+Currently parsing line 68608
+Currently parsing line 68609
+Currently parsing line 68610
+Currently parsing line 68611
+Currently parsing line 68612
+[pool-8526-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 38c7478b5914d20fd2d146ff6746d7babec5a4fb ...
+[pool-8526-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git f37df6a7290cba4f95a5a17af1d2080be91fa909 ...
+
+Already mined 8507/13,596 commits.
+VCS System: https://github.com/apache/nutch.git
+Issue ID: : 5b475901c298bd5a8f82018a
+Issue Title: : Add optional -urlFiltering to updatedb
+Refactorings at f37df6a7290cba4f95a5a17af1d2080be91fa909
+Add Parameter	normalize : boolean in method public update(crawlDb Path, segment Path, normalize boolean, filter boolean) : void from class org.apache.nutch.crawl.CrawlDb
+Add Parameter	filter : boolean in method public update(crawlDb Path, segment Path, normalize boolean, filter boolean) : void from class org.apache.nutch.crawl.CrawlDb
+Inline Variable	conf : Configuration in method public main(args String[]) : void from class org.apache.nutch.crawl.CrawlDbMerger
+Add Parameter	normalize : boolean in method public merge(output Path, dbs Path[], normalize boolean, filter boolean) : void from class org.apache.nutch.crawl.CrawlDbMerger
+Add Parameter	normalize : boolean in method public createMergeJob(conf Configuration, output Path, normalize boolean, filter boolean) : JobConf from class org.apache.nutch.crawl.CrawlDbMerger
+Add Parameter	filter : boolean in method public createMergeJob(conf Configuration, output Path, normalize boolean, filter boolean) : JobConf from class org.apache.nutch.crawl.CrawlDbMerger
+Inline Variable	conf : Configuration in method public main(args String[]) : void from class org.apache.nutch.crawl.LinkDb
+Add Parameter	normalize : boolean in method public invert(linkDb Path, segmentsDir Path, normalize boolean, filter boolean) : void from class org.apache.nutch.crawl.LinkDb
+Add Parameter	filter : boolean in method public invert(linkDb Path, segmentsDir Path, normalize boolean, filter boolean) : void from class org.apache.nutch.crawl.LinkDb
+Add Parameter	normalize : boolean in method public invert(linkDb Path, segments Path[], normalize boolean, filter boolean) : void from class org.apache.nutch.crawl.LinkDb
+Add Parameter	filter : boolean in method public invert(linkDb Path, segments Path[], normalize boolean, filter boolean) : void from class org.apache.nutch.crawl.LinkDb
+Add Parameter	normalize : boolean in method private createJob(config Configuration, linkDb Path, normalize boolean, filter boolean) : JobConf from class org.apache.nutch.crawl.LinkDb
+Add Parameter	filter : boolean in method private createJob(config Configuration, linkDb Path, normalize boolean, filter boolean) : JobConf from class org.apache.nutch.crawl.LinkDb
+Add Parameter	normalize : boolean in method public createMergeJob(config Configuration, linkDb Path, normalize boolean, filter boolean) : JobConf from class org.apache.nutch.crawl.LinkDb
+Add Parameter	filter : boolean in method public createMergeJob(config Configuration, linkDb Path, normalize boolean, filter boolean) : JobConf from class org.apache.nutch.crawl.LinkDb
+Inline Variable	conf : Configuration in method public main(args String[]) : void from class org.apache.nutch.crawl.LinkDbMerger
+Add Parameter	normalize : boolean in method public merge(output Path, dbs Path[], normalize boolean, filter boolean) : void from class org.apache.nutch.crawl.LinkDbMerger
+Inline Variable	conf : Configuration in method public main(args String[]) : void from class org.apache.nutch.crawl.LinkDbReader
+Remove Parameter	config : Configuration in method public processDumpJob(linkdb String, output String, config Configuration) : void from class org.apache.nutch.crawl.LinkDbReader
+Remove Method Modifier	static in method public processDumpJob(linkdb String, output String, config Configuration) : void from class org.apache.nutch.crawl.LinkDbReader
+Inline Variable	conf : Configuration in method public main(args String[]) : void from class org.apache.nutch.fetcher.Fetcher
+Inline Variable	conf : Configuration in method public main(args String[]) : void from class org.apache.nutch.indexer.IndexMerger
+Replace Attribute With Variable	fs : FileSystem to fs : FileSystem in method public merge(indexes Path[], outputIndex Path, localWorkingDir Path) : void from class org.apache.nutch.indexer.IndexMerger
+Add Parameter	indexes : Path[] in method public merge(indexes Path[], outputIndex Path, localWorkingDir Path) : void from class org.apache.nutch.indexer.IndexMerger
+Add Parameter	outputIndex : Path in method public merge(indexes Path[], outputIndex Path, localWorkingDir Path) : void from class org.apache.nutch.indexer.IndexMerger
+Add Parameter	localWorkingDir : Path in method public merge(indexes Path[], outputIndex Path, localWorkingDir Path) : void from class org.apache.nutch.indexer.IndexMerger
+Inline Variable	conf : Configuration in method public main(args String[]) : void from class org.apache.nutch.indexer.IndexSorter
+Localize Parameter	termIndexInterval : int to termIndexInterval : int in method public sort(directory File) : void from class org.apache.nutch.indexer.IndexSorter
+Add Parameter	directory : File in method public sort(directory File) : void from class org.apache.nutch.indexer.IndexSorter
+Extract Superclass	org.apache.nutch.util.ToolBase from classes [org.apache.nutch.crawl.LinkDbReader, org.apache.nutch.indexer.IndexMerger, org.apache.nutch.indexer.IndexSorter, org.apache.nutch.crawl.CrawlDb, org.apache.nutch.crawl.CrawlDbMerger, org.apache.nutch.crawl.Generator, org.apache.nutch.crawl.Injector, org.apache.nutch.crawl.LinkDb, org.apache.nutch.crawl.LinkDbMerger, org.apache.nutch.fetcher.Fetcher, org.apache.nutch.indexer.DeleteDuplicates, org.apache.nutch.indexer.Indexer]
+Move Attribute	private filters : URLFilters from class org.apache.nutch.crawl.CrawlDbMerger.Merger to private filters : URLFilters from class org.apache.nutch.crawl.CrawlDbFilter
+Move Attribute	private filters : URLFilters from class org.apache.nutch.crawl.CrawlDbMerger.Merger to private filters : URLFilters from class org.apache.nutch.crawl.LinkDbFilter
+Move Attribute	private filters : URLFilters from class org.apache.nutch.crawl.LinkDb.Merger to private filters : URLFilters from class org.apache.nutch.crawl.CrawlDbFilter
+Move Attribute	private filters : URLFilters from class org.apache.nutch.crawl.LinkDb.Merger to private filters : URLFilters from class org.apache.nutch.crawl.LinkDbFilter
+Pull Up Attribute	private conf : Configuration from class org.apache.nutch.crawl.LinkDbReader to public conf : Configuration from class org.apache.nutch.util.ToolBase
+Change Attribute Access Modifier	private to public in attribute public conf : Configuration from class org.apache.nutch.util.ToolBase
+Change Attribute Access Modifier	private to public in attribute public conf : Configuration from class org.apache.nutch.util.ToolBase
+Pull Up Attribute	private conf : Configuration from class org.apache.nutch.indexer.IndexMerger to public conf : Configuration from class org.apache.nutch.util.ToolBase
+Developers have reported that 11158 commits involve refactoring but only 3071 involve refactoring operations
+There are 66 duplicate commits with refactoring out of the 3071 commits.
+
+Currently parsing line 68613
+Currently parsing line 68614
+Currently parsing line 68615
+Currently parsing line 68616
+Currently parsing line 68617
+Currently parsing line 68618
+Currently parsing line 68619
+[pool-8527-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 9daa5f977eabaca4b91c2051cde3c1e8429b90a7 ...
+[pool-8527-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 3b79a3e1efeceefbab149d03017c677bc268e713 ...
+
+Already mined 8508/13,596 commits.
+No refactorings detected at 3b79a3e1efeceefbab149d03017c677bc268e713
+
+Currently parsing line 68620
+Currently parsing line 68621
+[pool-8528-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git ca0aac505fa2786f1936b98023e8bae1a4b8ff1e ...
+[pool-8528-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git cf1eab738b4521f9ac24b7a0313cda9dfe970988 ...
+
+Already mined 8509/13,596 commits.
+No refactorings detected at cf1eab738b4521f9ac24b7a0313cda9dfe970988
+
+Currently parsing line 68622
+Currently parsing line 68623
+Currently parsing line 68624
+Currently parsing line 68625
+Currently parsing line 68626
+
+Already mined 8510/13,596 commits.
+No refactorings detected at 21660b9a65dfa40db19710161a1a34e36af1002b
+
+Currently parsing line 68627
+Currently parsing line 68628
+
+Already mined 8511/13,596 commits.
+No refactorings detected at 813badcd15e831bda18c057b33b53bddeaa343bd
+
+Currently parsing line 68629
+Currently parsing line 68630
+Currently parsing line 68631
+Currently parsing line 68632
+Currently parsing line 68633
+Currently parsing line 68634
+Currently parsing line 68635
+Currently parsing line 68636
+Currently parsing line 68637
+Currently parsing line 68638
+Currently parsing line 68639
+Currently parsing line 68640
+Currently parsing line 68641
+Currently parsing line 68642
+Currently parsing line 68643
+Currently parsing line 68644
+Currently parsing line 68645
+Currently parsing line 68646
+Currently parsing line 68647
+Currently parsing line 68648
+Currently parsing line 68649
+Currently parsing line 68650
+Currently parsing line 68651
+[pool-8531-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git f6bab6b31364864bb9ef2ef442081e1480522d10 ...
+[pool-8531-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 2ef51657ba27a09cab7c9cbc47f2fd0b8fadc181 ...
+
+Already mined 8512/13,596 commits.
+No refactorings detected at 2ef51657ba27a09cab7c9cbc47f2fd0b8fadc181
+
+Currently parsing line 68652
+Currently parsing line 68653
+Currently parsing line 68654
+Currently parsing line 68655
+Currently parsing line 68656
+Currently parsing line 68657
+Currently parsing line 68658
+Currently parsing line 68659
+Currently parsing line 68660
+Currently parsing line 68661
+Currently parsing line 68662
+Currently parsing line 68663
+Currently parsing line 68664
+Currently parsing line 68665
+Currently parsing line 68666
+Currently parsing line 68667
+Currently parsing line 68668
+Currently parsing line 68669
+Currently parsing line 68670
+Currently parsing line 68671
+Currently parsing line 68672
+Currently parsing line 68673
+Currently parsing line 68674
+Currently parsing line 68675
+Currently parsing line 68676
+Currently parsing line 68677
+
+Already mined 8513/13,596 commits.
+No refactorings detected at 7b6abacf81e063ddbe0b4cffce176c158137ed8b
+
+Currently parsing line 68678
+Currently parsing line 68679
+Currently parsing line 68680
+Currently parsing line 68681
+Currently parsing line 68682
+Currently parsing line 68683
+Currently parsing line 68684
+Currently parsing line 68685
+Currently parsing line 68686
+[pool-8533-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 2f24e70e2eb1b984bf855ebf2e1b9992ce8a8a93 ...
+[pool-8533-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 71c0cae1190c7176e5ff68bbf5236e22c1a1f723 ...
+
+Already mined 8514/13,596 commits.
+VCS System: https://github.com/apache/nutch.git
+Issue ID: : 5b475954c298bd5a8f8204df
+Issue Title: : CrawlDatum status and CrawlDbReducer refactoring
+Refactorings at 71c0cae1190c7176e5ff68bbf5236e22c1a1f723
+Change Attribute Type	statNames : String[] to statNames : HashMap<Byte,String> in class org.apache.nutch.crawl.CrawlDatum
+Change Parameter Type	segment : Path to segments : Path[] in method public update(crawlDb Path, segments Path[], normalize boolean, filter boolean) : void from class org.apache.nutch.crawl.CrawlDb
+Rename Parameter	segment : Path to segments : Path[] in method public update(crawlDb Path, segments Path[], normalize boolean, filter boolean) : void from class org.apache.nutch.crawl.CrawlDb
+Change Parameter Type	segment : Path to segments : Path[] in method public update(crawlDb Path, segments Path[], normalize boolean, filter boolean, additionsAllowed boolean, force boolean) : void from class org.apache.nutch.crawl.CrawlDb
+Rename Parameter	segment : Path to segments : Path[] in method public update(crawlDb Path, segments Path[], normalize boolean, filter boolean, additionsAllowed boolean, force boolean) : void from class org.apache.nutch.crawl.CrawlDb
+Add Parameter	force : boolean in method public update(crawlDb Path, segments Path[], normalize boolean, filter boolean, additionsAllowed boolean, force boolean) : void from class org.apache.nutch.crawl.CrawlDb
+Rename Variable	highest : CrawlDatum to fetch : CrawlDatum in method public reduce(key WritableComparable, values Iterator, output OutputCollector, reporter Reporter) : void from class org.apache.nutch.crawl.CrawlDbReducer
+Add Parameter	force : boolean in method public generate(dbDir Path, segments Path, numLists int, topN long, curTime long, filter boolean, force boolean) : Path from class org.apache.nutch.crawl.Generator
+Add Attribute Modifier	final in attribute public CURRENT_NAME : String from class org.apache.nutch.crawl.LinkDb
+Add Parameter	force : boolean in method public invert(linkDb Path, segmentsDir Path, normalize boolean, filter boolean, force boolean) : void from class org.apache.nutch.crawl.LinkDb
+Add Parameter	force : boolean in method public invert(linkDb Path, segments Path[], normalize boolean, filter boolean, force boolean) : void from class org.apache.nutch.crawl.LinkDb
+Add Parameter	pstatus : ProtocolStatus in method private output(key Text, datum CrawlDatum, content Content, pstatus ProtocolStatus, status int) : ParseStatus from class org.apache.nutch.fetcher.Fetcher.FetcherThread
+Move And Rename Attribute	public DB_DIR_NAME : String renamed to public CURRENT_NAME : String and moved from class org.apache.nutch.crawl.CrawlDatum to class org.apache.nutch.crawl.CrawlDb
+Developers have reported that 11158 commits involve refactoring but only 3072 involve refactoring operations
+There are 66 duplicate commits with refactoring out of the 3072 commits.
+
+Currently parsing line 68687
+Currently parsing line 68688
+Currently parsing line 68689
+Currently parsing line 68690
+Currently parsing line 68691
+Currently parsing line 68692
+Currently parsing line 68693
+[pool-8534-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 7c8671039df9ca8f48ebfc5db88816fb5d7699f6 ...
+[pool-8534-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git e600f352afde7861a5e7404624a35a8b50c3a6ba ...
+
+Already mined 8515/13,596 commits.
+No refactorings detected at e600f352afde7861a5e7404624a35a8b50c3a6ba
+
+Currently parsing line 68694
+Currently parsing line 68695
+Currently parsing line 68696
+Currently parsing line 68697
+Currently parsing line 68698
+
+Already mined 8516/13,596 commits.
+No refactorings detected at 5c12454338e225d167ed9f2e6fc361942006f61d
+
+Currently parsing line 68699
+Currently parsing line 68700
+[pool-8536-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 6443fa473194ee658e6709db31c20d972a50ea3d ...
+[pool-8536-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 5facd00604cc2a4b22e6707b0ab8bf30315b2087 ...
+
+Already mined 8517/13,596 commits.
+No refactorings detected at 5facd00604cc2a4b22e6707b0ab8bf30315b2087
+
+Currently parsing line 68701
+Currently parsing line 68702
+Currently parsing line 68703
+Currently parsing line 68704
+Currently parsing line 68705
+[pool-8537-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 5a688a71de7b5c5744b914c3fc53bc5d7e5a077f ...
+[pool-8537-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 0324f1f0ca8b7eeb193acb04d7fe0404de21971b ...
+
+Already mined 8518/13,596 commits.
+No refactorings detected at 0324f1f0ca8b7eeb193acb04d7fe0404de21971b
+
+Currently parsing line 68706
+Currently parsing line 68707
+
+Already mined 8519/13,596 commits.
+No refactorings detected at 987356907a69ba61f23c8e3d160962e148bfbe52
+
+Currently parsing line 68708
+Currently parsing line 68709
+Currently parsing line 68710
+Currently parsing line 68711
+Currently parsing line 68712
+Currently parsing line 68713
+Currently parsing line 68714
+
+Already mined 8520/13,596 commits.
+No refactorings detected at 9f2bd349dafde41d3d39840454433e6c2300f876
+
+Currently parsing line 68715
+Currently parsing line 68716
+Currently parsing line 68717
+Currently parsing line 68718
+Currently parsing line 68719
+Currently parsing line 68720
+Currently parsing line 68721
+Currently parsing line 68722
+Currently parsing line 68723
+Currently parsing line 68724
+Currently parsing line 68725
+Currently parsing line 68726
+[pool-8540-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 69ff5fceb9730089983334ff6e1da8fbc9b98c9f ...
+[pool-8540-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 7e9a2d535805d59f5ad529b1f9e94d4468bd1546 ...
+
+Already mined 8521/13,596 commits.
+No refactorings detected at 7e9a2d535805d59f5ad529b1f9e94d4468bd1546
+
+Currently parsing line 68727
+Currently parsing line 68728
+Currently parsing line 68729
+Currently parsing line 68730
+Currently parsing line 68731
+[pool-8541-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 46ba3251855b8c69ae30f7d6bbe2c6deaa43aaab ...
+[pool-8541-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 3ca801d2185db273c410da26e618939af41e7749 ...
+
+Already mined 8522/13,596 commits.
+No refactorings detected at 3ca801d2185db273c410da26e618939af41e7749
+
+Currently parsing line 68732
+Currently parsing line 68733
+Currently parsing line 68734
+Currently parsing line 68735
+Currently parsing line 68736
+[pool-8542-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 339fc078890c06c2904b5527fc047d2f6c704410 ...
+[pool-8542-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 5a30e60153b65fee98b7a5ade651eaf0ac33cf00 ...
+
+Already mined 8523/13,596 commits.
+VCS System: https://github.com/apache/nutch.git
+Issue ID: : 5b4759d1c298bd5a8f820a0c
+Issue Title: : Reduce number of warnings in nutch core
+Refactorings at 5a30e60153b65fee98b7a5ade651eaf0ac33cf00
+Change Attribute Type	common : HashSet to common : HashSet<String> in class org.apache.nutch.analysis.CommonGrams.Filter
+Change Attribute Type	gramQueue : LinkedList to gramQueue : LinkedList<Token> in class org.apache.nutch.analysis.CommonGrams.Filter
+Change Attribute Type	nextQueue : LinkedList to nextQueue : LinkedList<Token> in class org.apache.nutch.analysis.CommonGrams.Filter
+Change Variable Type	i : ListIterator to i : ListIterator<Token> in method public next() : Token from class org.apache.nutch.analysis.CommonGrams.Filter
+Change Parameter Type	common : HashSet to common : HashSet<String> in method public Filter(input TokenStream, common HashSet<String>) from class org.apache.nutch.analysis.CommonGrams.Filter
+Change Parameter Type	i : ListIterator to i : ListIterator<Token> in method private peekNext(i ListIterator<Token>) : Token from class org.apache.nutch.analysis.CommonGrams.Filter
+Change Attribute Type	commonTerms : HashMap to commonTerms : HashMap<String,HashSet<String>> in class org.apache.nutch.analysis.CommonGrams
+Change Variable Type	table : HashSet to table : HashSet<String> in method private init(conf Configuration) : void from class org.apache.nutch.analysis.CommonGrams
+Change Variable Type	result : ArrayList to result : ArrayList<String> in method public optimizePhrase(phrase Phrase, field String) : String[] from class org.apache.nutch.analysis.CommonGrams
+Add Class Annotation	@SuppressWarnings("serial") in class org.apache.nutch.analysis.NutchAnalysis.LookaheadSuccess
+Change Attribute Type	jj_expentries : Vector to jj_expentries : Vector<int[]> in class org.apache.nutch.analysis.NutchAnalysis
+Change Variable Type	terms : ArrayList to terms : ArrayList<String> in method public parse(conf Configuration) : Query from class org.apache.nutch.analysis.NutchAnalysis
+Change Variable Type	e : Enumeration to e : Enumeration<int[]> in method private jj_add_error_token(kind int, pos int) : void from class org.apache.nutch.analysis.NutchAnalysis
+Change Variable Type	result : ArrayList to result : ArrayList<String> in method public phrase(field String) : ArrayList<String> from class org.apache.nutch.analysis.NutchAnalysis
+Change Return Type	ArrayList to ArrayList<String> in method public phrase(field String) : ArrayList<String> from class org.apache.nutch.analysis.NutchAnalysis
+Change Variable Type	result : ArrayList to result : ArrayList<String> in method public compound(field String) : ArrayList<String> from class org.apache.nutch.analysis.NutchAnalysis
+Change Return Type	ArrayList to ArrayList<String> in method public compound(field String) : ArrayList<String> from class org.apache.nutch.analysis.NutchAnalysis
+Add Class Annotation	@SuppressWarnings("serial") in class org.apache.nutch.analysis.ParseException
+Add Class Annotation	@SuppressWarnings("serial") in class org.apache.nutch.analysis.TokenMgrError
+Change Variable Type	dbs : ArrayList to dbs : ArrayList<Path> in method public run(args String[]) : int from class org.apache.nutch.crawl.CrawlDbMerger
+Change Variable Type	stats : TreeMap to stats : TreeMap<String,LongWritable> in method public processStatJob(crawlDb String, config Configuration) : void from class org.apache.nutch.crawl.CrawlDbReader
+Change Attribute Type	linked : ArrayList to linked : ArrayList<CrawlDatum> in class org.apache.nutch.crawl.CrawlDbReducer
+Change Attribute Type	hostCounts : HashMap to hostCounts : HashMap<String,IntWritable> in class org.apache.nutch.crawl.Generator.Selector
+Change Variable Type	it : Iterator to it : Iterator<Inlink> in method public write(out DataOutput) : void from class org.apache.nutch.crawl.Inlinks
+Change Variable Type	it : Iterator to it : Iterator<Inlink> in method public toString() : String from class org.apache.nutch.crawl.Inlinks
+Change Variable Type	domainToAnchors : HashMap to domainToAnchors : HashMap<String,Set<String>> in method public getAnchors() : String[] from class org.apache.nutch.crawl.Inlinks
+Change Variable Type	results : ArrayList to results : ArrayList<String> in method public getAnchors() : String[] from class org.apache.nutch.crawl.Inlinks
+Change Variable Type	it : Iterator to it : Iterator<Inlink> in method public getAnchors() : String[] from class org.apache.nutch.crawl.Inlinks
+Change Variable Type	domainAnchors : Set to domainAnchors : Set<String> in method public getAnchors() : String[] from class org.apache.nutch.crawl.Inlinks
+Change Return Type	Iterator to Iterator<Inlink> in method public iterator() : Iterator<Inlink> from class org.apache.nutch.crawl.Inlinks
+Change Variable Type	segs : ArrayList to segs : ArrayList<Path> in method public run(args String[]) : int from class org.apache.nutch.crawl.LinkDb
+Change Variable Type	it : Iterator to it : Iterator<Inlink> in method public map(key WritableComparable, value Writable, output OutputCollector, reporter Reporter) : void from class org.apache.nutch.crawl.LinkDbFilter
+Change Variable Type	it : Iterator to it : Iterator<Inlink> in method public reduce(key WritableComparable, values Iterator, output OutputCollector, reporter Reporter) : void from class org.apache.nutch.crawl.LinkDbMerger
+Change Variable Type	dbs : ArrayList to dbs : ArrayList<Path> in method public run(args String[]) : int from class org.apache.nutch.crawl.LinkDbMerger
+Change Variable Type	it : Iterator to it : Iterator<Inlink> in method public run(args String[]) : int from class org.apache.nutch.crawl.LinkDbReader
+Change Attribute Type	CLASS_ID_MAP : HashMap to CLASS_ID_MAP : Map<Class,Byte> in class org.apache.nutch.crawl.MapWritable
+Change Attribute Type	ID_CLASS_MAP : HashMap to ID_CLASS_MAP : Map<Byte,Class> in class org.apache.nutch.crawl.MapWritable
+Change Variable Type	iterator : Iterator to iterator : Iterator<Writable> in method public putAll(map MapWritable) : void from class org.apache.nutch.crawl.MapWritable
+Change Variable Type	set1 : HashSet to set1 : HashSet<KeyValueEntry> in method public equals(obj Object) : boolean from class org.apache.nutch.crawl.MapWritable
+Change Variable Type	set2 : HashSet to set2 : HashSet<KeyValueEntry> in method public equals(obj Object) : boolean from class org.apache.nutch.crawl.MapWritable
+Change Variable Type	set : HashSet to set : HashSet<Writable> in method public keySet() : Set<Writable> from class org.apache.nutch.crawl.MapWritable
+Change Return Type	Set to Set<Writable> in method public keySet() : Set<Writable> from class org.apache.nutch.crawl.MapWritable
+Change Variable Type	list : LinkedList to list : LinkedList<Writable> in method public values() : Collection<Writable> from class org.apache.nutch.crawl.MapWritable
+Change Return Type	Collection to Collection<Writable> in method public values() : Collection<Writable> from class org.apache.nutch.crawl.MapWritable
+Parameterize Variable	t1 : Token to t1 : Token in method public compare(t1 Token, t2 Token) : int from class org.apache.nutch.crawl.TextProfileSignature.TokenComparator
+Parameterize Variable	t2 : Token to t2 : Token in method public compare(t1 Token, t2 Token) : int from class org.apache.nutch.crawl.TextProfileSignature.TokenComparator
+Remove Parameter	o1 : Object in method public compare(o1 Object, o2 Object) : int from class org.apache.nutch.crawl.TextProfileSignature.TokenComparator
+Remove Parameter	o2 : Object in method public compare(o1 Object, o2 Object) : int from class org.apache.nutch.crawl.TextProfileSignature.TokenComparator
+Change Variable Type	tokens : HashMap to tokens : HashMap<String,Token> in method public calculate(content Content, parse Parse) : byte[] from class org.apache.nutch.crawl.TextProfileSignature
+Change Variable Type	it : Iterator to it : Iterator<Token> in method public calculate(content Content, parse Parse) : byte[] from class org.apache.nutch.crawl.TextProfileSignature
+Change Variable Type	profile : ArrayList to profile : ArrayList<Token> in method public calculate(content Content, parse Parse) : byte[] from class org.apache.nutch.crawl.TextProfileSignature
+Change Variable Type	res : HashMap to res : HashMap<String,byte[]> in method public main(args String[]) : void from class org.apache.nutch.crawl.TextProfileSignature
+Change Variable Type	it : Iterator to it : Iterator<String> in method public main(args String[]) : void from class org.apache.nutch.crawl.TextProfileSignature
+Change Variable Type	it : Iterator to it : Iterator<Map.Entry<String,FetchItemQueue>> in method public getFetchItem() : FetchItem from class org.apache.nutch.fetcher.Fetcher2.FetchItemQueues
+Change Attribute Type	decoder : Hashtable to decoder : Hashtable<String,String> in class org.apache.nutch.html.Entities
+Rename Parameter	o : Object to pm : PostingMap in method public compareTo(pm PostingMap) : int from class org.apache.nutch.indexer.IndexSorter.PostingMap
+Change Parameter Type	o : Object to pm : PostingMap in method public compareTo(pm PostingMap) : int from class org.apache.nutch.indexer.IndexSorter.PostingMap
+Parameterize Variable	that : DocScore to that : DocScore in method public compareTo(that DocScore) : int from class org.apache.nutch.indexer.IndexSorter.DocScore
+Remove Parameter	o : Object in method public compareTo(o Object) : int from class org.apache.nutch.indexer.IndexSorter.DocScore
+Add Class Annotation	@SuppressWarnings("serial") in class org.apache.nutch.indexer.IndexingException
+Change Variable Type	filterMap : HashMap to filterMap : HashMap<String,IndexingFilter> in method public IndexingFilters(conf Configuration) from class org.apache.nutch.indexer.IndexingFilters
+Add Class Annotation	@SuppressWarnings("serial") in class org.apache.nutch.indexer.NutchSimilarity
+Add Class Annotation	@SuppressWarnings("serial") in class org.apache.nutch.net.URLFilterException
+Change Variable Type	filters : ArrayList to filters : ArrayList<URLFilter> in method public URLFilters(conf Configuration) from class org.apache.nutch.net.URLFilters
+Change Variable Type	filterMap : HashMap to filterMap : Map<String,URLFilter> in method public URLFilters(conf Configuration) from class org.apache.nutch.net.URLFilters
+Change Attribute Type	EMPTY_EXTENSION_LIST : List to EMPTY_EXTENSION_LIST : List<Extension> in class org.apache.nutch.net.URLNormalizers
+Change Variable Type	extensions : List to extensions : List<Extension> in method package getURLNormalizers(scope String) : URLNormalizer[] from class org.apache.nutch.net.URLNormalizers
+Change Variable Type	normalizers : List to normalizers : List<URLNormalizer> in method package getURLNormalizers(scope String) : URLNormalizer[] from class org.apache.nutch.net.URLNormalizers
+Change Variable Type	it : Iterator to it : Iterator<Extension> in method package getURLNormalizers(scope String) : URLNormalizer[] from class org.apache.nutch.net.URLNormalizers
+Change Variable Type	extensions : List to extensions : List<Extension> in method private getExtensions(scope String) : List<Extension> from class org.apache.nutch.net.URLNormalizers
+Change Return Type	List to List<Extension> in method private getExtensions(scope String) : List<Extension> from class org.apache.nutch.net.URLNormalizers
+Change Variable Type	impls : Set to impls : Set<String> in method private findExtensions(scope String) : List<Extension> from class org.apache.nutch.net.URLNormalizers
+Change Variable Type	normalizerExtensions : HashMap to normalizerExtensions : HashMap<String,Extension> in method private findExtensions(scope String) : List<Extension> from class org.apache.nutch.net.URLNormalizers
+Change Variable Type	res : List to res : List<Extension> in method private findExtensions(scope String) : List<Extension> from class org.apache.nutch.net.URLNormalizers
+Change Return Type	List to List<Extension> in method private findExtensions(scope String) : List<Extension> from class org.apache.nutch.net.URLNormalizers
+Add Class Annotation	@SuppressWarnings("serial") in class org.apache.nutch.net.protocols.ProtocolException
+Change Variable Type	filters : HashMap to filters : HashMap<String,HtmlParseFilter> in method public HtmlParseFilters(conf Configuration) from class org.apache.nutch.parse.HtmlParseFilters
+Change Variable Type	outlinks : List to outlinks : List<Outlink> in method public getOutlinks(plainText String, anchor String, conf Configuration) : Outlink[] from class org.apache.nutch.parse.OutlinkExtractor
+Add Class Annotation	@SuppressWarnings("serial") in class org.apache.nutch.parse.ParseException
+Change Attribute Type	fMimeTypeToPluginMap : Map to fMimeTypeToPluginMap : Map<String,List<String>> in class org.apache.nutch.parse.ParsePluginList
+Change Attribute Type	aliases : Map to aliases : Map<String,String> in class org.apache.nutch.parse.ParsePluginList
+Change Return Type	List to List<String> in method package getPluginList(mimeType String) : List<String> from class org.apache.nutch.parse.ParsePluginList
+Change Return Type	Map to Map<String,String> in method package getAliases() : Map<String,String> from class org.apache.nutch.parse.ParsePluginList
+Change Return Type	List to List<String> in method package getSupportedMimeTypes() : List<String> from class org.apache.nutch.parse.ParsePluginList
+Change Parameter Type	aliases : Map to aliases : Map<String,String> in method package setAliases(aliases Map<String,String>) : void from class org.apache.nutch.parse.ParsePluginList
+Change Parameter Type	l : List to l : List<String> in method package setPluginList(mimeType String, l List<String>) : void from class org.apache.nutch.parse.ParsePluginList
+Change Variable Type	aliases : Map to aliases : Map<String,String> in method public parse(conf Configuration) : ParsePluginList from class org.apache.nutch.parse.ParsePluginsReader
+Change Variable Type	plugList : List to plugList : List<String> in method public parse(conf Configuration) : ParsePluginList from class org.apache.nutch.parse.ParsePluginsReader
+Change Variable Type	plugList : List to plugList : List<String> in method public main(args String[]) : void from class org.apache.nutch.parse.ParsePluginsReader
+Change Variable Type	j : Iterator to j : String in method public main(args String[]) : void from class org.apache.nutch.parse.ParsePluginsReader
+Change Variable Type	aliases : Map to aliases : Map<String,String> in method private getAliases(parsePluginsRoot Element) : Map<String,String> from class org.apache.nutch.parse.ParsePluginsReader
+Change Return Type	Map to Map<String,String> in method private getAliases(parsePluginsRoot Element) : Map<String,String> from class org.apache.nutch.parse.ParsePluginsReader
+Change Variable Type	parsers : List to parsers : List<Parser> in method public getParsers(contentType String, url String) : Parser[] from class org.apache.nutch.parse.ParserFactory
+Change Variable Type	extensions : List to extensions : List<Extension> in method protected getExtensions(contentType String) : List<Extension> from class org.apache.nutch.parse.ParserFactory
+Change Return Type	List to List<Extension> in method protected getExtensions(contentType String) : List<Extension> from class org.apache.nutch.parse.ParserFactory
+Change Variable Type	parsePluginList : List to parsePluginList : List<String> in method private findExtensions(contentType String) : List<Extension> from class org.apache.nutch.parse.ParserFactory
+Change Variable Type	extensionList : List to extensionList : List<Extension> in method private findExtensions(contentType String) : List<Extension> from class org.apache.nutch.parse.ParserFactory
+Change Return Type	List to List<Extension> in method private findExtensions(contentType String) : List<Extension> from class org.apache.nutch.parse.ParserFactory
+Change Variable Type	extList : List to extList : List<Extension> in method private matchExtensions(plugins List<String>, extensions Extension[], contentType String) : List<Extension> from class org.apache.nutch.parse.ParserFactory
+Change Parameter Type	plugins : List to plugins : List<String> in method private matchExtensions(plugins List<String>, extensions Extension[], contentType String) : List<Extension> from class org.apache.nutch.parse.ParserFactory
+Change Return Type	List to List<Extension> in method private matchExtensions(plugins List<String>, extensions Extension[], contentType String) : List<Extension> from class org.apache.nutch.parse.ParserFactory
+Add Class Annotation	@SuppressWarnings("serial") in class org.apache.nutch.protocol.ProtocolException
+Add Class Annotation	@SuppressWarnings("serial") in class org.apache.nutch.protocol.ProtocolNotFound
+Change Attribute Type	codeToName : HashMap to codeToName : HashMap<Integer,String> in class org.apache.nutch.protocol.ProtocolStatus
+Add Attribute Modifier	final in attribute private codeToName : HashMap<Integer,String> from class org.apache.nutch.protocol.ProtocolStatus
+Add Class Annotation	@SuppressWarnings("serial") in class org.apache.nutch.scoring.ScoringFilterException
+Change Variable Type	filterMap : HashMap to filterMap : HashMap<String,ScoringFilter> in method public ScoringFilters(conf Configuration) from class org.apache.nutch.scoring.ScoringFilters
+Change Parameter Type	inlinked : List to inlinked : List<CrawlDatum> in method public updateDbScore(url Text, old CrawlDatum, datum CrawlDatum, inlinked List<CrawlDatum>) : void from class org.apache.nutch.scoring.ScoringFilters
+Change Variable Type	it : Iterator to it : Iterator<Object> in method public close(reporter Reporter) : void from class org.apache.nutch.segment.SegmentMerger.SegmentOutputFormat.getRecordWriter.new RecordWriter
+Change Variable Type	linked : TreeMap to linked : TreeMap<String,ArrayList<CrawlDatum>> in method public reduce(key WritableComparable, values Iterator, output OutputCollector, reporter Reporter) : void from class org.apache.nutch.segment.SegmentMerger
+Change Variable Type	segLinked : ArrayList to segLinked : ArrayList<CrawlDatum> in method public reduce(key WritableComparable, values Iterator, output OutputCollector, reporter Reporter) : void from class org.apache.nutch.segment.SegmentMerger
+Change Variable Type	segLinked : ArrayList to segLinked : ArrayList<CrawlDatum> in method public reduce(key WritableComparable, values Iterator, output OutputCollector, reporter Reporter) : void from class org.apache.nutch.segment.SegmentMerger
+Change Variable Type	segs : ArrayList to segs : ArrayList<Path> in method public main(args String[]) : void from class org.apache.nutch.segment.SegmentMerger
+Change Variable Type	dirs : ArrayList to dirs : ArrayList<Path> in method public main(args String[]) : void from class org.apache.nutch.segment.SegmentReader
+Change Variable Type	res : ArrayList to res : ArrayList<Writable> in method private getMapRecords(dir Path, key Text) : List<Writable> from class org.apache.nutch.segment.SegmentReader
+Change Return Type	List to List<Writable> in method private getMapRecords(dir Path, key Text) : List<Writable> from class org.apache.nutch.segment.SegmentReader
+Change Variable Type	res : ArrayList to res : ArrayList<Writable> in method private getSeqRecords(dir Path, key Text) : List<Writable> from class org.apache.nutch.segment.SegmentReader
+Change Return Type	List to List<Writable> in method private getSeqRecords(dir Path, key Text) : List<Writable> from class org.apache.nutch.segment.SegmentReader
+Change Variable Type	res : List to res : List<Writable> in method public run() : void from class org.apache.nutch.segment.SegmentReader.get.add.new Thread
+Change Variable Type	res : List to res : List<Writable> in method public run() : void from class org.apache.nutch.segment.SegmentReader.get.add.new Thread
+Change Variable Type	res : List to res : List<Writable> in method public run() : void from class org.apache.nutch.segment.SegmentReader.get.add.new Thread
+Change Variable Type	res : List to res : List<Writable> in method public run() : void from class org.apache.nutch.segment.SegmentReader.get.add.new Thread
+Change Variable Type	res : List to res : List<Writable> in method public run() : void from class org.apache.nutch.segment.SegmentReader.get.add.new Thread
+Change Variable Type	res : List to res : List<Writable> in method public run() : void from class org.apache.nutch.segment.SegmentReader.get.add.new Thread
+Change Variable Type	threads : ArrayList to threads : ArrayList<Thread> in method public get(segment Path, key Text, writer Writer, results Map<String,List<Writable>>) : void from class org.apache.nutch.segment.SegmentReader
+Change Variable Type	it : Iterator to it : Iterator<Thread> in method public get(segment Path, key Text, writer Writer, results Map<String,List<Writable>>) : void from class org.apache.nutch.segment.SegmentReader
+Change Variable Type	res : List to res : List<Writable> in method public get(segment Path, key Text, writer Writer, results Map<String,List<Writable>>) : void from class org.apache.nutch.segment.SegmentReader
+Change Parameter Type	results : Map to results : Map<String,List<Writable>> in method public get(segment Path, key Text, writer Writer, results Map<String,List<Writable>>) : void from class org.apache.nutch.segment.SegmentReader
+Change Parameter Type	dirs : List to dirs : List<Path> in method public list(dirs List<Path>, writer Writer) : void from class org.apache.nutch.segment.SegmentReader
+Add Class Annotation	@SuppressWarnings("serial") in class org.apache.nutch.servlet.Cached
+Change Variable Type	topics : Vector to topics : Vector<String> in method public main(argv String[]) : void from class org.apache.nutch.tools.DmozParser
+Change Parameter Type	topics : Vector to topics : Vector<String> in method private addTopicsFromFile(topicFile String, topics Vector<String>) : void from class org.apache.nutch.tools.DmozParser
+Change Variable Type	indexes : Vector to indexes : Vector<IndexReader> in method public PruneIndexTool(indexDirs File[], queries Query[], checkers PruneChecker[], unlock boolean, dryrun boolean) from class org.apache.nutch.tools.PruneIndexTool
+Change Variable Type	paths : Vector to paths : Vector<File> in method public main(args String[]) : void from class org.apache.nutch.tools.PruneIndexTool
+Change Variable Type	cv : Vector to cv : Vector<PruneChecker> in method public main(args String[]) : void from class org.apache.nutch.tools.PruneIndexTool
+Change Variable Type	tokens : Vector to tokens : Vector<String> in method public main(args String[]) : void from class org.apache.nutch.tools.PruneIndexTool
+Change Variable Type	queries : Vector to queries : Vector<Query> in method public parseQueries(is InputStream) : Query[] from class org.apache.nutch.tools.PruneIndexTool
+Change Attribute Type	itemsToNodes : HashMap to itemsToNodes : HashMap<Object,FibonacciHeapNode> in class org.apache.nutch.util.FibonacciHeap
+Change Attribute Type	jobs : Vector to jobs : Vector<Runnable> in class org.apache.nutch.util.ThreadPool
+Change Attribute Type	childrenList : LinkedList to childrenList : LinkedList<TrieNode> in class org.apache.nutch.util.TrieStringMatcher.TrieNode
+Change Variable Type	iter : ListIterator to iter : ListIterator<TrieNode> in method package getChildAddIfNotPresent(nextChar char, isTerminal boolean) : TrieNode from class org.apache.nutch.util.TrieStringMatcher.TrieNode
+Parameterize Variable	other : TrieNode to other : TrieNode in method public compareTo(other TrieNode) : int from class org.apache.nutch.util.TrieStringMatcher.TrieNode
+Remove Parameter	o : Object in method public compareTo(o Object) : int from class org.apache.nutch.util.TrieStringMatcher.TrieNode
+Change Attribute Type	extensions : ArrayList to extensions : ArrayList<String> in class org.apache.nutch.util.mime.MimeType
+Change Attribute Type	magics : ArrayList to magics : ArrayList<Magic> in class org.apache.nutch.util.mime.MimeType
+Add Class Annotation	@SuppressWarnings("serial") in class org.apache.nutch.util.mime.MimeTypeException
+Change Attribute Type	types : ArrayList to types : ArrayList<MimeType> in class org.apache.nutch.util.mime.MimeTypes
+Change Attribute Type	typesIdx : HashMap to typesIdx : HashMap<String,MimeType> in class org.apache.nutch.util.mime.MimeTypes
+Change Attribute Type	extIdx : Map to extIdx : Map<String,List<MimeType>> in class org.apache.nutch.util.mime.MimeTypes
+Change Attribute Type	magicsIdx : List to magicsIdx : List<MimeType> in class org.apache.nutch.util.mime.MimeTypes
+Change Attribute Type	instances : Map to instances : Map<String,MimeTypes> in class org.apache.nutch.util.mime.MimeTypes
+Change Variable Type	iter : Iterator to iter : Iterator<MimeType> in method public getMimeType(data byte[]) : MimeType from class org.apache.nutch.util.mime.MimeTypes
+Change Variable Type	list : List to list : List<MimeType> in method package add(type MimeType) : void from class org.apache.nutch.util.mime.MimeTypes
+Change Variable Type	mimeTypes : List to mimeTypes : List<MimeType> in method private getMimeTypes(name String) : MimeType[] from class org.apache.nutch.util.mime.MimeTypes
+Change Variable Type	types : ArrayList to types : ArrayList<MimeType> in method private readMimeTypes(element Element) : MimeType[] from class org.apache.nutch.util.mime.MimeTypesReader
+Change Parameter Type	inlinked : List to inlinked : List<CrawlDatum> in method public updateDbScore(url Text, old CrawlDatum, datum CrawlDatum, inlinked List<CrawlDatum>) : void from class org.apache.nutch.scoring.ScoringFilter
+Developers have reported that 11158 commits involve refactoring but only 3073 involve refactoring operations
+There are 66 duplicate commits with refactoring out of the 3073 commits.
+
+Currently parsing line 68737
+Currently parsing line 68738
+Currently parsing line 68739
+Currently parsing line 68740
+Currently parsing line 68741
+Currently parsing line 68742
+Currently parsing line 68743
+[pool-8543-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git c7f29f9def6b3fa540b13d09341cdf914c2dae16 ...
+[pool-8543-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 16e0ceca8e061eedd73acf717bb66de98a42dbe3 ...
+
+Already mined 8524/13,596 commits.
+VCS System: https://github.com/apache/nutch.git
+Issue ID: : 5b4759d9c298bd5a8f820a77
+Issue Title: : Change HtmlParseFilter 's to return ParseResult object instead of Parse object
+Refactorings at 16e0ceca8e061eedd73acf717bb66de98a42dbe3
+Localize Parameter	parse : Parse to parse : Parse in method public filter(content Content, parseResult ParseResult, metaTags HTMLMetaTags, doc DocumentFragment) : ParseResult from class org.creativecommons.nutch.CCParseFilter
+Change Return Type	Parse to ParseResult in method public filter(content Content, parseResult ParseResult, metaTags HTMLMetaTags, doc DocumentFragment) : ParseResult from class org.creativecommons.nutch.CCParseFilter
+Add Parameter	parseResult : ParseResult in method public filter(content Content, parseResult ParseResult, metaTags HTMLMetaTags, doc DocumentFragment) : ParseResult from class org.creativecommons.nutch.CCParseFilter
+Localize Parameter	parse : Parse to parse : Parse in method public filter(content Content, parseResult ParseResult, metaTags HTMLMetaTags, doc DocumentFragment) : ParseResult from class org.apache.nutch.analysis.lang.HTMLLanguageParser
+Change Return Type	Parse to ParseResult in method public filter(content Content, parseResult ParseResult, metaTags HTMLMetaTags, doc DocumentFragment) : ParseResult from class org.apache.nutch.analysis.lang.HTMLLanguageParser
+Add Parameter	parseResult : ParseResult in method public filter(content Content, parseResult ParseResult, metaTags HTMLMetaTags, doc DocumentFragment) : ParseResult from class org.apache.nutch.analysis.lang.HTMLLanguageParser
+Localize Parameter	parse : Parse to parse : Parse in method public filter(content Content, parseResult ParseResult, metaTags HTMLMetaTags, doc DocumentFragment) : ParseResult from class org.apache.nutch.microformats.reltag.RelTagParser
+Change Return Type	Parse to ParseResult in method public filter(content Content, parseResult ParseResult, metaTags HTMLMetaTags, doc DocumentFragment) : ParseResult from class org.apache.nutch.microformats.reltag.RelTagParser
+Add Parameter	parseResult : ParseResult in method public filter(content Content, parseResult ParseResult, metaTags HTMLMetaTags, doc DocumentFragment) : ParseResult from class org.apache.nutch.microformats.reltag.RelTagParser
+Localize Parameter	parse : Parse to parse : Parse in method public filter(content Content, parseResult ParseResult, metaTags HTMLMetaTags, doc DocumentFragment) : ParseResult from class org.apache.nutch.parse.js.JSParseFilter
+Change Return Type	Parse to ParseResult in method public filter(content Content, parseResult ParseResult, metaTags HTMLMetaTags, doc DocumentFragment) : ParseResult from class org.apache.nutch.parse.js.JSParseFilter
+Add Parameter	parseResult : ParseResult in method public filter(content Content, parseResult ParseResult, metaTags HTMLMetaTags, doc DocumentFragment) : ParseResult from class org.apache.nutch.parse.js.JSParseFilter
+Change Return Type	Parse to ParseResult in method public filter(content Content, parseResult ParseResult, metaTags HTMLMetaTags, doc DocumentFragment) : ParseResult from class org.apache.nutch.parse.HtmlParseFilter
+Rename Parameter	parse : Parse to parseResult : ParseResult in method public filter(content Content, parseResult ParseResult, metaTags HTMLMetaTags, doc DocumentFragment) : ParseResult from class org.apache.nutch.parse.HtmlParseFilter
+Change Parameter Type	parse : Parse to parseResult : ParseResult in method public filter(content Content, parseResult ParseResult, metaTags HTMLMetaTags, doc DocumentFragment) : ParseResult from class org.apache.nutch.parse.HtmlParseFilter
+Developers have reported that 11158 commits involve refactoring but only 3074 involve refactoring operations
+There are 66 duplicate commits with refactoring out of the 3074 commits.
+
+Currently parsing line 68744
+Currently parsing line 68745
+Currently parsing line 68746
+Currently parsing line 68747
+Currently parsing line 68748
+
+Already mined 8525/13,596 commits.
+No refactorings detected at 63b48b1800c3144aaacb1719e241a999d28b6667
+
+Currently parsing line 68749
+Currently parsing line 68750
+Currently parsing line 68751
+Currently parsing line 68752
+Currently parsing line 68753
+
+Already mined 8526/13,596 commits.
+No refactorings detected at 75b90a275dc7f98f6d6633abfa74cdd1683ec62a
+
+Currently parsing line 68754
+Currently parsing line 68755
+
+Already mined 8527/13,596 commits.
+No refactorings detected at 88ed2067b532517e1a6e88c417c41a2d8ee9c564
+
+Currently parsing line 68756
+Currently parsing line 68757
+Currently parsing line 68758
+Currently parsing line 68759
+Currently parsing line 68760
+Currently parsing line 68761
+Currently parsing line 68762
+Currently parsing line 68763
+Currently parsing line 68764
+Currently parsing line 68765
+Currently parsing line 68766
+Currently parsing line 68767
+Currently parsing line 68768
+Currently parsing line 68769
+Currently parsing line 68770
+Currently parsing line 68771
+Currently parsing line 68772
+Currently parsing line 68773
+[pool-8547-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 3ffaa8fb0a6716ba569e2ee1b658e0efb2e6be53 ...
+[pool-8547-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git acf73dc6366a5dabe3bfb5be3173395e54d236b3 ...
+
+Already mined 8528/13,596 commits.
+VCS System: https://github.com/apache/nutch.git
+Issue ID: : 5b4759e2c298bd5a8f820aee
+Issue Title: : Change LuceneDocumentWrapper visibility from private to protected
+Refactorings at acf73dc6366a5dabe3bfb5be3173395e54d236b3
+Change Class Access Modifier	private to public in class org.apache.nutch.indexer.Indexer.LuceneDocumentWrapper
+Developers have reported that 11158 commits involve refactoring but only 3075 involve refactoring operations
+There are 66 duplicate commits with refactoring out of the 3075 commits.
+
+Currently parsing line 68774
+Currently parsing line 68775
+Currently parsing line 68776
+Currently parsing line 68777
+Currently parsing line 68778
+
+Already mined 8529/13,596 commits.
+No refactorings detected at ca8be904e67cb4f9ed706a51929b8cf372e89272
+
+Currently parsing line 68779
+Currently parsing line 68780
+Currently parsing line 68781
+Currently parsing line 68782
+Currently parsing line 68783
+[pool-8549-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git fb34dadcf12679e56339257d6b5c584c227725ad ...
+[pool-8549-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 760edfb88fe6b8c3e10ccdacb00cb65f3f73d55a ...
+
+Already mined 8530/13,596 commits.
+No refactorings detected at 760edfb88fe6b8c3e10ccdacb00cb65f3f73d55a
+
+Currently parsing line 68784
+Currently parsing line 68785
+Currently parsing line 68786
+Currently parsing line 68787
+Currently parsing line 68788
+[pool-8550-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 0005f1bdd119b5ee534a2056f28e49fa75a7ae3e ...
+[pool-8550-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 702172f0e4d68a3414a2f30c2020c7dc444e8831 ...
+
+Already mined 8531/13,596 commits.
+No refactorings detected at 702172f0e4d68a3414a2f30c2020c7dc444e8831
+
+Currently parsing line 68789
+Currently parsing line 68790
+
+Already mined 8532/13,596 commits.
+No refactorings detected at 53add0d3c05bb5490d3492d4724a3b8e4caab026
+
+Currently parsing line 68791
+Currently parsing line 68792
+Currently parsing line 68793
+Currently parsing line 68794
+Currently parsing line 68795
+
+Already mined 8533/13,596 commits.
+No refactorings detected at f4d506126d37a64fd4ffb6a26f5343ea363fa88f
+
+Currently parsing line 68796
+Currently parsing line 68797
+Currently parsing line 68798
+Currently parsing line 68799
+Currently parsing line 68800
+[pool-8553-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git e30c6ca1ffc56680741714228e29dcb7bb2cb4c3 ...
+[pool-8553-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 524f300d71e5812f0649aa7905efe0eee39462cf ...
+
+Already mined 8534/13,596 commits.
+No refactorings detected at 524f300d71e5812f0649aa7905efe0eee39462cf
+
+Currently parsing line 68801
+Currently parsing line 68802
+[pool-8554-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 8963a1787186a61fcf5a2a41233f02cd71d9ab6e ...
+[pool-8554-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git e30c6ca1ffc56680741714228e29dcb7bb2cb4c3 ...
+
+Already mined 8535/13,596 commits.
+No refactorings detected at e30c6ca1ffc56680741714228e29dcb7bb2cb4c3
+
+Currently parsing line 68803
+Currently parsing line 68804
+Currently parsing line 68805
+Currently parsing line 68806
+Currently parsing line 68807
+[pool-8555-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 4ab867ba72c9feec8825f0f43af8e1b3b3dcf317 ...
+[pool-8555-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git ef14edda93c1eacbb0a2985c2c79eb8f09d15a5d ...
+
+Already mined 8536/13,596 commits.
+VCS System: https://github.com/apache/nutch.git
+Issue ID: : 5b475a15c298bd5a8f820df1
+Issue Title: : Remove deprecated use of ToolBase, Migration to the new implementation
+Refactorings at ef14edda93c1eacbb0a2985c2c79eb8f09d15a5d
+Change Variable Type	paths : Path[] to paths : FileStatus[] in method public run(args String[]) : int from class org.apache.nutch.crawl.CrawlDb
+Change Parameter Type	key : WritableComparable to key : Text in method public reduce(key Text, values Iterator<CrawlDatum>, output OutputCollector<Text,CrawlDatum>, reporter Reporter) : void from class org.apache.nutch.crawl.CrawlDbMerger.Merger
+Change Parameter Type	values : Iterator to values : Iterator<CrawlDatum> in method public reduce(key Text, values Iterator<CrawlDatum>, output OutputCollector<Text,CrawlDatum>, reporter Reporter) : void from class org.apache.nutch.crawl.CrawlDbMerger.Merger
+Change Parameter Type	output : OutputCollector to output : OutputCollector<Text,CrawlDatum> in method public reduce(key Text, values Iterator<CrawlDatum>, output OutputCollector<Text,CrawlDatum>, reporter Reporter) : void from class org.apache.nutch.crawl.CrawlDbMerger.Merger
+Change Attribute Type	hostPartitioner : Partitioner to hostPartitioner : Partitioner<Text,Writable> in class org.apache.nutch.crawl.Generator.Selector
+Change Parameter Type	key : WritableComparable to key : Text in method public map(key Text, value CrawlDatum, output OutputCollector<FloatWritable,SelectorEntry>, reporter Reporter) : void from class org.apache.nutch.crawl.Generator.Selector
+Change Parameter Type	value : Writable to value : CrawlDatum in method public map(key Text, value CrawlDatum, output OutputCollector<FloatWritable,SelectorEntry>, reporter Reporter) : void from class org.apache.nutch.crawl.Generator.Selector
+Change Parameter Type	output : OutputCollector to output : OutputCollector<FloatWritable,SelectorEntry> in method public map(key Text, value CrawlDatum, output OutputCollector<FloatWritable,SelectorEntry>, reporter Reporter) : void from class org.apache.nutch.crawl.Generator.Selector
+Change Parameter Type	key : WritableComparable to key : FloatWritable in method public getPartition(key FloatWritable, value Writable, numReduceTasks int) : int from class org.apache.nutch.crawl.Generator.Selector
+Change Parameter Type	key : WritableComparable to key : FloatWritable in method public reduce(key FloatWritable, values Iterator<SelectorEntry>, output OutputCollector<FloatWritable,SelectorEntry>, reporter Reporter) : void from class org.apache.nutch.crawl.Generator.Selector
+Change Parameter Type	values : Iterator to values : Iterator<SelectorEntry> in method public reduce(key FloatWritable, values Iterator<SelectorEntry>, output OutputCollector<FloatWritable,SelectorEntry>, reporter Reporter) : void from class org.apache.nutch.crawl.Generator.Selector
+Change Parameter Type	output : OutputCollector to output : OutputCollector<FloatWritable,SelectorEntry> in method public reduce(key FloatWritable, values Iterator<SelectorEntry>, output OutputCollector<FloatWritable,SelectorEntry>, reporter Reporter) : void from class org.apache.nutch.crawl.Generator.Selector
+Change Parameter Type	value : Writable to value : SelectorEntry in method public map(key FloatWritable, value SelectorEntry, output OutputCollector<Text,SelectorEntry>, reporter Reporter) : void from class org.apache.nutch.crawl.Generator.SelectorInverseMapper
+Change Parameter Type	output : OutputCollector to output : OutputCollector<Text,SelectorEntry> in method public map(key FloatWritable, value SelectorEntry, output OutputCollector<Text,SelectorEntry>, reporter Reporter) : void from class org.apache.nutch.crawl.Generator.SelectorInverseMapper
+Change Parameter Type	key : WritableComparable to key : FloatWritable in method public map(key FloatWritable, value SelectorEntry, output OutputCollector<Text,SelectorEntry>, reporter Reporter) : void from class org.apache.nutch.crawl.Generator.SelectorInverseMapper
+Change Parameter Type	values : Iterator to values : Iterator<SelectorEntry> in method public reduce(key Text, values Iterator<SelectorEntry>, output OutputCollector<Text,CrawlDatum>, reporter Reporter) : void from class org.apache.nutch.crawl.Generator.PartitionReducer
+Change Parameter Type	output : OutputCollector to output : OutputCollector<Text,CrawlDatum> in method public reduce(key Text, values Iterator<SelectorEntry>, output OutputCollector<Text,CrawlDatum>, reporter Reporter) : void from class org.apache.nutch.crawl.Generator.PartitionReducer
+Change Parameter Type	key : WritableComparable to key : Text in method public reduce(key Text, values Iterator<SelectorEntry>, output OutputCollector<Text,CrawlDatum>, reporter Reporter) : void from class org.apache.nutch.crawl.Generator.PartitionReducer
+Change Parameter Type	output : OutputCollector to output : OutputCollector<Text,CrawlDatum> in method public map(key WritableComparable, value Writable, output OutputCollector<Text,CrawlDatum>, reporter Reporter) : void from class org.apache.nutch.crawl.Generator.CrawlDbUpdater
+Change Parameter Type	key : WritableComparable to key : Text in method public reduce(key Text, values Iterator<CrawlDatum>, output OutputCollector<Text,CrawlDatum>, reporter Reporter) : void from class org.apache.nutch.crawl.Generator.CrawlDbUpdater
+Change Parameter Type	values : Iterator to values : Iterator<CrawlDatum> in method public reduce(key Text, values Iterator<CrawlDatum>, output OutputCollector<Text,CrawlDatum>, reporter Reporter) : void from class org.apache.nutch.crawl.Generator.CrawlDbUpdater
+Change Parameter Type	output : OutputCollector to output : OutputCollector<Text,CrawlDatum> in method public reduce(key Text, values Iterator<CrawlDatum>, output OutputCollector<Text,CrawlDatum>, reporter Reporter) : void from class org.apache.nutch.crawl.Generator.CrawlDbUpdater
+Parameterize Variable	value : Text to value : Text in method public map(key WritableComparable, value Text, output OutputCollector<Text,CrawlDatum>, reporter Reporter) : void from class org.apache.nutch.crawl.Injector.InjectMapper
+Change Parameter Type	output : OutputCollector to output : OutputCollector<Text,CrawlDatum> in method public map(key WritableComparable, value Text, output OutputCollector<Text,CrawlDatum>, reporter Reporter) : void from class org.apache.nutch.crawl.Injector.InjectMapper
+Remove Parameter	val : Writable in method public map(key WritableComparable, val Writable, output OutputCollector, reporter Reporter) : void from class org.apache.nutch.crawl.Injector.InjectMapper
+Change Parameter Type	key : WritableComparable to key : Text in method public reduce(key Text, values Iterator<CrawlDatum>, output OutputCollector<Text,CrawlDatum>, reporter Reporter) : void from class org.apache.nutch.crawl.Injector.InjectReducer
+Change Parameter Type	values : Iterator to values : Iterator<CrawlDatum> in method public reduce(key Text, values Iterator<CrawlDatum>, output OutputCollector<Text,CrawlDatum>, reporter Reporter) : void from class org.apache.nutch.crawl.Injector.InjectReducer
+Change Parameter Type	output : OutputCollector to output : OutputCollector<Text,CrawlDatum> in method public reduce(key Text, values Iterator<CrawlDatum>, output OutputCollector<Text,CrawlDatum>, reporter Reporter) : void from class org.apache.nutch.crawl.Injector.InjectReducer
+Change Variable Type	files : Path[] to files : FileStatus[] in method public invert(linkDb Path, segmentsDir Path, normalize boolean, filter boolean, force boolean) : void from class org.apache.nutch.crawl.LinkDb
+Change Variable Type	files : Path[] to files : FileStatus[] in method public run(args String[]) : int from class org.apache.nutch.crawl.LinkDb
+Change Parameter Type	key : WritableComparable to key : Text in method public map(key Text, parseData ParseData, output OutputCollector<Text,Inlinks>, reporter Reporter) : void from class org.apache.nutch.crawl.LinkDb
+Parameterize Variable	parseData : ParseData to parseData : ParseData in method public map(key Text, parseData ParseData, output OutputCollector<Text,Inlinks>, reporter Reporter) : void from class org.apache.nutch.crawl.LinkDb
+Change Parameter Type	output : OutputCollector to output : OutputCollector<Text,Inlinks> in method public map(key Text, parseData ParseData, output OutputCollector<Text,Inlinks>, reporter Reporter) : void from class org.apache.nutch.crawl.LinkDb
+Remove Parameter	value : Writable in method public map(key WritableComparable, value Writable, output OutputCollector, reporter Reporter) : void from class org.apache.nutch.crawl.LinkDb
+Change Parameter Type	key : WritableComparable to key : Text in method public reduce(key Text, values Iterator<Inlinks>, output OutputCollector<Text,Inlinks>, reporter Reporter) : void from class org.apache.nutch.crawl.LinkDbMerger
+Change Parameter Type	values : Iterator to values : Iterator<Inlinks> in method public reduce(key Text, values Iterator<Inlinks>, output OutputCollector<Text,Inlinks>, reporter Reporter) : void from class org.apache.nutch.crawl.LinkDbMerger
+Change Parameter Type	output : OutputCollector to output : OutputCollector<Text,Inlinks> in method public reduce(key Text, values Iterator<Inlinks>, output OutputCollector<Text,Inlinks>, reporter Reporter) : void from class org.apache.nutch.crawl.LinkDbMerger
+Change Attribute Type	PARTITIONER : Partitioner to PARTITIONER : Partitioner<WritableComparable,Writable> in class org.apache.nutch.crawl.LinkDbReader
+Change Parameter Type	key : WritableComparable to key : Text in method public getPartition(key Text, value Writable, numReduceTasks int) : int from class org.apache.nutch.crawl.PartitionUrlByHost
+Change Attribute Type	input : RecordReader to input : RecordReader<WritableComparable,Writable> in class org.apache.nutch.fetcher.Fetcher
+Change Attribute Type	output : OutputCollector to output : OutputCollector<Text,NutchWritable> in class org.apache.nutch.fetcher.Fetcher
+Change Parameter Type	input : RecordReader to input : RecordReader<WritableComparable,Writable> in method public run(input RecordReader<WritableComparable,Writable>, output OutputCollector<Text,NutchWritable>, reporter Reporter) : void from class org.apache.nutch.fetcher.Fetcher
+Change Parameter Type	output : OutputCollector to output : OutputCollector<Text,NutchWritable> in method public run(input RecordReader<WritableComparable,Writable>, output OutputCollector<Text,NutchWritable>, reporter Reporter) : void from class org.apache.nutch.fetcher.Fetcher
+Change Return Type	WritableComparable to Text in method public createKey() : Text from class org.apache.nutch.indexer.DeleteDuplicates.InputFormat.DDRecordReader
+Change Return Type	Writable to IndexDoc in method public createValue() : IndexDoc from class org.apache.nutch.indexer.DeleteDuplicates.InputFormat.DDRecordReader
+Change Parameter Type	key : WritableComparable to key : Text in method public next(key Text, indexDoc IndexDoc) : boolean from class org.apache.nutch.indexer.DeleteDuplicates.InputFormat.DDRecordReader
+Parameterize Variable	indexDoc : IndexDoc to indexDoc : IndexDoc in method public next(key Text, indexDoc IndexDoc) : boolean from class org.apache.nutch.indexer.DeleteDuplicates.InputFormat.DDRecordReader
+Remove Parameter	value : Writable in method public next(key WritableComparable, value Writable) : boolean from class org.apache.nutch.indexer.DeleteDuplicates.InputFormat.DDRecordReader
+Change Return Type	RecordReader to RecordReader<Text,IndexDoc> in method public getRecordReader(split InputSplit, job JobConf, reporter Reporter) : RecordReader<Text,IndexDoc> from class org.apache.nutch.indexer.DeleteDuplicates.InputFormat
+Change Parameter Type	key : WritableComparable to key : MD5Hash in method public getPartition(key MD5Hash, value Writable, numReduceTasks int) : int from class org.apache.nutch.indexer.DeleteDuplicates.HashPartitioner
+Change Parameter Type	values : Iterator to values : Iterator<IndexDoc> in method public reduce(key Text, values Iterator<IndexDoc>, output OutputCollector<MD5Hash,IndexDoc>, reporter Reporter) : void from class org.apache.nutch.indexer.DeleteDuplicates.UrlsReducer
+Change Parameter Type	output : OutputCollector to output : OutputCollector<MD5Hash,IndexDoc> in method public reduce(key Text, values Iterator<IndexDoc>, output OutputCollector<MD5Hash,IndexDoc>, reporter Reporter) : void from class org.apache.nutch.indexer.DeleteDuplicates.UrlsReducer
+Change Parameter Type	key : WritableComparable to key : Text in method public reduce(key Text, values Iterator<IndexDoc>, output OutputCollector<MD5Hash,IndexDoc>, reporter Reporter) : void from class org.apache.nutch.indexer.DeleteDuplicates.UrlsReducer
+Change Parameter Type	values : Iterator to values : Iterator<IndexDoc> in method public reduce(key MD5Hash, values Iterator<IndexDoc>, output OutputCollector<Text,IndexDoc>, reporter Reporter) : void from class org.apache.nutch.indexer.DeleteDuplicates.HashReducer
+Change Parameter Type	output : OutputCollector to output : OutputCollector<Text,IndexDoc> in method public reduce(key MD5Hash, values Iterator<IndexDoc>, output OutputCollector<Text,IndexDoc>, reporter Reporter) : void from class org.apache.nutch.indexer.DeleteDuplicates.HashReducer
+Change Parameter Type	key : WritableComparable to key : MD5Hash in method public reduce(key MD5Hash, values Iterator<IndexDoc>, output OutputCollector<Text,IndexDoc>, reporter Reporter) : void from class org.apache.nutch.indexer.DeleteDuplicates.HashReducer
+Change Return Type	RecordWriter to RecordWriter<WritableComparable,Writable> in method public getRecordWriter(fs FileSystem, job JobConf, name String, progress Progressable) : RecordWriter<WritableComparable,Writable> from class org.apache.nutch.indexer.DeleteDuplicates
+Change Parameter Type	output : OutputCollector to output : OutputCollector<Text,IntWritable> in method public map(key WritableComparable, value Writable, output OutputCollector<Text,IntWritable>, reporter Reporter) : void from class org.apache.nutch.indexer.DeleteDuplicates
+Change Parameter Type	key : WritableComparable to key : Text in method public reduce(key Text, values Iterator<IntWritable>, output OutputCollector<WritableComparable,Writable>, reporter Reporter) : void from class org.apache.nutch.indexer.DeleteDuplicates
+Change Parameter Type	values : Iterator to values : Iterator<IntWritable> in method public reduce(key Text, values Iterator<IntWritable>, output OutputCollector<WritableComparable,Writable>, reporter Reporter) : void from class org.apache.nutch.indexer.DeleteDuplicates
+Change Parameter Type	output : OutputCollector to output : OutputCollector<WritableComparable,Writable> in method public reduce(key Text, values Iterator<IntWritable>, output OutputCollector<WritableComparable,Writable>, reporter Reporter) : void from class org.apache.nutch.indexer.DeleteDuplicates
+Change Parameter Type	value : Writable to value : LuceneDocumentWrapper in method public write(key WritableComparable, value LuceneDocumentWrapper) : void from class org.apache.nutch.indexer.Indexer.OutputFormat.getRecordWriter.new RecordWriter<WritableComparable,LuceneDocumentWrapper>
+Change Return Type	RecordWriter to RecordWriter<WritableComparable,LuceneDocumentWrapper> in method public getRecordWriter(fs FileSystem, job JobConf, name String, progress Progressable) : RecordWriter<WritableComparable,LuceneDocumentWrapper> from class org.apache.nutch.indexer.Indexer.OutputFormat
+Change Parameter Type	key : WritableComparable to key : Text in method public reduce(key Text, values Iterator<NutchWritable>, output OutputCollector<Text,Writable>, reporter Reporter) : void from class org.apache.nutch.indexer.Indexer
+Change Parameter Type	values : Iterator to values : Iterator<NutchWritable> in method public reduce(key Text, values Iterator<NutchWritable>, output OutputCollector<Text,Writable>, reporter Reporter) : void from class org.apache.nutch.indexer.Indexer
+Change Parameter Type	output : OutputCollector to output : OutputCollector<Text,Writable> in method public reduce(key Text, values Iterator<NutchWritable>, output OutputCollector<Text,Writable>, reporter Reporter) : void from class org.apache.nutch.indexer.Indexer
+Change Parameter Type	key : WritableComparable to key : Text in method public map(key Text, value Writable, output OutputCollector<Text,NutchWritable>, reporter Reporter) : void from class org.apache.nutch.indexer.Indexer
+Change Parameter Type	output : OutputCollector to output : OutputCollector<Text,NutchWritable> in method public map(key Text, value Writable, output OutputCollector<Text,NutchWritable>, reporter Reporter) : void from class org.apache.nutch.indexer.Indexer
+Parameterize Variable	content : Content to content : Content in method public map(key WritableComparable, content Content, output OutputCollector<Text,ParseImpl>, reporter Reporter) : void from class org.apache.nutch.parse.ParseSegment
+Change Parameter Type	output : OutputCollector to output : OutputCollector<Text,ParseImpl> in method public map(key WritableComparable, content Content, output OutputCollector<Text,ParseImpl>, reporter Reporter) : void from class org.apache.nutch.parse.ParseSegment
+Remove Parameter	value : Writable in method public map(key WritableComparable, value Writable, output OutputCollector, reporter Reporter) : void from class org.apache.nutch.parse.ParseSegment
+Change Parameter Type	key : WritableComparable to key : Text in method public reduce(key Text, values Iterator<Writable>, output OutputCollector<Text,Writable>, reporter Reporter) : void from class org.apache.nutch.parse.ParseSegment
+Change Parameter Type	values : Iterator to values : Iterator<Writable> in method public reduce(key Text, values Iterator<Writable>, output OutputCollector<Text,Writable>, reporter Reporter) : void from class org.apache.nutch.parse.ParseSegment
+Change Parameter Type	output : OutputCollector to output : OutputCollector<Text,Writable> in method public reduce(key Text, values Iterator<Writable>, output OutputCollector<Text,Writable>, reporter Reporter) : void from class org.apache.nutch.parse.ParseSegment
+Change Parameter Type	value : Writable to value : Text in method public map(key WritableComparable, value Text, output OutputCollector<Text,Generator.SelectorEntry>, reporter Reporter) : void from class org.apache.nutch.tools.FreeGenerator.FG
+Change Parameter Type	output : OutputCollector to output : OutputCollector<Text,Generator.SelectorEntry> in method public map(key WritableComparable, value Text, output OutputCollector<Text,Generator.SelectorEntry>, reporter Reporter) : void from class org.apache.nutch.tools.FreeGenerator.FG
+Change Parameter Type	values : Iterator to values : Iterator<Generator.SelectorEntry> in method public reduce(key Text, values Iterator<Generator.SelectorEntry>, output OutputCollector<Text,CrawlDatum>, reporter Reporter) : void from class org.apache.nutch.tools.FreeGenerator.FG
+Change Parameter Type	output : OutputCollector to output : OutputCollector<Text,CrawlDatum> in method public reduce(key Text, values Iterator<Generator.SelectorEntry>, output OutputCollector<Text,CrawlDatum>, reporter Reporter) : void from class org.apache.nutch.tools.FreeGenerator.FG
+Change Parameter Type	key : WritableComparable to key : Text in method public reduce(key Text, values Iterator<Generator.SelectorEntry>, output OutputCollector<Text,CrawlDatum>, reporter Reporter) : void from class org.apache.nutch.tools.FreeGenerator.FG
+Change Parameter Type	output : OutputCollector to output : OutputCollector<Text,NutchWritable> in method private output(output OutputCollector<Text,NutchWritable>, segmentName String, key Text, datum CrawlDatum, content Content, pstatus ProtocolStatus, status int) : ParseStatus from class org.apache.nutch.tools.arc.ArcSegmentCreator
+Change Parameter Type	key : WritableComparable to key : Text in method public map(key Text, bytes BytesWritable, output OutputCollector<Text,NutchWritable>, reporter Reporter) : void from class org.apache.nutch.tools.arc.ArcSegmentCreator
+Parameterize Variable	bytes : BytesWritable to bytes : BytesWritable in method public map(key Text, bytes BytesWritable, output OutputCollector<Text,NutchWritable>, reporter Reporter) : void from class org.apache.nutch.tools.arc.ArcSegmentCreator
+Change Parameter Type	output : OutputCollector to output : OutputCollector<Text,NutchWritable> in method public map(key Text, bytes BytesWritable, output OutputCollector<Text,NutchWritable>, reporter Reporter) : void from class org.apache.nutch.tools.arc.ArcSegmentCreator
+Remove Parameter	value : Writable in method public map(key WritableComparable, value Writable, output OutputCollector, reporter Reporter) : void from class org.apache.nutch.tools.arc.ArcSegmentCreator
+Developers have reported that 11158 commits involve refactoring but only 3076 involve refactoring operations
+There are 66 duplicate commits with refactoring out of the 3076 commits.
+
+Currently parsing line 68808
+Currently parsing line 68809
+Currently parsing line 68810
+Currently parsing line 68811
+Currently parsing line 68812
+[pool-8556-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git f10381127eff805c83d5d7cdd1073bb3994730a1 ...
+[pool-8556-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 845b73ab2773037a793302b45ba263b7c69506a5 ...
+
+Already mined 8537/13,596 commits.
+VCS System: https://github.com/apache/nutch.git
+Issue ID: : 5b475a17c298bd5a8f820e1d
+Issue Title: : SegmentMerger: add -normalize option
+Refactorings at 845b73ab2773037a793302b45ba263b7c69506a5
+Extract Variable	url : String in method public map(key WritableComparable, value Writable, output OutputCollector, reporter Reporter) : void from class org.apache.nutch.segment.SegmentMerger
+Inline Variable	key : WritableComparable in method public map(key WritableComparable, value Writable, output OutputCollector, reporter Reporter) : void from class org.apache.nutch.segment.SegmentMerger
+Add Parameter	normalize : boolean in method public merge(out Path, segs Path[], filter boolean, normalize boolean, slice long) : void from class org.apache.nutch.segment.SegmentMerger
+Developers have reported that 11158 commits involve refactoring but only 3077 involve refactoring operations
+There are 66 duplicate commits with refactoring out of the 3077 commits.
+
+Currently parsing line 68813
+Currently parsing line 68814
+Currently parsing line 68815
+Currently parsing line 68816
+Currently parsing line 68817
+Currently parsing line 68818
+[pool-8557-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 9e37db6a2ea512b00a99e056554e1733632d8566 ...
+[pool-8557-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git c548f361d5100f02d58a9762199142876c492945 ...
+
+Already mined 8538/13,596 commits.
+No refactorings detected at c548f361d5100f02d58a9762199142876c492945
+
+Currently parsing line 68819
+Currently parsing line 68820
+Currently parsing line 68821
+Currently parsing line 68822
+Currently parsing line 68823
+[pool-8558-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 0e098169657166dc791aa501f6fe72ea0f93e5b8 ...
+[pool-8558-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 159b3c4fb02c4c9ca6812dc90f9c3bc348e40b4a ...
+
+Already mined 8539/13,596 commits.
+VCS System: https://github.com/apache/nutch.git
+Issue ID: : 5b475a1ac298bd5a8f820e42
+Issue Title: : Refactor LinkDb and LinkDbMerger to reuse code
+Refactorings at 159b3c4fb02c4c9ca6812dc90f9c3bc348e40b4a
+Move Attribute	private maxInlinks : int from class org.apache.nutch.crawl.LinkDb to private maxInlinks : int from class org.apache.nutch.crawl.LinkDbMerger
+Move Method	public reduce(key WritableComparable, values Iterator, output OutputCollector, reporter Reporter) : void from class org.apache.nutch.crawl.LinkDb to public reduce(key WritableComparable, values Iterator, output OutputCollector, reporter Reporter) : void from class org.apache.nutch.crawl.LinkDbMerger
+Move Method	public createMergeJob(config Configuration, linkDb Path, normalize boolean, filter boolean) : JobConf from class org.apache.nutch.crawl.LinkDb to public createMergeJob(config Configuration, linkDb Path, normalize boolean, filter boolean) : JobConf from class org.apache.nutch.crawl.LinkDbMerger
+Move Method	public configure(job JobConf) : void from class org.apache.nutch.crawl.LinkDb.Merger to public configure(job JobConf) : void from class org.apache.nutch.crawl.LinkDbMerger
+Developers have reported that 11158 commits involve refactoring but only 3078 involve refactoring operations
+There are 66 duplicate commits with refactoring out of the 3078 commits.
+
+Currently parsing line 68824
+Currently parsing line 68825
+Currently parsing line 68826
+Currently parsing line 68827
+Currently parsing line 68828
+
+Already mined 8540/13,596 commits.
+No refactorings detected at 234c2647081aefe8d48403d112026cec44766ba2
+
+Currently parsing line 68829
+Currently parsing line 68830
+Currently parsing line 68831
+Currently parsing line 68832
+Currently parsing line 68833
+[pool-8560-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 760edfb88fe6b8c3e10ccdacb00cb65f3f73d55a ...
+[pool-8560-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git ff275f33a78667f4d300ef1b0f9e3f51bd481f8a ...
+
+Already mined 8541/13,596 commits.
+No refactorings detected at ff275f33a78667f4d300ef1b0f9e3f51bd481f8a
+
+Currently parsing line 68834
+Currently parsing line 68835
+Currently parsing line 68836
+Currently parsing line 68837
+Currently parsing line 68838
+[pool-8561-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git d074e30acca243304743d31a83d7a162a5a3390b ...
+[pool-8561-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 251a2b45818456f073d67b367f52f50ef738b034 ...
+
+Already mined 8542/13,596 commits.
+No refactorings detected at 251a2b45818456f073d67b367f52f50ef738b034
+
+Currently parsing line 68839
+Currently parsing line 68840
+Currently parsing line 68841
+Currently parsing line 68842
+Currently parsing line 68843
+[pool-8562-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git ff275f33a78667f4d300ef1b0f9e3f51bd481f8a ...
+[pool-8562-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 083b25cdbe4139341fe55037e5b6ad4718f93e91 ...
+
+Already mined 8543/13,596 commits.
+VCS System: https://github.com/apache/nutch.git
+Issue ID: : 5b475a34c298bd5a8f820fac
+Issue Title: : Add more default url normalizations
+Refactorings at 083b25cdbe4139341fe55037e5b6ad4718f93e91
+Extract Variable	normalized : String in method private normalizeTest(urls NormalizedURL[], scope String) : void from class org.apache.nutch.net.urlnormalizer.regex.TestRegexURLNormalizer
+Developers have reported that 11158 commits involve refactoring but only 3079 involve refactoring operations
+There are 66 duplicate commits with refactoring out of the 3079 commits.
+
+Currently parsing line 68844
+Currently parsing line 68845
+Currently parsing line 68846
+Currently parsing line 68847
+Currently parsing line 68848
+Currently parsing line 68849
+Currently parsing line 68850
+Currently parsing line 68851
+Currently parsing line 68852
+Currently parsing line 68853
+Currently parsing line 68854
+Currently parsing line 68855
+Currently parsing line 68856
+Currently parsing line 68857
+Currently parsing line 68858
+Currently parsing line 68859
+[pool-8563-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git f4d506126d37a64fd4ffb6a26f5343ea363fa88f ...
+[pool-8563-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 26da6449c01bec6ac5f5933a7378bd9d6bd82a05 ...
+
+Already mined 8544/13,596 commits.
+No refactorings detected at 26da6449c01bec6ac5f5933a7378bd9d6bd82a05
+
+Currently parsing line 68860
+Currently parsing line 68861
+Currently parsing line 68862
+Currently parsing line 68863
+Currently parsing line 68864
+Currently parsing line 68865
+[pool-8564-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git ef9765d13709a4621d245d88cfe95f9bf82b315b ...
+[pool-8564-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 000ba9534799b79811edbf3751f99ad2f2d9ca25 ...
+
+Already mined 8545/13,596 commits.
+VCS System: https://github.com/apache/nutch.git
+Issue ID: : 5b475a4bc298bd5a8f8210f5
+Issue Title: : Move URLNormalizer from Outlink to ParseOutputFormat
+Refactorings at 000ba9534799b79811edbf3751f99ad2f2d9ca25
+Remove Parameter	conf : Configuration in method public Outlink(toUrl String, anchor String, conf Configuration) from class org.apache.nutch.parse.Outlink
+Developers have reported that 11158 commits involve refactoring but only 3080 involve refactoring operations
+There are 66 duplicate commits with refactoring out of the 3080 commits.
+
+Currently parsing line 68866
+Currently parsing line 68867
+[pool-8565-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 000ba9534799b79811edbf3751f99ad2f2d9ca25 ...
+[pool-8565-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 192f3d92f5c27d132b226e7c53e6e9eff0a97d0f ...
+
+Already mined 8546/13,596 commits.
+No refactorings detected at 192f3d92f5c27d132b226e7c53e6e9eff0a97d0f
+
+Currently parsing line 68868
+Currently parsing line 68869
+Currently parsing line 68870
+Currently parsing line 68871
+Currently parsing line 68872
+
+Already mined 8547/13,596 commits.
+No refactorings detected at 624c649869693ce95b31dc3fbd2fdf82c4f990ad
+
+Currently parsing line 68873
+Currently parsing line 68874
+
+Already mined 8548/13,596 commits.
+No refactorings detected at 8963a1787186a61fcf5a2a41233f02cd71d9ab6e
+
+Currently parsing line 68875
+Currently parsing line 68876
+Currently parsing line 68877
+Currently parsing line 68878
+Currently parsing line 68879
+Currently parsing line 68880
+Currently parsing line 68881
+Currently parsing line 68882
+Currently parsing line 68883
+Currently parsing line 68884
+Currently parsing line 68885
+Currently parsing line 68886
+Currently parsing line 68887
+Currently parsing line 68888
+[pool-8568-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 7e7805092d93a87c46618f1d6b598939a09bf126 ...
+[pool-8568-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 367b7e05c7c5d4ba9105c519149822deee8c2f89 ...
+
+Already mined 8549/13,596 commits.
+VCS System: https://github.com/apache/nutch.git
+Issue ID: : 5b475a5bc298bd5a8f8211a2
+Issue Title: : Possibly use a different library to parse RSS feed for improved performance and compatibility
+Refactorings at 367b7e05c7c5d4ba9105c519149822deee8c2f89
+Extract Interface	org.apache.nutch.metadata.Feed from classes [org.apache.nutch.metadata.Metadata]
+Developers have reported that 11158 commits involve refactoring but only 3081 involve refactoring operations
+There are 66 duplicate commits with refactoring out of the 3081 commits.
+
+Currently parsing line 68889
+Currently parsing line 68890
+[pool-8569-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 53add0d3c05bb5490d3492d4724a3b8e4caab026 ...
+[pool-8569-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 8f0af3c5de9a3ad958a827f37960f82df4df6876 ...
+
+Already mined 8550/13,596 commits.
+No refactorings detected at 8f0af3c5de9a3ad958a827f37960f82df4df6876
+
+Currently parsing line 68891
+Currently parsing line 68892
+Currently parsing line 68893
+Currently parsing line 68894
+Currently parsing line 68895
+[pool-8570-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 4be932afbbb2d71b90877a69936373f231290865 ...
+[pool-8570-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git d15119baaf0408e82153bacfe6d252bf644b0e31 ...
+
+Already mined 8551/13,596 commits.
+No refactorings detected at d15119baaf0408e82153bacfe6d252bf644b0e31
+
+Currently parsing line 68896
+Currently parsing line 68897
+Currently parsing line 68898
+Currently parsing line 68899
+Currently parsing line 68900
+[pool-8571-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 8a12f000f33d760b42ed996db7fa6769dd056eeb ...
+[pool-8571-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git d5ed940502c2d86a9e9c8331c7ecbb3ae28af37f ...
+
+Already mined 8552/13,596 commits.
+No refactorings detected at d5ed940502c2d86a9e9c8331c7ecbb3ae28af37f
+
+Currently parsing line 68901
+Currently parsing line 68902
+[pool-8572-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git a5d0875e26c624a0fa7beab6f6b447cf789d3140 ...
+[pool-8572-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 611980d761c529166f52f998452aa6c37a647e6a ...
+
+Already mined 8553/13,596 commits.
+No refactorings detected at 611980d761c529166f52f998452aa6c37a647e6a
+
+Currently parsing line 68903
+Currently parsing line 68904
+Currently parsing line 68905
+Currently parsing line 68906
+Currently parsing line 68907
+Currently parsing line 68908
+[pool-8573-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 9ad0b410d3c9b636f36aae9d642d26038284aaba ...
+[pool-8573-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 4ea5c443fe2d6ac705948fb6e98c16e3e92466be ...
+
+Already mined 8554/13,596 commits.
+No refactorings detected at 4ea5c443fe2d6ac705948fb6e98c16e3e92466be
+
+Currently parsing line 68909
+Currently parsing line 68910
+Currently parsing line 68911
+Currently parsing line 68912
+Currently parsing line 68913
+
+Already mined 8555/13,596 commits.
+No refactorings detected at 063bd271f6621fae1807d0f060fbc5e05a83ee3b
+
+Currently parsing line 68914
+Currently parsing line 68915
+Currently parsing line 68916
+Currently parsing line 68917
+Currently parsing line 68918
+Currently parsing line 68919
+Currently parsing line 68920
+Currently parsing line 68921
+Currently parsing line 68922
+Currently parsing line 68923
+Currently parsing line 68924
+Currently parsing line 68925
+Currently parsing line 68926
+Currently parsing line 68927
+Currently parsing line 68928
+Currently parsing line 68929
+Currently parsing line 68930
+Currently parsing line 68931
+Currently parsing line 68932
+Currently parsing line 68933
+Currently parsing line 68934
+Currently parsing line 68935
+Currently parsing line 68936
+Currently parsing line 68937
+Currently parsing line 68938
+Currently parsing line 68939
+Currently parsing line 68940
+
+Already mined 8556/13,596 commits.
+No refactorings detected at be790fc5bae157e79058df782f249b22d8dbdccd
+
+Currently parsing line 68941
+Currently parsing line 68942
+[pool-8576-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 8392ef63df8f2a038169e0f645a3d482294e0202 ...
+[pool-8576-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git cc2ace2f540f23303f9c115e48dab973f0e479dd ...
+
+Already mined 8557/13,596 commits.
+No refactorings detected at cc2ace2f540f23303f9c115e48dab973f0e479dd
+
+Currently parsing line 68943
+Currently parsing line 68944
+Currently parsing line 68945
+Currently parsing line 68946
+Currently parsing line 68947
+
+Already mined 8558/13,596 commits.
+No refactorings detected at 5e690a608d3a70f3b05e8d2ffd934f54a5c45ea9
+
+Currently parsing line 68948
+Currently parsing line 68949
+Currently parsing line 68950
+Currently parsing line 68951
+Currently parsing line 68952
+
+Already mined 8559/13,596 commits.
+No refactorings detected at bb4f191f36b08a096c2c766a9eeca9acc488328d
+
+Currently parsing line 68953
+Currently parsing line 68954
+[pool-8579-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 1bc6a960c4578ad31024b2aa8b45c97597a0457e ...
+[pool-8579-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 6f41716323e00ce88d9897f2b821ea899f1c2d27 ...
+
+Already mined 8560/13,596 commits.
+No refactorings detected at 6f41716323e00ce88d9897f2b821ea899f1c2d27
+
+Currently parsing line 68955
+Currently parsing line 68956
+[pool-8580-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git e28ee8605795cc03442be301e4db25968c14ba0e ...
+[pool-8580-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 75d77922ec9fcaa3856884e18205a81327aaec9c ...
+
+Already mined 8561/13,596 commits.
+No refactorings detected at 75d77922ec9fcaa3856884e18205a81327aaec9c
+
+Currently parsing line 68957
+Currently parsing line 68958
+Currently parsing line 68959
+Currently parsing line 68960
+Currently parsing line 68961
+Currently parsing line 68962
+Currently parsing line 68963
+Currently parsing line 68964
+Currently parsing line 68965
+[pool-8581-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 0edfbc611c7a8e9e3a5ea66b0112c8f6718e399a ...
+[pool-8581-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git ab915fb2f8944e07a21c8480ed67b0a977ab4be9 ...
+
+Already mined 8562/13,596 commits.
+No refactorings detected at ab915fb2f8944e07a21c8480ed67b0a977ab4be9
+
+Currently parsing line 68966
+Currently parsing line 68967
+[pool-8582-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 945b1ff9e7a303f749d8802086adafeb7391e272 ...
+[pool-8582-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git fc6a7f5eaeec70967b5845ee0079b660c3a0de8f ...
+
+Already mined 8563/13,596 commits.
+No refactorings detected at fc6a7f5eaeec70967b5845ee0079b660c3a0de8f
+
+Currently parsing line 68968
+Currently parsing line 68969
+[pool-8583-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git fc16e95a72d9c6aec27205b83cc17328bc4c7cca ...
+[pool-8583-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 2a461083d9093f30c5561cfa5664fc98cb89d7a4 ...
+
+Already mined 8564/13,596 commits.
+No refactorings detected at 2a461083d9093f30c5561cfa5664fc98cb89d7a4
+
+Currently parsing line 68970
+Currently parsing line 68971
+Currently parsing line 68972
+Currently parsing line 68973
+Currently parsing line 68974
+Currently parsing line 68975
+Currently parsing line 68976
+Currently parsing line 68977
+[pool-8584-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 80f14cf7271b58032f7571279e37fbfbf700fd1e ...
+[pool-8584-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git b1c8eb29281cb9da5865bbd9117c1ca25312a9e9 ...
+
+Already mined 8565/13,596 commits.
+VCS System: https://github.com/apache/nutch.git
+Issue ID: : 5b475a9dc298bd5a8f8214fa
+Issue Title: : Rename HTMLParserFilter 
+Refactorings at b1c8eb29281cb9da5865bbd9117c1ca25312a9e9
+Rename Class	org.apache.nutch.parse.HtmlParseFilter renamed to org.apache.nutch.parse.ParseFilter
+Rename Class	org.apache.nutch.parse.HtmlParseFilters renamed to org.apache.nutch.parse.ParseFilters
+Change Variable Type	parseFilters : HtmlParseFilters to parseFilters : ParseFilters in method public getFields(job Job) : Collection<WebPage.Field> from class org.apache.nutch.parse.ParserJob
+Change Attribute Type	htmlParseFilters : HtmlParseFilters to htmlParseFilters : ParseFilters in class org.apache.nutch.parse.html.HtmlParser
+Change Attribute Type	htmlParseFilters : HtmlParseFilters to htmlParseFilters : ParseFilters in class org.apache.nutch.parse.tika.TikaParser
+Change Variable Type	filterMap : HashMap<String,HtmlParseFilter> to filterMap : HashMap<String,ParseFilter> in method public ParseFilters(conf Configuration) from class org.apache.nutch.parse.ParseFilters
+Change Variable Type	parseFilter : HtmlParseFilter to parseFilter : ParseFilter in method public ParseFilters(conf Configuration) from class org.apache.nutch.parse.ParseFilters
+Change Variable Type	htmlParseFilters : HtmlParseFilter[] to htmlParseFilters : ParseFilter[] in method public ParseFilters(conf Configuration) from class org.apache.nutch.parse.ParseFilters
+Change Variable Type	filters : ArrayList<HtmlParseFilter> to filters : ArrayList<ParseFilter> in method public ParseFilters(conf Configuration) from class org.apache.nutch.parse.ParseFilters
+Change Variable Type	filter : HtmlParseFilter to filter : ParseFilter in method public ParseFilters(conf Configuration) from class org.apache.nutch.parse.ParseFilters
+Change Variable Type	htmlParseFilter : HtmlParseFilter to parseFilter : ParseFilter in method public filter(url String, page WebPage, parse Parse, metaTags HTMLMetaTags, doc DocumentFragment) : Parse from class org.apache.nutch.parse.ParseFilters
+Rename Variable	htmlParseFilter : HtmlParseFilter to parseFilter : ParseFilter in method public filter(url String, page WebPage, parse Parse, metaTags HTMLMetaTags, doc DocumentFragment) : Parse from class org.apache.nutch.parse.ParseFilters
+Change Variable Type	htmlParseFilter : HtmlParseFilter to htmlParseFilter : ParseFilter in method public getFields() : Collection<WebPage.Field> from class org.apache.nutch.parse.ParseFilters
+Rename Attribute	htmlParseFilters : HtmlParseFilter[] to parseFilters : ParseFilter[] in class org.apache.nutch.parse.ParseFilters
+Change Attribute Type	htmlParseFilters : HtmlParseFilter[] to parseFilters : ParseFilter[] in class org.apache.nutch.parse.ParseFilters
+Developers have reported that 11158 commits involve refactoring but only 3082 involve refactoring operations
+There are 66 duplicate commits with refactoring out of the 3082 commits.
+
+Currently parsing line 68978
+Currently parsing line 68979
+Currently parsing line 68980
+Currently parsing line 68981
+Currently parsing line 68982
+
+Already mined 8566/13,596 commits.
+No refactorings detected at 562f25914f34b7ba56de8bfafcd647c94fddd8a0
+
+Currently parsing line 68983
+Currently parsing line 68984
+Currently parsing line 68985
+Currently parsing line 68986
+Currently parsing line 68987
+Currently parsing line 68988
+Currently parsing line 68989
+Currently parsing line 68990
+Currently parsing line 68991
+Currently parsing line 68992
+Currently parsing line 68993
+Currently parsing line 68994
+
+Already mined 8567/13,596 commits.
+No refactorings detected at bf962a524044c7fa5eb8a232ed69cd3fa817cc1d
+
+Currently parsing line 68995
+Currently parsing line 68996
+Currently parsing line 68997
+Currently parsing line 68998
+Currently parsing line 68999
+Currently parsing line 69000
+Currently parsing line 69001
+Currently parsing line 69002
+Currently parsing line 69003
+Currently parsing line 69004
+[pool-8587-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git 86c50d8abc7c019df3cfaad48710a6036ff08c8b ...
+[pool-8587-thread-1] INFO org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl - Processing C:\SmartSHARK\RefactoringMiner\repos\nutch.git cfc008b498dec929473a53f2e582729a53d4e13b ...

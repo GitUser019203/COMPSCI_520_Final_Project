@@ -4,11 +4,11 @@ from mongoengine import connect
 from pycoshark.mongomodels import Project, VCSSystem, Commit, FileAction, Hunk, Refactoring, IssueSystem, Issue, IssueComment, MailingList, Message
 from pycoshark.utils import create_mongodb_uri_string
 
-with open(r"Python/issue_tracked_projects.txt",'r') as file:
+with open(r"issue_tracked_projects.txt",'r') as file:
     for line in file:
         project_data = line.strip().split(',')
     
-with open(r"Python/regexp.txt",'r') as file:
+with open(r"regexp.txt",'r') as file:
     for line in file:
         reg_exp = line.strip()
 
@@ -41,7 +41,7 @@ total_num_commits_reporting_refactoring_linked_to_issues_documenting_refactoring
 unique_commit_hashes = set()
 unique_commit_hashes_with_refactoring_reported = set()
 
-with open("Python\\mongo_db_extract_refactoring_doc.txt", 'w', encoding="utf-8") as out_file:
+with open("mongo_db_extract_refactoring_doc.txt", 'w', encoding="utf-8") as out_file:
     for projects in projectCollection:
         for project in projects:
             vcs_system_reported_refactoring = False
