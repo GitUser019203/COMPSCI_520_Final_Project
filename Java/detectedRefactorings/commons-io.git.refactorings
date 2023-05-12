@@ -2730,3 +2730,997 @@ Add Variable Modifier	final in variable fs : FileSystem in method public testRep
 Developers have reported that 11158 commits involve refactoring but only 992 involve refactoring operations
 There are 19 duplicate commits with refactoring out of the 992 commits.
 
+No refactorings detected at e656ba3ab9c24c6ff639834f513094ed97740704
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef21e856f6a02950c64009
+Issue Title: : Add DirectoryWalker based on FileFinder
+Refactorings at a840001204a39da7d1307bbe6fdc91b23ba7d4b5
+Move And Rename Class	org.apache.commons.io.FileFinder moved and renamed to org.apache.commons.io.DirectoryWalkerTestCase.TestFalseFileFinder
+Rename Class	org.apache.commons.io.FileFinderTestCase renamed to org.apache.commons.io.DirectoryWalkerTestCase
+Parameterize Variable	results : List to results : Collection in method protected walk(startDirectory File, results Collection) : void from class org.apache.commons.io.DirectoryWalker
+Change Variable Type	results : List to results : Collection in method protected walk(startDirectory File, results Collection) : void from class org.apache.commons.io.DirectoryWalker
+Change Return Type	List to void in method protected walk(startDirectory File, results Collection) : void from class org.apache.commons.io.DirectoryWalker
+Change Parameter Type	results : List to results : Collection in method private walk(directory File, depth int, results Collection) : void from class org.apache.commons.io.DirectoryWalker
+Change Parameter Type	results : List to results : Collection in method protected handleStart(startDirectory File, results Collection) : void from class org.apache.commons.io.DirectoryWalker
+Change Parameter Type	results : List to results : Collection in method protected handleDirectoryStart(directory File, depth int, results Collection) : boolean from class org.apache.commons.io.DirectoryWalker
+Change Parameter Type	results : List to results : Collection in method protected handleFile(file File, depth int, results Collection) : void from class org.apache.commons.io.DirectoryWalker
+Change Parameter Type	results : List to results : Collection in method protected handleDirectoryEnd(directory File, depth int, results Collection) : void from class org.apache.commons.io.DirectoryWalker
+Change Parameter Type	results : List to results : Collection in method protected handleEnd(results Collection) : void from class org.apache.commons.io.DirectoryWalker
+Change Class Access Modifier	public to private in class org.apache.commons.io.DirectoryWalkerTestCase.TestFalseFileFinder
+Add Class Modifier	static in class org.apache.commons.io.DirectoryWalkerTestCase.TestFalseFileFinder
+Change Method Access Modifier	public to protected in method protected TestFalseFileFinder(filter FileFilter, depthLimit int) from class org.apache.commons.io.DirectoryWalkerTestCase.TestFalseFileFinder
+Change Parameter Type	results : List to results : Collection in method protected handleDirectoryStart(directory File, depth int, results Collection) : boolean from class org.apache.commons.io.DirectoryWalkerTestCase.TestFalseFileFinder
+Change Variable Type	ignore : IllegalArgumentException to ignore : NullPointerException in method public testMissingStartDirectory() : void from class org.apache.commons.io.DirectoryWalkerTestCase
+Change Parameter Type	results : List to results : Collection in method private checkContainsFiles(prefix String, files File[], results Collection) : void from class org.apache.commons.io.DirectoryWalkerTestCase
+Extract Superclass	org.apache.commons.io.DirectoryWalkerTestCase.TestFileFinder from classes [org.apache.commons.io.FileFinder]
+Pull Up Method	public find(startDirectory File) : List from class org.apache.commons.io.FileFinder to protected find(startDirectory File) : List from class org.apache.commons.io.DirectoryWalkerTestCase.TestFileFinder
+Change Method Access Modifier	public to protected in method protected find(startDirectory File) : List from class org.apache.commons.io.DirectoryWalkerTestCase.TestFileFinder
+Change Parameter Type	results : List to results : Collection in method protected handleFile(file File, depth int, results Collection) : void from class org.apache.commons.io.DirectoryWalkerTestCase.TestFileFinder
+Move Method	protected handleFile(file File, depth int, results List) : void from class org.apache.commons.io.FileFinder to protected handleFile(file File, depth int, results Collection) : void from class org.apache.commons.io.DirectoryWalkerTestCase.TestFileFinder
+Developers have reported that 11158 commits involve refactoring but only 1140 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1140 commits.
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef21e856f6a02950c64009
+Issue Title: : Add DirectoryWalker based on FileFinder
+Refactorings at a56cc14c2dd316cf6439e94444530b3ab4894949
+Add Thrown Exception Type	IOException in method protected handleStart(startDirectory File, results Collection) : void from class org.apache.commons.io.DirectoryWalker
+Add Thrown Exception Type	IOException in method protected handleDirectory(directory File, depth int, results Collection) : boolean from class org.apache.commons.io.DirectoryWalker
+Add Thrown Exception Type	IOException in method protected handleDirectoryStart(directory File, depth int, results Collection) : void from class org.apache.commons.io.DirectoryWalker
+Add Thrown Exception Type	IOException in method protected handleFile(file File, depth int, results Collection) : void from class org.apache.commons.io.DirectoryWalker
+Add Thrown Exception Type	IOException in method protected handleRestricted(directory File, depth int, results Collection) : void from class org.apache.commons.io.DirectoryWalker
+Add Thrown Exception Type	IOException in method protected handleDirectoryEnd(directory File, depth int, results Collection) : void from class org.apache.commons.io.DirectoryWalker
+Add Thrown Exception Type	IOException in method protected handleEnd(results Collection) : void from class org.apache.commons.io.DirectoryWalker
+Change Return Type	boolean to void in method protected walk(startDirectory File, results Collection) : void from class org.apache.commons.io.DirectoryWalker
+Add Thrown Exception Type	IOException in method protected walk(startDirectory File, results Collection) : void from class org.apache.commons.io.DirectoryWalker
+Change Return Type	boolean to void in method private walk(directory File, depth int, results Collection) : void from class org.apache.commons.io.DirectoryWalker
+Add Thrown Exception Type	IOException in method private walk(directory File, depth int, results Collection) : void from class org.apache.commons.io.DirectoryWalker
+Add Thrown Exception Type	IOException in method protected handleDirectoryEnd(directory File, depth int, results Collection) : void from class org.apache.commons.io.DirectoryWalkerTestCase.TestCancelWalker
+Add Thrown Exception Type	IOException in method protected handleFile(file File, depth int, results Collection) : void from class org.apache.commons.io.DirectoryWalkerTestCase.TestCancelWalker
+Add Thrown Exception Type	IOException in method protected find(startDirectory File) : List from class org.apache.commons.io.DirectoryWalkerTestCase.TestCancelWalker
+Change Method Access Modifier	public to protected in method protected find(startDirectory File) : List from class org.apache.commons.io.DirectoryWalkerTestCase.TestCancelWalker
+Change Parameter Type	count : int to cancelFileName : String in method package TestCancelWalker(cancelFileName String, suppressCancel boolean) from class org.apache.commons.io.DirectoryWalkerTestCase.TestCancelWalker
+Rename Parameter	count : int to cancelFileName : String in method package TestCancelWalker(cancelFileName String, suppressCancel boolean) from class org.apache.commons.io.DirectoryWalkerTestCase.TestCancelWalker
+Rename Parameter	accept : boolean to suppressCancel : boolean in method package TestCancelWalker(cancelFileName String, suppressCancel boolean) from class org.apache.commons.io.DirectoryWalkerTestCase.TestCancelWalker
+Rename Attribute	count : int to cancelFileName : String in class org.apache.commons.io.DirectoryWalkerTestCase.TestCancelWalker
+Change Attribute Type	count : int to cancelFileName : String in class org.apache.commons.io.DirectoryWalkerTestCase.TestCancelWalker
+Developers have reported that 11158 commits involve refactoring but only 1141 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1141 commits.
+
+No refactorings detected at 3e300278eca4c60bc35f9784e20e1bdb0bc8f0e7
+
+No refactorings detected at f67327e2e9bd022cf2444e7dc889f5665927e107
+
+No refactorings detected at dd2b704089381397898bdc51ca2cf22e36982d16
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef224356f6a02950c643f2
+Issue Title: : Provide a convenience mehod in FileFilterUtils to create a Size Range filter
+Refactorings at 69a1e7e014d4ddf5e52f9940ff42efb57d1640a3
+Rename Method	public sizeFileFilter(minimumSize long, maximumSize long) : IOFileFilter renamed to public sizeRangeFileFilter(minSizeInclusive long, maxSizeInclusive long) : IOFileFilter in class org.apache.commons.io.filefilter.FileFilterUtils
+Rename Parameter	minimumSize : long to minSizeInclusive : long in method public sizeRangeFileFilter(minSizeInclusive long, maxSizeInclusive long) : IOFileFilter from class org.apache.commons.io.filefilter.FileFilterUtils
+Rename Parameter	maximumSize : long to maxSizeInclusive : long in method public sizeRangeFileFilter(minSizeInclusive long, maxSizeInclusive long) : IOFileFilter from class org.apache.commons.io.filefilter.FileFilterUtils
+Developers have reported that 11158 commits involve refactoring but only 1142 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1142 commits.
+
+No refactorings detected at be20099e8436405e7f8e408c9d3fdc5e4d7b1cd4
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef225156f6a02950c644cf
+Issue Title: : Move to a minimum of JDK 1.4
+Refactorings at e413d91e7b3bfefb26480946d5e17f7b109a2202
+Move Method	public testRegex() : void from class org.apache.commons.io.filefilter.FileFilterTestCase to public testRegex() : void from class org.apache.commons.io.filefilter.RegexFileFilterTestCase
+Developers have reported that 11158 commits involve refactoring but only 1143 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1143 commits.
+
+No refactorings detected at d2bd4422c37efd98bcf11009d5eba0d91f891118
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef225156f6a02950c644d0
+Issue Title: : Add convenience moveFile() / moveDirectory methods to FileUtils
+Refactorings at 7f075b8e754037cb7c2fd396086ca3d6a955675f
+Change Variable Type	e : NullPointerException to e : IllegalArgumentException in method public testMoveFile_Errors() : void from class org.apache.commons.io.FileUtilsTestCase
+Change Variable Type	e : NullPointerException to e : IllegalArgumentException in method public testMoveFile_Errors() : void from class org.apache.commons.io.FileUtilsTestCase
+Change Variable Type	e : NullPointerException to e : IllegalArgumentException in method public testMoveFileToDirectory_Errors() : void from class org.apache.commons.io.FileUtilsTestCase
+Change Variable Type	e : NullPointerException to e : IllegalArgumentException in method public testMoveFileToDirectory_Errors() : void from class org.apache.commons.io.FileUtilsTestCase
+Change Variable Type	e : NullPointerException to e : IllegalArgumentException in method public testMoveDirectory_Errors() : void from class org.apache.commons.io.FileUtilsTestCase
+Change Variable Type	e : NullPointerException to e : IllegalArgumentException in method public testMoveDirectory_Errors() : void from class org.apache.commons.io.FileUtilsTestCase
+Change Variable Type	e : NullPointerException to e : IllegalArgumentException in method public testMoveDirectoryToDirectory_Errors() : void from class org.apache.commons.io.FileUtilsTestCase
+Change Variable Type	e : NullPointerException to e : IllegalArgumentException in method public testMoveDirectoryToDirectory_Errors() : void from class org.apache.commons.io.FileUtilsTestCase
+Change Variable Type	e : NullPointerException to e : IllegalArgumentException in method public testMoveToDirectory_Errors() : void from class org.apache.commons.io.FileUtilsTestCase
+Change Variable Type	e : NullPointerException to e : IllegalArgumentException in method public testMoveToDirectory_Errors() : void from class org.apache.commons.io.FileUtilsTestCase
+Developers have reported that 11158 commits involve refactoring but only 1144 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1144 commits.
+
+No refactorings detected at ee30084cc1f81f9440a05b8eb16fbbe12d210d20
+
+No refactorings detected at b2342719e8abf75edf3bbdda6c84d3c55726626f
+
+No refactorings detected at e07acbbff9fa0706298401441a123a01da112cc7
+
+No refactorings detected at ed01f165f9bbb7ccbd48dde7dd3106eb044dd859
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef225756f6a02950c64547
+Issue Title: : Add a FileUtils copyDirectory method that makes use of FileFilter
+Refactorings at 7cbb2763115558b029da2d1b409d5d3ce7f13655
+Extract Method	public copyDirectory(srcDir File, destDir File, filter FileFilter, preserveFileDate boolean) : void extracted from public copyDirectory(srcDir File, destDir File, preserveFileDate boolean) : void in class org.apache.commons.io.FileUtils
+Add Parameter	filter : FileFilter in method private doCopyDirectory(srcDir File, destDir File, filter FileFilter, preserveFileDate boolean, exclusionList List) : void from class org.apache.commons.io.FileUtils
+Developers have reported that 11158 commits involve refactoring but only 1145 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1145 commits.
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef225b56f6a02950c6458e
+Issue Title: : Replace static FileCleaner methods
+Refactorings at 431c428c4df6a7197a8703ad50f9dc5d3501130b
+Move Class	org.apache.commons.io.FileCleaner.Reaper moved to org.apache.commons.io.FileCleaningTracker.Reaper
+Move Class	org.apache.commons.io.FileCleaner.Tracker moved to org.apache.commons.io.FileCleaningTracker.Tracker
+Change Class Access Modifier	package to private in class org.apache.commons.io.FileCleaningTracker.Reaper
+Remove Class Modifier	static in class org.apache.commons.io.FileCleaner.Reaper
+Change Class Access Modifier	package to private in class org.apache.commons.io.FileCleaningTracker.Tracker
+Extract Superclass	org.apache.commons.io.FileCleaningTrackerTestCase from classes [org.apache.commons.io.FileCleanerTestCase]
+Extract Class	org.apache.commons.io.FileCleaningTracker from class org.apache.commons.io.FileCleaner
+Pull Up Method	protected setUp() : void from class org.apache.commons.io.FileCleanerTestCase to protected setUp() : void from class org.apache.commons.io.FileCleaningTrackerTestCase
+Pull Up Method	protected tearDown() : void from class org.apache.commons.io.FileCleanerTestCase to protected tearDown() : void from class org.apache.commons.io.FileCleaningTrackerTestCase
+Pull Up Method	public testFileCleanerFile() : void from class org.apache.commons.io.FileCleanerTestCase to public testFileCleanerFile() : void from class org.apache.commons.io.FileCleaningTrackerTestCase
+Pull Up Method	public testFileCleanerDirectory() : void from class org.apache.commons.io.FileCleanerTestCase to public testFileCleanerDirectory() : void from class org.apache.commons.io.FileCleaningTrackerTestCase
+Pull Up Method	public testFileCleanerDirectory_NullStrategy() : void from class org.apache.commons.io.FileCleanerTestCase to public testFileCleanerDirectory_NullStrategy() : void from class org.apache.commons.io.FileCleaningTrackerTestCase
+Pull Up Method	public testFileCleanerDirectory_ForceStrategy() : void from class org.apache.commons.io.FileCleanerTestCase to public testFileCleanerDirectory_ForceStrategy() : void from class org.apache.commons.io.FileCleaningTrackerTestCase
+Pull Up Method	public testFileCleanerNull() : void from class org.apache.commons.io.FileCleanerTestCase to public testFileCleanerNull() : void from class org.apache.commons.io.FileCleaningTrackerTestCase
+Pull Up Method	public testFileCleanerExitWhenFinishedFirst() : void from class org.apache.commons.io.FileCleanerTestCase to public testFileCleanerExitWhenFinishedFirst() : void from class org.apache.commons.io.FileCleaningTrackerTestCase
+Pull Up Method	public testFileCleanerExitWhenFinished_NoTrackAfter() : void from class org.apache.commons.io.FileCleanerTestCase to public testFileCleanerExitWhenFinished_NoTrackAfter() : void from class org.apache.commons.io.FileCleaningTrackerTestCase
+Pull Up Method	public testFileCleanerExitWhenFinished1() : void from class org.apache.commons.io.FileCleanerTestCase to public testFileCleanerExitWhenFinished1() : void from class org.apache.commons.io.FileCleaningTrackerTestCase
+Pull Up Method	public testFileCleanerExitWhenFinished2() : void from class org.apache.commons.io.FileCleanerTestCase to public testFileCleanerExitWhenFinished2() : void from class org.apache.commons.io.FileCleaningTrackerTestCase
+Pull Up Method	private waitUntilTrackCount() : void from class org.apache.commons.io.FileCleanerTestCase to private waitUntilTrackCount() : void from class org.apache.commons.io.FileCleaningTrackerTestCase
+Pull Up Attribute	private testFile : File from class org.apache.commons.io.FileCleanerTestCase to private testFile : File from class org.apache.commons.io.FileCleaningTrackerTestCase
+Move Method	private addTracker(path String, marker Object, deleteStrategy FileDeleteStrategy) : void from class org.apache.commons.io.FileCleaner to private addTracker(path String, marker Object, deleteStrategy FileDeleteStrategy) : void from class org.apache.commons.io.FileCleaningTracker
+Remove Method Modifier	static in method private addTracker(path String, marker Object, deleteStrategy FileDeleteStrategy) : void from class org.apache.commons.io.FileCleaner
+Move Attribute	package q : ReferenceQueue from class org.apache.commons.io.FileCleaner to package q : ReferenceQueue from class org.apache.commons.io.FileCleaningTracker
+Remove Attribute Modifier	static in attribute package q : ReferenceQueue from class org.apache.commons.io.FileCleaner
+Move Attribute	package trackers : Collection from class org.apache.commons.io.FileCleaner to package trackers : Collection from class org.apache.commons.io.FileCleaningTracker
+Add Attribute Modifier	final in attribute package trackers : Collection from class org.apache.commons.io.FileCleaningTracker
+Remove Attribute Modifier	static in attribute package trackers : Collection from class org.apache.commons.io.FileCleaner
+Move Attribute	package exitWhenFinished : boolean from class org.apache.commons.io.FileCleaner to package exitWhenFinished : boolean from class org.apache.commons.io.FileCleaningTracker
+Remove Attribute Modifier	static in attribute package exitWhenFinished : boolean from class org.apache.commons.io.FileCleaner
+Move Attribute	package reaper : Thread from class org.apache.commons.io.FileCleaner to package reaper : Thread from class org.apache.commons.io.FileCleaningTracker
+Remove Attribute Modifier	static in attribute package reaper : Thread from class org.apache.commons.io.FileCleaner
+Developers have reported that 11158 commits involve refactoring but only 1146 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1146 commits.
+
+No refactorings detected at 663372845b665ea4895be4b09ccd896c2616cfdd
+
+No refactorings detected at 68a55d56ae853fc2fdce829a6042163bdc02deb4
+
+No refactorings detected at db3e834e135ede835ce4ab59429ab90afd059e67
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef226056f6a02950c645e1
+Issue Title: : Add facility to sort file lists/arrays to Comparator implementations
+Refactorings at f992185eafa1610f505c97eb6188650feeede226
+Change Attribute Type	comparator : Comparator to comparator : AbstractFileComparator in class org.apache.commons.io.comparator.ComparatorAbstractTestCase
+Extract Superclass	org.apache.commons.io.comparator.AbstractFileComparator from classes [org.apache.commons.io.comparator.DefaultFileComparator, org.apache.commons.io.comparator.ExtensionFileComparator, org.apache.commons.io.comparator.LastModifiedFileComparator, org.apache.commons.io.comparator.NameFileComparator, org.apache.commons.io.comparator.PathFileComparator, org.apache.commons.io.comparator.ReverseComparator, org.apache.commons.io.comparator.SizeFileComparator]
+Developers have reported that 11158 commits involve refactoring but only 1147 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1147 commits.
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef226356f6a02950c6460e
+Issue Title: : Add convenience deleteQuietly to FileUtils
+Refactorings at da8e3183bd70cdb2e1b9441e2e4b640e3fc27fad
+Change Variable Type	t : Throwable to e : Exception in method public deleteQuietly(file File) : boolean from class org.apache.commons.io.FileUtils
+Rename Variable	t : Throwable to e : Exception in method public deleteQuietly(file File) : boolean from class org.apache.commons.io.FileUtils
+Developers have reported that 11158 commits involve refactoring but only 1148 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1148 commits.
+
+No refactorings detected at eafc20dce3e58795b4a2aae11029a658e038fb48
+
+No refactorings detected at fb24a474dee4ca92f28d5d589f38d11d635b543b
+
+No refactorings detected at 91e47f76a97d4e549a92f0a01137529e9bee257f
+
+No refactorings detected at 422ce6fa23b426ab71f271d4643ce9163cf707d3
+
+No refactorings detected at 30fca899772d354211257381e89dac596eb5818f
+
+No refactorings detected at 6ff368ee318c9ac7b500363780c0e84cbdef818d
+
+No refactorings detected at bad9fee57a900e8bfa1d412dfd82a32dc1b41d34
+
+No refactorings detected at 5c13fa7579650c2cbcab61c6b18e509951f640aa
+
+No refactorings detected at ce90015bdc3614f88fbe55a697731a2f5b052ca3
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef227f56f6a02950c64789
+Issue Title: : IO 2.0 - Move to JDK 1.5
+Refactorings at 710ec8c94f842477c78adc5aeaf8fa11059d80be
+Change Variable Type	buf : StringWriter to buf : StringBuilderWriter in initializer IOUtils from class org.apache.commons.io.IOUtils
+Change Variable Type	sw : StringWriter to sw : StringBuilderWriter in method public toString(input InputStream) : String from class org.apache.commons.io.IOUtils
+Change Variable Type	sw : StringWriter to sw : StringBuilderWriter in method public toString(input InputStream, encoding String) : String from class org.apache.commons.io.IOUtils
+Change Variable Type	sw : StringWriter to sw : StringBuilderWriter in method public toString(input Reader) : String from class org.apache.commons.io.IOUtils
+Developers have reported that 11158 commits involve refactoring but only 1149 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1149 commits.
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef227f56f6a02950c64789
+Issue Title: : IO 2.0 - Move to JDK 1.5
+Refactorings at a74a5a0c6ff41a4ca0a08caf740ebce1dc3c6d10
+Change Attribute Type	trackers : Collection to trackers : Collection<Tracker> in class org.apache.commons.io.FileCleaningTracker
+Change Variable Type	lines : List to lines : List<String> in method package freeSpaceUnix(path String, kb boolean, posix boolean) : long from class org.apache.commons.io.FileSystemUtils
+Change Variable Type	lines : List to lines : List<String> in method package performCommand(cmdAttribs String[], max int) : List<String> from class org.apache.commons.io.FileSystemUtils
+Change Return Type	List to List<String> in method package performCommand(cmdAttribs String[], max int) : List<String> from class org.apache.commons.io.FileSystemUtils
+Change Variable Type	exclusionList : List to exclusionList : List<String> in method public copyDirectory(srcDir File, destDir File, filter FileFilter, preserveFileDate boolean) : void from class org.apache.commons.io.FileUtils
+Change Variable Type	files : Collection to files : Collection<File> in method public listFiles(directory File, fileFilter IOFileFilter, dirFilter IOFileFilter) : Collection<File> from class org.apache.commons.io.FileUtils
+Change Return Type	Collection to Collection<File> in method public listFiles(directory File, fileFilter IOFileFilter, dirFilter IOFileFilter) : Collection<File> from class org.apache.commons.io.FileUtils
+Change Parameter Type	files : Collection to files : Collection<File> in method public convertFileCollectionToFileArray(files Collection<File>) : File[] from class org.apache.commons.io.FileUtils
+Change Parameter Type	files : Collection to files : Collection<File> in method private innerListFiles(files Collection<File>, directory File, filter IOFileFilter) : void from class org.apache.commons.io.FileUtils
+Change Parameter Type	exclusionList : List to exclusionList : List<String> in method private doCopyDirectory(srcDir File, destDir File, filter FileFilter, preserveFileDate boolean, exclusionList List<String>) : void from class org.apache.commons.io.FileUtils
+Change Variable Type	backtrack : Stack to backtrack : Stack<int[]> in method public wildcardMatch(filename String, wildcardMatcher String, caseSensitivity IOCase) : boolean from class org.apache.commons.io.FilenameUtils
+Change Variable Type	list : ArrayList to list : ArrayList<String> in method package splitOnTokens(text String) : String[] from class org.apache.commons.io.FilenameUtils
+Change Variable Type	list : List to list : List<String> in method public readLines(input Reader) : List<String> from class org.apache.commons.io.IOUtils
+Change Return Type	List to List<String> in method public readLines(input Reader) : List<String> from class org.apache.commons.io.IOUtils
+Change Return Type	Object to String in method public next() : String from class org.apache.commons.io.LineIterator
+Change Attribute Type	DEFAULT_COMPARATOR : Comparator to DEFAULT_COMPARATOR : Comparator<File> in class org.apache.commons.io.comparator.DefaultFileComparator
+Change Attribute Type	DEFAULT_REVERSE : Comparator to DEFAULT_REVERSE : Comparator<File> in class org.apache.commons.io.comparator.DefaultFileComparator
+Parameterize Variable	file1 : File to file1 : File in method public compare(file1 File, file2 File) : int from class org.apache.commons.io.comparator.DefaultFileComparator
+Parameterize Variable	file2 : File to file2 : File in method public compare(file1 File, file2 File) : int from class org.apache.commons.io.comparator.DefaultFileComparator
+Remove Parameter	obj1 : Object in method public compare(obj1 Object, obj2 Object) : int from class org.apache.commons.io.comparator.DefaultFileComparator
+Remove Parameter	obj2 : Object in method public compare(obj1 Object, obj2 Object) : int from class org.apache.commons.io.comparator.DefaultFileComparator
+Change Attribute Type	EXTENSION_COMPARATOR : Comparator to EXTENSION_COMPARATOR : Comparator<File> in class org.apache.commons.io.comparator.ExtensionFileComparator
+Change Attribute Type	EXTENSION_REVERSE : Comparator to EXTENSION_REVERSE : Comparator<File> in class org.apache.commons.io.comparator.ExtensionFileComparator
+Change Attribute Type	EXTENSION_INSENSITIVE_COMPARATOR : Comparator to EXTENSION_INSENSITIVE_COMPARATOR : Comparator<File> in class org.apache.commons.io.comparator.ExtensionFileComparator
+Change Attribute Type	EXTENSION_INSENSITIVE_REVERSE : Comparator to EXTENSION_INSENSITIVE_REVERSE : Comparator<File> in class org.apache.commons.io.comparator.ExtensionFileComparator
+Change Attribute Type	EXTENSION_SYSTEM_COMPARATOR : Comparator to EXTENSION_SYSTEM_COMPARATOR : Comparator<File> in class org.apache.commons.io.comparator.ExtensionFileComparator
+Change Attribute Type	EXTENSION_SYSTEM_REVERSE : Comparator to EXTENSION_SYSTEM_REVERSE : Comparator<File> in class org.apache.commons.io.comparator.ExtensionFileComparator
+Parameterize Variable	file1 : File to file1 : File in method public compare(file1 File, file2 File) : int from class org.apache.commons.io.comparator.ExtensionFileComparator
+Parameterize Variable	file2 : File to file2 : File in method public compare(file1 File, file2 File) : int from class org.apache.commons.io.comparator.ExtensionFileComparator
+Remove Parameter	obj1 : Object in method public compare(obj1 Object, obj2 Object) : int from class org.apache.commons.io.comparator.ExtensionFileComparator
+Remove Parameter	obj2 : Object in method public compare(obj1 Object, obj2 Object) : int from class org.apache.commons.io.comparator.ExtensionFileComparator
+Change Attribute Type	LASTMODIFIED_COMPARATOR : Comparator to LASTMODIFIED_COMPARATOR : Comparator<File> in class org.apache.commons.io.comparator.LastModifiedFileComparator
+Change Attribute Type	LASTMODIFIED_REVERSE : Comparator to LASTMODIFIED_REVERSE : Comparator<File> in class org.apache.commons.io.comparator.LastModifiedFileComparator
+Parameterize Variable	file1 : File to file1 : File in method public compare(file1 File, file2 File) : int from class org.apache.commons.io.comparator.LastModifiedFileComparator
+Parameterize Variable	file2 : File to file2 : File in method public compare(file1 File, file2 File) : int from class org.apache.commons.io.comparator.LastModifiedFileComparator
+Remove Parameter	obj1 : Object in method public compare(obj1 Object, obj2 Object) : int from class org.apache.commons.io.comparator.LastModifiedFileComparator
+Remove Parameter	obj2 : Object in method public compare(obj1 Object, obj2 Object) : int from class org.apache.commons.io.comparator.LastModifiedFileComparator
+Change Attribute Type	NAME_COMPARATOR : Comparator to NAME_COMPARATOR : Comparator<File> in class org.apache.commons.io.comparator.NameFileComparator
+Change Attribute Type	NAME_REVERSE : Comparator to NAME_REVERSE : Comparator<File> in class org.apache.commons.io.comparator.NameFileComparator
+Change Attribute Type	NAME_INSENSITIVE_COMPARATOR : Comparator to NAME_INSENSITIVE_COMPARATOR : Comparator<File> in class org.apache.commons.io.comparator.NameFileComparator
+Change Attribute Type	NAME_INSENSITIVE_REVERSE : Comparator to NAME_INSENSITIVE_REVERSE : Comparator<File> in class org.apache.commons.io.comparator.NameFileComparator
+Change Attribute Type	NAME_SYSTEM_COMPARATOR : Comparator to NAME_SYSTEM_COMPARATOR : Comparator<File> in class org.apache.commons.io.comparator.NameFileComparator
+Change Attribute Type	NAME_SYSTEM_REVERSE : Comparator to NAME_SYSTEM_REVERSE : Comparator<File> in class org.apache.commons.io.comparator.NameFileComparator
+Parameterize Variable	file1 : File to file1 : File in method public compare(file1 File, file2 File) : int from class org.apache.commons.io.comparator.NameFileComparator
+Parameterize Variable	file2 : File to file2 : File in method public compare(file1 File, file2 File) : int from class org.apache.commons.io.comparator.NameFileComparator
+Remove Parameter	obj1 : Object in method public compare(obj1 Object, obj2 Object) : int from class org.apache.commons.io.comparator.NameFileComparator
+Remove Parameter	obj2 : Object in method public compare(obj1 Object, obj2 Object) : int from class org.apache.commons.io.comparator.NameFileComparator
+Change Attribute Type	PATH_COMPARATOR : Comparator to PATH_COMPARATOR : Comparator<File> in class org.apache.commons.io.comparator.PathFileComparator
+Change Attribute Type	PATH_REVERSE : Comparator to PATH_REVERSE : Comparator<File> in class org.apache.commons.io.comparator.PathFileComparator
+Change Attribute Type	PATH_INSENSITIVE_COMPARATOR : Comparator to PATH_INSENSITIVE_COMPARATOR : Comparator<File> in class org.apache.commons.io.comparator.PathFileComparator
+Change Attribute Type	PATH_INSENSITIVE_REVERSE : Comparator to PATH_INSENSITIVE_REVERSE : Comparator<File> in class org.apache.commons.io.comparator.PathFileComparator
+Change Attribute Type	PATH_SYSTEM_COMPARATOR : Comparator to PATH_SYSTEM_COMPARATOR : Comparator<File> in class org.apache.commons.io.comparator.PathFileComparator
+Change Attribute Type	PATH_SYSTEM_REVERSE : Comparator to PATH_SYSTEM_REVERSE : Comparator<File> in class org.apache.commons.io.comparator.PathFileComparator
+Parameterize Variable	file1 : File to file1 : File in method public compare(file1 File, file2 File) : int from class org.apache.commons.io.comparator.PathFileComparator
+Parameterize Variable	file2 : File to file2 : File in method public compare(file1 File, file2 File) : int from class org.apache.commons.io.comparator.PathFileComparator
+Remove Parameter	obj1 : Object in method public compare(obj1 Object, obj2 Object) : int from class org.apache.commons.io.comparator.PathFileComparator
+Remove Parameter	obj2 : Object in method public compare(obj1 Object, obj2 Object) : int from class org.apache.commons.io.comparator.PathFileComparator
+Change Attribute Type	delegate : Comparator to delegate : Comparator<File> in class org.apache.commons.io.comparator.ReverseComparator
+Change Parameter Type	delegate : Comparator to delegate : Comparator<File> in method public ReverseComparator(delegate Comparator<File>) from class org.apache.commons.io.comparator.ReverseComparator
+Change Parameter Type	obj2 : Object to file2 : File in method public compare(file1 File, file2 File) : int from class org.apache.commons.io.comparator.ReverseComparator
+Change Parameter Type	obj1 : Object to file1 : File in method public compare(file1 File, file2 File) : int from class org.apache.commons.io.comparator.ReverseComparator
+Rename Parameter	obj2 : Object to file2 : File in method public compare(file1 File, file2 File) : int from class org.apache.commons.io.comparator.ReverseComparator
+Rename Parameter	obj1 : Object to file1 : File in method public compare(file1 File, file2 File) : int from class org.apache.commons.io.comparator.ReverseComparator
+Change Attribute Type	SIZE_COMPARATOR : Comparator to SIZE_COMPARATOR : Comparator<File> in class org.apache.commons.io.comparator.SizeFileComparator
+Change Attribute Type	SIZE_REVERSE : Comparator to SIZE_REVERSE : Comparator<File> in class org.apache.commons.io.comparator.SizeFileComparator
+Change Attribute Type	SIZE_SUMDIR_COMPARATOR : Comparator to SIZE_SUMDIR_COMPARATOR : Comparator<File> in class org.apache.commons.io.comparator.SizeFileComparator
+Change Attribute Type	SIZE_SUMDIR_REVERSE : Comparator to SIZE_SUMDIR_REVERSE : Comparator<File> in class org.apache.commons.io.comparator.SizeFileComparator
+Parameterize Variable	file1 : File to file1 : File in method public compare(file1 File, file2 File) : int from class org.apache.commons.io.comparator.SizeFileComparator
+Parameterize Variable	file2 : File to file2 : File in method public compare(file1 File, file2 File) : int from class org.apache.commons.io.comparator.SizeFileComparator
+Remove Parameter	obj1 : Object in method public compare(obj1 Object, obj2 Object) : int from class org.apache.commons.io.comparator.SizeFileComparator
+Remove Parameter	obj2 : Object in method public compare(obj1 Object, obj2 Object) : int from class org.apache.commons.io.comparator.SizeFileComparator
+Change Attribute Type	fileFilters : List to fileFilters : List<IOFileFilter> in class org.apache.commons.io.filefilter.AndFileFilter
+Change Return Type	List to List<IOFileFilter> in method public getFileFilters() : List<IOFileFilter> from class org.apache.commons.io.filefilter.AndFileFilter
+Change Parameter Type	fileFilters : List to fileFilters : List<IOFileFilter> in method public AndFileFilter(fileFilters List<IOFileFilter>) from class org.apache.commons.io.filefilter.AndFileFilter
+Change Parameter Type	fileFilters : List to fileFilters : List<IOFileFilter> in method public setFileFilters(fileFilters List<IOFileFilter>) : void from class org.apache.commons.io.filefilter.AndFileFilter
+Change Return Type	List to List<IOFileFilter> in method public getFileFilters() : List<IOFileFilter> from class org.apache.commons.io.filefilter.ConditionalFileFilter
+Change Parameter Type	fileFilters : List to fileFilters : List<IOFileFilter> in method public setFileFilters(fileFilters List<IOFileFilter>) : void from class org.apache.commons.io.filefilter.ConditionalFileFilter
+Change Parameter Type	names : List to names : List<String> in method public NameFileFilter(names List<String>) from class org.apache.commons.io.filefilter.NameFileFilter
+Change Parameter Type	names : List to names : List<String> in method public NameFileFilter(names List<String>, caseSensitivity IOCase) from class org.apache.commons.io.filefilter.NameFileFilter
+Change Attribute Type	fileFilters : List to fileFilters : List<IOFileFilter> in class org.apache.commons.io.filefilter.OrFileFilter
+Change Return Type	List to List<IOFileFilter> in method public getFileFilters() : List<IOFileFilter> from class org.apache.commons.io.filefilter.OrFileFilter
+Change Parameter Type	fileFilters : List to fileFilters : List<IOFileFilter> in method public OrFileFilter(fileFilters List<IOFileFilter>) from class org.apache.commons.io.filefilter.OrFileFilter
+Change Parameter Type	fileFilters : List to fileFilters : List<IOFileFilter> in method public setFileFilters(fileFilters List<IOFileFilter>) : void from class org.apache.commons.io.filefilter.OrFileFilter
+Change Parameter Type	prefixes : List to prefixes : List<String> in method public PrefixFileFilter(prefixes List<String>) from class org.apache.commons.io.filefilter.PrefixFileFilter
+Change Parameter Type	prefixes : List to prefixes : List<String> in method public PrefixFileFilter(prefixes List<String>, caseSensitivity IOCase) from class org.apache.commons.io.filefilter.PrefixFileFilter
+Change Parameter Type	suffixes : List to suffixes : List<String> in method public SuffixFileFilter(suffixes List<String>) from class org.apache.commons.io.filefilter.SuffixFileFilter
+Change Parameter Type	suffixes : List to suffixes : List<String> in method public SuffixFileFilter(suffixes List<String>, caseSensitivity IOCase) from class org.apache.commons.io.filefilter.SuffixFileFilter
+Change Parameter Type	wildcards : List to wildcards : List<String> in method public WildcardFileFilter(wildcards List<String>) from class org.apache.commons.io.filefilter.WildcardFileFilter
+Change Parameter Type	wildcards : List to wildcards : List<String> in method public WildcardFileFilter(wildcards List<String>, caseSensitivity IOCase) from class org.apache.commons.io.filefilter.WildcardFileFilter
+Change Parameter Type	wildcards : List to wildcards : List<String> in method public WildcardFilter(wildcards List<String>) from class org.apache.commons.io.filefilter.WildcardFilter
+Change Return Type	Class to Class<?> in method protected resolveClass(objectStreamClass ObjectStreamClass) : Class<?> from class org.apache.commons.io.input.ClassLoaderObjectInputStream
+Change Attribute Type	m_streams : InheritableThreadLocal to m_streams : InheritableThreadLocal<InputStream> in class org.apache.commons.io.input.DemuxInputStream
+Inline Method	private getStream() : InputStream inlined to public bindStream(input InputStream) : InputStream in class org.apache.commons.io.input.DemuxInputStream
+Inline Method	private getStream() : InputStream inlined to public close() : void in class org.apache.commons.io.input.DemuxInputStream
+Inline Method	private getStream() : InputStream inlined to public read() : int in class org.apache.commons.io.input.DemuxInputStream
+Change Attribute Type	buffers : List to buffers : List<byte[]> in class org.apache.commons.io.output.ByteArrayOutputStream
+Inline Method	private getBuffer(index int) : byte[] inlined to private needNewBuffer(newcount int) : void in class org.apache.commons.io.output.ByteArrayOutputStream
+Inline Method	private getBuffer(index int) : byte[] inlined to public reset() : void in class org.apache.commons.io.output.ByteArrayOutputStream
+Inline Method	private getBuffer(index int) : byte[] inlined to public writeTo(out OutputStream) : void in class org.apache.commons.io.output.ByteArrayOutputStream
+Inline Method	private getBuffer(index int) : byte[] inlined to public toByteArray() : byte[] in class org.apache.commons.io.output.ByteArrayOutputStream
+Change Attribute Type	m_streams : InheritableThreadLocal to m_streams : InheritableThreadLocal<OutputStream> in class org.apache.commons.io.output.DemuxOutputStream
+Inline Method	private getStream() : OutputStream inlined to public bindStream(output OutputStream) : OutputStream in class org.apache.commons.io.output.DemuxOutputStream
+Inline Method	private getStream() : OutputStream inlined to public close() : void in class org.apache.commons.io.output.DemuxOutputStream
+Inline Method	private getStream() : OutputStream inlined to public flush() : void in class org.apache.commons.io.output.DemuxOutputStream
+Inline Method	private getStream() : OutputStream inlined to public write(ch int) : void in class org.apache.commons.io.output.DemuxOutputStream
+Move And Inline Method	private getStream() : InputStream moved from class org.apache.commons.io.input.DemuxInputStream to class org.apache.commons.io.output.DemuxOutputStream & inlined to public bindStream(output OutputStream) : OutputStream
+Move And Inline Method	private getStream() : InputStream moved from class org.apache.commons.io.input.DemuxInputStream to class org.apache.commons.io.output.DemuxOutputStream & inlined to public bindStream(output OutputStream) : OutputStream
+Move And Inline Method	private getStream() : InputStream moved from class org.apache.commons.io.input.DemuxInputStream to class org.apache.commons.io.output.DemuxOutputStream & inlined to public bindStream(output OutputStream) : OutputStream
+Move And Inline Method	private getStream() : InputStream moved from class org.apache.commons.io.input.DemuxInputStream to class org.apache.commons.io.output.DemuxOutputStream & inlined to public close() : void
+Move And Inline Method	private getStream() : InputStream moved from class org.apache.commons.io.input.DemuxInputStream to class org.apache.commons.io.output.DemuxOutputStream & inlined to public close() : void
+Move And Inline Method	private getStream() : InputStream moved from class org.apache.commons.io.input.DemuxInputStream to class org.apache.commons.io.output.DemuxOutputStream & inlined to public close() : void
+Move And Inline Method	private getStream() : InputStream moved from class org.apache.commons.io.input.DemuxInputStream to class org.apache.commons.io.output.DemuxOutputStream & inlined to public flush() : void
+Move And Inline Method	private getStream() : InputStream moved from class org.apache.commons.io.input.DemuxInputStream to class org.apache.commons.io.output.DemuxOutputStream & inlined to public flush() : void
+Move And Inline Method	private getStream() : InputStream moved from class org.apache.commons.io.input.DemuxInputStream to class org.apache.commons.io.output.DemuxOutputStream & inlined to public flush() : void
+Move And Inline Method	private getStream() : InputStream moved from class org.apache.commons.io.input.DemuxInputStream to class org.apache.commons.io.output.DemuxOutputStream & inlined to public write(ch int) : void
+Move And Inline Method	private getStream() : InputStream moved from class org.apache.commons.io.input.DemuxInputStream to class org.apache.commons.io.output.DemuxOutputStream & inlined to public write(ch int) : void
+Move And Inline Method	private getStream() : InputStream moved from class org.apache.commons.io.input.DemuxInputStream to class org.apache.commons.io.output.DemuxOutputStream & inlined to public write(ch int) : void
+Move And Inline Method	private getStream() : OutputStream moved from class org.apache.commons.io.output.DemuxOutputStream to class org.apache.commons.io.input.DemuxInputStream & inlined to public bindStream(input InputStream) : InputStream
+Move And Inline Method	private getStream() : OutputStream moved from class org.apache.commons.io.output.DemuxOutputStream to class org.apache.commons.io.input.DemuxInputStream & inlined to public bindStream(input InputStream) : InputStream
+Move And Inline Method	private getStream() : OutputStream moved from class org.apache.commons.io.output.DemuxOutputStream to class org.apache.commons.io.input.DemuxInputStream & inlined to public bindStream(input InputStream) : InputStream
+Move And Inline Method	private getStream() : OutputStream moved from class org.apache.commons.io.output.DemuxOutputStream to class org.apache.commons.io.input.DemuxInputStream & inlined to public bindStream(input InputStream) : InputStream
+Move And Inline Method	private getStream() : OutputStream moved from class org.apache.commons.io.output.DemuxOutputStream to class org.apache.commons.io.input.DemuxInputStream & inlined to public close() : void
+Move And Inline Method	private getStream() : OutputStream moved from class org.apache.commons.io.output.DemuxOutputStream to class org.apache.commons.io.input.DemuxInputStream & inlined to public close() : void
+Move And Inline Method	private getStream() : OutputStream moved from class org.apache.commons.io.output.DemuxOutputStream to class org.apache.commons.io.input.DemuxInputStream & inlined to public close() : void
+Move And Inline Method	private getStream() : OutputStream moved from class org.apache.commons.io.output.DemuxOutputStream to class org.apache.commons.io.input.DemuxInputStream & inlined to public close() : void
+Move And Inline Method	private getStream() : OutputStream moved from class org.apache.commons.io.output.DemuxOutputStream to class org.apache.commons.io.input.DemuxInputStream & inlined to public read() : int
+Move And Inline Method	private getStream() : OutputStream moved from class org.apache.commons.io.output.DemuxOutputStream to class org.apache.commons.io.input.DemuxInputStream & inlined to public read() : int
+Move And Inline Method	private getStream() : OutputStream moved from class org.apache.commons.io.output.DemuxOutputStream to class org.apache.commons.io.input.DemuxInputStream & inlined to public read() : int
+Move And Inline Method	private getStream() : OutputStream moved from class org.apache.commons.io.output.DemuxOutputStream to class org.apache.commons.io.input.DemuxInputStream & inlined to public read() : int
+Developers have reported that 11158 commits involve refactoring but only 1150 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1150 commits.
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef227f56f6a02950c64789
+Issue Title: : IO 2.0 - Move to JDK 1.5
+Refactorings at 6d6a73a689ce734d094f71723752cde23a1d9259
+Change Variable Type	buf : StringBuffer to buf : StringBuilder in method package parseDir(line String, path String) : long from class org.apache.commons.io.FileSystemUtils
+Change Variable Type	buffer : StringBuffer to buffer : StringBuilder in method package splitOnTokens(text String) : String[] from class org.apache.commons.io.FilenameUtils
+Change Variable Type	buffer : StringBuffer to buffer : StringBuilder in method public dump(data byte[], offset long, stream OutputStream, index int) : void from class org.apache.commons.io.HexDump
+Change Parameter Type	_lbuffer : StringBuffer to _lbuffer : StringBuilder in method private dump(_lbuffer StringBuilder, value long) : StringBuilder from class org.apache.commons.io.HexDump
+Change Return Type	StringBuffer to StringBuilder in method private dump(_lbuffer StringBuilder, value long) : StringBuilder from class org.apache.commons.io.HexDump
+Change Parameter Type	_cbuffer : StringBuffer to _cbuffer : StringBuilder in method private dump(_cbuffer StringBuilder, value byte) : StringBuilder from class org.apache.commons.io.HexDump
+Change Return Type	StringBuffer to StringBuilder in method private dump(_cbuffer StringBuilder, value byte) : StringBuilder from class org.apache.commons.io.HexDump
+Change Variable Type	buffer : StringBuffer to buffer : StringBuilder in method public toString() : String from class org.apache.commons.io.filefilter.AndFileFilter
+Change Variable Type	buffer : StringBuffer to buffer : StringBuilder in method public toString() : String from class org.apache.commons.io.filefilter.NameFileFilter
+Change Variable Type	buffer : StringBuffer to buffer : StringBuilder in method public toString() : String from class org.apache.commons.io.filefilter.OrFileFilter
+Change Variable Type	buffer : StringBuffer to buffer : StringBuilder in method public toString() : String from class org.apache.commons.io.filefilter.PrefixFileFilter
+Change Variable Type	buffer : StringBuffer to buffer : StringBuilder in method public toString() : String from class org.apache.commons.io.filefilter.SuffixFileFilter
+Change Variable Type	buffer : StringBuffer to buffer : StringBuilder in method public toString() : String from class org.apache.commons.io.filefilter.WildcardFileFilter
+Developers have reported that 11158 commits involve refactoring but only 1151 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1151 commits.
+
+No refactorings detected at e3631718822db05a02cb7b086d6f28a0fae15f51
+
+No refactorings detected at 61b41ee528d4d5cd358f8f5b0a4b2c5a743da561
+
+No refactorings detected at 45da38fd8a5086df7099fbb8c774e8433eec6485
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef228f56f6a02950c64826
+Issue Title: : Add skipFully() method for InputStreams
+Refactorings at 99a6100c9ba8128a99122612f0c711444e71b085
+Extract Method	public skip(input Reader, toSkip long) : long extracted from public skipFully(input Reader, toSkip long) : void in class org.apache.commons.io.IOUtils
+Rename Variable	skipped : long to remain : long in method public skip(input Reader, toSkip long) : long from class org.apache.commons.io.IOUtils
+Developers have reported that 11158 commits involve refactoring but only 1152 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1152 commits.
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef229856f6a02950c6484e
+Issue Title: : Create MagicNumberFileFilter
+Refactorings at d8cc4c9981d797f55c05e309050d788fa356da01
+Add Method Annotation	@SuppressWarnings("deprecation") in method public testDeprecatedWildcard() : void from class org.apache.commons.io.filefilter.FileFilterTestCase
+Developers have reported that 11158 commits involve refactoring but only 1153 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1153 commits.
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef22a156f6a02950c648a7
+Issue Title: : add Xml(Stream)Reader/Writer from ROME
+Refactorings at 50d5aeea6180c582b788aedc44c3ae2c3c441eff
+Inline Method	private prepareReader(is InputStream, encoding String) : void inlined to private doLenientDetection(httpContentType String, is InputStream, ex XmlStreamReaderException) : void in class org.apache.commons.io.input.XmlStreamReader
+Developers have reported that 11158 commits involve refactoring but only 1154 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1154 commits.
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef22a156f6a02950c648a7
+Issue Title: : add Xml(Stream)Reader/Writer from ROME
+Refactorings at d46782f8408d2ae17f8e05f18080db51ed608b35
+Change Method Access Modifier	private to package in method package calculateRawEncoding(bomEnc String, xmlGuessEnc String, xmlEnc String) : String from class org.apache.commons.io.input.XmlStreamReader
+Change Method Access Modifier	private to package in method package calculateHttpEncoding(httpContentType String, bomEnc String, xmlGuessEnc String, xmlEnc String, lenient boolean) : String from class org.apache.commons.io.input.XmlStreamReader
+Change Method Access Modifier	private to package in method package getContentTypeMime(httpContentType String) : String from class org.apache.commons.io.input.XmlStreamReader
+Change Method Access Modifier	private to package in method package getContentTypeEncoding(httpContentType String) : String from class org.apache.commons.io.input.XmlStreamReader
+Change Method Access Modifier	private to package in method package isAppXml(mime String) : boolean from class org.apache.commons.io.input.XmlStreamReader
+Change Method Access Modifier	private to package in method package isTextXml(mime String) : boolean from class org.apache.commons.io.input.XmlStreamReader
+Developers have reported that 11158 commits involve refactoring but only 1155 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1155 commits.
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef22a156f6a02950c648a7
+Issue Title: : add Xml(Stream)Reader/Writer from ROME
+Refactorings at a2800c889834ee30b5e8c0971cd1efbfa980bf9a
+Add Method Annotation	@Override in method public read(buf char[], offset int, len int) : int from class org.apache.commons.io.input.XmlStreamReader
+Add Method Annotation	@Override in method public close() : void from class org.apache.commons.io.input.XmlStreamReader
+Add Method Annotation	@Override in method public close() : void from class org.apache.commons.io.output.XmlStreamWriter
+Add Method Annotation	@Override in method public flush() : void from class org.apache.commons.io.output.XmlStreamWriter
+Add Method Annotation	@Override in method public write(cbuf char[], off int, len int) : void from class org.apache.commons.io.output.XmlStreamWriter
+Developers have reported that 11158 commits involve refactoring but only 1156 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1156 commits.
+
+No refactorings detected at 0ac9cccd34c88c2421550cfd30ec7cc2af62e3c3
+
+No refactorings detected at 1056d5ded9d19c3ee8c013d35fa5679163935935
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef22a156f6a02950c648a7
+Issue Title: : add Xml(Stream)Reader/Writer from ROME
+Refactorings at e8703179767272e33bc097c730606ee03476c44b
+Extract Variable	is : InputStream in method public XmlStreamReader(conn URLConnection) from class org.apache.commons.io.input.XmlStreamReader
+Extract Variable	contentType : String in method public XmlStreamReader(conn URLConnection) from class org.apache.commons.io.input.XmlStreamReader
+Add Parameter	is : InputStream in method private doLenientDetection(httpContentType String, is InputStream, ex XmlStreamReaderException) : void from class org.apache.commons.io.input.XmlStreamReader
+Remove Parameter	is : InputStream in method public XmlStreamReaderException(msg String, bomEnc String, xmlGuessEnc String, xmlEnc String, is InputStream) from class org.apache.commons.io.input.XmlStreamReaderException
+Remove Parameter	is : InputStream in method public XmlStreamReaderException(msg String, ctMime String, ctEnc String, bomEnc String, xmlGuessEnc String, xmlEnc String, is InputStream) from class org.apache.commons.io.input.XmlStreamReaderException
+Developers have reported that 11158 commits involve refactoring but only 1157 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1157 commits.
+
+No refactorings detected at 5b75cf83b2db408f8228b26910a8d3d3633cd54f
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef22a156f6a02950c648a7
+Issue Title: : add Xml(Stream)Reader/Writer from ROME
+Refactorings at 447d9982998a63275e78048a1beb081bb50b3536
+Remove Method Modifier	static in method public getDefaultEncoding() : String from class org.apache.commons.io.input.XmlStreamReader
+Add Parameter	defaultEncoding : String in method public XmlStreamReader(conn URLConnection, defaultEncoding String) from class org.apache.commons.io.input.XmlStreamReader
+Rename Attribute	BOMs : Map<String,int[]> to XMLs : Map<String,MessageFormat> in class org.apache.commons.io.input.XmlStreamReaderTest
+Change Attribute Type	BOMs : Map<String,int[]> to XMLs : Map<String,MessageFormat> in class org.apache.commons.io.input.XmlStreamReaderTest
+Rename Attribute	XMLs : Map<String,MessageFormat> to BOMs : Map<String,int[]> in class org.apache.commons.io.input.XmlStreamReaderTest
+Change Attribute Type	XMLs : Map<String,MessageFormat> to BOMs : Map<String,int[]> in class org.apache.commons.io.input.XmlStreamReaderTest
+Developers have reported that 11158 commits involve refactoring but only 1158 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1158 commits.
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef22a156f6a02950c648a7
+Issue Title: : add Xml(Stream)Reader/Writer from ROME
+Refactorings at 8a1529917f7aa5604fbdaa689b086c04848779af
+Inline Variable	is : InputStream in method public XmlStreamReader(conn URLConnection) from class org.apache.commons.io.input.XmlStreamReader
+Change Return Type	void to String in method private doLenientDetection(httpContentType String, is InputStream, ex XmlStreamReaderException) : String from class org.apache.commons.io.input.XmlStreamReader
+Developers have reported that 11158 commits involve refactoring but only 1159 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1159 commits.
+
+No refactorings detected at 5a21350fb904af0f0e0f8d1cc5ce484c7183dd13
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef22a756f6a02950c64919
+Issue Title: : add methods normalizePreserveSepartor and normalizePreserverSepartorNoEndseparator
+Refactorings at 4a3fd09f1b0296514684fa2931c61bd8130f3cfd
+Add Parameter	separator : char in method private doNormalize(filename String, separator char, keepSeparator boolean) : String from class org.apache.commons.io.FilenameUtils
+Developers have reported that 11158 commits involve refactoring but only 1160 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1160 commits.
+
+No refactorings detected at 0950b3ce959f2a9463470aca54991fe96753e66f
+
+No refactorings detected at 6ada74347e26f1d94e391bb41e3873b8739cc99a
+
+No refactorings detected at 476ccd8898ca8c491047a993e2310fe94affe086
+
+No refactorings detected at 54640931bd0a5e3aae2a0603774842f32bb77260
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef22b456f6a02950c649aa
+Issue Title: : Add new APPEND parameter for writing string into files
+Refactorings at b188f593df2bd24b8f8c2f14d531e2d33305ec4c
+Extract Method	public openOutputStream(file File, append boolean) : FileOutputStream extracted from public openOutputStream(file File) : FileOutputStream in class org.apache.commons.io.FileUtils
+Extract Method	public writeStringToFile(file File, data String, encoding String, append boolean) : void extracted from public writeStringToFile(file File, data String, encoding String) : void in class org.apache.commons.io.FileUtils
+Extract Method	public write(file File, data CharSequence, encoding String, append boolean) : void extracted from public write(file File, data CharSequence) : void in class org.apache.commons.io.FileUtils
+Extract Method	public write(file File, data CharSequence, encoding String, append boolean) : void extracted from public write(file File, data CharSequence, encoding String) : void in class org.apache.commons.io.FileUtils
+Extract Method	public writeByteArrayToFile(file File, data byte[], append boolean) : void extracted from public writeByteArrayToFile(file File, data byte[]) : void in class org.apache.commons.io.FileUtils
+Extract Method	public writeLines(file File, encoding String, lines Collection<?>, lineEnding String, append boolean) : void extracted from public writeLines(file File, encoding String, lines Collection<?>, lineEnding String) : void in class org.apache.commons.io.FileUtils
+Developers have reported that 11158 commits involve refactoring but only 1161 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1161 commits.
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef22b856f6a02950c649f5
+Issue Title: : Add support for moving a file to an existing path if the existing file is zero bytes in size -- org.apache.commons.io.FileUtils#moveFile(File, File)
+Refactorings at af9bf289fbd7f6294ca399c54f4277e8631e903a
+Change Variable Type	e : IOException to e : FileExistsException in method public testMoveFile_Errors() : void from class org.apache.commons.io.FileUtilsTestCase
+Change Variable Type	e : IOException to e : FileExistsException in method public testMoveDirectory_Errors() : void from class org.apache.commons.io.FileUtilsTestCase
+Developers have reported that 11158 commits involve refactoring but only 1162 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1162 commits.
+
+No refactorings detected at cdd0750b19a44dfe5fe0a2e74fbea2768e2292b3
+
+No refactorings detected at f4eb259c964c628ecd5facb38347f23628e09a80
+
+No refactorings detected at 58db1d1a55827a211865f0bc73a529e1b1d0ffdc
+
+No refactorings detected at ae6f41b4c16bc0e036415d7a808f737cd442009c
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef22c756f6a02950c64ab4
+Issue Title: : Add sizeOf(File) Method to FileUtils
+Refactorings at 57686b62dba65d1dffb4ad472df93f920dbcf489
+Extract Method	public sizeOf(file File) : long extracted from public sizeOfDirectory(directory File) : long in class org.apache.commons.io.FileUtils
+Developers have reported that 11158 commits involve refactoring but only 1163 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1163 commits.
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef22ce56f6a02950c64b09
+Issue Title: : Add timeout (connection and read) support for FileUtils.copyURLToFile
+Refactorings at 2f0b339e138e171a91360a98699e87505c03cde5
+Extract Method	public copyInputStreamToFile(source InputStream, destination File) : void extracted from public copyURLToFile(source URL, destination File) : void in class org.apache.commons.io.FileUtils
+Parameterize Variable	input : InputStream to source : InputStream in method public copyInputStreamToFile(source InputStream, destination File) : void from class org.apache.commons.io.FileUtils
+Developers have reported that 11158 commits involve refactoring but only 1164 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1164 commits.
+
+No refactorings detected at 0e97953c31b9e6339e66fcdc5afc6e1b1ae6bfd7
+
+No refactorings detected at 6e2f0e8bc89bbaabe8fa9734e246c285af232fd7
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef22d656f6a02950c64b86
+Issue Title: : FileFilterUtils can create cvsFilter and svnFilter more than once
+Refactorings at 4dcf99ae012fe5d15656967832dc0fb0bec35b10
+Add Attribute Modifier	final in attribute private cvsFilter : IOFileFilter from class org.apache.commons.io.filefilter.FileFilterUtils
+Add Attribute Modifier	final in attribute private svnFilter : IOFileFilter from class org.apache.commons.io.filefilter.FileFilterUtils
+Developers have reported that 11158 commits involve refactoring but only 1165 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1165 commits.
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef22df56f6a02950c64be5
+Issue Title: : Possible improvements using static analysis.
+Refactorings at d4c5044c7b7697d944a444470a296dcd15911595
+Add Attribute Modifier	final in attribute private file : File from class org.apache.commons.io.DirectoryWalker.CancelException
+Add Attribute Modifier	final in attribute private depth : int from class org.apache.commons.io.DirectoryWalker.CancelException
+Rename Variable	e : Exception to ignored : Exception in method public deleteQuietly(file File) : boolean from class org.apache.commons.io.FileUtils
+Rename Variable	e : Exception to ignored : Exception in method public deleteQuietly(file File) : boolean from class org.apache.commons.io.FileUtils
+Rename Variable	e : Exception to ignored : Exception in method public deleteQuietly(file File) : boolean from class org.apache.commons.io.FileUtils
+Inline Variable	size : int in method public CompositeFileComparator(delegates Comparator<File>...) from class org.apache.commons.io.comparator.CompositeFileComparator
+Add Attribute Modifier	final in attribute private fileFilters : List<IOFileFilter> from class org.apache.commons.io.filefilter.AndFileFilter
+Add Attribute Modifier	final in attribute private fileFilters : List<IOFileFilter> from class org.apache.commons.io.filefilter.OrFileFilter
+Add Attribute Modifier	final in attribute private classLoader : ClassLoader from class org.apache.commons.io.input.ClassLoaderObjectInputStream
+Add Attribute Modifier	final in attribute private m_streams : InheritableThreadLocal<InputStream> from class org.apache.commons.io.input.DemuxInputStream
+Add Attribute Modifier	final in attribute private size : long from class org.apache.commons.io.input.NullInputStream
+Add Attribute Modifier	final in attribute private throwEofException : boolean from class org.apache.commons.io.input.NullInputStream
+Add Attribute Modifier	final in attribute private markSupported : boolean from class org.apache.commons.io.input.NullInputStream
+Add Attribute Modifier	final in attribute private size : long from class org.apache.commons.io.input.NullReader
+Add Attribute Modifier	final in attribute private throwEofException : boolean from class org.apache.commons.io.input.NullReader
+Add Attribute Modifier	final in attribute private markSupported : boolean from class org.apache.commons.io.input.NullReader
+Add Attribute Modifier	final in attribute private parent : FilesystemEntry from class org.apache.commons.io.monitor.FilesystemEntry
+Invert Condition	if(!running) to while(running) in method public run() : void from class org.apache.commons.io.monitor.FilesystemMonitor
+Rename Variable	e : InterruptedException to ignored : InterruptedException in method public run() : void from class org.apache.commons.io.monitor.FilesystemMonitor
+Add Attribute Modifier	final in attribute private buffers : List<byte[]> from class org.apache.commons.io.output.ByteArrayOutputStream
+Add Attribute Modifier	final in attribute private prefix : String from class org.apache.commons.io.output.DeferredFileOutputStream
+Add Attribute Modifier	final in attribute private suffix : String from class org.apache.commons.io.output.DeferredFileOutputStream
+Add Attribute Modifier	final in attribute private directory : File from class org.apache.commons.io.output.DeferredFileOutputStream
+Add Attribute Modifier	final in attribute private m_streams : InheritableThreadLocal<OutputStream> from class org.apache.commons.io.output.DemuxOutputStream
+Add Attribute Modifier	final in attribute private threshold : int from class org.apache.commons.io.output.ThresholdingOutputStream
+Developers have reported that 11158 commits involve refactoring but only 1166 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1166 commits.
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef22e456f6a02950c64c21
+Issue Title: : Add Methods for Buffering Streams/Writers To IOUtils
+Refactorings at 3e947380d02dbd6d8f4e7590e3282498a16d6d32
+Rename Method	public asBufferedReader(reader Reader) : BufferedReader renamed to public buffer(reader Reader) : BufferedReader in class org.apache.commons.io.IOUtils
+Rename Method	public asBufferedWriter(writer Writer) : BufferedWriter renamed to public buffer(writer Writer) : BufferedWriter in class org.apache.commons.io.IOUtils
+Rename Method	public asBufferedOutputStream(outputStream OutputStream) : BufferedOutputStream renamed to public buffer(outputStream OutputStream) : BufferedOutputStream in class org.apache.commons.io.IOUtils
+Rename Method	public asBufferedInputStream(inputStream InputStream) : BufferedInputStream renamed to public buffer(inputStream InputStream) : BufferedInputStream in class org.apache.commons.io.IOUtils
+Developers have reported that 11158 commits involve refactoring but only 1167 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1167 commits.
+
+No refactorings detected at 87737ab36f55adbacd541a9202cb662d20db932b
+
+No refactorings detected at 0031a91ba7b5b580b28fab5cb60d683c93e9fae8
+
+No refactorings detected at d58ac89621aae78f7afcf3720f6b2ec1396beef1
+
+No refactorings detected at fde4aaaf5d92f18938bf9d3c5477dc4d6a0daff0
+
+No refactorings detected at 25aaa9cba84ffd92ddcd670ffb1906f1743fa833
+
+No refactorings detected at a2cf54639b1655d9059d416e6a6cb80931940a7d
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef22fd56f6a02950c64d10
+Issue Title: : Add new function FileUtils.directoryContains
+Refactorings at 90c7e6b4b1dffeba0012b3d5de5c277347b76761
+Extract And Move Method	public directoryContains(canonicalParent String, canonicalChild String) : boolean extracted from public directoryContains(directory File, child File) : boolean in class org.apache.commons.io.FileUtils & moved to class org.apache.commons.io.FilenameUtils
+Developers have reported that 11158 commits involve refactoring but only 1168 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1168 commits.
+
+No refactorings detected at 531aaa5b972e3676ac1b255481291ac3392a9068
+
+No refactorings detected at 71a7618b3740eb9fe759e75ab23dcfd6663374df
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef230256f6a02950c64d46
+Issue Title: : Add ByteArrayOutputStream.toInputStream()
+Refactorings at e263a7cf75537a505a69015bdf2312d4a1a0fc41
+Rename Method	private toBufferedInputStream() : InputStream renamed to public toInputStream() : InputStream in class org.apache.commons.io.output.ByteArrayOutputStream
+Change Method Access Modifier	private to public in method public toInputStream() : InputStream from class org.apache.commons.io.output.ByteArrayOutputStream
+Add Method Modifier	synchronized in method public toInputStream() : InputStream from class org.apache.commons.io.output.ByteArrayOutputStream
+Developers have reported that 11158 commits involve refactoring but only 1169 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1169 commits.
+
+No refactorings detected at c9de74f5c44420e8d00ad0c37c3ba527ee6f8a1f
+
+No refactorings detected at 55d3cf0ae5dc7b6f5f9f60bae65c1c5abf196b18
+
+No refactorings detected at 964a5170b2bb2ea1d96f0d231905711b597af53f
+
+No refactorings detected at 19b55afedf54bfc9e3b08c1636251339b2be4c42
+
+No refactorings detected at a053fefc0e9349ad5e97ff2353e3a8cf6873bfa7
+
+No refactorings detected at 03e7adf353e84c1d447e4ce4aeda073b16bea5f6
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef234156f6a02950c64fda
+Issue Title: : adds an endOfFileReached method to the TailerListener
+Refactorings at 7c58d8a9919c5c9dbc1485a21d56bb3f37444060
+Rename Parameter	srcDir : File to src : File in method private checkFileRequirements(src File, dest File) : void from class org.apache.commons.io.FileUtils
+Rename Parameter	destDir : File to dest : File in method private checkFileRequirements(src File, dest File) : void from class org.apache.commons.io.FileUtils
+Change Method Access Modifier	public to private in method private exists(file File) : boolean from class org.apache.commons.io.Java7Support
+Developers have reported that 11158 commits involve refactoring but only 1170 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1170 commits.
+
+No refactorings detected at 9c776ac176dced5b2f4aa24e58d756dc50896bc3
+
+No refactorings detected at 90bce82895383b31c1074b4c722c09471c9a557e
+
+No refactorings detected at 64feacdbcecb9d6df4fa1b75f77e38b2e4a16e2e
+
+No refactorings detected at 2b3e2f7836eb0ef2c2dbe4b574a7189b18784d96
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef235156f6a02950c65065
+Issue Title: : Add XmlStreamReader support for UTF-32
+Refactorings at e4c65e5424fe7a7c9795348fc855d42a247f0c00
+Add Variable Modifier	final in variable maxBomSize : int in method public getBOM() : ByteOrderMark from class org.apache.commons.io.input.BOMInputStream
+Rename Variable	max : int to maxBomSize : int in method public getBOM() : ByteOrderMark from class org.apache.commons.io.input.BOMInputStream
+Remove Method Annotation	@Ignore in method public testRawNoBomUtf32BE() : void from class org.apache.commons.io.input.XmlStreamReaderTest
+Remove Method Annotation	@Ignore in method public testRawNoBomUtf32LE() : void from class org.apache.commons.io.input.XmlStreamReaderTest
+Remove Method Annotation	@Ignore in method public testRawBomUtf32() : void from class org.apache.commons.io.input.XmlStreamReaderTest
+Rename Method	public testCalculateRawEncodingAdditonalkUTF16() : void renamed to public testCalculateRawEncodingAdditonalUTF16() : void in class org.apache.commons.io.input.XmlStreamReaderUtilitiesTest
+Remove Method Annotation	@Ignore in method public testCalculateRawEncodingStandardUtf32() : void from class org.apache.commons.io.input.XmlStreamReaderUtilitiesTest
+Remove Method Annotation	@Ignore in method public testCalculateHttpEncodingUtf32() : void from class org.apache.commons.io.input.XmlStreamReaderUtilitiesTest
+Developers have reported that 11158 commits involve refactoring but only 1171 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1171 commits.
+
+No refactorings detected at 8f8480c54e3eed07ab07d88e821c0e0f8c6b284c
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef235156f6a02950c65065
+Issue Title: : Add XmlStreamReader support for UTF-32
+Refactorings at b123f5b0c0b58a7acbb2fa63da9750ce80b6b474
+Add Method Annotation	@Test in method public testContentTypeEncoding() : void from class org.apache.commons.io.input.XmlStreamReaderUtilitiesTest
+Add Method Annotation	@Test in method public testContentTypeMime() : void from class org.apache.commons.io.input.XmlStreamReaderUtilitiesTest
+Add Method Annotation	@Test in method public testAppXml() : void from class org.apache.commons.io.input.XmlStreamReaderUtilitiesTest
+Add Method Annotation	@Test in method public testTextXml() : void from class org.apache.commons.io.input.XmlStreamReaderUtilitiesTest
+Add Method Annotation	@Test in method public testCalculateRawEncodingNoBOM() : void from class org.apache.commons.io.input.XmlStreamReaderUtilitiesTest
+Add Method Annotation	@Test in method public testCalculateRawEncodingStandard() : void from class org.apache.commons.io.input.XmlStreamReaderUtilitiesTest
+Add Method Annotation	@Test in method public testCalculateRawEncodingAdditonalkUTF16() : void from class org.apache.commons.io.input.XmlStreamReaderUtilitiesTest
+Add Method Annotation	@Test in method public testCalculateHttpEncoding() : void from class org.apache.commons.io.input.XmlStreamReaderUtilitiesTest
+Rename Parameter	lenienet : boolean to lenient : boolean in method private checkHttpError(msgSuffix String, lenient boolean, httpContentType String, bomEnc String, xmlGuessEnc String, xmlEnc String, defaultEncoding String) : void from class org.apache.commons.io.input.XmlStreamReaderUtilitiesTest
+Developers have reported that 11158 commits involve refactoring but only 1172 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1172 commits.
+
+No refactorings detected at 12d04afe471038793547c66e3d1f511d99da69f2
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef235156f6a02950c65065
+Issue Title: : Add XmlStreamReader support for UTF-32
+Refactorings at e7e3907b1343f45b45a3742f0c7a5d103f383a28
+Rename Method	public testRawNoBom() : void renamed to public testRawNoBomUtf8() : void in class org.apache.commons.io.input.XmlStreamReaderTest
+Rename Method	public testRawBom() : void renamed to public testRawBomUtf8() : void in class org.apache.commons.io.input.XmlStreamReaderTest
+Add Method Annotation	@Test in method public testHttp() : void from class org.apache.commons.io.input.XmlStreamReaderTest
+Add Method Annotation	@Test in method public testRawContent() : void from class org.apache.commons.io.input.XmlStreamReaderTest
+Add Method Annotation	@Test in method public testHttpContent() : void from class org.apache.commons.io.input.XmlStreamReaderTest
+Add Method Annotation	@Test in method public testEncodingAttributeXML() : void from class org.apache.commons.io.input.XmlStreamReaderTest
+Add Method Annotation	@Test in method public testRawNoBomUtf8() : void from class org.apache.commons.io.input.XmlStreamReaderTest
+Add Method Annotation	@Test in method public testRawBomUtf8() : void from class org.apache.commons.io.input.XmlStreamReaderTest
+Developers have reported that 11158 commits involve refactoring but only 1173 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1173 commits.
+
+No refactorings detected at 9b775e7fdea6f132c268b1a85852047bba1c86f1
+
+No refactorings detected at 6573ce704ba1a14388a7431d48f84d304f9f98b9
+
+No refactorings detected at 2dab8d5764bf37b92f1b422b0f3e9efeea1f85ed
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef235256f6a02950c6506b
+Issue Title: : Add new FileUtils.sizeOf[Directory] APIs to return BigInteger
+Refactorings at 27830ee8c22d74464fd3cae4e662bf0ba97e887b
+Extract Method	private checkDirectory(directory File) : void extracted from public sizeOfDirectory(directory File) : long in class org.apache.commons.io.FileUtils
+Extract Method	private createCircularSymLink(file File) : void extracted from public testSizeOfDirectory() : void in class org.apache.commons.io.FileUtilsTestCase
+Developers have reported that 11158 commits involve refactoring but only 1174 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1174 commits.
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef235356f6a02950c6507f
+Issue Title: : Add byteCountToDisplaySize(BigInteger)
+Refactorings at d731b2b8aabeb860f67246c9d7710a820fac1651
+Extract Method	public byteCountToDisplaySize(size BigInteger) : String extracted from public byteCountToDisplaySize(size long) : String in class org.apache.commons.io.FileUtils
+Rename Method	public testByteCountToDisplaySize() : void renamed to public testByteCountToDisplaySizeLong() : void in class org.apache.commons.io.FileUtilsTestCase
+Developers have reported that 11158 commits involve refactoring but only 1175 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1175 commits.
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef235a56f6a02950c650ce
+Issue Title: : Improve tailer's reading performance
+Refactorings at 59ffcad15d220c2bc1f70f01d58bc31dec04b423
+Inline Method	private readLine(reader RandomAccessFile) : String inlined to private readLines(reader RandomAccessFile) : long in class org.apache.commons.io.input.Tailer
+Change Variable Type	sb : StringBuffer to sb : StringBuilder in method private readLines(reader RandomAccessFile) : long from class org.apache.commons.io.input.Tailer
+Change Variable Type	ch : int to ch : byte in method private readLines(reader RandomAccessFile) : long from class org.apache.commons.io.input.Tailer
+Extract Method	public create(file File, listener TailerListener, delay long, end boolean, bufSize int) : Tailer extracted from public create(file File, listener TailerListener, delay long, end boolean) : Tailer in class org.apache.commons.io.input.Tailer
+Extract Attribute	private RAF_MODE : String in class org.apache.commons.io.input.Tailer
+Extract Variable	rePos : long in method private readLines(reader RandomAccessFile) : long from class org.apache.commons.io.input.Tailer
+Developers have reported that 11158 commits involve refactoring but only 1176 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1176 commits.
+
+No refactorings detected at 50d455eb8ddfa11271880265319fd774719f75d3
+
+No refactorings detected at 8dccdddc68935352e7973bd5f0435ce07b87468d
+
+No refactorings detected at 583638baf42a6ca0cdba74d8f0fd9206823d73d4
+
+No refactorings detected at 5a23a77eacd7f42931f2cacf81061792b5052040
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef236756f6a02950c65129
+Issue Title: : Add FileUtils.copyInputStreamToFile API with option to leave the source open
+Refactorings at 1e0666d90d8a12cb010265ca453a5cdfadf1ed77
+Extract Method	public copyInputStreamToFile(source InputStream, destination File, closeSource boolean) : void extracted from public copyInputStreamToFile(source InputStream, destination File) : void in class org.apache.commons.io.FileUtils
+Inline Variable	input : InputStream in method public copyURLToFile(source URL, destination File) : void from class org.apache.commons.io.FileUtils
+Inline Variable	input : InputStream in method public copyURLToFile(source URL, destination File, connectionTimeout int, readTimeout int) : void from class org.apache.commons.io.FileUtils
+Developers have reported that 11158 commits involve refactoring but only 1177 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1177 commits.
+
+No refactorings detected at 587571dde227323b50a1c43dddfeda38f18c3adf
+
+No refactorings detected at 558e03e490f2f81c78bedb9b3d71dd55e75de5cb
+
+No refactorings detected at 02c9bc67445bb77814ff7aae7872c24f1ab5b072
+
+No refactorings detected at 30a51de13c6f80dbf9e64574f4ee89f5e05a7a36
+
+No refactorings detected at 106c87c9929f92d31498b14dcca7f059e4d730ac
+
+No refactorings detected at 26acd219f08cf99be718f2bc3127a41dc33df6a3
+
+No refactorings detected at 43c87acfd5b32d469ea395804399fc520fec7861
+
+No refactorings detected at 6feec370c38a8776be3f0cb17efa720750377b30
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef237d56f6a02950c65219
+Issue Title: : Add API with array offset and length argument to FileUtils.writeByteArrayToFile
+Refactorings at 3d12a7b2d9396c4f643984c05686986d735e31c9
+Extract Method	public writeByteArrayToFile(file File, data byte[], off int, len int, append boolean) : void extracted from public writeByteArrayToFile(file File, data byte[], append boolean) : void in class org.apache.commons.io.FileUtils
+Developers have reported that 11158 commits involve refactoring but only 1178 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1178 commits.
+
+No refactorings detected at a1f4d43253ac11abe8cf3ed53876dabc885d7b30
+
+No refactorings detected at 13367815a956ea794c8edfcb332073734e5ab801
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef238756f6a02950c6529d
+Issue Title: : Add API IOUtils.copy(InputStream, OutputStream, int)
+Refactorings at 03027d8ff28929e3e5a618a31e9bcab0c90d0c0b
+Extract Method	public copy(input InputStream, output OutputStream, bufferSize int) : long extracted from public copyLarge(input InputStream, output OutputStream) : long in class org.apache.commons.io.IOUtils
+Parameterize Attribute	DEFAULT_BUFFER_SIZE : int to bufferSize : int in method public copy(input InputStream, output OutputStream, bufferSize int) : long from class org.apache.commons.io.IOUtils
+Developers have reported that 11158 commits involve refactoring but only 1179 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1179 commits.
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef238f56f6a02950c65302
+Issue Title: : Add Charset sister APIs to method that take a String charset name.
+Refactorings at 34f049caaa1f9048cc7385e0224136110bfc75f9
+Extract Method	public toByteArray(input Reader, encoding Charset) : byte[] extracted from public toByteArray(input Reader) : byte[] in class org.apache.commons.io.IOUtils
+Extract Method	public toByteArray(input Reader, encoding Charset) : byte[] extracted from public toByteArray(input Reader, encoding String) : byte[] in class org.apache.commons.io.IOUtils
+Extract Method	public toCharArray(is InputStream, encoding Charset) : char[] extracted from public toCharArray(is InputStream) : char[] in class org.apache.commons.io.IOUtils
+Extract Method	public toCharArray(is InputStream, encoding Charset) : char[] extracted from public toCharArray(is InputStream, encoding String) : char[] in class org.apache.commons.io.IOUtils
+Extract Method	public toString(input InputStream, encoding Charset) : String extracted from public toString(input InputStream, encoding String) : String in class org.apache.commons.io.IOUtils
+Extract Method	public toString(uri URI, encoding Charset) : String extracted from public toString(uri URI, encoding String) : String in class org.apache.commons.io.IOUtils
+Extract Method	public toString(url URL, encoding Charset) : String extracted from public toString(url URL, encoding String) : String in class org.apache.commons.io.IOUtils
+Extract Method	public readLines(input InputStream, encoding Charset) : List<String> extracted from public readLines(input InputStream) : List<String> in class org.apache.commons.io.IOUtils
+Extract Method	public readLines(input InputStream, encoding Charset) : List<String> extracted from public readLines(input InputStream, encoding String) : List<String> in class org.apache.commons.io.IOUtils
+Extract Method	public lineIterator(input InputStream, encoding Charset) : LineIterator extracted from public lineIterator(input InputStream, encoding String) : LineIterator in class org.apache.commons.io.IOUtils
+Extract Method	public toInputStream(input CharSequence, encoding Charset) : InputStream extracted from public toInputStream(input CharSequence) : InputStream in class org.apache.commons.io.IOUtils
+Extract Method	public toInputStream(input CharSequence, encoding Charset) : InputStream extracted from public toInputStream(input CharSequence, encoding String) : InputStream in class org.apache.commons.io.IOUtils
+Extract Method	public toInputStream(input String, encoding Charset) : InputStream extracted from public toInputStream(input String) : InputStream in class org.apache.commons.io.IOUtils
+Extract Method	public toCharset(charset String) : Charset extracted from public toInputStream(input String, encoding String) : InputStream in class org.apache.commons.io.IOUtils
+Extract Method	public write(data byte[], output Writer, encoding Charset) : void extracted from public write(data byte[], output Writer) : void in class org.apache.commons.io.IOUtils
+Extract Method	public write(data byte[], output Writer, encoding Charset) : void extracted from public write(data byte[], output Writer, encoding String) : void in class org.apache.commons.io.IOUtils
+Extract Method	public write(data char[], output OutputStream, encoding Charset) : void extracted from public write(data char[], output OutputStream) : void in class org.apache.commons.io.IOUtils
+Extract Method	public write(data char[], output OutputStream, encoding Charset) : void extracted from public write(data char[], output OutputStream, encoding String) : void in class org.apache.commons.io.IOUtils
+Extract Method	public write(data CharSequence, output OutputStream, encoding Charset) : void extracted from public write(data CharSequence, output OutputStream) : void in class org.apache.commons.io.IOUtils
+Extract Method	public write(data CharSequence, output OutputStream, encoding Charset) : void extracted from public write(data CharSequence, output OutputStream, encoding String) : void in class org.apache.commons.io.IOUtils
+Extract Method	public write(data String, output OutputStream, encoding Charset) : void extracted from public write(data String, output OutputStream) : void in class org.apache.commons.io.IOUtils
+Extract Method	public write(data String, output OutputStream, encoding Charset) : void extracted from public write(data String, output OutputStream, encoding String) : void in class org.apache.commons.io.IOUtils
+Extract Method	public writeLines(lines Collection<?>, lineEnding String, output OutputStream, encoding Charset) : void extracted from public writeLines(lines Collection<?>, lineEnding String, output OutputStream) : void in class org.apache.commons.io.IOUtils
+Extract Method	public writeLines(lines Collection<?>, lineEnding String, output OutputStream, encoding Charset) : void extracted from public writeLines(lines Collection<?>, lineEnding String, output OutputStream, encoding String) : void in class org.apache.commons.io.IOUtils
+Extract Method	public copy(input InputStream, output Writer, encoding Charset) : void extracted from public copy(input InputStream, output Writer) : void in class org.apache.commons.io.IOUtils
+Extract Method	public copy(input InputStream, output Writer, encoding Charset) : void extracted from public copy(input InputStream, output Writer, encoding String) : void in class org.apache.commons.io.IOUtils
+Extract Method	public copy(input Reader, output OutputStream, encoding Charset) : void extracted from public copy(input Reader, output OutputStream) : void in class org.apache.commons.io.IOUtils
+Extract Method	public copy(input Reader, output OutputStream, encoding Charset) : void extracted from public copy(input Reader, output OutputStream, encoding String) : void in class org.apache.commons.io.IOUtils
+Extract Variable	reader : InputStreamReader in method public readLines(input InputStream, encoding Charset) : List<String> from class org.apache.commons.io.IOUtils
+Extract Variable	cs : Charset in method public writeLines(lines Collection<?>, lineEnding String, output OutputStream, encoding Charset) : void from class org.apache.commons.io.IOUtils
+Extract Variable	in : InputStreamReader in method public copy(input InputStream, output Writer, encoding Charset) : void from class org.apache.commons.io.IOUtils
+Remove Method Annotation	@Deprecated in method public toString(input byte[], encoding String) : String from class org.apache.commons.io.IOUtils
+Inline Variable	in : InputStreamReader in method public copy(input InputStream, output Writer, encoding String) : void from class org.apache.commons.io.IOUtils
+Rename Variable	ioe : IOException to e : IOException in method public tearDown() : void from class org.apache.commons.io.IOUtilsTestCase
+Add Method Annotation	@Before in method protected setUp() : void from class org.apache.commons.io.LineIteratorTestCase
+Add Method Annotation	@After in method protected tearDown() : void from class org.apache.commons.io.LineIteratorTestCase
+Add Method Annotation	@Test in method public testConstructor() : void from class org.apache.commons.io.LineIteratorTestCase
+Add Method Annotation	@Test in method public testZeroLines() : void from class org.apache.commons.io.LineIteratorTestCase
+Add Method Annotation	@Test in method public testOneLines() : void from class org.apache.commons.io.LineIteratorTestCase
+Add Method Annotation	@Test in method public testTwoLines() : void from class org.apache.commons.io.LineIteratorTestCase
+Add Method Annotation	@Test in method public testThreeLines() : void from class org.apache.commons.io.LineIteratorTestCase
+Add Method Annotation	@Test in method public testMissingFile() : void from class org.apache.commons.io.LineIteratorTestCase
+Add Method Annotation	@Test in method public testValidEncoding() : void from class org.apache.commons.io.LineIteratorTestCase
+Change Variable Type	expected : UnsupportedEncodingException to expected : UnsupportedCharsetException in method public testInvalidEncoding() : void from class org.apache.commons.io.LineIteratorTestCase
+Add Method Annotation	@Test in method public testInvalidEncoding() : void from class org.apache.commons.io.LineIteratorTestCase
+Add Method Annotation	@Test in method public testNextLineOnlyDefaultEncoding() : void from class org.apache.commons.io.LineIteratorTestCase
+Add Method Annotation	@Test in method public testNextLineOnlyNullEncoding() : void from class org.apache.commons.io.LineIteratorTestCase
+Add Method Annotation	@Test in method public testNextLineOnlyUtf8Encoding() : void from class org.apache.commons.io.LineIteratorTestCase
+Add Method Annotation	@Test in method public testNextOnly() : void from class org.apache.commons.io.LineIteratorTestCase
+Add Method Annotation	@Test in method public testNextWithException() : void from class org.apache.commons.io.LineIteratorTestCase
+Add Method Annotation	@Test in method public testCloseEarly() : void from class org.apache.commons.io.LineIteratorTestCase
+Add Method Annotation	@Test in method public testFilteringFileReader() : void from class org.apache.commons.io.LineIteratorTestCase
+Add Method Annotation	@Test in method public testFilteringBufferedReader() : void from class org.apache.commons.io.LineIteratorTestCase
+Developers have reported that 11158 commits involve refactoring but only 1180 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1180 commits.
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef238f56f6a02950c65302
+Issue Title: : Add Charset sister APIs to method that take a String charset name.
+Refactorings at e62f537b2ae7a8d0128142ba7d1c774766bf3cd5
+Change Attribute Type	encoding : String to encoding : Charset in class org.apache.commons.io.input.ReversedLinesFileReader
+Developers have reported that 11158 commits involve refactoring but only 1181 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1181 commits.
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef238f56f6a02950c65302
+Issue Title: : Add Charset sister APIs to method that take a String charset name.
+Refactorings at c8f8c3aa9a9aa3d979a2306c90b78316e36b15df
+Change Parameter Type	encoding : String to encoding : Charset in method private initWriter(file File, encoding Charset, append boolean) : Writer from class org.apache.commons.io.output.LockableFileWriter
+Change Variable Type	ex : IOException to ex : UnsupportedCharsetException in method public testConstructor_File_encoding_badEncoding() : void from class org.apache.commons.io.output.LockableFileWriterTest
+Add Thrown Exception Type	IOException in method public testConstructor_File_encoding_badEncoding() : void from class org.apache.commons.io.output.LockableFileWriterTest
+Developers have reported that 11158 commits involve refactoring but only 1182 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1182 commits.
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef238f56f6a02950c65302
+Issue Title: : Add Charset sister APIs to method that take a String charset name.
+Refactorings at 55bae88d398feed4a3008ec5e97eb8b85c983b1e
+Extract Method	public readFileToString(file File, encoding Charset) : String extracted from public readFileToString(file File, encoding String) : String in class org.apache.commons.io.FileUtils
+Extract Method	public readLines(file File, encoding Charset) : List<String> extracted from public readLines(file File, encoding String) : List<String> in class org.apache.commons.io.FileUtils
+Extract Method	public writeStringToFile(file File, data String, encoding Charset, append boolean) : void extracted from public writeStringToFile(file File, data String, encoding String, append boolean) : void in class org.apache.commons.io.FileUtils
+Extract Method	public write(file File, data CharSequence, encoding Charset, append boolean) : void extracted from public write(file File, data CharSequence, encoding String, append boolean) : void in class org.apache.commons.io.FileUtils
+Extract Class	org.apache.commons.io.Charsets from class org.apache.commons.io.IOUtils
+Move Method	public toCharset(charset Charset) : Charset from class org.apache.commons.io.IOUtils to public toCharset(charset Charset) : Charset from class org.apache.commons.io.Charsets
+Move Method	public toCharset(charset String) : Charset from class org.apache.commons.io.IOUtils to public toCharset(charset String) : Charset from class org.apache.commons.io.Charsets
+Developers have reported that 11158 commits involve refactoring but only 1183 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1183 commits.
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef238f56f6a02950c65302
+Issue Title: : Add Charset sister APIs to method that take a String charset name.
+Refactorings at a084b0e44861dafc8f3973dd8c3eb570b140b9f4
+Add Method Annotation	@Test in method public testToCharset() : void from class org.apache.commons.io.CharsetsTestCase
+Move Method	public testToCharset() : void from class org.apache.commons.io.IOUtilsTestCase to public testToCharset() : void from class org.apache.commons.io.CharsetsTestCase
+Developers have reported that 11158 commits involve refactoring but only 1184 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1184 commits.
+
+No refactorings detected at 4ea616e7930795fc334d067a0ccb7241fd153493
+
+No refactorings detected at 32eeb20ee9096257520cded0d1af33d4664f8619
+
+No refactorings detected at 9fcaf4f59776468003a7b07808cc342b1076bb81
+
+No refactorings detected at 699d6f0eca65837501d7ab7a92ae2c614f8e6cbf
+
+No refactorings detected at fcc6361946b1809771e136af566518320006c01e
+
+No refactorings detected at 4da8e8ad1d29f542306e3766511fe0c6e1e3eacb
+
+No refactorings detected at bf545e4dd3a0414879b5707c8750613c24db8730
+
+No refactorings detected at 279f0c652ae48942b37dc87529ee2a40a68a4cc9
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef23d356f6a02950c65610
+Issue Title: : Add a ByteOrderUtils class
+Refactorings at 7379cbb2fe7b69aa871127e64a51763c445a570e
+Rename Class	org.apache.commons.io.ByteOrderUtilsTest renamed to org.apache.commons.io.ByteOrderParserTest
+Inline Variable	valueUp : String in method public parseByteOrder(value String) : ByteOrder from class org.apache.commons.io.ByteOrderUtils
+Move Method	public parseByteOrder(value String) : ByteOrder from class org.apache.commons.io.ByteOrderUtils to public parseByteOrder(value String) : ByteOrder from class org.apache.commons.io.ByteOrderParser
+Developers have reported that 11158 commits involve refactoring but only 1185 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1185 commits.
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef23d356f6a02950c65610
+Issue Title: : Add a ByteOrderUtils class
+Refactorings at 928da12b15c987e16b2481c43614c8e868be1c04
+Rename Class	org.apache.commons.io.ByteOrderFactory renamed to org.apache.commons.io.ByteOrderUtils
+Rename Class	org.apache.commons.io.ByteOrderFactoryTest renamed to org.apache.commons.io.ByteOrderUtilsTest
+Developers have reported that 11158 commits involve refactoring but only 1186 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1186 commits.
+
+No refactorings detected at eaeffded81ec88f4d0e7494bd544821412435ce8
+
+No refactorings detected at 842bf6f447aac7d05c75c6143a5affe9e383b3b3
+
+No refactorings detected at af91ffc3140761773df9b796760e41ef5152c28a
+
+No refactorings detected at 96b43a3d6b731d38b4bc55456f12de7fcca7c3a1
+
+No refactorings detected at 31c0d3a8e94b1016843596acea17a63bed9d4558
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef23de56f6a02950c65685
+Issue Title: : After a few unit tests, a few newly created are directories not cleaned completely.
+Refactorings at 5e3359388b0732fd1b3d055036187525eea76521
+Add Thrown Exception Type	IOException in method public tearDown() : void from class org.apache.commons.io.output.LockableFileWriterTest
+Developers have reported that 11158 commits involve refactoring but only 1187 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1187 commits.
+
+No refactorings detected at 96b43a3d6b731d38b4bc55456f12de7fcca7c3a1
+
+No refactorings detected at bfd83b00eb5743ad4ad0d24957f84b61ef9f5f79
+
+No refactorings detected at 9d432121e1c60557da3e159252a88885944e5f00
+
+No refactorings detected at 9cd31226588fa303886b9daac162d5aa753e8e15
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef23e956f6a02950c6570b
+Issue Title: : Add a FileSystem enum to provide legal file names
+Refactorings at 4f50c37506de036bb34094095aaa6d4d831bfbb7
+Add Parameter	reservedFileNames : String[] in method private FileSystem(maxFileLength int, maxPathLength int, illegalFileNameChars char[], reservedFileNames String[]) from class org.apache.commons.io.FileSystem
+Add Variable Modifier	final in variable chars : char[] in method public testSorted() : void from class org.apache.commons.io.FileSystemTestCase
+Add Variable Modifier	final in variable fs : FileSystem in method public testSorted() : void from class org.apache.commons.io.FileSystemTestCase
+Add Variable Modifier	final in variable fs : FileSystem in method public testToLegalFileNameWindows() : void from class org.apache.commons.io.FileSystemTestCase
+Add Variable Modifier	final in variable replacement : char in method public testToLegalFileNameWindows() : void from class org.apache.commons.io.FileSystemTestCase
+Add Variable Modifier	final in variable illegal : char[] in method public testToLegalFileNameWindows() : void from class org.apache.commons.io.FileSystemTestCase
+Add Variable Modifier	final in variable fs : FileSystem in method public testIsLegalName() : void from class org.apache.commons.io.FileSystemTestCase
+Add Variable Modifier	final in variable iae : IllegalArgumentException in method public testReplacementWithNUL() : void from class org.apache.commons.io.FileSystemTestCase
+Add Variable Modifier	final in variable fs : FileSystem in method public testReplacementWithNUL() : void from class org.apache.commons.io.FileSystemTestCase
+Developers have reported that 11158 commits involve refactoring but only 1188 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1188 commits.
+
+No refactorings detected at 71fc2c4c817a8c9bb41650d5b27a89e207a68c39
+
+No refactorings detected at 7791a851c4a303f47743b156007fb19c6ed8ed81
+
+VCS System: https://github.com/apache/commons-io.git
+Issue ID: : 5bef240056f6a02950c6583a
+Issue Title: : Refactor duplicate code in org.apache.commons.io.FileUtils
+Refactorings at f0751b65cf680456557aa1bf5c56b12f5c1a0fe0
+Extract Method	private innerListFilesOrDirectories(directory File, fileFilter IOFileFilter, dirFilter IOFileFilter, includeSubDirectories boolean) : Collection<File> extracted from public listFiles(directory File, fileFilter IOFileFilter, dirFilter IOFileFilter) : Collection<File> in class org.apache.commons.io.FileUtils
+Extract Method	private innerListFilesOrDirectories(directory File, fileFilter IOFileFilter, dirFilter IOFileFilter, includeSubDirectories boolean) : Collection<File> extracted from public listFilesAndDirs(directory File, fileFilter IOFileFilter, dirFilter IOFileFilter) : Collection<File> in class org.apache.commons.io.FileUtils
+Extract Method	private validateMoveParameters(src File, dest File) : void extracted from public moveDirectory(srcDir File, destDir File) : void in class org.apache.commons.io.FileUtils
+Extract Method	private validateMoveParameters(src File, dest File) : void extracted from public moveDirectoryToDirectory(src File, destDir File, createDestDir boolean) : void in class org.apache.commons.io.FileUtils
+Extract Method	private validateMoveParameters(src File, dest File) : void extracted from public moveFile(srcFile File, destFile File) : void in class org.apache.commons.io.FileUtils
+Extract Method	private validateMoveParameters(src File, dest File) : void extracted from public moveFileToDirectory(srcFile File, destDir File, createDestDir boolean) : void in class org.apache.commons.io.FileUtils
+Extract Method	private validateMoveParameters(src File, dest File) : void extracted from public moveToDirectory(src File, destDir File, createDestDir boolean) : void in class org.apache.commons.io.FileUtils
+Rename Parameter	srcDir : File to src : File in method private validateMoveParameters(src File, dest File) : void from class org.apache.commons.io.FileUtils
+Rename Parameter	destDir : File to dest : File in method private validateMoveParameters(src File, dest File) : void from class org.apache.commons.io.FileUtils
+Rename Parameter	destDir : File to dest : File in method private validateMoveParameters(src File, dest File) : void from class org.apache.commons.io.FileUtils
+Rename Parameter	destDir : File to dest : File in method private validateMoveParameters(src File, dest File) : void from class org.apache.commons.io.FileUtils
+Rename Parameter	destDir : File to dest : File in method private validateMoveParameters(src File, dest File) : void from class org.apache.commons.io.FileUtils
+Rename Parameter	srcFile : File to src : File in method private validateMoveParameters(src File, dest File) : void from class org.apache.commons.io.FileUtils
+Rename Parameter	srcFile : File to src : File in method private validateMoveParameters(src File, dest File) : void from class org.apache.commons.io.FileUtils
+Rename Parameter	destFile : File to dest : File in method private validateMoveParameters(src File, dest File) : void from class org.apache.commons.io.FileUtils
+Developers have reported that 11158 commits involve refactoring but only 1189 involve refactoring operations
+There are 24 duplicate commits with refactoring out of the 1189 commits.
+

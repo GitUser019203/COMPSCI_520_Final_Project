@@ -6,17 +6,17 @@ import urllib
 
 pw = "mongoElise@2024"
 
-with open("./Python/issue_tracked_projects.txt",'r') as file:
+with open("issue_tracked_projects.txt",'r') as file:
     for line in file:
         project_data = line.strip().split(',')
     
-with open("./Python/regexp.txt",'r') as file:
+with open("regexp.txt",'r') as file:
     for line in file:
         reg_exp = line.strip()
 
 # You may have to update this dict to match your DB credentials
-credentials = {'db_user': 'root',
-               'db_password': urllib.parse.quote(pw),
+credentials = {'db_user': '',
+               'db_password': '',
                'db_hostname': 'localhost',
                'db_port': 27017,
                'db_authentication_database': '',
@@ -36,7 +36,7 @@ total_num_commits_reporting_refactoring_linked_to_issues_documenting_refactoring
 unique_commit_hashes = set()
 unique_commit_hashes_with_refactoring_reported = set()
 
-with open("./Python/extractedIssueComments.txt", 'w', encoding="utf-8") as out_file:
+with open("extractedIssueComments.txt", 'w', encoding="utf-8") as out_file:
     for projects in projectCollection:
         for project in projects:
             vcs_system_reported_refactoring = False

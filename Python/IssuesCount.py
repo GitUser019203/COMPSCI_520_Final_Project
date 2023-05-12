@@ -57,8 +57,13 @@ def countIssueBodiesContaining(file_path, key_word_list):
 def main():
     """Main Method"""
     # File path
+<<<<<<< HEAD
     file_path_test_refactor = "./Python/extractedIssueDescRefactoring.txt"
     file_path_test_bugs = "./Python/extractedIssueDescBugs.txt"
+=======
+    # file_path_test = "mongo_db_extract_refactoring_doc.txt"
+    file_path_test = "extractedIssueDescRefactoring.txt"
+>>>>>>> 051ad6828256e30183d42757da1cb1109f83d231
 
     # Calculate total number of issue bodies
     # total_iss = countTotalIssueBodies(file_path=file_path_test)

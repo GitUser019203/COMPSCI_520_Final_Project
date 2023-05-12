@@ -5,7 +5,7 @@
     <ProjectGuid>4c889f48-76b6-4c25-8f84-ada9d29d7352</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>Python\PythonApplication.py</StartupFile>
+    <StartupFile>Python\IssueRefactoringDocCalculator\ref_operations_extractor.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,17 +24,30 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Python\bug_mining.py" />
+    <Compile Include="Python\ExtractingIssueCommentsBugs.py" />
+    <Compile Include="Python\ExtractingIssueCommentsRefactoring.py" />
+    <Compile Include="Python\ExtractingIssueDescBugs.py" />
+    <Compile Include="Python\ExtractingIssueDescRefactoring.py" />
+    <Compile Include="Python\IssueBodiesCount.py" />
     <Compile Include="Python\IssueRefactoringDocCalculator\main.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Python\IssueRefactoringDocCalculator\ref_operations_extractor.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Python\IssuesCount.py" />
     <Compile Include="Python\JavaConsoleOutputParser\parser.py" />
     <Compile Include="Python\PythonApplication.py" />
+    <Compile Include="Python\PythonApplicationForBugs.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="C++\projects.cpp" />
     <Content Include="C++\regexp_gen1.cpp" />
     <Content Include="C++\regexp_gen2.cpp" />
+    <Content Include="Java\commonConsoleOutput" />
     <Content Include="Java\consoleOutput" />
+    <Content Include="Java\consoleOutput_after_nutch" />
+    <Content Include="Java\consoleOutput_till_nutch" />
     <Content Include="Java\detectedRefactorings\ant-ivy.refactorings" />
     <Content Include="Java\detectedRefactorings\archiva.git.refactorings" />
     <Content Include="Java\detectedRefactorings\calcite.git.refactorings" />
@@ -73,7 +86,8 @@
     <Content Include="Java\detectedRefactorings\systemml.git.refactorings" />
     <Content Include="Java\detectedRefactorings\tika.git.refactorings" />
     <Content Include="Java\detectedRefactorings\wss4j.git.refactorings" />
-    <Content Include="Java\Main.java" />
+    <Content Include="Java\Main_from_nutch.java" />
+    <Content Include="Java\Main_till_nutch.java" />
     <Content Include="Java\MyGitHistoryRefactoringMinerImpl.java" />
     <Content Include="Java\MyGitService.java" />
     <Content Include="Java\MyGitServiceImpl.java" />
@@ -81,6 +95,14 @@
     <Content Include="Java\Screenshot 2023-05-06 213403.png" />
     <Content Include="Java\Screenshot 2023-05-07 072010 %28mineLastCommitInSantuarioJavaRepo%29.png" />
     <Content Include="Java\Screenshot 2023-05-07 075334%28mineLastCommitInSantuarioJavaRepo%29.png" />
+    <Content Include="Python\.DS_Store" />
+    <Content Include="Python\BugIssueTitle.png" />
+    <Content Include="Python\BugsVSIssues.png" />
+    <Content Include="Python\BugSynonymsIssues.png" />
+    <Content Include="Python\extractedIssueCommentsBugs.txt" />
+    <Content Include="Python\extractedIssueCommentsRefactoring.txt" />
+    <Content Include="Python\extractedIssueDescBugs.txt" />
+    <Content Include="Python\extractedIssueDescRefactoring.txt" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-06 200507.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-03 211753.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-03 212311.png" />
@@ -98,14 +120,41 @@
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-06 200507.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-06 200925.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-06 201636.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 075759.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 075818.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 075844.html" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 075844.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 080013.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 080040.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 080100.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 080155.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 080218.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 080237.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 080252.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 080333.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 080458.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 080528.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 080848.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 080855.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 080927.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 080957.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 081022.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 081037.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 081049.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\todo.txt" />
     <Content Include="Python\IssueRefactoringDocCalculator\data.txt" />
+    <Content Include="Python\IssueRefactoringDocCalculator\issue_refactoring_doc_text_patterns - MATLAB.csv" />
     <Content Include="Python\IssueRefactoringDocCalculator\issue_title_refactoring_doc_text_patterns.csv" />
-    <Content Include="Python\IssueRefactoringDocCalculator\issue_title_refactoring_doc_text_patterns.csv.xlsx" />
+    <Content Include="Python\IssueRefactoringDocCalculator\issue_refactoring_doc_text_patterns.csv.xlsx" />
+    <Content Include="Python\IssueRefactoringDocCalculator\refactoring_operations_clustered_by_class.csv" />
     <Content Include="Python\IssueRefactoringDocCalculator\reg_exp_grouped.txt" />
+    <Content Include="Python\IssueRefactoringDocCalculator\test.csv" />
+    <Content Include="Python\IssueRefactoringDocCalculator\word_cloud.png" />
+    <Content Include="Python\IssueRefactoringDocCalculator\word_cloud_gen.m" />
     <Content Include="Python\issue_tracked_projects.txt" />
-    <Content Include="Python\JavaConsoleOutputParser\detected_errors" />
+    <Content Include="Python\JavaConsoleOutputParser\extracted_errors" />
     <Content Include="Python\mongo_db_extract_refactoring_doc.txt" />
+    <Content Include="Python\PythonApplicationForRefactoring" />
     <Content Include="Python\regexp.txt" />
     <Content Include="Python\WSS4J\wss4j.mongodb" />
     <Content Include="Python\WSS4J\wss4j.mongodb.csv" />
