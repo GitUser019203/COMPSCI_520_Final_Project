@@ -1,0 +1,146 @@
+<button class="myBtnLink" id="myBtnLink">
+    Refactorings
+    <div class="myDIVLink" id="myDIVLink" style="visibility: hidden; opacity: 0; transition-delay: 0.2s;">
+        <input type="checkbox" id="checkbox" checked="true">
+        <label> ALL REFACTORING TYPES || </label>
+        <input type="checkbox" id="Add Attribute Modifier check" checked="true"> Add Attribute Modifier ||
+        <input type="checkbox" id="Rename Attribute check" checked="true"> Rename Attribute ||
+        <input type="checkbox" id="Change Parameter Type check" checked="true"> Change Parameter Type ||
+        <input type="checkbox" id="Extract Class check" checked="true"> Extract Class ||
+        <input type="checkbox" id="Move Method check" checked="true"> Move Method ||
+        <input type="checkbox" id="Move Attribute check" checked="true"> Move Attribute ||
+        <input type="checkbox" id="Move And Rename Method check" checked="true"> Move And Rename Method ||
+        <label> </label>
+        <button id="aBtn" class="aBtn">
+            <img class="pinIcon" id="pinIcon" src="chrome-extension://lnloiaibmonmmpnfibfjjlfcddoppmgd/pin.png">
+            <div class="tooltipPin" id="tooltipPin">Pin</div>
+        </button>
+        <div id="myLink" class="myLink" style="display: none;">
+            <b>Add Attribute Modifier</b> final in attribute
+            <a href="#diff-e950c9d301a38e22e58e4ac3fa7644b4f032ae2622c6279b45db35835538e153L15"></a>
+            <a href="#diff-e950c9d301a38e22e58e4ac3fa7644b4f032ae2622c6279b45db35835538e153R15">private block : GTRowBlock</a> from class org.apache.kylin.storage.gridtable.GTBuilder
+            <br>
+            <b>Rename Attribute</b>
+            <a href="#diff-e950c9d301a38e22e58e4ac3fa7644b4f032ae2622c6279b45db35835538e153L13">writer : IGTStoreWriter</a> to
+            <a href="#diff-e950c9d301a38e22e58e4ac3fa7644b4f032ae2622c6279b45db35835538e153R13">storeWriter : IGTStoreWriter</a> in class org.apache.kylin.storage.gridtable.GTBuilder
+            <br>
+            <b>Change Parameter Type</b>
+            <a href="#diff-f8fdf43498c0e00d403a2e76f2eb241bb5cb9af4f5c293dd71ce75a42f1b62dcL45">fillLast : GTRowBlock</a> to
+            <a href="#diff-f8fdf43498c0e00d403a2e76f2eb241bb5cb9af4f5c293dd71ce75a42f1b62dcR45">fillLast : GTRowBlock.Writer</a> in method
+            <a href="#diff-f8fdf43498c0e00d403a2e76f2eb241bb5cb9af4f5c293dd71ce75a42f1b62dcR44">public append(shard int, fillLast GTRowBlock.Writer) : IGTStoreWriter</a> from class org.apache.kylin.storage.gridtable.memstore.GTSimpleMemStore
+            <br>
+            <b>Extract Class</b>
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R50"></a>
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R50">org.apache.kylin.storage.gridtable.GTRowBlock.Writer</a> from class
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R8">org.apache.kylin.storage.gridtable.GTRowBlock</a>
+            <br>
+            <b>Extract Class</b>
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R106"></a>
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R106">org.apache.kylin.storage.gridtable.GTRowBlock.Reader</a> from class
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R8">org.apache.kylin.storage.gridtable.GTRowBlock</a>
+            <br>
+            <b>Move Method</b>
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72L63">public append(r GTRecord) : void</a> from class org.apache.kylin.storage.gridtable.GTRowBlock to
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R72">public append(r GTRecord) : void</a> from class org.apache.kylin.storage.gridtable.GTRowBlock.Writer
+            <br>
+            <b>Move Method</b>
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72L81">public clearForNext() : void</a> from class org.apache.kylin.storage.gridtable.GTRowBlock to
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R89">public clearForNext() : void</a> from class org.apache.kylin.storage.gridtable.GTRowBlock.Writer
+            <br>
+            <b>Move Attribute</b>
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72L33">package cellBlockBuffers : ByteBuffer[]</a> from class org.apache.kylin.storage.gridtable.GTRowBlock to
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R51">package cellBlockBuffers : ByteBuffer[]</a> from class org.apache.kylin.storage.gridtable.GTRowBlock.Writer
+            <br>
+            <b>Move Attribute</b>
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72L31">package primaryKeyBuffer : ByteBuffer</a> from class org.apache.kylin.storage.gridtable.GTRowBlock to
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R108">package primaryKeyBuffer : ByteBuffer</a> from class org.apache.kylin.storage.gridtable.GTRowBlock.Reader
+            <br>
+            <b>Move And Rename Method</b>
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72L50">public copyAndReadyAppend(other GTRowBlock) : void</a> from class org.apache.kylin.storage.gridtable.GTRowBlock to
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R60">public copyFrom(other GTRowBlock) : void</a> from class org.apache.kylin.storage.gridtable.GTRowBlock.Writer
+            <br>
+            <b>Move And Rename Method</b>
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72L74">public flipCellBlockBuffers() : void</a> from class org.apache.kylin.storage.gridtable.GTRowBlock to
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R83">public readyForFlush() : void</a> from class org.apache.kylin.storage.gridtable.GTRowBlock.Writer
+            <br>
+            <b>Change Parameter Type</b>
+            <a href="#diff-0eba311eabcdc8c81970e1af274c6bb8bbd84274d449ae958ba916cf9a250ce4L19">fillLast : GTRowBlock</a> to
+            <a href="#diff-0eba311eabcdc8c81970e1af274c6bb8bbd84274d449ae958ba916cf9a250ce4R19">fillLast : GTRowBlock.Writer</a> in method
+            <a href="#diff-0eba311eabcdc8c81970e1af274c6bb8bbd84274d449ae958ba916cf9a250ce4R19">public append(shard int, fillLast GTRowBlock.Writer) : IGTStoreWriter</a> from class org.apache.kylin.storage.gridtable.IGTStore
+            <br>
+        </div>
+        <div id="div Add Attribute Modifier" class="Add Attribute Modifier">
+            1:
+            <b>Add Attribute Modifier</b> final in attribute
+            <a href="#diff-e950c9d301a38e22e58e4ac3fa7644b4f032ae2622c6279b45db35835538e153L15"></a>
+            <a href="#diff-e950c9d301a38e22e58e4ac3fa7644b4f032ae2622c6279b45db35835538e153R15">private block : GTRowBlock</a> from class org.apache.kylin.storage.gridtable.GTBuilder
+            <br>
+        </div>
+        <div id="div Rename Attribute" class="Rename Attribute">
+            2:
+            <b>Rename Attribute</b>
+            <a href="#diff-e950c9d301a38e22e58e4ac3fa7644b4f032ae2622c6279b45db35835538e153L13">writer : IGTStoreWriter</a> to
+            <a href="#diff-e950c9d301a38e22e58e4ac3fa7644b4f032ae2622c6279b45db35835538e153R13">storeWriter : IGTStoreWriter</a> in class org.apache.kylin.storage.gridtable.GTBuilder
+            <br>
+        </div>
+        <div id="div Change Parameter Type" class="Change Parameter Type">
+            3:
+            <b>Change Parameter Type</b>
+            <a href="#diff-f8fdf43498c0e00d403a2e76f2eb241bb5cb9af4f5c293dd71ce75a42f1b62dcL45">fillLast : GTRowBlock</a> to
+            <a href="#diff-f8fdf43498c0e00d403a2e76f2eb241bb5cb9af4f5c293dd71ce75a42f1b62dcR45">fillLast : GTRowBlock.Writer</a> in method
+            <a href="#diff-f8fdf43498c0e00d403a2e76f2eb241bb5cb9af4f5c293dd71ce75a42f1b62dcR44">public append(shard int, fillLast GTRowBlock.Writer) : IGTStoreWriter</a> from class org.apache.kylin.storage.gridtable.memstore.GTSimpleMemStore
+            <br>4:
+            <b>Change Parameter Type</b>
+            <a href="#diff-0eba311eabcdc8c81970e1af274c6bb8bbd84274d449ae958ba916cf9a250ce4L19">fillLast : GTRowBlock</a> to
+            <a href="#diff-0eba311eabcdc8c81970e1af274c6bb8bbd84274d449ae958ba916cf9a250ce4R19">fillLast : GTRowBlock.Writer</a> in method
+            <a href="#diff-0eba311eabcdc8c81970e1af274c6bb8bbd84274d449ae958ba916cf9a250ce4R19">public append(shard int, fillLast GTRowBlock.Writer) : IGTStoreWriter</a> from class org.apache.kylin.storage.gridtable.IGTStore
+            <br>
+        </div>
+        <div id="div Extract Class" class="Extract Class">
+            5:
+            <b>Extract Class</b>
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R50"></a>
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R50">org.apache.kylin.storage.gridtable.GTRowBlock.Writer</a> from class
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R8">org.apache.kylin.storage.gridtable.GTRowBlock</a>
+            <br>6:
+            <b>Extract Class</b>
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R106"></a>
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R106">org.apache.kylin.storage.gridtable.GTRowBlock.Reader</a> from class
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R8">org.apache.kylin.storage.gridtable.GTRowBlock</a>
+            <br>
+        </div>
+        <div id="div Move Method" class="Move Method">
+            7:
+            <b>Move Method</b>
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72L63">public append(r GTRecord) : void</a> from class org.apache.kylin.storage.gridtable.GTRowBlock to
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R72">public append(r GTRecord) : void</a> from class org.apache.kylin.storage.gridtable.GTRowBlock.Writer
+            <br>8:
+            <b>Move Method</b>
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72L81">public clearForNext() : void</a> from class org.apache.kylin.storage.gridtable.GTRowBlock to
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R89">public clearForNext() : void</a> from class org.apache.kylin.storage.gridtable.GTRowBlock.Writer
+            <br>
+        </div>
+        <div id="div Move Attribute" class="Move Attribute">
+            9:
+            <b>Move Attribute</b>
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72L33">package cellBlockBuffers : ByteBuffer[]</a> from class org.apache.kylin.storage.gridtable.GTRowBlock to
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R51">package cellBlockBuffers : ByteBuffer[]</a> from class org.apache.kylin.storage.gridtable.GTRowBlock.Writer
+            <br>10:
+            <b>Move Attribute</b>
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72L31">package primaryKeyBuffer : ByteBuffer</a> from class org.apache.kylin.storage.gridtable.GTRowBlock to
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R108">package primaryKeyBuffer : ByteBuffer</a> from class org.apache.kylin.storage.gridtable.GTRowBlock.Reader
+            <br>
+        </div>
+        <div id="div Move And Rename Method" class="Move And Rename Method">
+            11:
+            <b>Move And Rename Method</b>
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72L50">public copyAndReadyAppend(other GTRowBlock) : void</a> from class org.apache.kylin.storage.gridtable.GTRowBlock to
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R60">public copyFrom(other GTRowBlock) : void</a> from class org.apache.kylin.storage.gridtable.GTRowBlock.Writer
+            <br>12:
+            <b>Move And Rename Method</b>
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72L74">public flipCellBlockBuffers() : void</a> from class org.apache.kylin.storage.gridtable.GTRowBlock to
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R83">public readyForFlush() : void</a> from class org.apache.kylin.storage.gridtable.GTRowBlock.Writer
+            <br>
+        </div>
+    </div>
+</button>

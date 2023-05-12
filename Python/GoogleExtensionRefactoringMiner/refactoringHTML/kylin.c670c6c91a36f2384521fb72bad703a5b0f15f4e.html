@@ -1,0 +1,226 @@
+<button class="myBtnLink" id="myBtnLink">
+    Refactorings
+    <div class="myDIVLink" id="myDIVLink" style="visibility: hidden; opacity: 0; transition-delay: 0.2s;">
+        <input type="checkbox" id="checkbox" checked="true">
+        <label> ALL REFACTORING TYPES || </label>
+        <input type="checkbox" id="Change Method Access Modifier check" checked="true"> Change Method Access Modifier ||
+        <input type="checkbox" id="Inline Variable check" checked="true"> Inline Variable ||
+        <input type="checkbox" id="Change Parameter Type check" checked="true"> Change Parameter Type ||
+        <input type="checkbox" id="Localize Parameter check" checked="true"> Localize Parameter ||
+        <input type="checkbox" id="Add Parameter check" checked="true"> Add Parameter ||
+        <input type="checkbox" id="Move And Rename Method check" checked="true"> Move And Rename Method ||
+        <label> </label>
+        <button id="aBtn" class="aBtn">
+            <img class="pinIcon" id="pinIcon" src="chrome-extension://lnloiaibmonmmpnfibfjjlfcddoppmgd/pin.png">
+            <div class="tooltipPin" id="tooltipPin">Pin</div>
+        </button>
+        <div id="myLink" class="myLink" style="display: none;">
+            <b>Change Method Access Modifier</b> public to private in method
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R195">private export(dataOutputStream DataOutputStream, array ByteArray) : void</a> from class org.apache.kylin.storage.gridtable.GTRowBlock
+            <br>
+            <b>Inline Variable</b>
+            <a href="#diff-c93d837d365d7796587ca7f3b718d6710db9e2695ca04fb9c11304cfabab252cL27">start : ByteArray</a> in method
+            <a href="#diff-c93d837d365d7796587ca7f3b718d6710db9e2695ca04fb9c11304cfabab252cL24"></a>
+            <a href="#diff-c93d837d365d7796587ca7f3b718d6710db9e2695ca04fb9c11304cfabab252cR23">public GTRawScanner(info GTInfo, store IGTStore, req GTScanRequest)</a> from class org.apache.kylin.storage.gridtable.GTRawScanner
+            <br>
+            <b>Inline Variable</b>
+            <a href="#diff-c93d837d365d7796587ca7f3b718d6710db9e2695ca04fb9c11304cfabab252cL28">end : ByteArray</a> in method
+            <a href="#diff-c93d837d365d7796587ca7f3b718d6710db9e2695ca04fb9c11304cfabab252cL24"></a>
+            <a href="#diff-c93d837d365d7796587ca7f3b718d6710db9e2695ca04fb9c11304cfabab252cR23">public GTRawScanner(info GTInfo, store IGTStore, req GTScanRequest)</a> from class org.apache.kylin.storage.gridtable.GTRawScanner
+            <br>
+            <b>Change Parameter Type</b>
+            <a href="#diff-b47156acc345807a39a8c66fa38219968c0ef71ee06e063ba679c937c44a908fL154">pkStart : ByteArray</a> to
+            <a href="#diff-b47156acc345807a39a8c66fa38219968c0ef71ee06e063ba679c937c44a908fR154">pkStart : GTRecord</a> in method
+            <a href="#diff-b47156acc345807a39a8c66fa38219968c0ef71ee06e063ba679c937c44a908fR153">public scan(pkStart GTRecord, pkEnd GTRecord, selectedColBlocks BitSet, additionalPushDown GTScanRequest) : IGTStoreScanner</a> from class org.apache.kylin.storage.gridtable.diskstore.GTDiskStore
+            <br>
+            <b>Change Parameter Type</b>
+            <a href="#diff-b47156acc345807a39a8c66fa38219968c0ef71ee06e063ba679c937c44a908fL154">pkEnd : ByteArray</a> to
+            <a href="#diff-b47156acc345807a39a8c66fa38219968c0ef71ee06e063ba679c937c44a908fR154">pkEnd : GTRecord</a> in method
+            <a href="#diff-b47156acc345807a39a8c66fa38219968c0ef71ee06e063ba679c937c44a908fR153">public scan(pkStart GTRecord, pkEnd GTRecord, selectedColBlocks BitSet, additionalPushDown GTScanRequest) : IGTStoreScanner</a> from class org.apache.kylin.storage.gridtable.diskstore.GTDiskStore
+            <br>
+            <b>Change Parameter Type</b>
+            <a href="#diff-8d677bea04b9606a46bd0d7f790dcc4aa1c7613927ae52ebb24740d909096f46L104">pkStart : ByteArray</a> to
+            <a href="#diff-8d677bea04b9606a46bd0d7f790dcc4aa1c7613927ae52ebb24740d909096f46R103">pkStart : GTRecord</a> in method
+            <a href="#diff-8d677bea04b9606a46bd0d7f790dcc4aa1c7613927ae52ebb24740d909096f46R102">public scan(pkStart GTRecord, pkEnd GTRecord, selectedColBlocks BitSet, additionalPushDown GTScanRequest) : IGTStoreScanner</a> from class org.apache.kylin.storage.gridtable.GTComboStore
+            <br>
+            <b>Change Parameter Type</b>
+            <a href="#diff-8d677bea04b9606a46bd0d7f790dcc4aa1c7613927ae52ebb24740d909096f46L104">pkEnd : ByteArray</a> to
+            <a href="#diff-8d677bea04b9606a46bd0d7f790dcc4aa1c7613927ae52ebb24740d909096f46R103">pkEnd : GTRecord</a> in method
+            <a href="#diff-8d677bea04b9606a46bd0d7f790dcc4aa1c7613927ae52ebb24740d909096f46R102">public scan(pkStart GTRecord, pkEnd GTRecord, selectedColBlocks BitSet, additionalPushDown GTScanRequest) : IGTStoreScanner</a> from class org.apache.kylin.storage.gridtable.GTComboStore
+            <br>
+            <b>Change Parameter Type</b>
+            <a href="#diff-f8fdf43498c0e00d403a2e76f2eb241bb5cb9af4f5c293dd71ce75a42f1b62dcL81">pkStart : ByteArray</a> to
+            <a href="#diff-f8fdf43498c0e00d403a2e76f2eb241bb5cb9af4f5c293dd71ce75a42f1b62dcR81">pkStart : GTRecord</a> in method
+            <a href="#diff-f8fdf43498c0e00d403a2e76f2eb241bb5cb9af4f5c293dd71ce75a42f1b62dcR80">public scan(pkStart GTRecord, pkEnd GTRecord, selectedColBlocks BitSet, additionalPushDown GTScanRequest) : IGTStoreScanner</a> from class org.apache.kylin.storage.gridtable.memstore.GTSimpleMemStore
+            <br>
+            <b>Change Parameter Type</b>
+            <a href="#diff-f8fdf43498c0e00d403a2e76f2eb241bb5cb9af4f5c293dd71ce75a42f1b62dcL81">pkEnd : ByteArray</a> to
+            <a href="#diff-f8fdf43498c0e00d403a2e76f2eb241bb5cb9af4f5c293dd71ce75a42f1b62dcR81">pkEnd : GTRecord</a> in method
+            <a href="#diff-f8fdf43498c0e00d403a2e76f2eb241bb5cb9af4f5c293dd71ce75a42f1b62dcR80">public scan(pkStart GTRecord, pkEnd GTRecord, selectedColBlocks BitSet, additionalPushDown GTScanRequest) : IGTStoreScanner</a> from class org.apache.kylin.storage.gridtable.memstore.GTSimpleMemStore
+            <br>
+            <b>Change Parameter Type</b>
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bL67">pkStart : ByteArray</a> to
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR68">pkStart : GTRecord</a> in method
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR67">public scan(pkStart GTRecord, pkEnd GTRecord, selectedColumnBlocks BitSet, additionalPushDown GTScanRequest) : IGTStoreScanner</a> from class org.apache.kylin.storage.cube.CubeHBaseReadonlyStore
+            <br>
+            <b>Change Parameter Type</b>
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bL67">pkEnd : ByteArray</a> to
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR68">pkEnd : GTRecord</a> in method
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR67">public scan(pkStart GTRecord, pkEnd GTRecord, selectedColumnBlocks BitSet, additionalPushDown GTScanRequest) : IGTStoreScanner</a> from class org.apache.kylin.storage.cube.CubeHBaseReadonlyStore
+            <br>
+            <b>Change Parameter Type</b>
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bL125">pkStart : ByteArray</a> to
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR126">pkStart : GTRecord</a> in method
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR126">private buildScan(pkStart GTRecord, pkEnd GTRecord, selectedColumns List&lt;Pair&lt;byte[],byte[]&gt;&gt;) : Scan</a> from class org.apache.kylin.storage.cube.CubeHBaseReadonlyStore
+            <br>
+            <b>Change Parameter Type</b>
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bL125">pkEnd : ByteArray</a> to
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR126">pkEnd : GTRecord</a> in method
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR126">private buildScan(pkStart GTRecord, pkEnd GTRecord, selectedColumns List&lt;Pair&lt;byte[],byte[]&gt;&gt;) : Scan</a> from class org.apache.kylin.storage.cube.CubeHBaseReadonlyStore
+            <br>
+            <b>Localize Parameter</b>
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bL143"></a>
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR145">pk : ByteArray</a> to pk : ByteArray in method
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR144">private makeRowKeyToScan(pkRec GTRecord, fill byte) : byte[]</a> from class org.apache.kylin.storage.cube.CubeHBaseReadonlyStore
+            <br>
+            <b>Add Parameter</b>
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR144">pkRec : GTRecord</a> in method
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR144">private makeRowKeyToScan(pkRec GTRecord, fill byte) : byte[]</a> from class org.apache.kylin.storage.cube.CubeHBaseReadonlyStore
+            <br>
+            <b>Localize Parameter</b>
+            <a href="#diff-e461082052d0ef7863261d921eb2eb32dbcdea8e7f4b96b6c28100c14f58d993L14"></a>
+            <a href="#diff-b972b86fc8ea3f77fc43dbbb0da0643819cbae1921612d5eb249499686597936R241">info : GTInfo</a> to info : GTInfo in method
+            <a href="#diff-b972b86fc8ea3f77fc43dbbb0da0643819cbae1921612d5eb249499686597936R237">public exportScanKey(rec GTRecord) : ByteArray</a> from class org.apache.kylin.storage.gridtable.GTRecord
+            <br>
+            <b>Change Method Access Modifier</b> package to public in method
+            <a href="#diff-b972b86fc8ea3f77fc43dbbb0da0643819cbae1921612d5eb249499686597936R237">public exportScanKey(rec GTRecord) : ByteArray</a> from class org.apache.kylin.storage.gridtable.GTRecord
+            <br>
+            <b>Move And Rename Method</b>
+            <a href="#diff-e461082052d0ef7863261d921eb2eb32dbcdea8e7f4b96b6c28100c14f58d993L14">package makeScanKey(info GTInfo, rec GTRecord) : ByteArray</a> from class org.apache.kylin.storage.gridtable.ScanKey to
+            <a href="#diff-b972b86fc8ea3f77fc43dbbb0da0643819cbae1921612d5eb249499686597936R237">public exportScanKey(rec GTRecord) : ByteArray</a> from class org.apache.kylin.storage.gridtable.GTRecord
+            <br>
+            <b>Change Parameter Type</b>
+            <a href="#diff-0eba311eabcdc8c81970e1af274c6bb8bbd84274d449ae958ba916cf9a250ce4L18">pkStart : ByteArray</a> to
+            <a href="#diff-0eba311eabcdc8c81970e1af274c6bb8bbd84274d449ae958ba916cf9a250ce4R18">pkStart : GTRecord</a> in method
+            <a href="#diff-0eba311eabcdc8c81970e1af274c6bb8bbd84274d449ae958ba916cf9a250ce4R18">public scan(pkStart GTRecord, pkEnd GTRecord, selectedColBlocks BitSet, additionalPushDown GTScanRequest) : IGTStoreScanner</a> from class org.apache.kylin.storage.gridtable.IGTStore
+            <br>
+            <b>Change Parameter Type</b>
+            <a href="#diff-0eba311eabcdc8c81970e1af274c6bb8bbd84274d449ae958ba916cf9a250ce4L18">pkEnd : ByteArray</a> to
+            <a href="#diff-0eba311eabcdc8c81970e1af274c6bb8bbd84274d449ae958ba916cf9a250ce4R18">pkEnd : GTRecord</a> in method
+            <a href="#diff-0eba311eabcdc8c81970e1af274c6bb8bbd84274d449ae958ba916cf9a250ce4R18">public scan(pkStart GTRecord, pkEnd GTRecord, selectedColBlocks BitSet, additionalPushDown GTScanRequest) : IGTStoreScanner</a> from class org.apache.kylin.storage.gridtable.IGTStore
+            <br>
+        </div>
+        <div id="div Change Method Access Modifier" class="Change Method Access Modifier">
+            1:
+            <b>Change Method Access Modifier</b> public to private in method
+            <a href="#diff-29201dab8b2e5e7b7be054cf918c693d64e0dfde3e96fad92c554836cc9c5f72R195">private export(dataOutputStream DataOutputStream, array ByteArray) : void</a> from class org.apache.kylin.storage.gridtable.GTRowBlock
+            <br>2:
+            <b>Change Method Access Modifier</b> package to public in method
+            <a href="#diff-b972b86fc8ea3f77fc43dbbb0da0643819cbae1921612d5eb249499686597936R237">public exportScanKey(rec GTRecord) : ByteArray</a> from class org.apache.kylin.storage.gridtable.GTRecord
+            <br>
+        </div>
+        <div id="div Inline Variable" class="Inline Variable">
+            3:
+            <b>Inline Variable</b>
+            <a href="#diff-c93d837d365d7796587ca7f3b718d6710db9e2695ca04fb9c11304cfabab252cL27">start : ByteArray</a> in method
+            <a href="#diff-c93d837d365d7796587ca7f3b718d6710db9e2695ca04fb9c11304cfabab252cL24"></a>
+            <a href="#diff-c93d837d365d7796587ca7f3b718d6710db9e2695ca04fb9c11304cfabab252cR23">public GTRawScanner(info GTInfo, store IGTStore, req GTScanRequest)</a> from class org.apache.kylin.storage.gridtable.GTRawScanner
+            <br>4:
+            <b>Inline Variable</b>
+            <a href="#diff-c93d837d365d7796587ca7f3b718d6710db9e2695ca04fb9c11304cfabab252cL28">end : ByteArray</a> in method
+            <a href="#diff-c93d837d365d7796587ca7f3b718d6710db9e2695ca04fb9c11304cfabab252cL24"></a>
+            <a href="#diff-c93d837d365d7796587ca7f3b718d6710db9e2695ca04fb9c11304cfabab252cR23">public GTRawScanner(info GTInfo, store IGTStore, req GTScanRequest)</a> from class org.apache.kylin.storage.gridtable.GTRawScanner
+            <br>
+        </div>
+        <div id="div Change Parameter Type" class="Change Parameter Type">
+            5:
+            <b>Change Parameter Type</b>
+            <a href="#diff-b47156acc345807a39a8c66fa38219968c0ef71ee06e063ba679c937c44a908fL154">pkStart : ByteArray</a> to
+            <a href="#diff-b47156acc345807a39a8c66fa38219968c0ef71ee06e063ba679c937c44a908fR154">pkStart : GTRecord</a> in method
+            <a href="#diff-b47156acc345807a39a8c66fa38219968c0ef71ee06e063ba679c937c44a908fR153">public scan(pkStart GTRecord, pkEnd GTRecord, selectedColBlocks BitSet, additionalPushDown GTScanRequest) : IGTStoreScanner</a> from class org.apache.kylin.storage.gridtable.diskstore.GTDiskStore
+            <br>6:
+            <b>Change Parameter Type</b>
+            <a href="#diff-b47156acc345807a39a8c66fa38219968c0ef71ee06e063ba679c937c44a908fL154">pkEnd : ByteArray</a> to
+            <a href="#diff-b47156acc345807a39a8c66fa38219968c0ef71ee06e063ba679c937c44a908fR154">pkEnd : GTRecord</a> in method
+            <a href="#diff-b47156acc345807a39a8c66fa38219968c0ef71ee06e063ba679c937c44a908fR153">public scan(pkStart GTRecord, pkEnd GTRecord, selectedColBlocks BitSet, additionalPushDown GTScanRequest) : IGTStoreScanner</a> from class org.apache.kylin.storage.gridtable.diskstore.GTDiskStore
+            <br>7:
+            <b>Change Parameter Type</b>
+            <a href="#diff-8d677bea04b9606a46bd0d7f790dcc4aa1c7613927ae52ebb24740d909096f46L104">pkStart : ByteArray</a> to
+            <a href="#diff-8d677bea04b9606a46bd0d7f790dcc4aa1c7613927ae52ebb24740d909096f46R103">pkStart : GTRecord</a> in method
+            <a href="#diff-8d677bea04b9606a46bd0d7f790dcc4aa1c7613927ae52ebb24740d909096f46R102">public scan(pkStart GTRecord, pkEnd GTRecord, selectedColBlocks BitSet, additionalPushDown GTScanRequest) : IGTStoreScanner</a> from class org.apache.kylin.storage.gridtable.GTComboStore
+            <br>8:
+            <b>Change Parameter Type</b>
+            <a href="#diff-8d677bea04b9606a46bd0d7f790dcc4aa1c7613927ae52ebb24740d909096f46L104">pkEnd : ByteArray</a> to
+            <a href="#diff-8d677bea04b9606a46bd0d7f790dcc4aa1c7613927ae52ebb24740d909096f46R103">pkEnd : GTRecord</a> in method
+            <a href="#diff-8d677bea04b9606a46bd0d7f790dcc4aa1c7613927ae52ebb24740d909096f46R102">public scan(pkStart GTRecord, pkEnd GTRecord, selectedColBlocks BitSet, additionalPushDown GTScanRequest) : IGTStoreScanner</a> from class org.apache.kylin.storage.gridtable.GTComboStore
+            <br>9:
+            <b>Change Parameter Type</b>
+            <a href="#diff-f8fdf43498c0e00d403a2e76f2eb241bb5cb9af4f5c293dd71ce75a42f1b62dcL81">pkStart : ByteArray</a> to
+            <a href="#diff-f8fdf43498c0e00d403a2e76f2eb241bb5cb9af4f5c293dd71ce75a42f1b62dcR81">pkStart : GTRecord</a> in method
+            <a href="#diff-f8fdf43498c0e00d403a2e76f2eb241bb5cb9af4f5c293dd71ce75a42f1b62dcR80">public scan(pkStart GTRecord, pkEnd GTRecord, selectedColBlocks BitSet, additionalPushDown GTScanRequest) : IGTStoreScanner</a> from class org.apache.kylin.storage.gridtable.memstore.GTSimpleMemStore
+            <br>10:
+            <b>Change Parameter Type</b>
+            <a href="#diff-f8fdf43498c0e00d403a2e76f2eb241bb5cb9af4f5c293dd71ce75a42f1b62dcL81">pkEnd : ByteArray</a> to
+            <a href="#diff-f8fdf43498c0e00d403a2e76f2eb241bb5cb9af4f5c293dd71ce75a42f1b62dcR81">pkEnd : GTRecord</a> in method
+            <a href="#diff-f8fdf43498c0e00d403a2e76f2eb241bb5cb9af4f5c293dd71ce75a42f1b62dcR80">public scan(pkStart GTRecord, pkEnd GTRecord, selectedColBlocks BitSet, additionalPushDown GTScanRequest) : IGTStoreScanner</a> from class org.apache.kylin.storage.gridtable.memstore.GTSimpleMemStore
+            <br>11:
+            <b>Change Parameter Type</b>
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bL67">pkStart : ByteArray</a> to
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR68">pkStart : GTRecord</a> in method
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR67">public scan(pkStart GTRecord, pkEnd GTRecord, selectedColumnBlocks BitSet, additionalPushDown GTScanRequest) : IGTStoreScanner</a> from class org.apache.kylin.storage.cube.CubeHBaseReadonlyStore
+            <br>12:
+            <b>Change Parameter Type</b>
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bL67">pkEnd : ByteArray</a> to
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR68">pkEnd : GTRecord</a> in method
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR67">public scan(pkStart GTRecord, pkEnd GTRecord, selectedColumnBlocks BitSet, additionalPushDown GTScanRequest) : IGTStoreScanner</a> from class org.apache.kylin.storage.cube.CubeHBaseReadonlyStore
+            <br>13:
+            <b>Change Parameter Type</b>
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bL125">pkStart : ByteArray</a> to
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR126">pkStart : GTRecord</a> in method
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR126">private buildScan(pkStart GTRecord, pkEnd GTRecord, selectedColumns List&lt;Pair&lt;byte[],byte[]&gt;&gt;) : Scan</a> from class org.apache.kylin.storage.cube.CubeHBaseReadonlyStore
+            <br>14:
+            <b>Change Parameter Type</b>
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bL125">pkEnd : ByteArray</a> to
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR126">pkEnd : GTRecord</a> in method
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR126">private buildScan(pkStart GTRecord, pkEnd GTRecord, selectedColumns List&lt;Pair&lt;byte[],byte[]&gt;&gt;) : Scan</a> from class org.apache.kylin.storage.cube.CubeHBaseReadonlyStore
+            <br>15:
+            <b>Change Parameter Type</b>
+            <a href="#diff-0eba311eabcdc8c81970e1af274c6bb8bbd84274d449ae958ba916cf9a250ce4L18">pkStart : ByteArray</a> to
+            <a href="#diff-0eba311eabcdc8c81970e1af274c6bb8bbd84274d449ae958ba916cf9a250ce4R18">pkStart : GTRecord</a> in method
+            <a href="#diff-0eba311eabcdc8c81970e1af274c6bb8bbd84274d449ae958ba916cf9a250ce4R18">public scan(pkStart GTRecord, pkEnd GTRecord, selectedColBlocks BitSet, additionalPushDown GTScanRequest) : IGTStoreScanner</a> from class org.apache.kylin.storage.gridtable.IGTStore
+            <br>16:
+            <b>Change Parameter Type</b>
+            <a href="#diff-0eba311eabcdc8c81970e1af274c6bb8bbd84274d449ae958ba916cf9a250ce4L18">pkEnd : ByteArray</a> to
+            <a href="#diff-0eba311eabcdc8c81970e1af274c6bb8bbd84274d449ae958ba916cf9a250ce4R18">pkEnd : GTRecord</a> in method
+            <a href="#diff-0eba311eabcdc8c81970e1af274c6bb8bbd84274d449ae958ba916cf9a250ce4R18">public scan(pkStart GTRecord, pkEnd GTRecord, selectedColBlocks BitSet, additionalPushDown GTScanRequest) : IGTStoreScanner</a> from class org.apache.kylin.storage.gridtable.IGTStore
+            <br>
+        </div>
+        <div id="div Localize Parameter" class="Localize Parameter">
+            17:
+            <b>Localize Parameter</b>
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bL143"></a>
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR145">pk : ByteArray</a> to pk : ByteArray in method
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR144">private makeRowKeyToScan(pkRec GTRecord, fill byte) : byte[]</a> from class org.apache.kylin.storage.cube.CubeHBaseReadonlyStore
+            <br>18:
+            <b>Localize Parameter</b>
+            <a href="#diff-e461082052d0ef7863261d921eb2eb32dbcdea8e7f4b96b6c28100c14f58d993L14"></a>
+            <a href="#diff-b972b86fc8ea3f77fc43dbbb0da0643819cbae1921612d5eb249499686597936R241">info : GTInfo</a> to info : GTInfo in method
+            <a href="#diff-b972b86fc8ea3f77fc43dbbb0da0643819cbae1921612d5eb249499686597936R237">public exportScanKey(rec GTRecord) : ByteArray</a> from class org.apache.kylin.storage.gridtable.GTRecord
+            <br>
+        </div>
+        <div id="div Add Parameter" class="Add Parameter">
+            19:
+            <b>Add Parameter</b>
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR144">pkRec : GTRecord</a> in method
+            <a href="#diff-a7bd230206cab953ec4fad5ee721446eeda986e01e536199e83d8409c95b747bR144">private makeRowKeyToScan(pkRec GTRecord, fill byte) : byte[]</a> from class org.apache.kylin.storage.cube.CubeHBaseReadonlyStore
+            <br>
+        </div>
+        <div id="div Move And Rename Method" class="Move And Rename Method">
+            20:
+            <b>Move And Rename Method</b>
+            <a href="#diff-e461082052d0ef7863261d921eb2eb32dbcdea8e7f4b96b6c28100c14f58d993L14">package makeScanKey(info GTInfo, rec GTRecord) : ByteArray</a> from class org.apache.kylin.storage.gridtable.ScanKey to
+            <a href="#diff-b972b86fc8ea3f77fc43dbbb0da0643819cbae1921612d5eb249499686597936R237">public exportScanKey(rec GTRecord) : ByteArray</a> from class org.apache.kylin.storage.gridtable.GTRecord
+            <br>
+        </div>
+    </div>
+</button>

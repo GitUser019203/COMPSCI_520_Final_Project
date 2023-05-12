@@ -1,0 +1,92 @@
+<button class="myBtnLink" id="myBtnLink">
+    Refactorings
+    <div class="myDIVLink" id="myDIVLink" style="visibility: hidden; opacity: 0; transition-delay: 0.2s;">
+        <input type="checkbox" id="checkbox" checked="true">
+        <label> ALL REFACTORING TYPES || </label>
+        <input type="checkbox" id="Extract Method check" checked="true"> Extract Method ||
+        <input type="checkbox" id="Remove Parameter check" checked="true"> Remove Parameter ||
+        <input type="checkbox" id="Replace Variable With Attribute check" checked="true"> Replace Variable With Attribute ||
+        <input type="checkbox" id="Remove Method Annotation check" checked="true"> Remove Method Annotation ||
+        <input type="checkbox" id="Rename Variable check" checked="true"> Rename Variable ||
+        <label> </label>
+        <button id="aBtn" class="aBtn">
+            <img class="pinIcon" id="pinIcon" src="chrome-extension://lnloiaibmonmmpnfibfjjlfcddoppmgd/pin.png">
+            <div class="tooltipPin" id="tooltipPin">Pin</div>
+        </button>
+        <div id="myLink" class="myLink" style="display: none;">
+            <b>Extract Method</b>
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4R66">private wrapWithCache(underlyingStorageEngine IStorageEngine, realization IRealization) : IStorageEngine</a> extracted from
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4L36">public getStorageEngine(realization IRealization, allowCache boolean) : IStorageEngine</a> in class org.apache.kylin.storage.StorageEngineFactory
+            <br>
+            <b>Remove Parameter</b>
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4L36">allowCache : boolean</a> in method
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4L36">public getStorageEngine(realization IRealization, allowCache boolean) : IStorageEngine</a> from class org.apache.kylin.storage.StorageEngineFactory
+            <br>
+            <b>Replace Variable With Attribute</b>
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4L36">allowCache : boolean</a> to
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4R43">allowStorageLayerCache : boolean</a> in method
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4R45">public getStorageEngine(realization IRealization) : IStorageEngine</a> from class org.apache.kylin.storage.StorageEngineFactory
+            <br>
+            <b>Remove Method Annotation</b>
+            <a href="#diff-3e4d98039e80305d02fb9c357d89532a3837b88c5ef6db4b5e0156e1a6a9485bL254">@Override</a> in method
+            <a href="#diff-3e4d98039e80305d02fb9c357d89532a3837b88c5ef6db4b5e0156e1a6a9485bL254">public getCacheExcludedPeriod() : Range&lt;Long&gt;</a> from class org.apache.kylin.storage.hbase.coprocessor.endpoint.EndpointTupleIterator
+            <br>
+            <b>Rename Variable</b>
+            <a href="#diff-2ba09dfb25840f314e6d5247ae0a46da7c36b4357eae5e99bf0dc42f5adac192L37">iterator1 : ITupleIterator</a> to
+            <a href="#diff-2ba09dfb25840f314e6d5247ae0a46da7c36b4357eae5e99bf0dc42f5adac192R41">historicalDataIterator : ITupleIterator</a> in method
+            <a href="#diff-2ba09dfb25840f314e6d5247ae0a46da7c36b4357eae5e99bf0dc42f5adac192L33"></a>
+            <a href="#diff-2ba09dfb25840f314e6d5247ae0a46da7c36b4357eae5e99bf0dc42f5adac192R37">public search(context StorageContext, sqlDigest SQLDigest, returnTupleInfo TupleInfo) : ITupleIterator</a> from class org.apache.kylin.storage.hybrid.HybridStorageEngine
+            <br>
+            <b>Rename Variable</b>
+            <a href="#diff-2ba09dfb25840f314e6d5247ae0a46da7c36b4357eae5e99bf0dc42f5adac192L49">iterator2 : ITupleIterator</a> to
+            <a href="#diff-2ba09dfb25840f314e6d5247ae0a46da7c36b4357eae5e99bf0dc42f5adac192R53">realtimeDataIterator : ITupleIterator</a> in method
+            <a href="#diff-2ba09dfb25840f314e6d5247ae0a46da7c36b4357eae5e99bf0dc42f5adac192L33"></a>
+            <a href="#diff-2ba09dfb25840f314e6d5247ae0a46da7c36b4357eae5e99bf0dc42f5adac192R37">public search(context StorageContext, sqlDigest SQLDigest, returnTupleInfo TupleInfo) : ITupleIterator</a> from class org.apache.kylin.storage.hybrid.HybridStorageEngine
+            <br>
+        </div>
+        <div id="div Extract Method" class="Extract Method">
+            1:
+            <b>Extract Method</b>
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4R66">private wrapWithCache(underlyingStorageEngine IStorageEngine, realization IRealization) : IStorageEngine</a> extracted from
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4L36">public getStorageEngine(realization IRealization, allowCache boolean) : IStorageEngine</a> in class org.apache.kylin.storage.StorageEngineFactory
+            <br>
+        </div>
+        <div id="div Remove Parameter" class="Remove Parameter">
+            2:
+            <b>Remove Parameter</b>
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4L36">allowCache : boolean</a> in method
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4L36">public getStorageEngine(realization IRealization, allowCache boolean) : IStorageEngine</a> from class org.apache.kylin.storage.StorageEngineFactory
+            <br>
+        </div>
+        <div id="div Replace Variable With Attribute" class="Replace Variable With Attribute">
+            3:
+            <b>Replace Variable With Attribute</b>
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4L36">allowCache : boolean</a> to
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4R43">allowStorageLayerCache : boolean</a> in method
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4R45">public getStorageEngine(realization IRealization) : IStorageEngine</a> from class org.apache.kylin.storage.StorageEngineFactory
+            <br>
+        </div>
+        <div id="div Remove Method Annotation" class="Remove Method Annotation">
+            4:
+            <b>Remove Method Annotation</b>
+            <a href="#diff-3e4d98039e80305d02fb9c357d89532a3837b88c5ef6db4b5e0156e1a6a9485bL254">@Override</a> in method
+            <a href="#diff-3e4d98039e80305d02fb9c357d89532a3837b88c5ef6db4b5e0156e1a6a9485bL254">public getCacheExcludedPeriod() : Range&lt;Long&gt;</a> from class org.apache.kylin.storage.hbase.coprocessor.endpoint.EndpointTupleIterator
+            <br>
+        </div>
+        <div id="div Rename Variable" class="Rename Variable">
+            5:
+            <b>Rename Variable</b>
+            <a href="#diff-2ba09dfb25840f314e6d5247ae0a46da7c36b4357eae5e99bf0dc42f5adac192L37">iterator1 : ITupleIterator</a> to
+            <a href="#diff-2ba09dfb25840f314e6d5247ae0a46da7c36b4357eae5e99bf0dc42f5adac192R41">historicalDataIterator : ITupleIterator</a> in method
+            <a href="#diff-2ba09dfb25840f314e6d5247ae0a46da7c36b4357eae5e99bf0dc42f5adac192L33"></a>
+            <a href="#diff-2ba09dfb25840f314e6d5247ae0a46da7c36b4357eae5e99bf0dc42f5adac192R37">public search(context StorageContext, sqlDigest SQLDigest, returnTupleInfo TupleInfo) : ITupleIterator</a> from class org.apache.kylin.storage.hybrid.HybridStorageEngine
+            <br>6:
+            <b>Rename Variable</b>
+            <a href="#diff-2ba09dfb25840f314e6d5247ae0a46da7c36b4357eae5e99bf0dc42f5adac192L49">iterator2 : ITupleIterator</a> to
+            <a href="#diff-2ba09dfb25840f314e6d5247ae0a46da7c36b4357eae5e99bf0dc42f5adac192R53">realtimeDataIterator : ITupleIterator</a> in method
+            <a href="#diff-2ba09dfb25840f314e6d5247ae0a46da7c36b4357eae5e99bf0dc42f5adac192L33"></a>
+            <a href="#diff-2ba09dfb25840f314e6d5247ae0a46da7c36b4357eae5e99bf0dc42f5adac192R37">public search(context StorageContext, sqlDigest SQLDigest, returnTupleInfo TupleInfo) : ITupleIterator</a> from class org.apache.kylin.storage.hybrid.HybridStorageEngine
+            <br>
+        </div>
+    </div>
+</button>
