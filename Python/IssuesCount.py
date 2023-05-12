@@ -57,22 +57,29 @@ def countIssueBodiesContaining(file_path, key_word_list):
 def main():
     """Main Method"""
     # File path
-    # file_path_test = "mongo_db_extract_refactoring_doc.txt"
-    file_path_test = "extractedIssueDescRefactoring.txt"
+    file_path_test_refactor = "./Python/extractedIssueDescRefactoring.txt"
+    file_path_test_bugs = "./Python/extractedIssueDescBugs.txt"
 
     # Calculate total number of issue bodies
-    total_iss = countTotalIssueBodies(file_path=file_path_test)
+    # total_iss = countTotalIssueBodies(file_path=file_path_test)
 
     # Calculate total number of issue bodies containing key words ("bugs", "refactoring")
     bug_keywords = ["bugs", "bug"]
-    total_iss_bugs = countIssueBodiesContaining(file_path=file_path_test, key_word_list=bug_keywords)
+    total_iss_bugs = countIssueBodiesContaining(file_path=file_path_test_bugs, key_word_list=bug_keywords)
 
     refactor_keywords = ["refactor", "refactoring", "refactors", "refactorings", "refactored"]
-    total_iss_refactor = countIssueBodiesContaining(file_path=file_path_test, key_word_list=refactor_keywords)
+    total_iss_refactor = countIssueBodiesContaining(file_path=file_path_test_refactor, key_word_list=refactor_keywords)
 
     # Caculate total number of issue bodies containing key words or words similar to key word
-    bug_keywords_related = ["bug", "bugs", "error", "failure", "defect", "fault"]
-    total_related_iss_bugs = countIssueBodiesContaining(file_path=file_path_test, key_word_list=bug_keywords_related)
+    bug_keywords_related = [
+        " bug ", 
+        " bugs ", 
+        " error ", 
+        " failure ", 
+        " defect ", 
+        " fault "
+    ]
+    total_related_iss_bugs = countIssueBodiesContaining(file_path=file_path_test_bugs, key_word_list=bug_keywords_related)
 
     refactor_keywords_related = [
         "add", 
@@ -111,15 +118,15 @@ def main():
         "simplifi",
         "split"
     ]
-    total_related_iss_refactor = countIssueBodiesContaining(file_path=file_path_test, key_word_list=refactor_keywords_related)
+    total_related_iss_refactor = countIssueBodiesContaining(file_path=file_path_test_refactor, key_word_list=refactor_keywords_related)
     
     # Calculate percentages
     refactor_percent = (total_iss_refactor / total_related_iss_refactor) * 100
     bug_percent = (total_iss_bugs / total_related_iss_bugs) * 100
     
     print("----- Research Question 2 -----")
-    print("Grand Total Issue Bodies:", total_iss)
-    print()
+    # print("Grand Total Issue Bodies:", total_iss)
+    # print()
     print("Total 'bugs' Issue Bodies:", total_iss_bugs)
     print("Total 'bug-related' Issue Bodies:", total_related_iss_bugs)
     print()
