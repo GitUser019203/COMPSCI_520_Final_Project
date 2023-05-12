@@ -130,6 +130,7 @@ def main():
     """Main Method"""
     # File path
 <<<<<<< HEAD
+<<<<<<< HEAD
     # file_path_test = "mongo_db_extract_refactoring_doc.txt"
     file_path_test = "extractedIssueDescRefactoring.txt"
 
@@ -151,6 +152,8 @@ def main():
     total_iss = countTotalIssueBodies(file_path=file_path_test)
 >>>>>>> cbd89d3... Fixed IssuesCount.py to count Issue Bodies
 =======
+=======
+>>>>>>> 014f966... Merged Code
     file_path_test_refactor = "./Python/extractedIssueDescRefactoring.txt"
     file_path_test_bugs = "./Python/extractedIssueDescBugs.txt"
 
