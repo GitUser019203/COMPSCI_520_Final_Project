@@ -29,6 +29,8 @@
     <Compile Include="Python\ExtractingIssueDescBugs.py" />
     <Compile Include="Python\ExtractingIssueDescRefactoring.py" />
     <Compile Include="Python\IssueBodiesCount.py" />
+    <Compile Include="Python\IssueBodiesCountBugs.py" />
+    <Compile Include="Python\IssueBodiesCountRefactor.py" />
     <Compile Include="Python\IssueRefactoringDocCalculator\main.py">
       <SubType>Code</SubType>
     </Compile>
@@ -104,7 +106,10 @@
     <Content Include="Python\extractedIssueCommentsRefactoring.txt" />
     <Content Include="Python\extractedIssueDescBugs.txt" />
     <Content Include="Python\extractedIssueDescRefactoring.txt" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.30942edb8f18e1cd8187e54cb57c97e938ea74c6.html" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.37557fec0211b3bc427e7b94c8a5263645a79116.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.95b325f6bd201afb1a5c921c35b90e13e7515c08.html" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.b054db4ec64f9309f9852c4d831bef5fb7d5c379.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.c670c6c91a36f2384521fb72bad703a5b0f15f4e.html">
       <SubType>Code</SubType>
     </Content>
@@ -114,6 +119,12 @@
     <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.5e116407c367ed4380ea8e614dfb3f72e5a63371.html">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.d59c8485c088c511e05ed6495d14cfc5fa041b51.html" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.f1dedab768f52b7dcb22e16b1897167703897fc4.html" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\manifold.239b1b988a0d9b381ec0a81ce83fb317232c65ba.html" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\manifold.322863fd7e7ea96df17b8dba49025297c2b36c09.html" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\manifold.47544a120937015a92c61013254543ab5c45326e.html" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\manifold.84b3a1231a2caaf7f1aa9d830337099ccba19010.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-06 200507.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-03 211753.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-03 212311.png" />
@@ -152,6 +163,7 @@
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 081022.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 081037.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-11 081049.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-12 093324.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\todo.txt" />
     <Content Include="Python\IssueRefactoringDocCalculator\data.txt" />
     <Content Include="Python\IssueRefactoringDocCalculator\issue_refactoring_doc_text_patterns - MATLAB.csv" />
