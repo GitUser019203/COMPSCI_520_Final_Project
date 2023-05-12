@@ -1,0 +1,216 @@
+<button class="myBtnLink" id="myBtnLink">
+    Refactorings
+    <div class="myDIVLink" id="myDIVLink" style="visibility: hidden; opacity: 0; transition-delay: 0.2s;">
+        <input type="checkbox" id="checkbox" checked="true">
+        <label> ALL REFACTORING TYPES || </label>
+        <input type="checkbox" id="Rename Method check" checked="true"> Rename Method ||
+        <input type="checkbox" id="Localize Parameter check" checked="true"> Localize Parameter ||
+        <input type="checkbox" id="Add Parameter check" checked="true"> Add Parameter ||
+        <input type="checkbox" id="Extract Class check" checked="true"> Extract Class ||
+        <input type="checkbox" id="Move Method check" checked="true"> Move Method ||
+        <input type="checkbox" id="Change Method Access Modifier check" checked="true"> Change Method Access Modifier ||
+        <input type="checkbox" id="Add Method Modifier check" checked="true"> Add Method Modifier ||
+        <label> </label>
+        <button id="aBtn" class="aBtn">
+            <img class="pinIcon" id="pinIcon" src="chrome-extension://lnloiaibmonmmpnfibfjjlfcddoppmgd/pin.png">
+            <div class="tooltipPin" id="tooltipPin">Pin</div>
+        </button>
+        <div id="myLink" class="myLink" style="display: none;">
+            <b>Rename Method</b>
+            <a href="#diff-0cf357b6ae55bf08d2f635dee7ea7a743f04335ec1702af44fc47d150e957dacL138">public millisToEpicDays(millis long) : int</a> renamed to
+            <a href="#diff-0cf357b6ae55bf08d2f635dee7ea7a743f04335ec1702af44fc47d150e957dacR138">public dateToEpicDays(strValue String) : int</a> in class org.apache.kylin.storage.tuple.Tuple
+            <br>
+            <b>Localize Parameter</b>
+            <a href="#diff-0cf357b6ae55bf08d2f635dee7ea7a743f04335ec1702af44fc47d150e957dacL138"></a>
+            <a href="#diff-0cf357b6ae55bf08d2f635dee7ea7a743f04335ec1702af44fc47d150e957dacR140">millis : long</a> to millis : long in method
+            <a href="#diff-0cf357b6ae55bf08d2f635dee7ea7a743f04335ec1702af44fc47d150e957dacR138">public dateToEpicDays(strValue String) : int</a> from class org.apache.kylin.storage.tuple.Tuple
+            <br>
+            <b>Add Parameter</b>
+            <a href="#diff-0cf357b6ae55bf08d2f635dee7ea7a743f04335ec1702af44fc47d150e957dacR138">strValue : String</a> in method
+            <a href="#diff-0cf357b6ae55bf08d2f635dee7ea7a743f04335ec1702af44fc47d150e957dacR138">public dateToEpicDays(strValue String) : int</a> from class org.apache.kylin.storage.tuple.Tuple
+            <br>
+            <b>Extract Class</b>
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R11">org.apache.kylin.storage.test.StorageMockUtils</a> from class
+            <a href="#diff-5ad365192273d8eb36fe2691cf40f813766ca0cca2ab61032fb5065090ae3e27R42">org.apache.kylin.storage.test.StorageTest</a>
+            <br>
+            <b>Move Method</b>
+            <a href="#diff-5ad365192273d8eb36fe2691cf40f813766ca0cca2ab61032fb5065090ae3e27L157">private newTupleInfo(groups List&lt;TblColRef&gt;, aggregations List&lt;FunctionDesc&gt;) : TupleInfo</a> from class org.apache.kylin.storage.test.StorageTest to
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R15">public newTupleInfo(groups List&lt;TblColRef&gt;, aggregations List&lt;FunctionDesc&gt;) : TupleInfo</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+            <b>Change Method Access Modifier</b> private to public in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R15">public newTupleInfo(groups List&lt;TblColRef&gt;, aggregations List&lt;FunctionDesc&gt;) : TupleInfo</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+            <b>Add Method Modifier</b> static in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R15">public newTupleInfo(groups List&lt;TblColRef&gt;, aggregations List&lt;FunctionDesc&gt;) : TupleInfo</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+            <b>Move Method</b>
+            <a href="#diff-5ad365192273d8eb36fe2691cf40f813766ca0cca2ab61032fb5065090ae3e27L174">private buildGroups() : List&lt;TblColRef&gt;</a> from class org.apache.kylin.storage.test.StorageTest to
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R32">public buildGroups() : List&lt;TblColRef&gt;</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+            <b>Change Method Access Modifier</b> private to public in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R32">public buildGroups() : List&lt;TblColRef&gt;</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+            <b>Add Method Modifier</b> static in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R32">public buildGroups() : List&lt;TblColRef&gt;</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+            <b>Move Method</b>
+            <a href="#diff-5ad365192273d8eb36fe2691cf40f813766ca0cca2ab61032fb5065090ae3e27L190">private buildAggregations() : List&lt;FunctionDesc&gt;</a> from class org.apache.kylin.storage.test.StorageTest to
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R48">public buildAggregations() : List&lt;FunctionDesc&gt;</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+            <b>Change Method Access Modifier</b> private to public in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R48">public buildAggregations() : List&lt;FunctionDesc&gt;</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+            <b>Add Method Modifier</b> static in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R48">public buildAggregations() : List&lt;FunctionDesc&gt;</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+            <b>Move Method</b>
+            <a href="#diff-5ad365192273d8eb36fe2691cf40f813766ca0cca2ab61032fb5065090ae3e27L218">private buildFilter1(column TblColRef) : CompareTupleFilter</a> from class org.apache.kylin.storage.test.StorageTest to
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R95">public buildFilter1(column TblColRef) : CompareTupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+            <b>Change Method Access Modifier</b> private to public in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R95">public buildFilter1(column TblColRef) : CompareTupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+            <b>Add Method Modifier</b> static in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R95">public buildFilter1(column TblColRef) : CompareTupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+            <b>Move Method</b>
+            <a href="#diff-5ad365192273d8eb36fe2691cf40f813766ca0cca2ab61032fb5065090ae3e27L227">private buildFilter2(column TblColRef) : CompareTupleFilter</a> from class org.apache.kylin.storage.test.StorageTest to
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R104">public buildFilter2(column TblColRef) : CompareTupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+            <b>Change Method Access Modifier</b> private to public in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R104">public buildFilter2(column TblColRef) : CompareTupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+            <b>Add Method Modifier</b> static in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R104">public buildFilter2(column TblColRef) : CompareTupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+            <b>Move Method</b>
+            <a href="#diff-5ad365192273d8eb36fe2691cf40f813766ca0cca2ab61032fb5065090ae3e27L236">private buildAndFilter(columns List&lt;TblColRef&gt;) : TupleFilter</a> from class org.apache.kylin.storage.test.StorageTest to
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R113">public buildAndFilter(columns List&lt;TblColRef&gt;) : TupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+            <b>Change Method Access Modifier</b> private to public in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R113">public buildAndFilter(columns List&lt;TblColRef&gt;) : TupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+            <b>Add Method Modifier</b> static in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R113">public buildAndFilter(columns List&lt;TblColRef&gt;) : TupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+            <b>Move Method</b>
+            <a href="#diff-5ad365192273d8eb36fe2691cf40f813766ca0cca2ab61032fb5065090ae3e27L246">private buildOrFilter(columns List&lt;TblColRef&gt;) : TupleFilter</a> from class org.apache.kylin.storage.test.StorageTest to
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R123">public buildOrFilter(columns List&lt;TblColRef&gt;) : TupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+            <b>Change Method Access Modifier</b> private to public in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R123">public buildOrFilter(columns List&lt;TblColRef&gt;) : TupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+            <b>Add Method Modifier</b> static in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R123">public buildOrFilter(columns List&lt;TblColRef&gt;) : TupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+        </div>
+        <div id="div Rename Method" class="Rename Method">
+            1:
+            <b>Rename Method</b>
+            <a href="#diff-0cf357b6ae55bf08d2f635dee7ea7a743f04335ec1702af44fc47d150e957dacL138">public millisToEpicDays(millis long) : int</a> renamed to
+            <a href="#diff-0cf357b6ae55bf08d2f635dee7ea7a743f04335ec1702af44fc47d150e957dacR138">public dateToEpicDays(strValue String) : int</a> in class org.apache.kylin.storage.tuple.Tuple
+            <br>
+        </div>
+        <div id="div Localize Parameter" class="Localize Parameter">
+            2:
+            <b>Localize Parameter</b>
+            <a href="#diff-0cf357b6ae55bf08d2f635dee7ea7a743f04335ec1702af44fc47d150e957dacL138"></a>
+            <a href="#diff-0cf357b6ae55bf08d2f635dee7ea7a743f04335ec1702af44fc47d150e957dacR140">millis : long</a> to millis : long in method
+            <a href="#diff-0cf357b6ae55bf08d2f635dee7ea7a743f04335ec1702af44fc47d150e957dacR138">public dateToEpicDays(strValue String) : int</a> from class org.apache.kylin.storage.tuple.Tuple
+            <br>
+        </div>
+        <div id="div Add Parameter" class="Add Parameter">
+            3:
+            <b>Add Parameter</b>
+            <a href="#diff-0cf357b6ae55bf08d2f635dee7ea7a743f04335ec1702af44fc47d150e957dacR138">strValue : String</a> in method
+            <a href="#diff-0cf357b6ae55bf08d2f635dee7ea7a743f04335ec1702af44fc47d150e957dacR138">public dateToEpicDays(strValue String) : int</a> from class org.apache.kylin.storage.tuple.Tuple
+            <br>
+        </div>
+        <div id="div Extract Class" class="Extract Class">
+            4:
+            <b>Extract Class</b>
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R11">org.apache.kylin.storage.test.StorageMockUtils</a> from class
+            <a href="#diff-5ad365192273d8eb36fe2691cf40f813766ca0cca2ab61032fb5065090ae3e27R42">org.apache.kylin.storage.test.StorageTest</a>
+            <br>
+        </div>
+        <div id="div Move Method" class="Move Method">
+            5:
+            <b>Move Method</b>
+            <a href="#diff-5ad365192273d8eb36fe2691cf40f813766ca0cca2ab61032fb5065090ae3e27L157">private newTupleInfo(groups List&lt;TblColRef&gt;, aggregations List&lt;FunctionDesc&gt;) : TupleInfo</a> from class org.apache.kylin.storage.test.StorageTest to
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R15">public newTupleInfo(groups List&lt;TblColRef&gt;, aggregations List&lt;FunctionDesc&gt;) : TupleInfo</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>6:
+            <b>Move Method</b>
+            <a href="#diff-5ad365192273d8eb36fe2691cf40f813766ca0cca2ab61032fb5065090ae3e27L174">private buildGroups() : List&lt;TblColRef&gt;</a> from class org.apache.kylin.storage.test.StorageTest to
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R32">public buildGroups() : List&lt;TblColRef&gt;</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>7:
+            <b>Move Method</b>
+            <a href="#diff-5ad365192273d8eb36fe2691cf40f813766ca0cca2ab61032fb5065090ae3e27L190">private buildAggregations() : List&lt;FunctionDesc&gt;</a> from class org.apache.kylin.storage.test.StorageTest to
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R48">public buildAggregations() : List&lt;FunctionDesc&gt;</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>8:
+            <b>Move Method</b>
+            <a href="#diff-5ad365192273d8eb36fe2691cf40f813766ca0cca2ab61032fb5065090ae3e27L218">private buildFilter1(column TblColRef) : CompareTupleFilter</a> from class org.apache.kylin.storage.test.StorageTest to
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R95">public buildFilter1(column TblColRef) : CompareTupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>9:
+            <b>Move Method</b>
+            <a href="#diff-5ad365192273d8eb36fe2691cf40f813766ca0cca2ab61032fb5065090ae3e27L227">private buildFilter2(column TblColRef) : CompareTupleFilter</a> from class org.apache.kylin.storage.test.StorageTest to
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R104">public buildFilter2(column TblColRef) : CompareTupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>10:
+            <b>Move Method</b>
+            <a href="#diff-5ad365192273d8eb36fe2691cf40f813766ca0cca2ab61032fb5065090ae3e27L236">private buildAndFilter(columns List&lt;TblColRef&gt;) : TupleFilter</a> from class org.apache.kylin.storage.test.StorageTest to
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R113">public buildAndFilter(columns List&lt;TblColRef&gt;) : TupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>11:
+            <b>Move Method</b>
+            <a href="#diff-5ad365192273d8eb36fe2691cf40f813766ca0cca2ab61032fb5065090ae3e27L246">private buildOrFilter(columns List&lt;TblColRef&gt;) : TupleFilter</a> from class org.apache.kylin.storage.test.StorageTest to
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R123">public buildOrFilter(columns List&lt;TblColRef&gt;) : TupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+        </div>
+        <div id="div Change Method Access Modifier" class="Change Method Access Modifier">
+            12:
+            <b>Change Method Access Modifier</b> private to public in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R15">public newTupleInfo(groups List&lt;TblColRef&gt;, aggregations List&lt;FunctionDesc&gt;) : TupleInfo</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>13:
+            <b>Change Method Access Modifier</b> private to public in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R32">public buildGroups() : List&lt;TblColRef&gt;</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>14:
+            <b>Change Method Access Modifier</b> private to public in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R48">public buildAggregations() : List&lt;FunctionDesc&gt;</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>15:
+            <b>Change Method Access Modifier</b> private to public in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R95">public buildFilter1(column TblColRef) : CompareTupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>16:
+            <b>Change Method Access Modifier</b> private to public in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R104">public buildFilter2(column TblColRef) : CompareTupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>17:
+            <b>Change Method Access Modifier</b> private to public in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R113">public buildAndFilter(columns List&lt;TblColRef&gt;) : TupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>18:
+            <b>Change Method Access Modifier</b> private to public in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R123">public buildOrFilter(columns List&lt;TblColRef&gt;) : TupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+        </div>
+        <div id="div Add Method Modifier" class="Add Method Modifier">
+            19:
+            <b>Add Method Modifier</b> static in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R15">public newTupleInfo(groups List&lt;TblColRef&gt;, aggregations List&lt;FunctionDesc&gt;) : TupleInfo</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>20:
+            <b>Add Method Modifier</b> static in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R32">public buildGroups() : List&lt;TblColRef&gt;</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>21:
+            <b>Add Method Modifier</b> static in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R48">public buildAggregations() : List&lt;FunctionDesc&gt;</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>22:
+            <b>Add Method Modifier</b> static in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R95">public buildFilter1(column TblColRef) : CompareTupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>23:
+            <b>Add Method Modifier</b> static in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R104">public buildFilter2(column TblColRef) : CompareTupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>24:
+            <b>Add Method Modifier</b> static in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R113">public buildAndFilter(columns List&lt;TblColRef&gt;) : TupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>25:
+            <b>Add Method Modifier</b> static in method
+            <a href="#diff-377ce6626339589993e20eb1a2dfbe7fd01d2492fddee7c8b91a831b65a12ad3R123">public buildOrFilter(columns List&lt;TblColRef&gt;) : TupleFilter</a> from class org.apache.kylin.storage.test.StorageMockUtils
+            <br>
+        </div>
+    </div>
+</button>

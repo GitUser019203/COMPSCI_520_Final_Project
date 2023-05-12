@@ -1,0 +1,118 @@
+<button class="myBtnLink" id="myBtnLink">
+    Refactorings
+    <div class="myDIVLink" id="myDIVLink" style="visibility: hidden; opacity: 0; transition-delay: 0.2s;">
+        <input type="checkbox" id="checkbox" checked="true">
+        <label> ALL REFACTORING TYPES || </label>
+        <input type="checkbox" id="Change Parameter Type check" checked="true"> Change Parameter Type ||
+        <input type="checkbox" id="Change Variable Type check" checked="true"> Change Variable Type ||
+        <input type="checkbox" id="Change Attribute Type check" checked="true"> Change Attribute Type ||
+        <input type="checkbox" id="Push Down Method check" checked="true"> Push Down Method ||
+        <label> </label>
+        <button id="aBtn" class="aBtn">
+            <img class="pinIcon" id="pinIcon" src="chrome-extension://lnloiaibmonmmpnfibfjjlfcddoppmgd/pin.png">
+            <div class="tooltipPin" id="tooltipPin">Pin</div>
+        </button>
+        <div id="myLink" class="myLink" style="display: none;">
+            <b>Change Parameter Type</b>
+            <a href="#diff-5acfd369220dc3d2b6961c1acd14e4237b76787292094dd1e717c40c1bda8ea5L34">underlyingStorage : IStorageEngine</a> to
+            <a href="#diff-5acfd369220dc3d2b6961c1acd14e4237b76787292094dd1e717c40c1bda8ea5R34">underlyingStorage : ICachableStorageEngine</a> in method
+            <a href="#diff-5acfd369220dc3d2b6961c1acd14e4237b76787292094dd1e717c40c1bda8ea5R34">public CacheFledgedDynamicStorageEngine(underlyingStorage ICachableStorageEngine, partitionColRef TblColRef)</a> from class org.apache.kylin.storage.cache.CacheFledgedDynamicStorageEngine
+            <br>
+            <b>Change Variable Type</b>
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4L48">ret : IStorageEngine</a> to
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4R48">ret : ICachableStorageEngine</a> in method
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4L45"></a>
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4R45">public getStorageEngine(realization IRealization) : IStorageEngine</a> from class org.apache.kylin.storage.StorageEngineFactory
+            <br>
+            <b>Change Variable Type</b>
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4L55">ret : IStorageEngine</a> to
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4R55">ret : ICachableStorageEngine</a> in method
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4L45"></a>
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4R45">public getStorageEngine(realization IRealization) : IStorageEngine</a> from class org.apache.kylin.storage.StorageEngineFactory
+            <br>
+            <b>Change Parameter Type</b>
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4L66">underlyingStorageEngine : IStorageEngine</a> to
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4R66">underlyingStorageEngine : ICachableStorageEngine</a> in method
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4R66">private wrapWithCache(underlyingStorageEngine ICachableStorageEngine, realization IRealization) : IStorageEngine</a> from class org.apache.kylin.storage.StorageEngineFactory
+            <br>
+            <b>Change Parameter Type</b>
+            <a href="#diff-4b91eadb6e64e375439549f9b2ad23f000287bb324d4f9dc7f9e22125706b5a8L24">underlyingStorage : IStorageEngine</a> to
+            <a href="#diff-4b91eadb6e64e375439549f9b2ad23f000287bb324d4f9dc7f9e22125706b5a8R26">underlyingStorage : ICachableStorageEngine</a> in method
+            <a href="#diff-4b91eadb6e64e375439549f9b2ad23f000287bb324d4f9dc7f9e22125706b5a8R26">public CacheFledgedStaticStorageEngine(underlyingStorage ICachableStorageEngine)</a> from class org.apache.kylin.storage.cache.CacheFledgedStaticStorageEngine
+            <br>
+            <b>Change Attribute Type</b>
+            <a href="#diff-88a04ea722ed7bce2e99461d26fb313808abfda18652bf55da487c7c7f20e3e2L22">underlyingStorage : IStorageEngine</a> to
+            <a href="#diff-88a04ea722ed7bce2e99461d26fb313808abfda18652bf55da487c7c7f20e3e2R24">underlyingStorage : ICachableStorageEngine</a> in class org.apache.kylin.storage.cache.AbstractCacheFledgedStorageEngine
+            <br>
+            <b>Change Parameter Type</b>
+            <a href="#diff-88a04ea722ed7bce2e99461d26fb313808abfda18652bf55da487c7c7f20e3e2L26">underlyingStorage : IStorageEngine</a> to
+            <a href="#diff-88a04ea722ed7bce2e99461d26fb313808abfda18652bf55da487c7c7f20e3e2R28">underlyingStorage : ICachableStorageEngine</a> in method
+            <a href="#diff-88a04ea722ed7bce2e99461d26fb313808abfda18652bf55da487c7c7f20e3e2R28">public AbstractCacheFledgedStorageEngine(underlyingStorage ICachableStorageEngine)</a> from class org.apache.kylin.storage.cache.AbstractCacheFledgedStorageEngine
+            <br>
+            <b>Push Down Method</b>
+            <a href="#diff-a6561c0dbbb17438340f25807970c51af57b5bc8824e988d23aa379d908b9ff7L36">public isDynamic() : boolean</a> from class org.apache.kylin.storage.IStorageEngine to
+            <a href="#diff-40aa6371a9ec47f783fb7c6228a34c88834ff0b3528c7dd39496bfbbf2770f38R9">public isDynamic() : boolean</a> from class org.apache.kylin.storage.ICachableStorageEngine
+            <br>
+            <b>Push Down Method</b>
+            <a href="#diff-a6561c0dbbb17438340f25807970c51af57b5bc8824e988d23aa379d908b9ff7L46">public getVolatilePeriod() : Range&lt;Long&gt;</a> from class org.apache.kylin.storage.IStorageEngine to
+            <a href="#diff-40aa6371a9ec47f783fb7c6228a34c88834ff0b3528c7dd39496bfbbf2770f38R19">public getVolatilePeriod() : Range&lt;Long&gt;</a> from class org.apache.kylin.storage.ICachableStorageEngine
+            <br>
+        </div>
+        <div id="div Change Parameter Type" class="Change Parameter Type">
+            1:
+            <b>Change Parameter Type</b>
+            <a href="#diff-5acfd369220dc3d2b6961c1acd14e4237b76787292094dd1e717c40c1bda8ea5L34">underlyingStorage : IStorageEngine</a> to
+            <a href="#diff-5acfd369220dc3d2b6961c1acd14e4237b76787292094dd1e717c40c1bda8ea5R34">underlyingStorage : ICachableStorageEngine</a> in method
+            <a href="#diff-5acfd369220dc3d2b6961c1acd14e4237b76787292094dd1e717c40c1bda8ea5R34">public CacheFledgedDynamicStorageEngine(underlyingStorage ICachableStorageEngine, partitionColRef TblColRef)</a> from class org.apache.kylin.storage.cache.CacheFledgedDynamicStorageEngine
+            <br>2:
+            <b>Change Parameter Type</b>
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4L66">underlyingStorageEngine : IStorageEngine</a> to
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4R66">underlyingStorageEngine : ICachableStorageEngine</a> in method
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4R66">private wrapWithCache(underlyingStorageEngine ICachableStorageEngine, realization IRealization) : IStorageEngine</a> from class org.apache.kylin.storage.StorageEngineFactory
+            <br>3:
+            <b>Change Parameter Type</b>
+            <a href="#diff-4b91eadb6e64e375439549f9b2ad23f000287bb324d4f9dc7f9e22125706b5a8L24">underlyingStorage : IStorageEngine</a> to
+            <a href="#diff-4b91eadb6e64e375439549f9b2ad23f000287bb324d4f9dc7f9e22125706b5a8R26">underlyingStorage : ICachableStorageEngine</a> in method
+            <a href="#diff-4b91eadb6e64e375439549f9b2ad23f000287bb324d4f9dc7f9e22125706b5a8R26">public CacheFledgedStaticStorageEngine(underlyingStorage ICachableStorageEngine)</a> from class org.apache.kylin.storage.cache.CacheFledgedStaticStorageEngine
+            <br>4:
+            <b>Change Parameter Type</b>
+            <a href="#diff-88a04ea722ed7bce2e99461d26fb313808abfda18652bf55da487c7c7f20e3e2L26">underlyingStorage : IStorageEngine</a> to
+            <a href="#diff-88a04ea722ed7bce2e99461d26fb313808abfda18652bf55da487c7c7f20e3e2R28">underlyingStorage : ICachableStorageEngine</a> in method
+            <a href="#diff-88a04ea722ed7bce2e99461d26fb313808abfda18652bf55da487c7c7f20e3e2R28">public AbstractCacheFledgedStorageEngine(underlyingStorage ICachableStorageEngine)</a> from class org.apache.kylin.storage.cache.AbstractCacheFledgedStorageEngine
+            <br>
+        </div>
+        <div id="div Change Variable Type" class="Change Variable Type">
+            5:
+            <b>Change Variable Type</b>
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4L48">ret : IStorageEngine</a> to
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4R48">ret : ICachableStorageEngine</a> in method
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4L45"></a>
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4R45">public getStorageEngine(realization IRealization) : IStorageEngine</a> from class org.apache.kylin.storage.StorageEngineFactory
+            <br>6:
+            <b>Change Variable Type</b>
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4L55">ret : IStorageEngine</a> to
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4R55">ret : ICachableStorageEngine</a> in method
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4L45"></a>
+            <a href="#diff-134dd949fd1d14cfc4f115cfa5258ab9fddcaeca36cd4811b7ea73e02528faa4R45">public getStorageEngine(realization IRealization) : IStorageEngine</a> from class org.apache.kylin.storage.StorageEngineFactory
+            <br>
+        </div>
+        <div id="div Change Attribute Type" class="Change Attribute Type">
+            7:
+            <b>Change Attribute Type</b>
+            <a href="#diff-88a04ea722ed7bce2e99461d26fb313808abfda18652bf55da487c7c7f20e3e2L22">underlyingStorage : IStorageEngine</a> to
+            <a href="#diff-88a04ea722ed7bce2e99461d26fb313808abfda18652bf55da487c7c7f20e3e2R24">underlyingStorage : ICachableStorageEngine</a> in class org.apache.kylin.storage.cache.AbstractCacheFledgedStorageEngine
+            <br>
+        </div>
+        <div id="div Push Down Method" class="Push Down Method">
+            8:
+            <b>Push Down Method</b>
+            <a href="#diff-a6561c0dbbb17438340f25807970c51af57b5bc8824e988d23aa379d908b9ff7L36">public isDynamic() : boolean</a> from class org.apache.kylin.storage.IStorageEngine to
+            <a href="#diff-40aa6371a9ec47f783fb7c6228a34c88834ff0b3528c7dd39496bfbbf2770f38R9">public isDynamic() : boolean</a> from class org.apache.kylin.storage.ICachableStorageEngine
+            <br>9:
+            <b>Push Down Method</b>
+            <a href="#diff-a6561c0dbbb17438340f25807970c51af57b5bc8824e988d23aa379d908b9ff7L46">public getVolatilePeriod() : Range&lt;Long&gt;</a> from class org.apache.kylin.storage.IStorageEngine to
+            <a href="#diff-40aa6371a9ec47f783fb7c6228a34c88834ff0b3528c7dd39496bfbbf2770f38R19">public getVolatilePeriod() : Range&lt;Long&gt;</a> from class org.apache.kylin.storage.ICachableStorageEngine
+            <br>
+        </div>
+    </div>
+</button>

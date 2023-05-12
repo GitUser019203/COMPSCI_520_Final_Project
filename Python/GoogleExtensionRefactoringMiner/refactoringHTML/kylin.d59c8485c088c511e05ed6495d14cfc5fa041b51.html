@@ -1,0 +1,104 @@
+<button class="myBtnLink" id="myBtnLink">
+    Refactorings
+    <div class="myDIVLink" id="myDIVLink" style="visibility: hidden; opacity: 0; transition-delay: 0.2s;">
+        <input type="checkbox" id="checkbox" checked="true">
+        <label> ALL REFACTORING TYPES || </label>
+        <input type="checkbox" id="Rename Class check" checked="true"> Rename Class ||
+        <input type="checkbox" id="Change Attribute Access Modifier check" checked="true"> Change Attribute Access Modifier ||
+        <input type="checkbox" id="Encapsulate Attribute check" checked="true"> Encapsulate Attribute ||
+        <input type="checkbox" id="Change Attribute Type check" checked="true"> Change Attribute Type ||
+        <input type="checkbox" id="Change Return Type check" checked="true"> Change Return Type ||
+        <input type="checkbox" id="Merge Parameter check" checked="true"> Merge Parameter ||
+        <input type="checkbox" id="Extract And Move Method check" checked="true"> Extract And Move Method ||
+        <label> </label>
+        <button id="aBtn" class="aBtn">
+            <img class="pinIcon" id="pinIcon" src="chrome-extension://lnloiaibmonmmpnfibfjjlfcddoppmgd/pin.png">
+            <div class="tooltipPin" id="tooltipPin">Pin</div>
+        </button>
+        <div id="myLink" class="myLink" style="display: none;">
+            <b>Rename Class</b>
+            <a href="#INVALIDL15">org.apache.kylin.storage.gridtable.GTRawScanner</a> renamed to
+            <a href="#diff-4bc1f1caa7f7b02008aa6e3ed9ac23cfd8d52209e024a10d11c4611073b53f43R15">org.apache.kylin.storage.gridtable.GTFilterScanner</a>
+            <br>
+            <b>Change Attribute Access Modifier</b> package to private in attribute
+            <a href="#diff-b972b86fc8ea3f77fc43dbbb0da0643819cbae1921612d5eb249499686597936R14">private maskForEqualHashComp : BitSet</a> from class org.apache.kylin.storage.gridtable.GTRecord
+            <br>
+            <b>Encapsulate Attribute</b>
+            <a href="#diff-b972b86fc8ea3f77fc43dbbb0da0643819cbae1921612d5eb249499686597936R14">private maskForEqualHashComp : BitSet</a> from class org.apache.kylin.storage.gridtable.GTRecord
+            <br>
+            <b>Change Attribute Type</b>
+            <a href="#diff-0cdd6cd54a7dfbb40a7305e5c82aa13640002a3e3c48124bf4d3d594b6bfbe23L38">conditionValues : Collection&lt;Object&gt;</a> to
+            <a href="#diff-0cdd6cd54a7dfbb40a7305e5c82aa13640002a3e3c48124bf4d3d594b6bfbe23R38">conditionValues : Set&lt;Object&gt;</a> in class org.apache.kylin.metadata.filter.CompareTupleFilter
+            <br>
+            <b>Change Return Type</b>
+            <a href="#diff-0cdd6cd54a7dfbb40a7305e5c82aa13640002a3e3c48124bf4d3d594b6bfbe23L93">Collection&lt;?&gt;</a> to
+            <a href="#diff-0cdd6cd54a7dfbb40a7305e5c82aa13640002a3e3c48124bf4d3d594b6bfbe23R93">Set&lt;?&gt;</a> in method
+            <a href="#diff-0cdd6cd54a7dfbb40a7305e5c82aa13640002a3e3c48124bf4d3d594b6bfbe23R92">public getValues() : Set&lt;?&gt;</a> from class org.apache.kylin.metadata.filter.CompareTupleFilter
+            <br>
+            <b>Merge Parameter</b> [
+            <a href="#INVALIDL30">filterPushDown : TupleFilter</a>,
+            <a href="#INVALIDL30">pkStart : GTRecord</a>,
+            <a href="#INVALIDL30">pkEndExclusive : GTRecord</a>,
+            <a href="#INVALIDL30">columns : BitSet</a>] to
+            <a href="#diff-4bc1f1caa7f7b02008aa6e3ed9ac23cfd8d52209e024a10d11c4611073b53f43R30">req : GTScanRequest</a> in method
+            <a href="#diff-4bc1f1caa7f7b02008aa6e3ed9ac23cfd8d52209e024a10d11c4611073b53f43R30">package GTFilterScanner(info GTInfo, store IGTStore, req GTScanRequest)</a> from class org.apache.kylin.storage.gridtable.GTFilterScanner
+            <br>
+            <b>Extract And Move Method</b>
+            <a href="#diff-b972b86fc8ea3f77fc43dbbb0da0643819cbae1921612d5eb249499686597936R95">public maskForEqualHashComp(set BitSet) : void</a> extracted from
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL72">package aggregate(r GTRecord) : void</a> in class org.apache.kylin.storage.gridtable.GTAggregateScanner.AggregationCache &amp; moved to class org.apache.kylin.storage.gridtable.GTRecord
+            <br>
+        </div>
+        <div id="div Rename Class" class="Rename Class">
+            1:
+            <b>Rename Class</b>
+            <a href="#INVALIDL15">org.apache.kylin.storage.gridtable.GTRawScanner</a> renamed to
+            <a href="#diff-4bc1f1caa7f7b02008aa6e3ed9ac23cfd8d52209e024a10d11c4611073b53f43R15">org.apache.kylin.storage.gridtable.GTFilterScanner</a>
+            <br>
+        </div>
+        <div id="div Change Attribute Access Modifier" class="Change Attribute Access Modifier">
+            2:
+            <b>Change Attribute Access Modifier</b> package to private in attribute
+            <a href="#diff-b972b86fc8ea3f77fc43dbbb0da0643819cbae1921612d5eb249499686597936R14">private maskForEqualHashComp : BitSet</a> from class org.apache.kylin.storage.gridtable.GTRecord
+            <br>
+        </div>
+        <div id="div Encapsulate Attribute" class="Encapsulate Attribute">
+            3:
+            <b>Encapsulate Attribute</b>
+            <a href="#diff-b972b86fc8ea3f77fc43dbbb0da0643819cbae1921612d5eb249499686597936R14">private maskForEqualHashComp : BitSet</a> from class org.apache.kylin.storage.gridtable.GTRecord
+            <br>
+        </div>
+        <div id="div Change Attribute Type" class="Change Attribute Type">
+            4:
+            <b>Change Attribute Type</b>
+            <a href="#diff-0cdd6cd54a7dfbb40a7305e5c82aa13640002a3e3c48124bf4d3d594b6bfbe23L38">conditionValues : Collection&lt;Object&gt;</a> to
+            <a href="#diff-0cdd6cd54a7dfbb40a7305e5c82aa13640002a3e3c48124bf4d3d594b6bfbe23R38">conditionValues : Set&lt;Object&gt;</a> in class org.apache.kylin.metadata.filter.CompareTupleFilter
+            <br>
+        </div>
+        <div id="div Change Return Type" class="Change Return Type">
+            5:
+            <b>Change Return Type</b>
+            <a href="#diff-0cdd6cd54a7dfbb40a7305e5c82aa13640002a3e3c48124bf4d3d594b6bfbe23L93">Collection&lt;?&gt;</a> to
+            <a href="#diff-0cdd6cd54a7dfbb40a7305e5c82aa13640002a3e3c48124bf4d3d594b6bfbe23R93">Set&lt;?&gt;</a> in method
+            <a href="#diff-0cdd6cd54a7dfbb40a7305e5c82aa13640002a3e3c48124bf4d3d594b6bfbe23R92">public getValues() : Set&lt;?&gt;</a> from class org.apache.kylin.metadata.filter.CompareTupleFilter
+            <br>
+        </div>
+        <div id="div Merge Parameter" class="Merge Parameter">
+            6:
+            <b>Merge Parameter</b> [
+            <a href="#INVALIDL30">filterPushDown : TupleFilter</a>,
+            <a href="#INVALIDL30">pkStart : GTRecord</a>,
+            <a href="#INVALIDL30">pkEndExclusive : GTRecord</a>,
+            <a href="#INVALIDL30">columns : BitSet</a>] to
+            <a href="#diff-4bc1f1caa7f7b02008aa6e3ed9ac23cfd8d52209e024a10d11c4611073b53f43R30">req : GTScanRequest</a> in method
+            <a href="#diff-4bc1f1caa7f7b02008aa6e3ed9ac23cfd8d52209e024a10d11c4611073b53f43R30">package GTFilterScanner(info GTInfo, store IGTStore, req GTScanRequest)</a> from class org.apache.kylin.storage.gridtable.GTFilterScanner
+            <br>
+        </div>
+        <div id="div Extract And Move Method" class="Extract And Move Method">
+            7:
+            <b>Extract And Move Method</b>
+            <a href="#diff-b972b86fc8ea3f77fc43dbbb0da0643819cbae1921612d5eb249499686597936R95">public maskForEqualHashComp(set BitSet) : void</a> extracted from
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL72">package aggregate(r GTRecord) : void</a> in class org.apache.kylin.storage.gridtable.GTAggregateScanner.AggregationCache &amp; moved to class org.apache.kylin.storage.gridtable.GTRecord
+            <br>
+        </div>
+    </div>
+</button>

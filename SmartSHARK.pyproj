@@ -5,7 +5,7 @@
     <ProjectGuid>4c889f48-76b6-4c25-8f84-ada9d29d7352</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>Python\IssueRefactoringDocCalculator\ref_operations_extractor.py</StartupFile>
+    <StartupFile>Python\IssueRefactoringDocCalculator\issue_motivations.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -32,6 +32,7 @@
     <Compile Include="Python\IssueRefactoringDocCalculator\main.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Python\IssueRefactoringDocCalculator\issue_motivations.py" />
     <Compile Include="Python\IssueRefactoringDocCalculator\ref_operations_extractor.py">
       <SubType>Code</SubType>
     </Compile>
@@ -103,6 +104,16 @@
     <Content Include="Python\extractedIssueCommentsRefactoring.txt" />
     <Content Include="Python\extractedIssueDescBugs.txt" />
     <Content Include="Python\extractedIssueDescRefactoring.txt" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.95b325f6bd201afb1a5c921c35b90e13e7515c08.html" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.c670c6c91a36f2384521fb72bad703a5b0f15f4e.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.b35bdc8fbadb1f1b3577bf7abbf6f3bf4ab1030a.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.5e116407c367ed4380ea8e614dfb3f72e5a63371.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-06 200507.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-03 211753.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-03 212311.png" />
@@ -146,6 +157,8 @@
     <Content Include="Python\IssueRefactoringDocCalculator\issue_refactoring_doc_text_patterns - MATLAB.csv" />
     <Content Include="Python\IssueRefactoringDocCalculator\issue_title_refactoring_doc_text_patterns.csv" />
     <Content Include="Python\IssueRefactoringDocCalculator\issue_refactoring_doc_text_patterns.csv.xlsx" />
+    <Content Include="Python\IssueRefactoringDocCalculator\refactoring_motivations.csv" />
+    <Content Include="Python\IssueRefactoringDocCalculator\refactoring_motivations_clustered.csv" />
     <Content Include="Python\IssueRefactoringDocCalculator\refactoring_operations_clustered_by_class.csv" />
     <Content Include="Python\IssueRefactoringDocCalculator\reg_exp_grouped.txt" />
     <Content Include="Python\IssueRefactoringDocCalculator\test.csv" />
@@ -165,6 +178,7 @@
     <Folder Include="Java\" />
     <Folder Include="Java\detectedRefactorings\" />
     <Folder Include="Python\" />
+    <Folder Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\" />
     <Folder Include="Python\JavaConsoleOutputParser\" />
     <Folder Include="Python\GoogleExtensionRefactoringMiner\" />
     <Folder Include="Python\IssueRefactoringDocCalculator\" />

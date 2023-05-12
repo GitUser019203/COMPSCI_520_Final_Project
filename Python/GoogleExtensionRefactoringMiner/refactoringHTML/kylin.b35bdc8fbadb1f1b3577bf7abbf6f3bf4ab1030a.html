@@ -1,0 +1,106 @@
+<button class="myBtnLink" id="myBtnLink">
+    Refactorings
+    <div class="myDIVLink" id="myDIVLink" style="visibility: hidden; opacity: 0; transition-delay: 0.2s;">
+        <input type="checkbox" id="checkbox" checked="true">
+        <label> ALL REFACTORING TYPES || </label>
+        <input type="checkbox" id="Change Attribute Type check" checked="true"> Change Attribute Type ||
+        <input type="checkbox" id="Extract Method check" checked="true"> Extract Method ||
+        <input type="checkbox" id="Add Parameter check" checked="true"> Add Parameter ||
+        <input type="checkbox" id="Remove Parameter check" checked="true"> Remove Parameter ||
+        <input type="checkbox" id="Extract Variable check" checked="true"> Extract Variable ||
+        <label> </label>
+        <button id="aBtn" class="aBtn">
+            <img class="pinIcon" id="pinIcon" src="chrome-extension://lnloiaibmonmmpnfibfjjlfcddoppmgd/pin.png">
+            <div class="tooltipPin" id="tooltipPin">Pin</div>
+        </button>
+        <div id="myLink" class="myLink" style="display: none;">
+            <b>Change Attribute Type</b>
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL21">rawScanner : GTRawScanner</a> to
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fR20">rawScanner : IGTScanner</a> in class org.apache.kylin.storage.gridtable.GTAggregateScanner
+            <br>
+            <b>Extract Method</b>
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fR35">public getInfo() : GTInfo</a> extracted from
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL23">package GTAggregateScanner(info GTInfo, store IGTStore, pkStart GTRecord, pkEndExclusive GTRecord, dimensions BitSet, metrics BitSet, metricsAggrFuncs String[], filterPushDown TupleFilter)</a> in class org.apache.kylin.storage.gridtable.GTAggregateScanner
+            <br>
+            <b>Add Parameter</b>
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fR22">rawScanner : IGTScanner</a> in method
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fR22">package GTAggregateScanner(rawScanner IGTScanner, dimensions BitSet, metrics BitSet, metricsAggrFuncs String[])</a> from class org.apache.kylin.storage.gridtable.GTAggregateScanner
+            <br>
+            <b>Remove Parameter</b>
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL23">info : GTInfo</a> in method
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL23">package GTAggregateScanner(info GTInfo, store IGTStore, pkStart GTRecord, pkEndExclusive GTRecord, dimensions BitSet, metrics BitSet, metricsAggrFuncs String[], filterPushDown TupleFilter)</a> from class org.apache.kylin.storage.gridtable.GTAggregateScanner
+            <br>
+            <b>Remove Parameter</b>
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL23">store : IGTStore</a> in method
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL23">package GTAggregateScanner(info GTInfo, store IGTStore, pkStart GTRecord, pkEndExclusive GTRecord, dimensions BitSet, metrics BitSet, metricsAggrFuncs String[], filterPushDown TupleFilter)</a> from class org.apache.kylin.storage.gridtable.GTAggregateScanner
+            <br>
+            <b>Remove Parameter</b>
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL23">pkStart : GTRecord</a> in method
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL23">package GTAggregateScanner(info GTInfo, store IGTStore, pkStart GTRecord, pkEndExclusive GTRecord, dimensions BitSet, metrics BitSet, metricsAggrFuncs String[], filterPushDown TupleFilter)</a> from class org.apache.kylin.storage.gridtable.GTAggregateScanner
+            <br>
+            <b>Remove Parameter</b>
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL23">pkEndExclusive : GTRecord</a> in method
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL23">package GTAggregateScanner(info GTInfo, store IGTStore, pkStart GTRecord, pkEndExclusive GTRecord, dimensions BitSet, metrics BitSet, metricsAggrFuncs String[], filterPushDown TupleFilter)</a> from class org.apache.kylin.storage.gridtable.GTAggregateScanner
+            <br>
+            <b>Remove Parameter</b>
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL23">filterPushDown : TupleFilter</a> in method
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL23">package GTAggregateScanner(info GTInfo, store IGTStore, pkStart GTRecord, pkEndExclusive GTRecord, dimensions BitSet, metrics BitSet, metricsAggrFuncs String[], filterPushDown TupleFilter)</a> from class org.apache.kylin.storage.gridtable.GTAggregateScanner
+            <br>
+            <b>Extract Variable</b>
+            <a href="#diff-5bca31477ac834d7b584c58356ea4111634309fe9fd92fec441e5e2f730f1562R46">rawScanner : IGTScanner</a> in method
+            <a href="#diff-5bca31477ac834d7b584c58356ea4111634309fe9fd92fec441e5e2f730f1562R41">public scanAndAggregate(pkStart GTRecord, pkEndExclusive GTRecord, dimensions BitSet, metrics BitSet, metricsAggrFuncs String[], filterPushDown TupleFilter) : IGTScanner</a> from class org.apache.kylin.storage.gridtable.GridTable
+            <br>
+        </div>
+        <div id="div Change Attribute Type" class="Change Attribute Type">
+            1:
+            <b>Change Attribute Type</b>
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL21">rawScanner : GTRawScanner</a> to
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fR20">rawScanner : IGTScanner</a> in class org.apache.kylin.storage.gridtable.GTAggregateScanner
+            <br>
+        </div>
+        <div id="div Extract Method" class="Extract Method">
+            2:
+            <b>Extract Method</b>
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fR35">public getInfo() : GTInfo</a> extracted from
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL23">package GTAggregateScanner(info GTInfo, store IGTStore, pkStart GTRecord, pkEndExclusive GTRecord, dimensions BitSet, metrics BitSet, metricsAggrFuncs String[], filterPushDown TupleFilter)</a> in class org.apache.kylin.storage.gridtable.GTAggregateScanner
+            <br>
+        </div>
+        <div id="div Add Parameter" class="Add Parameter">
+            3:
+            <b>Add Parameter</b>
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fR22">rawScanner : IGTScanner</a> in method
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fR22">package GTAggregateScanner(rawScanner IGTScanner, dimensions BitSet, metrics BitSet, metricsAggrFuncs String[])</a> from class org.apache.kylin.storage.gridtable.GTAggregateScanner
+            <br>
+        </div>
+        <div id="div Remove Parameter" class="Remove Parameter">
+            4:
+            <b>Remove Parameter</b>
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL23">info : GTInfo</a> in method
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL23">package GTAggregateScanner(info GTInfo, store IGTStore, pkStart GTRecord, pkEndExclusive GTRecord, dimensions BitSet, metrics BitSet, metricsAggrFuncs String[], filterPushDown TupleFilter)</a> from class org.apache.kylin.storage.gridtable.GTAggregateScanner
+            <br>5:
+            <b>Remove Parameter</b>
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL23">store : IGTStore</a> in method
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL23">package GTAggregateScanner(info GTInfo, store IGTStore, pkStart GTRecord, pkEndExclusive GTRecord, dimensions BitSet, metrics BitSet, metricsAggrFuncs String[], filterPushDown TupleFilter)</a> from class org.apache.kylin.storage.gridtable.GTAggregateScanner
+            <br>6:
+            <b>Remove Parameter</b>
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL23">pkStart : GTRecord</a> in method
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL23">package GTAggregateScanner(info GTInfo, store IGTStore, pkStart GTRecord, pkEndExclusive GTRecord, dimensions BitSet, metrics BitSet, metricsAggrFuncs String[], filterPushDown TupleFilter)</a> from class org.apache.kylin.storage.gridtable.GTAggregateScanner
+            <br>7:
+            <b>Remove Parameter</b>
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL23">pkEndExclusive : GTRecord</a> in method
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL23">package GTAggregateScanner(info GTInfo, store IGTStore, pkStart GTRecord, pkEndExclusive GTRecord, dimensions BitSet, metrics BitSet, metricsAggrFuncs String[], filterPushDown TupleFilter)</a> from class org.apache.kylin.storage.gridtable.GTAggregateScanner
+            <br>8:
+            <b>Remove Parameter</b>
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL23">filterPushDown : TupleFilter</a> in method
+            <a href="#diff-c63514210da17d37f405ba07e6702f27614a9694589a12d6c9aab725243b4f1fL23">package GTAggregateScanner(info GTInfo, store IGTStore, pkStart GTRecord, pkEndExclusive GTRecord, dimensions BitSet, metrics BitSet, metricsAggrFuncs String[], filterPushDown TupleFilter)</a> from class org.apache.kylin.storage.gridtable.GTAggregateScanner
+            <br>
+        </div>
+        <div id="div Extract Variable" class="Extract Variable">
+            9:
+            <b>Extract Variable</b>
+            <a href="#diff-5bca31477ac834d7b584c58356ea4111634309fe9fd92fec441e5e2f730f1562R46">rawScanner : IGTScanner</a> in method
+            <a href="#diff-5bca31477ac834d7b584c58356ea4111634309fe9fd92fec441e5e2f730f1562R41">public scanAndAggregate(pkStart GTRecord, pkEndExclusive GTRecord, dimensions BitSet, metrics BitSet, metricsAggrFuncs String[], filterPushDown TupleFilter) : IGTScanner</a> from class org.apache.kylin.storage.gridtable.GridTable
+            <br>
+        </div>
+    </div>
+</button>
