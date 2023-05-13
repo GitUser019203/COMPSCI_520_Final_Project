@@ -24,6 +24,11 @@ for i in lines:
         counterModify+=1
     if m.lower() in list3:
         counterDelete+=1
-print("total",totalIssues)
-print(counterAdd,counterModify,counterDelete)
+#print("total",totalIssues)
+#print(counterAdd,counterModify,counterDelete)
+
+print("Evaluation Criteria")
+print("Issues that talked about Code Addition: ",(counterAdd/totalIssues)*100,"%")
+print("Issues that talked about Code Modification: ",(counterModify/totalIssues)*100,"%")
+print("Issues that talked about Code Deletion: ",(counterDelete/totalIssues)*100,"%")
 
