@@ -8,7 +8,7 @@ with open(file='extractedIssueDescRefactoring.txt', mode='r') as out_file:
 
 list1 =["Add","add","append","addition","creation","create","apply","clean",
     "code optimization","extend","introduce"]
-list2=["clean","modify","repair","fix","simplify","split","redesign","refactor","rewrite","repackage"]
+list2=["clean","modify","repair","fix","simplify","split","redesign","refactor","rewrite","repackage","refactor", "refactoring", "refactors", "refactorings", "refactored"]
 list3=["reduce","reduction","delete","subtract","remove","dump","rid","push down","redundant"]
 counterAdd =0
 counterModify=0
@@ -18,11 +18,11 @@ for i in lines:
   totalIssues+=1
   j = i.split()
   for m in j:
-    if m.lower() in list1:
+    if any(word in m.lower() for word in list1):
       counterAdd+=1
-    if m.lower() in list2:
+    elif any(word in m.lower() for word in list2):
         counterModify+=1
-    if m.lower() in list3:
+    elif any(word in m.lower() for word in list3):
         counterDelete+=1
 #print("total",totalIssues)
 #print(counterAdd,counterModify,counterDelete)
