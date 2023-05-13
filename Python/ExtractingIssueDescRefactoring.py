@@ -33,7 +33,7 @@ total_num_commits_reporting_refactoring_linked_to_issues_documenting_refactoring
 unique_commit_hashes = set()
 unique_commit_hashes_with_refactoring_reported = set()
 
-with open("extractedIssueDescRefactoring.txt", 'w', encoding="utf-8") as out_file:
+with open("extractedIssueCommentsRefactoring.txt", 'w', encoding="utf-8") as out_file:
     for projects in projectCollection:
         for project in projects:
             vcs_system_reported_refactoring = False
@@ -61,7 +61,7 @@ with open("extractedIssueDescRefactoring.txt", 'w', encoding="utf-8") as out_fil
                         if issue.title is not None and re.search(refactor_pattern, issue.title):                            
                             total_num_issues_documenting_refactoring += 1 # There could be False positives!
                             description = issue.desc
-                            print("Issue Description: ",description,file=out_file)
+                            print("Issue Description: ",file=out_file)
                             linked_commits = Commit.objects(linked_issue_ids=issue.id)
                             for commit in linked_commits:
                                 # Although distinct commits can have identical commit hashes it is rare
