@@ -6,6 +6,7 @@
     <ProjectHome>
     </ProjectHome>
     <StartupFile>Python\IssueRefactoringDocCalculator\ref_operations_extractor.py</StartupFile>
+    <StartupFile>Python\MongoDB.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -31,17 +32,17 @@
     <Compile Include="Python\IssueBodiesCount.py" />
     <Compile Include="Python\IssueBodiesCountBugs.py" />
     <Compile Include="Python\IssueBodiesCountRefactor.py" />
-    <Compile Include="Python\IssueRefactoringDocCalculator\main.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Python\IssueRefactoringDocCalculator\issue_motivations.py" />
-    <Compile Include="Python\IssueRefactoringDocCalculator\ref_operations_extractor.py">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="Python\IssueRefactoringDocCalculator\main.py" />
+    <Compile Include="Python\IssueRefactoringDocCalculator\ref_operations_extractor.py" />
     <Compile Include="Python\IssuesCount.py" />
     <Compile Include="Python\JavaConsoleOutputParser\parser.py" />
+    <Compile Include="Python\MongoDB.py" />
     <Compile Include="Python\PythonApplication.py" />
     <Compile Include="Python\PythonApplicationForBugs.py" />
+    <Compile Include="Python\stopwatch.py" />
+    <Compile Include="Python\WSS4J\gitparser.py" />
+    <Compile Include="Python\WSS4J\mongostore.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="C++\projects.cpp" />
@@ -102,29 +103,23 @@
     <Content Include="Python\BugIssueTitle.png" />
     <Content Include="Python\BugsVSIssues.png" />
     <Content Include="Python\BugSynonymsIssues.png" />
+    <Content Include="Python\extractedIssueComments.txt" />
     <Content Include="Python\extractedIssueCommentsBugs.txt" />
     <Content Include="Python\extractedIssueCommentsRefactoring.txt" />
     <Content Include="Python\extractedIssueDescBugs.txt" />
     <Content Include="Python\extractedIssueDescRefactoring.txt" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.30942edb8f18e1cd8187e54cb57c97e938ea74c6.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.37557fec0211b3bc427e7b94c8a5263645a79116.html" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.5e116407c367ed4380ea8e614dfb3f72e5a63371.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.95b325f6bd201afb1a5c921c35b90e13e7515c08.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.b054db4ec64f9309f9852c4d831bef5fb7d5c379.html" />
-    <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.c670c6c91a36f2384521fb72bad703a5b0f15f4e.html">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.b35bdc8fbadb1f1b3577bf7abbf6f3bf4ab1030a.html">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.5e116407c367ed4380ea8e614dfb3f72e5a63371.html">
-      <SubType>Code</SubType>
-    </Content>
+    <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.b35bdc8fbadb1f1b3577bf7abbf6f3bf4ab1030a.html" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.c670c6c91a36f2384521fb72bad703a5b0f15f4e.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.d59c8485c088c511e05ed6495d14cfc5fa041b51.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\kylin.f1dedab768f52b7dcb22e16b1897167703897fc4.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\manifold.239b1b988a0d9b381ec0a81ce83fb317232c65ba.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\manifold.47544a120937015a92c61013254543ab5c45326e.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\manifold.84b3a1231a2caaf7f1aa9d830337099ccba19010.html" />
-    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-06 200507.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-03 211753.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-03 212311.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-03 212651.png" />
@@ -138,6 +133,7 @@
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-06 195553.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-06 195817.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-06 200012.png" />
+    <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-06 200507.html" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-06 200507.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-06 200925.png" />
     <Content Include="Python\GoogleExtensionRefactoringMiner\Screenshot 2023-05-06 201636.png" />
@@ -166,19 +162,23 @@
     <Content Include="Python\GoogleExtensionRefactoringMiner\todo.txt" />
     <Content Include="Python\IssueRefactoringDocCalculator\data.txt" />
     <Content Include="Python\IssueRefactoringDocCalculator\issue_refactoring_doc_text_patterns - MATLAB.csv" />
-    <Content Include="Python\IssueRefactoringDocCalculator\issue_title_refactoring_doc_text_patterns.csv" />
     <Content Include="Python\IssueRefactoringDocCalculator\issue_refactoring_doc_text_patterns.csv.xlsx" />
+    <Content Include="Python\IssueRefactoringDocCalculator\issue_title_refactoring_doc_text_patterns.csv" />
     <Content Include="Python\IssueRefactoringDocCalculator\refactoring_motivations.csv" />
     <Content Include="Python\IssueRefactoringDocCalculator\refactoring_motivations_clustered.csv" />
-    <Content Include="Python\IssueRefactoringDocCalculator\refactoring_operations_clustered_by_class.csv" />
     <Content Include="Python\IssueRefactoringDocCalculator\reg_exp_grouped.txt" />
     <Content Include="Python\IssueRefactoringDocCalculator\test.csv" />
     <Content Include="Python\IssueRefactoringDocCalculator\word_cloud.png" />
     <Content Include="Python\IssueRefactoringDocCalculator\word_cloud_gen.m" />
+    <Content Include="Python\IssueRefactoringDocCalculator\issue_refactoring_doc_text_patterns.csv" />
     <Content Include="Python\issue_tracked_projects.txt" />
     <Content Include="Python\JavaConsoleOutputParser\extracted_errors" />
     <Content Include="Python\mongo_db_extract_refactoring_doc.txt" />
     <Content Include="Python\PythonApplicationForRefactoring" />
+    <Content Include="Python\IssueRefactoringDocCalculator\refactoring_motivations_code_smells.csv" />
+    <Content Include="Python\IssueRefactoringDocCalculator\refactoring_motivations_external_qas.csv" />
+    <Content Include="Python\IssueRefactoringDocCalculator\refactoring_motivations_internal_qas.csv" />
+    <Content Include="Python\IssueRefactoringDocCalculator\refactoring_operations_clustered_by_class.csv" />
     <Content Include="Python\regexp.txt" />
     <Content Include="Python\WSS4J\wss4j.mongodb" />
     <Content Include="Python\WSS4J\wss4j.mongodb.csv" />
@@ -189,10 +189,10 @@
     <Folder Include="Java\" />
     <Folder Include="Java\detectedRefactorings\" />
     <Folder Include="Python\" />
-    <Folder Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\" />
-    <Folder Include="Python\JavaConsoleOutputParser\" />
     <Folder Include="Python\GoogleExtensionRefactoringMiner\" />
+    <Folder Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\" />
     <Folder Include="Python\IssueRefactoringDocCalculator\" />
+    <Folder Include="Python\JavaConsoleOutputParser\" />
     <Folder Include="Python\WSS4J\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
