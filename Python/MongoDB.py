@@ -127,27 +127,26 @@ def commitMiningWorker():
                                 
         commit_queue.task_done()
 
-projectCollection = [Project.objects(name=project_name) for project_name in project_data]
+projectCollection = Project.objects()
 unique_issues = set()
 stopwatch = StopWatch()
 stopwatch.start()
-for projects in projectCollection:
-    for project in projects:
-        vcs_system_reported_refactoring = False
+for project in projectCollection:
+    vcs_system_reported_refactoring = False
 
-        # We now select the version control system of the project
-        vcs_system = VCSSystem.objects(project_id=project.id).get()
+    # We now select the version control system of the project
+    vcs_system = VCSSystem.objects(project_id=project.id).get()
 
-        # We can now grab the commits in the VCS system
-        commits = Commit.objects(vcs_system_id=vcs_system.id)
+    # We can now grab the commits in the VCS system
+    commits = Commit.objects(vcs_system_id=vcs_system.id)
 
-        for commit in commits:
-            commit_queue.put(commit)
+    for commit in commits:
+        commit_queue.put(commit)
 
-        for i in range(0, 2):
-            Thread(target = commitMiningWorker, daemon = True).start()
-        commit_queue.join()
-        print('All work completed')
+    for i in range(0, 2):
+        Thread(target = commitMiningWorker, daemon = True).start()
+    commit_queue.join()
+    print(f'Completed mining {project.name}')
 stopwatch.stop()
 stopwatch.get_elapsed_time()
 
