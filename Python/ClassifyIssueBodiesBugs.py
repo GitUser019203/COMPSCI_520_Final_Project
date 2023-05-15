@@ -82,3 +82,34 @@ print("Issues that talked about Bug Classification: ",(counterBugClassify/totalI
 print("Issues that talked about Bug Fix: ",(counterBugFix/totalIssues)*100,"%")
 print("Issues that talked about Bug Report: ",(counterBugReport/totalIssues)*100,"%")
 
+d = np.array([counterFound, totalIssues])
+myexplode = [0.2,0]
+fig1, ax1 = plt.subplots()
+plotLabel = ["Issues about Bug Found","Other Issues"]
+plt.pie(d, labels=plotLabel,explode = myexplode,autopct='%1.1f%%', startangle=90)
+plt.axis('equal')
+plt.show()
+
+d = np.array([counterBugClassify, totalIssues])
+myexplode = [0.2,0]
+fig1, ax1 = plt.subplots()
+plotLabel = ["Issues about Bug Classification","Other Issues"]
+plt.pie(d, labels=plotLabel,explode = myexplode,autopct='%1.1f%%', startangle=90)
+plt.axis('equal')
+plt.show()
+
+d = np.array([counterBugFix, totalIssues])
+myexplode = [0.2,0]
+fig1, ax1 = plt.subplots()
+plotLabel = ["Issues about Bug Fixes","Other Issues"]
+plt.pie(d, labels=plotLabel,explode = myexplode,autopct='%1.1f%%', startangle=90)
+plt.axis('equal')
+plt.show()
+
+d = np.array([counterBugReport, totalIssues])
+myexplode = [0.2,0]
+fig1, ax1 = plt.subplots()
+plotLabel = ["Issues about Bug Report","Other Issues"]
+plt.pie(d, labels=plotLabel,explode = myexplode,autopct='%1.1f%%', startangle=90)
+plt.axis('equal')
+plt.show()

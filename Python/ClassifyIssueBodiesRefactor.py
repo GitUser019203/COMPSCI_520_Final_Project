@@ -1,3 +1,5 @@
+import numpy as np
+import matplotlib.pyplot as plt
 lines = []
 with open(file='./Python/extractedIssueDescRefactoring.txt', mode='r') as out_file:
         # Go through every line in file
@@ -31,4 +33,29 @@ print("Evaluation Criteria")
 print("Issues that talked about Code Addition: ",(counterAdd/totalIssues)*100,"%")
 print("Issues that talked about Code Modification: ",(counterModify/totalIssues)*100,"%")
 print("Issues that talked about Code Deletion: ",(counterDelete/totalIssues)*100,"%")
+
+d = np.array([counterAdd, totalIssues])
+myexplode = [0.2,0]
+fig1, ax1 = plt.subplots()
+plotLabel = ["Issues about Code Addition","Other Issues"]
+plt.pie(d, labels=plotLabel,explode = myexplode,autopct='%1.1f%%', startangle=90)
+plt.axis('equal')
+plt.show()
+
+d = np.array([counterModify, totalIssues])
+myexplode = [0.2,0]
+fig1, ax1 = plt.subplots()
+plotLabel = ["Issues about Code Modification","Other Issues"]
+plt.pie(d, labels=plotLabel,explode = myexplode,autopct='%1.1f%%', startangle=90)
+plt.axis('equal')
+plt.show()
+
+d = np.array([counterDelete, totalIssues])
+myexplode = [0.2,0]
+fig1, ax1 = plt.subplots()
+plotLabel = ["Issues about Code Deletion","Other Issues"]
+plt.pie(d, labels=plotLabel,explode = myexplode,autopct='%1.1f%%', startangle=90)
+plt.axis('equal')
+plt.show()
+
 

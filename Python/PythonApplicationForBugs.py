@@ -28,6 +28,7 @@ totalValidatedBugs = 0
 totalIssues = 0
 totalCommits = 0
 detectedBugList = []
+detectedValidatedBugs=[]
 
 for projects in projectCollection:
     for project in projects:
@@ -71,6 +72,7 @@ for projects in projectCollection:
                 count_bugs_dev_label += 1
             if issue.issue_type_verified is not None and issue.issue_type_verified.lower() in bugSynonymList:
                 count_bugs_validated += 1
+                detectedValidatedBugs.append(issue.issue_type_verified)
             if Commit.objects(linked_issue_ids=issue.id).count()>0:
                 count_referenced_by_commits += 1
             for commits in Commit.objects(linked_issue_ids=issue.id):
