@@ -1,5 +1,5 @@
 lines = []
-with open(file='extractedIssueDescRefactoring.txt', mode='r') as out_file:
+with open(file='./Python/extractedIssueDescRefactoring.txt', mode='r') as out_file:
         # Go through every line in file
         for line in out_file:
             # If line contains "Issue Description:", that is the start of a new issue body; reset flag to false
