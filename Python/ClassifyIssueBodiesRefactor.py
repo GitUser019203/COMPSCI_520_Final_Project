@@ -8,7 +8,7 @@ with open(file='./Python/extractedIssueDescRefactoring.txt', mode='r') as out_fi
 
 list1 =["Add","add","append","addition","creation","create","apply","clean",
     "code optimization","extend","introduce"]
-list2=["clean","modify","repair","fix","simplify","split","redesign","refactor","rewrite","repackage","refactor", "refactoring", "refactors", "refactorings", "refactored"]
+list2=["clean","modify","repair","fix","simplify","split","redesign","refactor","rewrite","repackage","refactor", "refactoring", "refactors", "refactorings", "refactored","cleaned","simplified"]
 list3=["reduce","reduction","delete","subtract","remove","dump","rid","push down","redundant"]
 counterAdd =0
 counterModify=0
