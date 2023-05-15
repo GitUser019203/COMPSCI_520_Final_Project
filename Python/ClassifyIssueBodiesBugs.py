@@ -38,14 +38,14 @@ def extractIssueDesc(filepath: str) -> list:
     return lines
 
 
-def bugCounter(issue_body_list: list, 
+def issueTitleBugCounter(issue_body_list: list, 
                    bug_id_keys: list, 
                    bug_class_keys: list, 
                    bug_fix_keys: list,
                    bug_report_keys: list) -> list:
     """
-    Count number of Issue Bodies that exist, plus Issue Bodies that are 
-    in one of the types or groups:
+    Count number of Issue Bodies that exist, 
+    plus number of Issue Bodies that are in one of the folowing bug types:
     - Bug Identification
     - Bug Classification
     - Bug Fixes
@@ -124,7 +124,8 @@ bug_report_list = [
         counterBugReport+=1
 """
 
-bug_counters = bugCounter(issue_body_list=lines, 
+# Count number of issue titles and bug types
+bug_counters = issueTitleBugCounter(issue_body_list=lines, 
                           bug_id_keys=bug_identify_list, 
                           bug_class_keys=bug_classify_list, 
                           bug_fix_keys=bug_fix_list,
@@ -148,34 +149,48 @@ print("Issues that talked about Bug Classification: ",(counterBugClassify/totalI
 print("Issues that talked about Bug Fix: ",(counterBugFix/totalIssues)*100,"%")
 print("Issues that talked about Bug Report: ",(counterBugReport/totalIssues)*100,"%")
 
-# d = np.array([counterFound, totalIssues])
-# myexplode = [0.2,0]
-# fig1, ax1 = plt.subplots()
-# plotLabel = ["Issues about Bug Found","Other Issues"]
-# plt.pie(d, labels=plotLabel,explode = myexplode,autopct='%1.1f%%', startangle=90)
-# plt.axis('equal')
-# plt.show()
 
-# d = np.array([counterBugClassify, totalIssues])
-# myexplode = [0.2,0]
-# fig1, ax1 = plt.subplots()
-# plotLabel = ["Issues about Bug Classification","Other Issues"]
-# plt.pie(d, labels=plotLabel,explode = myexplode,autopct='%1.1f%%', startangle=90)
-# plt.axis('equal')
-# plt.show()
+# Create charts
+def createPieChart(bug_type_counter: int, 
+                   total_issues_count: int, 
+                   bug_type_label: str,
+                   total_issues_label: str):
+    """
+    Creates Pie Chart of the total number of bug_type out of total_issues
+    :param: bug_type_counter: total number of bugs of a certain type (identify, classify, fixes, reports)
+    :param: total_issues_count: total number of body issues
+    :param: bug_type_label: Chart label for bug_type
+    :param: total_issues_label: Chart label for total_issues
+    """
+    d = np.array([bug_type_counter, total_issues_count])
+    myexplode = [0.2,0]
+    fig1, ax1 = plt.subplots()
+    plotLabel = [bug_type_label, total_issues_label]
+    plt.pie(d, labels=plotLabel, explode=myexplode, autopct='%1.1f%%', startangle=90)
+    plt.axis('equal')
+    plt.show()
 
-# d = np.array([counterBugFix, totalIssues])
-# myexplode = [0.2,0]
-# fig1, ax1 = plt.subplots()
-# plotLabel = ["Issues about Bug Fixes","Other Issues"]
-# plt.pie(d, labels=plotLabel,explode = myexplode,autopct='%1.1f%%', startangle=90)
-# plt.axis('equal')
-# plt.show()
 
-# d = np.array([counterBugReport, totalIssues])
-# myexplode = [0.2,0]
-# fig1, ax1 = plt.subplots()
-# plotLabel = ["Issues about Bug Report","Other Issues"]
-# plt.pie(d, labels=plotLabel,explode = myexplode,autopct='%1.1f%%', startangle=90)
-# plt.axis('equal')
-# plt.show()
+# Chart for Bug Identifications
+createPieChart(bug_type_counter=counterFound,
+               total_issues_count=totalIssues,
+               bug_type_label="Issues about Bug Found",
+               total_issues_label="Other Issues")
+
+# Chart for Bug Classifications
+createPieChart(bug_type_counter=counterBugClassify,
+               total_issues_count=totalIssues,
+               bug_type_label="Issues about Bug Classification",
+               total_issues_label="Other Issues")
+
+# Chart for Bug Fixes
+createPieChart(bug_type_counter=counterBugFix,
+               total_issues_count=totalIssues,
+               bug_type_label="Issues about Bug Fixes",
+               total_issues_label="Other Issues")
+
+# Chart for Bug Reports
+createPieChart(bug_type_counter=counterBugReport,
+               total_issues_count=totalIssues,
+               bug_type_label="Issues about Bug Reports",
+               total_issues_label="Other Issues")
