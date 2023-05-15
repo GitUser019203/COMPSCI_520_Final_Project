@@ -67,13 +67,19 @@ def issueTitleBugCounter(issue_body_list: list,
     # Loop through each line and count all occurences
     for i in issue_body_list:
         total_issues += 1
-        if any(word in i.lower() for word in bug_id_keys):
+        if any(word in i.lower() for word in bug_id_keys) or \
+                re.findall(r"^there.*(bug|problem)$", i) or \
+                re.findall(r"^cause.*(bug|problem)$", i):
             counter_found += 1
-        elif any(word in i.lower() for word in bug_class_keys) or re.findall(r"bug#\d+", i) or re.findall(r"bug\d+", i):
+        elif any(word in i.lower() for word in bug_class_keys) or \
+                re.findall(r"bug#[0-9]+", i) or \
+                re.findall(r"bug #[0-9]+", i) or \
+                re.findall(r"bug[0-9]+", i) or \
+                re.findall(r"bug [0-9]+", i):
             counter_bug_classify += 1
-        elif any(word in i.lower() for word in bug_fix_keys) or re.findall(r"^fix *bug$", i):
+        elif any(word in i.lower() for word in bug_fix_keys) or re.findall(r"^fix.*bug$", i):
             counter_bug_fix += 1
-        elif any(word in i.lower() for word in bug_report_keys):
+        elif any(word in i.lower() for word in bug_report_keys) or re.findall(r"^report.*bug$", i):
             counter_bug_report += 1
     
     # Return list of all counters
@@ -86,17 +92,38 @@ lines = extractIssueDesc(filepath='./Python/extractedIssueDescBugs.txt')
 # Identify list of keywords for specific 
 bug_identify_list = [
      "found a bug", 
+     "found a problem", 
      "there is a bug", 
+     "there is a problem", 
      "bug has been found", 
+     "problem has been found", 
      "it is a bug", 
-     "this is a bug", 
+     "it is a problem", 
+     "this is a bug",
+     "this is a problem", 
      "this bug", 
+     "this problem", 
      "catch this bug", 
+     "catch this problem", 
      "catch a bug", 
+     "catch a problem", 
      "catched this bug", 
-     "catched a bug"
+     "catched this problem", 
+     "catched a bug",
+     "catched a problem",
+     "these bug",
+     "these problem",
+     "other bug",
+     "other problem",
+     "following bug",
+     "following problem",
+     " of bug",
+     " of problem"
      ]
-bug_classify_list = [" bug#"]
+bug_classify_list = [
+    " bug#", 
+    "bug is a"
+    ]
 bug_fix_list = [
      "fixed a bug", 
      "fix a bug", 
@@ -171,26 +198,26 @@ def createPieChart(bug_type_counter: int,
     plt.show()
 
 
-# Chart for Bug Identifications
-createPieChart(bug_type_counter=counterFound,
-               total_issues_count=totalIssues,
-               bug_type_label="Issues about Bug Found",
-               total_issues_label="Other Issues")
+# # Chart for Bug Identifications
+# createPieChart(bug_type_counter=counterFound,
+#                total_issues_count=totalIssues,
+#                bug_type_label="Issues about Bug Found",
+#                total_issues_label="Other Issues")
 
-# Chart for Bug Classifications
-createPieChart(bug_type_counter=counterBugClassify,
-               total_issues_count=totalIssues,
-               bug_type_label="Issues about Bug Classification",
-               total_issues_label="Other Issues")
+# # Chart for Bug Classifications
+# createPieChart(bug_type_counter=counterBugClassify,
+#                total_issues_count=totalIssues,
+#                bug_type_label="Issues about Bug Classification",
+#                total_issues_label="Other Issues")
 
-# Chart for Bug Fixes
-createPieChart(bug_type_counter=counterBugFix,
-               total_issues_count=totalIssues,
-               bug_type_label="Issues about Bug Fixes",
-               total_issues_label="Other Issues")
+# # Chart for Bug Fixes
+# createPieChart(bug_type_counter=counterBugFix,
+#                total_issues_count=totalIssues,
+#                bug_type_label="Issues about Bug Fixes",
+#                total_issues_label="Other Issues")
 
-# Chart for Bug Reports
-createPieChart(bug_type_counter=counterBugReport,
-               total_issues_count=totalIssues,
-               bug_type_label="Issues about Bug Reports",
-               total_issues_label="Other Issues")
+# # Chart for Bug Reports
+# createPieChart(bug_type_counter=counterBugReport,
+#                total_issues_count=totalIssues,
+#                bug_type_label="Issues about Bug Reports",
+#                total_issues_label="Other Issues")
