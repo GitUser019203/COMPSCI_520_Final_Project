@@ -34,6 +34,7 @@ total_num_commits_linked_to_issues_documenting_refactoring = 0
 total_num_commits_reporting_refactoring_linked_to_issues_documenting_refactoring = 0
 unique_commit_hashes = set()
 unique_commit_hashes_with_refactoring_reported = set()
+refactoringIssueTitles=[]
 
 with open("Python\\mongo_db_extract_refactoring_doc.txt", 'w', encoding="utf-8") as out_file:
     for projects in projectCollection:
@@ -60,7 +61,8 @@ with open("Python\\mongo_db_extract_refactoring_doc.txt", 'w', encoding="utf-8")
                     refactor_pattern = re.compile(reg_exp, re.I | re.M | re.DOTALL)
 
                     for issue in Issue.objects(issue_system_id=issue_tracker.id):
-                        if issue.title is not None and re.search(refactor_pattern, issue.title):                            
+                        if issue.title is not None and re.search(refactor_pattern, issue.title):  
+                            refactoringIssueTitles.append(issue.title)                          
                             total_num_issues_documenting_refactoring += 1 # There could be False positives!
                             linked_commits = Commit.objects(linked_issue_ids=issue.id)
                             for commit in linked_commits:
