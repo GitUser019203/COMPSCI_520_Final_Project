@@ -20,7 +20,6 @@ for i in lines:
   totalIssues+=1
   if any(word in i.lower() for word in list1):
       counterFound+=1
-      print("printing",counterFound)
   elif any(word in i.lower() for word in list2) or re.findall(r"bug#\d+", i):
         counterBugClassify+=1
   elif any(word in i.lower() for word in list3):
@@ -41,8 +40,8 @@ for i in lines:
     elif any(word in m.lower() for word in list4):
         counterBugReport+=1
     """
-#print("total",totalIssues)
-#print(counterAdd,counterBugClassify,counterBugFix)
+print("total",totalIssues)
+print(counterFound,counterBugClassify,counterBugFix,counterBugReport)
 
 
 print("Evaluation Criteria")
