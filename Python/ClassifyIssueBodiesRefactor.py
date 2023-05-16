@@ -29,9 +29,40 @@ modify_verbs = [
     "split",
     "refactor",
     "rewrit",
+    "reorganiz",
     "shift",
     "migrat",
-    "extend"
+    "extend",
+    "improve",
+    "restructur",
+    "consolidat",
+    "decompos",
+    "merg",
+    "extract",
+    "moderniz",
+    "renam",
+    "reorder",
+    "updat",
+    "format",
+    "combin",
+    "optimiz",
+    "optimis"
+]
+
+delete_nounds = [
+    "delet",
+    "reduc",
+    "remov",
+    "rid",
+    "dump",
+    "scratch",
+    "redundan",
+    "eliminat",
+    "drop",
+    "discard",
+    "exclud",
+    "prun",
+    "trim"
 ]
 
 nouns = [
@@ -48,6 +79,7 @@ nouns = [
     "lib",
     "plugin",
     "test",
+    "coverage",
     "example",
     "demo",
     "doc",
@@ -55,7 +87,13 @@ nouns = [
     "error.*message",
     "error.*msg",
     "warning",
-    "order"
+    "order",
+    "performance",
+    "style",
+    "versioning",
+    "format",
+    "readability",
+    "comment"
 ]
 
 add_list = [f"{verb}.*{noun}" for verb in add_verbs for noun in nouns] + [f"{noun}.*{verb}" for verb in add_verbs for noun in nouns]
@@ -71,7 +109,7 @@ modify_list = [f"{verb}.*{noun}" for verb in modify_verbs for noun in nouns] + [
 #    "introduce"
 #]
 #modify_list=["clean","modify","repair","fix","simplify","split","redesign","refactor","rewrite","repackage","refactor", "refactoring", "refactors", "refactorings", "refactored","cleaned","simplified"]
-delete_list=["reduce","reduction","delete","subtract","remove","dump","rid","push down","redundant"]
+#delete_list=["reduce","reduction","delete","subtract","remove","dump","rid","push down","redundant"]
 counterAdd =0
 counterModify=0
 totalIssues = 0
