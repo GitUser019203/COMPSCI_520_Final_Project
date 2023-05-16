@@ -82,14 +82,14 @@ def issueTitleBugCounter(issue_body_list: list,
 #        elif any(word in i.lower() for word in bug_report_keys) or re.findall(r"^report.*bug$", i):
 #            counter_bug_report += 1
 
-        if any(re.search(r"\b{}\b".format(word), i, re.IGNORECASE) for word in bug_id_keys):
-            counter_found += 1
-        elif any(re.search(r"\b{}\b".format(word), i, re.IGNORECASE) for word in bug_class_keys):
+        if any(re.search(r"\b{}\b".format(word), i, re.IGNORECASE) for word in bug_class_keys):
             counter_bug_classify += 1
         elif any(re.search(r"\b{}\b".format(word), i, re.IGNORECASE) for word in bug_fix_keys):
-            counter_bug_fix += 1
+           counter_bug_fix += 1
         elif any(re.search(r"\b{}\b".format(word), i, re.IGNORECASE) for word in bug_report_keys):
             counter_bug_report += 1
+        elif any(re.search(r"\b{}\b".format(word), i, re.IGNORECASE) for word in bug_id_keys):
+            counter_found += 1
     
     # Return list of all counters
     return [total_issues, counter_found, counter_bug_classify, counter_bug_fix, counter_bug_report]
@@ -99,48 +99,93 @@ def issueTitleBugCounter(issue_body_list: list,
 lines = extractIssueDesc(filepath='extractedIssueDescBugs.txt')
 
 # Identify list of keywords for specific 
+#bug_identify_list = [
+#     "exception",
+#     "found.*bug", 
+#     "found.*problem", 
+#     "there.*bug", 
+#     "there.* problem", 
+#     "bug.*found", 
+#     "problem.*found", 
+#     "[Ii]t is.*bug", 
+#     "[Ii]t is.*problem", 
+#     "this is a bug",
+#     "this is a problem", 
+#     "this bug", 
+#     "this problem", 
+#     "catch this bug", 
+#     "catch this problem", 
+#     "catch.*bug", 
+#     "catch.*problem", 
+#     "caught.*bug",
+#     "caught.*problem",
+#     "these bug",
+#     "these problem",
+#     "other bug",
+#     "other problem",
+#     "following bug",
+#     "following problem",
+#     " of bug",
+#     " of problem"
+#     ]
 bug_identify_list = [
-     "exception",
-     "found.*bug", 
-     "found.*problem", 
-     "there.*bug", 
-     "there.* problem", 
-     "bug.*found", 
-     "problem.*found", 
-     "[Ii]t is.*bug", 
-     "[Ii]t is.*problem", 
-     "this is a bug",
-     "this is a problem", 
-     "this bug", 
-     "this problem", 
-     "catch this bug", 
-     "catch this problem", 
-     "catch.*bug", 
-     "catch.*problem", 
-     "caught.*bug",
-     "caught.*problem",
-     "these bug",
-     "these problem",
-     "other bug",
-     "other problem",
-     "following bug",
-     "following problem",
-     " of bug",
-     " of problem"
-     ]
+    "find.*bug",
+    "find.*problem",
+    "there.*bug",
+    "there.*problem",
+    "bug.*found",
+    "problem.*found",
+    "it.*bug",
+    "it.*problem",
+    "this.*bug",
+    "this.*problem",
+    "catch.*bug",
+    "catch.*problem",
+    "caught.*bug",
+    "caught.*problem",
+    "these.*bug",
+    "these.*problem",
+    "other.*bug",
+    "other.*problem",
+    "following.*bug",
+    "following.*problem",
+    "bug",
+    "problem",
+    "unexpected.*behavior",
+    r"\bbug\b.*\bfix\b",
+    r"\bfix\b.*\bbug\b"
+]
+
 bug_classify_list = [
     " bug#", 
     "bug is a",
     " error ",
     "defect",
     "crash",
+    "infinite loop",
+    "corruption",
+    "inconsistent.*behavior",
+    "performance.*issue",
+    "deadlock",
+    "memory.*leak"
     ]
+
 bug_fix_list = [
-     "fixed a bug", 
-     "fix a bug", 
-     "bug fix", 
-     "fixes bug", 
-     "fix bug"
+     "bug.*fix",
+     "fix.*bug",
+     "patch.*bug",
+     "patch.*issue",
+     "patch.*problem",
+     "resolv.*issue",
+     "issue.*resol",
+     "hotfix.*issue",
+     "issue.*hotfix",
+     "hotfix.*problem",
+     "hotfix.*problem",
+     "workaround.*bug",
+     "bug.*workaround",
+     "workaround.*problem",
+     "problem.*workaround"
      ]
 bug_report_list = [
      "bug reported", 
