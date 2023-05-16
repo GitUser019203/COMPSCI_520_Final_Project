@@ -49,7 +49,7 @@ modify_verbs = [
     "optimis"
 ]
 
-delete_nounds = [
+delete_verbs = [
     "delet",
     "reduc",
     "remov",
@@ -99,6 +99,8 @@ nouns = [
 add_list = [f"{verb}.*{noun}" for verb in add_verbs for noun in nouns] + [f"{noun}.*{verb}" for verb in add_verbs for noun in nouns]
 
 modify_list = [f"{verb}.*{noun}" for verb in modify_verbs for noun in nouns] + [f"{noun}.*{verb}" for verb in modify_verbs for noun in nouns]
+
+delete_list = [f"{verb}.*{noun}" for verb in delete_verbs for noun in nouns] + [f"{noun}.*{verb}" for verb in delete_verbs for noun in nouns]
 
 #add_list =[
 #    "add",
