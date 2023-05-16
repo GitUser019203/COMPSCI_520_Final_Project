@@ -147,13 +147,31 @@ bug_identify_list = [
     "these.*problem",
     "other.*bug",
     "other.*problem",
-    "following.*bug",
-    "following.*problem",
+    "follow.*bug",
+    "follow.*problem",
+    "find.*problem",
+    "find.*unexpect.*behavior",
+    "there.*issue",
+    "there.*unexpect.*behavior",
+    "issue.*found",
+    "unexpect.*behavior*found",
+    "it.*issue",
+    "it.*unexpect.*behavior",
+    "this.*issue",
+    "this.*unexpect.*behavior",
+    "catch.*issue",
+    "catch.*unexpect.*behavior",
+    "caught.*issue",
+    "caught.*unexpect.*behavior",
+    "these.*issue",
+    "these.*unexpect.*behavior",
+    "other.*issue",
+    "other.*unexpect.*behavior",
+    "follow.*issue",
+    "follow.*unexpect.*behavior",
     "bug",
     "problem",
-    "unexpected.*behavior",
-    r"\bbug\b.*\bfix\b",
-    r"\bfix\b.*\bbug\b"
+    "unexpected.*behavior"
 ]
 
 bug_classify_list = [
@@ -185,12 +203,22 @@ bug_fix_list = [
      "workaround.*bug",
      "bug.*workaround",
      "workaround.*problem",
-     "problem.*workaround"
+     "problem.*workaround",
+     "troubleshoot.*issue",
+     "troubleshoot.*problem",
      ]
 bug_report_list = [
-     "bug reported", 
-     "report a bug",
-     "bug report "]
+     "bug.*report", 
+     "report.*bug",
+     "issue.*report", 
+     "report.*issue",
+     "problem.*report", 
+     "report.*problem",
+     "error.*report", 
+     "report.*error",
+     "unexpected.*behavior.*report", 
+     "report.*unexpected.*behavior",
+     ]
 
 """
   #j = i.split()
