@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 lines = []
-with open(file='extractedIssueDescRefactoring.txt', mode='r') as out_file:
+with open(file='./Python/extractedIssueDescRefactoring.txt', mode='r') as out_file:
         # Go through every line in file
         for line in out_file:
             # If line contains "Issue Description:", that is the start of a new issue body; reset flag to false
@@ -10,7 +10,7 @@ with open(file='extractedIssueDescRefactoring.txt', mode='r') as out_file:
 
 list1 =["Add","add","append","addition","creation","create","apply","clean",
     "code optimization","extend","introduce"]
-list2=["clean","modify","repair","fix","simplif","split","redesign","refactor","rewrite","repackage","refactor", "refactored","simplified", "updat"]
+list2=["clean","modify","repair","fix","simplify","split","redesign","refactor","rewrite","repackage","refactor", "refactoring", "refactors", "refactorings", "refactored","cleaned","simplified"]
 list3=["reduce","reduction","delete","subtract","remove","dump","rid","push down","redundant"]
 counterAdd =0
 counterModify=0
