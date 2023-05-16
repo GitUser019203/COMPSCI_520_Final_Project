@@ -96,7 +96,7 @@ def issueTitleBugCounter(issue_body_list: list,
     
 
 # Get list of lines from filepath
-lines = extractIssueDesc(filepath='extractedIssueDescBugs.txt')
+lines = extractIssueDesc(filepath='./Python/extractedIssueDescBugs.txt')
 
 # Identify list of keywords for specific 
 #bug_identify_list = [
@@ -282,26 +282,26 @@ def createPieChart(bug_type_counter: int,
     plt.show()
 
 
-# # Chart for Bug Identifications
-# createPieChart(bug_type_counter=counterFound,
-#                total_issues_count=totalIssues,
-#                bug_type_label="Issues about Bug Found",
-#                total_issues_label="Other Issues")
+# Chart for Bug Identifications
+createPieChart(bug_type_counter=counterFound,
+               total_issues_count=totalIssues,
+               bug_type_label="Issues about Bug Found",
+               total_issues_label="Other Issues")
 
-# # Chart for Bug Classifications
-# createPieChart(bug_type_counter=counterBugClassify,
-#                total_issues_count=totalIssues,
-#                bug_type_label="Issues about Bug Classification",
-#                total_issues_label="Other Issues")
+# Chart for Bug Classifications
+createPieChart(bug_type_counter=counterBugClassify,
+               total_issues_count=totalIssues,
+               bug_type_label="Issues about Bug Classification",
+               total_issues_label="Other Issues")
 
-# # Chart for Bug Fixes
-# createPieChart(bug_type_counter=counterBugFix,
-#                total_issues_count=totalIssues,
-#                bug_type_label="Issues about Bug Fixes",
-#                total_issues_label="Other Issues")
+# Chart for Bug Fixes
+createPieChart(bug_type_counter=counterBugFix,
+               total_issues_count=totalIssues,
+               bug_type_label="Issues about Bug Fixes",
+               total_issues_label="Other Issues")
 
-# # Chart for Bug Reports
-# createPieChart(bug_type_counter=counterBugReport,
-#                total_issues_count=totalIssues,
-#                bug_type_label="Issues about Bug Reports",
-#                total_issues_label="Other Issues")
+# Chart for Bug Reports
+createPieChart(bug_type_counter=counterBugReport,
+               total_issues_count=totalIssues,
+               bug_type_label="Issues about Bug Reports",
+               total_issues_label="Other Issues")

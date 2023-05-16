@@ -69,9 +69,9 @@ with open(r"Python\IssueRefactoringDocCalculator\refactoring_motivations.csv", '
 refactoring_motivations_dict = {category: {keyword: 0 for keyword in refactoring_motivations[category]} for category in refactoring_motivations}
 
 # Assign db_user and db_password depending on cmd arguments.
-if argv[0] == 'Preston':
-    db_user = 'root'
-    db_password = 'mongoElise2024'
+if argv[0] == '':
+    db_user = ''
+    db_password = ''
 else:
     db_user = ''
     db_password = ''
