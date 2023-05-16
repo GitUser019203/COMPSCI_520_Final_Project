@@ -25,22 +25,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Python\bug_mining.py" />
+    <Compile Include="Python\ClassifyIssueBodiesBugs.py" />
+    <Compile Include="Python\ClassifyIssueBodiesRefactor.py" />
     <Compile Include="Python\ExtractingIssueCommentsBugs.py" />
     <Compile Include="Python\ExtractingIssueCommentsRefactoring.py" />
     <Compile Include="Python\ExtractingIssueDescBugs.py" />
     <Compile Include="Python\ExtractingIssueDescRefactoring.py" />
     <Compile Include="Python\IssueBodiesCount.py" />
-    <Compile Include="Python\IssueBodiesCountBugs.py" />
-    <Compile Include="Python\IssueBodiesCountRefactor.py" />
     <Compile Include="Python\IssueRefactoringDocCalculator\issue_motivations.py" />
     <Compile Include="Python\IssueRefactoringDocCalculator\main.py" />
     <Compile Include="Python\IssueRefactoringDocCalculator\ref_operations_extractor.py" />
     <Compile Include="Python\IssuesCount.py" />
     <Compile Include="Python\JavaConsoleOutputParser\parser.py" />
+    <Compile Include="Python\ManualValidation.py" />
     <Compile Include="Python\MongoDB.py" />
     <Compile Include="Python\PythonApplication.py" />
     <Compile Include="Python\PythonApplicationForBugs.py" />
+    <Compile Include="Python\PythonApplicationForRefactoring.py" />
     <Compile Include="Python\stopwatch.py" />
+    <Compile Include="Python\untitled.py" />
     <Compile Include="Python\WSS4J\gitparser.py" />
     <Compile Include="Python\WSS4J\mongostore.py" />
   </ItemGroup>
@@ -48,6 +51,11 @@
     <Content Include="C++\projects.cpp" />
     <Content Include="C++\regexp_gen1.cpp" />
     <Content Include="C++\regexp_gen2.cpp" />
+    <Content Include="Final_project_fair\Book1.xlsx" />
+    <Content Include="Final_project_fair\code_smells.png" />
+    <Content Include="Final_project_fair\external_qas.png" />
+    <Content Include="Final_project_fair\iqas.png" />
+    <Content Include="Final_project_fair\refactoring_operations_clustered_by_class.png" />
     <Content Include="Java\commonConsoleOutput" />
     <Content Include="Java\consoleOutput" />
     <Content Include="Java\consoleOutput_after_nutch" />
@@ -174,7 +182,6 @@
     <Content Include="Python\issue_tracked_projects.txt" />
     <Content Include="Python\JavaConsoleOutputParser\extracted_errors" />
     <Content Include="Python\mongo_db_extract_refactoring_doc.txt" />
-    <Content Include="Python\PythonApplicationForRefactoring" />
     <Content Include="Python\IssueRefactoringDocCalculator\refactoring_motivations_code_smells.csv" />
     <Content Include="Python\IssueRefactoringDocCalculator\refactoring_motivations_external_qas.csv" />
     <Content Include="Python\IssueRefactoringDocCalculator\refactoring_motivations_internal_qas.csv" />
@@ -188,6 +195,7 @@
     <Folder Include="C++\" />
     <Folder Include="Java\" />
     <Folder Include="Java\detectedRefactorings\" />
+    <Folder Include="Final_project_fair\" />
     <Folder Include="Python\" />
     <Folder Include="Python\GoogleExtensionRefactoringMiner\" />
     <Folder Include="Python\GoogleExtensionRefactoringMiner\refactoringHTML\" />

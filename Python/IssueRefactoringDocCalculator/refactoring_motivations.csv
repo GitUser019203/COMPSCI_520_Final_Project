@@ -6,7 +6,7 @@ Composition,Readability,Long Method
 Coupling,Stability,Switch Statement
 Encapsulation,Usability,Lazy Class
 Design Size,Flexibility,Too Many Parameters
-polymorphism,Extensibility,Primitive Obsession
+Polymorphism,Extensibility,Primitive Obsession
 Cohesion,Efficiency,Feature Envy
 Messaging,Accuracy,Blob Class
 Concern,Accessibility,Blob Operation
