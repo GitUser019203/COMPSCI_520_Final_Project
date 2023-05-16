@@ -5,7 +5,7 @@ from pycoshark.utils import create_mongodb_uri_string
 import matplotlib.pyplot as plt
 import numpy as np
 
-with open(r"Python\issue_tracked_projects.txt",'r') as file:
+with open(r"issue_tracked_projects.txt",'r') as file:
     for line in file:
         project_data = line.strip().split(',')
     
@@ -19,8 +19,10 @@ credentials = {'db_user': '',
                'db_ssl_enabled': False}
 
 uri = create_mongodb_uri_string(**credentials)
+print(uri)
 
 mongoClient = connect('smartshark_small_2_0', host=uri, alias='default')
+print(f'Client connected - {mongoClient}')
 
 projectCollection = [Project.objects(name=project_name) for project_name in project_data]
 totalBugs = 0
@@ -31,6 +33,7 @@ detectedBugList = []
 
 for projects in projectCollection:
     for project in projects:
+        print(project)
 
         # We now select the version control system of the project
         vcs_system = VCSSystem.objects(project_id=project.id).get()

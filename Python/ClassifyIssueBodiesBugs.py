@@ -67,19 +67,28 @@ def issueTitleBugCounter(issue_body_list: list,
     # Loop through each line and count all occurences
     for i in issue_body_list:
         total_issues += 1
-        if any(word in i.lower() for word in bug_id_keys) or \
-                re.findall(r"^there.*(bug|problem)$", i) or \
-                re.findall(r"^cause.*(bug|problem)$", i):
+#        if any(word in i.lower() for word in bug_id_keys) or \
+#                re.findall(r"^there.*(bug|problem)$", i) or \
+#                re.findall(r"^cause.*(bug|problem)$", i):
+#            counter_found += 1
+#        elif any(word in i.lower() for word in bug_class_keys) or \
+#                re.findall(r"bug#[0-9]+", i) or \
+#                re.findall(r"bug #[0-9]+", i) or \
+#                re.findall(r"bug[0-9]+", i) or \
+#                re.findall(r"bug [0-9]+", i):
+#            counter_bug_classify += 1
+#        elif any(word in i.lower() for word in bug_fix_keys) or re.findall(r"^fix.*bug$", i):
+#            counter_bug_fix += 1
+#        elif any(word in i.lower() for word in bug_report_keys) or re.findall(r"^report.*bug$", i):
+#            counter_bug_report += 1
+
+        if any(re.search(r"\b{}\b".format(word), i, re.IGNORECASE) for word in bug_id_keys):
             counter_found += 1
-        elif any(word in i.lower() for word in bug_class_keys) or \
-                re.findall(r"bug#[0-9]+", i) or \
-                re.findall(r"bug #[0-9]+", i) or \
-                re.findall(r"bug[0-9]+", i) or \
-                re.findall(r"bug [0-9]+", i):
+        elif any(re.search(r"\b{}\b".format(word), i, re.IGNORECASE) for word in bug_class_keys):
             counter_bug_classify += 1
-        elif any(word in i.lower() for word in bug_fix_keys) or re.findall(r"^fix.*bug$", i):
+        elif any(re.search(r"\b{}\b".format(word), i, re.IGNORECASE) for word in bug_fix_keys):
             counter_bug_fix += 1
-        elif any(word in i.lower() for word in bug_report_keys) or re.findall(r"^report.*bug$", i):
+        elif any(re.search(r"\b{}\b".format(word), i, re.IGNORECASE) for word in bug_report_keys):
             counter_bug_report += 1
     
     # Return list of all counters
@@ -87,30 +96,29 @@ def issueTitleBugCounter(issue_body_list: list,
     
 
 # Get list of lines from filepath
-lines = extractIssueDesc(filepath='./Python/extractedIssueDescBugs.txt')
+lines = extractIssueDesc(filepath='extractedIssueDescBugs.txt')
 
 # Identify list of keywords for specific 
 bug_identify_list = [
-     "found a bug", 
-     "found a problem", 
-     "there is a bug", 
-     "there is a problem", 
-     "bug has been found", 
-     "problem has been found", 
-     "it is a bug", 
-     "it is a problem", 
+     "exception",
+     "found.*bug", 
+     "found.*problem", 
+     "there.*bug", 
+     "there.* problem", 
+     "bug.*found", 
+     "problem.*found", 
+     "[Ii]t is.*bug", 
+     "[Ii]t is.*problem", 
      "this is a bug",
      "this is a problem", 
      "this bug", 
      "this problem", 
      "catch this bug", 
      "catch this problem", 
-     "catch a bug", 
-     "catch a problem", 
-     "catched this bug", 
-     "catched this problem", 
-     "catched a bug",
-     "catched a problem",
+     "catch.*bug", 
+     "catch.*problem", 
+     "caught.*bug",
+     "caught.*problem",
      "these bug",
      "these problem",
      "other bug",
@@ -122,7 +130,10 @@ bug_identify_list = [
      ]
 bug_classify_list = [
     " bug#", 
-    "bug is a"
+    "bug is a",
+    " error ",
+    "defect",
+    "crash",
     ]
 bug_fix_list = [
      "fixed a bug", 
