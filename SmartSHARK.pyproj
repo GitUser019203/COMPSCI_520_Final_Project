@@ -6,7 +6,7 @@
     <ProjectHome>
     </ProjectHome>
     <StartupFile>Python\IssueRefactoringDocCalculator\ref_operations_extractor.py</StartupFile>
-    <StartupFile>Python\MongoDB.py</StartupFile>
+    <StartupFile>Python\ExtractingIssueDescRefactoring.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

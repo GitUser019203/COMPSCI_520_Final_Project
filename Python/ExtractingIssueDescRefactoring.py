@@ -2,12 +2,8 @@ import re
 from mongoengine import connect
 from pycoshark.mongomodels import Project, VCSSystem, Commit, FileAction, Hunk, Refactoring, IssueSystem, Issue, IssueComment, MailingList, Message
 from pycoshark.utils import create_mongodb_uri_string
-
-with open(r"issue_tracked_projects.txt",'r') as file:
-    for line in file:
-        project_data = line.strip().split(',')
     
-with open(r"regexp.txt",'r') as file:
+with open(r"Python\regexp.txt",'r') as file:
     for line in file:
         reg_exp = line.strip()
 
@@ -23,7 +19,7 @@ uri = create_mongodb_uri_string(**credentials)
 
 mongoClient = connect('smartshark_small_2_0', host=uri, alias='default')
 
-projectCollection = [Project.objects(name=project_name) for project_name in project_data]
+projectCollection = [Project.objects()]
 
 total_num_issues = 0
 total_num_issues_documenting_refactoring = 0;
@@ -33,11 +29,12 @@ total_num_commits_reporting_refactoring_linked_to_issues_documenting_refactoring
 unique_commit_hashes = set()
 unique_commit_hashes_with_refactoring_reported = set()
 
-with open("extractedIssueCommentsRefactoring.txt", 'w', encoding="utf-8") as out_file:
+with open(r"Python\extractedIssueDescRefactoring.txt", 'w', encoding="utf-8") as out_file:
     for projects in projectCollection:
-        for project in projects:
+        for i, project in enumerate(projects):
             vcs_system_reported_refactoring = False
-            
+            print(f"{i}. {project.name}")
+
             # We now select the version control system of the project
             vcs_system = VCSSystem.objects(project_id=project.id).get()
 
@@ -72,6 +69,7 @@ with open("extractedIssueCommentsRefactoring.txt", 'w', encoding="utf-8") as out
                                 refactorings_reported = [(msg is not None and re.search(refactor_pattern, msg)) for msg in linked_commit_msgs]
                                 if any(refactorings_reported):
                                     total_num_issues_documenting_refactoring_with_linked_commits_reporting_refactoring += 1
+                                    print(description, file=out_file)
                                     if vcs_system_reported_refactoring:
                                         if not issue_tracker_reported_refactoring:
                                             issue_tracker_reported_refactoring = True
