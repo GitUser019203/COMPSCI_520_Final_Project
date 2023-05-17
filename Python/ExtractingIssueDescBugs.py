@@ -5,7 +5,7 @@ from pycoshark.utils import create_mongodb_uri_string
 import matplotlib.pyplot as plt
 import numpy as np
 
-with open("issue_tracked_projects.txt",'r') as file:
+with open("Python\issue_tracked_projects.txt",'r') as file:
     for line in file:
         project_data = line.strip().split(',')
     
@@ -22,16 +22,17 @@ uri = create_mongodb_uri_string(**credentials)
 
 mongoClient = connect('smartshark_small_2_0', host=uri, alias='default')
 
-projectCollection = [Project.objects(name=project_name) for project_name in project_data]
+projectCollection = [Project.objects()]
 totalBugs = 0
 totalValidatedBugs = 0
 totalIssues = 0
 totalCommits = 0
 detectedBugList = []
 
-with open("extractedIssueDescBugs.txt", 'w', encoding="utf-8") as out_file:
+with open(r"Python\extractedIssueDescBugs.txt", 'w', encoding="utf-8") as out_file:
     for projects in projectCollection:
-        for project in projects:
+        for i, project in enumerate(projects):
+            print(f"{i}. {project.name}")
             # We now select the version control system of the project
             vcs_system = VCSSystem.objects(project_id=project.id).get()
             # We can now fetch the commits and analyze them
