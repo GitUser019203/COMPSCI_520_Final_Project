@@ -352,3 +352,5 @@ healthchecksdb
 /refactoring_documentation_phrases.json
 /refactoring_documentation_phrases.csv
 /refactoring_documentation_lemmas.csv
+/Python/NLTK/issuesModel.py
+/Python/NLTK/issueTitlesModel.py
