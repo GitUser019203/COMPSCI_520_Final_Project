@@ -6,7 +6,7 @@
     <ProjectHome>
     </ProjectHome>
     <StartupFile>Python\IssueRefactoringDocCalculator\ref_operations_extractor.py</StartupFile>
-    <StartupFile>Python\NLTK\tag_cloud_generator.py</StartupFile>
+    <StartupFile>Python\NLTK\generate_vis.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -47,7 +47,7 @@
     <Compile Include="Python\NLTK\natural_language_processing_commit_messages.py" />
     <Compile Include="Python\NLTK\natural_language_processing_issue_descriptions.py" />
     <Compile Include="Python\NLTK\natural_language_processing_issue_titles.py" />
-    <Compile Include="Python\NLTK\tag_cloud_generator.py" />
+    <Compile Include="Python\NLTK\generate_vis.py" />
     <Compile Include="Python\PythonApplication.py" />
     <Compile Include="Python\PythonApplicationForBugs.py" />
     <Compile Include="Python\PythonApplicationForRefactoring.py" />
