@@ -6,7 +6,7 @@
     <ProjectHome>
     </ProjectHome>
     <StartupFile>Python\IssueRefactoringDocCalculator\ref_operations_extractor.py</StartupFile>
-    <StartupFile>Python\NLTK\issue_refactoring_documentation_research.py</StartupFile>
+    <StartupFile>Python\NLTK\tag_cloud_generator.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -26,6 +26,7 @@
   <ItemGroup>
     <Compile Include="Python\NLTK\issueDescriptionsModel.py" />
     <Compile Include="Python\NLTK\issueLinkedCommitsModel.py" />
+    <Compile Include="Python\NLTK\issuesModel.py" />
     <Compile Include="Python\NLTK\issueTitlesModel.py" />
     <Compile Include="Python\NLTK\issue_refactoring_documentation_research.py" />
     <Compile Include="Python\bug_mining.py" />
@@ -46,6 +47,7 @@
     <Compile Include="Python\NLTK\natural_language_processing_commit_messages.py" />
     <Compile Include="Python\NLTK\natural_language_processing_issue_descriptions.py" />
     <Compile Include="Python\NLTK\natural_language_processing_issue_titles.py" />
+    <Compile Include="Python\NLTK\tag_cloud_generator.py" />
     <Compile Include="Python\PythonApplication.py" />
     <Compile Include="Python\PythonApplicationForBugs.py" />
     <Compile Include="Python\PythonApplicationForRefactoring.py" />
@@ -193,12 +195,16 @@
     <Content Include="Python\IssueRefactoringDocCalculator\refactoring_motivations_external_qas.csv" />
     <Content Include="Python\IssueRefactoringDocCalculator\refactoring_motivations_internal_qas.csv" />
     <Content Include="Python\IssueRefactoringDocCalculator\refactoring_operations_clustered_by_class.csv" />
+    <Content Include="Python\NLTK\code_smells.png" />
     <Content Include="Python\NLTK\commit_msg_refactoring_documentation_lemmas.csv" />
     <Content Include="Python\NLTK\commit_msg_refactoring_documentation_phrases.json" />
     <Content Include="Python\NLTK\commit_msg_refactoring_documentation_words.csv" />
+    <Content Include="Python\NLTK\external_qas.png" />
+    <Content Include="Python\NLTK\internal_qas.png" />
     <Content Include="Python\NLTK\issue_desc_refactoring_documentation_lemmas.csv" />
     <Content Include="Python\NLTK\issue_desc_refactoring_documentation_phrases.json" />
     <Content Include="Python\NLTK\issue_desc_refactoring_documentation_words.csv" />
+    <Content Include="Python\NLTK\issue_refactoring_doc_text_patterns.csv" />
     <Content Include="Python\NLTK\issue_title_refactoring_documentation_lemmas.csv" />
     <Content Include="Python\NLTK\issue_title_refactoring_documentation_phrases.json" />
     <Content Include="Python\NLTK\issue_title_refactoring_documentation_words.csv" />
@@ -206,7 +212,13 @@
     <Content Include="Python\NLTK\refactoring_documentation_phrases.json" />
     <Content Include="Python\NLTK\refactoring_documentation_words.csv" />
     <Content Include="Python\NLTK\refactoring_motivations.csv" />
+    <Content Include="Python\NLTK\refactoring_motivations_code_smells.csv" />
+    <Content Include="Python\NLTK\refactoring_motivations_external_qas.csv" />
+    <Content Include="Python\NLTK\refactoring_motivations_internal_qas.csv" />
+    <Content Include="Python\NLTK\refactoring_operations.png" />
+    <Content Include="Python\NLTK\refactoring_operations_clustered_by_class.csv" />
     <Content Include="Python\NLTK\reg_exp_grouped.txt" />
+    <Content Include="Python\NLTK\word_cloud.png" />
     <Content Include="Python\regexp.txt" />
     <Content Include="Python\WSS4J\wss4j.mongodb" />
     <Content Include="Python\WSS4J\wss4j.mongodb.csv" />
