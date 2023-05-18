@@ -200,6 +200,7 @@
     <Content Include="Python\NLTK\commit_msg_refactoring_documentation_phrases.json" />
     <Content Include="Python\NLTK\commit_msg_refactoring_documentation_words.csv" />
     <Content Include="Python\NLTK\external_qas.png" />
+    <Content Include="Python\NLTK\info.txt" />
     <Content Include="Python\NLTK\internal_qas.png" />
     <Content Include="Python\NLTK\issue_desc_refactoring_documentation_lemmas.csv" />
     <Content Include="Python\NLTK\issue_desc_refactoring_documentation_phrases.json" />

@@ -201,11 +201,73 @@ for j, project in enumerate(projectCollection):
     commits = Commit.objects(vcs_system_id=vcs_system.id)
     
     for commit in commits:
-        commit_queue.put(commit)
+        #commit_queue.put(commit)
+        refactorings = Refactoring.objects(commit_id=commit.id)
+        if refactorings.count() > 0:
+            #if "git-svn-id" in commit.message and not commit.linked_issue_ids:
+            #    print(commit)
+            # This commit emailed 
+            for linked_issue_id in commit.linked_issue_ids:
+                for issue in Issue.objects(id=linked_issue_id):
+                    if issue.title is not None and issue.desc is not None and commit.message is not None :
+                        title_match_list = []
+                        msg_match_list = []
+                        desc_match_list = []
+                        if issue.id not in unique_issues:
+                            for phrase_term in issue_refactoring_documenting_expression_keys:
+                                 if phrase_term in ["REPACKAG", "REDESIGN"]:
+                                     continue
 
-    for i in range(0, 2):
-        Thread(target = commitMiningWorker, daemon = True).start()
-    commit_queue.join()
+                                 title_match_list.append(re.search(issue_title_refactoring_documentation_regular_expression_groups[phrase_term], issue.title, re.I | re.M | re.DOTALL))
+                                 msg_match_list.append(re.search(linked_commit_msgs_refactoring_documentation_regular_expression_groups[phrase_term], commit.message, re.I | re.M | re.DOTALL))
+                                 desc_match_list.append(re.search(issue_desc_refactoring_documentation_regular_expression_groups[phrase_term], issue.desc, re.I | re.M | re.DOTALL))
+                                
+                                
+                                 if any(title_match_list) and any(msg_match_list):
+                                    # Save the issue selected to a json file with the UTF-8 encoding instead of using the cp1252 encoding.
+                                    #with open("Python\\NLTK\\SelectedIssues\\" + str(commit.id) + ".json", 'w', encoding='utf-8') as out_json:
+                                    #    out_json.write(dumps({'Linked Issue ID': str(issue.id), 
+                                    #                          'Linked Issue Title': issue.title, 
+                                    #                          "Linked Issue Description": issue.desc,                                                               
+                                    #                          "Commit Revision Hash": str(commit.revision_hash),
+                                    #                          "Commit Message": commit.message}, indent = '\t'))
+
+                                    for match in title_match_list:
+                                        if match:
+                                            keyword = list(match.groupdict().keys())[0]
+                                            issue_refactoring_phrases_terms_dict[keyword] += 1
+                                    for match in desc_match_list:
+                                        if match:
+                                            keyword = list(match.groupdict().keys())[0]
+                                            issue_refactoring_phrases_terms_dict[keyword] += 1
+                                    for category in refactoring_motivations:
+                                        for reg_exp in refactoring_motivations[category]:
+                                            mot_title_matches = re.search(reg_exp, issue.title, re.I | re.M | re.DOTALL)
+                                            mot_desc_matches = re.search(reg_exp, issue.desc, re.I | re.M | re.DOTALL)
+                                            mot_msg_matches = re.search(reg_exp, commit.message, re.I | re.M | re.DOTALL)
+                                            if any([mot_title_matches, mot_desc_matches, mot_msg_matches]):
+                                                refactoring_motivations_dict[category][reg_exp] += 1
+                                    for refactoring in refactorings:
+                                        for refactoring_reg_exp in refactoring_types_regular_expressions:
+                                            r_matches = re.search(refactoring_reg_exp, refactoring.type, re.I)
+                                            if r_matches:
+                                                refactorings_operations_dict[list(r_matches.groupdict().keys())[0]] += 1
+                                    unique_issues.add(issue.id)
+
+                        for phrase_term in issue_refactoring_documenting_expression_keys:
+                            
+                            title_matches = re.search(issue_title_refactoring_documentation_regular_expression_groups[phrase_term], issue.title, re.I | re.M | re.DOTALL)
+                            msg_matches = re.search(linked_commit_msgs_refactoring_documentation_regular_expression_groups[phrase_term], commit.message, re.I | re.M | re.DOTALL)
+                            desc_matches = re.search(issue_desc_refactoring_documentation_regular_expression_groups[phrase_term], issue.desc, re.I | re.M | re.DOTALL)
+                                
+                            if title_matches and desc_matches and msg_matches:
+                                issue_refactoring_phrases_terms_dict_all_match[phrase_term] += 1
+                            if any([title_matches, desc_matches, msg_matches]):
+                                issue_refactoring_phrases_terms_dict_any_match[phrase_term] += 1
+
+    #for i in range(0, 2):
+    #    Thread(target = commitMiningWorker, daemon = True).start()
+    #commit_queue.join()
     print(f'Completed mining {project.name}')
 stopwatch.stop()
 stopwatch.get_elapsed_time()
