@@ -1,0 +1,33 @@
+﻿Internal,External,Code Smell
+Inheritance,Functionality,Duplicate Code
+Abstraction,Performance,Dead Code
+Complexity,Compatibility,Data Class
+Composition,Readability,Long Method
+Coupling,Stability,Switch Statement
+Encapsulation,Usability,Lazy Class
+Design Size,Flexibility,Too Many Parameters
+Polymorphism,Extensibility,Primitive Obsession
+Cohesion,Efficiency,Feature Envy
+Messaging,Accuracy,Blob Class
+Concern,Accessibility,Blob Operation
+Separation,Robustness,Redundancy
+Dependency,Testability,Useless Class
+,Correctness,Code Style
+,Scalability,Antipattern
+,Configurability,Design Flaw
+,Simplicity,Code Smell
+,Reusability,Temporary Field
+,Reliability,Old Comment
+,Modularity,
+,Maintainability,
+,Traceability,
+,Interoperability,
+,Fault-tolerance,
+,Repeatability,
+,Understandability,
+,Effectiveness,
+,Productivity,
+,Modifiability,
+,Reproducibility,
+,Adaptability,
+,Manageability,

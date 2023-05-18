@@ -37,6 +37,7 @@ for j, project in enumerate(projectCollection):
 
         # Mine the commit and store extracted information in the model
         issue_titles_model.mine_commit(commit)
+
     #for i in range(0, 2):
     #    Thread(target = issue_titles_model.commit_mining_worker, daemon = True).start()
     #commit_queue.join()

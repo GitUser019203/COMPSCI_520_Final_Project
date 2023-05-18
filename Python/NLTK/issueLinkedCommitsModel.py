@@ -16,11 +16,18 @@ from nltk.corpus import stopwords
 from nltk import download, pos_tag, RegexpParser
 from nltk.stem import WordNetLemmatizer
 from nltk.tree import Tree
+from Python.NLTK.issueTitlesModel import IssueTitlesModel
 
-class IssueTitlesModel:
-    def __init__(self):
+class IssueLinkedCommitsModel:
+    def __init__(self, issue_titles_model):
         self.stopwatch = StopWatch()
         self.stopwatch.start()
+        
+        self.issue_title_regular_expressions = {}
+        for phrase_term in issue_titles_model.refactoring_documentation_patterns_phrases:
+            phrases_list = [phrase for phrase in issue_titles_model.refactoring_documentation_patterns_phrases[phrase_term.casefold()]]
+            self.issue_title_regular_expressions[phrase_term] = re.escape("|".join(phrases_list)).replace("\|", "|")
+
         # Download stopwords to filter them out, and punkt and averaged_perceptron_tagger
         download("stopwords")
         download("punkt")
@@ -56,30 +63,30 @@ class IssueTitlesModel:
         # Initialize the dictionary of refactoring documentation phrases going to be found using keyword based classification
         for keyword in self.keywords:
             self.refactoring_documentation_patterns_phrases[keyword] = []
-    def load(self):
-        # Loads the refactoring documentation phrases from a json file with the UTF-8 encoding instead of using the cp1252 encoding.
-        with open(r"Python\NLTK\commit_msg_refactoring_documentation_phrases.json", 'r', encoding='utf-8') as in_json:
-            self.refactoring_documentation_patterns_phrases = loads(in_json.read())       
     def save(self):
         # Save the refactoring documentation words to a csv file with no newlines between rows and with the UTF-8 encoding.
-        with open("refactoring_documentation_words.csv", 'w', newline = '', encoding='utf-8') as out_csv:
+        with open(r"Python\NLTK\commit_msg_refactoring_documentation_words.csv", 'w', newline = '', encoding='utf-8') as out_csv:
             csv_writer = DictWriter(out_csv, fieldnames = ['Word', 'Number of occurrences'])
             csv_writer.writeheader()
             for word in self.refactoring_documentation_patterns_words:
                 csv_writer.writerow({'Word': word, 'Number of occurrences': self.refactoring_documentation_patterns_words[word]})
 
         # Save the refactoring documentation lemmas to a csv file with no newlines between rows and with the UTF-8 encoding.
-        with open("refactoring_documentation_lemmas.csv", 'w', newline = '', encoding='utf-8') as out_csv:
+        with open(r"Python\NLTK\commit_msg_refactoring_documentation_lemmas.csv", 'w', newline = '', encoding='utf-8') as out_csv:
             csv_writer = DictWriter(out_csv, fieldnames = ['Lemma', 'Number of occurrences'])
             csv_writer.writeheader()
             for word in self.refactoring_documentation_patterns_words:
                 csv_writer.writerow({'Lemma': word, 'Number of occurrences': self.refactoring_documentation_patterns_words[word]})
-        # Save the refactoring documentation phrases to a json file with no newlines between rows and with the UTF-8 encoding instead of using the cp1252 encoding.
-        with open("refactoring_documentation_phrases.json", 'w', encoding='utf-8') as out_json:
+        # Save the refactoring documentation phrases to a json file with the UTF-8 encoding instead of using the cp1252 encoding.
+        with open(r"Python\NLTK\commit_msg_refactoring_documentation_phrases.json", 'w', encoding='utf-8') as out_json:
             out_json.write(dumps(self.refactoring_documentation_patterns_phrases, indent = '\t'))
         
         self.stopwatch.stop()
         self.stopwatch.get_elapsed_time()
+    def load(self):
+        # Loads the refactoring documentation phrases from a json file with the UTF-8 encoding instead of using the cp1252 encoding.
+        with open(r"Python\NLTK\commit_msg_refactoring_documentation_phrases.json", 'r', encoding='utf-8') as in_json:
+            self.refactoring_documentation_patterns_phrases = loads(in_json.read())       
     def mine_commit(self, commit):
         #commit_queue.put(commit)
         refactorings = Refactoring.objects(commit_id=commit.id)
@@ -87,31 +94,39 @@ class IssueTitlesModel:
             for linked_issue_id in commit.linked_issue_ids:
                 for issue in Issue.objects(id=linked_issue_id):
                     if issue.title is not None and issue.desc is not None and commit.message is not None :
-                        words_in_issue_title = word_tokenize(issue.title)
-                        for word in words_in_issue_title:
-                            if word.casefold() not in self.stop_words and len(word) > 2:
-                                lemma = self.lemmatizer.lemmatize(word)
-                                if word in self.refactoring_documentation_patterns_words:
-                                    self.refactoring_documentation_patterns_words[word] += 1
-                                else:
-                                    self.refactoring_documentation_patterns_words[word] = 0
+                        if any([True for phrase_term in self.issue_title_regular_expressions if re.search(
+                            "[^0-9^a-z^A-Z]" + self.issue_title_regular_expressions[phrase_term] + "[^0-9^a-z^A-Z]" + "|" + 
+                            "[^0-9^a-z^A-Z]" + self.issue_title_regular_expressions[phrase_term] + "$" + "|" + 
+                            "^" + self.issue_title_regular_expressions[phrase_term] + "[^0-9^a-z^A-Z]" + "|" + 
+                            "^" + self.issue_title_regular_expressions[phrase_term] + "$"
+                            ,
+                           issue.title,
+                          re.I | re.M | re.DOTALL)]):
+                            words_in_commit_message = word_tokenize(commit.message)
+                            for word in words_in_commit_message:
+                                if word.casefold() not in self.stop_words and len(word) > 2:
+                                    lemma = self.lemmatizer.lemmatize(word)
+                                    if word in self.refactoring_documentation_patterns_words:
+                                        self.refactoring_documentation_patterns_words[word] += 1
+                                    else:
+                                        self.refactoring_documentation_patterns_words[word] = 0
 
-                                if lemma in self.refactoring_documentation_patterns_lemmas:
-                                    self.refactoring_documentation_patterns_lemmas[lemma] += 1
-                                else:
-                                    self.refactoring_documentation_patterns_lemmas[lemma] = 0
-                        issue_title_pos_tags = pos_tag(words_in_issue_title)
-                        verb_phrase_trees = [node for node in self.chunk_parser.parse(issue_title_pos_tags) if type(node) is Tree]
-                        for nlp_tree in verb_phrase_trees:
-                            if nlp_tree.label() == "VP":
-                                tree_string_representation = str(nlp_tree).casefold()
-                                for keyword in self.keywords:
-                                   # Filter out the verb phrases that don't use the keyword as a verb
-                                   if keyword in tree_string_representation:
-                                       phrase = " ".join([node[0] for node in nlp_tree])
-                                       if re.match(keyword, nlp_tree[0][0], re.I):
-                                           if phrase not in self.refactoring_documentation_patterns_phrases[keyword]:
-                                               self.refactoring_documentation_patterns_phrases[keyword].append(phrase)
+                                    if lemma in self.refactoring_documentation_patterns_lemmas:
+                                        self.refactoring_documentation_patterns_lemmas[lemma] += 1
+                                    else:
+                                        self.refactoring_documentation_patterns_lemmas[lemma] = 0
+                            linked_commit_messages_pos_tags = pos_tag(words_in_commit_message)
+                            verb_phrase_trees = [node for node in self.chunk_parser.parse(linked_commit_messages_pos_tags) if type(node) is Tree]
+                            for nlp_tree in verb_phrase_trees:
+                                if nlp_tree.label() == "VP":
+                                    tree_string_representation = str(nlp_tree).casefold()
+                                    for keyword in self.keywords:
+                                       # Filter out the verb phrases that don't use the keyword as a verb
+                                       if keyword in tree_string_representation:
+                                           phrase = " ".join([node[0] for node in nlp_tree])
+                                           if re.match(keyword, nlp_tree[0][0], re.I):
+                                               if phrase not in self.refactoring_documentation_patterns_phrases[keyword]:
+                                                   self.refactoring_documentation_patterns_phrases[keyword].append(phrase)
     def commit_mining_worker():
         while True:
             commit = self.commit_queue.get()
