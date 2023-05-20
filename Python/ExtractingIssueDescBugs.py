@@ -5,11 +5,6 @@ from pycoshark.utils import create_mongodb_uri_string
 import matplotlib.pyplot as plt
 import numpy as np
 
-with open("Python\issue_tracked_projects.txt",'r') as file:
-    for line in file:
-        project_data = line.strip().split(',')
-    
-
 # You may have to update this dict to match your DB credentials
 credentials = {'db_user': '',
                'db_password': '',
@@ -56,7 +51,6 @@ with open(r"Python\extractedIssueDescBugs.txt", 'w', encoding="utf-8") as out_fi
             bug_pattern = re.compile("[ \.;'\"\?!]bug|^bug|[ \.;'\"\?!]bugs|^bugs|[ \.;'\"\?!]error|^error|[ \.;'\"\?!]fault|[ \.;'\"\?!]faults|[ \.;'\"\?!]defect|[ \.;'\"\?!]bugs|^bugged|^bug|[ \.;'\"\?!]problem|^problems", re.I | re.M)
 
             for issue in Issue.objects(issue_system_id=issue_tracker.id):
-                count_comments += IssueComment.objects(issue_id=issue.id).count()
                 if issue.issue_type is not None and issue.issue_type.lower() in bugSynonymList:
                     count_bugs_dev_label += 1
                 if issue.issue_type_verified is not None and issue.issue_type_verified.lower() in bugSynonymList:
