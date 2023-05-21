@@ -1,12 +1,31 @@
 import re
+import json
 from matplotlib import pyplot as plt
 
 import numpy as np
 
 
+def extractIssueDescJson(filepath: str):
+    """
+    Extract Issue Descriptions from json file and store as a list
+    :param: filepath: path to json file
+    Returns list of extracted issue bodies
+    """
+    lines = []
+
+    with open(file=filepath, mode='r') as json_file:
+        jdata = json.load(json_file)
+        for d in jdata:
+            for key, value in d.items():
+                if key == 'desc':
+                    lines.append(value.replace("\n", " "))
+    
+    return lines
+
+
 def extractIssueDesc(filepath: str) -> list:
     """
-    Extract Issue Descriptions as format of 
+    Extract Issue Descriptions from .txt file and store as a list
     :param: filepath: path to txt file
     Returns list of extracted issue bodies
     """
@@ -14,25 +33,25 @@ def extractIssueDesc(filepath: str) -> list:
     
     # Open file
     with open(file=filepath, mode='r') as out_file:
-            # Have empty string for issue description
-            iss_desc_entry = ""
+        # Have empty string for issue description
+        iss_desc_entry = ""
 
-            # Go through every line in file
-            for line in out_file:
-                # If line contains "Issue Description:", that is the start of a new issue body; reset flag to false
-                if "Issue Description:" in line:
-                    if len(iss_desc_entry) == 0:
-                        # Add first line to entry
-                        iss_desc_entry += line
-                    else:
-                        # Remove any newlines \n. End of current entry; add to list
-                        lines.append(iss_desc_entry.replace("\n", " "))
-
-                        # Update entry with next entry
-                        iss_desc_entry = line
-                else:
-                    # Keep adding line to entry
+        # Go through every line in file
+        for line in out_file:
+            # If line contains "Issue Description:", that is the start of a new issue body; reset flag to false
+            if "Issue Description:" in line:
+                if len(iss_desc_entry) == 0:
+                    # Add first line to entry
                     iss_desc_entry += line
+                else:
+                    # Remove any newlines \n. End of current entry; add to list
+                    lines.append(iss_desc_entry.replace("\n", " "))
+
+                    # Update entry with next entry
+                    iss_desc_entry = line
+            else:
+                # Keep adding line to entry
+                iss_desc_entry += line
 
     # Return list
     return lines
@@ -94,9 +113,6 @@ def issueTitleBugCounter(issue_body_list: list,
     # Return list of all counters
     return [total_issues, counter_found, counter_bug_classify, counter_bug_fix, counter_bug_report]
     
-
-# Get list of lines from filepath
-lines = extractIssueDesc(filepath='./Python/extractedIssueDescBugs.txt')
 
 # Identify list of keywords for specific 
 #bug_identify_list = [
@@ -207,6 +223,7 @@ bug_fix_list = [
      "troubleshoot.*issue",
      "troubleshoot.*problem",
      ]
+
 bug_report_list = [
      "bug.*report", 
      "report.*bug",
@@ -234,6 +251,11 @@ bug_report_list = [
     elif any(word in m.lower() for word in list4):
         counterBugReport+=1
 """
+
+
+# Get list of lines from filepath
+lines = extractIssueDescJson(filepath='./Python/issues_extracted_desc_bugs.json')
+# lines = extractIssueDesc(filepath='./Python/extractedIssueDescBugs.txt')
 
 # Count number of issue titles and bug types
 bug_counters = issueTitleBugCounter(issue_body_list=lines, 
