@@ -32,3 +32,4 @@ checkRefactoringTitles()
 checkBugsTitles()
 checkRefactoringBodies()
 checkBugsBodies()
+
