@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 
 
-def extractIssueDescJson(filepath: str):
+def extractIssueDescJson(filepath):
     """
     Extract Issue Descriptions from json file and store as a list
     :param: filepath: path to json file
@@ -23,7 +23,7 @@ def extractIssueDescJson(filepath: str):
     return lines
 
 
-def extractIssueDesc(filepath: str) -> list:
+def extractIssueDesc(filepath):
     """
     Extract Issue Descriptions from .txt file and store as a list
     :param: filepath: path to txt file
@@ -57,11 +57,7 @@ def extractIssueDesc(filepath: str) -> list:
     return lines
 
 
-def issueTitleBugCounter(issue_body_list: list, 
-                   bug_id_keys: list, 
-                   bug_class_keys: list, 
-                   bug_fix_keys: list,
-                   bug_report_keys: list) -> list:
+def issueTitleBugCounter(issue_body_list, bug_id_keys, bug_class_keys, bug_fix_keys, bug_report_keys):
     """
     Count number of Issue Bodies that exist, 
     plus number of Issue Bodies that are in one of the folowing bug types:
@@ -114,36 +110,9 @@ def issueTitleBugCounter(issue_body_list: list,
     return [total_issues, counter_found, counter_bug_classify, counter_bug_fix, counter_bug_report]
     
 
-# Identify list of keywords for specific 
-#bug_identify_list = [
-#     "exception",
-#     "found.*bug", 
-#     "found.*problem", 
-#     "there.*bug", 
-#     "there.* problem", 
-#     "bug.*found", 
-#     "problem.*found", 
-#     "[Ii]t is.*bug", 
-#     "[Ii]t is.*problem", 
-#     "this is a bug",
-#     "this is a problem", 
-#     "this bug", 
-#     "this problem", 
-#     "catch this bug", 
-#     "catch this problem", 
-#     "catch.*bug", 
-#     "catch.*problem", 
-#     "caught.*bug",
-#     "caught.*problem",
-#     "these bug",
-#     "these problem",
-#     "other bug",
-#     "other problem",
-#     "following bug",
-#     "following problem",
-#     " of bug",
-#     " of problem"
-#     ]
+# Identify list of keywords for specific bug types
+
+# Bug identification key word/phrase list
 bug_identify_list = [
     "find.*bug",
     "find.*problem",
@@ -190,6 +159,7 @@ bug_identify_list = [
     "unexpected.*behavior"
 ]
 
+# Bug classification key word/phrase list
 bug_classify_list = [
     " bug#", 
     "bug is a",
@@ -204,6 +174,7 @@ bug_classify_list = [
     "memory.*leak"
     ]
 
+# Bug fix key word/phrase list
 bug_fix_list = [
      "bug.*fix",
      "fix.*bug",
@@ -224,6 +195,7 @@ bug_fix_list = [
      "troubleshoot.*problem",
      ]
 
+# Bug report key word/phrase list
 bug_report_list = [
      "bug.*report", 
      "report.*bug",
@@ -237,27 +209,11 @@ bug_report_list = [
      "report.*unexpected.*behavior",
      ]
 
-"""
-  #j = i.split()
-  
-  #for m in j:
-    if any(word in m.lower() for word in list1):
-      counterFound+=1
-      print("printing",counterFound)
-    elif any(word in m.lower() for word in list2) or re.findall(r"bug#\d+", m):
-        counterBugClassify+=1
-    elif any(word in m.lower() for word in list3):
-        counterBugFix+=1
-    elif any(word in m.lower() for word in list4):
-        counterBugReport+=1
-"""
+# Get list of issue descriptions from given filepath
+# lines = extractIssueDescJson(filepath='./Python/issues_extracted_desc_bugs.json')
+lines = extractIssueDesc(filepath='./Python/extractedIssueDescBugs.txt')
 
-
-# Get list of lines from filepath
-lines = extractIssueDescJson(filepath='./Python/issues_extracted_desc_bugs.json')
-# lines = extractIssueDesc(filepath='./Python/extractedIssueDescBugs.txt')
-
-# Count number of issue titles and bug types
+# Count number of issue titles and each bug type from the generated list
 bug_counters = issueTitleBugCounter(issue_body_list=lines, 
                           bug_id_keys=bug_identify_list, 
                           bug_class_keys=bug_classify_list, 
