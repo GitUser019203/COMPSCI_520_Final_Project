@@ -1,0 +1,290 @@
+Connecting to the MongoDB server.
+Starting to mine the 68 projects with the SmartSHARK database information.
+2023-05-19 12:23:33.705409
+Starting mining project #0 named commons-math
+Completed mining commons-math
+Starting mining project #1 named ant-ivy
+Completed mining ant-ivy
+Starting mining project #2 named kafka
+Completed mining kafka
+Starting mining project #3 named zeppelin
+Completed mining zeppelin
+Starting mining project #4 named mahout
+Completed mining mahout
+Starting mining project #5 named struts
+Completed mining struts
+Starting mining project #6 named opennlp
+Completed mining opennlp
+Starting mining project #7 named pig
+Completed mining pig
+Starting mining project #8 named calcite
+Completed mining calcite
+Starting mining project #9 named cayenne
+Completed mining cayenne
+Starting mining project #10 named falcon
+Completed mining falcon
+Starting mining project #11 named kylin
+Completed mining kylin
+Starting mining project #12 named nutch
+Completed mining nutch
+Starting mining project #13 named parquet-mr
+Completed mining parquet-mr
+Starting mining project #14 named tika
+Completed mining tika
+Starting mining project #15 named wss4j
+Completed mining wss4j
+Starting mining project #16 named archiva
+Completed mining archiva
+Starting mining project #17 named deltaspike
+Completed mining deltaspike
+Starting mining project #18 named jspwiki
+Completed mining jspwiki
+Starting mining project #19 named xerces2-j
+Completed mining xerces2-j
+Starting mining project #20 named tez
+Completed mining tez
+Starting mining project #21 named systemml
+Completed mining systemml
+Starting mining project #22 named storm
+Completed mining storm
+Starting mining project #23 named lens
+Completed mining lens
+Starting mining project #24 named commons-lang
+Completed mining commons-lang
+Starting mining project #25 named pdfbox
+Completed mining pdfbox
+Starting mining project #26 named flume
+Completed mining flume
+Starting mining project #27 named nifi
+Completed mining nifi
+Starting mining project #28 named knox
+Completed mining knox
+Starting mining project #29 named derby
+Completed mining derby
+Starting mining project #30 named commons-net
+Completed mining commons-net
+Starting mining project #31 named commons-collections
+Completed mining commons-collections
+Starting mining project #32 named commons-beanutils
+Completed mining commons-beanutils
+Starting mining project #33 named commons-codec
+Completed mining commons-codec
+Starting mining project #34 named commons-compress
+Completed mining commons-compress
+Starting mining project #35 named commons-configuration
+Completed mining commons-configuration
+Starting mining project #36 named commons-digester
+Completed mining commons-digester
+Starting mining project #37 named commons-imaging
+Completed mining commons-imaging
+Starting mining project #38 named commons-io
+Completed mining commons-io
+Starting mining project #39 named commons-jcs
+Completed mining commons-jcs
+Starting mining project #40 named commons-jexl
+Completed mining commons-jexl
+Starting mining project #41 named commons-rdf
+Completed mining commons-rdf
+Starting mining project #42 named commons-scxml
+Completed mining commons-scxml
+Starting mining project #43 named commons-validator
+Completed mining commons-validator
+Starting mining project #44 named commons-vfs
+Completed mining commons-vfs
+Starting mining project #45 named giraph
+Completed mining giraph
+Starting mining project #46 named manifoldcf
+Completed mining manifoldcf
+Starting mining project #47 named ranger
+Completed mining ranger
+Starting mining project #48 named eagle
+Completed mining eagle
+Starting mining project #49 named commons-bcel
+Completed mining commons-bcel
+Starting mining project #50 named commons-dbcp
+Completed mining commons-dbcp
+Starting mining project #51 named zookeeper
+Completed mining zookeeper
+Starting mining project #52 named phoenix
+Completed mining phoenix
+Starting mining project #53 named gora
+Completed mining gora
+Starting mining project #54 named santuario-java
+Completed mining santuario-java
+Starting mining project #55 named helix
+Completed mining helix
+Starting mining project #56 named jena
+Completed mining jena
+Starting mining project #57 named httpcomponents-client
+Completed mining httpcomponents-client
+Starting mining project #58 named httpcomponents-core
+Completed mining httpcomponents-core
+Starting mining project #59 named streams
+Completed mining streams
+Starting mining project #60 named samza
+Completed mining samza
+Starting mining project #61 named roller
+Completed mining roller
+Starting mining project #62 named mina-sshd
+Completed mining mina-sshd
+Starting mining project #63 named bigtop
+Completed mining bigtop
+Starting mining project #64 named jackrabbit
+Completed mining jackrabbit
+Starting mining project #65 named oozie
+Completed mining oozie
+Starting mining project #66 named activemq
+Completed mining activemq
+Starting mining project #67 named directory-fortress-core
+Completed mining directory-fortress-core
+Starting issue mining.
+Finished mining 0 issues.
+Finished mining 1000 issues.
+Finished mining 2000 issues.
+Finished mining 3000 issues.
+Finished mining 4000 issues.
+Finished mining 5000 issues.
+Finished mining 6000 issues.
+Finished mining 7000 issues.
+Finished mining 8000 issues.
+Finished mining 9000 issues.
+Finished mining 10000 issues.
+Finished mining 11000 issues.
+Finished mining 12000 issues.
+Finished mining 13000 issues.
+Finished mining 14000 issues.
+Finished mining 15000 issues.
+Finished mining 16000 issues.
+Finished mining 17000 issues.
+Finished mining 18000 issues.
+Finished mining 19000 issues.
+Finished mining 20000 issues.
+Finished mining 21000 issues.
+Finished mining 22000 issues.
+Finished mining 23000 issues.
+Finished mining 24000 issues.
+Finished mining 25000 issues.
+Finished mining 26000 issues.
+Finished mining 27000 issues.
+Finished mining 28000 issues.
+Finished mining 29000 issues.
+Finished mining 30000 issues.
+Finished mining 31000 issues.
+Finished mining 32000 issues.
+Finished mining 33000 issues.
+Finished mining 34000 issues.
+Finished mining 35000 issues.
+Finished mining 36000 issues.
+Finished mining 37000 issues.
+Finished mining 38000 issues.
+Finished mining 39000 issues.
+Finished mining 40000 issues.
+Finished mining 41000 issues.
+Finished mining 42000 issues.
+Finished mining 43000 issues.
+Finished mining 44000 issues.
+Finished mining 45000 issues.
+Finished mining 46000 issues.
+Finished mining 47000 issues.
+Finished mining 48000 issues.
+Finished mining 49000 issues.
+Finished mining 50000 issues.
+Finished mining 51000 issues.
+Finished mining 52000 issues.
+Finished mining 53000 issues.
+Finished mining 54000 issues.
+Finished mining 55000 issues.
+Finished mining 56000 issues.
+Finished mining 57000 issues.
+Finished mining 58000 issues.
+Finished mining 59000 issues.
+Finished mining 60000 issues.
+Finished mining 61000 issues.
+Finished mining 62000 issues.
+Finished mining 63000 issues.
+Finished mining 64000 issues.
+Finished mining 65000 issues.
+Finished mining 66000 issues.
+Finished mining 67000 issues.
+Finished mining 68000 issues.
+Finished mining 69000 issues.
+Finished mining 70000 issues.
+Finished mining 71000 issues.
+Finished mining 72000 issues.
+Finished mining 73000 issues.
+Finished mining 74000 issues.
+Finished mining 75000 issues.
+Finished mining 76000 issues.
+Finished mining 77000 issues.
+Finished mining 78000 issues.
+Finished mining 79000 issues.
+Finished mining 80000 issues.
+Finished mining 81000 issues.
+Finished mining 82000 issues.
+Finished mining 83000 issues.
+Finished mining 84000 issues.
+Finished mining 85000 issues.
+Finished mining 86000 issues.
+Finished mining 87000 issues.
+Finished mining 88000 issues.
+Finished mining 89000 issues.
+Finished mining 90000 issues.
+Finished mining 91000 issues.
+Finished mining 92000 issues.
+Finished mining 93000 issues.
+Finished mining 94000 issues.
+Finished mining 95000 issues.
+Finished mining 96000 issues.
+Finished mining 97000 issues.
+Finished mining 98000 issues.
+Finished mining 99000 issues.
+Finished mining 100000 issues.
+Finished mining 101000 issues.
+Finished mining 102000 issues.
+Finished mining 103000 issues.
+Finished mining 104000 issues.
+Finished mining 105000 issues.
+Finished mining 106000 issues.
+Finished mining 107000 issues.
+Finished mining 108000 issues.
+Finished mining 109000 issues.
+Finished mining 110000 issues.
+Finished mining 111000 issues.
+Finished mining 112000 issues.
+Finished mining 113000 issues.
+Finished mining 114000 issues.
+Finished mining 115000 issues.
+Finished mining 116000 issues.
+Finished mining 117000 issues.
+Finished mining 118000 issues.
+Finished mining 119000 issues.
+Finished mining 120000 issues.
+Finished mining 121000 issues.
+Finished mining 122000 issues.
+Finished mining 123000 issues.
+Finished mining 124000 issues.
+Finished mining 125000 issues.
+Finished mining 126000 issues.
+Finished mining 127000 issues.
+Finished mining 128000 issues.
+Finished mining 129000 issues.
+Finished mining 130000 issues.
+Finished mining 131000 issues.
+Finished mining 132000 issues.
+Finished mining 133000 issues.
+Finished mining 134000 issues.
+Finished mining 135000 issues.
+Finished mining 136000 issues.
+Finished mining 137000 issues.
+Finished mining 138000 issues.
+Finished mining 139000 issues.
+Finished mining 140000 issues.
+Completed issue mining.
+2023-05-19 12:35:36.985526
+Seconds elapsed: 723.2801175117493
+Refactoring commits with issues: 32900
+Refactoring commits with issues having keyword 'refactor' in title: 585
+Refactoring operations associated with issues: 388504
+Issues that reported developers' intention about the application of refactoring (i.e., having the keyword 'refactor'): 863
+The thread 'MainThread' (0x1) has exited with code 0 (0x0).
+The program 'pythonw.exe' has exited with code 0 (0x0).
