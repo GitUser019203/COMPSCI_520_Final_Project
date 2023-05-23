@@ -1,0 +1,205 @@
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     C:\Users\mathk\AppData\Roaming\nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\mathk\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     C:\Users\mathk\AppData\Roaming\nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\mathk\AppData\Roaming\nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     C:\Users\mathk\AppData\Roaming\nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\mathk\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     C:\Users\mathk\AppData\Roaming\nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\mathk\AppData\Roaming\nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     C:\Users\mathk\AppData\Roaming\nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\mathk\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     C:\Users\mathk\AppData\Roaming\nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\mathk\AppData\Roaming\nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+Initializing the dictionary containing the number of times each regular expression group was matches in issue refactoring documentation
+Initializing the dictionary containing the number of times a refactoring purpose regular expression was matches in issue refactoring documentation
+Connecting to the MongoDB server.
+Starting to mine the 68 projects with the SmartSHARK database information.
+Starting mining project #0 named commons-math
+Completed mining commons-math
+Starting mining project #1 named ant-ivy
+Completed mining ant-ivy
+Starting mining project #2 named kafka
+Completed mining kafka
+Starting mining project #3 named zeppelin
+Completed mining zeppelin
+Starting mining project #4 named mahout
+Completed mining mahout
+Starting mining project #5 named struts
+Completed mining struts
+Starting mining project #6 named opennlp
+Completed mining opennlp
+Starting mining project #7 named pig
+Completed mining pig
+Starting mining project #8 named calcite
+Completed mining calcite
+Starting mining project #9 named cayenne
+Completed mining cayenne
+Starting mining project #10 named falcon
+Completed mining falcon
+Starting mining project #11 named kylin
+Completed mining kylin
+Starting mining project #12 named nutch
+Completed mining nutch
+Starting mining project #13 named parquet-mr
+Completed mining parquet-mr
+Starting mining project #14 named tika
+Completed mining tika
+Starting mining project #15 named wss4j
+Completed mining wss4j
+Starting mining project #16 named archiva
+Completed mining archiva
+Starting mining project #17 named deltaspike
+Completed mining deltaspike
+Starting mining project #18 named jspwiki
+Completed mining jspwiki
+Starting mining project #19 named xerces2-j
+Completed mining xerces2-j
+Starting mining project #20 named tez
+Completed mining tez
+Starting mining project #21 named systemml
+Completed mining systemml
+Starting mining project #22 named storm
+Completed mining storm
+Starting mining project #23 named lens
+Completed mining lens
+Starting mining project #24 named commons-lang
+Completed mining commons-lang
+Starting mining project #25 named pdfbox
+Completed mining pdfbox
+Starting mining project #26 named flume
+Completed mining flume
+Starting mining project #27 named nifi
+Completed mining nifi
+Starting mining project #28 named knox
+Completed mining knox
+Starting mining project #29 named derby
+Completed mining derby
+Starting mining project #30 named commons-net
+Completed mining commons-net
+Starting mining project #31 named commons-collections
+Completed mining commons-collections
+Starting mining project #32 named commons-beanutils
+Completed mining commons-beanutils
+Starting mining project #33 named commons-codec
+Completed mining commons-codec
+Starting mining project #34 named commons-compress
+Completed mining commons-compress
+Starting mining project #35 named commons-configuration
+Completed mining commons-configuration
+Starting mining project #36 named commons-digester
+Completed mining commons-digester
+Starting mining project #37 named commons-imaging
+Completed mining commons-imaging
+Starting mining project #38 named commons-io
+Completed mining commons-io
+Starting mining project #39 named commons-jcs
+Completed mining commons-jcs
+Starting mining project #40 named commons-jexl
+Completed mining commons-jexl
+Starting mining project #41 named commons-rdf
+Completed mining commons-rdf
+Starting mining project #42 named commons-scxml
+Completed mining commons-scxml
+Starting mining project #43 named commons-validator
+Completed mining commons-validator
+Starting mining project #44 named commons-vfs
+Completed mining commons-vfs
+Starting mining project #45 named giraph
+Completed mining giraph
+Starting mining project #46 named manifoldcf
+Completed mining manifoldcf
+Starting mining project #47 named ranger
+Completed mining ranger
+Starting mining project #48 named eagle
+Completed mining eagle
+Starting mining project #49 named commons-bcel
+Completed mining commons-bcel
+Starting mining project #50 named commons-dbcp
+Completed mining commons-dbcp
+Starting mining project #51 named zookeeper
+Completed mining zookeeper
+Starting mining project #52 named phoenix
+Completed mining phoenix
+Starting mining project #53 named gora
+Completed mining gora
+Starting mining project #54 named santuario-java
+Completed mining santuario-java
+Starting mining project #55 named helix
+Completed mining helix
+Starting mining project #56 named jena
+Completed mining jena
+Starting mining project #57 named httpcomponents-client
+Completed mining httpcomponents-client
+Starting mining project #58 named httpcomponents-core
+Completed mining httpcomponents-core
+Starting mining project #59 named streams
+Completed mining streams
+Starting mining project #60 named samza
+Completed mining samza
+Starting mining project #61 named roller
+Completed mining roller
+Starting mining project #62 named mina-sshd
+Completed mining mina-sshd
+Starting mining project #63 named bigtop
+Completed mining bigtop
+Starting mining project #64 named jackrabbit
+Completed mining jackrabbit
+Starting mining project #65 named oozie
+Completed mining oozie
+Starting mining project #66 named activemq
+Completed mining activemq
+Starting mining project #67 named directory-fortress-core
+Completed mining directory-fortress-core
+Seconds elapsed: 7622.681078910828
+Writing collected information to CSV files.
+There are a total of 1075 issues documenting refactoring.
+The thread 'MainThread' (0x1) has exited with code 0 (0x0).
+The program 'pythonw.exe' has exited with code 0 (0x0).
