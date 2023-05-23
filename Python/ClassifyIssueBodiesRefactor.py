@@ -1,13 +1,32 @@
 import re
 import numpy as np
 import matplotlib.pyplot as plt
-lines = []
+file_lines = []
 with open(file='extractedIssueDescRefactoring.txt', mode='r') as out_file:
-        # Go through every line in file
-        for line in out_file:
-            # If line contains "Issue Description:", that is the start of a new issue body; reset flag to false
-            if "Issue Description:" in line:
-                lines.append(line)
+    for line in out_file:
+        file_lines.append(line)
+
+
+# Go through every line in file
+idx = 0
+docs = []
+
+while idx < len(file_lines):
+    # If line contains "Issue Description:", that is the start of a new issue body; reset flag to false
+    if "Issue Description:" in file_lines[idx]:
+        lines = ""
+        idx += 1
+        while idx < len(file_lines):
+            if "Issue Description:" in file_lines[idx] or file_lines[idx] is None:
+                break
+            lines += file_lines[idx]
+            idx += 1
+        if lines:
+            docs.append(lines)
+            idx += 1
+    else:
+        idx += 1
+
 add_verbs = [
     "add",
     "append",
@@ -117,13 +136,16 @@ counterModify=0
 totalIssues = 0
 counterDelete = 0
 
-for i in lines:
+print("done creating verb-noun combinations")
+
+for doc in docs:
     totalIssues+=1
-    if any(re.search(r"\b{}\b".format(word), i, re.IGNORECASE) for word in delete_list):
+    print(totalIssues)
+    if any(re.search(r"\b{}\b".format(word), doc, re.IGNORECASE) for word in delete_list):
         counterDelete += 1
-    elif any(re.search(r"\b{}\b".format(word), i, re.IGNORECASE) for word in modify_list):
+    elif any(re.search(r"\b{}\b".format(word), doc, re.IGNORECASE) for word in modify_list):
         counterModify += 1
-    elif any(re.search(r"\b{}\b".format(word), i, re.IGNORECASE) for word in add_list):
+    elif any(re.search(r"\b{}\b".format(word), doc, re.IGNORECASE) for word in add_list):
         counterAdd += 1
 
 print("total",totalIssues)
